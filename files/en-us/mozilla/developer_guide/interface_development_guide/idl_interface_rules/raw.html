@@ -187,7 +187,7 @@
                 <pre class="eval">    %{C
     #include "nsIArena.h" /* C++ only header */
     #include "nsIThread.h" /* Available as nsIThread.idl */
-    %}
+    %-} -->
 
     /* now have to predeclare nsIThread since IDL doesn't know about it */
     interface nsIThread;
@@ -215,7 +215,7 @@
     %{C
     // ugh! This doesn't belong in IDL!
     #define NS_FOO_CONTRACTID "@mozilla.org/foo/component;1"
-    %}
+    %-} -->
 </pre>
             </li>
             <li>Correct:

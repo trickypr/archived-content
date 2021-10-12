@@ -41,7 +41,13 @@ async function walkDirectory(dirName) {
     .map((file) => ({ path: file, content: readFileSync(file, "utf8") }))
     .map((file) => ({
       ...file,
-      content: file.content.replace(/{{/g, "<!-- {{").replace(/}}/g, "}} -->"),
+      content: file.content
+        .replace(/{{/g, "<!-- {{")
+        .replace(/}}/g, "}} -->")
+        .replace(/<!-- <!-- {{/g, "<!-- {{")
+        .replace(/}} --> -->/g, "}} -->")
+        .replace(/{%/g, "<!-- {-%")
+        .replace(/%}/g, "%-} -->"),
     }))
     .map((file) => ({
       ...file,
