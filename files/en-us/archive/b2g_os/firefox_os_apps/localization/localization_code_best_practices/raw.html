@@ -86,7 +86,7 @@ navigator.mozL10n.setAttributes(authorElem, 'articleAuthor', {
 <pre class="brush: java">appName = My App
 saveBtnLabel = Save
 updateBtnLabel = Update
-articleAuthor = The author of this article is \{{ name }}</pre>
+articleAuthor = The author of this article is \<!-- {{ name }} --></pre>
 
 <p>L10n.js has a <a href="/en-US/docs/Web/API/MutationObserver" title="MutationObserver provides developers with a way to react to changes in a DOM. It is designed as a replacement for Mutation Events defined in the DOM3 Events specification."><code>MutationObserver</code></a> set that will react to this change and localize the element. You can also set <code>data-l10n-args</code>, as shown here:</p>
 
@@ -101,10 +101,10 @@ elem.setAttribute('data-l10n-args', JSON.stringify({'name': 'John'}));</pre>
 <p>Localized strings can be made to contain placeholders: that is, strings passed in at runtime that should not be localized. For example, suppose the localized string is intended to greet the user:  <em>"Hello, Bob!"</em>. The app.properties files might look like this:</p>
 
 <pre>// en/app.properties
-greeting=Hello \{{person}}!</pre>
+greeting=Hello \<!-- {{person}} -->!</pre>
 
 <pre>// fr/app.properties
-greeting=Bonjour \{{person}} !</pre>
+greeting=Bonjour \<!-- {{person}} --> !</pre>
 
 <p>JavaScript code can then pass these placeholders into <code>webl10n.formatValue()</code> as properties of a JSON object:</p>
 
@@ -123,7 +123,7 @@ navigator.mozL10n.formatValue("greeting", {"person" : user}).then((string) =&gt;
 <pre>tomatoCount={[ plural(n) ]}
 tomatoCount[zero]=Vous n'avez pas de tomates :(.
 tomatoCount[one]=Vous avez une tomate.
-tomatoCount[other] = Vouz avez \{{n}} tomates.</pre>
+tomatoCount[other] = Vouz avez \<!-- {{n}} --> tomates.</pre>
 
 <p>This file will return different values for tomatoCount depending on the value passed in as n:</p>
 
@@ -359,7 +359,7 @@ for (var i = 0; i &lt; messages.length; i++) {
 }
 </pre>
 
-<pre class="brush: java">trackTitle = \{{ title }}
+<pre class="brush: java">trackTitle = \<!-- {{ title }} -->
 trackTitleUnknown = Unknown Track</pre>
 
 <h3 id="Pattern_2">Pattern 2</h3>
@@ -509,7 +509,7 @@ notification.onclick = myCallback;</pre>
 <p>you should write:</p>
 
 <pre>NotificationHelper.send('notification_title', {
-  bodyL10n: {id: 'notification_body', args: {user: "John"}}
+  bodyL10n: {id: 'notification_body', args: {user: "John"}} -->
 }).then(function(notification) {
   notification.addEventListener('click', myCallback);
 });

@@ -1,5 +1,5 @@
-<div>{{SpiderMonkeySidebar("JSAPI")}}</div>
-<p>{{ obsolete_header("js1.8.5") }}</p>
+<div><!-- {{SpiderMonkeySidebar("JSAPI")}} --></div>
+<p><!-- {{ obsolete_header("js1.8.5") }} --></p>
 <div class="summary">
 <p>Convert any number of arguments to <code>jsval</code>s and store the resulting <code>jsval</code>s in an array.</p>
 </div>
@@ -19,15 +19,15 @@ JS_PushArgumentsVA(JSContext *cx, void **markp, const char *format, va_list ap);
   </tr>
   <tr>
    <td><code>cx</code></td>
-   <td>{{jsapixref("JSRuntime", "JSContext *")}}</td>
+   <td><!-- {{jsapixref("JSRuntime", "JSContext *")}} --></td>
    <td>The context in which to perform any necessary conversions.
-    <p><code>cx</code> also affects the interpretation of <code>format</code>, if {{jsapixref("JS_AddArgumentFormatter")}} has been called.</p>
-    {{ Jsapi-requires-request() }}</td>
+    <p><code>cx</code> also affects the interpretation of <code>format</code>, if <!-- {{jsapixref("JS_AddArgumentFormatter")}} --> has been called.</p>
+    <!-- {{ Jsapi-requires-request() }} --></td>
   </tr>
   <tr>
    <td><code>markp</code></td>
    <td><code>void **</code></td>
-   <td>Out parameter. On success, <code>*markp</code> receives the internally allocated stack mark which should be passed to {{jsapixref("JS_PopArguments")}}.</td>
+   <td>Out parameter. On success, <code>*markp</code> receives the internally allocated stack mark which should be passed to <!-- {{jsapixref("JS_PopArguments")}} -->.</td>
   </tr>
   <tr>
    <td><code>format</code></td>
@@ -47,8 +47,8 @@ JS_PushArgumentsVA(JSContext *cx, void **markp, const char *format, va_list ap);
  </tbody>
 </table>
 <h2 id="Description" name="Description">Description</h2>
-<p><code>JS_PushArguments</code> provides a convenient way to translate a series of native C/C++ values to {{jsapixref("jsval")}}s with a single function call.</p>
-<p><code>cx</code> is the context for the call. <code>markp</code> points to a <code>void *</code> to hold the internally allocated stack frame pointer to pass back to {{jsapixref("JS_PopArguments")}}.</p>
+<p><code>JS_PushArguments</code> provides a convenient way to translate a series of native C/C++ values to <!-- {{jsapixref("jsval")}} -->s with a single function call.</p>
+<p><code>cx</code> is the context for the call. <code>markp</code> points to a <code>void *</code> to hold the internally allocated stack frame pointer to pass back to <!-- {{jsapixref("JS_PopArguments")}} -->.</p>
 <p><code>format</code> is a sequential character array, where each element of the array indicates the JS type into which to convert the next C/C++ argument. <code>format</code> can contain one or more instances of the following characters, as appropriate:</p>
 <table class="fullwidth-table">
  <tbody>
@@ -110,13 +110,13 @@ JS_PushArgumentsVA(JSContext *cx, void **markp, const char *format, va_list ap);
   </tr>
  </tbody>
 </table>
-<p>This function also takes in consideration any additional custom types defined in <code>cx</code> using {{jsapixref("JS_AddArgumentFormatter")}}.</p>
+<p>This function also takes in consideration any additional custom types defined in <code>cx</code> using <!-- {{jsapixref("JS_AddArgumentFormatter")}} -->.</p>
 <p>For example, if <code>format</code> is <code>"bIob"</code>, then there must be four arguments after <code>format</code>. Their types must be <code>JSBool</code>, <code>jsdouble</code>, <code>JSObject *</code>, and <code>JSBool</code>. If successful, <code>JS_PushArguments</code> would return a pointer to the first element of an array of four <code>jsval</code>s: a boolean, a number, an object (or null), and a boolean.</p>
-<p>On success, <code>JS_PushArguments</code> fills in the supplied <code>markp</code> pointer and returns a pointer to the first element of an array of <code>jsval</code> which are automatically rooted as necessary (protected from the GC temporarily). The application must call {{jsapixref("JS_PopArguments")}} using the supplied <code>markp</code> stack pointer when done with this stack frame, to free the memory and unroot the <code>jsval</code>s.</p>
+<p>On success, <code>JS_PushArguments</code> fills in the supplied <code>markp</code> pointer and returns a pointer to the first element of an array of <code>jsval</code> which are automatically rooted as necessary (protected from the GC temporarily). The application must call <!-- {{jsapixref("JS_PopArguments")}} --> using the supplied <code>markp</code> stack pointer when done with this stack frame, to free the memory and unroot the <code>jsval</code>s.</p>
 <p>On error or exception, <code>JS_PushArguments</code> returns <code>NULL</code>.</p>
-<p>To perform the opposite conversion, converting an array of <code>jsval</code>s to various native C types, use {{jsapixref("JS_ConvertArguments")}}.</p>
+<p>To perform the opposite conversion, converting an array of <code>jsval</code>s to various native C types, use <!-- {{jsapixref("JS_ConvertArguments")}} -->.</p>
 <h2 id="See_Also" name="See_Also">See Also</h2>
 <ul>
-<li>{{jsapixref("JS_PopArguments")}}</li>
-<li>{{bug(542091)}}</li>
+<li><!-- {{jsapixref("JS_PopArguments")}} --></li>
+<li><!-- {{bug(542091)}} --></li>
 </ul>

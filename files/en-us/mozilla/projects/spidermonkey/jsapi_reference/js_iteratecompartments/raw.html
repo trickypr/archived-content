@@ -1,6 +1,6 @@
-<p>{{ Jsapi_minversion_header("17") }}</p>
+<p><!-- {{ Jsapi_minversion_header("17") }} --></p>
 
-<div>{{SpiderMonkeySidebar("JSAPI")}}</div>
+<div><!-- {{SpiderMonkeySidebar("JSAPI")}} --></div>
 
 <div class="summary">
 <p>Iterate over compartments and call the specified callback function on every compartment.</p>
@@ -22,7 +22,7 @@ JS_IterateCompartments(JSRuntime *rt, void *data,
   </tr>
   <tr>
    <td><code>cx</code></td>
-   <td>{{jsapixref("JSRuntime", "JSRuntime *")}}</td>
+   <td><!-- {{jsapixref("JSRuntime", "JSRuntime *")}} --></td>
    <td>The runtime of the compartments to iterate over.</td>
   </tr>
   <tr>
@@ -53,7 +53,7 @@ JS_IterateCompartments(JSRuntime *rt, void *data,
   </tr>
   <tr>
    <td><code>cx</code></td>
-   <td>{{jsapixref("JSRuntime", "JSRuntime *")}}</td>
+   <td><!-- {{jsapixref("JSRuntime", "JSRuntime *")}} --></td>
    <td>The runtime of the compartments.</td>
   </tr>
   <tr>
@@ -63,7 +63,7 @@ JS_IterateCompartments(JSRuntime *rt, void *data,
   </tr>
   <tr>
    <td><code>compartmentCallback</code></td>
-   <td>{{jsapixref("JSCompartment", "JSCompartment *")}}</td>
+   <td><!-- {{jsapixref("JSCompartment", "JSCompartment *")}} --></td>
    <td>The pointer to the compartment.</td>
   </tr>
  </tbody>
@@ -76,9 +76,9 @@ JS_IterateCompartments(JSRuntime *rt, void *data,
 <h2 id="See_Also" name="See_Also">See also</h2>
 
 <ul>
- <li>{{ LXRSearch("ident", "i", "JS_IterateCompartments") }}</li>
- <li>{{ LXRSearch("ident", "i", "JSIterateCompartmentCallback") }}</li>
- <li>{{bug(702300)}}</li>
- <li>{{bug(731618)}}</li>
- <li>{{bug(887030)}}</li>
+ <li><!-- {{ LXRSearch("ident", "i", "JS_IterateCompartments") }} --></li>
+ <li><!-- {{ LXRSearch("ident", "i", "JSIterateCompartmentCallback") }} --></li>
+ <li><!-- {{bug(702300)}} --></li>
+ <li><!-- {{bug(731618)}} --></li>
+ <li><!-- {{bug(887030)}} --></li>
 </ul>

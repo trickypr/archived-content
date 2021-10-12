@@ -1,4 +1,4 @@
-<div>{{SpiderMonkeySidebar("Releases")}}</div>
+<div><!-- {{SpiderMonkeySidebar("Releases")}} --></div>
 
 <div class="warning">
 <p>SpiderMonkey 45 is <strong>outdated</strong> and contains known <strong>security vulnerabilities</strong>.</p>
@@ -46,66 +46,66 @@ MD5: 2ca34f998d8b5ea79d8616dd26b5fbab
 <p>JSAPI is a C++ exclusive API. Please note that SpiderMonkey reserves the <code>JS::</code> namespace for itself for public exports and the  <code>js::</code> namespace for internal use.</p>
 
 <ul>
- <li>JS_SetCurrentEmbedderTimeFunction ({{bug(1159507)}})</li>
- <li>JS_GetCurrentEmbedderTime ({{bug(1159507)}})</li>
- <li>JS_MayResolveStandardClass ({{bug(1155946)}})</li>
- <li>JS_GetIteratorPrototype ({{bug(1225392)}})</li>
- <li>JS_GlobalLexicalScope ({{bug(1202902)}})</li>
- <li>JS_HasExtensibleLexicalScope ({{bug(1202902)}})</li>
- <li>JS_ExtensibleLexicalScope ({{bug(1202902)}})</li>
- <li>JS_InitReflectParse ({{bug(987514)}})</li>
- <li><a href="/en-US/docs/Mozilla/Projects/SpiderMonkey/JSAPI_Reference/JS::ToPrimitive">JS::ToPrimitive</a> ({{bug(1206168)}})</li>
- <li><a href="/en-US/docs/Mozilla/Projects/SpiderMonkey/JSAPI_Reference/JS::GetFirstArgumentAsTypeHint">JS::GetFirstArgumentAsTypeHint</a> ({{bug(1054756)}})</li>
- <li>JS::ObjectToCompletePropertyDescriptor ({{bug(1144366)}})</li>
- <li>JS_SetImmutablePrototype ({{bug(1211607)}})</li>
- <li>JS_GetOwnUCPropertyDescriptor ({{bug(1211607)}})</li>
- <li>JS_HasOwnPropertyById ({{bug(1211607)}})</li>
- <li><a href="/en-US/docs/Mozilla/Projects/SpiderMonkey/JSAPI_Reference/JS_HasOwnProperty">JS_HasOwnProperty</a> ({{bug(1211607)}})</li>
- <li>JS_DeleteUCProperty ({{bug(1211607)}})</li>
- <li><a href="/en-US/docs/Mozilla/Projects/SpiderMonkey/JSAPI_Reference/JS::NewFunctionFromSpec">JS::NewFunctionFromSpec</a> ({{bug(1054756)}})</li>
- <li>JS::CompileForNonSyntacticScope ({{bug(1165486)}})</li>
- <li><a href="/en-US/docs/Mozilla/Projects/SpiderMonkey/JSAPI_Reference/JS_CheckForInterrupt">JS_CheckForInterrupt</a> ({{bug(1058695)}})</li>
- <li>JS::MapDelete ({{bug(1159469)}})</li>
- <li>JS::MapForEach ({{bug(1159469)}})</li>
- <li>JS::NewSetObject ({{bug(1159469)}})</li>
- <li>JS::SetSize ({{bug(1159469)}})</li>
- <li>JS::SetHas ({{bug(1159469)}})</li>
- <li>JS::SetDelete ({{bug(1159469)}})</li>
- <li>JS::SetAdd ({{bug(1159469)}})</li>
- <li>JS::SetClear ({{bug(1159469)}})</li>
- <li>JS::SetKeys ({{bug(1159469)}})</li>
- <li>JS::SetValues ({{bug(1159469)}})</li>
- <li>JS::SetEntries ({{bug(1159469)}})</li>
- <li>JS::SetForEach ({{bug(1159469)}})</li>
- <li>JS::ExceptionStackOrNull ({{bug(814497)}})</li>
- <li>JS::CopyAsyncStack ({{bug(1160307)}})</li>
- <li>JS::GetSavedFrameSource ({{bug(1216819)}})</li>
- <li>JS::GetSavedFrameLine ({{bug(1216819)}})</li>
- <li>JS::GetSavedFrameColumn ({{bug(1216819)}})</li>
- <li>JS::GetSavedFrameFunctionDisplayName ({{bug(1216819)}})</li>
- <li>JS::GetSavedFrameAsyncCause ({{bug(1216819)}})</li>
- <li>JS::GetSavedFrameAsyncParent ({{bug(1216819)}})</li>
- <li>JS::GetSavedFrameParent ({{bug(1216819)}})</li>
- <li>JS::BuildStackString ({{bug(1133191)}})</li>
- <li>JS::FlushPerformanceMonitoring ({{bug(1181175)}})</li>
- <li>JS::ResetPerformanceMonitoring ({{bug(1181175)}})</li>
- <li>JS::DisposePerformanceMonitoring ({{bug(1208747)}})</li>
- <li>JS::SetStopwatchIsMonitoringCPOW ({{bug(1156264)}})</li>
- <li>JS::GetStopwatchIsMonitoringCPOW ({{bug(1156264)}})</li>
- <li>JS::SetStopwatchIsMonitoringJank ({{bug(1156264)}})</li>
- <li>JS::GetStopwatchIsMonitoringJank ({{bug(1156264)}})</li>
- <li>JS::IsStopwatchActive ({{bug(674779)}})</li>
- <li>JS::GetPerfMonitoringTestCpuRescheduling ({{bug(1181175)}})</li>
- <li>JS::AddCPOWPerformanceDelta ({{bug(1181175)}})</li>
- <li>JS::SetStopwatchStartCallback ({{bug(1208747)}})</li>
- <li>JS::SetStopwatchCommitCallback ({{bug(1208747)}})</li>
- <li>JS::SetGetPerformanceGroupsCallback ({{bug(1208747)}})</li>
- <li><a href="/en-US/docs/Mozilla/Projects/SpiderMonkey/JSAPI_Reference/JS_StringHasBeenInterned">JS_StringHasBeenInterned</a> renamed to JS_StringHasBeenPinned ({{bug(1178581)}})</li>
- <li><a href="/en-US/docs/Mozilla/Projects/SpiderMonkey/JSAPI_Reference/JS_InternJSString">JS_InternJSString</a> renamed to JS_AtomizeAndPinJSString ({{bug(1178581)}})</li>
- <li>JS_InternStringN renamed to JS_AtomizeAndPinStringN ({{bug(1178581)}})</li>
- <li><a href="/en-US/docs/Mozilla/Projects/SpiderMonkey/JSAPI_Reference/JS_InternString">JS_InternString</a> renamed to JS_AtomizeAndPinString ({{bug(1178581)}})</li>
- <li>JS_InternUCStringN renamed to JS_AtomizeAndPinUCStringN ({{bug(1178581)}})</li>
- <li>JS_InternUCString renamed to JS_AtomizeAndPinUCString ({{bug(1178581)}})</li>
+ <li>JS_SetCurrentEmbedderTimeFunction (<!-- {{bug(1159507)}} -->)</li>
+ <li>JS_GetCurrentEmbedderTime (<!-- {{bug(1159507)}} -->)</li>
+ <li>JS_MayResolveStandardClass (<!-- {{bug(1155946)}} -->)</li>
+ <li>JS_GetIteratorPrototype (<!-- {{bug(1225392)}} -->)</li>
+ <li>JS_GlobalLexicalScope (<!-- {{bug(1202902)}} -->)</li>
+ <li>JS_HasExtensibleLexicalScope (<!-- {{bug(1202902)}} -->)</li>
+ <li>JS_ExtensibleLexicalScope (<!-- {{bug(1202902)}} -->)</li>
+ <li>JS_InitReflectParse (<!-- {{bug(987514)}} -->)</li>
+ <li><a href="/en-US/docs/Mozilla/Projects/SpiderMonkey/JSAPI_Reference/JS::ToPrimitive">JS::ToPrimitive</a> (<!-- {{bug(1206168)}} -->)</li>
+ <li><a href="/en-US/docs/Mozilla/Projects/SpiderMonkey/JSAPI_Reference/JS::GetFirstArgumentAsTypeHint">JS::GetFirstArgumentAsTypeHint</a> (<!-- {{bug(1054756)}} -->)</li>
+ <li>JS::ObjectToCompletePropertyDescriptor (<!-- {{bug(1144366)}} -->)</li>
+ <li>JS_SetImmutablePrototype (<!-- {{bug(1211607)}} -->)</li>
+ <li>JS_GetOwnUCPropertyDescriptor (<!-- {{bug(1211607)}} -->)</li>
+ <li>JS_HasOwnPropertyById (<!-- {{bug(1211607)}} -->)</li>
+ <li><a href="/en-US/docs/Mozilla/Projects/SpiderMonkey/JSAPI_Reference/JS_HasOwnProperty">JS_HasOwnProperty</a> (<!-- {{bug(1211607)}} -->)</li>
+ <li>JS_DeleteUCProperty (<!-- {{bug(1211607)}} -->)</li>
+ <li><a href="/en-US/docs/Mozilla/Projects/SpiderMonkey/JSAPI_Reference/JS::NewFunctionFromSpec">JS::NewFunctionFromSpec</a> (<!-- {{bug(1054756)}} -->)</li>
+ <li>JS::CompileForNonSyntacticScope (<!-- {{bug(1165486)}} -->)</li>
+ <li><a href="/en-US/docs/Mozilla/Projects/SpiderMonkey/JSAPI_Reference/JS_CheckForInterrupt">JS_CheckForInterrupt</a> (<!-- {{bug(1058695)}} -->)</li>
+ <li>JS::MapDelete (<!-- {{bug(1159469)}} -->)</li>
+ <li>JS::MapForEach (<!-- {{bug(1159469)}} -->)</li>
+ <li>JS::NewSetObject (<!-- {{bug(1159469)}} -->)</li>
+ <li>JS::SetSize (<!-- {{bug(1159469)}} -->)</li>
+ <li>JS::SetHas (<!-- {{bug(1159469)}} -->)</li>
+ <li>JS::SetDelete (<!-- {{bug(1159469)}} -->)</li>
+ <li>JS::SetAdd (<!-- {{bug(1159469)}} -->)</li>
+ <li>JS::SetClear (<!-- {{bug(1159469)}} -->)</li>
+ <li>JS::SetKeys (<!-- {{bug(1159469)}} -->)</li>
+ <li>JS::SetValues (<!-- {{bug(1159469)}} -->)</li>
+ <li>JS::SetEntries (<!-- {{bug(1159469)}} -->)</li>
+ <li>JS::SetForEach (<!-- {{bug(1159469)}} -->)</li>
+ <li>JS::ExceptionStackOrNull (<!-- {{bug(814497)}} -->)</li>
+ <li>JS::CopyAsyncStack (<!-- {{bug(1160307)}} -->)</li>
+ <li>JS::GetSavedFrameSource (<!-- {{bug(1216819)}} -->)</li>
+ <li>JS::GetSavedFrameLine (<!-- {{bug(1216819)}} -->)</li>
+ <li>JS::GetSavedFrameColumn (<!-- {{bug(1216819)}} -->)</li>
+ <li>JS::GetSavedFrameFunctionDisplayName (<!-- {{bug(1216819)}} -->)</li>
+ <li>JS::GetSavedFrameAsyncCause (<!-- {{bug(1216819)}} -->)</li>
+ <li>JS::GetSavedFrameAsyncParent (<!-- {{bug(1216819)}} -->)</li>
+ <li>JS::GetSavedFrameParent (<!-- {{bug(1216819)}} -->)</li>
+ <li>JS::BuildStackString (<!-- {{bug(1133191)}} -->)</li>
+ <li>JS::FlushPerformanceMonitoring (<!-- {{bug(1181175)}} -->)</li>
+ <li>JS::ResetPerformanceMonitoring (<!-- {{bug(1181175)}} -->)</li>
+ <li>JS::DisposePerformanceMonitoring (<!-- {{bug(1208747)}} -->)</li>
+ <li>JS::SetStopwatchIsMonitoringCPOW (<!-- {{bug(1156264)}} -->)</li>
+ <li>JS::GetStopwatchIsMonitoringCPOW (<!-- {{bug(1156264)}} -->)</li>
+ <li>JS::SetStopwatchIsMonitoringJank (<!-- {{bug(1156264)}} -->)</li>
+ <li>JS::GetStopwatchIsMonitoringJank (<!-- {{bug(1156264)}} -->)</li>
+ <li>JS::IsStopwatchActive (<!-- {{bug(674779)}} -->)</li>
+ <li>JS::GetPerfMonitoringTestCpuRescheduling (<!-- {{bug(1181175)}} -->)</li>
+ <li>JS::AddCPOWPerformanceDelta (<!-- {{bug(1181175)}} -->)</li>
+ <li>JS::SetStopwatchStartCallback (<!-- {{bug(1208747)}} -->)</li>
+ <li>JS::SetStopwatchCommitCallback (<!-- {{bug(1208747)}} -->)</li>
+ <li>JS::SetGetPerformanceGroupsCallback (<!-- {{bug(1208747)}} -->)</li>
+ <li><a href="/en-US/docs/Mozilla/Projects/SpiderMonkey/JSAPI_Reference/JS_StringHasBeenInterned">JS_StringHasBeenInterned</a> renamed to JS_StringHasBeenPinned (<!-- {{bug(1178581)}} -->)</li>
+ <li><a href="/en-US/docs/Mozilla/Projects/SpiderMonkey/JSAPI_Reference/JS_InternJSString">JS_InternJSString</a> renamed to JS_AtomizeAndPinJSString (<!-- {{bug(1178581)}} -->)</li>
+ <li>JS_InternStringN renamed to JS_AtomizeAndPinStringN (<!-- {{bug(1178581)}} -->)</li>
+ <li><a href="/en-US/docs/Mozilla/Projects/SpiderMonkey/JSAPI_Reference/JS_InternString">JS_InternString</a> renamed to JS_AtomizeAndPinString (<!-- {{bug(1178581)}} -->)</li>
+ <li>JS_InternUCStringN renamed to JS_AtomizeAndPinUCStringN (<!-- {{bug(1178581)}} -->)</li>
+ <li>JS_InternUCString renamed to JS_AtomizeAndPinUCString (<!-- {{bug(1178581)}} -->)</li>
 </ul>
 
 <h2 id="Deleted_APIs">Deleted APIs</h2>

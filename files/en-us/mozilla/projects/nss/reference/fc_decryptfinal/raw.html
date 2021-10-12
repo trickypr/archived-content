@@ -9,9 +9,9 @@
 );
 </pre>
 <h3 id="Parameters"> Parameters </h3>
-<dl><dt><code>hSession</code></dt><dd> {{ mediawiki.external('in') }} session handle.
-</dd><dt><code>pLastPart</code></dt><dd> {{ mediawiki.external('out') }} pointer to the location where the last block of recovered data, if any, is to be stored.
-</dd><dt><code>pusLastPartLen</code></dt><dd> {{ mediawiki.external('in,out') }} pointer to location where the number of bytes of recovered data is to be stored.
+<dl><dt><code>hSession</code></dt><dd> <!-- {{ mediawiki.external('in') }} --> session handle.
+</dd><dt><code>pLastPart</code></dt><dd> <!-- {{ mediawiki.external('out') }} --> pointer to the location where the last block of recovered data, if any, is to be stored.
+</dd><dt><code>pusLastPartLen</code></dt><dd> <!-- {{ mediawiki.external('in,out') }} --> pointer to location where the number of bytes of recovered data is to be stored.
 </dd></dl>
 <h3 id="Description"> Description </h3>
 <p><code>FC_DecryptFinal</code> returns the last block of data of a multi-part decryption operation.

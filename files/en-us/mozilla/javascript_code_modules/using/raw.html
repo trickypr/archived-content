@@ -1,6 +1,6 @@
-<div>{{gecko_minversion_header("1.9")}}</div>
+<div><!-- {{gecko_minversion_header("1.9")}} --></div>
 
-<p>JavaScript code modules are a concept introduced in {{Gecko("1.9")}} and can be used for sharing code between different privileged scopes. Modules can also be used to create global JavaScript singletons that previously required using JavaScript XPCOM objects. A JavaScript code module is simply some JavaScript code located in a registered location. The module is loaded into a specific JavaScript scope, such as XUL script or JavaScript XPCOM script, using <code><a href="/en-US/docs/Components.utils.import">Components.utils.import()</a></code> or <code><a href="/en-US/docs/Components.utils.import">Components.utils["import"]()</a></code>.</p>
+<p>JavaScript code modules are a concept introduced in <!-- {{Gecko("1.9")}} --> and can be used for sharing code between different privileged scopes. Modules can also be used to create global JavaScript singletons that previously required using JavaScript XPCOM objects. A JavaScript code module is simply some JavaScript code located in a registered location. The module is loaded into a specific JavaScript scope, such as XUL script or JavaScript XPCOM script, using <code><a href="/en-US/docs/Components.utils.import">Components.utils.import()</a></code> or <code><a href="/en-US/docs/Components.utils.import">Components.utils["import"]()</a></code>.</p>
 
 <h2 id="Creating_a_JavaScript_code_module">Creating a JavaScript code module</h2>
 
@@ -35,7 +35,7 @@ alert(dummy);         // displays "dummy is not defined" because 'dummy' was not
 
 <p>As you can see from the example above, you need a URL to import a code module. (The URL in the example is "resource://app/my_module.jsm".)</p>
 
-<p>Code modules can only be loaded using a <strong>chrome:</strong> ({{gecko_minversion_inline("2")}}), <strong>resource:</strong>, or <strong>file:</strong> URL.</p>
+<p>Code modules can only be loaded using a <strong>chrome:</strong> (<!-- {{gecko_minversion_inline("2")}} -->), <strong>resource:</strong>, or <strong>file:</strong> URL.</p>
 
 <ul>
  <li>If you're writing an extension for Firefox 4 and already have a <a href="/en-US/docs/Chrome_Registration">chrome.manifest</a> with a <code>content</code> instruction in it, you can put the code module in your content folder and reference it like your other content files via <code>chrome://&lt;yourextension&gt;/content/&lt;yourmodule&gt;.jsm.</code></li>
@@ -65,7 +65,7 @@ alert(bar.size + 3);  // displays "13"
 
 <p>This sharing behavior can be used to create singleton objects that can share data across windows and between XUL script and XPCOM components.</p>
 
-<p>{{Note("Each scope that imports a module receives a by-value copy of the exported symbols in that module. Changes to the symbol\'s value will not propagate to other scopes (though an object\'s properties will be manipulated by reference).")}}</p>
+<p><!-- {{Note("Each scope that imports a module receives a by-value copy of the exported symbols in that module. Changes to the symbol\'s value will not propagate to other scopes (though an object\'s properties will be manipulated by reference).")}} --></p>
 
 <p>Scope 1:</p>
 
@@ -84,7 +84,7 @@ alert(bar);         // displays "[object Object]"
 
 <p>The main effect of the by-value copy is that global variables of simple types won't be shared across scopes. Always put variables in a wrapper class and export the wrapper (such as <code>bar</code> in the above example).</p>
 
-<p>{{h2_gecko_minversion("Unloading code modules", "7.0")}}</p>
+<p><!-- {{h2_gecko_minversion("Unloading code modules", "7.0")}} --></p>
 
 <p><code><a href="/en-US/docs/Components.utils.unload">Components.utils.unload()</a></code> allows you to unload a previously imported code module. Once this method has been called, references to the module will continue to work but any subsequent import of the module will reload it and give a new reference.</p>
 
@@ -96,7 +96,7 @@ alert(bar);         // displays "[object Object]"
 
 <h2 id="Extending_resource_URLs">Extending resource: URLs</h2>
 
-<p>Prior to {{Gecko("2.0")}}, the most common way to load code modules was using <strong>resource:</strong> URLs. The basic syntax of a resource URL is as follows:</p>
+<p>Prior to <!-- {{Gecko("2.0")}} -->, the most common way to load code modules was using <strong>resource:</strong> URLs. The basic syntax of a resource URL is as follows:</p>
 
 <pre>resource://&lt;alias&gt;/&lt;relative-path&gt;/&lt;file.js|jsm&gt;
 </pre>
@@ -131,7 +131,7 @@ alert(bar);         // displays "[object Object]"
 
 <h3 id="Programmatically_adding_aliases">Programmatically adding aliases</h3>
 
-<p>Custom aliases to paths that can be represented as an {{interface("nsILocalFile")}} can be programmatically added as well. For example:</p>
+<p>Custom aliases to paths that can be represented as an <!-- {{interface("nsILocalFile")}} --> can be programmatically added as well. For example:</p>
 
 <pre class="brush: js">// Import Services.jsm unless in a scope where it's already been imported
 Components.utils.import("resource://gre/modules/Services.jsm");
@@ -153,7 +153,7 @@ resProt.setSubstitution("myalias", aliasURI);
 
 <h3 id="Custom_modules_and_XPCOM_components">Custom modules and XPCOM components</h3>
 
-<p>Note that prior to {{Gecko("2.0")}} JavaScript XPCOM components are loaded before chrome registration. This means you can't use <code><a href="/en-US/docs/Components.utils.import">Components.utils.import()</a></code> with your own resource URL at the top level in a component source. A possible solution is moving the call to <code><a href="/en-US/docs/Components.utils.import">Components.utils.import()</a></code> into the XPCOM component constructor (<a href="http://groups.google.com/group/mozilla.dev.apps.firefox/browse_thread/thread/e178d41afa2ccc87?hl=en#">discussion</a>).</p>
+<p>Note that prior to <!-- {{Gecko("2.0")}} --> JavaScript XPCOM components are loaded before chrome registration. This means you can't use <code><a href="/en-US/docs/Components.utils.import">Components.utils.import()</a></code> with your own resource URL at the top level in a component source. A possible solution is moving the call to <code><a href="/en-US/docs/Components.utils.import">Components.utils.import()</a></code> into the XPCOM component constructor (<a href="http://groups.google.com/group/mozilla.dev.apps.firefox/browse_thread/thread/e178d41afa2ccc87?hl=en#">discussion</a>).</p>
 
 <h3 id="Packaging_notes">Packaging notes</h3>
 

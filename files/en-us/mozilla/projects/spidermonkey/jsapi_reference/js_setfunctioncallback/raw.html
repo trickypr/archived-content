@@ -1,6 +1,6 @@
-<div>{{SpiderMonkeySidebar("JSAPI")}}</div>
+<div><!-- {{SpiderMonkeySidebar("JSAPI")}} --></div>
 
-<p>{{ obsolete_header("jsapi37") }}</p>
+<p><!-- {{ obsolete_header("jsapi37") }} --></p>
 
 <div class="summary">
 <p>Sets a callback to be run whenever a JavaScript function is invoked or exited. This lets you trace the execution of code, and is particularly useful for JavaScript tracers and profilers since it works across all run modes (interpreter, method JIT, trace JIT). Using this function may have a significant performance impact. See <a href="/en-US/docs/Mozilla/Projects/SpiderMonkey/JSAPI_User_Guide#Function_tracing" title="JSAPI User Guide - Function tracing">Function tracing</a> for an example.</p>
@@ -23,8 +23,8 @@ JS_SetFunctionCallback(JSContext *cx, JSFunctionCallback fcb);
   </tr>
   <tr>
    <td><code>cx</code></td>
-   <td>{{jsapixref("JSRuntime", "JSContext *")}}</td>
-   <td>Pointer to a JS context from which to derive runtime information. {{ Jsapi-requires-request() }}</td>
+   <td><!-- {{jsapixref("JSRuntime", "JSContext *")}} --></td>
+   <td>Pointer to a JS context from which to derive runtime information. <!-- {{ Jsapi-requires-request() }} --></td>
   </tr>
   <tr>
    <td><code>fcb</code></td>
@@ -58,17 +58,17 @@ JS_SetFunctionCallback(JSContext *cx, JSFunctionCallback fcb);
   </tr>
   <tr>
    <td><code>fun</code></td>
-   <td>{{jsapixref("JSFunction", "const JSFunction *")}}</td>
+   <td><!-- {{jsapixref("JSFunction", "const JSFunction *")}} --></td>
    <td>The JavaScript function being invoked or exited.</td>
   </tr>
   <tr>
    <td><code>scr</code></td>
-   <td>{{jsapixref("JSScript", "const JSScript *")}}</td>
+   <td><!-- {{jsapixref("JSScript", "const JSScript *")}} --></td>
    <td>The script being executed.</td>
   </tr>
   <tr>
    <td><code>cx</code></td>
-   <td>{{jsapixref("JSRuntime", "JSContext *")}}</td>
+   <td><!-- {{jsapixref("JSRuntime", "JSContext *")}} --></td>
    <td>The JavaScript context in which the script is being run.</td>
   </tr>
   <tr>
@@ -84,8 +84,8 @@ JS_SetFunctionCallback(JSContext *cx, JSFunctionCallback fcb);
 <h2 id="See_Also" name="See_Also">See Also</h2>
 
 <ul>
- <li>{{ LXRSearch("ident", "i", "JS_SetFunctionCallback") }}</li>
+ <li><!-- {{ LXRSearch("ident", "i", "JS_SetFunctionCallback") }} --></li>
  <li><a href="/en-US/docs/Mozilla/Projects/SpiderMonkey/JSAPI_User_Guide#Function_tracing" title="JSAPI User Guide - Function tracing">Function tracing</a></li>
- <li>{{jsapixref("JS_GetFunctionCallback")}}</li>
- <li>{{bug(1103269)}}</li>
+ <li><!-- {{jsapixref("JS_GetFunctionCallback")}} --></li>
+ <li><!-- {{bug(1103269)}} --></li>
 </ul>

@@ -1,8 +1,8 @@
-<div>{{JSRef}}{{Non-standard_Header}}{{Obsolete_Header("gecko43")}}</div>
+<div><!-- {{JSRef}} --><!-- {{Non-standard_Header}} --><!-- {{Obsolete_Header("gecko43")}} --></div>
 
 <p>The <strong><code>__noSuchMethod__</code></strong> property used to reference a function to be executed when a non-existent method is called on an object, but this function is no longer available.</p>
 
-<p>While <code><strong>__noSuchMethod__</strong></code> has been dropped, the ECMAScript 2015 specification has the {{JSxRef("Proxy")}} object, with which you can achieve the below (and more).</p>
+<p>While <code><strong>__noSuchMethod__</strong></code> has been dropped, the ECMAScript 2015 specification has the <!-- {{JSxRef("Proxy")}} --> object, with which you can achieve the below (and more).</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -27,7 +27,7 @@
 
 <h2 id="Description">Description</h2>
 
-<p>By default, an attempt to call a method that doesn't exist on an object results in a {{JSxRef("TypeError")}} being thrown. This behavior can be circumvented by defining a function at that object's <code>__noSuchMethod__</code> member. The function takes two arguments, the first is the name of the method attempted and the second is an array of the arguments that were passed in the method call. The second argument is an actual array (that is, it inherits through the {{JSxRef("Array.prototype")}} chain) and not the array-like <a href="/en-US/docs/Web/JavaScript/Reference/Functions_and_function_scope/arguments" title="JavaScript/Reference/Functions/arguments">arguments object</a>.</p>
+<p>By default, an attempt to call a method that doesn't exist on an object results in a <!-- {{JSxRef("TypeError")}} --> being thrown. This behavior can be circumvented by defining a function at that object's <code>__noSuchMethod__</code> member. The function takes two arguments, the first is the name of the method attempted and the second is an array of the arguments that were passed in the method call. The second argument is an actual array (that is, it inherits through the <!-- {{JSxRef("Array.prototype")}} --> chain) and not the array-like <a href="/en-US/docs/Web/JavaScript/Reference/Functions_and_function_scope/arguments" title="JavaScript/Reference/Functions/arguments">arguments object</a>.</p>
 
 <p>If this method cannot be called, either as if <code>undefined</code> by default, if deleted, or if manually set to a non-function, the JavaScript engine will revert to throwing <code>TypeError</code>s.</p>
 

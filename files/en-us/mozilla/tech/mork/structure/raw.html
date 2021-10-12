@@ -77,7 +77,7 @@
  <tbody>
   <tr>
    <td>After the first line, Mork typically begins with exactly one file row which is metainfo about the Mork file itself, expressed as a row. This special purpose row is its own gc root, so it doesn't need to be a member of a table to persist. It looks different from any other row because it surrounds the normal row syntax with @ bytes. Here's an example with a single cell inside:
-    <p>@{{ mediawiki.external(' (author=rys)') }}@</p>
+    <p>@<!-- {{ mediawiki.external(' (author=rys)') }} -->@</p>
     Rows are enclosed in [] square brackets. This row contains a single cell in column author with literal value rys. This example is arbitrary. Presumably the file row metainfo is a good place for apps to embed their own magic head info, without disturbing the other content of the file. If a file has more than one file row, or perhaps none, you might tolerate this to be lenient and permissive since no harm is done.</td>
   </tr>
  </tbody>
@@ -123,7 +123,7 @@
 
 <p>You were probably expecting to see material about<em>item</em> s here, right after<em>group</em> s. But here we switch tactics momentarily and take a bottom-up look at tokens and primitive data representation used to compose the higher level constructs used by <a href="#Items">items</a> further below.</p>
 
-<p><s>Your Mork tokenizer might want to see @{{ mediawiki.external(' and ') }}@ as special file row tokens</s>. Most tokens are single bytes, or can be treated as if single bytes had been seen. Some complex multibyte tokens that are not<em>lit</em> erals have the same meaning as a single #x20 whitespace byte after having whatever parsing effect is needed.</p>
+<p><s>Your Mork tokenizer might want to see @<!-- {{ mediawiki.external(' and ') }} -->@ as special file row tokens</s>. Most tokens are single bytes, or can be treated as if single bytes had been seen. Some complex multibyte tokens that are not<em>lit</em> erals have the same meaning as a single #x20 whitespace byte after having whatever parsing effect is needed.</p>
 
 <p>For example, markup for indicating a<em>group</em> is equivalent to whitespace once it serves the purpose of clustering other content inside a group.</p>
 
@@ -158,7 +158,7 @@
 
 <ul>
  <li>id ::= hex+.</li>
- <li>hex ::= {{ mediawiki.external('0-9a-fA-F') }}</li>
+ <li>hex ::= <!-- {{ mediawiki.external('0-9a-fA-F') }} --></li>
 </ul>
 
 <h4 id="Oids" name="Oids">Oids</h4>
@@ -181,7 +181,7 @@
     <ul>
      <li>oid ::= id | id:scope</li>
      <li>scope ::= name | ^id</li>
-     <li>name ::= {{ mediawiki.external('A-Za-z_:') }}+</li>
+     <li>name ::= <!-- {{ mediawiki.external('A-Za-z_:') }} -->+</li>
     </ul>
    </td>
   </tr>
@@ -286,9 +286,9 @@
 <p>(To simplify the grammar, optional<em>space</em> before tokens is not shown.)</p>
 
 <ul>
- <li>row ::= {{ mediawiki.external(' roid (metarow | cell)* ') }}</li>
+ <li>row ::= <!-- {{ mediawiki.external(' roid (metarow | cell)* ') }} --></li>
  <li>roid ::= oid /*default scope is rowScope from table*/</li>
- <li>metarow ::= {{ mediawiki.external(' (cell)* ') }}</li>
+ <li>metarow ::= <!-- {{ mediawiki.external(' (cell)* ') }} --></li>
  <li>cell ::= ( col slot )</li>
  <li>col ::= ^oid /*default scope is c*/ | name</li>
  <li>slot ::= ^oid /*default scope is a*/ | =literal</li>
@@ -322,7 +322,7 @@
 <ul>
  <li>cell ::= ( col slot )</li>
  <li>col ::= ^oid /*default scope is c*/ | name</li>
- <li>name ::= {{ mediawiki.external('a-zA-Z:_') }} {{ mediawiki.external('a-zA-Z:_+-?!') }}*</li>
+ <li>name ::= <!-- {{ mediawiki.external('a-zA-Z:_') }} --> <!-- {{ mediawiki.external('a-zA-Z:_+-?!') }} -->*</li>
  <li>slot ::= ^oid /*default scope is a*/ | =literal</li>
  <li>oid ::= id | id:scope</li>
 </ul>

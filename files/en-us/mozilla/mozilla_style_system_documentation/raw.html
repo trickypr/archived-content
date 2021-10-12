@@ -81,7 +81,7 @@ This will lead to a rule tree that looks like this, where each node is in the fo
 
 <p>Note that two rule nodes point to rule 4.</p>
 
-<p>The style context tree will look like this, ignoring all the style contexts for the text nodes (all of which have style contexts pointing to rule node <code>A</code>), with each style context in the format <code>{{ mediawiki.external('element type: rule node') }}</code>:</p>
+<p>The style context tree will look like this, ignoring all the style contexts for the text nodes (all of which have style contexts pointing to rule node <code>A</code>), with each style context in the format <code><!-- {{ mediawiki.external('element type: rule node') }} --></code>:</p>
 
 <pre class="tree">                      [doc: B]
          ,------------'  |   `-----------.
@@ -103,7 +103,7 @@ This will lead to a rule tree that looks like this, where each node is in the fo
 
 <h4 id="CSS_Stylesheet_Loading" name="CSS_Stylesheet_Loading">CSS Stylesheet Loading</h4>
 
-<p>{{ mediawiki.external('This section needs to be written. I\'m reluctant to write it both since I don\'t know much about it.') }}</p>
+<p><!-- {{ mediawiki.external('This section needs to be written. I\'m reluctant to write it both since I don\'t know much about it.') }} --></p>
 
 <p><strong>Problems</strong>:A bunch the code needs to be rewritten to prevent stylesheets from blocking the parser and to reduce string copying (although that partly goes with <a href="#Parsing">parsing</a>).]</p>
 

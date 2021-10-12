@@ -1,6 +1,6 @@
-<p>{{ Jsapi_minversion_header("17") }}</p>
+<p><!-- {{ Jsapi_minversion_header("17") }} --></p>
 
-<div>{{SpiderMonkeySidebar("JSAPI")}}</div>
+<div><!-- {{SpiderMonkeySidebar("JSAPI")}} --></div>
 
 <div class="summary">
 <p>Set the callback function for each compartment being destroyed.</p>
@@ -21,7 +21,7 @@ JS_SetDestroyCompartmentCallback(JSRuntime *rt, JSDestroyCompartmentCallback cal
   </tr>
   <tr>
    <td><code>cx</code></td>
-   <td>{{jsapixref("JSRuntime", "JSRuntime *")}}</td>
+   <td><!-- {{jsapixref("JSRuntime", "JSRuntime *")}} --></td>
    <td>The runtime to set the callback function.</td>
   </tr>
   <tr>
@@ -47,12 +47,12 @@ JS_SetDestroyCompartmentCallback(JSRuntime *rt, JSDestroyCompartmentCallback cal
   </tr>
   <tr>
    <td><code>cx</code></td>
-   <td>{{jsapixref("JSRuntime", "JSRuntime *")}}</td>
+   <td><!-- {{jsapixref("JSRuntime", "JSRuntime *")}} --></td>
    <td>The runtime of the compartments.</td>
   </tr>
   <tr>
    <td><code>compartmentCallback</code></td>
-   <td>{{jsapixref("JSCompartment", "JSCompartment *")}}</td>
+   <td><!-- {{jsapixref("JSCompartment", "JSCompartment *")}} --></td>
    <td>The pointer to the compartment which is to be destroyed.</td>
   </tr>
  </tbody>
@@ -65,7 +65,7 @@ JS_SetDestroyCompartmentCallback(JSRuntime *rt, JSDestroyCompartmentCallback cal
 <h2 id="See_Also" name="See_Also">See also</h2>
 
 <ul>
- <li>{{ LXRSearch("ident", "i", "JS_SetDestroyCompartmentCallback") }}</li>
- <li>{{ LXRSearch("ident", "i", "JSDestroyCompartmentCallback") }}</li>
- <li>{{bug(737365)}}</li>
+ <li><!-- {{ LXRSearch("ident", "i", "JS_SetDestroyCompartmentCallback") }} --></li>
+ <li><!-- {{ LXRSearch("ident", "i", "JSDestroyCompartmentCallback") }} --></li>
+ <li><!-- {{bug(737365)}} --></li>
 </ul>

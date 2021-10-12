@@ -1,6 +1,6 @@
-<p>{{obsolete_header}}</p>
+<p><!-- {{obsolete_header}} --></p>
 
-<p>{{ gecko_minversion_header("17") }}</p>
+<p><!-- {{ gecko_minversion_header("17") }} --></p>
 
 <p>The <code>Task.jsm</code> JavaScript code module implements a subset of <a href="https://github.com/mozilla/task.js" title="http://taskjs.org/">Task.js</a> to make sequential, asynchronous operations simple, using the power of JavaScript's <code>yield</code> operator. To use it, you first need to import the code module into your JavaScript scope:</p>
 
@@ -29,7 +29,7 @@
 <table class="standard-table">
  <tbody>
   <tr>
-   <td><code>Function <a href="#async()">async</a>(aTask);</code> {{ gecko_minversion_inline("30") }}</td>
+   <td><code>Function <a href="#async()">async</a>(aTask);</code> <!-- {{ gecko_minversion_inline("30") }} --></td>
   </tr>
   <tr>
    <td><code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/JavaScript_code_modules/Promise.jsm/Promise" title="/en-US/docs/Mozilla/JavaScript_code_modules/Promise.jsm/Promise">Promise</a> <a href="#spawn()">spawn</a>(aTask);</code></td>
@@ -64,7 +64,7 @@ Task.spawn( function() { yield ... ; throw new Task.Result("Value"); }</pre>
 
 <h2 id="Methods">Methods</h2>
 
-<h3 id="async()_gecko_minversion_inline(30)">async() {{ gecko_minversion_inline("30") }}</h3>
+<h3 id="async()_gecko_minversion_inline(30)">async() <!-- {{ gecko_minversion_inline("30") }} --></h3>
 
 <p>Create and return an "async function" that starts a new task.</p>
 

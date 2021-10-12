@@ -2,7 +2,7 @@
 
 <p>Mozilla does not have its own internal implementation of SPNEGO. Instead, it leverages system libraries that provide SPNEGO; SSPI on Microsoft Windows, and GSS-API on Linux, Mac OSX, and other UNIX-like systems.</p>
 
-<p>The Mozilla implementation of SPNEGO can be found under {{ Source("extensions/auth/") }}. It used to live in extensions/negotiateauth.</p>
+<p>The Mozilla implementation of SPNEGO can be found under <!-- {{ Source("extensions/auth/") }} -->. It used to live in extensions/negotiateauth.</p>
 
 <p>Mozilla also supports raw NTLM authentication using an internal implementation (based on the <a class="external" href="http://davenport.sourceforge.net/ntlm.html">documentation</a> provided by Eric Glass) that supports NTLMv1/LMv1 and NTLM2 Session Key modes. As of Mozilla 1.7, there is no support for NTLMv2/LMv2. This is mainly due to the fact that NTLMSSP does not provide a means to negotiate use of NTLMv2/LMv2.</p>
 
@@ -14,7 +14,7 @@
 
 <h3 id="Configuration">Configuration</h3>
 
-<p>By default, Mozilla rejects all SPNEGO challenges from a web server. This is to protect the user from the possibility of DNS-spoofing being used to stage a man-in-the-middle exploit (see {{ Bug(17578) }} for more info). Moreover, with Windows clients NTLM may be negotiated as the authentication protocol. So, it is paramount that the browser does not freely exchange NTLM user credentials with any server that requests them. The NTLM response includes a hash of the user's logon credentials. On older versions of Windows this hash is computed using a relatively weak algorithm (see <a class="external" href="http://ubiqx.org/cifs/SMB.html#SMB.8">Hertel</a> for more info on NTLM authentication).</p>
+<p>By default, Mozilla rejects all SPNEGO challenges from a web server. This is to protect the user from the possibility of DNS-spoofing being used to stage a man-in-the-middle exploit (see <!-- {{ Bug(17578) }} --> for more info). Moreover, with Windows clients NTLM may be negotiated as the authentication protocol. So, it is paramount that the browser does not freely exchange NTLM user credentials with any server that requests them. The NTLM response includes a hash of the user's logon credentials. On older versions of Windows this hash is computed using a relatively weak algorithm (see <a class="external" href="http://ubiqx.org/cifs/SMB.html#SMB.8">Hertel</a> for more info on NTLM authentication).</p>
 
 <p>Mozilla currently supports a whitelist of sites that are permitted to engage in SPNEGO authentication with the browser. This list is intended to be configured by an IT department prior to distributing Mozilla to end-users.</p>
 

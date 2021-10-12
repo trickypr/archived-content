@@ -9,9 +9,9 @@
 );
 </pre>
 <h3 id="Parameters"> Parameters </h3>
-<dl><dt><code>hSession</code></dt><dd> {{ mediawiki.external('in') }} session handle.
-</dd><dt><code>pSeed</code></dt><dd> {{ mediawiki.external('in') }} pointer to the seed material
-</dd><dt><code>usSeedLen</code></dt><dd> {{ mediawiki.external('in') }} length of the seed material in bytes.
+<dl><dt><code>hSession</code></dt><dd> <!-- {{ mediawiki.external('in') }} --> session handle.
+</dd><dt><code>pSeed</code></dt><dd> <!-- {{ mediawiki.external('in') }} --> pointer to the seed material
+</dd><dt><code>usSeedLen</code></dt><dd> <!-- {{ mediawiki.external('in') }} --> length of the seed material in bytes.
 </dd></dl>
 <h3 id="Description"> Description </h3>
 <p><code>FC_SeedRandom()</code> mixes additional seed material into the token's random number generator. Note that <code>FC_SeedRandom()</code> doesn't provide the initial seed material for the random number generator. The initial seed material is provided by the NSS cryptographic module itself.

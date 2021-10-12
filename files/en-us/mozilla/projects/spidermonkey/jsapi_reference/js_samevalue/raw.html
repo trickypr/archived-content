@@ -1,6 +1,6 @@
-<div>{{SpiderMonkeySidebar("JSAPI")}}</div>
+<div><!-- {{SpiderMonkeySidebar("JSAPI")}} --></div>
 
-<p>{{ jsapi_minversion_header("1.8.1") }}</p>
+<p><!-- {{ jsapi_minversion_header("1.8.1") }} --></p>
 
 <div class="summary">
 <p>Determines if two <code>jsval</code>s are the same, as determined by the SameValue algorithm in ECMAScript 262, 5th edition.</p>
@@ -41,17 +41,17 @@ JS_SameValue(JSContext *cx, jsval v1, jsval v2, bool *same);
   </tr>
   <tr>
    <td><code>cx</code></td>
-   <td>{{jsapixref("JSRuntime", "JSContext *")}}</td>
-   <td>Pointer to a JS context from which to derive runtime information. {{ Jsapi-requires-request() }}</td>
+   <td><!-- {{jsapixref("JSRuntime", "JSContext *")}} --></td>
+   <td>Pointer to a JS context from which to derive runtime information. <!-- {{ Jsapi-requires-request() }} --></td>
   </tr>
   <tr>
    <td><code>v1</code></td>
-   <td>{{jsapixref("JS::Value", "JS::Handle&lt;JS::Value&gt;")}} / {{jsapixref("jsval")}}</td>
+   <td><!-- {{jsapixref("JS::Value", "JS::Handle&lt;JS::Value&gt;")}} --> / <!-- {{jsapixref("jsval")}} --></td>
    <td>The first value.</td>
   </tr>
   <tr>
    <td><code>v2</code></td>
-   <td>{{jsapixref("JS::Value", "JS::Handle&lt;JS::Value&gt;")}} / {{jsapixref("jsval")}}</td>
+   <td><!-- {{jsapixref("JS::Value", "JS::Handle&lt;JS::Value&gt;")}} --> / <!-- {{jsapixref("jsval")}} --></td>
    <td>The second value.</td>
   </tr>
  </tbody>
@@ -64,8 +64,8 @@ JS_SameValue(JSContext *cx, jsval v1, jsval v2, bool *same);
 <h2 id="See_Also" name="See_Also">See Also</h2>
 
 <ul>
- <li>{{ LXRSearch("ident", "i", "JS_SameValue") }}</li>
- <li>{{jsapixref("JS_StrictlyEqual")}}</li>
- <li>{{jsapixref("JS_LooselyEqual")}}</li>
- <li>{{bug(1132045)}} -- use handle</li>
+ <li><!-- {{ LXRSearch("ident", "i", "JS_SameValue") }} --></li>
+ <li><!-- {{jsapixref("JS_StrictlyEqual")}} --></li>
+ <li><!-- {{jsapixref("JS_LooselyEqual")}} --></li>
+ <li><!-- {{bug(1132045)}} --> -- use handle</li>
 </ul>

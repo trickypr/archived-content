@@ -2,15 +2,15 @@
 
 <p>This is a checklist used by <code><a class="external" href="https://www.mozilla.org/roadmap.html#project-management">drivers@mozilla.org</a></code> to help ensure that the right things happen before a release, and to give others a rough idea of how our release process works. The build team probably has a separate (and probably better) version of some parts of this list.</p>
 
-<p>If you have additions or suggestions for this list, please note them {{ interwiki('wikimo', 'MozillaReleaseChecklist', 'at the wiki') }} and one of will migrate appropriate additions from there to here.</p>
+<p>If you have additions or suggestions for this list, please note them <!-- {{ interwiki('wikimo', 'MozillaReleaseChecklist', 'at the wiki') }} --> and one of will migrate appropriate additions from there to here.</p>
 
 <h3 id="Get_the_right_fixes_in">Get the right fixes in</h3>
 
 <ul>
- <li>Search for bugs nominated with the <code>blocking<em>{{ mediawiki.external('R') }}</em>?</code> bug flag, and mark them <code>+</code> or <code>-</code>.</li>
- <li>Encourage owners of <code>blocking<em>{{ mediawiki.external('R') }}</em>+</code> bugs (and perhaps some bugs that are close but not quite blocking) to fix the bugs.</li>
+ <li>Search for bugs nominated with the <code>blocking<em><!-- {{ mediawiki.external('R') }} --></em>?</code> bug flag, and mark them <code>+</code> or <code>-</code>.</li>
+ <li>Encourage owners of <code>blocking<em><!-- {{ mediawiki.external('R') }} --></em>+</code> bugs (and perhaps some bugs that are close but not quite blocking) to fix the bugs.</li>
  <li>Keep an eye on talkback data, and nominate relevant bugs.</li>
- <li>Handle approval requests (the <code>approval{{ mediawiki.external('R') }}?</code> patch flag) once the tree is frozen for the release.</li>
+ <li>Handle approval requests (the <code>approval<!-- {{ mediawiki.external('R') }} -->?</code> patch flag) once the tree is frozen for the release.</li>
  <li>Look for regressions in difficult-to-test areas such as memory leaks.</li>
 </ul>
 
@@ -38,7 +38,7 @@
   mozilla/composer/
 </pre>
 
-<p>When the branch is made, create the <code>blocking<em>{{ mediawiki.external('R') }}</em></code> bug nomination flags for the next release.</p>
+<p>When the branch is made, create the <code>blocking<em><!-- {{ mediawiki.external('R') }} --></em></code> bug nomination flags for the next release.</p>
 
 <h3 id="Notify_the_sysadmins">Notify the sysadmins</h3>
 
@@ -78,7 +78,7 @@
  </li>
 </ul>
 
-<p>Also, for final releases only, remove the Debug and QA menus, build number, etc. (See {{ Bug(180823) }}, {{ Bug(163246) }}, and {{ Bug(139335) }}.)</p>
+<p>Also, for final releases only, remove the Debug and QA menus, build number, etc. (See <!-- {{ Bug(180823) }} -->, <!-- {{ Bug(163246) }} -->, and <!-- {{ Bug(139335) }} -->.)</p>
 
 <h3 id="Make_release_builds">Make release builds</h3>
 
@@ -94,7 +94,7 @@
 
 <ul>
  <li>Write the release notes page and <a class="external" href="https://www.mozilla.org/contribute/writing/cvs">check it in</a>.</li>
- <li>Create the <code>blocking<em>{{ mediawiki.external('R') }}</em></code> bug nomination flags for the next release and retire the <code>blocking{{ mediawiki.external('R') }}</code> and <code>approval{{ mediawiki.external('R') }}</code> sets of flags for the current release (possibly after pushing out some of the requests to the next release).</li>
+ <li>Create the <code>blocking<em><!-- {{ mediawiki.external('R') }} --></em></code> bug nomination flags for the next release and retire the <code>blocking<!-- {{ mediawiki.external('R') }} --></code> and <code>approval<!-- {{ mediawiki.external('R') }} --></code> sets of flags for the current release (possibly after pushing out some of the requests to the next release).</li>
  <li>Send the talkback team the identifiers from the master.ini files of the three major platforms.</li>
  <li>Make web page changes, which should land after the builds are on all the FTP servers:
   <ul>

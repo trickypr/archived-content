@@ -1,4 +1,4 @@
-<div>{{SpiderMonkeySidebar("JSAPI")}}</div>
+<div><!-- {{SpiderMonkeySidebar("JSAPI")}} --></div>
 
 <div class="summary">
 <p>Get the builtin class constructor.</p>
@@ -20,17 +20,17 @@ JS_GetClassObject(JSContext *cx, JSProtoKey key,
   </tr>
   <tr>
    <td><code>cx</code></td>
-   <td>{{jsapixref("JSRuntime", "JSContext *")}}</td>
-   <td>A context. {{ Jsapi-requires-request() }}</td>
+   <td><!-- {{jsapixref("JSRuntime", "JSContext *")}} --></td>
+   <td>A context. <!-- {{ Jsapi-requires-request() }} --></td>
   </tr>
   <tr>
    <td><code>key</code></td>
-   <td>{{jsapixref("JSProtoKey")}}</td>
+   <td><!-- {{jsapixref("JSProtoKey")}} --></td>
    <td>The key of the prototype.</td>
   </tr>
   <tr>
    <td><code>objp</code></td>
-   <td>{{jsapixref("JSObject", "JS::MutableHandle&lt;JSObject*&gt;")}}</td>
+   <td><!-- {{jsapixref("JSObject", "JS::MutableHandle&lt;JSObject*&gt;")}} --></td>
    <td>Out parameter. If successful, receive the class constructor.</td>
   </tr>
  </tbody>
@@ -45,7 +45,7 @@ JS_GetClassObject(JSContext *cx, JSProtoKey key,
 <h2 id="See_Also" name="See_Also">See Also</h2>
 
 <ul>
- <li>{{ LXRSearch("ident", "i", "JS_GetClassObject") }}</li>
- <li>{{jsapixref("JS_GetClassPrototype")}}</li>
- <li>{{jsapixref("JSProtoKey")}}</li>
+ <li><!-- {{ LXRSearch("ident", "i", "JS_GetClassObject") }} --></li>
+ <li><!-- {{jsapixref("JS_GetClassPrototype")}} --></li>
+ <li><!-- {{jsapixref("JSProtoKey")}} --></li>
 </ul>

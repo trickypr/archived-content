@@ -1,5 +1,5 @@
 <div>
- {{SpiderMonkeySidebar("JSAPI")}}</div>
+ <!-- {{SpiderMonkeySidebar("JSAPI")}} --></div>
 <div class="summary">
  <p>Determine whether a buffer is compilable unit.</p>
 </div>
@@ -17,12 +17,12 @@ JS_BufferIsCompilableUnit(JSContext *cx, JS::Handle&lt;JSObject*&gt; obj,
   </tr>
   <tr>
    <td><code>cx</code></td>
-   <td><code>{{jsapixref("JSRuntime", "JSContext")}} *</code></td>
-   <td>Pointer to a JS context from which to derive runtime information. {{ Jsapi-requires-request }}</td>
+   <td><code><!-- {{jsapixref("JSRuntime", "JSContext")}} --> *</code></td>
+   <td>Pointer to a JS context from which to derive runtime information. <!-- {{ Jsapi-requires-request }} --></td>
   </tr>
   <tr>
    <td><code>obj</code></td>
-   <td><code>{{jsapixref("JSObject", "JS::HandleObject")}}</code></td>
+   <td><code><!-- {{jsapixref("JSObject", "JS::HandleObject")}} --></code></td>
    <td>The global object, or <code>NULL</code>.</td>
   </tr>
   <tr>
@@ -41,10 +41,10 @@ JS_BufferIsCompilableUnit(JSContext *cx, JS::Handle&lt;JSObject*&gt; obj,
 <p>Given a buffer, return <code>false</code> if the buffer might become a valid JavaScript statement with the addition of more lines. Otherwise return <code>true</code>. The intent is to support interactive compilation - accumulate lines in a buffer until <code>JS_BufferIsCompilableUnit</code> is <code>true</code>, then pass it to the compiler.</p>
 <h2 id="See_Also" name="See_Also">See Also</h2>
 <ul>
- <li>{{ LXRSearch("ident", "i", "JS_BufferIsCompilableUnit") }}</li>
- <li>{{jsapixref("JS::Evaluate")}}</li>
- <li>{{jsapixref("JS::Compile")}}</li>
- <li>{{jsapixref("JS::CompileOffThread")}}</li>
- <li>{{jsapixref("JS::CompileFunction")}}</li>
- <li>{{jsapixref("JS_DecompileScript")}}</li>
+ <li><!-- {{ LXRSearch("ident", "i", "JS_BufferIsCompilableUnit") }} --></li>
+ <li><!-- {{jsapixref("JS::Evaluate")}} --></li>
+ <li><!-- {{jsapixref("JS::Compile")}} --></li>
+ <li><!-- {{jsapixref("JS::CompileOffThread")}} --></li>
+ <li><!-- {{jsapixref("JS::CompileFunction")}} --></li>
+ <li><!-- {{jsapixref("JS_DecompileScript")}} --></li>
 </ul>

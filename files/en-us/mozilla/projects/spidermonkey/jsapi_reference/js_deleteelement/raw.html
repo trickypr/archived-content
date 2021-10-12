@@ -1,4 +1,4 @@
-<div>{{SpiderMonkeySidebar("JSAPI")}}</div>
+<div><!-- {{SpiderMonkeySidebar("JSAPI")}} --></div>
 
 <div class="summary">
 <p>Removes a specified element or numeric property from an object.</p>
@@ -25,12 +25,12 @@ JS_DeleteElement(JSContext *cx, JS::HandleObject obj, uint32_t index,
   </tr>
   <tr>
    <td><code>cx</code></td>
-   <td>{{jsapixref("JSRuntime", "JSContext *")}}</td>
-   <td>Pointer to a JS context from which to derive runtime information. {{ Jsapi-requires-request() }}</td>
+   <td><!-- {{jsapixref("JSRuntime", "JSContext *")}} --></td>
+   <td>Pointer to a JS context from which to derive runtime information. <!-- {{ Jsapi-requires-request() }} --></td>
   </tr>
   <tr>
    <td><code>obj</code></td>
-   <td>{{jsapixref("JSObject", "JS::HandleObject")}}</td>
+   <td><!-- {{jsapixref("JSObject", "JS::HandleObject")}} --></td>
    <td>Object from which to delete an element.</td>
   </tr>
   <tr>
@@ -40,7 +40,7 @@ JS_DeleteElement(JSContext *cx, JS::HandleObject obj, uint32_t index,
   </tr>
   <tr>
    <td><code>result</code></td>
-   <td>{{jsapixref("JS::ObjectOpResult", "JS::ObjectOpResult &amp;")}}</td>
+   <td><!-- {{jsapixref("JS::ObjectOpResult", "JS::ObjectOpResult &amp;")}} --></td>
    <td>(out parameter) Receives the result of the operation.</td>
   </tr>
  </tbody>
@@ -52,11 +52,11 @@ JS_DeleteElement(JSContext *cx, JS::HandleObject obj, uint32_t index,
 
 <p>For JavaScript 1.2 and earlier, if failure occurs because you attempt to delete a permanent or read-only element, <code>JS_DeleteElement</code> reports the error before returning <code>false</code>. For JavaScript 1.3 and later, the attempt is silently ignored.</p>
 
-<p>To truncate an array, use {{jsapixref("JS_SetArrayLength")}}. To remove all elements and properties from an object, call {{jsapixref("JS_ClearScope")}}.</p>
+<p>To truncate an array, use <!-- {{jsapixref("JS_SetArrayLength")}} -->. To remove all elements and properties from an object, call <!-- {{jsapixref("JS_ClearScope")}} -->.</p>
 
 <h2 id="See_Also" name="See_Also">See Also</h2>
 
 <ul>
- <li>{{ LXRSearch("ident", "i", "JS_DeleteElement") }}</li>
- <li>{{bug(1113369)}} -- added <code>result</code> parameter</li>
+ <li><!-- {{ LXRSearch("ident", "i", "JS_DeleteElement") }} --></li>
+ <li><!-- {{bug(1113369)}} --> -- added <code>result</code> parameter</li>
 </ul>

@@ -1,6 +1,6 @@
-<div>{{SpiderMonkeySidebar("JSAPI")}}</div>
+<div><!-- {{SpiderMonkeySidebar("JSAPI")}} --></div>
 
-<p>{{ Jsapi_minversion_header("17") }}</p>
+<p><!-- {{ Jsapi_minversion_header("17") }} --></p>
 
 <div class="summary">
 <p>Compile a script for execution.</p>
@@ -72,22 +72,22 @@ JS::Compile(JSContext *cx, JS::HandleObject obj,
   </tr>
   <tr>
    <td><code>cx</code></td>
-   <td>{{jsapixref("JSRuntime", "JSContext *")}}</td>
-   <td>Pointer to a JS context from which to derive runtime information. {{ Jsapi-requires-request() }}</td>
+   <td><!-- {{jsapixref("JSRuntime", "JSContext *")}} --></td>
+   <td>Pointer to a JS context from which to derive runtime information. <!-- {{ Jsapi-requires-request() }} --></td>
   </tr>
   <tr>
    <td><code>obj</code></td>
-   <td>{{jsapixref("JSObject", "JS::HandleObject")}}</td>
-   <td>The global object, or <code>NULL</code>. {{ obsolete_inline("jsapi39") }}</td>
+   <td><!-- {{jsapixref("JSObject", "JS::HandleObject")}} --></td>
+   <td>The global object, or <code>NULL</code>. <!-- {{ obsolete_inline("jsapi39") }} --></td>
   </tr>
   <tr>
    <td><code>options</code></td>
-   <td>{{jsapixref("JS::CompileOptions", "JS::ReadOnlyCompileOptions &amp;")}}</td>
+   <td><!-- {{jsapixref("JS::CompileOptions", "JS::ReadOnlyCompileOptions &amp;")}} --></td>
    <td>Compile options.</td>
   </tr>
   <tr>
    <td><code>srcBuf</code></td>
-   <td>{{jsapixref("JS::SourceBufferHolder", "JS::SourceBufferHolder &amp;")}}</td>
+   <td><!-- {{jsapixref("JS::SourceBufferHolder", "JS::SourceBufferHolder &amp;")}} --></td>
    <td>Source buffer containing the script to compile.</td>
   </tr>
   <tr>
@@ -117,7 +117,7 @@ JS::Compile(JSContext *cx, JS::HandleObject obj,
   </tr>
   <tr>
    <td><code>script</code></td>
-   <td>{{jsapixref("JSScript", "JS::MutableHandleScript")}}</td>
+   <td><!-- {{jsapixref("JSScript", "JS::MutableHandleScript")}} --></td>
    <td>Out parameter. On success, <code>script</code> receives the result script.</td>
   </tr>
  </tbody>
@@ -139,11 +139,11 @@ JS::Compile(JSContext *cx, JS::HandleObject obj,
 
 <ul>
  <li>The <a href="/en-US/docs/Mozilla/Projects/SpiderMonkey/JSAPI_User_Guide#Compiled_scripts">JSAPI User Guide</a> contains example code using compiled scripts.</li>
- <li>{{ LXRSearch("ident", "i", "JS::Compile") }}</li>
- <li>{{jsapixref("JS::Evaluate")}}</li>
- <li>{{jsapixref("JS::CompileOffThread")}}</li>
- <li>{{jsapixref("JS::CompileFunction")}}</li>
- <li>{{jsapixref("JS_DecompileScript")}}</li>
- <li>{{bug(771705)}}</li>
- <li>{{bug(1143793)}} -- removed <code>obj</code> parameter</li>
+ <li><!-- {{ LXRSearch("ident", "i", "JS::Compile") }} --></li>
+ <li><!-- {{jsapixref("JS::Evaluate")}} --></li>
+ <li><!-- {{jsapixref("JS::CompileOffThread")}} --></li>
+ <li><!-- {{jsapixref("JS::CompileFunction")}} --></li>
+ <li><!-- {{jsapixref("JS_DecompileScript")}} --></li>
+ <li><!-- {{bug(771705)}} --></li>
+ <li><!-- {{bug(1143793)}} --> -- removed <code>obj</code> parameter</li>
 </ul>

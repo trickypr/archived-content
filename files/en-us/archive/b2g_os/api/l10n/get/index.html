@@ -28,7 +28,7 @@ tags:
 <p><span class="seoSummary">The <code>get</code> method is used to retrieve translations from the localization resources, optionally interpolating them with additional variable data. If the translation is not found in the first supported locale, the <a href="/en-US/docs/Web/API/L10n">L10n</a> context will try the next locale in the fallback chain (<strong>synchronously</strong>!) until it finds an available translation.</span></p>
 </div>
 
-<p>Translations may use the double brace syntax (<code>{{ placeable }}</code>) to introduce variables that will be resolved on runtime and interpolated into the final string return value. The variable values must be specified in the second argument to <code>L20n.get()</code> and must be strings or numbers. If a variable fails to resolve, the final translation will contain the raw <code>{{ placeable }}</code> syntax.</p>
+<p>Translations may use the double brace syntax (<code><!-- {{ placeable }} --></code>) to introduce variables that will be resolved on runtime and interpolated into the final string return value. The variable values must be specified in the second argument to <code>L20n.get()</code> and must be strings or numbers. If a variable fails to resolve, the final translation will contain the raw <code><!-- {{ placeable }} --></code> syntax.</p>
 
 <p>When no translation is found, or, in rare cases, when the translation contains unrecoverable errors (e.g. a cyclic reference in a placeable), <code>L10n.get()</code> will return an empty string.  This behavior allows the developers to safely assume that the return value is always a string.</p>
 
@@ -57,7 +57,7 @@ tags:
 
 <dl>
  <dd>
- <pre>from-contact = Missed call from {{ contact }}</pre>
+ <pre>from-contact = Missed call from <!-- {{ contact }} --></pre>
  </dd>
 </dl>
 

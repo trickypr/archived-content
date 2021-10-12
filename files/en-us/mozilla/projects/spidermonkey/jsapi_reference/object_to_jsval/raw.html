@@ -1,13 +1,13 @@
-<div>{{SpiderMonkeySidebar("JSAPI")}}</div>
+<div><!-- {{SpiderMonkeySidebar("JSAPI")}} --></div>
 
-<div>{{ obsolete_header("jsapi42") }}</div>
+<div><!-- {{ obsolete_header("jsapi42") }} --></div>
 
 <div class="summary">
 <p>Casts a specified JS object to a JS value.</p>
 </div>
 
 <div class="note">
-<p>Please use {{jsapixref("JS::ObjectValue")}}/{{jsapixref("JS::ObjectOrNullValue")}} instead in SpiderMonkey 45 or later.</p>
+<p>Please use <!-- {{jsapixref("JS::ObjectValue")}} -->/<!-- {{jsapixref("JS::ObjectOrNullValue")}} --> instead in SpiderMonkey 45 or later.</p>
 </div>
 
 <h2 id="Syntax" name="Syntax">Syntax</h2>
@@ -25,7 +25,7 @@ OBJECT_TO_JSVAL(JSObject *obj);
   </tr>
   <tr>
    <td><code>obj</code></td>
-   <td>{{jsapixref("JSObject", "JSObject *")}}</td>
+   <td><!-- {{jsapixref("JSObject", "JSObject *")}} --></td>
    <td>A pointer to a JavaScript object to convert to a <code>jsval</code>.</td>
   </tr>
  </tbody>
@@ -33,14 +33,14 @@ OBJECT_TO_JSVAL(JSObject *obj);
 
 <h2 id="Description" name="Description">Description</h2>
 
-<p><code>OBJECT_TO_JSVAL</code> casts <code>obj</code> from type {{jsapixref("JSObject", "JSObject *")}} to {{jsapixref("jsval")}}. If <code>obj</code> is <code>NULL</code>, the result is {{jsapixref("JSVAL_NULL")}}.</p>
+<p><code>OBJECT_TO_JSVAL</code> casts <code>obj</code> from type <!-- {{jsapixref("JSObject", "JSObject *")}} --> to <!-- {{jsapixref("jsval")}} -->. If <code>obj</code> is <code>NULL</code>, the result is <!-- {{jsapixref("JSVAL_NULL")}} -->.</p>
 
 <h2 id="See_Also" name="See_Also">See Also</h2>
 
 <ul>
- <li>{{ LXRSearch("ident", "i", "OBJECT_TO_JSVAL") }}</li>
- <li>{{jsapixref("JS_ValueToObject")}}</li>
- <li>{{jsapixref("JS::ObjectValue")}}</li>
- <li>{{jsapixref("JS::ObjectOrNullValue")}}</li>
- <li>{{bug(1177892)}} -- removed</li>
+ <li><!-- {{ LXRSearch("ident", "i", "OBJECT_TO_JSVAL") }} --></li>
+ <li><!-- {{jsapixref("JS_ValueToObject")}} --></li>
+ <li><!-- {{jsapixref("JS::ObjectValue")}} --></li>
+ <li><!-- {{jsapixref("JS::ObjectOrNullValue")}} --></li>
+ <li><!-- {{bug(1177892)}} --> -- removed</li>
 </ul>

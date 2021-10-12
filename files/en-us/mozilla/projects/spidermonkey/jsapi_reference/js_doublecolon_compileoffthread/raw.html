@@ -1,6 +1,6 @@
-<div>{{SpiderMonkeySidebar("JSAPI")}}</div>
+<div><!-- {{SpiderMonkeySidebar("JSAPI")}} --></div>
 
-<p>{{ Jsapi_minversion_header("31") }}</p>
+<p><!-- {{ Jsapi_minversion_header("31") }} --></p>
 
 <div class="summary">
 <p>Compile a script off thread for execution.</p>
@@ -33,17 +33,17 @@ typedef void
   </tr>
   <tr>
    <td><code>cx</code> / <code>maybe</code></td>
-   <td>{{jsapixref("JSRuntime", "JSContext *")}}</td>
-   <td>Pointer to a JS context from which to derive runtime information. {{ Jsapi-requires-request() }}</td>
+   <td><!-- {{jsapixref("JSRuntime", "JSContext *")}} --></td>
+   <td>Pointer to a JS context from which to derive runtime information. <!-- {{ Jsapi-requires-request() }} --></td>
   </tr>
   <tr>
    <td><code>rt</code></td>
-   <td>{{jsapixref("JSRuntime", "JSRuntime *")}}</td>
+   <td><!-- {{jsapixref("JSRuntime", "JSRuntime *")}} --></td>
    <td>Pointer to a JS runtime.</td>
   </tr>
   <tr>
    <td><code>options</code></td>
-   <td>{{jsapixref("JS::CompileOptions", "JS::ReadOnlyCompileOptions &amp;")}}</td>
+   <td><!-- {{jsapixref("JS::CompileOptions", "JS::ReadOnlyCompileOptions &amp;")}} --></td>
    <td>Compile options.</td>
   </tr>
   <tr>
@@ -83,10 +83,10 @@ typedef void
 
 <ul>
  <li>The <a href="/en-US/docs/Mozilla/Projects/SpiderMonkey/JSAPI_User_Guide#Compiled_scripts">JSAPI User Guide</a> contains example code using compiled scripts.</li>
- <li>{{ LXRSearch("ident", "i", "JS::CompileOffThread") }}</li>
- <li>{{jsapixref("JS::Evaluate")}}</li>
- <li>{{jsapixref("JS::Compile")}}</li>
- <li>{{jsapixref("JS::CompileFunction")}}</li>
- <li>{{jsapixref("JS_DecompileScript")}}</li>
- <li>{{bug(897655)}}</li>
+ <li><!-- {{ LXRSearch("ident", "i", "JS::CompileOffThread") }} --></li>
+ <li><!-- {{jsapixref("JS::Evaluate")}} --></li>
+ <li><!-- {{jsapixref("JS::Compile")}} --></li>
+ <li><!-- {{jsapixref("JS::CompileFunction")}} --></li>
+ <li><!-- {{jsapixref("JS_DecompileScript")}} --></li>
+ <li><!-- {{bug(897655)}} --></li>
 </ul>

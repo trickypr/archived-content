@@ -1,9 +1,9 @@
-<div>{{SpiderMonkeySidebar("JSAPI")}}</div>
+<div><!-- {{SpiderMonkeySidebar("JSAPI")}} --></div>
 
-<p>{{obsolete_header}}</p>
+<p><!-- {{obsolete_header}} --></p>
 
 <div class="geckoVersionNote">
-<p>use {{jsapixref("JS_NumberValue")}} instead</p>
+<p>use <!-- {{jsapixref("JS_NumberValue")}} --> instead</p>
 </div>
 
 <div class="summary">
@@ -25,17 +25,17 @@ JS_NewNumberValue(JSContext *cx, jsdouble d, jsval *rval);
   </tr>
   <tr>
    <td><code>cx</code></td>
-   <td>{{jsapixref("JSRuntime", "JSContext *")}}</td>
-   <td>The context in which to create the new number. {{ Jsapi-requires-request() }}</td>
+   <td><!-- {{jsapixref("JSRuntime", "JSContext *")}} --></td>
+   <td>The context in which to create the new number. <!-- {{ Jsapi-requires-request() }} --></td>
   </tr>
   <tr>
    <td><code>d</code></td>
-   <td>{{jsapixref("jsdouble")}}</td>
+   <td><!-- {{jsapixref("jsdouble")}} --></td>
    <td>The numeric value to convert.</td>
   </tr>
   <tr>
    <td><code>rval</code></td>
-   <td>{{jsapixref("jsval", "jsval *")}}</td>
+   <td><!-- {{jsapixref("jsval", "jsval *")}} --></td>
    <td>Out parameter. On success, <code>*rval</code> receives a JavaScript number with the value <code>d</code>.</td>
   </tr>
  </tbody>
@@ -43,17 +43,17 @@ JS_NewNumberValue(JSContext *cx, jsdouble d, jsval *rval);
 
 <h2 class="editable" id="Description">Description</h2>
 
-<p><strong><code>JS_NewNumberValue</code></strong> converts a C floating-point number of type {{jsapixref("jsdouble")}} to {{jsapixref("jsval")}}, the type of JavaScript values.</p>
+<p><strong><code>JS_NewNumberValue</code></strong> converts a C floating-point number of type <!-- {{jsapixref("jsdouble")}} --> to <!-- {{jsapixref("jsval")}} -->, the type of JavaScript values.</p>
 
 <p>The result is an integer <code>jsval</code> if <code>d</code> can be stored that way. Otherwise, a new floating-point <code>jsval</code> is created.</p>
 
-<p>Some space for the new value may be allocated from the JS garbage collection heap. In this case, the value is subject to garbage collection until you protect against it using a local root, an object property, or the {{jsapixref("JS_AddRoot")}} function. This can be avoided by using the address of a rooted variable as <code>rval</code>.</p>
+<p>Some space for the new value may be allocated from the JS garbage collection heap. In this case, the value is subject to garbage collection until you protect against it using a local root, an object property, or the <!-- {{jsapixref("JS_AddRoot")}} --> function. This can be avoided by using the address of a rooted variable as <code>rval</code>.</p>
 
 <p>On success, <code>JS_NewNumberValue</code> stores a numeric <code>jsval</code> in <code>*rval</code> and returns <code>JS_TRUE</code>. Otherwise it returns <code>JS_FALSE</code> and the value left in <code>*rval</code> is unspecified.</p>
 
 <h2 id="See_Also" name="See_Also">See Also</h2>
 
 <ul>
- <li>{{jsapixref("JS_NumberValue")}}</li>
- <li>{{bug(752223)}}</li>
+ <li><!-- {{jsapixref("JS_NumberValue")}} --></li>
+ <li><!-- {{bug(752223)}} --></li>
 </ul>

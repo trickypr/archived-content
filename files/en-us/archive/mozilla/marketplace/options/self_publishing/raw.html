@@ -2,12 +2,12 @@
 <p><span class="seoSummary">There may be circumstances where you don't want to make an app available through Firefox Marketplace. For example, you may want to distribute an app to members of your organization, run a beta test or simply do your own thing. This page explains how to publish apps yourself, outside Firefox Marketplace.</span></p>
 </div>
 
-<p>Open Web Apps are installed into Firefox OS, devices running Firefox for Android and desktops running Firefox for Desktop using {{ domxref("Apps.install") }} or {{ domxref("DOMApplicationsRegistry.installPackage", "Apps.installPackage") }}. In both cases, these APIs work by sending the URL of the manifest describing the app to be installed. So the basic requirements for publishing an app yourself are:</p>
+<p>Open Web Apps are installed into Firefox OS, devices running Firefox for Android and desktops running Firefox for Desktop using <!-- {{ domxref("Apps.install") }} --> or <!-- {{ domxref("DOMApplicationsRegistry.installPackage", "Apps.installPackage") }} -->. In both cases, these APIs work by sending the URL of the manifest describing the app to be installed. So the basic requirements for publishing an app yourself are:</p>
 
 <ol>
  <li>a server containing the app's manifest.</li>
  <li>a server containing the app (for hosted apps) or the app's packaged ZIP file.</li>
- <li>code on a website to invoke {{ domxref("Apps.install") }} or {{ domxref("DOMApplicationsRegistry.installPackage", "Apps.installPackage") }} as appropriate.</li>
+ <li>code on a website to invoke <!-- {{ domxref("Apps.install") }} --> or <!-- {{ domxref("DOMApplicationsRegistry.installPackage", "Apps.installPackage") }} --> as appropriate.</li>
 </ol>
 
 <h2 id="Limitations">Limitations</h2>
@@ -22,7 +22,7 @@
 
 <h2 id="Self-publishing_packaged_apps">Self-publishing packaged apps</h2>
 
-<p>You can self-publish a Packaged App by hosting its ZIP on a server, along with a mini-manifest. The mini-manifest must be in the same directory as the ZIP and is used to identify the app to the install process. You then create a script to invoke {{ domxref("DOMApplicationsRegistry.installPackage", "Apps.installPackage") }} passing it details of the mini-manifest. Let's look at how to do this in detail:</p>
+<p>You can self-publish a Packaged App by hosting its ZIP on a server, along with a mini-manifest. The mini-manifest must be in the same directory as the ZIP and is used to identify the app to the install process. You then create a script to invoke <!-- {{ domxref("DOMApplicationsRegistry.installPackage", "Apps.installPackage") }} --> passing it details of the mini-manifest. Let's look at how to do this in detail:</p>
 
 <ol>
  <li>
@@ -32,7 +32,7 @@
   <p><strong>Caution</strong>: Take care when zipping the content you wish to appear in the Packaged App and don't include the directory they are contained in. If you zip up the parent directory, the manifest will end up in the wrong place, and the Packaged App will be invalid.</p>
   </div>
  </li>
- <li>Create a file called <code>manifest.webapp</code> and add the content shown below. This file is known as the mini-manifest, because it's a slightly cut-down version of the manifest file that's included in your Packaged App's ZIP file. It's used by {{ domxref("DOMApplicationsRegistry.installPackage", "Apps.installPackage") }} to undertake the installation of your app. For more detailed information on the content, please see <a href="#Mini-manifest_fields">Mini-manifest fields</a> below.
+ <li>Create a file called <code>manifest.webapp</code> and add the content shown below. This file is known as the mini-manifest, because it's a slightly cut-down version of the manifest file that's included in your Packaged App's ZIP file. It's used by <!-- {{ domxref("DOMApplicationsRegistry.installPackage", "Apps.installPackage") }} --> to undertake the installation of your app. For more detailed information on the content, please see <a href="#Mini-manifest_fields">Mini-manifest fields</a> below.
   <pre class="brush: js">{
     "name": "My sample app",
     "package_path" : "<a class="LinkyMobile-ext" href="http://my-server.com/my-app-directory/my-app.zip" title="Linkification: http://my-server.com/my-app-directory/my-app.zip">http://my-server.com/my-app-directory/package.zip</a>",
@@ -43,7 +43,7 @@
     }
 }</pre>
  </li>
- <li>Create the script that will install your app. Here we're using a simple HTML file named <code>index.html</code> , but you can add the script to a button or use any appropriate method to invoke it on your website. The JavaScript on this page calls the Packaged App installer API ({{ domxref("DOMApplicationsRegistry.installPackage", "Apps.installPackage") }}) and includes callbacks that provide notification of whether the installation was successful or failed.
+ <li>Create the script that will install your app. Here we're using a simple HTML file named <code>index.html</code> , but you can add the script to a button or use any appropriate method to invoke it on your website. The JavaScript on this page calls the Packaged App installer API (<!-- {{ domxref("DOMApplicationsRegistry.installPackage", "Apps.installPackage") }} -->) and includes callbacks that provide notification of whether the installation was successful or failed.
   <pre class="brush: html">&lt;html&gt;
   &lt;body&gt;
     &lt;p&gt;Packaged app installation page&lt;/p&gt;
@@ -84,7 +84,7 @@
 
 <dl>
  <dt><code>size</code> (optional)</dt>
- <dd>The size of the app's zip file in bytes. This information is used by {{ domxref("DOMApplicationsRegistry.installPackage", "Apps.installPackage") }} to provide a progress indicator during installation.</dd>
+ <dd>The size of the app's zip file in bytes. This information is used by <!-- {{ domxref("DOMApplicationsRegistry.installPackage", "Apps.installPackage") }} --> to provide a progress indicator during installation.</dd>
 </dl>
 
 <p>Here is an example:</p>
@@ -134,14 +134,14 @@
 
 <h2 id="Self-publishing_Hosted_Apps">Self-publishing Hosted Apps</h2>
 
-<p>Compared to Packaged Apps, self-publication of a Hosted App is more straightforward, if you create its content in the same way as you would for Firefox Marketplace publication. This basically means creating the <a href="/en-US/Apps/Build/Manifest" title="Manifest documentation">manifest file</a> for your app. You then need to add the code to invoke {{ domxref("Apps.install") }}. This code is essentially the same as that you would use for a Packaged App, shown above, the only difference being that you can make relative reference to the location of the manifest file if you wish.</p>
+<p>Compared to Packaged Apps, self-publication of a Hosted App is more straightforward, if you create its content in the same way as you would for Firefox Marketplace publication. This basically means creating the <a href="/en-US/Apps/Build/Manifest" title="Manifest documentation">manifest file</a> for your app. You then need to add the code to invoke <!-- {{ domxref("Apps.install") }} -->. This code is essentially the same as that you would use for a Packaged App, shown above, the only difference being that you can make relative reference to the location of the manifest file if you wish.</p>
 
 <h2 id="Also_see">Also see</h2>
 
 <ul>
  <li><a href="/en-US/Apps/Build/JavaScript_API">App Installation and Management APIs</a></li>
- <li>{{ domxref("Apps.install") }}</li>
- <li>{{ domxref("DOMApplicationsRegistry.installPackage", "Apps.installPackage") }}</li>
+ <li><!-- {{ domxref("Apps.install") }} --></li>
+ <li><!-- {{ domxref("DOMApplicationsRegistry.installPackage", "Apps.installPackage") }} --></li>
  <li><a href="/en-US/Apps/Build/Manifest" title="Manifest documentation">App manifest</a></li>
  <li><a href="/en-US/Apps/Build/App_permissions">App permissions</a></li>
 </ul>

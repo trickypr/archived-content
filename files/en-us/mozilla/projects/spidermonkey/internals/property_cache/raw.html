@@ -1,4 +1,4 @@
-<div>{{SpiderMonkeySidebar("Internals")}}</div>
+<div><!-- {{SpiderMonkeySidebar("Internals")}} --></div>
 
 <p>SpiderMonkey's <strong>property cache</strong> is an internal data structure used to speed up property accesses in the interpreter and to communicate between the interpreter and JIT.</p>
 
@@ -6,7 +6,7 @@
 <p><strong>Warning:</strong> The details below are obsolete. Shape integers do not exist anymore. The property cache still exists, but it is simpler now. SpiderMonkey mainly uses type inference to determine which properties are being accessed; in cases where type inference does not find the exact shape of the object being accessed, SpiderMonkey uses a PIC (polymorphic inline caches) to store the result of the lookup. The property cache is only used in the interpreter.</p>
 </div>
 
-<p>The property cache was introduced in {{ bug(365851) }}.</p>
+<p>The property cache was introduced in <!-- {{ bug(365851) }} -->.</p>
 
 <h2 id="Basics">Basics</h2>
 
@@ -80,7 +80,7 @@
  </li>
 </ul>
 
-<p>(At the moment, XML objects and resolve hooks can trigger bugs in the implementation that break some of these guarantees. See {{ bug(458271) }} and {{ bug(507231) }} for example. There are probably similar bugs to do with, for example, XML objects' custom getProperty op.)</p>
+<p>(At the moment, XML objects and resolve hooks can trigger bugs in the implementation that break some of these guarantees. See <!-- {{ bug(458271) }} --> and <!-- {{ bug(507231) }} --> for example. There are probably similar bugs to do with, for example, XML objects' custom getProperty op.)</p>
 
 <p>Dense arrays are shapeless.</p>
 
@@ -89,7 +89,7 @@
 <ul>
  <li>anything about the object's prototype other than its identity;</li>
  <li>anything about the object's parent;</li>
- <li><code>obj-&gt;freeslot</code>, which can be different for same-shaped objects if they have a <a href="/en/SpiderMonkey/JSAPI_Reference/JSClass.reserveSlots" title="en/SpiderMonkey/JSAPI Reference/JSClass.reserveSlots"><code>JSClass.reserveSlots</code></a> hook ({{ bug(535416) }});</li>
+ <li><code>obj-&gt;freeslot</code>, which can be different for same-shaped objects if they have a <a href="/en/SpiderMonkey/JSAPI_Reference/JSClass.reserveSlots" title="en/SpiderMonkey/JSAPI Reference/JSClass.reserveSlots"><code>JSClass.reserveSlots</code></a> hook (<!-- {{ bug(535416) }} -->);</li>
  <li>anything about the values of the object's own properties, beyond what the method guarantee and the branded object guarantee say about functions. In particular shape does not cover the <em>types</em> of property values; typically <code>{a: "x"}</code> and <code>{a: 12}</code> have the same shape.</li>
 </ul>
 
@@ -101,7 +101,7 @@
 
 <p><strong>Branded objects.</strong> An object may be <dfn>branded</dfn>. The interpreter and JIT brand an object whenever they find that enabling the branded object guarantee (above) would make an optimization possible. A branded object always has a unique shape.</p>
 
-<p><strong>Overflow.</strong> If there come to be more than 2<sup>24</sup> objects that need distinct shapes, the shape rules can no longer be satisfied. The property cache cannot operate without them, so it is disabled permanently. See {{ bug(440834) }}.</p>
+<p><strong>Overflow.</strong> If there come to be more than 2<sup>24</sup> objects that need distinct shapes, the shape rules can no longer be satisfied. The property cache cannot operate without them, so it is disabled permanently. See <!-- {{ bug(440834) }} -->.</p>
 
 <h2 id="Property_cache_entries">Property cache entries</h2>
 
@@ -183,5 +183,5 @@
 <ul>
  <li>Treat cache invalidation systematically.</li>
  <li>Does the global object always have a unique shape? a branded scope?</li>
- <li>Explain {{ bug(554955) }}.</li>
+ <li>Explain <!-- {{ bug(554955) }} -->.</li>
 </ul>

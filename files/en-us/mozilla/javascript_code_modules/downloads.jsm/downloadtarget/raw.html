@@ -20,23 +20,23 @@
    <td class="header">Description</td>
   </tr>
   <tr>
-   <td><code>exists</code> {{ReadOnlyInline}} {{gecko_minversion_inline(38)}}</td>
+   <td><code>exists</code> <!-- {{ReadOnlyInline}} --> <!-- {{gecko_minversion_inline(38)}} --></td>
    <td>Boolean</td>
    <td>Indicates whether or not the target file exists. This is a dynamic property, which is updated when the download is completed or when the <code><a href="/en-US/docs/Mozilla/JavaScript_code_modules/Downloads.jsm/Download#refresh()">Download.refresh()</a></code> method is called. You can use this instead of using file system calls to check for the existence of the file in order to reduce IO overhead.</td>
   </tr>
   <tr>
-   <td><code>path</code> {{ReadOnlyInline()}}</td>
+   <td><code>path</code> <!-- {{ReadOnlyInline()}} --></td>
    <td><code>string</code></td>
    <td>The path of the target file.</td>
   </tr>
   <tr>
-   <td><code>partFilePath</code> {{ReadOnlyInline()}}</td>
+   <td><code>partFilePath</code> <!-- {{ReadOnlyInline()}} --></td>
    <td><code>string</code></td>
    <td>The path of the "<code>.part</code>" file containing the data downloaded so far, or <code>null</code> to disable the use of a "<code>.part</code>" file to keep partially downloaded data.</td>
   </tr>
   <tr>
-   <td><code>size</code> {{ReadOnlyInline}} {{gecko_minversion_inline(38)}}</td>
-   <td>{{jsxref("Number")}}</td>
+   <td><code>size</code> <!-- {{ReadOnlyInline}} --> <!-- {{gecko_minversion_inline(38)}} --></td>
+   <td><!-- {{jsxref("Number")}} --></td>
    <td>
     <p>The size of the target file, in bytes, or zero if the download has not yet been completed.</p>
 

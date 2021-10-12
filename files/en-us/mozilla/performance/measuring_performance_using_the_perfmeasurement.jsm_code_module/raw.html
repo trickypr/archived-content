@@ -1,10 +1,10 @@
-<p>{{ gecko_minversion_header("2.0") }}</p>
+<p><!-- {{ gecko_minversion_header("2.0") }} --></p>
 <p><code>The PerfMeasurement.jsm</code> JavaScript code module lets you take detailed performance measurements of your code.</p>
-<p>{{ note("The <code>PerfMeasurement.jsm</code> JavaScript code module can only be used from chrome -- that is, from within the application itself or an add-on.") }}</p>
+<p><!-- {{ note("The <code>PerfMeasurement.jsm</code> JavaScript code module can only be used from chrome -- that is, from within the application itself or an add-on.") }} --></p>
 <p>The first thing you need to do is to import the module into your scope:</p>
 <pre><span class="plain">Components.utils.import("resource://gre/modules/PerfMeasurement.jsm")</span></pre>
 <p>You can then create a <code>PerfMeasurement</code> object. You give the constructor a bit-mask of events you're interested in; see</p>
-<div class="note"><strong>Note:</strong> At present, <code>PerfMeasurement.jsm</code> is only functional on Linux, but it is planned to add support for Windows ({{ Bug(583322) }}) and OSX ({{ Bug(583323) }}) as well, and we welcome patches for other operating systems.</div>
+<div class="note"><strong>Note:</strong> At present, <code>PerfMeasurement.jsm</code> is only functional on Linux, but it is planned to add support for Windows (<!-- {{ Bug(583322) }} -->) and OSX (<!-- {{ Bug(583323) }} -->) as well, and we welcome patches for other operating systems.</div>
 <p>For instance, let's measure instructions executed, cache references, and cache misses:</p>
 <pre class="eval deki-transform"><span class="nowiki">let monitor = new PerfMeasurement(PerfMeasurement.CPU_CYCLES |<br>              PerfMeasurement.CACHE_REFERENCES | PerfMeasurement.CACHE_MISSES);</span></pre>
 <p>This creates a new <code>PerfMeasurement</code> object, configured to record the specified event types. it doesn't, however, start to record data.</p>

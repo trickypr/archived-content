@@ -1,6 +1,6 @@
-<p>{{Gecko_MinVersion_Header(18)}}{{Fx_MinVersion_Note(28, "Interface was changed in Firefox 28, and old methods were removed.")}}</p>
+<p><!-- {{Gecko_MinVersion_Header(18)}} --><!-- {{Fx_MinVersion_Note(28, "Interface was changed in Firefox 28, and old methods were removed.")}} --></p>
 
-<p>The <code>{{Source("toolkit/modules/DeferredTask.jsm", "DeferredTask.jsm")}}</code> JavaScript code module offers utility routines for a task that will run after a delay. Multiple attempts to run the same task before the delay will be coalesced. To use it, you first need to import the code module into your JavaScript scope:</p>
+<p>The <code><!-- {{Source("toolkit/modules/DeferredTask.jsm", "DeferredTask.jsm")}} --></code> JavaScript code module offers utility routines for a task that will run after a delay. Multiple attempts to run the same task before the delay will be coalesced. To use it, you first need to import the code module into your JavaScript scope:</p>
 
 <pre class="brush: js;">Components.utils.import("resource://gre/modules/DeferredTask.jsm");
 </pre>
@@ -12,39 +12,39 @@
  <li>a further grace delay is added to take into account other changes.</li>
 </ul>
 
-<p>{{h1_Gecko_MinVersion("The DeferredTask constructor", "18.0")}}</p>
+<p><!-- {{h1_Gecko_MinVersion("The DeferredTask constructor", "18.0")}} --></p>
 
 <p>If you have a function call you want to defer for two seconds, you can do so using the <code>DeferredTask</code> constructor, like this:</p>
 
 <pre class="brush: js;">var task = new DeferredTask(myFunction, 2000);
 </pre>
 
-<p>{{fx_minversion_inline("28.0")}} You can also pass a generator function as the first argument of constructor.</p>
+<p><!-- {{fx_minversion_inline("28.0")}} --> You can also pass a generator function as the first argument of constructor.</p>
 
 <h2 id="Method_overview" name="Method_overview">Method overview</h2>
 
 <table class="standard-table">
  <tbody>
   <tr>
-   <td><code>bool <a href="#isPending()">isPending</a>();</code>{{Obsolete_Inline("Gecko28")}}</td>
+   <td><code>bool <a href="#isPending()">isPending</a>();</code><!-- {{Obsolete_Inline("Gecko28")}} --></td>
   </tr>
   <tr>
-   <td><code>void <a href="#start()">start</a>();</code>{{Obsolete_Inline("Gecko28")}}</td>
+   <td><code>void <a href="#start()">start</a>();</code><!-- {{Obsolete_Inline("Gecko28")}} --></td>
   </tr>
   <tr>
-   <td><code>void <a href="#flush()">flush</a>();</code>{{Obsolete_Inline("Gecko28")}}</td>
+   <td><code>void <a href="#flush()">flush</a>();</code><!-- {{Obsolete_Inline("Gecko28")}} --></td>
   </tr>
   <tr>
-   <td><code>void <a href="#cancel()">cancel</a>();</code>{{Obsolete_Inline("Gecko28")}}</td>
+   <td><code>void <a href="#cancel()">cancel</a>();</code><!-- {{Obsolete_Inline("Gecko28")}} --></td>
   </tr>
   <tr>
-   <td><code>void <a href="#arm()">arm</a>();</code>{{Gecko_MinVersion_Inline(28)}}</td>
+   <td><code>void <a href="#arm()">arm</a>();</code><!-- {{Gecko_MinVersion_Inline(28)}} --></td>
   </tr>
   <tr>
-   <td><code>void <a href="#disarm()">disarm</a>();</code>{{Gecko_MinVersion_Inline(28)}}</td>
+   <td><code>void <a href="#disarm()">disarm</a>();</code><!-- {{Gecko_MinVersion_Inline(28)}} --></td>
   </tr>
   <tr>
-   <td><code>Promise <a href="#finalize()">finalize</a>();</code>{{Gecko_MinVersion_Inline(28)}}</td>
+   <td><code>Promise <a href="#finalize()">finalize</a>();</code><!-- {{Gecko_MinVersion_Inline(28)}} --></td>
   </tr>
  </tbody>
 </table>
@@ -56,12 +56,12 @@
   <tr>
    <td><code>isArmed</code></td>
    <td><code><a href="/en/boolean" title="en/boolean">boolean</a></code></td>
-   <td>Indicates whether the task is currently requested to start again later, regardless of whether it is currently running.{{Gecko_MinVersion_Inline(28)}}</td>
+   <td>Indicates whether the task is currently requested to start again later, regardless of whether it is currently running.<!-- {{Gecko_MinVersion_Inline(28)}} --></td>
   </tr>
   <tr>
    <td><code>isRunning</code></td>
    <td><code><a href="/en/boolean" title="en/boolean">boolean</a></code></td>
-   <td>Indicates whether the task is currently running. This is always true when read from code inside the task function, but can also be true when read from external code, in case the task is an asynchronous generator function.{{Gecko_MinVersion_Inline(28)}}</td>
+   <td>Indicates whether the task is currently running. This is always true when read from code inside the task function, but can also be true when read from external code, in case the task is an asynchronous generator function.<!-- {{Gecko_MinVersion_Inline(28)}} --></td>
   </tr>
  </tbody>
 </table>
@@ -70,7 +70,7 @@
 
 <h3 id="isPending()" name="isPending()">isPending</h3>
 
-<p>{{Obsolete_Inline("Gecko28")}}</p>
+<p><!-- {{Obsolete_Inline("Gecko28")}} --></p>
 
 <p>Check the current task state.</p>
 
@@ -83,7 +83,7 @@
 
 <h3 id="start()" name="start()">start</h3>
 
-<p>{{Obsolete_Inline("Gecko28")}}</p>
+<p><!-- {{Obsolete_Inline("Gecko28")}} --></p>
 
 <p>Start (or postpone) task.</p>
 
@@ -92,7 +92,7 @@
 
 <h3 id="flush()" name="flush()">flush</h3>
 
-<p>{{Obsolete_Inline("Gecko28")}}</p>
+<p><!-- {{Obsolete_Inline("Gecko28")}} --></p>
 
 <p>Perform any postponed task immediately.</p>
 
@@ -101,7 +101,7 @@
 
 <h3 id="cancel()" name="cancel()">cancel</h3>
 
-<p>{{Obsolete_Inline("Gecko28")}}</p>
+<p><!-- {{Obsolete_Inline("Gecko28")}} --></p>
 
 <p>Cancel any pending task.</p>
 
@@ -110,7 +110,7 @@
 
 <h3 id="arm()" name="arm()">arm</h3>
 
-<p>{{Gecko_MinVersion_Inline(28)}}</p>
+<p><!-- {{Gecko_MinVersion_Inline(28)}} --></p>
 
 <p>Request the execution of the task after the delay specified on construction. Multiple calls don't introduce further delays. If the task is running, the delay will start when the current execution finishes.</p>
 
@@ -123,7 +123,7 @@
 
 <h3 id="disarm()" name="disarm()">disarm</h3>
 
-<p>{{Gecko_MinVersion_Inline(28)}}</p>
+<p><!-- {{Gecko_MinVersion_Inline(28)}} --></p>
 
 <p>Cancel any request for a delayed execution of the task, though the task itself cannot be canceled in case it is already running.</p>
 
@@ -134,7 +134,7 @@
 
 <h3 id="finalize()" name="finalize()">finalize</h3>
 
-<p>{{Gecko_MinVersion_Inline(28)}}</p>
+<p><!-- {{Gecko_MinVersion_Inline(28)}} --></p>
 
 <p>Ensure that any pending task is executed from start to finish, while preventing any attempt to arm the timer again.</p>
 
@@ -150,7 +150,7 @@
 
 <h2 id="Example" name="Example">Example</h2>
 
-<p>{{Fx_minversion_note("28.0", "This section describes about DeferredTask.jsm in Firefox 28.0 or higher.")}}</p>
+<p><!-- {{Fx_minversion_note("28.0", "This section describes about DeferredTask.jsm in Firefox 28.0 or higher.")}} --></p>
 
 <p>Set up a function or an asynchronous task whose execution can be triggered after a defined delay. Multiple attempts to run the task before the delay has passed are coalesced. The task cannot be re-entered while running, but can be executed again after a previous run finished.</p>
 
@@ -205,4 +205,4 @@ saveDeferredTask.finalize().then(() =&gt; OS.File.remove(...))
                            .then(null, Components.utils.reportError);
 </pre>
 
-{{IncludeSubnav("/en-US/docs/Mozilla/JavaScript_code_modules")}}
+<!-- {{IncludeSubnav("/en-US/docs/Mozilla/JavaScript_code_modules")}} -->

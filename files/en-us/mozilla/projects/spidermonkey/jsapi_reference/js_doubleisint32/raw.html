@@ -1,5 +1,5 @@
-<div>{{SpiderMonkeySidebar("JSAPI")}}</div>
-<p>{{ jsapi_minversion_header("17") }}</p>
+<div><!-- {{SpiderMonkeySidebar("JSAPI")}} --></div>
+<p><!-- {{ jsapi_minversion_header("17") }} --></p>
 <div class="summary">
   <p>Compare <code>double</code> value and <code>int32_t</code> value.</p>
 </div>
@@ -32,14 +32,14 @@ JS_DoubleIsInt32(double d, int32_t *ip);
   <p>(comment from <code>mozilla::NumberEqualsInt32</code>)
     Casting a floating-point value that doesn't truncate to <code>int32_t</code>, to
     <code>int32_t</code>, induces undefined behavior.  We should definitely fix this
-({{bug(744965)}}), but as apparently it "works" in practice, it's not a
+(<!-- {{bug(744965)}} -->), but as apparently it "works" in practice, it's not a
 pressing concern now.</p>
 </div>
 <h2 id="See_Also" name="See_Also">See Also</h2>
 <ul>
- <li>{{ LXRSearch("ident", "i", "JS_DoubleIsInt32") }}</li>
-<li>{{jsapixref("JS_DoubleToInt32")}}</li>
-<li>{{jsapixref("JS_DoubleToInt32", "JS_DoubleToUint32")}}</li>
-<li>{{bug(631132)}}</li>
-<li>{{bug(744965)}}</li>
+ <li><!-- {{ LXRSearch("ident", "i", "JS_DoubleIsInt32") }} --></li>
+<li><!-- {{jsapixref("JS_DoubleToInt32")}} --></li>
+<li><!-- {{jsapixref("JS_DoubleToInt32", "JS_DoubleToUint32")}} --></li>
+<li><!-- {{bug(631132)}} --></li>
+<li><!-- {{bug(744965)}} --></li>
 </ul>

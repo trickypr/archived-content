@@ -1,6 +1,6 @@
-<div>{{JSRef}} {{obsolete_header}}</div>
+<div><!-- {{JSRef}} --> <!-- {{obsolete_header}} --></div>
 
-<p>The <strong><code>handler.enumerate()</code></strong> method used to be a trap for {{jsxref("Statements/for...in", "for...in")}} statements, but has been removed from the ECMAScript standard in ES2016 and is deprecated in browsers.</p>
+<p>The <strong><code>handler.enumerate()</code></strong> method used to be a trap for <!-- {{jsxref("Statements/for...in", "for...in")}} --> statements, but has been removed from the ECMAScript standard in ES2016 and is deprecated in browsers.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -25,7 +25,7 @@
 
 <h2 id="Description">Description</h2>
 
-<p>The <code><strong>handler.enumerate</strong></code> method is a trap for {{jsxref("Statements/for...in", "for...in")}} statements.</p>
+<p>The <code><strong>handler.enumerate</strong></code> method is a trap for <!-- {{jsxref("Statements/for...in", "for...in")}} --> statements.</p>
 
 <h3 id="Interceptions">Interceptions</h3>
 
@@ -33,12 +33,12 @@
 
 <ul>
  <li>Property enumeration / for...in: <code>for (var name in proxy) {...}</code></li>
- <li>{{jsxref("Reflect.enumerate()")}}</li>
+ <li><!-- {{jsxref("Reflect.enumerate()")}} --></li>
 </ul>
 
 <h3 id="Invariants">Invariants</h3>
 
-<p>If the following invariants are violated, the proxy will throw a {{jsxref("TypeError")}}:</p>
+<p>If the following invariants are violated, the proxy will throw a <!-- {{jsxref("TypeError")}} -->:</p>
 
 <ul>
  <li>The <code>enumerate</code> method must return an object.</li>
@@ -46,7 +46,7 @@
 
 <h2 id="Examples">Examples</h2>
 
-<p>The following code traps {{jsxref("Statements/for...in", "for...in")}} statements.</p>
+<p>The following code traps <!-- {{jsxref("Statements/for...in", "for...in")}} --> statements.</p>
 
 <pre class="brush: js">var p = new Proxy({}, {
   enumerate(target) {
@@ -85,8 +85,8 @@ for (var x in p) {} // TypeError is thrown
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>{{jsxref("Proxy")}}</li>
- <li>{{jsxref("Proxy.handler", "handler")}}</li>
- <li>{{jsxref("Statements/for...in", "for...in")}} statements</li>
- <li>{{jsxref("Reflect.enumerate()")}}</li>
+ <li><!-- {{jsxref("Proxy")}} --></li>
+ <li><!-- {{jsxref("Proxy.handler", "handler")}} --></li>
+ <li><!-- {{jsxref("Statements/for...in", "for...in")}} --> statements</li>
+ <li><!-- {{jsxref("Reflect.enumerate()")}} --></li>
 </ul>

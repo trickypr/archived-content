@@ -1,6 +1,6 @@
-<div>{{SpiderMonkeySidebar("JSAPI")}}</div>
+<div><!-- {{SpiderMonkeySidebar("JSAPI")}} --></div>
 
-<p>{{ jsapi_minversion_header("17") }}</p>
+<p><!-- {{ jsapi_minversion_header("17") }} --></p>
 
 <div class="summary">
 <p>Base class that roots an internal variable-size array of type <code>T</code>.</p>
@@ -74,11 +74,11 @@
   </tr>
   <tr>
    <td><code>JS::MutableHandle&lt;T&gt; operator[](size_t i)</code></td>
-   <td>Returns to the <code>i</code>-th element as {{jsapixref("JS::MutableHandle", "JS::MutableHandle&lt;T&gt;")}}.</td>
+   <td>Returns to the <code>i</code>-th element as <!-- {{jsapixref("JS::MutableHandle", "JS::MutableHandle&lt;T&gt;")}} -->.</td>
   </tr>
   <tr>
    <td><code>JS::Handle&lt;T&gt; operator[](size_t i) const</code></td>
-   <td>Returns to the <code>i</code>-th element as {{jsapixref("JS::Handle", "JS::Handle&lt;T&gt;")}}.</td>
+   <td>Returns to the <code>i</code>-th element as <!-- {{jsapixref("JS::Handle", "JS::Handle&lt;T&gt;")}} -->.</td>
   </tr>
   <tr>
    <td><code>const T *begin() const</code></td>
@@ -128,11 +128,11 @@
    <td><code>AutoVectorRooter&lt;jsid&gt;</code></td>
   </tr>
   <tr>
-   <td><code>JS::AutoObjectVector</code> {{ Jsapi_minversion_inline("24") }}</td>
+   <td><code>JS::AutoObjectVector</code> <!-- {{ Jsapi_minversion_inline("24") }} --></td>
    <td><code>AutoVectorRooter&lt;JSObject *&gt;</code></td>
   </tr>
   <tr>
-   <td><code>JS::AutoFunctionVector</code> {{ Jsapi_minversion_inline("31") }}</td>
+   <td><code>JS::AutoFunctionVector</code> <!-- {{ Jsapi_minversion_inline("31") }} --></td>
    <td><code>AutoVectorRooter&lt;JSFunction *&gt;</code></td>
   </tr>
   <tr>
@@ -145,15 +145,15 @@
 <h2 id="See_Also" name="See_Also">See Also</h2>
 
 <ul>
- <li>{{ LXRSearch("ident", "i", "JS::AutoVectorRooter") }}</li>
- <li>{{ LXRSearch("ident", "i", "JS::AutoValueVector") }}</li>
- <li>{{ LXRSearch("ident", "i", "JS::AutoIdVector") }}</li>
- <li>{{ LXRSearch("ident", "i", "JS::AutoObjectVector") }}</li>
- <li>{{ LXRSearch("ident", "i", "JS::AutoFunctionVector") }}</li>
- <li>{{ LXRSearch("ident", "i", "JS::AutoScriptVector") }}</li>
- <li>{{jsapixref("JS::AutoValueArray", "JS::AutoValueArray&lt;N&gt;")}} - fixed-size array of {{jsapixref("JS::Value")}}</li>
- <li>{{bug(677079)}}</li>
- <li>{{bug(868580)}} - expose <code>JS::AutoObjectVector</code></li>
- <li>{{bug(848592)}} - added <code>JS::AutoFunctionVector</code></li>
- <li>{{bug(676281)}} - added <code>JS::AutoScriptVector</code></li>
+ <li><!-- {{ LXRSearch("ident", "i", "JS::AutoVectorRooter") }} --></li>
+ <li><!-- {{ LXRSearch("ident", "i", "JS::AutoValueVector") }} --></li>
+ <li><!-- {{ LXRSearch("ident", "i", "JS::AutoIdVector") }} --></li>
+ <li><!-- {{ LXRSearch("ident", "i", "JS::AutoObjectVector") }} --></li>
+ <li><!-- {{ LXRSearch("ident", "i", "JS::AutoFunctionVector") }} --></li>
+ <li><!-- {{ LXRSearch("ident", "i", "JS::AutoScriptVector") }} --></li>
+ <li><!-- {{jsapixref("JS::AutoValueArray", "JS::AutoValueArray&lt;N&gt;")}} --> - fixed-size array of <!-- {{jsapixref("JS::Value")}} --></li>
+ <li><!-- {{bug(677079)}} --></li>
+ <li><!-- {{bug(868580)}} --> - expose <code>JS::AutoObjectVector</code></li>
+ <li><!-- {{bug(848592)}} --> - added <code>JS::AutoFunctionVector</code></li>
+ <li><!-- {{bug(676281)}} --> - added <code>JS::AutoScriptVector</code></li>
 </ul>

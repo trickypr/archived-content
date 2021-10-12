@@ -34,10 +34,10 @@ js&gt; for (i in Iterator(m.values().iterator())) print(i)
 </p><p>JDK 1.4 support will be dropped entirely from Rhino in a future release.
 </p>
 <h2 id="Support_for_instruction_threshold_callbacks_in_compiled_mode" name="Support_for_instruction_threshold_callbacks_in_compiled_mode"> Support for instruction threshold callbacks in compiled mode </h2>
-<p>It's now possible to request instruction callbacks for compiled scripts. This is primarily used to enforce instruction quotas for untrusted scripts. See {{ Bug(397680) }}.
+<p>It's now possible to request instruction callbacks for compiled scripts. This is primarily used to enforce instruction quotas for untrusted scripts. See <!-- {{ Bug(397680) }} -->.
 </p>
 <h2 id="debugger_keyword" name="debugger_keyword"> &lt;tt&gt;debugger&lt;/tt&gt; keyword </h2>
-<p>Fix {{ Bug(386997) }} - Need to support 'debugger' statement
+<p>Fix <!-- {{ Bug(386997) }} --> - Need to support 'debugger' statement
 </p><p>Adding the 'debugger' keyword will now result in a breakpoint being hit when
 run in the Rhino debugger. The statement is ignored if the debugger is not
 running or when compiled to Java bytecodes.

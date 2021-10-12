@@ -1,7 +1,7 @@
-<div>{{SpiderMonkeySidebar("JSAPI")}}</div>
+<div><!-- {{SpiderMonkeySidebar("JSAPI")}} --></div>
 
 <div class="summary">
-<p><strong>JSResolveOp</strong> is the type of the {{jsapixref("JSClass", "JSClass.resolve")}}.</p>
+<p><strong>JSResolveOp</strong> is the type of the <!-- {{jsapixref("JSClass", "JSClass.resolve")}} -->.</p>
 </div>
 
 <h2 id="Syntax" name="Syntax">Syntax</h2>
@@ -23,17 +23,17 @@ typedef bool
   </tr>
   <tr>
    <td><code>cx</code></td>
-   <td>{{jsapixref("JSRuntime", "JSContext *")}}</td>
+   <td><!-- {{jsapixref("JSRuntime", "JSContext *")}} --></td>
    <td>Pointer to the JS context in which the property access is taking place.</td>
   </tr>
   <tr>
    <td><code>obj</code></td>
-   <td>{{jsapixref("JSObject", "JS::HandleObject")}}</td>
+   <td><!-- {{jsapixref("JSObject", "JS::HandleObject")}} --></td>
    <td>Pointer to the object whose properties are being accessed.</td>
   </tr>
   <tr>
    <td><code>id</code></td>
-   <td>{{jsapixref("jsid", "JS::HandleId")}}</td>
+   <td><!-- {{jsapixref("jsid", "JS::HandleId")}} --></td>
    <td>The name or index of the property being resolved.</td>
   </tr>
   <tr>
@@ -57,7 +57,7 @@ typedef bool
 
 <p>The callback must return <code>true</code> if the property is resolved, or if the object has no lazy property with the given <code>id</code>; or <code>false</code> to indicate any other error.</p>
 
-<p><strong>Note:</strong> {{jsapixref("JSNewResolveOp")}} provides a cheaper way to resolve lazy properties.</p>
+<p><strong>Note:</strong> <!-- {{jsapixref("JSNewResolveOp")}} --> provides a cheaper way to resolve lazy properties.</p>
 </div>
 
 <h3 id="JSClass_hooks"><code>JSClass</code> hooks</h3>
@@ -65,19 +65,19 @@ typedef bool
 <p>JSClass offers the following hook:</p>
 
 <ul>
- <li><strong>{{jsapixref("JSClass", "JSClass.resolve")}}</strong> callback is called when a property is <em>not</em> found on an object. It can be used to implement lazy properties.
+ <li><strong><!-- {{jsapixref("JSClass", "JSClass.resolve")}} --></strong> callback is called when a property is <em>not</em> found on an object. It can be used to implement lazy properties.
 
   <p> </p>
 
-  <p>JS looks for a property in an object, and if not found, tries to <em>resolve</em> the given <code>id</code>. After calling <code>resolve</code>, the engine looks again to see if <code>resolve</code> defined <code>obj{{ mediawiki.external('id') }}</code>. If so, the property lookup succeeds. If not, the process is repeated with <code>obj</code>'s prototype.</p>
+  <p>JS looks for a property in an object, and if not found, tries to <em>resolve</em> the given <code>id</code>. After calling <code>resolve</code>, the engine looks again to see if <code>resolve</code> defined <code>obj<!-- {{ mediawiki.external('id') }} --></code>. If so, the property lookup succeeds. If not, the process is repeated with <code>obj</code>'s prototype.</p>
  </li>
 </ul>
 
 <h2 id="See_Also" name="See_Also">See Also</h2>
 
 <ul>
- <li>{{ LXRSearch("ident", "i", "JSResolveOp") }}</li>
- <li>{{jsapixref("JSClass")}}</li>
- <li>{{jsapixref("JSNewResolveOp")}}</li>
- <li>{{bug(993026)}}</li>
+ <li><!-- {{ LXRSearch("ident", "i", "JSResolveOp") }} --></li>
+ <li><!-- {{jsapixref("JSClass")}} --></li>
+ <li><!-- {{jsapixref("JSNewResolveOp")}} --></li>
+ <li><!-- {{bug(993026)}} --></li>
 </ul>

@@ -1,4 +1,4 @@
-<p>{{FirefoxSidebar}}{{deprecated_header}}</p>
+<p><!-- {{FirefoxSidebar}} --><!-- {{deprecated_header}} --></p>
 
 <p>Embedding of Gecko is no longer supported. If you currently embed Gecko, you should use an alternate solution, because you will not be able to pick up new security improvements. <strong>Do not use the techniques covered on this page; this material is retained for historical purposes only.</strong></p>
 
@@ -26,13 +26,13 @@ make
 
 <h3 id="How_is_the_embedding_distribution_made.3F" name="How_is_the_embedding_distribution_made.3F">How is the embedding distribution made?</h3>
 
-<p>Look in {{Source("embedding/config/")}} to see a the embedding build process. The basebrowser-win (or basebrowser-unix etc.) file determines which files need to be copied. The embed-jar.mn specifies what chrome is required.</p>
+<p>Look in <!-- {{Source("embedding/config/")}} --> to see a the embedding build process. The basebrowser-win (or basebrowser-unix etc.) file determines which files need to be copied. The embed-jar.mn specifies what chrome is required.</p>
 
 <p>Note that this sample only contains a<em>typical</em> subset of files. You may wish to add or remove files from basebrowser-foo (where foo is win, unix or mach as appropriate) depending on the capabilities you need in your product, or supplement these files by writing your own client-foo file which will be read in addition to basebrowser-foo.</p>
 
 <p>For instance, you can remove the "necko2" library if you do not need FTP, but you will need to add the "appcomps" and "mork" libraries in order to use the Mozilla browser's global history implementation.</p>
 
-<p>The embedding distribution {{Source("embedding/config/readme.html", "readme file")}} provides more information.</p>
+<p>The embedding distribution <!-- {{Source("embedding/config/readme.html", "readme file")}} --> provides more information.</p>
 
 <p><small>Todo: provide a more complete map of features &lt;-&gt; files</small></p>
 
@@ -40,7 +40,7 @@ make
 
 <p>XPT files are XPCOM type libraries and contain binary definitions of interfaces used by cross-thread marshalling routines and JavaScript to call objects. In other words they are as vital as DLLs to ensure Gecko functions properly.</p>
 
-<p>XPT files can be concatenated together using the xpt_link tool to reduce clutter and improve startup performance. There is a special perl script for this purpose, that you can see {{Source("xpinstall/packager/xptlink.pl", "here")}}.</p>
+<p>XPT files can be concatenated together using the xpt_link tool to reduce clutter and improve startup performance. There is a special perl script for this purpose, that you can see <!-- {{Source("xpinstall/packager/xptlink.pl", "here")}} -->.</p>
 
 <p>For details on how to create an XPT file on Windows, see <a href="/en/XPIDL/Generating_xpt_on_Windows" title="Generating xpt on Windows">Generating XPT on Windows</a>.</p>
 
@@ -115,8 +115,8 @@ make
 
 <ul>
  <li>In GTK applications using the <a class="external" href="http://www.mozilla.org/unix/gtk-embedding.html">Gtk Mozilla Embedding Widget</a>.</li>
- <li>In Win32 ActiveX applications using the <a class="external" href="http://www.iol.ie/%7Elocka/mozilla/mozilla.htm">Mozilla ActiveX Control</a>.{{Obsolete_Inline("Gecko7.0")}}</li>
+ <li>In Win32 ActiveX applications using the <a class="external" href="http://www.iol.ie/%7Elocka/mozilla/mozilla.htm">Mozilla ActiveX Control</a>.<!-- {{Obsolete_Inline("Gecko7.0")}} --></li>
  <li>In Microsoft .NET (2.0 or higher) applications using the <a class="external" href="http://www.skybound.ca/projects/">GeckoFX Control</a>.</li>
- <li>In Mac applications using {{Source("embedding/browser/powerplant/", "PPEmbed")}}.</li>
+ <li>In Mac applications using <!-- {{Source("embedding/browser/powerplant/", "PPEmbed")}} -->.</li>
  <li>In a Java Application using <a class="external" href="http://www.mozilla.org/projects/blackwood/webclient/">Webclient</a> (Here is the wiki home page <a href="/en/Mozilla_Webclient" title="en/Mozilla_Webclient">Mozilla Webclient</a>, which is under construction).</li>
 </ul>

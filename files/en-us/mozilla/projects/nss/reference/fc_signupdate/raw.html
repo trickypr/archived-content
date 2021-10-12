@@ -9,9 +9,9 @@
 );
 </pre>
 <h3 id="Parameters"> Parameters </h3>
-<dl><dt><code>hSession</code></dt><dd> {{ mediawiki.external('in') }} session handle.
-</dd><dt><code>pPart</code></dt><dd> {{ mediawiki.external('in') }} pointer to the next block of the data to be signed.
-</dd><dt><code>usPartLen</code></dt><dd> {{ mediawiki.external('in') }} length of data block in bytes.
+<dl><dt><code>hSession</code></dt><dd> <!-- {{ mediawiki.external('in') }} --> session handle.
+</dd><dt><code>pPart</code></dt><dd> <!-- {{ mediawiki.external('in') }} --> pointer to the next block of the data to be signed.
+</dd><dt><code>usPartLen</code></dt><dd> <!-- {{ mediawiki.external('in') }} --> length of data block in bytes.
 </dd></dl>
 <h3 id="Description"> Description </h3>
 <p><code>FC_SignUpdate</code> starts or continues a multi-part signature operation. One or more blocks may be part of the signature. The signature for the entire message is returned by a call to <a href="/en-US/docs/Mozilla/Projects/NSS/Reference/FC_SignFinal">FC_SignFinal</a>.

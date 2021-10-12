@@ -1,8 +1,8 @@
 <div>
- {{SpiderMonkeySidebar("JSAPI")}}</div>
-<p>{{ jsapi_minversion_header("1.8.5") }}</p>
+ <!-- {{SpiderMonkeySidebar("JSAPI")}} --></div>
+<p><!-- {{ jsapi_minversion_header("1.8.5") }} --></p>
 <div class="summary">
- <p>Creates a new {{jsxref("Global_Objects/Date", "Date")}} object instance, configured to represent the date and time indicated by the specified time in milliseconds since the Unix epoch.</p>
+ <p>Creates a new <!-- {{jsxref("Global_Objects/Date", "Date")}} --> object instance, configured to represent the date and time indicated by the specified time in milliseconds since the Unix epoch.</p>
 </div>
 <h2 id="Syntax" name="Syntax">Syntax</h2>
 <pre class="brush: cpp">JSObject *
@@ -18,7 +18,7 @@ JS_NewDateObjectMsec(JSContext *cx, double msec);
   <tr>
    <td><code>cx</code></td>
    <td><code>JSContext *</code></td>
-   <td>The context. {{ Jsapi-requires-request() }}</td>
+   <td>The context. <!-- {{ Jsapi-requires-request() }} --></td>
   </tr>
   <tr>
    <td><code>msec</code></td>
@@ -28,11 +28,11 @@ JS_NewDateObjectMsec(JSContext *cx, double msec);
  </tbody>
 </table>
 <h2 id="Description" name="Description">Description</h2>
-<p>The returned {{jsapixref("JSObject")}} is a standard JavaScript {{jsxref("Global_Objects/Date", "Date")}}.</p>
+<p>The returned <!-- {{jsapixref("JSObject")}} --> is a standard JavaScript <!-- {{jsxref("Global_Objects/Date", "Date")}} -->.</p>
 <h2 id="See_Also" name="See_Also">See also</h2>
 <ul>
- <li>{{ LXRSearch("ident", "i", "JS_NewDateObjectMsec") }}</li>
- <li>{{jsapixref("JS_NewDateObject")}}</li>
- <li>{{jsapixref("JS_ObjectIsDate")}}</li>
- <li>{{bug(625870)}}</li>
+ <li><!-- {{ LXRSearch("ident", "i", "JS_NewDateObjectMsec") }} --></li>
+ <li><!-- {{jsapixref("JS_NewDateObject")}} --></li>
+ <li><!-- {{jsapixref("JS_ObjectIsDate")}} --></li>
+ <li><!-- {{bug(625870)}} --></li>
 </ul>

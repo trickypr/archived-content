@@ -44,7 +44,7 @@ tags:
 
 <p>Incremental GC divides GC marking into time slices. In between these slices, non-GC code is allowed to run. Done naively, this technique can lead to reachable object not being marked. Consider the following example.</p>
 
-<p>{{ Svg{source: &quot;http://people.mozilla.org/~wmccloskey/incremental1.svg&quot;, embedding: &quot;iframe&quot;, height:&quot;130&quot;} }}</p>
+<p><!-- {{ Svg{source: &quot;http://people.mozilla.org/~wmccloskey/incremental1.svg&quot;, embedding: &quot;iframe&quot;, height:&quot;130&quot;} }} --></p>
 
 <p>Assume object B is already marked, as in the leftmost frame, while objects A and C have not been marked yet. In the middle frame some code creates a pointer from B to C and destroys the pointer from A to C. In the last frame, A gets marked by the GC. The problem is that C is never marked even though it&apos;s reachable. This will likely lead to a crash if C is accessed via B.</p>
 
@@ -72,7 +72,7 @@ tags:
 
 <p>&quot;Weak pointers&quot; are a major complication to the scheme described above. For the purposes of this article, a weak pointer is one that is not traced during GC. At the end of the GC, if the pointer refers to an object that is not reachable via some other path, then it will be nulled out or dropped in some way. If the object is still reachable, then the pointer will be left alone. To see how weak pointers can cause trouble, consider the following situation:</p>
 
-<p>{{ Svg{source: &quot;http://people.mozilla.org/~wmccloskey/incremental2.svg&quot;, embedding: &quot;iframe&quot;, height:&quot;130&quot;} }}</p>
+<p><!-- {{ Svg{source: &quot;http://people.mozilla.org/~wmccloskey/incremental2.svg&quot;, embedding: &quot;iframe&quot;, height:&quot;130&quot;} }} --></p>
 
 <p>In the left frame, A has a weak pointer to C. Assume that an incremental GC has already started, and A and B have been marked. C was not marked by A because weak pointers are not traced. Now let&apos;s assume, between the left and right frames, that some code has read the weak pointer to C and then created a regular (strong) reference from B to C. Now C is reachable, but it won&apos;t be marked because B was already fully marked. No write barrier is invoked when creating the pointer from B to C because no pointer is being destroyed. As a concrete example of this, imagine that we call <code>GetWrapper()</code> on an <code>nsWrapperCache</code> instance. This will return a <code>JSObject *</code>. Then this pointer is installed as a property on another <code>JSObject</code> that was already marked.</p>
 

@@ -1,10 +1,10 @@
-<p>{{ gecko_minversion_header("2.0") }}</p>
+<p><!-- {{ gecko_minversion_header("2.0") }} --></p>
 
 <div class="blockIndicator warning">
 <p>Support for extensions using XUL/XPCOM or the Add-on SDK was removed in Firefox 57, released November 2017. As there is no supported version of Firefox enabling these technologies, this page will be removed by December 2020.</p>
 </div>
 
-<p><span style="color: #000000; display: inline !important; float: none; font-family: Cantarell; font-size: 14.666666984558105px; font-style: normal; font-weight: normal; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal;">{{LegacyAddonsNotice}}</span></p>
+<p><span style="color: #000000; display: inline !important; float: none; font-family: Cantarell; font-size: 14.666666984558105px; font-style: normal; font-weight: normal; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal;"><!-- {{LegacyAddonsNotice}} --></span></p>
 
 <p>The Add-on Manager is responsible for managing all of the add-ons installed in the application. Through its APIs information about all installed add-ons can be retrieved and new add-ons can be installed. The APIs are designed to be generic and support many different types of add-ons.</p>
 
@@ -42,7 +42,7 @@ AddonManager.getInstallForURL("http://www.foo.com/test.xpi", function(aInstall) 
 
 <p>Add-ons can be checked for updates using the <code><a href="/en-US/Add-ons/Add-on_Manager/Addon#findUpdates()" title="Addon.findUpdates()">findUpdates()</a></code> method. It must be passed an <code><a href="/en-US/Add-ons/Add-on_Manager/UpdateListener" title="UpdateListener">UpdateListener</a></code> to receive information about compatibility information and new update information. Any available update is returned as an <code><a href="/en-US/Add-ons/Add-on_Manager/AddonInstall" title="AddonInstall">AddonInstall</a></code> which is ready to be downloaded and installed.</p>
 
-<p>{{ h1_gecko_minversion("Detecting add-on changes", "7.0") }}</p>
+<p><!-- {{ h1_gecko_minversion("Detecting add-on changes", "7.0") }} --></p>
 
 <p>You can also get lists of add-ons that, at startup, were changed in various ways. The <code><a href="/en-US/Add-ons/Add-on_Manager/AddonManager#getStartupChanges()" title="AddonManager.getStartupChanges()">getStartupChanges()</a></code> method lets you find out which add-ons were installed, removed, updated, enabled, or disabled at application startup.</p>
 
@@ -65,4 +65,4 @@ alert("Note: " + addonIDs.length + " add-ons have been disabled.");
 
 <h2 id="See_also">See also</h2>
 
-<p>{{ ListSubpages() }}</p>
+<p><!-- {{ ListSubpages() }} --></p>

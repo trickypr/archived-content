@@ -1,4 +1,4 @@
-<div>{{SpiderMonkeySidebar("JSAPI")}}</div>
+<div><!-- {{SpiderMonkeySidebar("JSAPI")}} --></div>
 <div class="summary">
 <p>Determine whether a JavaScript object has a specified property.</p>
 </div>
@@ -25,17 +25,17 @@ JS_HasPropertyById(JSContext *cx, JS::HandleObject obj, JS::HandleId id,
   </tr>
   <tr>
    <td><code>cx</code></td>
-   <td>{{jsapixref("JSRuntime", "JSContext *")}}</td>
-   <td>A context. {{ Jsapi-requires-request() }}</td>
+   <td><!-- {{jsapixref("JSRuntime", "JSContext *")}} --></td>
+   <td>A context. <!-- {{ Jsapi-requires-request() }} --></td>
   </tr>
   <tr>
    <td><code>obj</code></td>
-   <td>{{jsapixref("JSObject", "JS::HandleObject")}}</td>
+   <td><!-- {{jsapixref("JSObject", "JS::HandleObject")}} --></td>
    <td>Object to search on for the property.</td>
   </tr>
   <tr>
    <td><code>name</code> <em>or<em> <code>id</code></em></em></td>
-   <td><code>const char *</code> <em>or</em> <code>const char16_t <em>or</em> {{jsapixref("jsid", "JS::HandleId")}}</code></td>
+   <td><code>const char *</code> <em>or</em> <code>const char16_t <em>or</em> <!-- {{jsapixref("jsid", "JS::HandleId")}} --></code></td>
    <td>Name of the property to look up.</td>
   </tr>
   <tr>
@@ -51,15 +51,15 @@ JS_HasPropertyById(JSContext *cx, JS::HandleObject obj, JS::HandleId id,
  </tbody>
 </table>
 <h2 id="Description" name="Description">Description</h2>
-<p><strong><code>JS_HasProperty</code></strong> searches an object, <code>obj</code>, and its prototype chain, for a property with the specified <code>name</code>. It behaves like the JavaScript expression <code>name in obj</code>. <strong><code>JS_HasUCProperty</code></strong> is the corresponding Unicode API. <strong><code>JS_HasPropertyById</code></strong> is the same but takes a {{jsapixref("jsid", "JS::HandleId")}} for the property name.</p>
+<p><strong><code>JS_HasProperty</code></strong> searches an object, <code>obj</code>, and its prototype chain, for a property with the specified <code>name</code>. It behaves like the JavaScript expression <code>name in obj</code>. <strong><code>JS_HasUCProperty</code></strong> is the corresponding Unicode API. <strong><code>JS_HasPropertyById</code></strong> is the same but takes a <!-- {{jsapixref("jsid", "JS::HandleId")}} --> for the property name.</p>
 <p>If the property exists, this function sets <code>*foundp</code> to <code>true</code> and returns <code>true</code>.</p>
 <p>If the object <code>obj</code> has no such property, the function sets <code>*foundp</code> to <code>false</code> and returns <code>true</code> (to indicate that no error occurred).</p>
 <p>If an error occurs during the search, the function returns <code>false</code>, and the value of <code>*foundp</code> is undefined.</p>
 
 <h2 id="See_Also" name="See_Also">See Also</h2>
 <ul>
-  <li>{{ LXRSearch("ident", "i", "JS_HasProperty") }}</li>
-  <li>{{ LXRSearch("ident", "i", "JS_HasUCProperty") }}</li>
-  <li>{{ LXRSearch("ident", "i", "JS_HasPropertyById") }}</li>
-  <li>{{bug(461163)}}</li>
+  <li><!-- {{ LXRSearch("ident", "i", "JS_HasProperty") }} --></li>
+  <li><!-- {{ LXRSearch("ident", "i", "JS_HasUCProperty") }} --></li>
+  <li><!-- {{ LXRSearch("ident", "i", "JS_HasPropertyById") }} --></li>
+  <li><!-- {{bug(461163)}} --></li>
 </ul>

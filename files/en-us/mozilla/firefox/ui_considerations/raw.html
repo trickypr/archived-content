@@ -1,4 +1,4 @@
-<div>{{FirefoxSidebar}}</div>
+<div><!-- {{FirefoxSidebar}} --></div>
 
 <p>There are a number of places within the Firefox user interface where web sites are listed for the user to choose a destination to visit or a site to manage in some way. One example is the new tab page, which includes a "Top Sites" section showing sites you visit that Firefox thinks you're likely to want to visit again, as well as potentially some sites that have been pinned to always appear in that space.</p>
 
@@ -22,7 +22,7 @@
 
 <ol>
  <li>A global "top sites" list is checked. This list is created by a Mozilla service called <a href="https://github.com/mozilla/tippy-top-sites">Tippy Top</a>. The data store provided by Tippy Top includes an optimized icon for each of the sites in the list; if the site is on this list, that icon is used.</li>
- <li>If Tippy Top doesn't include the site, Firefox looks in its <a href="/en-US/docs/Mozilla/Tech/Places">Places</a> data store for icons specified in the page's {{HTMLElement("head")}} element;
+ <li>If Tippy Top doesn't include the site, Firefox looks in its <a href="/en-US/docs/Mozilla/Tech/Places">Places</a> data store for icons specified in the page's <!-- {{HTMLElement("head")}} --> element;
   <ol style="list-style-type: lower-alpha;">
    <li>If an SVG icon is available, that icon is selected.</li>
    <li>Otherwise, bitmapped icons which are at least 96 pixels wide are considered. If one is found to have a width of exactly 96 pixels, it is used. Otherwise, the smallest image larger than 96 pixels wide is selected.</li>
@@ -35,7 +35,7 @@
 
 <h3 id="Rich_icons">Rich icons</h3>
 
-<p>The high resolution icons—also known as rich icons—are specified by setting the {{htmlattrxref("rel", "link")}} attribute to one of:</p>
+<p>The high resolution icons—also known as rich icons—are specified by setting the <!-- {{htmlattrxref("rel", "link")}} --> attribute to one of:</p>
 
 <ul>
  <li><code>apple-touch-icon</code></li>
@@ -43,13 +43,13 @@
  <li><code>fluid-icon</code></li>
 </ul>
 
-<p>The size of each icon is taken from the {{htmlattrxref("size", "link")}} attribute specified on the {{HTMLELement("link")}}, if it's provided. <code>apple-touch-icon</code> and <code>apple-touch-icon-precomposed</code> icons with no <code>size</code> attribute are assumed to be the standard classic iPhone size of 57x57 pixels.</p>
+<p>The size of each icon is taken from the <!-- {{htmlattrxref("size", "link")}} --> attribute specified on the <!-- {{HTMLELement("link")}} -->, if it's provided. <code>apple-touch-icon</code> and <code>apple-touch-icon-precomposed</code> icons with no <code>size</code> attribute are assumed to be the standard classic iPhone size of 57x57 pixels.</p>
 
 <p>The icon closest in size to 96 pixels is selected. Firefox does its best to avoid having to scale the images, which can result in fuzzy or distorted images, especially at smaller sizes.</p>
 
 <h3 id="Providing_a_Top_Sites_ready_icon">Providing a Top Sites ready icon</h3>
 
-<p>The simple rule is to provide an icon which is at least 96x96 pixels in size, using a {{HTMLElement("link")}} element whose {{htmlattrxref("rel", "link")}} attribute is a reference to a file containing an icon of a supported type.</p>
+<p>The simple rule is to provide an icon which is at least 96x96 pixels in size, using a <!-- {{HTMLElement("link")}} --> element whose <!-- {{htmlattrxref("rel", "link")}} --> attribute is a reference to a file containing an icon of a supported type.</p>
 
 <pre class="brush: html">&lt;link rel="apple-touch-icon" sizes="128x128" href="touch-icon-128x128.png"&gt;
 &lt;link rel="apple-touch-icon" sizes="46x46" href="touch-icon-46x46.png"&gt;

@@ -1,6 +1,6 @@
-<div>{{SpiderMonkeySidebar("JSAPI")}}</div>
+<div><!-- {{SpiderMonkeySidebar("JSAPI")}} --></div>
 
-<p>{{ jsapi_minversion_header("17") }}</p>
+<p><!-- {{ jsapi_minversion_header("17") }} --></p>
 
 <div class="summary">
 <p>Add/remove callback function for finalization.</p>
@@ -27,7 +27,7 @@ JS_SetFinalizeCallback(JSRuntime *rt, JSFinalizeCallback cb); // Obsolete since 
   </tr>
   <tr>
    <td><code>rt</code></td>
-   <td>{{jsapixref("JSRuntime", "JSRuntime *")}}</td>
+   <td><!-- {{jsapixref("JSRuntime", "JSRuntime *")}} --></td>
    <td>The <code>JSRuntime</code> for which to set the finalization callback.</td>
   </tr>
   <tr>
@@ -64,8 +64,8 @@ typedef void
   </tr>
   <tr>
    <td><code>fop</code></td>
-   <td>{{jsapixref("JSFreeOp", "JSFreeOp *")}}</td>
-   <td>A pointer to an instance of {{jsapixref("JSFreeOp")}}.</td>
+   <td><!-- {{jsapixref("JSFreeOp", "JSFreeOp *")}} --></td>
+   <td>A pointer to an instance of <!-- {{jsapixref("JSFreeOp")}} -->.</td>
   </tr>
   <tr>
    <td><code>status</code></td>
@@ -80,7 +80,7 @@ typedef void
   <tr>
    <td><code>data</code></td>
    <td><code>void *</code></td>
-   <td><code>data</code> parameter specified in <code>JS_AddFinalizeCallback</code>. {{ Jsapi_minversion_inline("38") }}</td>
+   <td><code>data</code> parameter specified in <code>JS_AddFinalizeCallback</code>. <!-- {{ Jsapi_minversion_inline("38") }} --></td>
   </tr>
  </tbody>
 </table>
@@ -121,15 +121,15 @@ typedef void
 <h2 id="See_Also" name="See_Also">See Also</h2>
 
 <ul>
- <li>{{ LXRSearch("ident", "i", "JS_AddFinalizeCallback") }}</li>
- <li>{{ LXRSearch("ident", "i", "JS_RemoveFinalizeCallback") }}</li>
- <li>{{ LXRSearch("ident", "i", "JSFinalizeStatus") }}</li>
- <li>{{ LXRSearch("ident", "i", "JSFINALIZE_GROUP_START") }}</li>
- <li>{{ LXRSearch("ident", "i", "JSFINALIZE_GROUP_END") }}</li>
- <li>{{ LXRSearch("ident", "i", "JSFINALIZE_COLLECTION_END") }}</li>
- <li>{{ LXRSearch("ident", "i", "JSFinalizeCallback") }}</li>
- <li>{{jsapixref("JSFreeOp")}}</li>
- <li>{{jsapixref("JS_SetGCCallback")}}</li>
- <li>{{bug(723286)}} - separated from {{jsapixref("JS_SetGCCallback")}} as <code>JS_SetFinalizeCallback</code></li>
- <li>{{bug(996785)}} - replaced with <code>JS_AddFinalizeCallback</code></li>
+ <li><!-- {{ LXRSearch("ident", "i", "JS_AddFinalizeCallback") }} --></li>
+ <li><!-- {{ LXRSearch("ident", "i", "JS_RemoveFinalizeCallback") }} --></li>
+ <li><!-- {{ LXRSearch("ident", "i", "JSFinalizeStatus") }} --></li>
+ <li><!-- {{ LXRSearch("ident", "i", "JSFINALIZE_GROUP_START") }} --></li>
+ <li><!-- {{ LXRSearch("ident", "i", "JSFINALIZE_GROUP_END") }} --></li>
+ <li><!-- {{ LXRSearch("ident", "i", "JSFINALIZE_COLLECTION_END") }} --></li>
+ <li><!-- {{ LXRSearch("ident", "i", "JSFinalizeCallback") }} --></li>
+ <li><!-- {{jsapixref("JSFreeOp")}} --></li>
+ <li><!-- {{jsapixref("JS_SetGCCallback")}} --></li>
+ <li><!-- {{bug(723286)}} --> - separated from <!-- {{jsapixref("JS_SetGCCallback")}} --> as <code>JS_SetFinalizeCallback</code></li>
+ <li><!-- {{bug(996785)}} --> - replaced with <code>JS_AddFinalizeCallback</code></li>
 </ul>

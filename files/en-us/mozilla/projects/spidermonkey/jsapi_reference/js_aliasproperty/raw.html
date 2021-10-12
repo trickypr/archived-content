@@ -1,5 +1,5 @@
-<div>{{SpiderMonkeySidebar("JSAPI")}}</div>
-<p>{{ obsolete_header("jsapi8") }}</p>
+<div><!-- {{SpiderMonkeySidebar("JSAPI")}} --></div>
+<p><!-- {{ obsolete_header("jsapi8") }} --></p>
 <div class="summary">
  <p>Create an alias for a native property.</p>
 </div>
@@ -17,12 +17,12 @@ JS_AliasProperty(JSContext *cx, JSObject *obj,
   </tr>
   <tr>
    <td><code>cx</code></td>
-   <td>{{jsapixref("JSRuntime", "JSContext *")}}</td>
-   <td>Pointer to a JS context from which to derive runtime information. {{ Jsapi-requires-request() }}</td>
+   <td><!-- {{jsapixref("JSRuntime", "JSContext *")}} --></td>
+   <td>Pointer to a JS context from which to derive runtime information. <!-- {{ Jsapi-requires-request() }} --></td>
   </tr>
   <tr>
    <td><code>obj</code></td>
-   <td>{{jsapixref("JSObject", "JSObject *")}}</td>
+   <td><!-- {{jsapixref("JSObject", "JSObject *")}} --></td>
    <td>Object for which to create the alias.</td>
   </tr>
   <tr>
@@ -46,11 +46,11 @@ JS_AliasProperty(JSContext *cx, JSObject *obj,
 <p>Once you create an alias, you can reassign it to other properties as needed. Aliases can also be deleted. Deleting an alias does not delete the property to which it refers.</p>
 <h2 id="See_Also" name="See_Also">See Also</h2>
 <ul>
- <li>{{jsapixref("JS_DefineProperty")}}</li>
- <li>{{jsapixref("JS_DefinePropertyWithTinyId")}}</li>
- <li>{{jsapixref("JS_DeleteProperty")}}</li>
- <li>{{jsapixref("JS_GetProperty")}}</li>
- <li>{{jsapixref("JS_LookupProperty")}}</li>
- <li>{{jsapixref("JS_SetProperty")}}</li>
- <li>{{bug(576034)}}</li>
+ <li><!-- {{jsapixref("JS_DefineProperty")}} --></li>
+ <li><!-- {{jsapixref("JS_DefinePropertyWithTinyId")}} --></li>
+ <li><!-- {{jsapixref("JS_DeleteProperty")}} --></li>
+ <li><!-- {{jsapixref("JS_GetProperty")}} --></li>
+ <li><!-- {{jsapixref("JS_LookupProperty")}} --></li>
+ <li><!-- {{jsapixref("JS_SetProperty")}} --></li>
+ <li><!-- {{bug(576034)}} --></li>
 </ul>

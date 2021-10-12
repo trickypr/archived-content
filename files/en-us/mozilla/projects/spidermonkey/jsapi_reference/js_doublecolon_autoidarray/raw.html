@@ -1,9 +1,9 @@
-<div>{{SpiderMonkeySidebar("JSAPI")}}</div>
+<div><!-- {{SpiderMonkeySidebar("JSAPI")}} --></div>
 
-<p>{{ jsapi_minversion_header("17") }}</p>
+<p><!-- {{ jsapi_minversion_header("17") }} --></p>
 
 <div class="summary">
-<p>Take ownership of a {{jsapixref("JSIdArray")}} and free it later.</p>
+<p>Take ownership of a <!-- {{jsapixref("JSIdArray")}} --> and free it later.</p>
 </div>
 
 <h2 id="Syntax" name="Syntax">Syntax</h2>
@@ -20,13 +20,13 @@
   </tr>
   <tr>
    <td><code>cx</code></td>
-   <td>{{jsapixref("JSRuntime", "JSContext *")}}</td>
-   <td>The context in which to add the root. {{ Jsapi-requires-request() }}</td>
+   <td><!-- {{jsapixref("JSRuntime", "JSContext *")}} --></td>
+   <td>The context in which to add the root. <!-- {{ Jsapi-requires-request() }} --></td>
   </tr>
   <tr>
    <td><code>ida</code></td>
-   <td>{{jsapixref("JSIdArray", "JSIdArray *")}}</td>
-   <td>A pointer to {{jsapixref("JSIdArray")}} to take the ownership.</td>
+   <td><!-- {{jsapixref("JSIdArray", "JSIdArray *")}} --></td>
+   <td>A pointer to <!-- {{jsapixref("JSIdArray")}} --> to take the ownership.</td>
   </tr>
  </tbody>
 </table>
@@ -45,7 +45,7 @@
   </tr>
   <tr>
    <td><code>jsid operator[](size_t i) const</code></td>
-   <td>Return a {{jsapixref("jsid")}} in specified index of the owned array.</td>
+   <td>Return a <!-- {{jsapixref("jsid")}} --> in specified index of the owned array.</td>
   </tr>
   <tr>
    <td><code>size_t length() const</code></td>
@@ -60,7 +60,7 @@
 
 <h2 id="Description" name="Description">Description</h2>
 
-<p><code>JS::AutoIdArray</code> takes the ownership of {{jsapixref("JSIdArray")}}, and frees it in destructor by calling {{jsapixref("JS_DestroyIdArray")}}.</p>
+<p><code>JS::AutoIdArray</code> takes the ownership of <!-- {{jsapixref("JSIdArray")}} -->, and frees it in destructor by calling <!-- {{jsapixref("JS_DestroyIdArray")}} -->.</p>
 
 <h2 id="Examples">Examples</h2>
 
@@ -80,9 +80,9 @@
 <h2 id="See_Also" name="See_Also">See Also</h2>
 
 <ul>
- <li>{{ LXRSearch("ident", "i", "JS::AutoIdArray") }}</li>
- <li>{{jsapixref("JSIdArray")}}</li>
- <li>{{jsapixref("JS_DestroyIdArray")}}</li>
- <li>{{jsapixref("JS_Enumerate")}}</li>
- <li>{{bug(332648)}}</li>
+ <li><!-- {{ LXRSearch("ident", "i", "JS::AutoIdArray") }} --></li>
+ <li><!-- {{jsapixref("JSIdArray")}} --></li>
+ <li><!-- {{jsapixref("JS_DestroyIdArray")}} --></li>
+ <li><!-- {{jsapixref("JS_Enumerate")}} --></li>
+ <li><!-- {{bug(332648)}} --></li>
 </ul>

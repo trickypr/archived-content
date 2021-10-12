@@ -1,8 +1,8 @@
-<div>{{SpiderMonkeySidebar("JSAPI")}}</div>
+<div><!-- {{SpiderMonkeySidebar("JSAPI")}} --></div>
 
-<p>{{ obsolete_header("jsapi38") }}</p>
+<p><!-- {{ obsolete_header("jsapi38") }} --></p>
 
-<p>{{ jsapi_minversion_header("31") }}</p>
+<p><!-- {{ jsapi_minversion_header("31") }} --></p>
 
 <div class="summary">
 <p>Unregister a pointer to a GC thing so that it is no longer a member of the garbage collector's root set. This enables any pointed-at GC thing to be garbage collected as needed.</p>
@@ -44,33 +44,33 @@ RemoveScriptRootRT(JSRuntime *rt, JS::Heap&lt;JSScript *&gt; *rp);
   </tr>
   <tr>
    <td><code>cx</code></td>
-   <td>{{jsapixref("JSRuntime", "JSContext *")}}</td>
-   <td>The context from which to remove the root. {{ Jsapi-requires-request() }}</td>
+   <td><!-- {{jsapixref("JSRuntime", "JSContext *")}} --></td>
+   <td>The context from which to remove the root. <!-- {{ Jsapi-requires-request() }} --></td>
   </tr>
   <tr>
    <td><code>rt</code></td>
-   <td>{{jsapixref("JSRuntime", "JSRuntime *")}}</td>
+   <td><!-- {{jsapixref("JSRuntime", "JSRuntime *")}} --></td>
    <td>The runtime from which to remove the root.</td>
   </tr>
   <tr>
    <td><code>vp</code></td>
-   <td>{{jsapixref("JS::Value", "JS::Heap&lt;JS::Value&gt;")}}</td>
-   <td>Address of the {{jsapixref("JS::Value")}} variable to remove from the root set. This must have been passed to one of {{jsapixref("JS::Add_Root", "JS::AddValueRoot")}}, {{jsapixref("JS::Add_Root", "JS::AddNamedValueRoot")}} or {{jsapixref("JS::Add_Root", "JS::AddNamedValueRootRT")}}.</td>
+   <td><!-- {{jsapixref("JS::Value", "JS::Heap&lt;JS::Value&gt;")}} --></td>
+   <td>Address of the <!-- {{jsapixref("JS::Value")}} --> variable to remove from the root set. This must have been passed to one of <!-- {{jsapixref("JS::Add_Root", "JS::AddValueRoot")}} -->, <!-- {{jsapixref("JS::Add_Root", "JS::AddNamedValueRoot")}} --> or <!-- {{jsapixref("JS::Add_Root", "JS::AddNamedValueRootRT")}} -->.</td>
   </tr>
   <tr>
    <td><code>rp</code></td>
-   <td>{{jsapixref("JSString", "JS::Heap&lt;JSString *&gt;")}}</td>
-   <td>Address of the {{jsapixref("JSString", "JSString *")}} variable to remove from the root set. This must have been passed to either {{jsapixref("JS::Add_Root", "JS::AddStringRoot")}} or {{jsapixref("JS::Add_Root", "JS::AddNamedStringRoot")}}.</td>
+   <td><!-- {{jsapixref("JSString", "JS::Heap&lt;JSString *&gt;")}} --></td>
+   <td>Address of the <!-- {{jsapixref("JSString", "JSString *")}} --> variable to remove from the root set. This must have been passed to either <!-- {{jsapixref("JS::Add_Root", "JS::AddStringRoot")}} --> or <!-- {{jsapixref("JS::Add_Root", "JS::AddNamedStringRoot")}} -->.</td>
   </tr>
   <tr>
    <td><code>rp</code></td>
-   <td>{{jsapixref("JSObject", "JS::Heap&lt;JSObject *&gt;")}}</td>
-   <td>Address of the {{jsapixref("JSObject", "JSObject *")}} variable to remove from the root set. This must have been passed to either {{jsapixref("JS::Add_Root", "JS::AddObjectRoot")}} or {{jsapixref("JS::Add_Root", "JS::AddNamedObjectRoot")}}.</td>
+   <td><!-- {{jsapixref("JSObject", "JS::Heap&lt;JSObject *&gt;")}} --></td>
+   <td>Address of the <!-- {{jsapixref("JSObject", "JSObject *")}} --> variable to remove from the root set. This must have been passed to either <!-- {{jsapixref("JS::Add_Root", "JS::AddObjectRoot")}} --> or <!-- {{jsapixref("JS::Add_Root", "JS::AddNamedObjectRoot")}} -->.</td>
   </tr>
   <tr>
    <td><code>rp</code></td>
-   <td>{{jsapixref("JSScript", "JS::Heap&lt;JSScript *&gt;")}}</td>
-   <td>Address of the {{jsapixref("JSScript", "JSScript *")}} variable to remove from the root set. This must have been passed to {{jsapixref("JS::Add_Root", "JS::AddNamedScriptRoot")}}.</td>
+   <td><!-- {{jsapixref("JSScript", "JS::Heap&lt;JSScript *&gt;")}} --></td>
+   <td>Address of the <!-- {{jsapixref("JSScript", "JSScript *")}} --> variable to remove from the root set. This must have been passed to <!-- {{jsapixref("JS::Add_Root", "JS::AddNamedScriptRoot")}} -->.</td>
   </tr>
  </tbody>
 </table>
@@ -79,19 +79,19 @@ RemoveScriptRootRT(JSRuntime *rt, JS::Heap&lt;JSScript *&gt; *rp);
 
 <p><code>JS::Remove*Root</code> removes the variable that <code>rp</code> points to from the garbage collector's root set.</p>
 
-<p>The entry for <code>vp/rp</code> is removed from the root set for the {{jsapixref("JSRuntime")}} associated with the context <code>cx</code>.</p>
+<p>The entry for <code>vp/rp</code> is removed from the root set for the <!-- {{jsapixref("JSRuntime")}} --> associated with the context <code>cx</code>.</p>
 
 <h2 id="See_Also" name="See_Also">See Also</h2>
 
 <ul>
- <li>{{ LXRSearch("ident", "i", "JS::RemoveValueRoot") }}</li>
- <li>{{ LXRSearch("ident", "i", "JS::RemoveStringRoot") }}</li>
- <li>{{ LXRSearch("ident", "i", "JS::RemoveObjectRoot") }}</li>
- <li>{{ LXRSearch("ident", "i", "JS::RemoveScriptRoot") }}</li>
- <li>{{ LXRSearch("ident", "i", "JS::RemoveValueRootRT") }}</li>
- <li>{{ LXRSearch("ident", "i", "JS::RemoveStringRootRT") }}</li>
- <li>{{ LXRSearch("ident", "i", "JS::RemoveObjectRootRT") }}</li>
- <li>{{ LXRSearch("ident", "i", "JS::RemoveScriptRootRT") }}</li>
- <li>{{bug(912581)}}</li>
- <li>{{bug(1107639)}}</li>
+ <li><!-- {{ LXRSearch("ident", "i", "JS::RemoveValueRoot") }} --></li>
+ <li><!-- {{ LXRSearch("ident", "i", "JS::RemoveStringRoot") }} --></li>
+ <li><!-- {{ LXRSearch("ident", "i", "JS::RemoveObjectRoot") }} --></li>
+ <li><!-- {{ LXRSearch("ident", "i", "JS::RemoveScriptRoot") }} --></li>
+ <li><!-- {{ LXRSearch("ident", "i", "JS::RemoveValueRootRT") }} --></li>
+ <li><!-- {{ LXRSearch("ident", "i", "JS::RemoveStringRootRT") }} --></li>
+ <li><!-- {{ LXRSearch("ident", "i", "JS::RemoveObjectRootRT") }} --></li>
+ <li><!-- {{ LXRSearch("ident", "i", "JS::RemoveScriptRootRT") }} --></li>
+ <li><!-- {{bug(912581)}} --></li>
+ <li><!-- {{bug(1107639)}} --></li>
 </ul>

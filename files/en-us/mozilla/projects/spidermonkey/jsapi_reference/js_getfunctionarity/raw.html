@@ -1,4 +1,4 @@
-<div>{{SpiderMonkeySidebar("JSAPI")}}</div>
+<div><!-- {{SpiderMonkeySidebar("JSAPI")}} --></div>
 
 <div class="summary">
 <p>Get the number of arguments a function expects.</p>
@@ -19,7 +19,7 @@ JS_GetFunctionArity(JSFunction *fun);
   </tr>
   <tr>
    <td><code>fun</code></td>
-   <td>{{jsapixref("JSFunction", "JSFunction *")}}</td>
+   <td><!-- {{jsapixref("JSFunction", "JSFunction *")}} --></td>
    <td>A JavaScript function.</td>
   </tr>
  </tbody>
@@ -27,13 +27,13 @@ JS_GetFunctionArity(JSFunction *fun);
 
 <h2 id="Description" name="Description">Description</h2>
 
-<p><code>JS_GetFunctionArity</code> returns the number of formal parameters of a function, <code>fun</code>. This is the same as the function object's <code>arity</code> property, if that property has not been overwritten. Specifically, if <code>fun</code> is a native function, the result is the value that was passed to the <code>nargs</code> parameter of {{jsapixref("JS_DefineFunction")}}. Otherwise <code>fun</code> is implemented in JavaScript, and the result is the number of identifiers in its formal parameter list (see <span class="pl-s1"><span class="pl-s">ECMA 262-3 §</span></span>13).</p>
+<p><code>JS_GetFunctionArity</code> returns the number of formal parameters of a function, <code>fun</code>. This is the same as the function object's <code>arity</code> property, if that property has not been overwritten. Specifically, if <code>fun</code> is a native function, the result is the value that was passed to the <code>nargs</code> parameter of <!-- {{jsapixref("JS_DefineFunction")}} -->. Otherwise <code>fun</code> is implemented in JavaScript, and the result is the number of identifiers in its formal parameter list (see <span class="pl-s1"><span class="pl-s">ECMA 262-3 §</span></span>13).</p>
 
 <p>Note that it is not an error <em>per se</em> to call a JavaScript function with more or fewer actual arguments than its arity.</p>
 
 <h2 id="See_Also" name="See_Also">See Also</h2>
 
 <ul>
- <li>{{ LXRSearch("ident", "i", "JS_GetFunctionArity") }}</li>
- <li>{{jsapixref("JS_DefineFunction")}}</li>
+ <li><!-- {{ LXRSearch("ident", "i", "JS_GetFunctionArity") }} --></li>
+ <li><!-- {{jsapixref("JS_DefineFunction")}} --></li>
 </ul>

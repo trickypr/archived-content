@@ -2,11 +2,11 @@
 <p>Support for extensions using XUL/XPCOM or the Add-on SDK was removed in Firefox 57, released November 2017. As there is no supported version of Firefox enabling these technologies, this page will be removed by December 2020.</p>
 </div>
 
-<p><span style="color: #000000; display: inline !important; float: none; font-family: Cantarell; font-size: 14.666666984558105px; font-style: normal; font-weight: normal; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal;">{{LegacyAddonsNotice}}</span></p>
+<p><span style="color: #000000; display: inline !important; float: none; font-family: Cantarell; font-size: 14.666666984558105px; font-style: normal; font-weight: normal; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal;"><!-- {{LegacyAddonsNotice}} --></span></p>
 
 <p>The AddonManager object is the global API used to access information about add-ons installed in the application and to manipulate them. The majority of the methods are asynchronous meaning that results are delivered through callbacks passed to the method. The callbacks will be called just once but that may be before or after the method returns.</p>
 
-<p>One of the forces of the AddonManager is that it deals with any kind (type) of add-on in a generic manner. To do so many methods of the AddonManager take the add-on types as parameters. The existing add-on types are defined in {{ source("toolkit/mozapps/extensions/internal/XPIProvider.jsm","XPIProvider.jsm") }} and are, at this time, the following: <code>extension</code>, <code>theme</code>, <code>locale</code>, <code>multipackage</code>, <code>dictionary</code> and <code>experiment</code>.</p>
+<p>One of the forces of the AddonManager is that it deals with any kind (type) of add-on in a generic manner. To do so many methods of the AddonManager take the add-on types as parameters. The existing add-on types are defined in <!-- {{ source("toolkit/mozapps/extensions/internal/XPIProvider.jsm","XPIProvider.jsm") }} --> and are, at this time, the following: <code>extension</code>, <code>theme</code>, <code>locale</code>, <code>multipackage</code>, <code>dictionary</code> and <code>experiment</code>.</p>
 
 <p>To import the AddonManager object in the Add-on SDK, use:</p>
 
@@ -22,10 +22,10 @@
 <table class="standard-table">
  <tbody>
   <tr>
-   <td><code>Promise? <a href="#getInstallForURL()" title="AddonManager.getInstallForURL()">getInstallForURL</a>(in string url, in <a href="#InstallCallback()" title="AddonManager.InstallCallback()">InstallCallback</a>? callback, in string mimetype, in string hash, in string name, in string iconURL, in string version, in {{ Interface("nsILoadGroup") }} loadGroup)</code></td>
+   <td><code>Promise? <a href="#getInstallForURL()" title="AddonManager.getInstallForURL()">getInstallForURL</a>(in string url, in <a href="#InstallCallback()" title="AddonManager.InstallCallback()">InstallCallback</a>? callback, in string mimetype, in string hash, in string name, in string iconURL, in string version, in <!-- {{ Interface("nsILoadGroup") }} --> loadGroup)</code></td>
   </tr>
   <tr>
-   <td><code>Promise? <a href="#getInstallForFile()" title="AddonManager.getInstallForFile()">getInstallForFile</a>(in {{ Interface("nsIFile") }} file, in <a href="#InstallCallback()" title="AddonManager.InstallCallback()">InstallCallback</a>? callback, in string mimetype)</code></td>
+   <td><code>Promise? <a href="#getInstallForFile()" title="AddonManager.getInstallForFile()">getInstallForFile</a>(in <!-- {{ Interface("nsIFile") }} --> file, in <a href="#InstallCallback()" title="AddonManager.InstallCallback()">InstallCallback</a>? callback, in string mimetype)</code></td>
   </tr>
   <tr>
    <td><code>Promise? <a href="#getAllInstalls()" title="AddonManager.getAllInstalls()">getAllInstalls</a>(in <a href="#InstallListCallback()" title="AddonManager.getInstallListCallback()">InstallListCallback</a>? callback)</code></td>
@@ -34,7 +34,7 @@
    <td><code>Promise? <a href="#getInstallsByTypes()" title="AddonManager.getInstallsByCallback()">getInstallsByTypes</a>(in string types[], in <a href="#InstallListCallback()" title="AddonManager.InstallListCallback()">InstallListCallback</a>? callback)</code></td>
   </tr>
   <tr>
-   <td><code>void <a href="#installAddonsFromWebpage()" title="AddonManager.installAddonsFromWebpage()">installAddonsFromWebpage</a>(in string mimetype, in {{ Interface("nsIDOMWindow") }} source, in {{ Interface("nsIURI") }} uri, in <a href="/en-US/Add-ons/Add-on_Manager/AddonInstall" title="AddonInstall">AddonInstall</a> installs[])</code></td>
+   <td><code>void <a href="#installAddonsFromWebpage()" title="AddonManager.installAddonsFromWebpage()">installAddonsFromWebpage</a>(in string mimetype, in <!-- {{ Interface("nsIDOMWindow") }} --> source, in <!-- {{ Interface("nsIURI") }} --> uri, in <a href="/en-US/Add-ons/Add-on_Manager/AddonInstall" title="AddonInstall">AddonInstall</a> installs[])</code></td>
   </tr>
   <tr>
    <td><code>void <a href="#addInstallListener()" title="AddonManager.addInstallListener()">addInstallListener</a>(in <a href="/en-US/Add-ons/Add-on_Manager/InstallListener" title="InstallListener">InstallListener</a> listener)</code></td>
@@ -73,7 +73,7 @@
    <td><code>void <a href="#removeTypeListener()" title="AddonManager.removeTypeListener()">removeTypeListener</a>(in <a href="/en-US/Add-ons/Add-on_Manager/TypeListener" title="TypeListener">TypeListener</a> listener)</code></td>
   </tr>
   <tr>
-   <td><code>{{ Interface("nsIURI") }} <a href="#getURIForResourceInFile()" title="AddonManager.getURIForResourceInFile()">getURIForResourceInFile</a>(in {{ Interface("nsIFile") }} aFile, in string aPath)</code></td>
+   <td><code><!-- {{ Interface("nsIURI") }} --> <a href="#getURIForResourceInFile()" title="AddonManager.getURIForResourceInFile()">getURIForResourceInFile</a>(in <!-- {{ Interface("nsIFile") }} --> aFile, in string aPath)</code></td>
   </tr>
  </tbody>
 </table>
@@ -495,7 +495,7 @@
 
 <h2 id="Startup_change_types">Startup change types</h2>
 
-<p>These constants represent the lists of types of changes that can occur to add-ons during startup; they're used with the {{ manch("getStartupChanges") }}, {{ manch("addStartupChange") }}, and {{ manch("removeStartupChange") }} methods.</p>
+<p>These constants represent the lists of types of changes that can occur to add-ons during startup; they're used with the <!-- {{ manch("getStartupChanges") }} -->, <!-- {{ manch("addStartupChange") }} -->, and <!-- {{ manch("removeStartupChange") }} --> methods.</p>
 
 <table class="standard-table">
  <tbody>
@@ -530,7 +530,7 @@
 
 <h3 id="addStartupChange()">addStartupChange()</h3>
 
-<p>Adds an add-on change from the add-on changes list. This is used to build the lists of changed add-ons reported by the {{ manch("getStartupChanges") }} method.</p>
+<p>Adds an add-on change from the add-on changes list. This is used to build the lists of changed add-ons reported by the <!-- {{ manch("getStartupChanges") }} --> method.</p>
 
 <div class="note"><strong>Note:</strong> Calling this method more than once for the same add-on will replace the last change that was recorded with the new one; an add-on can only appear once across all change types.</div>
 
@@ -544,7 +544,7 @@
 
 <dl>
  <dt><code>changeType</code></dt>
- <dd>The type of change that occurred for the specified add-on. This can be one of the {{ anch("Startup change types") }} or a custom value defined by your own provider.</dd>
+ <dd>The type of change that occurred for the specified add-on. This can be one of the <!-- {{ anch("Startup change types") }} --> or a custom value defined by your own provider.</dd>
  <dt><code>id</code></dt>
  <dd>The add-on ID to add to the change list.</dd>
 </dl>
@@ -563,7 +563,7 @@
 
 <dl>
  <dt><code>changeType</code></dt>
- <dd>The type of change to remove for the specified add-on. This can be one of the {{ anch("Startup change types") }} or a custom value defined by your own provider.</dd>
+ <dd>The type of change to remove for the specified add-on. This can be one of the <!-- {{ anch("Startup change types") }} --> or a custom value defined by your own provider.</dd>
  <dt><code>id</code></dt>
  <dd>The add-on ID to remove from the change list.</dd>
 </dl>
@@ -581,7 +581,7 @@
 
 <dl>
  <dt><code>changeType</code></dt>
- <dd>The change type for which to retrieve a list of changed add-ons. This can be one of the {{ anch("Startup change types") }} or a custom value defined by your own provider.</dd>
+ <dd>The change type for which to retrieve a list of changed add-ons. This can be one of the <!-- {{ anch("Startup change types") }} --> or a custom value defined by your own provider.</dd>
 </dl>
 
 <h6 id="Return_value">Return value</h6>
@@ -600,7 +600,7 @@
   in string name,
   in string iconURL,
   in string version,
-  in {{ Interface("nsILoadGroup") }} loadGroup
+  in <!-- {{ Interface("nsILoadGroup") }} --> loadGroup
 )
 </pre>
 
@@ -622,15 +622,15 @@
  <dt>version</dt>
  <dd>An optional placeholder version while the add-on is being downloaded</dd>
  <dt>loadGroup</dt>
- <dd>An optional {{ Interface("nsILoadGroup") }} to associate any network requests with</dd>
+ <dd>An optional <!-- {{ Interface("nsILoadGroup") }} --> to associate any network requests with</dd>
 </dl>
 
 <h3 id="getInstallForFile()">getInstallForFile()</h3>
 
-<p>Asynchronously gets an <code><a href="/en-US/Add-ons/Add-on_Manager/AddonInstall" title="AddonInstall">AddonInstall</a></code> for an {{ Interface("nsIFile") }}.</p>
+<p>Asynchronously gets an <code><a href="/en-US/Add-ons/Add-on_Manager/AddonInstall" title="AddonInstall">AddonInstall</a></code> for an <!-- {{ Interface("nsIFile") }} -->.</p>
 
 <pre class="eval">Promise? getInstallForFile(
-  in {{ Interface("nsIFile") }} file,
+  in <!-- {{ Interface("nsIFile") }} --> file,
   in <code><a href="#InstallCallback()" title="AddonManager.InstallCallback()">InstallCallback</a></code>? callback,
   in string mimetype
 )
@@ -640,7 +640,7 @@
 
 <dl>
  <dt>file</dt>
- <dd>The {{ Interface("nsIFile") }} where the add-on is located</dd>
+ <dd>The <!-- {{ Interface("nsIFile") }} --> where the add-on is located</dd>
  <dt>callback</dt>
  <dd>A callback to pass the <code><a href="/en-US/Add-ons/Add-on_Manager/AddonInstall" title="AddonInstall">AddonInstall</a></code> to</dd>
  <dt>mimetype</dt>
@@ -688,8 +688,8 @@
 
 <pre class="eval">void installAddonsFromWebpage(
   in string mimetype,
-  in {{ Interface("nsIDOMWindow") }} source,
-  in {{ Interface("nsIURI") }} uri,
+  in <!-- {{ Interface("nsIDOMWindow") }} --> source,
+  in <!-- {{ Interface("nsIURI") }} --> uri,
   in <code><a href="/en-US/Add-ons/Add-on_Manager/AddonInstall" title="AddonInstall">AddonInstall</a></code> installs[]
 )
 </pre>
@@ -700,9 +700,9 @@
  <dt>mimetype</dt>
  <dd>The mimetype of add-ons being installed</dd>
  <dt>source</dt>
- <dd>The {{ Interface("nsIDOMWindow") }} that started the installs</dd>
+ <dd>The <!-- {{ Interface("nsIDOMWindow") }} --> that started the installs</dd>
  <dt>uri</dt>
- <dd>The {{ Interface("nsIURI") }} that started the installs</dd>
+ <dd>The <!-- {{ Interface("nsIURI") }} --> that started the installs</dd>
  <dt>installs</dt>
  <dd>The array of <code><a href="/en-US/Add-ons/Add-on_Manager/AddonInstall" title="AddonInstall">AddonInstall</a></code>s to be installed</dd>
 </dl>
@@ -916,8 +916,8 @@
 
 <h3 id="getURIForResourceInFile()"><code><code>getURIForResourceInFile()</code></code></h3>
 
-<pre class="eval"><code><code>{{ Interface("nsIURI") }} getURIForResourceInFile(
-  in {{ Interface("nsIFile") }} aFile,
+<pre class="eval"><code><code><!-- {{ Interface("nsIURI") }} --> getURIForResourceInFile(
+  in <!-- {{ Interface("nsIFile") }} --> aFile,
   in string aPath
 )
 </code></code></pre>
@@ -926,11 +926,11 @@
 
 <dl>
  <dt><code><code>aFile</code></code></dt>
- <dd><code><code>The {{ Interface("nsIFile") }} containing the resources; must be either a directory or an XPI file.</code></code></dd>
+ <dd><code><code>The <!-- {{ Interface("nsIFile") }} --> containing the resources; must be either a directory or an XPI file.</code></code></dd>
  <dt><code><code>aPath</code></code></dt>
  <dd><code><code>The path to find the resource at, "/" separated. If <code>aPath</code> is empty then the URI to the root of the contained files will be returned.</code></code></dd>
 </dl>
 
 <h6 id="Returns"><code><code>Returns</code></code></h6>
 
-<p><code><code>An {{ Interface("nsIURI") }} pointing at the resource.</code></code></p>
+<p><code><code>An <!-- {{ Interface("nsIURI") }} --> pointing at the resource.</code></code></p>

@@ -19,7 +19,7 @@ tags:
 
 <p><strong><span class="seoSummary"><code>formatValue</code> is used to retrieve translations from the localization resources, optionally interpolating them with additional variable data. If the translation is not found in the first supported locale, the L10n context will try the next locale in the fallback chain (asynchronously) until it finds an available translation. </span></strong></p>
 
-<p>Translations may use the double brace syntax (<code>{{ placeable }}</code>) to introduce variables that will be resolved on runtime and interpolated into the final string return value. The variable values must be specified in the second argument to <code>formatValue</code> and must be strings or numbers. If a variable fails to resolve, the final translation will contain the raw <code>{{ placeable }}</code> syntax.</p>
+<p>Translations may use the double brace syntax (<code><!-- {{ placeable }} --></code>) to introduce variables that will be resolved on runtime and interpolated into the final string return value. The variable values must be specified in the second argument to <code>formatValue</code> and must be strings or numbers. If a variable fails to resolve, the final translation will contain the raw <code><!-- {{ placeable }} --></code> syntax.</p>
 
 <p>When no translation is found, or, in rare cases, when the translation contains unrecoverable errors (e.g., a cyclic reference in a placeable), <code>formatValue</code> will return the identifier that was requested. This behavior allows the developers to safely assume that the return value is always a string.</p>
 
@@ -48,7 +48,7 @@ tags:
 
 <dl>
  <dd>
- <pre>from-contact = Missed call from {{ contact }}</pre>
+ <pre>from-contact = Missed call from <!-- {{ contact }} --></pre>
  </dd>
 </dl>
 
@@ -88,7 +88,7 @@ Promise.all(
 
 function buildModal(strings) {
   //  strings[0] is the &apos;title&apos; translation with
-  // App.name interpolated inplace of {{ name }}
+  // App.name interpolated inplace of <!-- {{ name }} -->
 }
 
 Promise.all(

@@ -1,5 +1,5 @@
-<div>{{SpiderMonkeySidebar("JSAPI")}}</div>
-<p>{{ obsolete_header("jsapi37") }}</p>
+<div><!-- {{SpiderMonkeySidebar("JSAPI")}} --></div>
+<p><!-- {{ obsolete_header("jsapi37") }} --></p>
 <div class="summary">
 <p>Determine if a specified property exists.</p>
 </div>
@@ -40,17 +40,17 @@ JS_LookupPropertyWithFlagsById(JSContext *cx, JS::HandleObject obj, JS::HandleId
   </tr>
   <tr>
    <td><code>cx</code></td>
-   <td>{{jsapixref("JSRuntime", "JSContext *")}}</td>
-   <td>Pointer to a JS context from which to derive runtime information. {{ Jsapi-requires-request() }}</td>
+   <td><!-- {{jsapixref("JSRuntime", "JSContext *")}} --></td>
+   <td>Pointer to a JS context from which to derive runtime information. <!-- {{ Jsapi-requires-request() }} --></td>
   </tr>
   <tr>
    <td><code>obj</code></td>
-   <td>{{jsapixref("JSObject", "JS::HandleObject")}}</td>
+   <td><!-- {{jsapixref("JSObject", "JS::HandleObject")}} --></td>
    <td>Object to search on for the property.</td>
   </tr>
   <tr>
    <td><code>name</code> <em>or</em> <code>id</code></td>
-   <td><code>const char *</code> <em>or</em> <code>const char16_t *<em>or</em> {{jsapixref("jsid", "JS::HandleId")}}</code></td>
+   <td><code>const char *</code> <em>or</em> <code>const char16_t *<em>or</em> <!-- {{jsapixref("jsid", "JS::HandleId")}} --></code></td>
    <td>Name of the property to look up.</td>
   </tr>
   <tr>
@@ -65,29 +65,29 @@ JS_LookupPropertyWithFlagsById(JSContext *cx, JS::HandleObject obj, JS::HandleId
   </tr>
   <tr>
    <td><code>objp</code></td>
-   <td>{{jsapixref("JSObject", "JS::MutableHandleObject")}}</td>
+   <td><!-- {{jsapixref("JSObject", "JS::MutableHandleObject")}} --></td>
    <td>Out parameter. On success, <code>*objp </code>receives the object on which the property was found. This will be either <code>obj</code> or an element on <code>obj</code>'s prototype chain.</td>
   </tr>
   <tr>
    <td><code>vp</code></td>
-   <td>{{jsapixref("JSObject", "JS::MutableHandleObject")}}</td>
-   <td>Out parameter. On success, <code>*vp</code> receives the {{jsapixref("Stored_value", "stored value", "", 1)}} of the property, if any.</td>
+   <td><!-- {{jsapixref("JSObject", "JS::MutableHandleObject")}} --></td>
+   <td>Out parameter. On success, <code>*vp</code> receives the <!-- {{jsapixref("Stored_value", "stored value", "", 1)}} --> of the property, if any.</td>
   </tr>
  </tbody>
 </table>
 <h2 id="Description" name="Description">Description</h2>
 <p>The functions <strong><code>JS_LookupProperty</code></strong>, <strong><code>JS_LookupUCProperty</code></strong>, <strong><code>JS_LookupPropertyById</code></strong>, <strong><code>JS_LookupPropertyWithFlags</code></strong>, and <strong><code>JS_LookupPropertyWithFlagsById</code></strong> search a specified object, <code>obj</code>, for a property with the given <code>name</code>. These functions all have similar behavior:</p>
 <ul>
- <li>The search starts with <code>obj</code> and proceeds along the {{jsapixref("JS_GetPrototype", "prototype")}} chain.</li>
- <li>If the property is found, <code>*vp</code> receives the property's {{jsapixref("Stored_value", "stored value", "", 1)}}, or <code>true</code> if the property has no stored value; and the return value is <code>true</code>.</li>
+ <li>The search starts with <code>obj</code> and proceeds along the <!-- {{jsapixref("JS_GetPrototype", "prototype")}} --> chain.</li>
+ <li>If the property is found, <code>*vp</code> receives the property's <!-- {{jsapixref("Stored_value", "stored value", "", 1)}} -->, or <code>true</code> if the property has no stored value; and the return value is <code>true</code>.</li>
  <li>If neither <code>obj</code> nor any of its prototypes have such a property, <code>*vp</code> receives <code>undefined</code> and the return value is <code>true</code> (to indicate no error occurred).</li>
  <li>On error or exception (such as running out of memory during the search), the return value is <code>false</code>, and the value left in <code>*vp</code> is undefined.</li>
- <li>There is no way to tell the difference between not finding any property and finding a property whose value is undefined. Sorry. Use {{jsapixref("JS_GetPropertyDescriptorById")}} instead.</li>
+ <li>There is no way to tell the difference between not finding any property and finding a property whose value is undefined. Sorry. Use <!-- {{jsapixref("JS_GetPropertyDescriptorById")}} --> instead.</li>
 </ul>
 <p><code>JS_LookupUCProperty</code> is the Unicode version of <code>JS_LookupProperty</code>.</p>
 <h3 id="Flags" name="Flags">Flags</h3>
 <p><code>JS_LookupPropertyWithFlags</code> and <code>JS_LookupPropertyWithFlagsById</code> allow the caller to specify flags requesting special lookup behavior.</p>
-<p>When executing JavaScript code that uses properties, SpiderMonkey looks up properties using slightly different rules depending on the syntactic context in which the property name appears. (The JavaScript engine simply passes these flags through to the object when it calls the object's {{jsapixref("JSClass.resolve")}} callback, so objects of a custom {{jsapixref("JSClass")}} may interpret these flags however they like.)</p>
+<p>When executing JavaScript code that uses properties, SpiderMonkey looks up properties using slightly different rules depending on the syntactic context in which the property name appears. (The JavaScript engine simply passes these flags through to the object when it calls the object's <!-- {{jsapixref("JSClass.resolve")}} --> callback, so objects of a custom <!-- {{jsapixref("JSClass")}} --> may interpret these flags however they like.)</p>
 <p>If <code>flags</code> is <code>0</code>, <code>JS_LookupPropertyWithFlags</code> uses the default lookup rules, the ones used by <code>JS_LookupProperty</code>. Otherwise, <code>flags</code> must be the logical OR of one or more of the following bits:</p>
 <dl>
  <dt>
@@ -113,10 +113,10 @@ JS_LookupPropertyWithFlagsById(JSContext *cx, JS::HandleObject obj, JS::HandleId
 </dl>
 <h3 id="Notes" name="Notes">Notes</h3>
 <p><code>JS_LookupProperty</code> does not distinguish between a property with a value of <code>undefined</code> and a property that does not exist. Use <code>JS_GetPropertyAttributes</code> to distinguish these cases.</p>
-<p><code>JS_LookupProperty</code> differs from {{jsapixref("JS_GetProperty")}} in that <code>JS_LookupProperty</code> does not invoke the get handler for the property.</p>
-<p>Internally, property lookups are implemented by the {{jsapixref("JSObjectOps.lookupProperty")}} callback.</p>
+<p><code>JS_LookupProperty</code> differs from <!-- {{jsapixref("JS_GetProperty")}} --> in that <code>JS_LookupProperty</code> does not invoke the get handler for the property.</p>
+<p>Internally, property lookups are implemented by the <!-- {{jsapixref("JSObjectOps.lookupProperty")}} --> callback.</p>
 <h2 id="See_Also" name="See_Also">See Also</h2>
 <ul>
-  <li>{{bug(547140)}} -- removed <code>*WithFlags</code></li>
-<li>{{bug(1094176)}}</li>
+  <li><!-- {{bug(547140)}} --> -- removed <code>*WithFlags</code></li>
+<li><!-- {{bug(1094176)}} --></li>
 </ul>

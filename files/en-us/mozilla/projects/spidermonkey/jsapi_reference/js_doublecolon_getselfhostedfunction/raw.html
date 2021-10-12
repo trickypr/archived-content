@@ -1,6 +1,6 @@
-<p>{{ jsapi_minversion_header("31") }}</p>
+<p><!-- {{ jsapi_minversion_header("31") }} --></p>
 
-<div>{{SpiderMonkeySidebar("JSAPI")}}</div>
+<div><!-- {{SpiderMonkeySidebar("JSAPI")}} --></div>
 
 <div class="summary">
 <p>Create a new JavaScript function that is implemented in self-hosted JavaScript.</p>
@@ -22,8 +22,8 @@ JS::GetSelfHostedFunction(JSContext* cx, const char* selfHostedName, JS::Handle&
   </tr>
   <tr>
    <td><code>cx</code></td>
-   <td>{{jsapixref("JSRuntime", "JSContext*")}}</td>
-   <td>The context from which to get the function. {{ Jsapi-requires-request() }}</td>
+   <td><!-- {{jsapixref("JSRuntime", "JSContext*")}} --></td>
+   <td>The context from which to get the function. <!-- {{ Jsapi-requires-request() }} --></td>
   </tr>
   <tr>
    <td><code>selfHostedName</code></td>
@@ -32,8 +32,8 @@ JS::GetSelfHostedFunction(JSContext* cx, const char* selfHostedName, JS::Handle&
   </tr>
   <tr>
    <td><code>id</code></td>
-   <td>{{jsapixref("jsid", "JS::Handle&lt;jsid&gt;")}}</td>
-   <td>A pointer to {{jsapixref("jsid")}} of the name to assign to the new function.</td>
+   <td><!-- {{jsapixref("jsid", "JS::Handle&lt;jsid&gt;")}} --></td>
+   <td>A pointer to <!-- {{jsapixref("jsid")}} --> of the name to assign to the new function.</td>
   </tr>
   <tr>
    <td><code>nargs</code></td>
@@ -52,6 +52,6 @@ JS::GetSelfHostedFunction(JSContext* cx, const char* selfHostedName, JS::Handle&
 <h2 id="See_Also" name="See_Also">See Also</h2>
 
 <ul>
- <li>{{ LXRSearch("ident", "i", "JS::GetSelfHostedFunction") }}</li>
- <li>{{bug(1140573)}}</li>
+ <li><!-- {{ LXRSearch("ident", "i", "JS::GetSelfHostedFunction") }} --></li>
+ <li><!-- {{bug(1140573)}} --></li>
 </ul>

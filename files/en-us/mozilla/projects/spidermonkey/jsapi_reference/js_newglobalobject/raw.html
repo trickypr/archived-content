@@ -1,6 +1,6 @@
-<p>{{ jsapi_minversion_header("17") }}</p>
+<p><!-- {{ jsapi_minversion_header("17") }} --></p>
 
-<div>{{SpiderMonkeySidebar("JSAPI")}}</div>
+<div><!-- {{SpiderMonkeySidebar("JSAPI")}} --></div>
 
 <div class="summary">
 <p>Create a new JavaScript object for use as a global object.</p>
@@ -24,32 +24,32 @@ JS_NewGlobalObject(JSContext *cx, const JSClass *clasp, JSPrincipals *principals
   </tr>
   <tr>
    <td><code>cx</code></td>
-   <td>{{jsapixref("JSRuntime", "JSContext *")}}</td>
-   <td>The context in which to create the new global object. {{ Jsapi-requires-request() }}</td>
+   <td><!-- {{jsapixref("JSRuntime", "JSContext *")}} --></td>
+   <td>The context in which to create the new global object. <!-- {{ Jsapi-requires-request() }} --></td>
   </tr>
   <tr>
    <td><code>clasp</code></td>
-   <td>{{jsapixref("Jsclass", "Jsclass *")}}</td>
+   <td><!-- {{jsapixref("Jsclass", "Jsclass *")}} --></td>
    <td>
     <p>The class to use for the new global object.</p>
 
-    <p><code>clasp-&gt;flags</code> must have the {{jsapixref("JS_SetGlobalObject", "JSCLASS_GLOBAL_FLAGS")}} bits set.</p>
+    <p><code>clasp-&gt;flags</code> must have the <!-- {{jsapixref("JS_SetGlobalObject", "JSCLASS_GLOBAL_FLAGS")}} --> bits set.</p>
     The caller must ensure that the <code>JSClass</code> remains alive throughout the lifetime of the new object, including the garbage collection cycle that finally frees it. The usual way to do this is to make <code>JSClass</code>es global or <code>static</code>.</td>
   </tr>
   <tr>
    <td>principals</td>
-   <td>{{jsapixref("JSPrincipals", "JSPrincipals *")}}</td>
+   <td><!-- {{jsapixref("JSPrincipals", "JSPrincipals *")}} --></td>
    <td>The security information to associate with this compartment.</td>
   </tr>
   <tr>
    <td>hookOption</td>
    <td><code>JS::OnNewGlobalHookOption</code></td>
-   <td>See <a href="#Debugger_API_Hook">Debugger API Hook</a> {{ Jsapi_minversion_inline("31") }}</td>
+   <td>See <a href="#Debugger_API_Hook">Debugger API Hook</a> <!-- {{ Jsapi_minversion_inline("31") }} --></td>
   </tr>
   <tr>
    <td>options</td>
-   <td>{{jsapixref("JS::CompartmentOptions", "const JS::CompartmentOptions &amp;")}}</td>
-   <td>The option for new compartment (passed to <code>JScompartment</code> constructor). {{ Jsapi_minversion_inline("31") }}</td>
+   <td><!-- {{jsapixref("JS::CompartmentOptions", "const JS::CompartmentOptions &amp;")}} --></td>
+   <td>The option for new compartment (passed to <code>JScompartment</code> constructor). <!-- {{ Jsapi_minversion_inline("31") }} --></td>
   </tr>
  </tbody>
 </table>
@@ -58,9 +58,9 @@ JS_NewGlobalObject(JSContext *cx, const JSClass *clasp, JSPrincipals *principals
 
 <p><strong><code>JS_NewGlobalObject</code></strong> creates a new global object based on the specified class.</p>
 
-<p>The new object has no {{jsapixref("JS_GetParent", "parent", "", 1)}}. It initially has no prototype either, since it is typically the first object created; call {{jsapixref("JS_InitStandardClasses")}} to create all the standard objects, including <code>Object.prototype</code>, and set the global object's prototype.</p>
+<p>The new object has no <!-- {{jsapixref("JS_GetParent", "parent", "", 1)}} -->. It initially has no prototype either, since it is typically the first object created; call <!-- {{jsapixref("JS_InitStandardClasses")}} --> to create all the standard objects, including <code>Object.prototype</code>, and set the global object's prototype.</p>
 
-<p>The constructor {{jsapixref("JSClass.construct", "clasp-&gt;construct")}} is not called.</p>
+<p>The constructor <!-- {{jsapixref("JSClass.construct", "clasp-&gt;construct")}} --> is not called.</p>
 
 <p>On success, <code>JS_NewGlobalObject</code> returns a pointer to the new object. Otherwise it returns <code>NULL</code>.</p>
 
@@ -81,12 +81,12 @@ JS_NewGlobalObject(JSContext *cx, const JSClass *clasp, JSPrincipals *principals
 <h2 id="See_Also" name="See_Also">See Also</h2>
 
 <ul>
- <li>{{ LXRSearch("ident", "i", "JS_NewGlobalObject") }}</li>
- <li>{{ LXRSearch("ident", "i", "OnNewGlobalHookOption") }}</li>
- <li>{{bug(897322)}}</li>
- <li>{{bug(880917)}}</li>
- <li>{{bug(759585)}}</li>
- <li>{{bug(570040)}}</li>
- <li>{{bug(755186)}}</li>
- <li>{{bug(1239666)}} - options is no longer optional</li>
+ <li><!-- {{ LXRSearch("ident", "i", "JS_NewGlobalObject") }} --></li>
+ <li><!-- {{ LXRSearch("ident", "i", "OnNewGlobalHookOption") }} --></li>
+ <li><!-- {{bug(897322)}} --></li>
+ <li><!-- {{bug(880917)}} --></li>
+ <li><!-- {{bug(759585)}} --></li>
+ <li><!-- {{bug(570040)}} --></li>
+ <li><!-- {{bug(755186)}} --></li>
+ <li><!-- {{bug(1239666)}} --> - options is no longer optional</li>
 </ul>

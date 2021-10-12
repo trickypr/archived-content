@@ -1,6 +1,6 @@
-<div>{{SpiderMonkeySidebar("JSAPI")}}</div>
+<div><!-- {{SpiderMonkeySidebar("JSAPI")}} --></div>
 
-<p>{{ jsapi_minversion_header("38") }}</p>
+<p><!-- {{ jsapi_minversion_header("38") }} --></p>
 
 <div class="summary">
 <p>Return a specified character from a string.</p>
@@ -24,12 +24,12 @@ JS_GetFlatStringCharAt(JSFlatString *str, size_t index);
   </tr>
   <tr>
    <td><code>cx</code></td>
-   <td>{{jsapixref("JSRuntime", "JSContext *")}}</td>
-   <td>The context in which to create the new string. {{ Jsapi-requires-request() }}</td>
+   <td><!-- {{jsapixref("JSRuntime", "JSContext *")}} --></td>
+   <td>The context in which to create the new string. <!-- {{ Jsapi-requires-request() }} --></td>
   </tr>
   <tr>
    <td><code>str</code></td>
-   <td>{{jsapixref("JSString", "JSString *")}} <em>or</em> {{jsapixref("JSString", "JSFlatString *")}}</td>
+   <td><!-- {{jsapixref("JSString", "JSString *")}} --> <em>or</em> <!-- {{jsapixref("JSString", "JSFlatString *")}} --></td>
    <td>The string to get character.</td>
   </tr>
   <tr>
@@ -58,7 +58,7 @@ JS_GetFlatStringCharAt(JSFlatString *str, size_t index);
 <h2 id="See_Also" name="See_Also">See Also</h2>
 
 <ul>
- <li>{{ LXRSearch("ident", "i", "JS_GetStringCharAt") }}</li>
- <li>{{ LXRSearch("ident", "i", "JS_GetFlatStringCharAt") }}</li>
- <li>{{bug(1034627)}}</li>
+ <li><!-- {{ LXRSearch("ident", "i", "JS_GetStringCharAt") }} --></li>
+ <li><!-- {{ LXRSearch("ident", "i", "JS_GetFlatStringCharAt") }} --></li>
+ <li><!-- {{bug(1034627)}} --></li>
 </ul>

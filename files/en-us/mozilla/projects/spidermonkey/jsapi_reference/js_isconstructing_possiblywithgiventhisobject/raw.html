@@ -1,8 +1,8 @@
-<p>{{ obsolete_header("jsapi17") }}</p>
+<p><!-- {{ obsolete_header("jsapi17") }} --></p>
 
-<p>{{ jsapi_minversion_header("1.8.5") }}</p>
+<p><!-- {{ jsapi_minversion_header("1.8.5") }} --></p>
 
-<div>{{SpiderMonkeySidebar("JSAPI")}}</div>
+<div><!-- {{SpiderMonkeySidebar("JSAPI")}} --></div>
 
 <div class="summary">
 <p>Determine if a special <code>this</code> object was supplied to the constructor.</p>
@@ -24,8 +24,8 @@ JS_IsConstructing_PossiblyWithGivenThisObject(JSContext *cx, const jsval *vp,
   </tr>
   <tr>
    <td><code>cx</code></td>
-   <td>{{jsapixref("JSRuntime", "JSContext *")}}</td>
-   <td>The context. {{ Jsapi-requires-request() }}</td>
+   <td><!-- {{jsapixref("JSRuntime", "JSContext *")}} --></td>
+   <td>The context. <!-- {{ Jsapi-requires-request() }} --></td>
   </tr>
   <tr>
    <td><code>vp</code></td>
@@ -42,7 +42,7 @@ JS_IsConstructing_PossiblyWithGivenThisObject(JSContext *cx, const jsval *vp,
 
 <h2 id="Description" name="Description">Description</h2>
 
-<p>In the case of a constructor called from {{jsapixref("JS_ConstructObject")}} and {{jsapixref("JS_InitClass")}} where the class has the {{jsapixref("JSClass.flags", "JSCLASS_CONSTRUCT_PROTOTYPE", "#JSCLASS_CONSTRUCT_PROTOTYPE")}} flag set, SpiderMonkey passes the constructor a non-standard <code>this</code> object. In such cases, the following example would provide the additional information of whether a special <code>this</code> was supplied.</p>
+<p>In the case of a constructor called from <!-- {{jsapixref("JS_ConstructObject")}} --> and <!-- {{jsapixref("JS_InitClass")}} --> where the class has the <!-- {{jsapixref("JSClass.flags", "JSCLASS_CONSTRUCT_PROTOTYPE", "#JSCLASS_CONSTRUCT_PROTOTYPE")}} --> flag set, SpiderMonkey passes the constructor a non-standard <code>this</code> object. In such cases, the following example would provide the additional information of whether a special <code>this</code> was supplied.</p>
 
 <pre class="brush: cpp">JSBool foo_native(JSContext *cx, unsigned int argc, jsval *vp) {
   JSObject *maybeThis;
@@ -61,5 +61,5 @@ JS_IsConstructing_PossiblyWithGivenThisObject(JSContext *cx, const jsval *vp,
 <h2 id="See_Also" name="See_Also">See Also</h2>
 
 <ul>
- <li>{{bug(702507)}}</li>
+ <li><!-- {{bug(702507)}} --></li>
 </ul>

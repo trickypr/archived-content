@@ -1,4 +1,4 @@
-<div>{{SpiderMonkeySidebar("JSAPI")}}</div>
+<div><!-- {{SpiderMonkeySidebar("JSAPI")}} --></div>
 <div class="summary">
 <p>Determine whether an exception is pending in the JS engine.</p>
 </div>
@@ -15,14 +15,14 @@ JS_IsExceptionPending(JSContext *cx);
   </tr>
   <tr>
    <td><code>cx</code></td>
-   <td>{{jsapixref("JSRuntime", "JSContext *")}}</td>
+   <td><!-- {{jsapixref("JSRuntime", "JSContext *")}} --></td>
    <td>Pointer to a JS context to check for pending exceptions.</td>
   </tr>
  </tbody>
 </table>
 <h2 id="Description" name="Description">Description</h2>
 <p><code>JS_IsExceptionPending</code> returns <code>true</code> if an exception has been thrown in the context <code>cx</code> and the exception has not yet been caught or cleared. Otherwise, it returns <code>false</code></p>
-<p>This can be used from {{jsapixref("JSNative")}} functions which call JS code to determine if the called JS code threw an exception or not.</p>
+<p>This can be used from <!-- {{jsapixref("JSNative")}} --> functions which call JS code to determine if the called JS code threw an exception or not.</p>
 <h2 id="Example">Example</h2>
 <pre class="brush: cpp">/* JSAPI */
 
@@ -53,9 +53,9 @@ if (pending) {
 </pre>
 <h2 id="See_Also" name="See_Also">See Also</h2>
 <ul>
-<li>{{ LXRSearch("ident", "i", "JS_IsExceptionPending") }}</li>
-<li>{{jsapixref("JS_SetPendingException")}}</li>
-<li>{{jsapixref("JS_GetPendingException")}}</li>
-<li>{{jsapixref("JS_ClearPendingException")}}</li>
-<li>{{jsapixref("JS_ReportPendingException")}}</li>
+<li><!-- {{ LXRSearch("ident", "i", "JS_IsExceptionPending") }} --></li>
+<li><!-- {{jsapixref("JS_SetPendingException")}} --></li>
+<li><!-- {{jsapixref("JS_GetPendingException")}} --></li>
+<li><!-- {{jsapixref("JS_ClearPendingException")}} --></li>
+<li><!-- {{jsapixref("JS_ReportPendingException")}} --></li>
 </ul>

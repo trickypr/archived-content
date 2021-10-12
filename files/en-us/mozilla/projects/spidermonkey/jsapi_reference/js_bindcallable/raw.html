@@ -1,6 +1,6 @@
-<div>{{SpiderMonkeySidebar("JSAPI")}}</div>
+<div><!-- {{SpiderMonkeySidebar("JSAPI")}} --></div>
 
-<p>{{ jsapi_minversion_header("17") }}</p>
+<p><!-- {{ jsapi_minversion_header("17") }} --></p>
 
 <div class="summary">
 <p>Bind the given callable to use the given object as <code>this</code>.</p>
@@ -22,17 +22,17 @@ JS_BindCallable(JSContext *cx, JS::Handle&lt;JSObject*&gt; callable,
   </tr>
   <tr>
    <td><code>cx</code></td>
-   <td>{{jsapixref("JSRuntime", "JSContext *")}}</td>
-   <td>Pointer to a JS context from which to derive runtime information. {{ Jsapi-requires-request() }}</td>
+   <td><!-- {{jsapixref("JSRuntime", "JSContext *")}} --></td>
+   <td>Pointer to a JS context from which to derive runtime information. <!-- {{ Jsapi-requires-request() }} --></td>
   </tr>
   <tr>
    <td><code>callable</code></td>
-   <td>{{jsapixref("JSObject*&gt;", "JS::Handle&lt;JSObject*&gt;")}}</td>
+   <td><!-- {{jsapixref("JSObject*&gt;", "JS::Handle&lt;JSObject*&gt;")}} --></td>
    <td>Pointer to the function object to bind new <code>this</code>.</td>
   </tr>
   <tr>
    <td><code>newThis</code></td>
-   <td>{{jsapixref("JSObject*&gt;", "JS::Handle&lt;JSObject*&gt;")}}</td>
+   <td><!-- {{jsapixref("JSObject*&gt;", "JS::Handle&lt;JSObject*&gt;")}} --></td>
    <td>Pointer to the new <code>this</code> value for <code>callable</code>.</td>
   </tr>
  </tbody>
@@ -47,6 +47,6 @@ JS_BindCallable(JSContext *cx, JS::Handle&lt;JSObject*&gt; callable,
 <h2 id="See_Also" name="See_Also">See Also</h2>
 
 <ul>
- <li>{{ LXRSearch("ident", "i", "JS_BindCallable") }}</li>
- <li>{{bug(738356)}}</li>
+ <li><!-- {{ LXRSearch("ident", "i", "JS_BindCallable") }} --></li>
+ <li><!-- {{bug(738356)}} --></li>
 </ul>

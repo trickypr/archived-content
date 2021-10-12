@@ -1,6 +1,6 @@
-<div>{{SpiderMonkeySidebar("JSAPI")}}</div>
+<div><!-- {{SpiderMonkeySidebar("JSAPI")}} --></div>
 
-<p>{{ jsapi_minversion_header("38") }}</p>
+<p><!-- {{ jsapi_minversion_header("38") }} --></p>
 
 <div class="summary">
 <p>Get the chars of an interned string.</p>
@@ -26,17 +26,17 @@ JS_GetTwoByteInternedStringChars(const JS::AutoCheckCannotGC &amp;nogc,
   </tr>
   <tr>
    <td><code>cx</code></td>
-   <td>{{jsapixref("JSRuntime", "JSContext *")}}</td>
-   <td>A context. {{ Jsapi-requires-request() }}.</td>
+   <td><!-- {{jsapixref("JSRuntime", "JSContext *")}} --></td>
+   <td>A context. <!-- {{ Jsapi-requires-request() }} -->.</td>
   </tr>
   <tr>
    <td><code>nogc</code></td>
-   <td>{{jsapixref("JS::AutoCheckCannotGC", "JS::AutoCheckCannotGC &amp;")}}</td>
-   <td>A reference to {{jsapixref("JS::AutoCheckCannotGC")}}.</td>
+   <td><!-- {{jsapixref("JS::AutoCheckCannotGC", "JS::AutoCheckCannotGC &amp;")}} --></td>
+   <td>A reference to <!-- {{jsapixref("JS::AutoCheckCannotGC")}} -->.</td>
   </tr>
   <tr>
    <td><code>str</code></td>
-   <td>{{jsapixref("JSString", "JSString *")}}</td>
+   <td><!-- {{jsapixref("JSString", "JSString *")}} --></td>
    <td>A string to get characters.</td>
   </tr>
  </tbody>
@@ -51,11 +51,11 @@ JS_GetTwoByteInternedStringChars(const JS::AutoCheckCannotGC &amp;nogc,
 <h2 id="See_Also" name="See_Also">See Also</h2>
 
 <ul>
- <li>{{ LXRSearch("ident", "i", "JS_GetLatin1InternedStringChars") }}</li>
- <li>{{ LXRSearch("ident", "i", "JS_GetTwoByteInternedStringChars") }}</li>
- <li>{{jsapixref("JS_GetLatin1FlatStringChars")}}</li>
- <li>{{jsapixref("JS_GetLatin1FlatStringChars", "JS_GetTwoByteFlatStringChars")}}</li>
- <li>{{jsapixref("JS_GetLatin1StringCharsAndLength")}}</li>
- <li>{{jsapixref("JS_GetLatin1StringCharsAndLength", "JS_GetTwoByteStringCharsAndLength")}}</li>
- <li>{{bug(1037869)}}</li>
+ <li><!-- {{ LXRSearch("ident", "i", "JS_GetLatin1InternedStringChars") }} --></li>
+ <li><!-- {{ LXRSearch("ident", "i", "JS_GetTwoByteInternedStringChars") }} --></li>
+ <li><!-- {{jsapixref("JS_GetLatin1FlatStringChars")}} --></li>
+ <li><!-- {{jsapixref("JS_GetLatin1FlatStringChars", "JS_GetTwoByteFlatStringChars")}} --></li>
+ <li><!-- {{jsapixref("JS_GetLatin1StringCharsAndLength")}} --></li>
+ <li><!-- {{jsapixref("JS_GetLatin1StringCharsAndLength", "JS_GetTwoByteStringCharsAndLength")}} --></li>
+ <li><!-- {{bug(1037869)}} --></li>
 </ul>

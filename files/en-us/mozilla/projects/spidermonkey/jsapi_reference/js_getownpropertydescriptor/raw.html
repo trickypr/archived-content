@@ -1,4 +1,4 @@
-<div>{{SpiderMonkeySidebar("JSAPI")}}</div>
+<div><!-- {{SpiderMonkeySidebar("JSAPI")}} --></div>
 
 <div class="summary">
 <p>Get a detailed description of that property.</p>
@@ -28,22 +28,22 @@ JS_GetOwnUCPropertyDescriptor(JSContext *cx, JS::HandleObject obj, const char16_
   </tr>
   <tr>
    <td><code>cx </code></td>
-   <td>{{jsapixref("JSRuntime", "JSContext *")}}</td>
-   <td>A context. {{ Jsapi-requires-request() }}</td>
+   <td><!-- {{jsapixref("JSRuntime", "JSContext *")}} --></td>
+   <td>A context. <!-- {{ Jsapi-requires-request() }} --></td>
   </tr>
   <tr>
    <td><code>obj</code></td>
-   <td>{{jsapixref("JSObject", "JS::HandleObject")}}</td>
+   <td><!-- {{jsapixref("JSObject", "JS::HandleObject")}} --></td>
    <td>The object to search for the property.</td>
   </tr>
   <tr>
    <td><code>id</code></td>
-   <td><code>const char *</code> <em>or</em> {{jsapixref("jsid", "JS::HandleId")}} <em>or</em> <code>const char16_t</code></td>
+   <td><code>const char *</code> <em>or</em> <!-- {{jsapixref("jsid", "JS::HandleId")}} --> <em>or</em> <code>const char16_t</code></td>
    <td>The name of the property to look up.</td>
   </tr>
   <tr>
    <td><code>desc</code></td>
-   <td>{{jsapixref("JSPropertyDescriptor", "JS::MutableHandle&lt;JSPropertyDescriptor&gt;")}}</td>
+   <td><!-- {{jsapixref("JSPropertyDescriptor", "JS::MutableHandle&lt;JSPropertyDescriptor&gt;")}} --></td>
    <td>Out parameter. On success, if no property is found, <code>desc-&gt;obj</code> is set to <code>NULL</code>. If a property is found, <code>*desc</code> receives a description of it.</td>
   </tr>
  </tbody>
@@ -56,12 +56,12 @@ JS_GetOwnUCPropertyDescriptor(JSContext *cx, JS::HandleObject obj, const char16_
 <h2 id="See_Also" name="See_Also">See Also</h2>
 
 <ul>
- <li>{{ LXRSearch("ident", "i", "JS_GetOwnPropertyDescriptor") }}</li>
- <li>{{ LXRSearch("ident", "i", "JS_GetOwnPropertyDescriptorById") }}</li>
- <li>{{ LXRSearch("ident", "i", "JS_GetOwnUCPropertyDescriptor") }}</li>
- <li>{{jsapixref("JS_GetPropertyDescriptor")}}</li>
- <li>{{jsapixref("JS_GetPropertyDescriptor", "JS_GetPropertyDescriptorById")}}</li>
- <li>{{jsapixref("JSPropertyDescriptor")}}</li>
- <li>{{bug(893186)}}</li>
- <li>{{bug(1135731)}} -- added <code>JS_GetOwnPropertyDescriptor</code></li>
+ <li><!-- {{ LXRSearch("ident", "i", "JS_GetOwnPropertyDescriptor") }} --></li>
+ <li><!-- {{ LXRSearch("ident", "i", "JS_GetOwnPropertyDescriptorById") }} --></li>
+ <li><!-- {{ LXRSearch("ident", "i", "JS_GetOwnUCPropertyDescriptor") }} --></li>
+ <li><!-- {{jsapixref("JS_GetPropertyDescriptor")}} --></li>
+ <li><!-- {{jsapixref("JS_GetPropertyDescriptor", "JS_GetPropertyDescriptorById")}} --></li>
+ <li><!-- {{jsapixref("JSPropertyDescriptor")}} --></li>
+ <li><!-- {{bug(893186)}} --></li>
+ <li><!-- {{bug(1135731)}} --> -- added <code>JS_GetOwnPropertyDescriptor</code></li>
 </ul>

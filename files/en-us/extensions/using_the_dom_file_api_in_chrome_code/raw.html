@@ -1,6 +1,6 @@
-<p>{{ gecko_minversion_header("6.0") }}</p>
+<p><!-- {{ gecko_minversion_header("6.0") }} --></p>
 
-<p>If you want to use the <a href="/en/Using_files_from_web_applications" title="en/Using files from web applications">DOM File API</a> in chrome code, you can do so without restriction. In fact, you get one bonus feature: you can create {{ domxref("File") }} objects specifying the path of the file on the user's computer. This only works from privileged code, so web content can't do it. This protects users from the inherent security risks associated with allowing web content free access to the contents of their disks. If you pass a path to the {{ domxref("File") }} constructor from unprivileged code (such as web content), an exception will be thrown.</p>
+<p>If you want to use the <a href="/en/Using_files_from_web_applications" title="en/Using files from web applications">DOM File API</a> in chrome code, you can do so without restriction. In fact, you get one bonus feature: you can create <!-- {{ domxref("File") }} --> objects specifying the path of the file on the user's computer. This only works from privileged code, so web content can't do it. This protects users from the inherent security risks associated with allowing web content free access to the contents of their disks. If you pass a path to the <!-- {{ domxref("File") }} --> constructor from unprivileged code (such as web content), an exception will be thrown.</p>
 
 <h2 id="Scope_Availability">Scope Availability</h2>
 
@@ -32,19 +32,19 @@ dsFile.append("myfilename.txt");
 var file = File.createFromNsIFile(dsFile);
 </pre>
 
-<p>This uses the directory service to locate the profile directory (with the location key "ProfD", see below for more details), then appends the name of the file we want to work with by calling {{ ifmethod("nsIFile", "append") }}. Finally, we instantiate the {{ domxref("File") }} object by calling File.createFromNsIFile.</p>
+<p>This uses the directory service to locate the profile directory (with the location key "ProfD", see below for more details), then appends the name of the file we want to work with by calling <!-- {{ ifmethod("nsIFile", "append") }} -->. Finally, we instantiate the <!-- {{ domxref("File") }} --> object by calling File.createFromNsIFile.</p>
 
 <p>Other such keys as the "ProfD" key are available, check the <a href="/en/Using_nsIDirectoryService#Known_Locations" title="https://developer.mozilla.org/en/Using_nsIDirectoryService#Known_Locations">known locations</a>.</p>
 
 <h2 id="Notes">Notes</h2>
 
-<p>Starting in Gecko 8.0 {{ geckoRelease("8.0") }}, you can also do this in component code.</p>
+<p>Starting in Gecko 8.0 <!-- {{ geckoRelease("8.0") }} -->, you can also do this in component code.</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
  <li><a href="/en/Using_files_from_web_applications" title="en/Using files from web applications">Using files from web applications</a></li>
- <li>{{ domxref("File") }}</li>
- <li>{{ interface("nsIDirectoryService") }}</li>
- <li>{{ interface("nsIFile") }}</li>
+ <li><!-- {{ domxref("File") }} --></li>
+ <li><!-- {{ interface("nsIDirectoryService") }} --></li>
+ <li><!-- {{ interface("nsIFile") }} --></li>
 </ul>

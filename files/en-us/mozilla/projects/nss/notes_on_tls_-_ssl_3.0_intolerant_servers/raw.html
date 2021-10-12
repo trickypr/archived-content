@@ -12,7 +12,7 @@
 
 <p>The <strong>SSL 3.0</strong> and <strong>TLS (aka SSL 3.1)</strong> specs both contain a provision -- the same provision -- for detecting "version rollback attacks". It is designed to permit a server to detect a man-in-the-middle that is altering the SSL client hello (connection) requests as they pass from the client to the server, altering them by changing the protocol version number to a lower version number. This feature was kind of meaningless until <strong>TLS (SSL 3.1)</strong> came along because there was no version higher than 3.0 from which to be rolled back. TLS is now available and used, and products that have implemented the roll-back detection incorrectly are not interoperable with TLS/SSL spec-compliant clients. Normally the servers which have this problem are not equipped to deal with the TLS protocol, but instead of rolling back to SSL 3.0 as the rollback provision provides, they terminate/drop the connection, thus resulting in most cases a blank page display.</p>
 
-<p>For up-to-date information, you can read a Bugzilla bug report which keeps track of this problem with Mozilla-based browsers. See {{ Bug(59321) }}.</p>
+<p>For up-to-date information, you can read a Bugzilla bug report which keeps track of this problem with Mozilla-based browsers. See <!-- {{ Bug(59321) }} -->.</p>
 
 <h3 id="Servers_currently_known_to_exhibit_this_intolerant_behavior">Servers currently known to exhibit this intolerant behavior</h3>
 
@@ -28,7 +28,7 @@
  <li>Webmail v. 3.6.1 by Infinite Technologies (* Update available)</li>
 </ul>
 
-<p>N.B. There might be servers other than those listed above which exhibit this problem. If you find such a server, feel free to add it to this page. For up-to-date information, you can read this {{bug(59321)}} which keeps a list of TLS/SSL 3.0 intolerant servers.</p>
+<p>N.B. There might be servers other than those listed above which exhibit this problem. If you find such a server, feel free to add it to this page. For up-to-date information, you can read this <!-- {{bug(59321)}} --> which keeps a list of TLS/SSL 3.0 intolerant servers.</p>
 
 <h3 id="Users:_How_to_avoid_this_problem.3F">Users: How to avoid this problem?</h3>
 
@@ -69,7 +69,7 @@
  <li><em>Optional:</em>Get the name of the SSL server software used by the website. To do so, add <code>http://toolbar.netcraft.com/site_report?url=</code> to the beginning of the URL. The server software will appear next to <strong>Server</strong> under <strong>SSL Certificate Information</strong>.<br>
   <br>
   For instance, to check <code>https://bugzilla.mozilla.org/</code>, then visit <a class="external" href="http://toolbar.netcraft.com/site_report?url=https://bugzilla.mozilla.org/">http://toolbar.netcraft.com/site_rep...a.mozilla.org/</a>.</li>
- <li>Add the information on such a server (software, URL) to {{bug(59321)}} at Bugzilla. (Note: You will be asked to provide your email address before you can file a bug at Bugzilla.)</li>
+ <li>Add the information on such a server (software, URL) to <!-- {{bug(59321)}} --> at Bugzilla. (Note: You will be asked to provide your email address before you can file a bug at Bugzilla.)</li>
 </ul>
 
 

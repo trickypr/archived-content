@@ -11,11 +11,11 @@
 );
 </pre>
 <h3 id="Parameters"> Parameters </h3>
-<dl><dt><code>hSession</code></dt><dd> {{ mediawiki.external('in') }} session handle.
-</dd><dt><code>pEncryptedPart</code></dt><dd> {{ mediawiki.external('in') }} pointer to the encrypted data part.
-</dd><dt><code>ulEncryptedPartLen</code></dt><dd> {{ mediawiki.external('in') }} length of encrypted data in bytes.
-</dd><dt><code>pPart</code></dt><dd> {{ mediawiki.external('in') }} pointer to the location which receives the recovered data part or NULL.
-</dd><dt><code>pulPartLen</code></dt><dd> {{ mediawiki.external('in') }} pointer to the length of the recovered part buffer.
+<dl><dt><code>hSession</code></dt><dd> <!-- {{ mediawiki.external('in') }} --> session handle.
+</dd><dt><code>pEncryptedPart</code></dt><dd> <!-- {{ mediawiki.external('in') }} --> pointer to the encrypted data part.
+</dd><dt><code>ulEncryptedPartLen</code></dt><dd> <!-- {{ mediawiki.external('in') }} --> length of encrypted data in bytes.
+</dd><dt><code>pPart</code></dt><dd> <!-- {{ mediawiki.external('in') }} --> pointer to the location which receives the recovered data part or NULL.
+</dd><dt><code>pulPartLen</code></dt><dd> <!-- {{ mediawiki.external('in') }} --> pointer to the length of the recovered part buffer.
 </dd></dl>
 <h3 id="Description"> Description </h3>
 <p><code>FC_DecryptDigestUpdate</code> continues a multi-part decrypt and digest operation. After calling both <code>FC_DecryptInit</code> and <code>FC_DigestInit</code> to set up the operations this function may be called multiple times. The operation is finished by calls to <code>FC_DigestFinal</code> and <code>FC_DecryptFinal</code>.

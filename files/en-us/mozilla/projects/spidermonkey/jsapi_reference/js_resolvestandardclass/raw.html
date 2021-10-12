@@ -1,4 +1,4 @@
-<div>{{SpiderMonkeySidebar("JSAPI")}}</div>
+<div><!-- {{SpiderMonkeySidebar("JSAPI")}} --></div>
 
 <div class="summary">
 <p>Resolve a standard class in an object.</p>
@@ -20,17 +20,17 @@ JS_ResolveStandardClass(JSContext *cx, JS::HandleObject obj, JS::HandleId id,
   </tr>
   <tr>
    <td><code>cx</code></td>
-   <td>{{jsapixref("JSRuntime", "JSContext *")}}</td>
-   <td>Pointer to the executable script context for which to initialize JS function and object classes. {{ Jsapi-requires-request() }}</td>
+   <td><!-- {{jsapixref("JSRuntime", "JSContext *")}} --></td>
+   <td>Pointer to the executable script context for which to initialize JS function and object classes. <!-- {{ Jsapi-requires-request() }} --></td>
   </tr>
   <tr>
    <td><code>obj</code></td>
-   <td>{{jsapixref("JSObject", "JS::HandleObject")}}</td>
+   <td><!-- {{jsapixref("JSObject", "JS::HandleObject")}} --></td>
    <td>An object to resolve id to a standard class.</td>
   </tr>
   <tr>
    <td><code>id</code></td>
-   <td>{{jsapixref("jsid", "JS::HandleId")}}</td>
+   <td><!-- {{jsapixref("jsid", "JS::HandleId")}} --></td>
    <td>An id of a standard class name, which must contain either a string or an int.</td>
   </tr>
   <tr>
@@ -45,11 +45,11 @@ JS_ResolveStandardClass(JSContext *cx, JS::HandleObject obj, JS::HandleId id,
 
 <p><code>JS_ResolveStandardClass</code> resolves <code>id</code>, which must contain either a string or an int, to a standard class name in <code>obj</code> if possible, defining the class's constructor and/or prototype and storing <code>true</code> in <code>*resolved</code>. If <code>id</code> does not name a standard class or a top-level property induced by initializing a standard class, store <code>false</code> in <code>*resolved</code> and just return <code>true</code>. Return <code>false</code> on error, as usual for bool result-typed API entry points.</p>
 
-<p>This API can be called directly from a global object class's resolve op, to define standard classes lazily. The class's enumerate op should call <code>{{jsapixref("JS_EnumerateStandardClasses")}}(cx, obj)</code>, to define eagerly during {{jsxref("Statements/for...in", "for...in")}} loops any classes not yet resolved lazily.</p>
+<p>This API can be called directly from a global object class's resolve op, to define standard classes lazily. The class's enumerate op should call <code><!-- {{jsapixref("JS_EnumerateStandardClasses")}} -->(cx, obj)</code>, to define eagerly during <!-- {{jsxref("Statements/for...in", "for...in")}} --> loops any classes not yet resolved lazily.</p>
 
 <h2 id="See_Also" name="See_Also">See Also</h2>
 
 <ul>
- <li>{{ LXRSearch("ident", "i", "JS_ResolveStandardClass") }}</li>
- <li>{{jsapixref("JS_EnumerateStandardClasses")}}</li>
+ <li><!-- {{ LXRSearch("ident", "i", "JS_ResolveStandardClass") }} --></li>
+ <li><!-- {{jsapixref("JS_EnumerateStandardClasses")}} --></li>
 </ul>

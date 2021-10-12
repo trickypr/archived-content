@@ -1,6 +1,6 @@
-<div>{{SpiderMonkeySidebar("JSAPI")}}</div>
+<div><!-- {{SpiderMonkeySidebar("JSAPI")}} --></div>
 
-<div>{{ obsolete_header("jsapi52") }}</div>
+<div><!-- {{ obsolete_header("jsapi52") }} --></div>
 
 <div> </div>
 
@@ -26,7 +26,7 @@ JS_SetErrorReporter(JSRuntime *rt, JSErrorReporter er);
   </tr>
   <tr>
    <td><code>cx</code></td>
-   <td>{{jsapixref("JSRuntime", "JSRuntime *")}}</td>
+   <td><!-- {{jsapixref("JSRuntime", "JSRuntime *")}} --></td>
    <td>Pointer to a JS runtime whose errors should be reported via your function. </td>
   </tr>
   <tr>
@@ -52,7 +52,7 @@ JS_SetErrorReporter(JSRuntime *rt, JSErrorReporter er);
   </tr>
   <tr>
    <td><code>cx</code></td>
-   <td>{{jsapixref("JSRuntime", "JSContext *")}}</td>
+   <td><!-- {{jsapixref("JSRuntime", "JSContext *")}} --></td>
    <td>The context in which the error happened.</td>
   </tr>
   <tr>
@@ -62,7 +62,7 @@ JS_SetErrorReporter(JSRuntime *rt, JSErrorReporter er);
   </tr>
   <tr>
    <td><code>report</code></td>
-   <td>{{jsapixref("JSErrorReport", "JSErrorReport *")}}</td>
+   <td><!-- {{jsapixref("JSErrorReport", "JSErrorReport *")}} --></td>
    <td>An error report record containing additional details about the error.</td>
   </tr>
  </tbody>
@@ -70,7 +70,7 @@ JS_SetErrorReporter(JSRuntime *rt, JSErrorReporter er);
 
 <h2 id="Description" name="Description">Description</h2>
 
-<p><code>JS_SetErrorReporter</code> enables you to define and use your own error reporting mechanism in your applications. The reporter you define is automatically passed a {{jsapixref("JSErrorReport")}} structure when an error occurs and has been parsed by {{jsapixref("JS_ReportError")}}. <code>JS_SetErrorReporter</code></p>
+<p><code>JS_SetErrorReporter</code> enables you to define and use your own error reporting mechanism in your applications. The reporter you define is automatically passed a <!-- {{jsapixref("JSErrorReport")}} --> structure when an error occurs and has been parsed by <!-- {{jsapixref("JS_ReportError")}} -->. <code>JS_SetErrorReporter</code></p>
 
 <p><code>JS_GetErrorReporter</code> returns the value set by <code>JS_SetErrorReporter</code>.</p>
 
@@ -113,7 +113,7 @@ JS_SetErrorReporter(JSRuntime *rt, JSErrorReporter er);
 <h2 id="See_Also" name="See_Also">See Also</h2>
 
 <ul>
- <li>{{ LXRSearch("ident", "i", "JS_GetErrorReporter") }}</li>
- <li>{{ LXRSearch("ident", "i", "JS_SetErrorReporter") }}</li>
- <li>{{bug(1277278)}} - JS_SetErrorReporter is renamed to JS::SetWarningReporter</li>
+ <li><!-- {{ LXRSearch("ident", "i", "JS_GetErrorReporter") }} --></li>
+ <li><!-- {{ LXRSearch("ident", "i", "JS_SetErrorReporter") }} --></li>
+ <li><!-- {{bug(1277278)}} --> - JS_SetErrorReporter is renamed to JS::SetWarningReporter</li>
 </ul>

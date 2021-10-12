@@ -48,7 +48,7 @@ gmake -f client.mk checkout
 
 <ol>
  <li><code>cd mozilla</code></li>
- <li><code>./configure <var>{{ mediawiki.external('options') }}</var></code><br>
+ <li><code>./configure <var><!-- {{ mediawiki.external('options') }} --></var></code><br>
   For configure options, run <code>./configure --help</code>, or use the <a class="external" href="http://webtools.mozilla.org/build/config.cgi">Unix Build Configurator</a>.<em>If you don't know what a configure option does</em>, don't use it. The default is to create a un-optimized build with debugging information. If you want an optimized build, use the configure options <code>--disable-debug --enable-optimize</code>.</li>
  <li><code>gmake</code></li>
 </ol>
@@ -70,7 +70,7 @@ gmake -f client.mk checkout
 
 <p>If you just want to pull the tree, <code>gmake -f client.mk checkout</code></p>
 
-<p>If you want to build <a class="external" href="https://www.mozilla.com/firefox/">Firefox</a>, use the {{ Source("browser/config/mozconfig", "example mozconfig file") }} in the mozilla/browser/config source directory.</p>
+<p>If you want to build <a class="external" href="https://www.mozilla.com/firefox/">Firefox</a>, use the <!-- {{ Source("browser/config/mozconfig", "example mozconfig file") }} --> in the mozilla/browser/config source directory.</p>
 
 <h3 id="After_the_build">After the build</h3>
 

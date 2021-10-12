@@ -1,5 +1,5 @@
 <div>
- {{SpiderMonkeySidebar("JSAPI")}}</div>
+ <!-- {{SpiderMonkeySidebar("JSAPI")}} --></div>
 <div class="summary">
 <p>Assign a value to a numeric property of an object.</p>
 </div>
@@ -47,12 +47,12 @@ JS_SetElement(JSContext *cx, JS::HandleObject obj, uint32_t index,
  <tbody>
   <tr>
    <td><code>cx</code></td>
-   <td>{{jsapixref("JSRuntime", "JSContext *")}}</td>
-   <td>The context in which to set the element. {{ Jsapi-requires-request() }}</td>
+   <td><!-- {{jsapixref("JSRuntime", "JSContext *")}} --></td>
+   <td>The context in which to set the element. <!-- {{ Jsapi-requires-request() }} --></td>
   </tr>
   <tr>
    <td><code>obj</code></td>
-   <td>{{jsapixref("JSObject", "JS::HandleObject")}}</td>
+   <td><!-- {{jsapixref("JSObject", "JS::HandleObject")}} --></td>
    <td>The object to modify, commonly an Array object.</td>
   </tr>
   <tr>
@@ -62,14 +62,14 @@ JS_SetElement(JSContext *cx, JS::HandleObject obj, uint32_t index,
   </tr>
   <tr>
    <td><code>v</code></td>
-   <td>{{jsapixref("JS::Value", "JS::HandleValue")}} <em>or</em> {{jsapixref("JSObject", "JS::HandleObject")}} <em>or</em> {{jsapixref("JSString", "JS::HandleString")}} <em>or</em> <code>int32_t</code> <em>or</em> <code>uint32_t</code> <em>or</em> <code>double</code></td>
-   <td>The value to assign to the element. {{ Jsapi_minversion_inline("31") }}</td>
+   <td><!-- {{jsapixref("JS::Value", "JS::HandleValue")}} --> <em>or</em> <!-- {{jsapixref("JSObject", "JS::HandleObject")}} --> <em>or</em> <!-- {{jsapixref("JSString", "JS::HandleString")}} --> <em>or</em> <code>int32_t</code> <em>or</em> <code>uint32_t</code> <em>or</em> <code>double</code></td>
+   <td>The value to assign to the element. <!-- {{ Jsapi_minversion_inline("31") }} --></td>
   </tr>
 
   <tr>
    <td><code>vp</code></td>
-   <td>{{jsapixref("JS::Value", "JS::MutableHandleValue")}}</td>
-   <td>In/out parameter. <code>*vp</code> is the value to assign to the element. <code>JS_SetElement</code> ordinarily leaves <code>*vp</code> unchanged, but a {{jsapixref("JSClass.addProperty")}} hook or non-default {{jsapixref("JSPropertyOp", "setter")}} may modify it. {{ obsolete_inline("jsapi29") }}</td>
+   <td><!-- {{jsapixref("JS::Value", "JS::MutableHandleValue")}} --></td>
+   <td>In/out parameter. <code>*vp</code> is the value to assign to the element. <code>JS_SetElement</code> ordinarily leaves <code>*vp</code> unchanged, but a <!-- {{jsapixref("JSClass.addProperty")}} --> hook or non-default <!-- {{jsapixref("JSPropertyOp", "setter")}} --> may modify it. <!-- {{ obsolete_inline("jsapi29") }} --></td>
   </tr>
  </tbody>
 </table>
@@ -83,6 +83,6 @@ JS_SetElement(JSContext *cx, JS::HandleObject obj, uint32_t index,
 </div>
 <h2 id="See_Also" name="See_Also">See Also</h2>
 <ul>
-<li>{{ LXRSearch("ident", "i", "JS_SetElement") }}</li>
-<li>{{bug(963167)}} - added <code>v</code></li>
+<li><!-- {{ LXRSearch("ident", "i", "JS_SetElement") }} --></li>
+<li><!-- {{bug(963167)}} --> - added <code>v</code></li>
 </ul>

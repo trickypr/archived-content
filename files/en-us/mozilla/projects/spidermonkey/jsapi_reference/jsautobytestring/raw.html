@@ -1,6 +1,6 @@
-<div>{{SpiderMonkeySidebar("JSAPI")}}</div>
+<div><!-- {{SpiderMonkeySidebar("JSAPI")}} --></div>
 
-<p>{{ jsapi_minversion_header("17") }}</p>
+<p><!-- {{ jsapi_minversion_header("17") }} --></p>
 
 <div class="summary">
 <p>Take ownership of a string and free it later.</p>
@@ -22,13 +22,13 @@ JSAutoByteString(JSContext *cx, JSString *str);
   </tr>
   <tr>
    <td><code>cx</code></td>
-   <td>{{jsapixref("JSRuntime", "JSContext *")}}</td>
-   <td>The context in which to add the root. {{ Jsapi-requires-request() }}</td>
+   <td><!-- {{jsapixref("JSRuntime", "JSContext *")}} --></td>
+   <td>The context in which to add the root. <!-- {{ Jsapi-requires-request() }} --></td>
   </tr>
   <tr>
    <td><code>str</code></td>
-   <td>{{jsapixref("JSString", "JSString *")}}</td>
-   <td>A pointer to {{jsapixref("JSString")}} to get initial content by calling {{jsapixref("JS_EncodeString", "JS_EncodeString(cx, str)")}}.</td>
+   <td><!-- {{jsapixref("JSString", "JSString *")}} --></td>
+   <td>A pointer to <!-- {{jsapixref("JSString")}} --> to get initial content by calling <!-- {{jsapixref("JS_EncodeString", "JS_EncodeString(cx, str)")}} -->.</td>
   </tr>
  </tbody>
 </table>
@@ -47,15 +47,15 @@ JSAutoByteString(JSContext *cx, JSString *str);
   </tr>
   <tr>
    <td><code>char *encodeLatin1(JSContext *cx, JSString *str)</code></td>
-   <td>Call {{jsapixref("JS_EncodeString")}} and take ownership of the returned string, and return the string.</td>
+   <td>Call <!-- {{jsapixref("JS_EncodeString")}} --> and take ownership of the returned string, and return the string.</td>
   </tr>
   <tr>
    <td><code>char *encodeLatin1(js::ExclusiveContext *cx, JSString *str)</code></td>
-   <td>Call {{jsapixref("JS::LossyTwoByteCharsToNewLatin1CharsZ")}}, or allocate string and copy the content of {{jsapixref("JSLinearString", "JSLinearString::latin1Chars")}}, and take the ownership of the string. This may fail if <code>str</code> is not linear.</td>
+   <td>Call <!-- {{jsapixref("JS::LossyTwoByteCharsToNewLatin1CharsZ")}} -->, or allocate string and copy the content of <!-- {{jsapixref("JSLinearString", "JSLinearString::latin1Chars")}} -->, and take the ownership of the string. This may fail if <code>str</code> is not linear.</td>
   </tr>
   <tr>
    <td><code>char *encodeUtf8(JSContext *cx, JS::HandleString str)</code></td>
-   <td>Call {{jsapixref("JS_EncodeStringToUTF8")}} and take ownership of the returned string, and return the string.</td>
+   <td>Call <!-- {{jsapixref("JS_EncodeStringToUTF8")}} --> and take ownership of the returned string, and return the string.</td>
   </tr>
   <tr>
    <td><code>void clear()</code></td>
@@ -80,11 +80,11 @@ JSAutoByteString(JSContext *cx, JSString *str);
 
 <p><code>JSAutoByteString</code> takes the ownership of string and frees it in destructor.</p>
 
-<p>If <code>JSAutoByteString</code> instance is initialized with <code>JSAutoByteString bytes(cx, str);</code> style, it calls {{jsapixref("JS_EncodeString", "JS_EncodeString(cx, str)")}} to get the string to take ownership.</p>
+<p>If <code>JSAutoByteString</code> instance is initialized with <code>JSAutoByteString bytes(cx, str);</code> style, it calls <!-- {{jsapixref("JS_EncodeString", "JS_EncodeString(cx, str)")}} --> to get the string to take ownership.</p>
 
 <p>If <code>JSAutoByteString</code> instance is initialized with <code>JSAutoByteString bytes;</code> style, it does not own any string. You can call some methods to take ownership of other string.</p>
 
-<p>Note that the {{jsapixref("JS_EncodeString")}} call in constructor and some <code>encode*</code> methods may fail and get <code>NULL</code>. So ensure the string is returned by <code>operator!()</code> before using <code>ptr()</code> method.</p>
+<p>Note that the <!-- {{jsapixref("JS_EncodeString")}} --> call in constructor and some <code>encode*</code> methods may fail and get <code>NULL</code>. So ensure the string is returned by <code>operator!()</code> before using <code>ptr()</code> method.</p>
 
 <h2 id="Examples">Examples</h2>
 
@@ -142,8 +142,8 @@ JSAutoByteString(JSContext *cx, JSString *str);
 <h2 id="See_Also" name="See_Also">See Also</h2>
 
 <ul>
- <li>{{ LXRSearch("ident", "i", "JSAutoByteString") }}</li>
- <li>{{jsapixref("JS_EncodeString")}}</li>
- <li>{{jsapixref("JS_EncodeStringToUTF8")}}</li>
- <li>{{bug(610198)}}</li>
+ <li><!-- {{ LXRSearch("ident", "i", "JSAutoByteString") }} --></li>
+ <li><!-- {{jsapixref("JS_EncodeString")}} --></li>
+ <li><!-- {{jsapixref("JS_EncodeStringToUTF8")}} --></li>
+ <li><!-- {{bug(610198)}} --></li>
 </ul>

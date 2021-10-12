@@ -2,7 +2,7 @@
 <p>Support for extensions using XUL/XPCOM or the Add-on SDK was removed in Firefox 57, released November 2017. As there is no supported version of Firefox enabling these technologies, this page will be removed by December 2020.</p>
 </div>
 
-<p>{{LegacyAddonsNotice}}</p>
+<p><!-- {{LegacyAddonsNotice}} --></p>
 
 <h3 id="Getting_the_directory_where_your_add-on_is_located">Getting the directory where your add-on is located</h3>
 
@@ -11,7 +11,7 @@
 <pre class="brush: js">Components.utils.import("resource://gre/modules/<code><a href="/en-US/Add-ons/Add-on_Manager" title="Add-on Manager">AddonManager.jsm</a></code>");
 
 <code><a href="/en-US/Add-ons/Add-on_Manager/AddonManager" title="AddonManager">AddonManager</a></code>.<code><a href="/en-US/Add-ons/Add-on_Manager/AddonManager#getAddonByID()" title="AddonManager.getAddonByID()">getAddonByID</a></code>("YOUREXTENSIONID", function(addon) {
-  var addonLocation = addon.<code><a href="/en-US/Add-ons/Add-on_Manager/Addon#getResourceURI()" title="Addon.getResourceURI()">getResourceURI</a></code>("").QueryInterface(Components.interfaces.{{ Interface( "nsIFileURL" ) }}).file.path;
+  var addonLocation = addon.<code><a href="/en-US/Add-ons/Add-on_Manager/Addon#getResourceURI()" title="Addon.getResourceURI()">getResourceURI</a></code>("").QueryInterface(Components.interfaces.<!-- {{ Interface( "nsIFileURL" ) }} -->).file.path;
 });
 </pre>
 

@@ -1,8 +1,8 @@
-<div>{{SpiderMonkeySidebar("JSAPI")}}</div>
+<div><!-- {{SpiderMonkeySidebar("JSAPI")}} --></div>
 
-<p>{{ obsolete_header("jsapi38") }}</p>
+<p><!-- {{ obsolete_header("jsapi38") }} --></p>
 
-<p>{{ Jsapi_minversion_header("1.8") }}</p>
+<p><!-- {{ Jsapi_minversion_header("1.8") }} --></p>
 
 <div class="summary">
 <p><code>DEBUG</code> only. Dump the object graph of heap-allocated things.</p>
@@ -24,7 +24,7 @@ JS_DumpHeap(JSRuntime *rt, FILE *fp, void* startThing, JSGCTraceKind kind,
   </tr>
   <tr>
    <td><code>cx</code></td>
-   <td>{{jsapixref("JSRuntime", "JSContext *")}}</td>
+   <td><!-- {{jsapixref("JSRuntime", "JSContext *")}} --></td>
    <td>Pointer to a JS context. Every <code>JSContext</code> is permanently associated with a <code>JSRuntime</code>; each <code>JSRuntime</code> contains a GC heap.</td>
   </tr>
   <tr>
@@ -35,7 +35,7 @@ JS_DumpHeap(JSRuntime *rt, FILE *fp, void* startThing, JSGCTraceKind kind,
   <tr>
    <td><code>startThing</code></td>
    <td><code>void *</code></td>
-   <td><code>NULL</code> or a pointer to a GC thing (use {{jsapixref("JS::Value", "JS::Value::toGCThing()")}} to obtain a pointer to pass here). When null, dump all things reachable from the runtime roots. When non-null, dump only things reachable from the object indicated.</td>
+   <td><code>NULL</code> or a pointer to a GC thing (use <!-- {{jsapixref("JS::Value", "JS::Value::toGCThing()")}} --> to obtain a pointer to pass here). When null, dump all things reachable from the runtime roots. When non-null, dump only things reachable from the object indicated.</td>
   </tr>
   <tr>
    <td><code>startKind</code></td>
@@ -91,17 +91,17 @@ JS_DumpHeap(JSRuntime *rt, FILE *fp, void* startThing, JSGCTraceKind kind,
 
 <h2 id="Description" name="Description">Description</h2>
 
-<p>See {{ Bug(378261) }} for detail.</p>
+<p>See <!-- {{ Bug(378261) }} --> for detail.</p>
 
 <p>When tracing a thing, the GC needs to know about the layout of the object it is looking at. There are a fixed number of different layouts that the GC knows about. The "trace kind" is a static map which tells which layout a GC thing has.</p>
 
 <p>Although this map is public, the details are completely hidden. Not all of the matching C++ types are exposed, and those that are, are opaque.</p>
 
-<p>See {{jsapixref("JS::Value", "JS::Value::gcKind()")}} and {{jsapixref("JSTraceCallback")}} in &lt;codde&gt;Tracer.h&lt;/codde&gt; for more details.</p>
+<p>See <!-- {{jsapixref("JS::Value", "JS::Value::gcKind()")}} --> and <!-- {{jsapixref("JSTraceCallback")}} --> in &lt;codde&gt;Tracer.h&lt;/codde&gt; for more details.</p>
 
 <h2 id="See_Also" name="See_Also">See Also</h2>
 
 <ul>
- <li>{{bug(378261)}}</li>
- <li>{{bug(1122842)}}</li>
+ <li><!-- {{bug(378261)}} --></li>
+ <li><!-- {{bug(1122842)}} --></li>
 </ul>

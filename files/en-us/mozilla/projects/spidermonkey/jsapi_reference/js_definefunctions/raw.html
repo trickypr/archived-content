@@ -1,4 +1,4 @@
-<div>{{SpiderMonkeySidebar("JSAPI")}}</div>
+<div><!-- {{SpiderMonkeySidebar("JSAPI")}} --></div>
 
 <div class="summary">
 <p>Add native methods to an object.</p>
@@ -25,23 +25,23 @@ JS_DefineFunctions(JSContext *cx, JS::Handle&lt;JSObject*&gt; obj,
   </tr>
   <tr>
    <td><code>cx</code></td>
-   <td>{{jsapixref("JSRuntime", "JSContext *")}}</td>
-   <td>The context in which to define functions. {{ Jsapi-requires-request() }}</td>
+   <td><!-- {{jsapixref("JSRuntime", "JSContext *")}} --></td>
+   <td>The context in which to define functions. <!-- {{ Jsapi-requires-request() }} --></td>
   </tr>
   <tr>
    <td><code>obj</code></td>
-   <td>{{jsapixref("JSObject", "JS::Handle&lt;JSObject*&gt;")}}</td>
+   <td><!-- {{jsapixref("JSObject", "JS::Handle&lt;JSObject*&gt;")}} --></td>
    <td>The object on which functions are to be defined.</td>
   </tr>
   <tr>
    <td><code>fs</code></td>
-   <td>{{jsapixref("JSFunctionSpec", "const JSFunctionSpec *")}}</td>
+   <td><!-- {{jsapixref("JSFunctionSpec", "const JSFunctionSpec *")}} --></td>
    <td>A <code>NULL</code>-terminated array of function specifications. Each element of the array defines an individual function.</td>
   </tr>
   <tr>
    <td><code>behavior</code></td>
    <td><code>PropertyDefinitionBehavior</code></td>
-   <td>See below. {{ Jsapi_minversion_inline("38") }}</td>
+   <td>See below. <!-- {{ Jsapi_minversion_inline("38") }} --></td>
   </tr>
  </tbody>
 </table>
@@ -76,9 +76,9 @@ JS_DefineFunctions(JSContext *cx, JS::Handle&lt;JSObject*&gt; obj,
 
 <h2 id="Description" name="Description">Description</h2>
 
-<p><code>JS_DefineFunctions</code> creates zero or more functions and makes them properties (methods) of a specified object, <code>obj</code>, as if by calling {{jsapixref("JS_DefineFunction")}} repeatedly.</p>
+<p><code>JS_DefineFunctions</code> creates zero or more functions and makes them properties (methods) of a specified object, <code>obj</code>, as if by calling <!-- {{jsapixref("JS_DefineFunction")}} --> repeatedly.</p>
 
-<p><code>fs</code> is a pointer to the first element of an array of {{jsapixref("JSFunctionSpec")}} records. This array is usually defined as a static global, with each record initialized using {{jsapixref("JS_FS")}} or {{jsapixref("JS_FS", "JS_FN")}}. Each array element defines a single function: its name, the native C/C++ implementation, the number of JavaScript arguments the function expects, and any {{jsapixref("Property_attributes", "property attributes", "", 1)}}. The last element of the array must contain <code>0</code> values. (The macro {{jsapixref("JS_FS", "JS_FS_END")}} can be used for the last element.) <code>JS_DefineFunctions</code> creates one function for each non-zero element in the array.</p>
+<p><code>fs</code> is a pointer to the first element of an array of <!-- {{jsapixref("JSFunctionSpec")}} --> records. This array is usually defined as a static global, with each record initialized using <!-- {{jsapixref("JS_FS")}} --> or <!-- {{jsapixref("JS_FS", "JS_FN")}} -->. Each array element defines a single function: its name, the native C/C++ implementation, the number of JavaScript arguments the function expects, and any <!-- {{jsapixref("Property_attributes", "property attributes", "", 1)}} -->. The last element of the array must contain <code>0</code> values. (The macro <!-- {{jsapixref("JS_FS", "JS_FS_END")}} --> can be used for the last element.) <code>JS_DefineFunctions</code> creates one function for each non-zero element in the array.</p>
 
 <p><code>PropertyDefinitionBehavior</code> is used to select if properties with <code>JSPROP_DEFINE_LATE</code> flag should be defined on the object. Normal JSAPI consumers probably always want <code>DefineAllProperties</code> here.</p>
 
@@ -87,13 +87,13 @@ JS_DefineFunctions(JSContext *cx, JS::Handle&lt;JSObject*&gt; obj,
 <h2 id="See_Also" name="See_Also">See Also</h2>
 
 <ul>
- <li>{{ LXRSearch("ident", "i", "JS_DefineFunctions") }}</li>
- <li>{{jsapixref("JS_CallFunctionName")}}</li>
- <li>{{jsapixref("JS_DefineObject")}}</li>
- <li>{{jsapixref("JS_DefineProperties")}}</li>
- <li>{{jsapixref("JS_NewFunction")}}</li>
- <li>{{bug(959787)}} - make <code>fs</code> type to <code>const</code></li>
- <li>{{bug(825199)}} - added <code>PropertyDefinitionBehavior</code></li>
+ <li><!-- {{ LXRSearch("ident", "i", "JS_DefineFunctions") }} --></li>
+ <li><!-- {{jsapixref("JS_CallFunctionName")}} --></li>
+ <li><!-- {{jsapixref("JS_DefineObject")}} --></li>
+ <li><!-- {{jsapixref("JS_DefineProperties")}} --></li>
+ <li><!-- {{jsapixref("JS_NewFunction")}} --></li>
+ <li><!-- {{bug(959787)}} --> - make <code>fs</code> type to <code>const</code></li>
+ <li><!-- {{bug(825199)}} --> - added <code>PropertyDefinitionBehavior</code></li>
 </ul>
 
 <dl>

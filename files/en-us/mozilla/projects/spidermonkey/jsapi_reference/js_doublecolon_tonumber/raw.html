@@ -1,6 +1,6 @@
-<div>{{SpiderMonkeySidebar("JSAPI")}}</div>
+<div><!-- {{SpiderMonkeySidebar("JSAPI")}} --></div>
 
-<p>{{ jsapi_minversion_header("17") }}</p>
+<p><!-- {{ jsapi_minversion_header("17") }} --></p>
 
 <div class="summary">
 <p>Convert any JavaScript value to a double.</p>
@@ -21,12 +21,12 @@ JS::ToNumber(JSContext *cx, JS::HandleValue v, double *out);
   </tr>
   <tr>
    <td><code>cx</code></td>
-   <td>{{jsapixref("JSRuntime", "JSContext *")}}</td>
-   <td>The context in which to perform the conversion. {{ Jsapi-requires-request() }}</td>
+   <td><!-- {{jsapixref("JSRuntime", "JSContext *")}} --></td>
+   <td>The context in which to perform the conversion. <!-- {{ Jsapi-requires-request() }} --></td>
   </tr>
   <tr>
    <td><code>v</code></td>
-   <td>{{jsapixref("JS::Value", "JS::HandleValue")}}</td>
+   <td><!-- {{jsapixref("JS::Value", "JS::HandleValue")}} --></td>
    <td>The value to convert.</td>
   </tr>
   <tr>
@@ -46,6 +46,6 @@ JS::ToNumber(JSContext *cx, JS::HandleValue v, double *out);
 <h2 id="See_Also" name="See_Also">See Also</h2>
 
 <ul>
- <li>{{ LXRSearch("ident", "i", "JS::ToNumber") }}</li>
- <li>{{bug("739541")}}</li>
+ <li><!-- {{ LXRSearch("ident", "i", "JS::ToNumber") }} --></li>
+ <li><!-- {{bug("739541")}} --></li>
 </ul>

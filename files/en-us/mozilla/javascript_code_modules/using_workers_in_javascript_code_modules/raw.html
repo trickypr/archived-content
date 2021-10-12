@@ -1,14 +1,14 @@
-<p class="note">{{ gecko_minversion_header("2.0") }}</p>
+<p class="note"><!-- {{ gecko_minversion_header("2.0") }} --></p>
 
-<p>You can do so by using ChromeWorker instead of the standard {{ domxref("Worker") }} object. It works exactly like a standard {{ domxref("Worker") }}, except that it has access to js-ctypes via a global ctypes object available in the global scope of the worker</p>
+<p>You can do so by using ChromeWorker instead of the standard <!-- {{ domxref("Worker") }} --> object. It works exactly like a standard <!-- {{ domxref("Worker") }} -->, except that it has access to js-ctypes via a global ctypes object available in the global scope of the worker</p>
 
-<p>{{ obsolete_header("8.0") }}</p>
+<p><!-- {{ obsolete_header("8.0") }} --></p>
 
-<div class="note"><strong>Note:</strong> As of {{Gecko("8.0")}}, the {{ interface("nsIWorkerFactory") }} interface has been removed</div>
+<div class="note"><strong>Note:</strong> As of <!-- {{Gecko("8.0")}} -->, the <!-- {{ interface("nsIWorkerFactory") }} --> interface has been removed</div>
 
 <p> </p>
 
-<p>Starting in Gecko 2.0 {{ geckoRelease("2.0") }}, you can use workers in <a href="/en/JavaScript_code_modules" title="en/JavaScript code modules">JavaScript code modules</a> (JSMs). This lets you run code in a separate thread from your JSM. To create a ChromeWorker for this purpose, you need to use the {{ interface("nsIWorkerFactory") }} interface:</p>
+<p>Starting in Gecko 2.0 <!-- {{ geckoRelease("2.0") }} -->, you can use workers in <a href="/en/JavaScript_code_modules" title="en/JavaScript code modules">JavaScript code modules</a> (JSMs). This lets you run code in a separate thread from your JSM. To create a ChromeWorker for this purpose, you need to use the <!-- {{ interface("nsIWorkerFactory") }} --> interface:</p>
 
 <pre class="brush: js">var workerFactory = Components.classes['@mozilla.org/threads/workerfactory;1']
                               .createInstance(Components.interfaces.nsIWorkerFactory);
@@ -22,7 +22,7 @@ var worker = workerFactory.newChromeWorker('script_url.js');
 
 <ul>
  <li><a class="internal" href="/En/Using_web_workers" title="en/Using DOM workers">Using web workers</a></li>
- <li>{{ domxref("ChromeWorker") }}</li>
- <li>{{ interface("nsIWorkerFactory") }}</li>
- <li>{{ domxref("Worker") }}</li>
+ <li><!-- {{ domxref("ChromeWorker") }} --></li>
+ <li><!-- {{ interface("nsIWorkerFactory") }} --></li>
+ <li><!-- {{ domxref("Worker") }} --></li>
 </ul>

@@ -306,7 +306,7 @@ OS.File.open(pth, {write: true, append: true}).then(valOpen =&gt; {
 <dl>
  <dt><code>path</code></dt>
  <dd>The full native name of the file to open.</dd>
- <dt><code>mode</code>{{Optional_Inline}}</dt>
+ <dt><code>mode</code><!-- {{Optional_Inline}} --></dt>
  <dd>The opening mode for the file, as an object that may contain a subset of the following fields:
  <dl>
   <dt><code>read</code></dt>
@@ -328,7 +328,7 @@ OS.File.open(pth, {write: true, append: true}).then(valOpen =&gt; {
   <dd>If<code> true</code>, the file will be opened for appending, meaning the equivalent of <code>.setPosition(0, POS_END)</code> is executed before each write. The default is <code>true</code>, i.e. opening a file for appending. Specify <code>append: false</code> to open the file in regular mode.</dd>
  </dl>
  </dd>
- <dt><code>options</code>{{Optional_Inline}}</dt>
+ <dt><code>options</code><!-- {{Optional_Inline}} --></dt>
  <dd>Platform-specific options for opening the file. <strong>For advanced users only. Most users will never have need of these options.</strong> To specify options, pass an object that may contain some of the following flags:
  <dl>
   <dt><code>unixFlags</code></dt>
@@ -410,7 +410,7 @@ let file = yield OS.File.open(..., options);</pre>
 <dl>
  <dt><code>path</code></dt>
  <dd>The full native name of the file to open.</dd>
- <dt><code>options</code>{{Optional_Inline}}</dt>
+ <dt><code>options</code><!-- {{Optional_Inline}} --></dt>
  <dd>Additional options for file opening. This implementation interprets the following fields:
  <dl>
   <dt><code>humanReadable</code></dt>
@@ -450,7 +450,7 @@ throws OS.File.Error
  <dd>The full path of the file to copy. At the time of this writing, this function does <strong>not</strong> copy directories.</dd>
  <dt><code>destPath</code></dt>
  <dd>The full path of the destination. Note that this is not a directory but a file.</dd>
- <dt><code>options</code>{{Optional_Inline}}</dt>
+ <dt><code>options</code><!-- {{Optional_Inline}} --></dt>
  <dd>An optional object used to control the behavior of this function. You may pass an object with a subset of the following fields:</dd>
  <dt style="margin-left: 40px;"><code>noOverwrite</code></dt>
  <dd style="margin-left: 40px;">If <code>destPath</code> already exists, do not overwrite it, but rather launch an exception.</dd>
@@ -524,7 +524,7 @@ throws OS.File.Error
 <dl>
  <dt><code>path</code></dt>
  <dd>The full name of the directory to create.</dd>
- <dt><code>options</code>{{Optional_Inline}}</dt>
+ <dt><code>options</code><!-- {{Optional_Inline}} --></dt>
  <dd>Options for creating the directory. To specify options, pass an object that may contain some of the following flags:</dd>
  <dt style="margin-left: 40px;"><code>ignoreExisting</code></dt>
  <dd style="margin-left: 40px;">If <code>true</code>, succeed even if the directory already exists (default behavior). Otherwise, fail if the directory already exists. NOTE: If <code>from</code> is specified then even if <code>ignoreExisting</code> is specified as <code>false</code>, it will not fail due to pre-existence of directories, because the <code>from</code> option tells <code>makeDir</code> to make the folders if not found.</dd>
@@ -553,7 +553,7 @@ throws OS.File.Error
  <dd>The full path of the file to move. At the time of this writing, the behavior of this function is unspecified if <code>sourcePath</code> is a directory.</dd>
  <dt><code>destPath</code></dt>
  <dd>The full path of the destination. At the time of this writing, the behavior of this function is unspecified if <code>destPath</code> is a directory.</dd>
- <dt><code>options</code>{{Optional_Inline}}</dt>
+ <dt><code>options</code><!-- {{Optional_Inline}} --></dt>
  <dd>An optional object used to control the behavior of this function. You may pass an object with a subset of the following fields:
  <dl>
   <dt><code>noOverwrite</code></dt>
@@ -590,7 +590,7 @@ throws OS.File.Error
 <dl>
  <dt><code>path</code></dt>
  <dd>The full path to the file to read.</dd>
- <dt><code>bytes</code>{{Optional_Inline}}</dt>
+ <dt><code>bytes</code><!-- {{Optional_Inline}} --></dt>
  <dd>The number of bytes to read. If unspecified, read the complete file.</dd>
 </dl>
 
@@ -618,7 +618,7 @@ throws OS.File.Error
 <dl>
  <dt><code>path</code></dt>
  <dd>The full path to the file to read.</dd>
- <dt><code>options</code>{{Optional_Inline}}</dt>
+ <dt><code>options</code><!-- {{Optional_Inline}} --></dt>
  <dd>An optional object used to control the behavior of this function. You may pass an object with a subset of the following fields:
  <dl>
   <dt><code>bytes</code></dt>
@@ -661,7 +661,7 @@ promise = promise.then(
 <dl>
  <dt><code>path</code></dt>
  <dd>A string representing the path of the file to remove. At the time of this writing, this function does <strong>not</strong> remove directories.</dd>
- <dt><code>options</code>{{Optional_Inline}}</dt>
+ <dt><code>options</code><!-- {{Optional_Inline}} --></dt>
  <dd>An optional object used to control the behavior of this function. You may pass an object with a subset of the following fields:</dd>
  <dt style="margin-left: 40px;"><code>ignoreAbsent</code></dt>
  <dd style="margin-left: 40px;">Succeed if the file doesn't exist.</dd>
@@ -689,7 +689,7 @@ promise = promise.then(
 <dl>
  <dt><code>path</code></dt>
  <dd>The complete path to the directory.</dd>
- <dt>options{{Optional_Inline}}</dt>
+ <dt>options<!-- {{Optional_Inline}} --></dt>
  <dd>An optional object used to control the behavior of this function. You may pass an object with a subset of the following fields:</dd>
  <dt style="margin-left: 40px;"><code>ignoreAbsent</code></dt>
  <dd style="margin-left: 40px;">Succeed if the directory doesn't exist.</dd>
@@ -905,12 +905,12 @@ promise = promise.then(
  <dd>The full path to the destination file.</dd>
  <dt><code>data</code></dt>
  <dd>An <a href="/en-US/docs/JavaScript_typed_arrays/ArrayBufferView" title="/en-US/docs/JavaScript_typed_arrays/ArrayBufferView">ArrayBufferView</a> holding the data to write.</dd>
- <dd>{{Fx_MinVersion_Note(37, "As of Firefox 37, this method will neuter the array buffer.")}}</dd>
+ <dd><!-- {{Fx_MinVersion_Note(37, "As of Firefox 37, this method will neuter the array buffer.")}} --></dd>
  <dt></dt>
  <dt><code>options</code></dt>
  <dd>An object that may contain the following fields</dd>
  <dt style="margin-left: 40px;"><code>tmpPath</code></dt>
- <dd style="margin-left: 40px;">If <code>null</code> or unspecified, write the data directly to <code>path</code>. If specified, write the data to a temporary file called <code>tmpPath</code> and, once the write is complete, rename the file to replace <code>path</code>. Performing this operation is a little slower but also a little safer. {{Fx_MinVersion_Note(25, "tmpPath is required in Firefox 24 or lower version, but optional in Firefox 25 or higher version")}}</dd>
+ <dd style="margin-left: 40px;">If <code>null</code> or unspecified, write the data directly to <code>path</code>. If specified, write the data to a temporary file called <code>tmpPath</code> and, once the write is complete, rename the file to replace <code>path</code>. Performing this operation is a little slower but also a little safer. <!-- {{Fx_MinVersion_Note(25, "tmpPath is required in Firefox 24 or lower version, but optional in Firefox 25 or higher version")}} --></dd>
  <dt style="margin-left: 40px;"><code>noOverwrite</code></dt>
  <dd style="margin-left: 40px;">If specified and true, and if <code>path</code> already exists, this function will throw an error without overwriting <code>path</code>.</dd>
  <dt style="margin-left: 40px;"><code>flush</code></dt>
@@ -1149,8 +1149,8 @@ let promise = OS.File.writeAtomic("file.txt", array, {tmpPath: "file.txt.tmp"});
 <dl>
  <dt><code>source</code></dt>
  <dd>The array in which the the bytes are stored.</dd>
- <dd>{{Fx_MinVersion_Note(37, "As of Firefox 37, this method will neuter the array buffer.")}}</dd>
- <dt><code>options</code>{{Optional_Inline}}</dt>
+ <dd><!-- {{Fx_MinVersion_Note(37, "As of Firefox 37, this method will neuter the array buffer.")}} --></dd>
+ <dt><code>options</code><!-- {{Optional_Inline}} --></dt>
  <dd>An object that may contain some of the following fields:</dd>
  <dt style="margin-left: 40px;"><code>bytes</code></dt>
  <dd style="margin-left: 40px;">An upper bound to the number of bytes to write to the file. If unspecified, write up to <code>source.byteLength</code> bytes. If specified, this must be less than <code>source.byteLength</code>.</dd>
@@ -1165,8 +1165,8 @@ let promise = OS.File.writeAtomic("file.txt", array, {tmpPath: "file.txt.tmp"});
 <dl>
  <dt><code><a href="/en-US/docs/JavaScript_OS.File/OS.File.Error" title="/en-US/docs/JavaScript_OS.File/OS.File.Error">OS.File.Error</a></code></dt>
  <dd>In case of any I/O error.</dd>
- <dt>{{JSxRef("TypeError")}}</dt>
+ <dt><!-- {{JSxRef("TypeError")}} --></dt>
  <dd>If <code>options.bytes</code> is specified and is larger than <code>source.byteLength</code>.</dd>
 </dl>
 
-<p>{{IncludeSubnav("/en-US/docs/Mozilla/JavaScript_code_modules")}}</p>
+<p><!-- {{IncludeSubnav("/en-US/docs/Mozilla/JavaScript_code_modules")}} --></p>

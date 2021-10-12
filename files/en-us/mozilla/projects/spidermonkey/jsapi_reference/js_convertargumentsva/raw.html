@@ -1,4 +1,4 @@
-<div>{{SpiderMonkeySidebar("JSAPI")}} {{ obsolete_header("jsapi38") }}</div>
+<div><!-- {{SpiderMonkeySidebar("JSAPI")}} --> <!-- {{ obsolete_header("jsapi38") }} --></div>
 
 <div class="summary">
 <p>Converts a series of JS values, passed in a <code>va_list</code>, to their corresponding JSAPI types.</p>
@@ -24,25 +24,25 @@ JS_ConvertArgumentsVA(JSContext *cx, unsigned argc, jsval *argv,
   </tr>
   <tr>
    <td><code>cx</code></td>
-   <td>{{jsapixref("JSRuntime", "JSContext *")}}</td>
-   <td>Pointer to a JS context from which to derive runtime information. {{ Jsapi-requires-request() }}</td>
+   <td><!-- {{jsapixref("JSRuntime", "JSContext *")}} --></td>
+   <td>Pointer to a JS context from which to derive runtime information. <!-- {{ Jsapi-requires-request() }} --></td>
   </tr>
   <tr>
    <td><code>args</code></td>
-   <td>{{jsapixref("JS::CallArgs", "const JS::CallArgs &amp;")}}</td>
+   <td><!-- {{jsapixref("JS::CallArgs", "const JS::CallArgs &amp;")}} --></td>
    <td>
-    <p>Reference to the arguments to convert. {{ Jsapi_minversion_inline("31") }}</p>
+    <p>Reference to the arguments to convert. <!-- {{ Jsapi_minversion_inline("31") }} --></p>
    </td>
   </tr>
   <tr>
    <td><code>argc</code></td>
    <td><code>unsigned</code></td>
-   <td>The number of arguments to convert. {{ obsolete_inline("jsapi30") }}</td>
+   <td>The number of arguments to convert. <!-- {{ obsolete_inline("jsapi30") }} --></td>
   </tr>
   <tr>
    <td><code>argv</code></td>
-   <td>{{jsapixref("Jsval", "jsval *")}}</td>
-   <td>Pointer to the vector of arguments to convert. {{ obsolete_inline("jsapi30") }}</td>
+   <td><!-- {{jsapixref("Jsval", "jsval *")}} --></td>
+   <td>Pointer to the vector of arguments to convert. <!-- {{ obsolete_inline("jsapi30") }} --></td>
   </tr>
   <tr>
    <td><code>format</code></td>
@@ -59,15 +59,15 @@ JS_ConvertArgumentsVA(JSContext *cx, unsigned argc, jsval *argv,
 
 <h2 id="Description" name="Description">Description</h2>
 
-<p><code>JS_ConvertArgumentsVA</code> is to <code>JS_ConvertArguments</code> as <code>vprintf</code> is to <code>printf</code>. See {{jsapixref("JS_ConvertArguments")}} for further information.</p>
+<p><code>JS_ConvertArgumentsVA</code> is to <code>JS_ConvertArguments</code> as <code>vprintf</code> is to <code>printf</code>. See <!-- {{jsapixref("JS_ConvertArguments")}} --> for further information.</p>
 
 <p>If <code>JS_ConvertArgumentsVA</code> successfully converts all arguments, it returns <code>true</code>. Otherwise it returns <code>false</code>.</p>
 
 <h2 id="See_Also" name="See_Also">See Also</h2>
 
 <ul>
- <li>{{ LXRSearch("ident", "i", "JS_ConvertArgumentsVA") }}</li>
- <li>{{jsapixref("JS_ConvertArguments")}}</li>
- <li>{{bug(969798)}} - added <code>args</code></li>
- <li>{{bug(1125784)}}</li>
+ <li><!-- {{ LXRSearch("ident", "i", "JS_ConvertArgumentsVA") }} --></li>
+ <li><!-- {{jsapixref("JS_ConvertArguments")}} --></li>
+ <li><!-- {{bug(969798)}} --> - added <code>args</code></li>
+ <li><!-- {{bug(1125784)}} --></li>
 </ul>

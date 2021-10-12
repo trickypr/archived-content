@@ -4,22 +4,22 @@
 
 <ol>
  <li>Creating an RSS feed.</li>
- <li>Adding a special {{HTMLElement("link")}} element to HTML page(s).</li>
- <li>Adding a special {{HTMLElement("a")}} element to HTML page(s).</li>
+ <li>Adding a special <!-- {{HTMLElement("link")}} --> element to HTML page(s).</li>
+ <li>Adding a special <!-- {{HTMLElement("a")}} --> element to HTML page(s).</li>
 </ol>
 
 <p>We've already discussed the first step—creating RSS feeds— so we'll focus on the other two steps here.</p>
 
 <h2 id="Adding_the_.3Clink.3E" name="Adding_the_.3Clink.3E">Adding the <code>&lt;link&gt;</code></h2>
 
-<p>Often the data in an RSS feed is also made available on an HTML web page. When this is the case, the HTML web page can let people and machines know about the feed by using the {{HTMLElement("link")}} element, like this:</p>
+<p>Often the data in an RSS feed is also made available on an HTML web page. When this is the case, the HTML web page can let people and machines know about the feed by using the <!-- {{HTMLElement("link")}} --> element, like this:</p>
 
 <pre>&lt;link rel="alternate" type="application/rss+xml" href="http://example.com/feed" /&gt;
 </pre>
 
 <h2 id="Adding_the_.3Ca.3E" name="Adding_the_.3Ca.3E">Adding the <code>&lt;a&gt;</code></h2>
 
-<p>While use of the HTML <code>&lt;link&gt;</code> element is powerful, it is mostly <em>hidden</em>. To advertise the RSS feed in a more direct way, the HTML {{HTMLElement("a")}} element can be used. This mimics the <code>&lt;link&gt;</code> element discussed above.</p>
+<p>While use of the HTML <code>&lt;link&gt;</code> element is powerful, it is mostly <em>hidden</em>. To advertise the RSS feed in a more direct way, the HTML <!-- {{HTMLElement("a")}} --> element can be used. This mimics the <code>&lt;link&gt;</code> element discussed above.</p>
 
 <p>Linking from the the HTML web page where the data in an RSS feed is also contained makes the RSS feed available for use:</p>
 

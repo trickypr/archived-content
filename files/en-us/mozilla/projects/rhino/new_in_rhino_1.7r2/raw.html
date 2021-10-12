@@ -43,7 +43,7 @@ try {
 <p>We don't ship with JLine with Rhino, so you'll have to download it yourself. Rhino automatically detects whether JLine is on the classpath and uses it if so and otherwise maintains the previous simple behavior. So to run your shell with JLine your command will look like</p>
 <pre>java -cp js.jar:lib/jline-0.9.93.jar org.mozilla.javascript.tools.shell.Main<br></pre>
 <p> Completion works by looking at the global scope and attempting to complete variables defined there. For example,</p>
-<pre>js&gt; var obj = {prop1:{prop2:3}};<br>js&gt; ob<br></pre>
+<pre>js&gt; var obj = {prop1:{prop2:3}} -->;<br>js&gt; ob<br></pre>
 <p>After typing <code>ob</code> and pressing tab, Rhino will autocomplete to <code>obj</code>. It's also smart enough if it sees a dotted property list it will walk it to find names to autocomplete:</p>
 <pre>js&gt; obj.prop1.pr<br></pre>
 <p>Pressing tab after <code>obj.prop1.pr</code> will autocomplete to <code>obj.prop1.prop2</code>.</p>

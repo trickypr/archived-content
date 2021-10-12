@@ -1,6 +1,6 @@
-<div>{{SpiderMonkeySidebar("JSAPI")}}</div>
+<div><!-- {{SpiderMonkeySidebar("JSAPI")}} --></div>
 
-<p>{{ jsapi_minversion_header("31") }}</p>
+<p><!-- {{ jsapi_minversion_header("31") }} --></p>
 
 <div class="summary">
 <p>Specify a new callback function for Out of Memory error.</p>
@@ -21,7 +21,7 @@ JS::SetOutOfMemoryCallback(JSRuntime *rt, JS::OutOfMemoryCallback cb, void *data
   </tr>
   <tr>
    <td><code>rt</code></td>
-   <td>{{jsapixref("JSRuntime", "JSRuntime *")}}</td>
+   <td><!-- {{jsapixref("JSRuntime", "JSRuntime *")}} --></td>
    <td>The <code>JSRuntime</code> for which to set the GC callback.</td>
   </tr>
   <tr>
@@ -32,7 +32,7 @@ JS::SetOutOfMemoryCallback(JSRuntime *rt, JS::OutOfMemoryCallback cb, void *data
   <tr>
    <td><code>data</code></td>
    <td><code>void *</code></td>
-   <td><code>data</code> parameter which will be passed to <code>JS::OutOfMemoryCallback</code>. {{ Jsapi_minversion_inline("38") }}</td>
+   <td><code>data</code> parameter which will be passed to <code>JS::OutOfMemoryCallback</code>. <!-- {{ Jsapi_minversion_inline("38") }} --></td>
   </tr>
  </tbody>
 </table>
@@ -53,7 +53,7 @@ JS::SetOutOfMemoryCallback(JSRuntime *rt, JS::OutOfMemoryCallback cb, void *data
   <tr>
    <td><code>data</code></td>
    <td><code>void *</code></td>
-   <td><code>data</code> parameter passed to <code>JS::SetOutOfMemoryCallback</code>. {{ Jsapi_minversion_inline("38") }}</td>
+   <td><code>data</code> parameter passed to <code>JS::SetOutOfMemoryCallback</code>. <!-- {{ Jsapi_minversion_inline("38") }} --></td>
   </tr>
  </tbody>
 </table>
@@ -67,8 +67,8 @@ JS::SetOutOfMemoryCallback(JSRuntime *rt, JS::OutOfMemoryCallback cb, void *data
 <h2 id="See_Also" name="See_Also">See Also</h2>
 
 <ul>
- <li>{{ LXRSearch("ident", "i", "JS::SetOutOfMemoryCallback") }}</li>
- <li>{{ LXRSearch("ident", "i", "JS::OutOfMemoryCallback") }}</li>
- <li>{{bug(969415)}}</li>
- <li>{{bug(987995)}} - added <code>data</code> parameter</li>
+ <li><!-- {{ LXRSearch("ident", "i", "JS::SetOutOfMemoryCallback") }} --></li>
+ <li><!-- {{ LXRSearch("ident", "i", "JS::OutOfMemoryCallback") }} --></li>
+ <li><!-- {{bug(969415)}} --></li>
+ <li><!-- {{bug(987995)}} --> - added <code>data</code> parameter</li>
 </ul>

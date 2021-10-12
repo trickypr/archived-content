@@ -1,6 +1,6 @@
-<div>{{SpiderMonkeySidebar("JSAPI")}}</div>
+<div><!-- {{SpiderMonkeySidebar("JSAPI")}} --></div>
 
-<p>{{ obsolete_header("js1.8.5") }}</p>
+<p><!-- {{ obsolete_header("js1.8.5") }} --></p>
 <div class="blockIndicator warning">
 <p><strong>Warning!</strong> <code>JSObjectOps</code> is not a supported API. Details of the API may change from one release to the next. This documentation should be considered SpiderMonkey internals documentation, not API documentation. See <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=408416">bug 408416</a> for details.</p>
 </div>
@@ -50,6 +50,6 @@ typedef JSBool (*JSSetRequiredSlotOp)(JSContext *cx, JSObject *obj,
 
 <h2 id="Description" name="Description">Description</h2>
 
-<p>Get and set a required slot, one that should already have been allocated. These operations are infallible, so required slots must be pre-allocated, or implementations must suppress out-of-memory errors. The native ops (<code>js_ObjectOps</code>, see {{ Source("js/src/jsobj.c") }}) access slots reserved by including a call to the <code>JSCLASS_HAS_RESERVED_SLOTS(n)</code> macro in the <code>JSClass.flags</code> initializer.</p>
+<p>Get and set a required slot, one that should already have been allocated. These operations are infallible, so required slots must be pre-allocated, or implementations must suppress out-of-memory errors. The native ops (<code>js_ObjectOps</code>, see <!-- {{ Source("js/src/jsobj.c") }} -->) access slots reserved by including a call to the <code>JSCLASS_HAS_RESERVED_SLOTS(n)</code> macro in the <code>JSClass.flags</code> initializer.</p>
 
 <p><strong>Note:</strong> The <code>slot</code> parameter is a zero-based index into obj slots, unlike the index parameter to the <code>JS_GetReservedSlot</code> and <code>JS_SetReservedSlot</code> API entry points, which is a zero-based index into the <code>JSCLASS_RESERVED_SLOTS(clasp)</code> reserved slots that come after the initial well-known slots: proto, parent, class, and optionally, the private data slot.</p>

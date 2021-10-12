@@ -85,7 +85,7 @@
 </ul>
 <h6 id="Description_3">Description</h6>
 <p>Open a new database using the softoken. The caller is responsible for making sure the module spec is correct and usable. The caller should ask for one new database per call if the caller wants to get meaningful information about the new database.</p>
-<p>moduleSpec is the same data that you would pass to softoken at initialization time under the 'tokens' options. For example, if you would normally specify <em>tokens=&lt;0x4={{ mediawiki.external('configdir=\'./mybackup\' tokenDescription=\'Backup\'') }}&gt;</em> to softoken if you at init time, then you could specify "<em>configdir='./mybackup' tokenDescription='Backup'</em>" as your module spec here to open the database ./mybackup on the fly. The slot ID will be calculated for you by SECMOD_OpenUserDB().</p>
+<p>moduleSpec is the same data that you would pass to softoken at initialization time under the 'tokens' options. For example, if you would normally specify <em>tokens=&lt;0x4=<!-- {{ mediawiki.external('configdir=\'./mybackup\' tokenDescription=\'Backup\'') }} -->&gt;</em> to softoken if you at init time, then you could specify "<em>configdir='./mybackup' tokenDescription='Backup'</em>" as your module spec here to open the database ./mybackup on the fly. The slot ID will be calculated for you by SECMOD_OpenUserDB().</p>
 <p>Typical parameters here are configdir, tokenDescription and flags. a Full list is below:</p>
 <p><em>configDir</em> The location of the databases for this token. If configDir is not specified, and noCertDB and noKeyDB is not specified, the load will fail.</p>
 <p><em>certPrefix</em> Cert prefix for this token.</p>

@@ -1,4 +1,4 @@
-<div>{{FirefoxSidebar}}</div>
+<div><!-- {{FirefoxSidebar}} --></div>
 
 <p>This guide will help Firefox developers working on front-end code produce code which is as performant as possible—not just on its own, but in terms of its impact on other parts of Firefox. Always keep in mind the side effects your changes may have, from blocking other tasks, to interfering with other user interface elements.</p>
 
@@ -6,19 +6,19 @@
 
 <p>The main thread is where we process user events and do painting. It's also important to note that most of our JavaScript runs on the main thread, so it's easy for script to cause delays in event processing or painting. That means that the more code we can get off of the main thread, the more that thread can respond to user events, paint, and generally be responsive to the user.</p>
 
-<p>You might want to consider using a {{domxref("Worker")}} if you need to do some computation that can be done off of the main thread. If you need more elevated privileges than a standard worker allows, consider using a {{domxref("ChromeWorker")}}, which is a Firefox-only API which lets you create workers with more elevated privileges.</p>
+<p>You might want to consider using a <!-- {{domxref("Worker")}} --> if you need to do some computation that can be done off of the main thread. If you need more elevated privileges than a standard worker allows, consider using a <!-- {{domxref("ChromeWorker")}} -->, which is a Firefox-only API which lets you create workers with more elevated privileges.</p>
 
 <h2 id="Use_requestIdleCallback">Use requestIdleCallback()</h2>
 
-<p>If you simply cannot avoid doing some kind of long job on the main thread, try to break it up into smaller pieces that you can run when the browser has a free moment to spare, and the user isn't doing anything. You can do that using {{domxref("Window.requestIdleCallback", "requestIdleCallback()")}} and the <a href="/en-US/docs/Web/API/Background_Tasks_API">Cooperative Scheduling of Background Tasks API</a>, and doing it only when we have a free second where presumably the user isn’t doing something.</p>
+<p>If you simply cannot avoid doing some kind of long job on the main thread, try to break it up into smaller pieces that you can run when the browser has a free moment to spare, and the user isn't doing anything. You can do that using <!-- {{domxref("Window.requestIdleCallback", "requestIdleCallback()")}} --> and the <a href="/en-US/docs/Web/API/Background_Tasks_API">Cooperative Scheduling of Background Tasks API</a>, and doing it only when we have a free second where presumably the user isn’t doing something.</p>
 
 <p>See also the blog post <a href="https://hacks.mozilla.org/2016/11/cooperative-scheduling-with-requestidlecallback/">Collective scheduling with requestIdleCallback</a>.</p>
 
-<p>As of {{bug(1353206)}}, you can also schedule idle events in non-DOM contexts by using <code>Services.tm.idleDispatchToMainThread.</code> See the <code>nsIThreadManager.idl</code> file for more details.</p>
+<p>As of <!-- {{bug(1353206)}} -->, you can also schedule idle events in non-DOM contexts by using <code>Services.tm.idleDispatchToMainThread.</code> See the <code>nsIThreadManager.idl</code> file for more details.</p>
 
 <h2 id="Hide_your_panels">Hide your panels</h2>
 
-<p>If you’re adding a new XUL {{XULElem("popup")}} or {{XULElem("panel")}} to a document, set the {{XULAttr("hidden")}} attribute to <code>true</code> by default. By doing so, you cause the binding applied on demand rather than at load time, which makes initial construction of the XUL document faster.</p>
+<p>If you’re adding a new XUL <!-- {{XULElem("popup")}} --> or <!-- {{XULElem("panel")}} --> to a document, set the <!-- {{XULAttr("hidden")}} --> attribute to <code>true</code> by default. By doing so, you cause the binding applied on demand rather than at load time, which makes initial construction of the XUL document faster.</p>
 
 <h2 id="Get_familiar_with_the_pipeline_that_gets_pixels_to_the_screen">Get familiar with the pipeline that gets pixels to the screen</h2>
 
@@ -36,9 +36,9 @@
 
 <p>To achieve a 60 FPS frame rate, all of the above has to happen in 16 milliseconds or less, every frame.</p>
 
-<p>Note that {{domxref("Window.requestAnimationFrame", "requestAnimationFrame()")}} lets you queue up JavaScript to <strong>run right before the style flush occurs</strong>. This allows you to put all of your DOM writes (most importantly, anything that could change the size or position of things in the DOM) just before the style and layout steps of the pipeline, combining all the style and layout calculations into a single batch so it all happens once, in a single frame tick, instead of across multiple frames. See {{anch("Detecting and avoiding synchronous reflow")}} below for more information.</p>
+<p>Note that <!-- {{domxref("Window.requestAnimationFrame", "requestAnimationFrame()")}} --> lets you queue up JavaScript to <strong>run right before the style flush occurs</strong>. This allows you to put all of your DOM writes (most importantly, anything that could change the size or position of things in the DOM) just before the style and layout steps of the pipeline, combining all the style and layout calculations into a single batch so it all happens once, in a single frame tick, instead of across multiple frames. See <!-- {{anch("Detecting and avoiding synchronous reflow")}} --> below for more information.</p>
 
-<p>This also means that {{domxref("Window.requestAnimationFrame", "requestAnimationFrame()")}} is <strong>not a good place</strong> to put queries for layout or style information.</p>
+<p>This also means that <!-- {{domxref("Window.requestAnimationFrame", "requestAnimationFrame()")}} --> is <strong>not a good place</strong> to put queries for layout or style information.</p>
 
 <h2 id="Detecting_and_avoiding_synchronous_style_flushes">Detecting and avoiding synchronous style flushes</h2>
 
@@ -52,11 +52,11 @@
 
 <p>However, it's possible for script to do things that force multiple style calculations (or <strong>style flushes</strong>) to occur synchronously during the JavaScript part of the 16 ms window. The more of them there are, the more likely they'll exceed the 16ms frame budget. If that happens, some of them will be postponed until the next frame (or possibly multiple frames, if necessary), this skipping of frames is called <strong>jank</strong>.</p>
 
-<p>Generally speaking, you force a synchronous style flush any time you query for style information after the DOM has changed within the same frame tick. Depending on whether or not <a href="https://gist.github.com/paulirish/5d52fb081b3570c81e3a">the style information you’re asking for has something to do with size or position</a>, you may also cause a layout recalculation (also referred to as <strong>layout flush</strong> or <strong>reflow</strong>), which is also an expensive step (see {{anch("Detecting and avoiding synchronous reflow")}} below).</p>
+<p>Generally speaking, you force a synchronous style flush any time you query for style information after the DOM has changed within the same frame tick. Depending on whether or not <a href="https://gist.github.com/paulirish/5d52fb081b3570c81e3a">the style information you’re asking for has something to do with size or position</a>, you may also cause a layout recalculation (also referred to as <strong>layout flush</strong> or <strong>reflow</strong>), which is also an expensive step (see <!-- {{anch("Detecting and avoiding synchronous reflow")}} --> below).</p>
 
 <p>To avoid this: avoid reading style information if you can. If you <em>must</em> read style information, do so at the very beginning of the frame, before any changes have been made to the DOM since the last time a style flush occurred.</p>
 
-<p>Historically, there hasn't been an easy way of doing this - however, {{bug(1434376)}} has recently landed some ChromeOnly helpers to the window binding to make this simpler.</p>
+<p>Historically, there hasn't been an easy way of doing this - however, <!-- {{bug(1434376)}} --> has recently landed some ChromeOnly helpers to the window binding to make this simpler.</p>
 
 <p>If you want to queue up some JavaScript to run after the next "natural" style and layout flush, try:</p>
 
@@ -74,16 +74,16 @@ async function nodeIsDisplayNone(node) {
 </pre>
 
 <div class="note">
-<p>See {{anch("Detecting and avoiding synchronous reflow")}} for a more advanced example of getting layout information, and then setting it safely, without causing flushes.</p>
+<p>See <!-- {{anch("Detecting and avoiding synchronous reflow")}} --> for a more advanced example of getting layout information, and then setting it safely, without causing flushes.</p>
 </div>
 
-<p><code>promiseDocumentFlushed</code> is only available to priviledged script, and should be called on the inner window of a top-level frame. Calling it on the outer window of a subframe is not supported, and calling it from within the inner window of a subframe might cause the callback to fire even though a style and layout flush will still be required. These gotchas should be fixed by {{bug(1441173)}}.</p>
+<p><code>promiseDocumentFlushed</code> is only available to priviledged script, and should be called on the inner window of a top-level frame. Calling it on the outer window of a subframe is not supported, and calling it from within the inner window of a subframe might cause the callback to fire even though a style and layout flush will still be required. These gotchas should be fixed by <!-- {{bug(1441173)}} -->.</p>
 
-<p>For now, it is up to you as the consumer of this API to not accidentally write to the DOM within the <code>promiseDocumentFlushed</code> callback. Doing so might cause flushes to occur for other <code>promiseDocumentFlushed</code> callbacks that are scheduled to fire in the same tick of the refresh driver. {{bug(1441168)}} tracks work to make it impossible to modify the DOM within a <code>promiseDocumentFlushed</code> callback.</p>
+<p>For now, it is up to you as the consumer of this API to not accidentally write to the DOM within the <code>promiseDocumentFlushed</code> callback. Doing so might cause flushes to occur for other <code>promiseDocumentFlushed</code> callbacks that are scheduled to fire in the same tick of the refresh driver. <!-- {{bug(1441168)}} --> tracks work to make it impossible to modify the DOM within a <code>promiseDocumentFlushed</code> callback.</p>
 
 <h3 id="Writing_tests_to_ensure_you_don’t_add_more_synchronous_style_flushes">Writing tests to ensure you don’t add more synchronous style flushes</h3>
 
-<p>Unlike reflow, there isn’t a “observer” mechanism for style recalculations. However, as of Firefox 49, the {{ifattribute("nsIDOMWindowUtils", "elementsRestyled")}} attribute records a count of how many style calculations have occurred for a particular DOM window.</p>
+<p>Unlike reflow, there isn’t a “observer” mechanism for style recalculations. However, as of Firefox 49, the <!-- {{ifattribute("nsIDOMWindowUtils", "elementsRestyled")}} --> attribute records a count of how many style calculations have occurred for a particular DOM window.</p>
 
 <p>It should be possible to write a test that gets the <code>nsIDOMWindowUtils</code> for a browser window, records the number of styleFlushes, then <strong>synchronously calls the function</strong> that you want to test, and immediately after checks the styleFlushes attribute again. If the value went up, your code caused synchronous style flushes to occur.</p>
 
@@ -147,7 +147,7 @@ doSomething(height1, height2);      // Line 5</pre>
 
 <p>If you require size or position information, you have a few options.</p>
 
-<p>{{bug(1434376)}} has recently landed a helper in the window binding to make it easier for priviledged code to queue up JavaScript to run when we know that the DOM is not dirty, and size, position, and style information is cheap to query for.</p>
+<p><!-- {{bug(1434376)}} --> has recently landed a helper in the window binding to make it easier for priviledged code to queue up JavaScript to run when we know that the DOM is not dirty, and size, position, and style information is cheap to query for.</p>
 
 <p>Here's an example:</p>
 
@@ -163,7 +163,7 @@ doSomething(height1, height2);      // Line 5</pre>
   });
 }</pre>
 
-<p>Please see the section on <code>promiseDocumentFlushed</code> in {{anch("Detecting and avoiding synchronous style flushes")}} for more information on how to use the API.</p>
+<p>Please see the section on <code>promiseDocumentFlushed</code> in <!-- {{anch("Detecting and avoiding synchronous style flushes")}} --> for more information on how to use the API.</p>
 
 <p>Note that queries for size and position information are only expensive if the DOM has been written to. Otherwise, we're doing a cheap look-up of cached information. If we work hard to move all DOM writes into <code>requestAnimationFrame()</code>, then we can be sure that all size and position queries are cheap.</p>
 
@@ -209,7 +209,7 @@ requestAnimationFrame(() =&gt; {
 
 <h3 id="Writing_tests_to_ensure_you_don’t_add_more_unintentional_reflow">Writing tests to ensure you don’t add more unintentional reflow</h3>
 
-<p>The interface {{source("docshell/base/nsIReflowObserver.idl", "nsIReflowObserver")}} lets us detect both interruptible and uninterruptible reflows. A number of tests have been written that exercise various functions of the browser (<a href="http://searchfox.org/mozilla-central/rev/78cefe75fb43195e7f5aee1d8042b8d8fc79fc70/browser/base/content/test/general/browser_tabopen_reflows.js">opening tabs</a>, <a href="http://searchfox.org/mozilla-central/source/browser/base/content/test/general/browser_windowopen_reflows.js">opening windows</a>) and ensure that we don’t add new uninterruptible reflows accidentally while those actions occur.</p>
+<p>The interface <!-- {{source("docshell/base/nsIReflowObserver.idl", "nsIReflowObserver")}} --> lets us detect both interruptible and uninterruptible reflows. A number of tests have been written that exercise various functions of the browser (<a href="http://searchfox.org/mozilla-central/rev/78cefe75fb43195e7f5aee1d8042b8d8fc79fc70/browser/base/content/test/general/browser_tabopen_reflows.js">opening tabs</a>, <a href="http://searchfox.org/mozilla-central/source/browser/base/content/test/general/browser_windowopen_reflows.js">opening windows</a>) and ensure that we don’t add new uninterruptible reflows accidentally while those actions occur.</p>
 
 <p>You should add tests like this for your feature if you happen to be touching the DOM.</p>
 
@@ -228,22 +228,22 @@ requestAnimationFrame(() =&gt; {
 
 <p>Keep in mind that painting occurs on the main thread. Remember, too, that the goal is to have as little happen on the main thread as possible. That means that finding and removing (when possible) over-painting is a good place to start reducing your burden on the main thread, which will in turn improve performance.</p>
 
-<p>Perhaps you’re animating something that requires a repaint? For example, transitioning the {{cssxref("background-color")}} of a DOM node from red to blue will result in a repaint for every frame of the animation, and paint flashing will reveal that. Consider using a different animation that can be accelerated by the GPU. These GPU-accelerated animations occur off of the main thread, and have a much higher probability of running at 60 FPS (see the section below called {{anch("Use the compositor for animations")}} for further details).</p>
+<p>Perhaps you’re animating something that requires a repaint? For example, transitioning the <!-- {{cssxref("background-color")}} --> of a DOM node from red to blue will result in a repaint for every frame of the animation, and paint flashing will reveal that. Consider using a different animation that can be accelerated by the GPU. These GPU-accelerated animations occur off of the main thread, and have a much higher probability of running at 60 FPS (see the section below called <!-- {{anch("Use the compositor for animations")}} --> for further details).</p>
 
-<p>Perhaps you’re touching some DOM nodes in such a way that unexpected repaints are occurring in an area that don’t need it. Best to investigate and try to remove those as best you can. Sometimes, our graphics layer invalidates regions in ways that might not be clear to you, and a section outside of the thing that just repainted will also repaint. Sometimes this can be addressed by ensuring that the thing changing is on its own layer (though this comes at a memory cost). You can put something on its own layer by setting its {{cssxref("z-index")}}, or by setting the {{cssxref("will-change")}} on the node, though this should be used sparingly.</p>
+<p>Perhaps you’re touching some DOM nodes in such a way that unexpected repaints are occurring in an area that don’t need it. Best to investigate and try to remove those as best you can. Sometimes, our graphics layer invalidates regions in ways that might not be clear to you, and a section outside of the thing that just repainted will also repaint. Sometimes this can be addressed by ensuring that the thing changing is on its own layer (though this comes at a memory cost). You can put something on its own layer by setting its <!-- {{cssxref("z-index")}} -->, or by setting the <!-- {{cssxref("will-change")}} --> on the node, though this should be used sparingly.</p>
 
 <p>If you’re unsure why something is repainting, consider talking to our always helpful graphics team in the <a href="https://chat.mozilla.org/#/room/#gfx:mozilla.org">gfx room</a> on <a href="https://wiki.mozilla.org/Matrix">Matrix</a>, and they can probably advise you. Note that a significant number of the graphics team members are in the US Eastern Time zone (UTC-5 or UTC-4 during Daylight Saving Time), so let that information guide your timing when you ask questions in the <a href="https://chat.mozilla.org/#/room/#gfx:mozilla.org">gfx room</a> .</p>
 
 <h2 id="Adding_nodes_using_DocumentFragments">Adding nodes using DocumentFragments</h2>
 
-<p>Sometimes you need to add several DOM nodes as part of an existing DOM tree. For example, when using XUL {{XULElem("menupopup")}}s, you often have script which dynamically inserts {{XULElem("menuitem")}}s. Inserting items into the DOM has a cost. If you're adding a number of children to a DOM node in a loop, it's often more efficient to batch them into a single insertion by creating a {{domxref("DocumentFragment")}}, adding the new nodes to that, then inserting the <code>DocumentFragment</code> as a child of the desired node.</p>
+<p>Sometimes you need to add several DOM nodes as part of an existing DOM tree. For example, when using XUL <!-- {{XULElem("menupopup")}} -->s, you often have script which dynamically inserts <!-- {{XULElem("menuitem")}} -->s. Inserting items into the DOM has a cost. If you're adding a number of children to a DOM node in a loop, it's often more efficient to batch them into a single insertion by creating a <!-- {{domxref("DocumentFragment")}} -->, adding the new nodes to that, then inserting the <code>DocumentFragment</code> as a child of the desired node.</p>
 
 <p>A <code>DocumentFragment</code> is maintained in memory outside the DOM itself, so changes don't cause reflow. The API is straightforward:</p>
 
 <ol>
- <li>Create the <code>DocumentFragment</code> by calling {{domxref("Document.createDocumentFragment()")}}.</li>
- <li>Create each child element (by calling {{domxref("Document.createElement()")}} for example), and add each one to the fragment by calling {{domxref("Node.appendChild", "DocumentFragment.appendChild()")}}.</li>
- <li>Once the fragment is populated, append the fragment to the DOM by calling {{domxref("Node.appendChild", "appendChild()")}} on the parent element for the new elements.</li>
+ <li>Create the <code>DocumentFragment</code> by calling <!-- {{domxref("Document.createDocumentFragment()")}} -->.</li>
+ <li>Create each child element (by calling <!-- {{domxref("Document.createElement()")}} --> for example), and add each one to the fragment by calling <!-- {{domxref("Node.appendChild", "DocumentFragment.appendChild()")}} -->.</li>
+ <li>Once the fragment is populated, append the fragment to the DOM by calling <!-- {{domxref("Node.appendChild", "appendChild()")}} --> on the parent element for the new elements.</li>
 </ol>
 
 <p>This example has been cribbed from <a href="https://davidwalsh.name/documentfragment">davidwalsh’s blog post</a>:</p>
@@ -280,19 +280,19 @@ listNode.appendChild(frag);
 
 <p>If you’re working on a performance improvement, this should go without saying: ensure that what you care about is actually improving by measuring before and after.</p>
 
-<p>Landing a speculative performance enhancement is the same thing as landing speculative bug fixes—these things need to be tested. Even if that means instrumenting a function with a {{jsxref("Date.now()")}} recording at the entrance, and another <code>Date.now()</code> at the exit points in order to measure processing time changes.</p>
+<p>Landing a speculative performance enhancement is the same thing as landing speculative bug fixes—these things need to be tested. Even if that means instrumenting a function with a <!-- {{jsxref("Date.now()")}} --> recording at the entrance, and another <code>Date.now()</code> at the exit points in order to measure processing time changes.</p>
 
 <p>Prove to yourself that you’ve actually improved something by measuring before and after.</p>
 
 <h3 id="Use_the_performance_API">Use the performance API</h3>
 
-<p>The <a href="/en-US/docs/Web/API/Performance_API">performance API</a> is very useful for taking high-resolution measurements. This is usually much better than using your own hand-rolled timers to measure how long things take. You access the API through {{domxref("Window.performance")}}.</p>
+<p>The <a href="/en-US/docs/Web/API/Performance_API">performance API</a> is very useful for taking high-resolution measurements. This is usually much better than using your own hand-rolled timers to measure how long things take. You access the API through <!-- {{domxref("Window.performance")}} -->.</p>
 
-<p>Also, the Gecko profiler back-end is in the process of being modified to expose things like markers (from {{domxref("Performance.mark", "window.performance.mark()")}}).</p>
+<p>Also, the Gecko profiler back-end is in the process of being modified to expose things like markers (from <!-- {{domxref("Performance.mark", "window.performance.mark()")}} -->).</p>
 
 <h2 id="Use_the_compositor_for_animations">Use the compositor for animations</h2>
 
-<p>Performing animations on the main thread should be treated as <strong>deprecated</strong>. Avoid doing it. Instead, animate using {{domxref("Element.animate()")}}. See the article <a href="https://hacks.mozilla.org/2016/08/animating-like-you-just-dont-care-with-element-animate/">Animating like you just don't care</a> for more information on how to do this.</p>
+<p>Performing animations on the main thread should be treated as <strong>deprecated</strong>. Avoid doing it. Instead, animate using <!-- {{domxref("Element.animate()")}} -->. See the article <a href="https://hacks.mozilla.org/2016/08/animating-like-you-just-dont-care-with-element-animate/">Animating like you just don't care</a> for more information on how to do this.</p>
 
 <h2 id="Explicitly_define_start_and_end_animation_values">Explicitly define start and end animation values</h2>
 

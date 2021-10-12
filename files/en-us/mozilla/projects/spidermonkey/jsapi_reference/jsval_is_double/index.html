@@ -104,7 +104,7 @@ tags:
 </pre>
 <h2 id="Description" name="Description">Description</h2>
 <p><code>JSVAL_IS_DOUBLE(v)</code> is true if <code>v</code> is a number represented in memory as a <a href="/en-US/docs/Mozilla/Projects/SpiderMonkey/JSAPI_reference/jsdouble" title="jsdouble is a C floating-point number type. It is defined to be a 64-bit, IEEE 754 compliant type. See ECMA 262-3 §8.5. Arithmetic on jsdouble values in C should behave exactly like the floating-point arithmetic in JavaScript, except that C and JavaScript may treat not-a-number values differently."><code>jsdouble</code></a>.</p>
-<p>To check whether <code>v</code> is a number, regardless of implementation details, use <a href="/en-US/docs/Mozilla/Projects/SpiderMonkey/JSAPI_reference/JSVAL_IS_NUMBER" title="{{ obsolete_header(&quot;jsapi32&quot;) }}"><code>JSVAL_IS_NUMBER</code></a> instead.</p>
+<p>To check whether <code>v</code> is a number, regardless of implementation details, use <a href="/en-US/docs/Mozilla/Projects/SpiderMonkey/JSAPI_reference/JSVAL_IS_NUMBER" title="<!-- {{ obsolete_header(&quot;jsapi32&quot;) }} -->"><code>JSVAL_IS_NUMBER</code></a> instead.</p>
 <h2 id="Example" name="Example">Example</h2>
 <p>The following code snippet illustrates how a JavaScript variable, <code>MyItem</code>, is conditionally tested in an <code>if</code> statement to see if it is a JS double data type.</p>
 <pre class="brush: cpp">if (JSVAL_IS_DOUBLE(MyItem)) {

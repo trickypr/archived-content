@@ -1,4 +1,4 @@
-<p>{{Obsolete_Header}}</p>
+<p><!-- {{Obsolete_Header}} --></p>
 
 <div class="blcokIndicator warning">
 <p>Quite <strong>a lot</strong> has happened since this article was written. E. g. in Firefox 3, a cycle collector was introduced and refined in later versions, and Mozilla is currently working on a generational garbage collector for JS.</p>
@@ -53,7 +53,7 @@
 
 <p>You might think that it's unusual to set arbitrary properties on DOM nodes. And in many cases it is. But in one important case it's not: XBL. XBL fields are implemented as JavaScript properties on the bound element's wrapper, so they have all the hazards of JavaScript properties.</p>
 
-<p>(On wrapped objects other that DOM nodes, we allow JavaScript programmers to set properties, but we don't do anything to protect them from garbage collection. This makes program behavior depend on when garbage collection happens, which means the API is nondeterministic, which is really bad. This situation may improve at some point in the future. The situation with JavaScript properties on DOM nodes may also improve—see {{bug(283129)}}—but it requires substantial changes.)</p>
+<p>(On wrapped objects other that DOM nodes, we allow JavaScript programmers to set properties, but we don't do anything to protect them from garbage collection. This makes program behavior depend on when garbage collection happens, which means the API is nondeterministic, which is really bad. This situation may improve at some point in the future. The situation with JavaScript properties on DOM nodes may also improve—see <!-- {{bug(283129)}} -->—but it requires substantial changes.)</p>
 
 <h3 id="Things_not_to_do" name="Things_not_to_do">Things not to do</h3>
 
@@ -63,9 +63,9 @@
 
 <p>Storing temporary objects permanently in global variables will leak memory in garbage-collected languages. That it leaks in the XPCOM+JavaScript world isn't at all special.</p>
 
-<p>The most common way this is done in JavaScript is on implementations of observer interfaces like <code>nsIObserver</code> in JavaScript. If you implement <code>nsIObserver</code> in JavaScript and register that observer (without using weak references) with a service (for example, with the observer service {{bug(239833)}} or with the pref service {{bug(256822)}}), the service will do exactly what you tell it to do: notify the observer you just created until you unregister the observer. <strong>If you don't unregister the observer</strong>, the observer, the JavaScript global object for the context in which it was created, and a bunch of associated objects will all leak for the lifetime of the application.</p>
+<p>The most common way this is done in JavaScript is on implementations of observer interfaces like <code>nsIObserver</code> in JavaScript. If you implement <code>nsIObserver</code> in JavaScript and register that observer (without using weak references) with a service (for example, with the observer service <!-- {{bug(239833)}} --> or with the pref service <!-- {{bug(256822)}} -->), the service will do exactly what you tell it to do: notify the observer you just created until you unregister the observer. <strong>If you don't unregister the observer</strong>, the observer, the JavaScript global object for the context in which it was created, and a bunch of associated objects will all leak for the lifetime of the application.</p>
 
-<p>It's also worth noting that failing to unregister an observer that's attached to something temporary (such as a controller or event listener) can cause the garbage collector to take an extra cycle to clean up everything that was associated with a document if the temporary object itself is destroyed as a result of garbage collection. See <a class="link-https" href="https://bugzilla.mozilla.org/attachment.cgi?id=139368">one of the patches</a> in {{bug(231384)}} for some examples.</p>
+<p>It's also worth noting that failing to unregister an observer that's attached to something temporary (such as a controller or event listener) can cause the garbage collector to take an extra cycle to clean up everything that was associated with a document if the temporary object itself is destroyed as a result of garbage collection. See <a class="link-https" href="https://bugzilla.mozilla.org/attachment.cgi?id=139368">one of the patches</a> in <!-- {{bug(231384)}} --> for some examples.</p>
 
 <h4 id="Don.27t_create_cycles_through_XPCOM" name="Don.27t_create_cycles_through_XPCOM">Don't create cycles through XPCOM</h4>
 
@@ -104,7 +104,7 @@ function test() {
 }
 </pre>
 
-<p>This shows that closures are quite powerful. But it's also easy to accidentally use that power when it's not needed. Consider this example from {{bug(285065)}}:</p>
+<p>This shows that closures are quite powerful. But it's also easy to accidentally use that power when it's not needed. Consider this example from <!-- {{bug(285065)}} -->:</p>
 
 <pre class="eval">           function _filterRadioGroup(aNode) {
              switch (aNode.localName) {
@@ -125,7 +125,7 @@ function test() {
 
 <p>Simply assigning <code>iterator = null</code> before the <code>return</code> is sufficient to fix the leak. However, a better fix is to move the filter function outside of the function, since the power of closures is not necessary in this case (and there's also no need to create a new function object for the filter each time this code is executed).</p>
 
-<p>This same problem can also happen if the function is inside of an object. Consider the example of {{bug(170022)}} (which also demonstrates a leak via a global variable, fixed later in {{bug(231266)}}):</p>
+<p>This same problem can also happen if the function is inside of an object. Consider the example of <!-- {{bug(170022)}} --> (which also demonstrates a leak via a global variable, fixed later in <!-- {{bug(231266)}} -->):</p>
 
 <pre class="eval">const observer = {
   observe: function(subject, topic, data)
@@ -152,5 +152,5 @@ service.addObserver(observer, "open-new-tab-request", false);
 <h3 id="Further_reading" name="Further_reading">Further reading</h3>
 
 <ul>
- <li>{{interwiki('wikimo', 'Performance:Leak_Tools', 'Finding leaks in Mozilla')}} - How to debug leaks when they do occur.</li>
+ <li><!-- {{interwiki('wikimo', 'Performance:Leak_Tools', 'Finding leaks in Mozilla')}} --> - How to debug leaks when they do occur.</li>
 </ul>

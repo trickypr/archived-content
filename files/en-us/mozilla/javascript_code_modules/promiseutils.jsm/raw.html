@@ -1,6 +1,6 @@
-<p>{{ gecko_minversion_header("36") }}</p>
+<p><!-- {{ gecko_minversion_header("36") }} --></p>
 
-<p>The <code>PromiseUtils.jsm</code> JavaScript code module offers some useful functions related to {{jsxref("Global_Objects/Promise", "DOM Promise", "", 1)}}. To use it, you first need to import the code module into your JavaScript scope:</p>
+<p>The <code>PromiseUtils.jsm</code> JavaScript code module offers some useful functions related to <!-- {{jsxref("Global_Objects/Promise", "DOM Promise", "", 1)}} -->. To use it, you first need to import the code module into your JavaScript scope:</p>
 
 <pre>Components.utils.import("resource://gre/modules/PromiseUtils.jsm");
 </pre>
@@ -21,10 +21,10 @@
  </p><h3 id="defer()">defer()</h3>
 <p></p>
 
-<p>Creates a new pending {{jsxref("Global_Objects/Promise", "Promise")}} and provides methods to resolve or reject this {{jsxref("Global_Objects/Promise", "Promise")}}.</p>
+<p>Creates a new pending <!-- {{jsxref("Global_Objects/Promise", "Promise")}} --> and provides methods to resolve or reject this <!-- {{jsxref("Global_Objects/Promise", "Promise")}} -->.</p>
 
 <div class="note">
-<p>This method was previously implemented as <a href="/en-US/docs/Mozilla/JavaScript_code_modules/Promise.jsm#defer()" title="Promise.defer()">Promise.defer()</a>, which is obsolete since Gecko 30. And <code>PromiseUtils.defer</code> uses {{jsxref("Global_Objects/Promise", "DOM Promise", "", 1)}} instead of <code><a href="/en-US/docs/Mozilla/JavaScript_code_modules/Promise.jsm/Promise" title="PromiseUtils.jsm/Promise">Promise.jsm's Promise</a>.</code></p>
+<p>This method was previously implemented as <a href="/en-US/docs/Mozilla/JavaScript_code_modules/Promise.jsm#defer()" title="Promise.defer()">Promise.defer()</a>, which is obsolete since Gecko 30. And <code>PromiseUtils.defer</code> uses <!-- {{jsxref("Global_Objects/Promise", "DOM Promise", "", 1)}} --> instead of <code><a href="/en-US/docs/Mozilla/JavaScript_code_modules/Promise.jsm/Promise" title="PromiseUtils.jsm/Promise">Promise.jsm's Promise</a>.</code></p>
 </div>
 
 <pre><code>Deferred defer();
@@ -41,7 +41,7 @@
 <h2 id="See_also"><code>See also</code></h2>
 
 <ul>
- <li><code>{{jsxref("Global_Objects/Promise", "DOM Promise", "", 1)}}</code></li>
+ <li><code><!-- {{jsxref("Global_Objects/Promise", "DOM Promise", "", 1)}} --></code></li>
  <li><a href="/en-US/docs/Mozilla/JavaScript_code_modules/Promise.jsm/Deferred" title="PromiseUtils.jsm/Deferred">Deferred (PromiseUtils.jsm)</a></li>
  <li><a href="/en-US/docs/Mozilla/JavaScript_code_modules/Promise.jsm/Promise" title="Promise.jsm/Promise">Promise (Promise.jsm)</a></li>
  <li><a class="internal" href="/en-US/docs/JavaScript_code_modules/Using" title="Using JavaScript code modules">Using JavaScript code modules</a></li>

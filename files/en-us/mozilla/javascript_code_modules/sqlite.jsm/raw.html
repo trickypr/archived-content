@@ -1,4 +1,4 @@
-<p>{{ gecko_minversion_header("20.0") }}</p>
+<p><!-- {{ gecko_minversion_header("20.0") }} --></p>
 
 <p>The <code>Sqlite.jsm </code>JavaScript code module is a promise-based wrapper around the Storage/SQLite interface. <code>Sqlite.jsm</code> offers some compelling advantages over the low-level Storage XPCOM interfaces:</p>
 
@@ -10,7 +10,7 @@
  <li>JavaScript-y API. <code>Sqlite.jsm</code> feels like a pure JavaScript module. The complexities of XPCOM are mostly hidden from view. JavaScript programmers should feel right at home using <code>Sqlite.jsm</code>.</li>
 </ul>
 
-<p>{{ note("The <code>Sqlite.jsm</code> JavaScript code module can only be used from chrome -- that is, from within the application itself or an add-on.") }}</p>
+<p><!-- {{ note("The <code>Sqlite.jsm</code> JavaScript code module can only be used from chrome -- that is, from within the application itself or an add-on.") }} --></p>
 
 <p>Before you can use this module, you need to import it into your scope:</p>
 
@@ -159,9 +159,9 @@ try {
 
 <p>Parameters can be bound to the statement by defining the <code>params </code>argument. This argument can be an array of positional parameters or an object of named parameters. If the statement does not contain any bound parameters, this argument can be omitted or specified as null.</p>
 
-<p>{{ note("Callers are strongly encouraged to use bound parameters instead of dynamically creating SQL statements for security reasons. Bound parameters aren't prone to SQL injection like manual SQL statement construction (e.g., concatenating a raw value into the executed SQL statement).") }}</p>
+<p><!-- {{ note("Callers are strongly encouraged to use bound parameters instead of dynamically creating SQL statements for security reasons. Bound parameters aren't prone to SQL injection like manual SQL statement construction (e.g., concatenating a raw value into the executed SQL statement).") }} --></p>
 
-<div class="line" id="LC381"><span class="cm">{{ note("Callers are encouraged to pass objects rather than Arrays for bound parameters because they prevent foot guns. With positional arguments, it is simple to modify the parameter count or positions without fixing all users of the statement. Objects/named parameters are a little safer because changes in the order of parameters in the statement won't change how values are bound to those parameters.") }}</span></div>
+<div class="line" id="LC381"><span class="cm"><!-- {{ note("Callers are encouraged to pass objects rather than Arrays for bound parameters because they prevent foot guns. With positional arguments, it is simple to modify the parameter count or positions without fixing all users of the statement. Objects/named parameters are a little safer because changes in the order of parameters in the statement won't change how values are bound to those parameters.") }} --></span></div>
 
 <div class="line"> </div>
 

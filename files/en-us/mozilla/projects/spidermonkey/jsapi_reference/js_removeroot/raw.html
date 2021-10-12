@@ -1,6 +1,6 @@
 <div>
- {{SpiderMonkeySidebar("JSAPI")}}</div>
-<p>{{ obsolete_header("jsapi31") }}</p>
+ <!-- {{SpiderMonkeySidebar("JSAPI")}} --></div>
+<p><!-- {{ obsolete_header("jsapi31") }} --></p>
 <div class="summary">
  <p>Unregisters a pointer to a GC thing so that it is no longer a member of the garbage collector's root set. This enables any pointed-at GC thing to be garbage collected as needed.</p>
 </div>
@@ -23,22 +23,22 @@ JS_RemoveGCThingRoot(JSContext *cx, void **rp);
   </tr>
   <tr>
    <td><code>cx</code></td>
-   <td>{{jsapixref("JSRuntime", "JSContext *")}}</td>
-   <td>A context. {{ Jsapi-requires-request() }}</td>
+   <td><!-- {{jsapixref("JSRuntime", "JSContext *")}} --></td>
+   <td>A context. <!-- {{ Jsapi-requires-request() }} --></td>
   </tr>
   <tr>
    <td><code>vp</code></td>
-   <td>{{jsapixref("jsval", "jsval *")}}</td>
+   <td><!-- {{jsapixref("jsval", "jsval *")}} --></td>
    <td>Address of the <code>jsval</code> variable to remove from the root set.  This must have been passed to either JS_AddValueRoot or JS_AddNamedValueRoot.</td>
   </tr>
   <tr>
    <td><code>spp</code></td>
-   <td>{{jsapixref("JSString", "JSString *")}}</td>
+   <td><!-- {{jsapixref("JSString", "JSString *")}} --></td>
    <td>Address of the <code>JSString*</code> variable to remove from the root set.  This must have been passed to either JS_AddStringRoot or JS_AddNamedStringRoot.</td>
   </tr>
   <tr>
    <td><code>opp</code></td>
-   <td>{{jsapixref("JSObject", "JSObject *")}}</td>
+   <td><!-- {{jsapixref("JSObject", "JSObject *")}} --></td>
    <td>Address of the <code>JSObject*</code> variable to remove from the root set.  This must have been passed to either JS_AddObjectRoot or JS_AddNamedObjectRoot.</td>
   </tr>
   <tr>
@@ -54,9 +54,9 @@ JS_RemoveGCThingRoot(JSContext *cx, void **rp);
 <p><code>JS_RemoveRoot</code> always returns <code>JS_TRUE</code>.</p>
 <h2 id="See_Also" name="See_Also">See Also</h2>
 <ul>
- <li>{{ LXRSearch("ident", "i", "JS_RemoveValueRoot") }}</li>
- <li>{{ LXRSearch("ident", "i", "JS_RemoveStringRoot") }}</li>
- <li>{{ LXRSearch("ident", "i", "JS_RemoveObjectRoot") }}</li>
- <li>{{ LXRSearch("ident", "i", "JS_RemoveGCThingRoot") }}</li>
- <li>{{bug(912581)}}</li>
+ <li><!-- {{ LXRSearch("ident", "i", "JS_RemoveValueRoot") }} --></li>
+ <li><!-- {{ LXRSearch("ident", "i", "JS_RemoveStringRoot") }} --></li>
+ <li><!-- {{ LXRSearch("ident", "i", "JS_RemoveObjectRoot") }} --></li>
+ <li><!-- {{ LXRSearch("ident", "i", "JS_RemoveGCThingRoot") }} --></li>
+ <li><!-- {{bug(912581)}} --></li>
 </ul>

@@ -1,4 +1,4 @@
-<p>{{DefaultAPISidebar("Simple Push API")}}{{Obsolete_Header("51")}}{{Non-standard_Header}}</p>
+<p><!-- {{DefaultAPISidebar("Simple Push API")}} --><!-- {{Obsolete_Header("51")}} --><!-- {{Non-standard_Header}} --></p>
 
 <div class="blockIndicator note">
 <p><strong>Note</strong>: The proprietary Simple Push API is deprecated in favor of the W3C <a href="/en-US/docs/Web/API/Push_API">Push API</a>.</p>
@@ -8,7 +8,7 @@
 
 <p>A "push" is just an event sent from a remote server. <span style="line-height: 1.5;">Here is how it works: An app uses the Simple Push API to request a special, unique URL called an endpoint. This request goes to an existing server maintained by Mozilla for this purpose (this is called the "push server"). When the app receives the endpoint back from the push server, the app sends the endpoint to its own server (your app server). The app server stores this endpoint, then when it wants to wake up the app, it calls the endpoint with a version number, and the push server contacts the app with a notification of the version number. The app can be made to do something when it receives the notification, including ignoring it.</span></p>
 
-<p>The Simple Push API extends <code>Window.navigator</code> with a <code>push</code> property which is a {{domxref("PushManager")}} object, and adds some new events you can receive to monitor the push status.</p>
+<p>The Simple Push API extends <code>Window.navigator</code> with a <code>push</code> property which is a <!-- {{domxref("PushManager")}} --> object, and adds some new events you can receive to monitor the push status.</p>
 
 <h2 id="Example_showing_the_basics">Example showing the basics</h2>
 
@@ -45,7 +45,7 @@
 
 <h2 id="2._Call_PushManager.register()_to_request_an_endpoint">2. Call PushManager.register() to request an endpoint</h2>
 
-<p>The app needs to request an endpoint by calling {{domxref("PushManager.register")}}. You have to decide when this should be called. You could call it when the user has logged in to your service, or when the user decides to start watching a soccer match, or at some other point. The code below is one way to do it.</p>
+<p>The app needs to request an endpoint by calling <!-- {{domxref("PushManager.register")}} -->. You have to decide when this should be called. You could call it when the user has logged in to your service, or when the user decides to start watching a soccer match, or at some other point. The code below is one way to do it.</p>
 
 <pre class="brush: js"><span class="k">if</span> <span class="p">(</span><span class="nx">navigator</span><span class="p">.</span><span class="nx">push</span><span class="p">)</span> <span class="p">{
   // Request the endpoint. This uses PushManager.register().</span>
@@ -161,12 +161,12 @@
 
 <h3 id="Unregister_an_endpoint">Unregister an endpoint</h3>
 
-<p>Once you finish using an endpoint and you do not want to receive more notifications, we kindly ask you to unregister the old endpoint using {{domxref("PushManager.unregister")}}. This will clean up the amount of data the device sends to the push server, and will also will lower the battery usage by not sending notifications for apps that will not use them.</p>
+<p>Once you finish using an endpoint and you do not want to receive more notifications, we kindly ask you to unregister the old endpoint using <!-- {{domxref("PushManager.unregister")}} -->. This will clean up the amount of data the device sends to the push server, and will also will lower the battery usage by not sending notifications for apps that will not use them.</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>{{domxref("PushManager")}}</li>
+ <li><!-- {{domxref("PushManager")}} --></li>
  <li><a href="/en-US/docs/Web/API/Navigator.push">Window.navigator.push</a></li>
  <li><a href="https://github.com/frsela/pushJSlibrary" title="https://github.com/frsela/pushJSlibrary">pushJSLibrary, a push shim for browsers that do not implement the API</a></li>
  <li><a href="https://wiki.mozilla.org/WebAPI/SimplePush">SimplePush original design and discussion page</a></li>

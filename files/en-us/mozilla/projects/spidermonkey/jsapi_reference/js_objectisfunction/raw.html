@@ -1,4 +1,4 @@
-<div>{{SpiderMonkeySidebar("JSAPI")}}</div>
+<div><!-- {{SpiderMonkeySidebar("JSAPI")}} --></div>
 
 <div class="summary">
 <p>Test whether a given object is a <code>Function</code>.</p>
@@ -19,12 +19,12 @@ JS_ObjectIsFunction(JSContext *cx, JSObject *obj);
   </tr>
   <tr>
    <td><code>cx</code></td>
-   <td>{{jsapixref("JSRuntime", "JSContext *")}}</td>
+   <td><!-- {{jsapixref("JSRuntime", "JSContext *")}} --></td>
    <td>A context.</td>
   </tr>
   <tr>
    <td><code>obj</code></td>
-   <td>{{jsapixref("JSObject", "JSObject *")}}</td>
+   <td><!-- {{jsapixref("JSObject", "JSObject *")}} --></td>
    <td>The object to test. This must not be <code>NULL</code>.</td>
   </tr>
  </tbody>
@@ -36,12 +36,12 @@ JS_ObjectIsFunction(JSContext *cx, JSObject *obj);
 
 <p><code>JS_ObjectIsFunction</code> returns <code>true</code> if <code>obj</code> is a <code>Function</code> and <code>false</code> otherwise.</p>
 
-<p>If <code>JS_ObjectIsFunction</code> returns <code>true</code>, {{jsapixref("JS_ValueToFunction")}} will always return non-null. {{jsapixref("JS_ObjectIsFunction")}} always succeeds. Note that the result may be <code>false</code> even for some callable objects, such as regular expression objects or proxy objects</p>
+<p>If <code>JS_ObjectIsFunction</code> returns <code>true</code>, <!-- {{jsapixref("JS_ValueToFunction")}} --> will always return non-null. <!-- {{jsapixref("JS_ObjectIsFunction")}} --> always succeeds. Note that the result may be <code>false</code> even for some callable objects, such as regular expression objects or proxy objects</p>
 
 <h2 id="See_Also" name="See_Also">See Also</h2>
 
 <ul>
- <li>{{ LXRSearch("ident", "i", "JS_ObjectIsFunction") }}</li>
- <li>{{jsapixref("JS_ValueToFunction")}}</li>
- <li>{{jsapixref("JS_ObjectIsFunction")}}</li>
+ <li><!-- {{ LXRSearch("ident", "i", "JS_ObjectIsFunction") }} --></li>
+ <li><!-- {{jsapixref("JS_ValueToFunction")}} --></li>
+ <li><!-- {{jsapixref("JS_ObjectIsFunction")}} --></li>
 </ul>

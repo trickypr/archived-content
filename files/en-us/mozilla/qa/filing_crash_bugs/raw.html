@@ -16,19 +16,19 @@
  </li>
  <li>Include the top few stack frames in the bug; you can cut the list off at a point where the frames seem generic and unrelated to the issue. However, if you are not sure, it is better to include them all.
   <ul>
-   <li>This is another step that involves guessing. It is advisable not to go beyond 10-15 frames. Often, you have something generic like <code>nsThread::ProcessNextEvent</code> in there, which usually is a good point to cut off and add a "[...]" at the end. For example, see how this was done in {{bug(1074196)}}.</li>
+   <li>This is another step that involves guessing. It is advisable not to go beyond 10-15 frames. Often, you have something generic like <code>nsThread::ProcessNextEvent</code> in there, which usually is a good point to cut off and add a "[...]" at the end. For example, see how this was done in <!-- {{bug(1074196)}} -->.</li>
    <li>"Generic" in this context means something which doesn't likely pertain to the problem, such as a support functions. If the code in question is part of an event loop, for example (stuff like "ProcessNextEvent" or would suggest this), frames like that would be considered generic. Also, functions that only handle the error but didn't produce it themselves, like "malloc_abort" are also pretty generic.</li>
   </ul>
  </li>
  <li>While raising a bug aboout a crash you have encountered, you should also mention what were you doing when that crash occured.</li>
  <li>If you file the bug based on data, please include data about when it appeared, how high it is in overall volume (and top crash reports). Describe any unusual characteristics, such as "Only happening on specific OSes, specific Firefox versions, specific Graphics cards, or significant correlations with any modules or add-ons". Also, if comments tell anything about commonalities of actions and possible steps to reproduce, please include that. See the walkthrough below for some tips on how to get that.</li>
  <li>Include any clues you have about how to reproduce this crash. When a developer can reproduce the crash, it is very likely they can find a fix as well. When reproducible, please add the REPRODUCIBLE keyword in Bugzilla.</li>
- <li>Examples of good crash bug reports: {{bug(1035168)}}.</li>
+ <li>Examples of good crash bug reports: <!-- {{bug(1035168)}} -->.</li>
 </ul>
 
 <h2 id="Example_walkthrough">Example walkthrough</h2>
 
-<p>Let's use {{bug(1074196)}} as an example again. As mentioned at the start of the first comment on the bug, it was filed from <a href="https://crash-stats.mozilla.com/report/index/fd16294d-0bbf-4530-b2d4-65c2d2140929">this crash report</a>. This crash report expires six months after it was submitted and some info is only shown for a shorter time, so you might not see the same information.</p>
+<p>Let's use <!-- {{bug(1074196)}} --> as an example again. As mentioned at the start of the first comment on the bug, it was filed from <a href="https://crash-stats.mozilla.com/report/index/fd16294d-0bbf-4530-b2d4-65c2d2140929">this crash report</a>. This crash report expires six months after it was submitted and some info is only shown for a shorter time, so you might not see the same information.</p>
 
 <p>The lower section of the report has the crash stack with a header of "Crashing Thread". The right-hand column of this table has the file names that link to the actual code. For example clicking the first one there goes to line 228 of nsUrlClassifierPrefixSet.cpp, I click the "gpascutto@197683" link on the left next to the code line 228, which links to the actual code changes that a person with the (nick) name of gpascutto did in the changeset no. 197683 of our code. From there, I click again on the link "9d24ecc84a50" (that is a random identifier for this changeset) next to "changeset 197683". That makes me see the actual comment that gpascutto made for this changeset, in this case, "Bug 1046038 - Replace linear prefix array by array of arrays. r=mmc". Finally, I can click on the bug linked there and look at their data, like product and component.</p>
 

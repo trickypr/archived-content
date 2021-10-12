@@ -1,4 +1,4 @@
-<p>{{FirefoxSidebar}}</p>
+<p><!-- {{FirefoxSidebar}} --></p>
 
 <p><span class="seoSummary">Command line options are used to specify various startup options for Mozilla applications.</span> For example, if you have multiple profiles you can use command line configuration options to bypass the Profile Manager and open a specific profile. You can also control how Mozilla applications open, which components open initially, and what the components do when they open. <span class="seoSummary">This page describes the commonly used options and how to use them. You can open the command line interface by pressing <kbd>Shift</kbd>+<kbd>F2</kbd>.</span></p>
 
@@ -104,7 +104,7 @@
 </pre>
 
 <div class="blockIndicator note">
-<p><strong>Note: </strong>Not available for Windows; see {{bug(855899)}}.</p>
+<p><strong>Note: </strong>Not available for Windows; see <!-- {{bug(855899)}} -->.</p>
 </div>
 
 <h3 id="-no-remote" name="-no-remote"><code>-no-remote</code></h3>
@@ -115,12 +115,12 @@
 </pre>
 
 <div class="blockIndicator note">
-<p><strong>Note: </strong>Since Firefox 9, this does really mean what its name implies on all platforms. i.e. instances created with this parameter do not accept or send remote commands, see {{bug(650078)}}. That means that such instances won't be re-used. Also when using this argument a new instance is created in any case.</p>
+<p><strong>Note: </strong>Since Firefox 9, this does really mean what its name implies on all platforms. i.e. instances created with this parameter do not accept or send remote commands, see <!-- {{bug(650078)}} -->. That means that such instances won't be re-used. Also when using this argument a new instance is created in any case.</p>
 </div>
 
 <h3 id="-override_.2Fpath.2Fto.2Foverride.ini" name="-override_.2Fpath.2Fto.2Foverride.ini"><code>-override <em>/path/to/</em>override.ini</code></h3>
 
-<p>Load the specified <code>override.ini</code> file to override <code>application.ini</code> ({{Source("browser/app/application.ini")}}). This can be used to suppress the migration wizard at startup by loading the following <code>override.ini</code>. <strong>Firefox</strong> only.</p>
+<p>Load the specified <code>override.ini</code> file to override <code>application.ini</code> (<!-- {{Source("browser/app/application.ini")}} -->). This can be used to suppress the migration wizard at startup by loading the following <code>override.ini</code>. <strong>Firefox</strong> only.</p>
 
 <pre class="brush: ini; notranslate">[XRE]
 EnableProfileMigrator=0</pre>
@@ -148,7 +148,7 @@ EnableProfileMigrator=0</pre>
 <p><code>"profile_path"</code> can either be an absolute path (<code>"<var>/path/to/profile</var>"</code>) or a relative path <code>("<var>path/to/profile</var>"</code>).</p>
 
 <div class="blockIndicator note">
-<p><strong>Note: </strong>On macOS, specifying a relative path is not supported anymore from Firefox 4.0 and up due to a regression; see {{bug(673955)}}.</p>
+<p><strong>Note: </strong>On macOS, specifying a relative path is not supported anymore from Firefox 4.0 and up due to a regression; see <!-- {{bug(673955)}} -->.</p>
 </div>
 
 <h2 id="Browser" name="Browser">Browser</h2>
@@ -356,7 +356,7 @@ firefox www.mozilla.com developer.mozilla.org</pre>
 
 <h2 id="Add-ons" name="Add-ons">Add-ons</h2>
 
-<p>{{Gecko_MinVersion_Note(1.9.2, "-install-global-extension and -install-global-theme have been removed from Gecko 1.9.2 and upwards.")}}</p>
+<p><!-- {{Gecko_MinVersion_Note(1.9.2, "-install-global-extension and -install-global-theme have been removed from Gecko 1.9.2 and upwards.")}} --></p>
 
 <h3 id="-install-global-extension_.2Fpath.2Fto.2Fextension" name="-install-global-extension_.2Fpath.2Fto.2Fextension"><code>-install-global-extension <var>/path/to/extension</var></code></h3>
 
@@ -376,10 +376,10 @@ firefox www.mozilla.com developer.mozilla.org</pre>
 
 <h2 id="Remote_Control" name="Remote_Control">Remote control</h2>
 
-<h3 id="-remote_remote_command" name="-remote_remote_command"><code>-remote <var>remote_command</var></code><var> {{Obsolete_Inline}}</var></h3>
+<h3 id="-remote_remote_command" name="-remote_remote_command"><code>-remote <var>remote_command</var></code><var> <!-- {{Obsolete_Inline}} --></var></h3>
 
 <div class="blockIndicator note">
-<p><var>This feature was removed in Firefox 36.0, restored in 36.0.1 and removed again in 39.0. S</var>ee {{bug(1080319)}}.</p>
+<p><var>This feature was removed in Firefox 36.0, restored in 36.0.1 and removed again in 39.0. S</var>ee <!-- {{bug(1080319)}} -->.</p>
 </div>
 
 <p>Execute the specified <code><var>remote_command</var></code> in an already running application process.</p>
@@ -407,15 +407,15 @@ firefox www.mozilla.com developer.mozilla.org</pre>
 
 <h3 id="-h_or_-help_or_-.3F" name="-h_or_-help_or_-.3F"><code>-h</code> or <code>-help</code> or <code>-?</code></h3>
 
-<p>Print the list of all available command line options. Note that on Windows this only works with a redirection, such as <code><span class="nowiki">|more</span></code> ({{Bug(355889)}}). This option is available only in a command console.</p>
+<p>Print the list of all available command line options. Note that on Windows this only works with a redirection, such as <code><span class="nowiki">|more</span></code> (<!-- {{Bug(355889)}} -->). This option is available only in a command console.</p>
 
 <h3 id="-osint" name="-osint"><code>-osint</code></h3>
 
-<p>Tells the application that it is being launched by the OS shell. This should not be specified unless the caller provides all of the functionality provided by the OS shell when launching the application ({{Bug(384384)}}).</p>
+<p>Tells the application that it is being launched by the OS shell. This should not be specified unless the caller provides all of the functionality provided by the OS shell when launching the application (<!-- {{Bug(384384)}} -->).</p>
 
 <h3 id="-requestPending" name="-requestPending"><code>-requestPending</code></h3>
 
-<p>Tells the application that there will be a Windows DDE request to open the same url specified on the command line. This should not be specified unless the caller provides all of the functionality provided by the OS shell when launching the application ({{Bug(354005)}}).</p>
+<p>Tells the application that there will be a Windows DDE request to open the same url specified on the command line. This should not be specified unless the caller provides all of the functionality provided by the OS shell when launching the application (<!-- {{Bug(354005)}} -->).</p>
 
 <h3 id="-silent" name="-silent"><code>-silent</code></h3>
 
@@ -423,7 +423,7 @@ firefox www.mozilla.com developer.mozilla.org</pre>
 
 <h3 id="-v_or_-version" name="-v_or_-version"><code>-v</code> or <code>-version</code></h3>
 
-<p>Print application version. Note that on Windows this only works with a redirection such as <code><span class="nowiki">|more</span></code> ({{Bug(355889)}}). This option is available only in a command console.</p>
+<p>Print application version. Note that on Windows this only works with a redirection such as <code><span class="nowiki">|more</span></code> (<!-- {{Bug(355889)}} -->). This option is available only in a command console.</p>
 
 <h3 id="X11_options">X11 options</h3>
 
@@ -465,10 +465,10 @@ firefox www.mozilla.com developer.mozilla.org</pre>
 <ul>
  <li><a href="/en-US/docs/Chrome/Command_Line" title="Chrome/Command_Line">Chrome: Command Line</a></li>
  <li><a class="external" href="http://www-archive.mozilla.org/quality/browser/front-end/testcases/cmd-line/">Test Documentation for Command-line Features</a> (mozilla.org)</li>
- <li>{{Source("toolkit/xre/nsAppRunner.cpp")}}</li>
- <li>{{Source("browser/components/nsBrowserContentHandler.js")}}</li>
- <li>{{Source("suite/browser/nsBrowserContentHandler.js")}}</li>
- <li>{{Source("mail/components/nsMailDefaultHandler.js")}}</li>
+ <li><!-- {{Source("toolkit/xre/nsAppRunner.cpp")}} --></li>
+ <li><!-- {{Source("browser/components/nsBrowserContentHandler.js")}} --></li>
+ <li><!-- {{Source("suite/browser/nsBrowserContentHandler.js")}} --></li>
+ <li><!-- {{Source("mail/components/nsMailDefaultHandler.js")}} --></li>
  <li><a class="link-https" href="https://wiki.mozilla.org/Installer:Command_Line_Arguments">Installer command line options</a></li>
 </ul>
 

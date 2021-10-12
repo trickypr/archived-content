@@ -1,9 +1,9 @@
-<div>{{SpiderMonkeySidebar("JSAPI")}}</div>
+<div><!-- {{SpiderMonkeySidebar("JSAPI")}} --></div>
 
-<p>{{ obsolete_header("jsapi8") }}</p>
+<p><!-- {{ obsolete_header("jsapi8") }} --></p>
 
 <div class="summary">
-<p>Return the JavaScript script object that wraps a {{jsapixref("JS_CompileScript", "compiled script", "", 1)}}. The compiled script and its parts live until the script object is garbage collected.</p>
+<p>Return the JavaScript script object that wraps a <!-- {{jsapixref("JS_CompileScript", "compiled script", "", 1)}} -->. The compiled script and its parts live until the script object is garbage collected.</p>
 </div>
 
 <h2 id="Syntax" name="Syntax">Syntax</h2>
@@ -21,12 +21,12 @@ JS_NewScriptObject(JSContext *cx, JSScript *script);
   </tr>
   <tr>
    <td><code>cx</code></td>
-   <td>{{jsapixref("JSRuntime", "JSContext *")}}</td>
-   <td>The context in which to create the new script object. {{ Jsapi-requires-request() }}</td>
+   <td><!-- {{jsapixref("JSRuntime", "JSContext *")}} --></td>
+   <td>The context in which to create the new script object. <!-- {{ Jsapi-requires-request() }} --></td>
   </tr>
   <tr>
    <td><code>script</code></td>
-   <td>{{jsapixref("JSScript", "JSScript *")}}</td>
+   <td><!-- {{jsapixref("JSScript", "JSScript *")}} --></td>
    <td>The compiled script for which to create a new script object.</td>
   </tr>
  </tbody>
@@ -36,7 +36,7 @@ JS_NewScriptObject(JSContext *cx, JSScript *script);
 
 <p><code>JS_NewScriptObject</code> returns the script object associated with the given <code>JSScript</code>.</p>
 
-<p>Every JSScript object has an associated JSObject <em>script object</em>. As long as the script object is reachable, the JSScript and its components are protected from garbage collection; when the script object is collected, the JSScript and its contents are freed. Once you have created a script, you should immediately ensure that its script object is reachable (perhaps by using {{jsapixref("JS_AddRoot")}} or {{jsapixref("JS_EnterLocalRootScope")}}).</p>
+<p>Every JSScript object has an associated JSObject <em>script object</em>. As long as the script object is reachable, the JSScript and its components are protected from garbage collection; when the script object is collected, the JSScript and its contents are freed. Once you have created a script, you should immediately ensure that its script object is reachable (perhaps by using <!-- {{jsapixref("JS_AddRoot")}} --> or <!-- {{jsapixref("JS_EnterLocalRootScope")}} -->).</p>
 
 <p>A script object has no properties, and its prototype is <code>Object.prototype</code>. So a script object can be used to expose a <code><code>JSScript</code></code> to JavaScript code, but the code can't do much of anything with it.</p>
 
@@ -50,6 +50,6 @@ JS_NewScriptObject(JSContext *cx, JSScript *script);
 
 <ul>
  <li>The <a href="/en-US/docs/Mozilla/Projects/SpiderMonkey/JSAPI_User_Guide#Compiled_scripts">JSAPI User Guide</a> contains example code using compiled scripts.</li>
- <li>{{ LXRSearch("ident", "i", "JS_NewScriptObject") }}</li>
- <li>{{bug(630209)}}</li>
+ <li><!-- {{ LXRSearch("ident", "i", "JS_NewScriptObject") }} --></li>
+ <li><!-- {{bug(630209)}} --></li>
 </ul>

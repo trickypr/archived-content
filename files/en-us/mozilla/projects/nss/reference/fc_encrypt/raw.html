@@ -11,11 +11,11 @@
 );
 </pre>
 <h3 id="Parameters"> Parameters </h3>
-<dl><dt><code>hSession</code></dt><dd> {{ mediawiki.external('in') }} session handle.
-</dd><dt><code>pData</code></dt><dd> {{ mediawiki.external('in') }} pointer to the data buffer
-</dd><dt><code>usDataLen</code></dt><dd> {{ mediawiki.external('in') }} length of the data buffer in bytes.
-</dd><dt><code>pEncryptedData</code></dt><dd> {{ mediawiki.external('out') }} pointer to location where encrypted data is to be stored.
-</dd><dt><code>pusEncryptedDataLen</code></dt><dd> {{ mediawiki.external('in/out') }} number of bytes.
+<dl><dt><code>hSession</code></dt><dd> <!-- {{ mediawiki.external('in') }} --> session handle.
+</dd><dt><code>pData</code></dt><dd> <!-- {{ mediawiki.external('in') }} --> pointer to the data buffer
+</dd><dt><code>usDataLen</code></dt><dd> <!-- {{ mediawiki.external('in') }} --> length of the data buffer in bytes.
+</dd><dt><code>pEncryptedData</code></dt><dd> <!-- {{ mediawiki.external('out') }} --> pointer to location where encrypted data is to be stored.
+</dd><dt><code>pusEncryptedDataLen</code></dt><dd> <!-- {{ mediawiki.external('in/out') }} --> number of bytes.
 </dd></dl>
 <h3 id="Description"> Description </h3>
 <p><code>FC_Encrypt</code> encrypts a block of data according to the attributes of the previous call to <code>FC_EncryptInit</code>.

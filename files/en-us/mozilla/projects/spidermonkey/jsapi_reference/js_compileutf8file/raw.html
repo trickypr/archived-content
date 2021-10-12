@@ -1,6 +1,6 @@
-<div>{{SpiderMonkeySidebar("JSAPI")}}</div>
+<div><!-- {{SpiderMonkeySidebar("JSAPI")}} --></div>
 
-<p>{{ obsolete_header("jsapi19") }}</p>
+<p><!-- {{ obsolete_header("jsapi19") }} --></p>
 
 <div class="summary">
 <p>Compile a script, reading the source code from a file.</p>
@@ -21,12 +21,12 @@ JS_CompileUTF8File(JSContext *cx, JSObject *obj, const char *filename);
   </tr>
   <tr>
    <td><code>cx</code></td>
-   <td>{{jsapixref("JSRuntime", "JSContext *")}}</td>
-   <td>The context in which to compile the script. {{ Jsapi-requires-request() }}</td>
+   <td><!-- {{jsapixref("JSRuntime", "JSContext *")}} --></td>
+   <td>The context in which to compile the script. <!-- {{ Jsapi-requires-request() }} --></td>
   </tr>
   <tr>
    <td><code>obj</code></td>
-   <td>{{jsapixref("JSObject", "JSObject *")}}</td>
+   <td><!-- {{jsapixref("JSObject", "JSObject *")}} --></td>
    <td>Object with which the script is associated.</td>
   </tr>
   <tr>
@@ -43,16 +43,16 @@ JS_CompileUTF8File(JSContext *cx, JSObject *obj, const char *filename);
 
 <p>On success, <code>JS_CompileUTF8File</code> returns an object that represents the newly compiled script. Otherwise it returns <code>NULL</code>.</p>
 
-<p><code>JS_CompileUTF8File</code> is deprecated, use <code>FILE</code>, use {{jsapixref("JS::Compile")}} instead.</p>
+<p><code>JS_CompileUTF8File</code> is deprecated, use <code>FILE</code>, use <!-- {{jsapixref("JS::Compile")}} --> instead.</p>
 
 <h2 id="See_Also" name="See_Also">See Also</h2>
 
 <ul>
  <li>The <a href="/en-US/docs/Mozilla/Projects/SpiderMonkey/JSAPI_User_Guide#Compiled_scripts">JSAPI User Guide</a> contains example code using compiled scripts.</li>
- <li>{{ LXRSearch("ident", "i", "JS_CompileFile") }}</li>
- <li>{{jsapixref("JS::Compile")}}</li>
- <li>{{jsapixref("JS_DecompileScript")}}</li>
- <li>{{jsapixref("JS::Evaluate")}}</li>
- <li>{{jsapixref("JS_ExecuteScript")}}</li>
- <li>{{bug(805080)}}</li>
+ <li><!-- {{ LXRSearch("ident", "i", "JS_CompileFile") }} --></li>
+ <li><!-- {{jsapixref("JS::Compile")}} --></li>
+ <li><!-- {{jsapixref("JS_DecompileScript")}} --></li>
+ <li><!-- {{jsapixref("JS::Evaluate")}} --></li>
+ <li><!-- {{jsapixref("JS_ExecuteScript")}} --></li>
+ <li><!-- {{bug(805080)}} --></li>
 </ul>

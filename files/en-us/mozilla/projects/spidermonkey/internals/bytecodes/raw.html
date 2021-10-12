@@ -1,5 +1,5 @@
 <div>
- {{SpiderMonkeySidebar("Internals")}}</div>
+ <!-- {{SpiderMonkeySidebar("Internals")}} --></div>
 <h2 id="Background">Background</h2>
 <p>SpiderMonkey bytecodes are the canonical form of code representation that is used in the JavaScript engine. The JavaScript frontend constructs an AST from the source text, then emits stack-based bytecodes from that AST as a part of the JSScript data structure. Bytecodes can reference atoms and objects (typically by array index) which are also contained in the JSScript data structure.</p>
 <p>Within the engine, all bytecode execute within a stack frame -- even global (top-level) and eval code has a stack frame associated with it. A frame on the stack has space for JavaScript Values (the tagged value format) in a few different categories. The space for a single JavaScript value is called a "slot", so the categories are:</p>

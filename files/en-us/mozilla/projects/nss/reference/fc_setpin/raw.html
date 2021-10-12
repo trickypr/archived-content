@@ -14,15 +14,15 @@
 <p><code>FC_SetPIN</code> takes five parameters:
 </p>
 <dl><dt><code>hSession</code>
-</dt><dd>{{ mediawiki.external('Input') }} the session's handle
+</dt><dd><!-- {{ mediawiki.external('Input') }} --> the session's handle
 </dd><dt><code>pOldPin</code>
-</dt><dd>{{ mediawiki.external('Input') }} points to the old PIN.
+</dt><dd><!-- {{ mediawiki.external('Input') }} --> points to the old PIN.
 </dd><dt><code>ulOldLen</code>
-</dt><dd>{{ mediawiki.external('Input') }} the length in bytes of the old PIN.
+</dt><dd><!-- {{ mediawiki.external('Input') }} --> the length in bytes of the old PIN.
 </dd><dt><code>pNewPin</code>
-</dt><dd>{{ mediawiki.external('Input') }} points to the new PIN.
+</dt><dd><!-- {{ mediawiki.external('Input') }} --> points to the new PIN.
 </dd><dt><code>ulNewLen</code>
-</dt><dd>{{ mediawiki.external('Input') }} the length in bytes of the new PIN.
+</dt><dd><!-- {{ mediawiki.external('Input') }} --> the length in bytes of the new PIN.
 </dd></dl>
 <h3 id="Description"> Description </h3>
 <p><code>FC_SetPIN</code> modifies the PIN of the user. The user must log into the token (to assume the NSS User role) before calling <code>FC_SetPIN</code>.

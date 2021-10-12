@@ -1,4 +1,4 @@
-<p>{{AddonSidebar}}</p>
+<p><!-- {{AddonSidebar}} --></p>
 
 <p>Currently, Thunderbird tends to eat a lot of exceptions. Some make it to the error console, most don't. There are deep fixes to the platform needed (e.g. <a class="external" href="http://bugzilla.mozilla.org/show_bug.cgi?id=493414" title="http://bugzilla.mozilla.org/show_bug.cgi?id=493414">bug 493414</a>), but in the meantime, it would be helpful to be able to get useful output on <code>stderr</code> about exceptions, events and pretty-printed objects.</p>
 
@@ -80,7 +80,7 @@ timeStamp: 2080434436
 
 <p>If faced with a generic JavaScript object, you can get detailed debugging output as follows. For example, given:</p>
 
-<pre class="brush: js"><code>let x = {'foo': 123, 'bar': {'sub-key': 1, 'sub-key-2': 'tomato'}};</code></pre>
+<pre class="brush: js"><code>let x = {'foo': 123, 'bar': {'sub-key': 1, 'sub-key-2': 'tomato'}} -->;</code></pre>
 
 <p> Do:<code> </code></p>
 

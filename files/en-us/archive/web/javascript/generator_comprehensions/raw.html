@@ -1,7 +1,7 @@
-<div>{{JSSidebar("Operators")}}{{Non-standard_Header}}{{Obsolete_Header("gecko58")}}
+<div><!-- {{JSSidebar("Operators")}} --><!-- {{Non-standard_Header}} --><!-- {{Obsolete_Header("gecko58")}} -->
 <div class="blockIndicator warning">
 <p><strong>Non-standard. Do not use!</strong><br>
- The generator comprehensions syntax is non-standard and removed starting with Firefox 58. For future-facing usages, consider using {{JSxRef("Statements/function*", "generator", "", 1)}}.</p>
+ The generator comprehensions syntax is non-standard and removed starting with Firefox 58. For future-facing usages, consider using <!-- {{JSxRef("Statements/function*", "generator", "", 1)}} -->.</p>
 </div>
 </div>
 
@@ -19,13 +19,13 @@
 <p>Inside generator comprehensions, these two kinds of components are allowed:</p>
 
 <ul>
- <li>{{JSxRef("Statements/for...of", "for...of")}} and</li>
- <li>{{JSxRef("Statements/if...else", "if")}}</li>
+ <li><!-- {{JSxRef("Statements/for...of", "for...of")}} --> and</li>
+ <li><!-- {{JSxRef("Statements/if...else", "if")}} --></li>
 </ul>
 
 <p>The <code>for-of</code> iteration is always the first component. Multiple <code>for-of</code> iterations or if statements are allowed.</p>
 
-<p>A significant drawback of {{JSxRef("Operators/Array_comprehensions","array comprehensions","","true")}} is that they cause an entire new array to be constructed in memory. When the input to the comprehension is itself a small array the overhead involved is insignificant — but when the input is a large array or an expensive (or indeed infinite) generator the creation of a new array can be problematic.</p>
+<p>A significant drawback of <!-- {{JSxRef("Operators/Array_comprehensions","array comprehensions","","true")}} --> is that they cause an entire new array to be constructed in memory. When the input to the comprehension is itself a small array the overhead involved is insignificant — but when the input is a large array or an expensive (or indeed infinite) generator the creation of a new array can be problematic.</p>
 
 <p>Generators enable lazy computation of sequences, with items calculated on-demand as they are needed. Generator comprehensions are syntactically almost identical to array comprehensions — they use parentheses instead of braces— but instead of building an array they create a generator that can execute lazily. You can think of them as short hand syntax for creating generators.</p>
 
@@ -151,12 +151,12 @@ var abc = ['A', 'B', 'C'];
   </ul>
  </li>
  <li>ES7 comprehensions can have multiple <code>if</code> and <code>for</code> components.</li>
- <li>ES7 comprehensions only work with <code>{{JSxRef("Statements/for...of", "for...of")}}</code> and not with <code>{{JSxRef("Statements/for...in", "for...in")}}</code> iterations.</li>
+ <li>ES7 comprehensions only work with <code><!-- {{JSxRef("Statements/for...of", "for...of")}} --></code> and not with <code><!-- {{JSxRef("Statements/for...in", "for...in")}} --></code> iterations.</li>
 </ul>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>{{JSxRef("Statements/for...of", "for...of")}}</li>
- <li>{{JSxRef("Operators/Array_comprehensions", "Array comprehensions")}}</li>
+ <li><!-- {{JSxRef("Statements/for...of", "for...of")}} --></li>
+ <li><!-- {{JSxRef("Operators/Array_comprehensions", "Array comprehensions")}} --></li>
 </ul>

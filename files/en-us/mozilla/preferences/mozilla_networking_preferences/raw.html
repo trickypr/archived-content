@@ -103,17 +103,17 @@
    <td> </td>
   </tr>
   <tr>
-   <td><code><a class="external" href="http://kb.mozillazine.org/Network.http.pipelining" title="http://kb.mozillazine.org/Network.http.pipelining">network.http.pipelining</a></code> {{obsolete_inline("gecko54")}}</td>
+   <td><code><a class="external" href="http://kb.mozillazine.org/Network.http.pipelining" title="http://kb.mozillazine.org/Network.http.pipelining">network.http.pipelining</a></code> <!-- {{obsolete_inline("gecko54")}} --></td>
    <td><code>true</code></td>
    <td>Pipeline support was completely removed in Firefox 54. With the advent of HTTP/2 and other speed enhancements, pipelining of HTTP is no longer useful to maintain.</td>
   </tr>
   <tr>
-   <td><code>network.http.pipelining.firstrequest</code> {{obsolete_inline("gecko54")}}</td>
+   <td><code>network.http.pipelining.firstrequest</code> <!-- {{obsolete_inline("gecko54")}} --></td>
    <td><code>true</code></td>
    <td>Pipeline support was completely removed in Firefox 54. With the advent of HTTP/2 and other speed enhancements, pipelining of HTTP is no longer useful to maintain.</td>
   </tr>
   <tr>
-   <td><code>network.http.pipelining.maxrequests</code> {{obsolete_inline("gecko54")}}</td>
+   <td><code>network.http.pipelining.maxrequests</code> <!-- {{obsolete_inline("gecko54")}} --></td>
    <td><code>8</code></td>
    <td>
     <p>Hard-coded to 8 max so 30 will have no greater effect</p>
@@ -125,7 +125,7 @@
    <td> </td>
   </tr>
   <tr>
-   <td><code>network.http.proxy.pipelining</code> {{obsolete_inline("gecko54")}}</td>
+   <td><code>network.http.proxy.pipelining</code> <!-- {{obsolete_inline("gecko54")}} --></td>
    <td><code>true</code></td>
    <td>Pipeline support was completely removed in Firefox 54. With the advent of HTTP/2 and other speed enhancements, pipelining of HTTP is no longer useful to maintain.</td>
   </tr>
@@ -203,18 +203,18 @@
    <td><strong><code>false</code> (default)</strong><br>
     <code>true</code></td>
    <td>Preferences | Advanced |<br>
-    "<strong>{{ mediawiki.external('x') }} Set this email address as anonymous FTP password:</strong>"<br>
+    "<strong><!-- {{ mediawiki.external('x') }} --> Set this email address as anonymous FTP password:</strong>"<br>
     <br>
-    If false, FTP uses "<code><a class="link-mailto" href="mailto:mozilla@example.com" rel="freelink">mozilla@example.com</a></code>" as anonymous FTP password ({{ Bug("101027") }})<br>
-    If true, FTP uses contents of <code>network.ftp.anonymous_password</code> for anonymous FTP password ({{ Bug("57763") }} comment 28)</td>
+    If false, FTP uses "<code><a class="link-mailto" href="mailto:mozilla@example.com" rel="freelink">mozilla@example.com</a></code>" as anonymous FTP password (<!-- {{ Bug("101027") }} -->)<br>
+    If true, FTP uses contents of <code>network.ftp.anonymous_password</code> for anonymous FTP password (<!-- {{ Bug("57763") }} --> comment 28)</td>
   </tr>
   <tr>
    <td><code>network.ftp.anonymous_password</code></td>
    <td><strong><code>empty</code> (default)<br>
     any text string</strong></td>
    <td>Preferences | Advanced |<br>
-    (under "{{ mediawiki.external(' ') }} Set this email address as anonymous FTP password:")<br>
-    <strong>{{ mediawiki.external('text field') }}</strong><br>
+    (under "<!-- {{ mediawiki.external(' ') }} --> Set this email address as anonymous FTP password:")<br>
+    <strong><!-- {{ mediawiki.external('text field') }} --></strong><br>
     <br>
     If empty, FTP uses "<code><a class="link-mailto" href="mailto:mozilla@example.com" rel="freelink">mozilla@example.com</a></code>" as anonymous FTP password.</td>
   </tr>
@@ -224,7 +224,7 @@
     any integer</td>
    <td>No UI<br>
     Measured in seconds<br>
-    The open connection can prevent other FTP clients on your system from connecting to sites that allow only one control connection ({{ Bug("117875") }})</td>
+    The open connection can prevent other FTP clients on your system from connecting to sites that allow only one control connection (<!-- {{ Bug("117875") }} -->)</td>
   </tr>
   <tr>
    <td><code>network.dir.format</code></td>
@@ -259,16 +259,16 @@
    </td>
    <td>
     <p>Preferences | Advanced | Cache<br>
-     <strong>Cache: {{ mediawiki.external('MB') }} MB</strong></p>
+     <strong>Cache: <!-- {{ mediawiki.external('MB') }} --> MB</strong></p>
 
-    <div class="note"><strong>Note:</strong> The default was 51200 prior to Gecko 9.0 {{ geckoRelease("9.0") }}.</div>
+    <div class="note"><strong>Note:</strong> The default was 51200 prior to Gecko 9.0 <!-- {{ geckoRelease("9.0") }} -->.</div>
    </td>
   </tr>
   <tr>
    <td><code>browser.cache.disk.parent_directory</code></td>
    <td><strong>path to Cache folder in profile (default)</strong></td>
    <td>
-    <p><strong>Cache Folder: {{ mediawiki.external('text box') }}</strong></p>
+    <p><strong>Cache Folder: <!-- {{ mediawiki.external('text box') }} --></strong></p>
 
     <div class="note"><strong>Note:</strong> The contents of the disk and memory caches are different (a very large memory cache is not the same as pointing disk cache to memory mapped disk space (RAM disk).</div>
    </td>
@@ -298,8 +298,8 @@
    <td><code>browser.cache.disk.enable</code></td>
    <td><strong><code>true</code> (default)</strong></td>
    <td colspan="1" rowspan="2">Preferences | Debug | Cache<br>
-    <strong>{{ mediawiki.external('x') }} Enable Disk Cache</strong><br>
-    <strong>{{ mediawiki.external('x') }} Enable Memory Cache</strong><br>
+    <strong><!-- {{ mediawiki.external('x') }} --> Enable Disk Cache</strong><br>
+    <strong><!-- {{ mediawiki.external('x') }} --> Enable Memory Cache</strong><br>
     <br>
     Disabling disk cache has the effect of setting it to zero.</td>
   </tr>
@@ -310,7 +310,7 @@
   <tr>
    <td><code>browser.cache.memory.capacity</code></td>
    <td>any integer (in KB)</td>
-   <td>Replaced by automatic sizing in Mozilla 1.4b ({{ Bug("105344") }}).<br>
+   <td>Replaced by automatic sizing in Mozilla 1.4b (<!-- {{ Bug("105344") }} -->).<br>
     This value overrides the application.<br>
     0 disables feature<br>
     (<strong>before, <code>4096</code> = default</strong>)</td>
@@ -336,13 +336,13 @@
   <tr>
    <td><code>browser.cache.disk_cache_ssl</code></td>
    <td><strong><code>false</code> (default)</strong></td>
-   <td>no UI, added in 1.6a (see {{ Bug("205921") }})</td>
+   <td>no UI, added in 1.6a (see <!-- {{ Bug("205921") }} -->)</td>
   </tr>
   <tr>
    <td><code>network.prefetch-next</code></td>
    <td><strong><code>False</code></strong></td>
    <td>Preferences | Advanced | Cache: Link Prefetching<br>
-    <strong>{{ mediawiki.external('x') }} Prefetch web pages when idle, so that links in web page designed for prefetching can load faster.</strong></td>
+    <strong><!-- {{ mediawiki.external('x') }} --> Prefetch web pages when idle, so that links in web page designed for prefetching can load faster.</strong></td>
   </tr>
   <tr>
    <td><code>browser.cache.disk.smart_size.first_run</code></td>
@@ -464,7 +464,7 @@
    <td><code>network.proxy.no_proxies_on</code></td>
    <td><strong><code>localhost, 127.0.0.1</code> (default)</strong><br>
     string of comma delimited fqdn's, hostnames, IPv4 addresses and CDIR blocks. See <a href="/en/No_Proxy_For_configuration" title="en/No_Proxy_For_configuration">No Proxy For configuration</a>.</td>
-   <td>Localhost is not proxied by default, {{ Bug("31510") }}.</td>
+   <td>Localhost is not proxied by default, <!-- {{ Bug("31510") }} -->.</td>
   </tr>
   <tr>
    <td><code>network.proxy.autoconfig_url</code></td>
@@ -497,18 +497,18 @@
    <td>Necko updates the offline|online status to this value.<br>
     Changing this value does not change the actual networking status.<br>
     Value is not updated if "Ask me for online state at startup" was selected<br>
-    for the current profile ({{ Bug("229677") }}).</td>
+    for the current profile (<!-- {{ Bug("229677") }} -->).</td>
   </tr>
   <tr>
    <td><code>offline.startup_state</code></td>
    <td><strong><code>0</code> = use network.online (default)</strong><br>
     <code>1 = prompt user</code></td>
    <td>Preferences: Mail &amp; Newsgroups | Offline | When starting up:<br>
-    (Pref affects all modules, but was moved from Pref root, {{ Bug("202529") }})<br>
-    {{ mediawiki.external('x') }} Remember previous online state<br>
+    (Pref affects all modules, but was moved from Pref root, <!-- {{ Bug("202529") }} -->)<br>
+    <!-- {{ mediawiki.external('x') }} --> Remember previous online state<br>
     (Uses network.online to set online|offline status at startup)<br>
-    {{ mediawiki.external(' ') }} Ask me for online state at startup<br>
-    (Unlike Communicator, prompt always appears, {{ Bug("239564") }})</td>
+    <!-- {{ mediawiki.external(' ') }} --> Ask me for online state at startup<br>
+    (Unlike Communicator, prompt always appears, <!-- {{ Bug("239564") }} -->)</td>
   </tr>
  </tbody>
 </table>
@@ -524,7 +524,7 @@
   </tr>
   <tr>
    <td><code>network.dir.format</code></td>
-   <td colspan="2" rowspan="1">see FTP {{ obsolete_inline("2.0") }}</td>
+   <td colspan="2" rowspan="1">see FTP <!-- {{ obsolete_inline("2.0") }} --></td>
   </tr>
  </tbody>
 </table>
@@ -542,7 +542,7 @@
    <td><code>browser.xul.error.pages.enabled</code></td>
    <td><code>false</code> (default)<br>
     <code>true</code></td>
-   <td>Does not appear in about.config unless added explicitly. See {{ Bug("28586") }})</td>
+   <td>Does not appear in about.config unless added explicitly. See <!-- {{ Bug("28586") }} -->)</td>
   </tr>
   <tr>
    <td><code>network.protocol-handler.external.SCHEME</code></td>
@@ -567,8 +567,8 @@
  <li><code>networking.proxy.wais_port</code></li>
  <li><code>network.http.connect.timeout</code></li>
  <li><code>network.http.proxy.ssl.connect</code></li>
- <li><code>network.proxy.gopher</code> {{ obsolete_inline("2.0") }}</li>
- <li><code>network.proxy.gopher_port</code> {{ obsolete_inline("2.0") }}</li>
+ <li><code>network.proxy.gopher</code> <!-- {{ obsolete_inline("2.0") }} --></li>
+ <li><code>network.proxy.gopher_port</code> <!-- {{ obsolete_inline("2.0") }} --></li>
 </ul>
 
 <h4 id="Under_Investigation" name="Under_Investigation">Under Investigation</h4>

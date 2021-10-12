@@ -1,6 +1,6 @@
-<p>{{ Jsapi_minversion_header("17") }}</p>
+<p><!-- {{ Jsapi_minversion_header("17") }} --></p>
 
-<div>{{SpiderMonkeySidebar("JSAPI")}}</div>
+<div><!-- {{SpiderMonkeySidebar("JSAPI")}} --></div>
 
 <div class="summary">
 <p>Compile options classes.</p>
@@ -24,8 +24,8 @@ JS::CompileOptions(JSContext *cx, JSVersion version = JSVERSION_UNKNOWN);
   </tr>
   <tr>
    <td><code>cx</code></td>
-   <td><code>{{jsapixref("JSRuntime", "JSContext")}} *</code></td>
-   <td>Pointer to a JS context from which to derive runtime information. {{ Jsapi-requires-request() }}</td>
+   <td><code><!-- {{jsapixref("JSRuntime", "JSContext")}} --> *</code></td>
+   <td>Pointer to a JS context from which to derive runtime information. <!-- {{ Jsapi-requires-request() }} --></td>
   </tr>
   <tr>
    <td><code>version</code></td>
@@ -53,7 +53,7 @@ JS::CompileOptions(JSContext *cx, JSVersion version = JSVERSION_UNKNOWN);
 
     <p>The Web Platform allows scripts to be loaded from arbitrary cross-origin sources. This allows an attack by which a malicious website loads a sensitive file (say, a bank statement) cross-origin (using the user's cookies), and sniffs the generated syntax errors (via a window.onerror handler) for juicy morsels of its contents.</p>
 
-    <p>To counter this attack, HTML5 specifies that script errors should be sanitized ("muted") when the script is not same-origin with the global for which it is loaded. Callers should set this flag for cross-origin scripts, and it will be propagated appropriately to child scripts and passed back in {{jsapixref("JSErrorReport")}}s.</p>
+    <p>To counter this attack, HTML5 specifies that script errors should be sanitized ("muted") when the script is not same-origin with the global for which it is loaded. Callers should set this flag for cross-origin scripts, and it will be propagated appropriately to child scripts and passed back in <!-- {{jsapixref("JSErrorReport")}} -->s.</p>
    </td>
   </tr>
   <tr>
@@ -98,7 +98,7 @@ JS::CompileOptions(JSContext *cx, JSVersion version = JSVERSION_UNKNOWN);
   </tr>
   <tr>
    <td><code>JSScript *introductionScript() const</code></td>
-   <td>Returns a pointer to {{jsapixref("JSScript")}} which introduces the file.</td>
+   <td>Returns a pointer to <!-- {{jsapixref("JSScript")}} --> which introduces the file.</td>
   </tr>
   <tr>
    <td><code>bool copy(JSContext *cx, const ReadOnlyCompileOptions &amp;rhs)</code></td>
@@ -266,7 +266,7 @@ JS::CompileOptions(JSContext *cx, JSVersion version = JSVERSION_UNKNOWN);
   </tr>
   <tr>
    <td><code>version</code></td>
-   <td>{{jsapixref("JSVersion")}}</td>
+   <td><!-- {{jsapixref("JSVersion")}} --></td>
    <td>Version of the script.</td>
   </tr>
   <tr>
@@ -337,7 +337,7 @@ JS::CompileOptions(JSContext *cx, JSVersion version = JSVERSION_UNKNOWN);
   <tr>
    <td><code>forceAsync</code></td>
    <td><code>bool</code></td>
-   <td><code>false</code> means {{jsapixref("JS::CompileOffThread", "JS::CanCompileOffThread")}} may returns <code>false</code> depends on the length of the code.</td>
+   <td><code>false</code> means <!-- {{jsapixref("JS::CompileOffThread", "JS::CanCompileOffThread")}} --> may returns <code>false</code> depends on the length of the code.</td>
   </tr>
   <tr>
    <td><code>installedFile</code></td>
@@ -418,7 +418,7 @@ JS::CompileOptions(JSContext *cx, JSVersion version = JSVERSION_UNKNOWN);
 
 <p>In the most common use case, a <code>CompileOptions</code> instance is allocated on the stack, and holds non-owning references to non-POD option values: strings; principals; objects; and so on. The code declaring the instance guarantees that such option values will outlive the CompileOptions itself: objects are otherwise rooted; principals have had their reference counts bumped; strings will not be freed until the CompileOptions goes out of scope. In this situation, CompileOptions only refers to things others own, so it can be lightweight.</p>
 
-<p>In some cases, however, we need to hold compilation options with a non-stack-like lifetime. For example, {{jsapixref("JS::CompileOffThread")}} needs to save compilation options where a worker thread can find them, and then return immediately. The worker thread will come along at some later point, and use the options.</p>
+<p>In some cases, however, we need to hold compilation options with a non-stack-like lifetime. For example, <!-- {{jsapixref("JS::CompileOffThread")}} --> needs to save compilation options where a worker thread can find them, and then return immediately. The worker thread will come along at some later point, and use the options.</p>
 
 <p>The compiler itself just needs to be able to access a collection of options; it doesn't care who owns them, or what's keeping them alive. It does its own addrefs/copies/tracing/etc.</p>
 
@@ -449,13 +449,13 @@ JS::CompileOptions(JSContext *cx, JSVersion version = JSVERSION_UNKNOWN);
 <h2 id="See_Also">See Also</h2>
 
 <ul>
- <li>{{ LXRSearch("ident", "i", "JS::ReadOnlyCompileOptions") }}</li>
- <li>{{ LXRSearch("ident", "i", "JS::OwningCompileOptions") }}</li>
- <li>{{ LXRSearch("ident", "i", "JS::CompileOptions") }}</li>
- <li>{{jsapixref("JS::Compile")}}</li>
- <li>{{jsapixref("JS::CompileOffThread")}}</li>
- <li>{{jsapixref("JS::CompileFunction")}}</li>
- <li>{{jsapixref("JS::Evaluate")}}</li>
- <li>{{bug(887077)}}</li>
- <li>{{bug(771705)}}</li>
+ <li><!-- {{ LXRSearch("ident", "i", "JS::ReadOnlyCompileOptions") }} --></li>
+ <li><!-- {{ LXRSearch("ident", "i", "JS::OwningCompileOptions") }} --></li>
+ <li><!-- {{ LXRSearch("ident", "i", "JS::CompileOptions") }} --></li>
+ <li><!-- {{jsapixref("JS::Compile")}} --></li>
+ <li><!-- {{jsapixref("JS::CompileOffThread")}} --></li>
+ <li><!-- {{jsapixref("JS::CompileFunction")}} --></li>
+ <li><!-- {{jsapixref("JS::Evaluate")}} --></li>
+ <li><!-- {{bug(887077)}} --></li>
+ <li><!-- {{bug(771705)}} --></li>
 </ul>

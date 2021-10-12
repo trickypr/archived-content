@@ -166,7 +166,7 @@ nsIContent *content = NS_STATIC_CAST(nsIContent*, this);
 
 <p>At compile-time, the XPIDL compiler will turn this interface definition into real C++ code, a header file that will contain the pure abstract class. This class will look like this:</p>
 
-<pre class="eval"><span class="nowiki">  #define NS_IDOMFABIAN_IID \    {0xxxxxxxxx, 0xxxxx, 0xxxxx, \      { 0xxx, 0xxx, 0xxx, 0xxx, 0xxx, 0xxx, 0xxx, 0xxx }}    class nsIDOMFabian : public nsISupports {   public:      NS_IMETHOD Fabian(void) = 0;    NS_IMETHOD GetNeat(PRBool *aNeat) = 0;    };    #define NS_DECL_NSIDOMFABIAN  #define NS_FORWARD_NSIDOMFABIAN(_to)  #define NS_FORWARD_SAFE_NSIDOMFABIAN(_to)  </span>
+<pre class="eval"><span class="nowiki">  #define NS_IDOMFABIAN_IID \    {0xxxxxxxxx, 0xxxxx, 0xxxxx, \      { 0xxx, 0xxx, 0xxx, 0xxx, 0xxx, 0xxx, 0xxx, 0xxx }} -->    class nsIDOMFabian : public nsISupports {   public:      NS_IMETHOD Fabian(void) = 0;    NS_IMETHOD GetNeat(PRBool *aNeat) = 0;    };    #define NS_DECL_NSIDOMFABIAN  #define NS_FORWARD_NSIDOMFABIAN(_to)  #define NS_FORWARD_SAFE_NSIDOMFABIAN(_to)  </span>
 </pre>
 
 <p>As we can see, the auto-generated header file contains the IID of our interface, and a &quot;pure abstract class&quot; is correctly defined. The XPIDL compiler turns the IDL methods and attributes into C++ functions according to the following rules:</p>

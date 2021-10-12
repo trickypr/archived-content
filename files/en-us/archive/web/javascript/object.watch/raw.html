@@ -1,7 +1,7 @@
-<div>{{JSRef}}</div>
+<div><!-- {{JSRef}} --></div>
 
 <div class="warning">
-<p><strong>Deprecation warning:</strong> Do not use <code>watch()</code> and {{jsxref("Object.prototype.unwatch", "unwatch()")}}! These two methods were implemented only in Firefox prior to version 58, they're <strong>deprecated and removed in Firefox 58+</strong>. In addition, using watchpoints has a serious negative impact on performance, which is especially true when used on global objects, such as <code>window</code>. You can usually use <a href="/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#Defining_getters_and_setters">setters and getters</a> or <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy">proxies</a> instead.</p>
+<p><strong>Deprecation warning:</strong> Do not use <code>watch()</code> and <!-- {{jsxref("Object.prototype.unwatch", "unwatch()")}} -->! These two methods were implemented only in Firefox prior to version 58, they're <strong>deprecated and removed in Firefox 58+</strong>. In addition, using watchpoints has a serious negative impact on performance, which is especially true when used on global objects, such as <code>window</code>. You can usually use <a href="/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#Defining_getters_and_setters">setters and getters</a> or <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy">proxies</a> instead.</p>
 </div>
 
 <p>The <code><strong>watch()</strong></code> method watches for a property to be assigned a value and runs a function when that occurs.</p>
@@ -21,7 +21,7 @@
 
 <h3 id="Return_value">Return value</h3>
 
-<p>{{jsxref("undefined")}}.</p>
+<p><!-- {{jsxref("undefined")}} -->.</p>
 
 <h2 id="Description">Description</h2>
 
@@ -29,7 +29,7 @@
 
 <p>If you delete a property for which a watchpoint has been set, that watchpoint does not disappear. If you later recreate the property, the watchpoint is still in effect.</p>
 
-<p>To remove a watchpoint, use the {{jsxref("Object.unwatch", "unwatch()")}} method. By default, the <code>watch</code> method is inherited by every object descended from {{jsxref("Object")}}.</p>
+<p>To remove a watchpoint, use the <!-- {{jsxref("Object.unwatch", "unwatch()")}} --> method. By default, the <code>watch</code> method is inherited by every object descended from <!-- {{jsxref("Object")}} -->.</p>
 
 <p>The JavaScript debugger has functionality similar to that provided by this method, as well as other debugging options. For information on the debugger, see <a href="/en-US/docs/Venkman">Venkman</a>.</p>
 
@@ -128,13 +128,13 @@ RangeError: invalid age for Will, 29
 
 <ul>
  <li>This <a class="external link-https" href="https://gist.github.com/384583">Polyfill</a> offers <code>watch</code> to all ES5 compatible browsers.</li>
- <li>Using a {{jsxref("Proxy")}} enables you do even deeper changes to how property assignments work.</li>
- <li>Calling <code>watch()</code> on the {{domxref("Document")}} object throws a {{jsxref("TypeError")}} since Firefox 23 (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=903332">bug 903332</a>). This regression has been fixed with Firefox 27.</li>
+ <li>Using a <!-- {{jsxref("Proxy")}} --> enables you do even deeper changes to how property assignments work.</li>
+ <li>Calling <code>watch()</code> on the <!-- {{domxref("Document")}} --> object throws a <!-- {{jsxref("TypeError")}} --> since Firefox 23 (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=903332">bug 903332</a>). This regression has been fixed with Firefox 27.</li>
 </ul>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>{{jsxref("Object.unwatch()")}}</li>
- <li>{{jsxref("Object.observe()")}}</li>
+ <li><!-- {{jsxref("Object.unwatch()")}} --></li>
+ <li><!-- {{jsxref("Object.observe()")}} --></li>
 </ul>

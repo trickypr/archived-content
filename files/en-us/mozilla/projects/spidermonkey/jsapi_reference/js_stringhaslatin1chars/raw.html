@@ -1,6 +1,6 @@
-<div>{{SpiderMonkeySidebar("JSAPI")}}</div>
+<div><!-- {{SpiderMonkeySidebar("JSAPI")}} --></div>
 
-<p>{{ jsapi_minversion_header("38") }}</p>
+<p><!-- {{ jsapi_minversion_header("38") }} --></p>
 
 <div class="summary">
 <p>Determine if a string's characters are stored as Latin1.</p>
@@ -21,7 +21,7 @@ JS_StringHasLatin1Chars(JSString *str);
   </tr>
   <tr>
    <td><code>str</code></td>
-   <td>{{jsapixref("JSString", "JSString *")}}</td>
+   <td><!-- {{jsapixref("JSString", "JSString *")}} --></td>
    <td>String to examine.</td>
   </tr>
  </tbody>
@@ -31,11 +31,11 @@ JS_StringHasLatin1Chars(JSString *str);
 
 <p><code>JS_StringHasLatin1Chars</code> returns <code>true</code> iff the string's characters are stored as Latin1.</p>
 
-<p>String characters are stored as either Latin1Char (8-bit) or char16_t (16-bit). Clients can use JS_StringHasLatin1Chars and can then call either the Latin1* or TwoByte* functions. Some functions like {{jsapixref("JS_CopyStringChars")}} and {{jsapixref("JS_GetStringCharAt")}} accept both Latin1 and TwoByte strings.</p>
+<p>String characters are stored as either Latin1Char (8-bit) or char16_t (16-bit). Clients can use JS_StringHasLatin1Chars and can then call either the Latin1* or TwoByte* functions. Some functions like <!-- {{jsapixref("JS_CopyStringChars")}} --> and <!-- {{jsapixref("JS_GetStringCharAt")}} --> accept both Latin1 and TwoByte strings.</p>
 
 <h2 id="See_Also" name="See_Also">See Also</h2>
 
 <ul>
- <li>{{ LXRSearch("ident", "i", "JS_StringHasLatin1Chars") }}</li>
- <li>{{bug(1032726)}}</li>
+ <li><!-- {{ LXRSearch("ident", "i", "JS_StringHasLatin1Chars") }} --></li>
+ <li><!-- {{bug(1032726)}} --></li>
 </ul>

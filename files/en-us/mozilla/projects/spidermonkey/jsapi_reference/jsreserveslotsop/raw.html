@@ -1,9 +1,9 @@
-<div>{{SpiderMonkeySidebar("JSAPI")}}</div>
+<div><!-- {{SpiderMonkeySidebar("JSAPI")}} --></div>
 
-<p>{{ obsolete_header("js1.8.5") }}</p>
+<p><!-- {{ obsolete_header("js1.8.5") }} --></p>
 
 <div class="summary">
-<p><strong><code>JSReserveSlotsOp</code></strong> is the type of the {{jsapixref("JSClass", "JSClass.reserveSlots")}}.</p>
+<p><strong><code>JSReserveSlotsOp</code></strong> is the type of the <!-- {{jsapixref("JSClass", "JSClass.reserveSlots")}} -->.</p>
 </div>
 
 <h2 id="Syntax" name="Syntax">Syntax</h2>
@@ -21,12 +21,12 @@
   </tr>
   <tr>
    <td><code>cx</code></td>
-   <td>{{jsapixref("JSRuntime", "JSContext *")}}</td>
+   <td><!-- {{jsapixref("JSRuntime", "JSContext *")}} --></td>
    <td>The JS context in which the new object is being created.</td>
   </tr>
   <tr>
    <td><code>obj</code></td>
-   <td>{{jsapixref("JSObject", "JSObject *")}}</td>
+   <td><!-- {{jsapixref("JSObject", "JSObject *")}} --></td>
    <td>The new object.</td>
   </tr>
  </tbody>
@@ -44,7 +44,7 @@
 
 <ul>
  <li>
-  <p>The <strong>{{jsapixref("JSClass", "JSClass.reserveSlots")}}</strong> callback is called each time a new object is created.</p>
+  <p>The <strong><!-- {{jsapixref("JSClass", "JSClass.reserveSlots")}} --></strong> callback is called each time a new object is created.</p>
 
   <p>The optional <code>JSClass.reserveSlots</code> hook allows a class to make computed per-instance object slots reservations, in addition to or instead of using <code>JSCLASS_HAS_RESERVED_SLOTS(n)</code> in the <code>JSClass.flags</code> initializer to reserve a constant-per-class number of slots. Implementations of this hook should return the number of slots to reserve, not including any reserved by using <code>JSCLASS_HAS_RESERVED_SLOTS(n)</code> in <code>JSClass.flags</code>.</p>
  </li>
@@ -53,5 +53,5 @@
 <h2 id="See_Also" name="See_Also">See Also</h2>
 
 <ul>
- <li>{{jsapixref("JSClass")}}</li>
+ <li><!-- {{jsapixref("JSClass")}} --></li>
 </ul>

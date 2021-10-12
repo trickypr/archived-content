@@ -1,12 +1,12 @@
-<div>{{SpiderMonkeySidebar("JSAPI")}}</div>
+<div><!-- {{SpiderMonkeySidebar("JSAPI")}} --></div>
 
-<p>{{ obsolete_header("js1.8.5") }}</p>
+<p><!-- {{ obsolete_header("js1.8.5") }} --></p>
 <div class="blockIndicator warning">
 <p><strong>Warning!</strong> <code>JSObjectOps</code> is not a supported API. Details of the API may change from one release to the next. This documentation should be considered SpiderMonkey internals documentation, not API documentation. See <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=408416">bug 408416</a> for details.</p>
 </div>
 
 <div class="summary">
-<p>The <strong><code>JSObjectOps.setProto</code></strong> and <strong><code>setParent</code></strong> callbacks implement the {{jsapixref("JS_SetPrototype")}} and {{jsapixref("JS_SetParent")}} functions. These callbacks share the same type, <strong><code>JSSetObjectSlotOp</code></strong>.</p>
+<p>The <strong><code>JSObjectOps.setProto</code></strong> and <strong><code>setParent</code></strong> callbacks implement the <!-- {{jsapixref("JS_SetPrototype")}} --> and <!-- {{jsapixref("JS_SetParent")}} --> functions. These callbacks share the same type, <strong><code>JSSetObjectSlotOp</code></strong>.</p>
 </div>
 
 <h2 id="Syntax" name="Syntax">Syntax</h2>
@@ -47,4 +47,4 @@
 
 <h2 id="Description" name="Description">Description</h2>
 
-<p>These hooks must check for cycles without deadlocking, and otherwise take special steps. See <code>js_SetPrototype</code> or <code>js_SetParent</code> in {{ Source("js/src/jsobj.c") }} for an example.</p>
+<p>These hooks must check for cycles without deadlocking, and otherwise take special steps. See <code>js_SetPrototype</code> or <code>js_SetParent</code> in <!-- {{ Source("js/src/jsobj.c") }} --> for an example.</p>

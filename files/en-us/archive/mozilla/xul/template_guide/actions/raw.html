@@ -1,5 +1,5 @@
-<p>{{ PreviousNext("XUL/Template Guide/RDF Query Syntax", "XUL/Template Guide/Recursive Generation") }}</p>
-<p>The content to generate in a template is specified using the {{ XULElem("action") }} element which should either be the next sibling of the {{ XULElem("query") }} element (if no rules need be specified) or be a direct child of a {{ XULElem("rule") }} element. The content to generate goes directly inside the <code>action</code> element. This content will be copied for each matching result (though see below for an exception) and inserted into the document. Let's look at a simple example first.</p>
+<p><!-- {{ PreviousNext("XUL/Template Guide/RDF Query Syntax", "XUL/Template Guide/Recursive Generation") }} --></p>
+<p>The content to generate in a template is specified using the <!-- {{ XULElem("action") }} --> element which should either be the next sibling of the <!-- {{ XULElem("query") }} --> element (if no rules need be specified) or be a direct child of a <!-- {{ XULElem("rule") }} --> element. The content to generate goes directly inside the <code>action</code> element. This content will be copied for each matching result (though see below for an exception) and inserted into the document. Let's look at a simple example first.</p>
 <pre>&lt;vbox datasources="http://www.xulplanet.com/ds/sample.rdf"
          ref="http://www.xulplanet.com/rdf/A"&gt;
   &lt;template&gt;
@@ -15,7 +15,7 @@
   &lt;/template&gt;
 &lt;/vbox&gt;
 </pre>
-<p>In this example, we omit the {{ XULElem("rule") }} element around the {{ XULElem("action") }} as it is optional when we want to generate content unconditionally. Instead, the <code>action</code> element is placed directly inside the {{ XULElem("template") }} element after the query is defined. This action contains only one element, but you can put as many or as few elements as you need. In this case, a button will be created for each result. There are three results, so three buttons will be created. Here is the [<a href="/samples/xultemp/template-guide-ex1.xul">example</a>], and an image of what it looks like:</p>
+<p>In this example, we omit the <!-- {{ XULElem("rule") }} --> element around the <!-- {{ XULElem("action") }} --> as it is optional when we want to generate content unconditionally. Instead, the <code>action</code> element is placed directly inside the <!-- {{ XULElem("template") }} --> element after the query is defined. This action contains only one element, but you can put as many or as few elements as you need. In this case, a button will be created for each result. There are three results, so three buttons will be created. Here is the [<a href="/samples/xultemp/template-guide-ex1.xul">example</a>], and an image of what it looks like:</p>
 <p><img alt="Image:template-guide-p8.png" src="/samples/xultemp/template-guide-p8.png"></p>
 <p>The template builder iterates through the three results, processing the body of the action for each one in turn. The uri attribute on the button is used to specify the ending or member variable. In this example, there's only one variable to use, ?relateditem, since ?start is the starting point and the start and end points cannot be the same. There are a number of things that will happen for each result. Let's look at the results again:</p>
 <pre>(?start = http://www.xulplanet.com/rdf/A, ?relateditem = http://www.xulplanet.com/rdf/B)
@@ -81,4 +81,4 @@
 <p>For the first button, the value of the variable ?start will be looked up in the result data while the second button will use the ?relateditem variable. Since all three results have the same value for the ?start variable, the result will be that the first buttons in each row will all have the same label. Here is an image of [<a href="/samples/xultemp/template-guide-ex2.xul">this example</a>]</p>
 <p><img alt="Image:template-guide-p9.png" src="/samples/xultemp/template-guide-p9.png"></p>
 <p>(Note: see the next section for an explanation of why there are extra buttons here.)</p>
-<p>{{ PreviousNext("XUL/Template Guide/RDF Query Syntax", "XUL/Template Guide/Recursive Generation") }}</p>
+<p><!-- {{ PreviousNext("XUL/Template Guide/RDF Query Syntax", "XUL/Template Guide/Recursive Generation") }} --></p>

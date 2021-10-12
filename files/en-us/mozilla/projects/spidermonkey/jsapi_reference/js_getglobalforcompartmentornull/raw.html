@@ -1,6 +1,6 @@
-<p>{{ Jsapi_minversion_header("17") }}</p>
+<p><!-- {{ Jsapi_minversion_header("17") }} --></p>
 
-<div>{{SpiderMonkeySidebar("JSAPI")}}</div>
+<div><!-- {{SpiderMonkeySidebar("JSAPI")}} --></div>
 
 <div class="summary">
 <p>Return the global object for the specified compartment.</p>
@@ -21,12 +21,12 @@ JS_GetGlobalForCompartmentOrNull(JSContext *cx, JSCompartment *c);
   </tr>
   <tr>
    <td><code>cx</code></td>
-   <td>{{jsapixref("JSRuntime", "JSContext *")}}</td>
-   <td>The context for which to return the global object. {{ Jsapi-requires-request() }}</td>
+   <td><!-- {{jsapixref("JSRuntime", "JSContext *")}} --></td>
+   <td>The context for which to return the global object. <!-- {{ Jsapi-requires-request() }} --></td>
   </tr>
   <tr>
    <td><code>c</code></td>
-   <td>{{jsapixref("JSCompartment", "JSCompartment *")}}</td>
+   <td><!-- {{jsapixref("JSCompartment", "JSCompartment *")}} --></td>
    <td>The compartment for which to return the global object.</td>
   </tr>
  </tbody>
@@ -39,8 +39,8 @@ JS_GetGlobalForCompartmentOrNull(JSContext *cx, JSCompartment *c);
 <h2 id="See_Also" name="See_Also">See also</h2>
 
 <ul>
- <li>{{ LXRSearch("ident", "i", "JS_GetGlobalForCompartmentOrNull") }}</li>
- <li>{{jsapixref("JS_GetGlobalForObject")}}</li>
- <li>{{jsapixref("JS::CurrentGlobalOrNull")}}</li>
- <li>{{bug(687724)}}</li>
+ <li><!-- {{ LXRSearch("ident", "i", "JS_GetGlobalForCompartmentOrNull") }} --></li>
+ <li><!-- {{jsapixref("JS_GetGlobalForObject")}} --></li>
+ <li><!-- {{jsapixref("JS::CurrentGlobalOrNull")}} --></li>
+ <li><!-- {{bug(687724)}} --></li>
 </ul>

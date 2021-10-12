@@ -1,5 +1,5 @@
 <h3 id="General_Overview" name="General_Overview">General Overview</h3>
-<p>The frame reflow can be logged with the debug capabilities implemented in {{ Source("layout/generic/nsFrame.cpp", "nsFrame.cpp") }}. It provides the following information for each frame at the start of its reflow</p>
+<p>The frame reflow can be logged with the debug capabilities implemented in <!-- {{ Source("layout/generic/nsFrame.cpp", "nsFrame.cpp") }} -->. It provides the following information for each frame at the start of its reflow</p>
 <ul>
   <li><a href="en/Notes_on_HTML_Reflow#Reflow_Reason">reflow reason</a></li>
   <li><a href="en/Notes_on_HTML_Reflow#Reflow_State">available width, available height</a></li>
@@ -276,7 +276,7 @@ VP 00B97C30 d=9180,4470
     </tr>
   </tbody>
 </table>
-<p>Once the problem is reduced to a single frame level, placing a breakpoint at <code>DisplayReflowEnterPrint</code> in {{ Source("layout/generic/nsFrame.cpp", "nsFrame.cpp") }} is a very efficient way to step through the reflow tree.</p>
+<p>Once the problem is reduced to a single frame level, placing a breakpoint at <code>DisplayReflowEnterPrint</code> in <!-- {{ Source("layout/generic/nsFrame.cpp", "nsFrame.cpp") }} --> is a very efficient way to step through the reflow tree.</p>
 <h3 id="Other_reflow_debug_options" name="Other_reflow_debug_options">Other reflow debug options</h3>
 <h4 id="GECKO_DISPLAY_REFLOW_FLAG_PIXEL_ERRORS" name="GECKO_DISPLAY_REFLOW_FLAG_PIXEL_ERRORS">GECKO_DISPLAY_REFLOW_FLAG_PIXEL_ERRORS</h4>
 <p>Setting this option via <code>set GECKO_DISPLAY_REFLOW_FLAG_PIXEL_ERRORS = 1</code> enables a verification for each coordinate value that the coordinates are aligned at pixel boundaries.</p>

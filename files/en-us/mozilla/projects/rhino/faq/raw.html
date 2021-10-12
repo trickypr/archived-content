@@ -7,7 +7,7 @@
 <pre class="code">var stringArray = java.lang.reflect.Array.newInstance(java.lang.String, 5);
 </pre>
 
-<p>Then if you wish to assign the string "hi" to the first element, simply execute <code>stringArray{{ mediawiki.external(0) }} = "hi"</code>. Creating arrays of primitive types is slightly different: you must use the TYPE field. For example, creating an array of seven ints can be done with the code</p>
+<p>Then if you wish to assign the string "hi" to the first element, simply execute <code>stringArray<!-- {{ mediawiki.external(0) }} --> = "hi"</code>. Creating arrays of primitive types is slightly different: you must use the TYPE field. For example, creating an array of seven ints can be done with the code</p>
 
 <pre>var intArray = java.lang.reflect.Array.newInstance(java.lang.Integer.TYPE, 7);
 </pre>

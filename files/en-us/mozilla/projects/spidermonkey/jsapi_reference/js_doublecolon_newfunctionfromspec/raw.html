@@ -1,4 +1,4 @@
-<div>{{SpiderMonkeySidebar("JSAPI")}}</div>
+<div><!-- {{SpiderMonkeySidebar("JSAPI")}} --></div>
 
 <div class="summary">
 <p>Create a new function based on the given JSFunctionSpec.</p>
@@ -19,17 +19,17 @@ JS::NewFunctionFromSpec(JSContext* cx, const JSFunctionSpec* fs, HandleId id);
   </tr>
   <tr>
    <td><code>cx</code></td>
-   <td>{{jsapixref("JSRuntime", "JSContext *")}}</td>
-   <td>The context in which to define functions. {{ Jsapi-requires-request() }}</td>
+   <td><!-- {{jsapixref("JSRuntime", "JSContext *")}} --></td>
+   <td>The context in which to define functions. <!-- {{ Jsapi-requires-request() }} --></td>
   </tr>
   <tr>
    <td><code>fs</code></td>
-   <td>{{jsapixref("JSFunctionSpec", "const JSFunctionSpec *")}}</td>
+   <td><!-- {{jsapixref("JSFunctionSpec", "const JSFunctionSpec *")}} --></td>
    <td>A pointer to function specification.</td>
   </tr>
   <tr>
    <td><code>behavior</code></td>
-   <td>{{jsapixref("jsid", "HandleId")}}</td>
+   <td><!-- {{jsapixref("jsid", "HandleId")}} --></td>
    <td>The result of a successful call to <code>PropertySpecNameToPermanentId(cx, fs-&gt;name, &amp;id)</code>.</td>
   </tr>
  </tbody>
@@ -39,14 +39,14 @@ JS::NewFunctionFromSpec(JSContext* cx, const JSFunctionSpec* fs, HandleId id);
 
 <p><code>JS::NewFunctionFromSpec</code> creates a new function based on the given <code>JSFunctionSpec</code>, <code>*fs</code>.  <code>id</code> is the result of a successful call to <code>PropertySpecNameToPermanentId(cx, fs-&gt;name, &amp;id)</code>.</p>
 
-<p>Unlike {{jsapixref("JS_DefineFunctions")}}, this does not treat <code>fs</code> as an array. <code>*fs</code> must not be <code>JS_FS_END</code>.</p>
+<p>Unlike <!-- {{jsapixref("JS_DefineFunctions")}} -->, this does not treat <code>fs</code> as an array. <code>*fs</code> must not be <code>JS_FS_END</code>.</p>
 
 <p>On success, <code>JS::NewFunctionFromSpec</code> returns a pointer to newly created function. On error, it returns <code>nullptr</code>.</p>
 
 <h2 id="See_Also" name="See_Also">See Also</h2>
 
 <ul>
- <li>{{ LXRSearch("ident", "i", "JS::NewFunctionFromSpec") }}</li>
- <li>{{jsapixref("JS_DefineFunctions")}}</li>
- <li>{{bug(1054756)}} - added</li>
+ <li><!-- {{ LXRSearch("ident", "i", "JS::NewFunctionFromSpec") }} --></li>
+ <li><!-- {{jsapixref("JS_DefineFunctions")}} --></li>
+ <li><!-- {{bug(1054756)}} --> - added</li>
 </ul>

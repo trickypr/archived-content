@@ -1,4 +1,4 @@
-<p>{{ gecko_minversion_header("26") }}</p>
+<p><!-- {{ gecko_minversion_header("26") }} --></p>
 
 <p>The <code>Downloads.jsm</code> JavaScript code module provides a single entry point to interact with the downloading capabilities of the platform, including starting new downloads, controlling ongoing downloads, and retrieving download-related configuration. To use it, you first need to import the code module into your JavaScript scope:</p>
 
@@ -88,19 +88,19 @@ try {
  <dt><code>aProperties</code></dt>
  <dd>Provides the initial properties for the newly created download. This matches the serializable representation of a <code><a href="/en-US/docs/Mozilla/JavaScript_code_modules/Downloads.jsm/Download" title="/en-US/docs/Mozilla/JavaScript_code_modules/Downloads.jsm/Download">Download</a></code> object. Some of the most common properties in this object include:
  <ul>
-  <li><code>source</code>: String containing the URI for the download source. Alternatively, may be an {{Interface("nsIURI")}}, a <a href="/en-US/docs/Mozilla/JavaScript_code_modules/Downloads.jsm/DownloadSource" title="/en-US/docs/Mozilla/JavaScript_code_modules/Downloads.jsm/DownloadSource"><code>DownloadSource</code></a> object, or an object with the following properties:
+  <li><code>source</code>: String containing the URI for the download source. Alternatively, may be an <!-- {{Interface("nsIURI")}} -->, a <a href="/en-US/docs/Mozilla/JavaScript_code_modules/Downloads.jsm/DownloadSource" title="/en-US/docs/Mozilla/JavaScript_code_modules/Downloads.jsm/DownloadSource"><code>DownloadSource</code></a> object, or an object with the following properties:
    <ul>
     <li><code>url</code>: String containing the URI for the download source.</li>
-    <li><code>isPrivate</code>: {{optional_inline()}} Indicates whether the download originated from a private window. If omitted, the download is public.</li>
-    <li><code>referrer</code>: {{optional_inline()}} String containing the referrer URI of the download source. Can be omitted or <code>null</code> if no referrer should be sent or the download source is not HTTP.</li>
+    <li><code>isPrivate</code>: <!-- {{optional_inline()}} --> Indicates whether the download originated from a private window. If omitted, the download is public.</li>
+    <li><code>referrer</code>: <!-- {{optional_inline()}} --> String containing the referrer URI of the download source. Can be omitted or <code>null</code> if no referrer should be sent or the download source is not HTTP.</li>
    </ul>
   </li>
-  <li><code>target</code>: String containing the path of the target file. Alternatively, may be an {{Interface("nsIFile")}}, a <a href="/en-US/docs/Mozilla/JavaScript_code_modules/Downloads.jsm/DownloadTarget" title="/en-US/docs/Mozilla/JavaScript_code_modules/Downloads.jsm/DownloadTarget"><code>DownloadTarget</code></a> object, or an object with the following properties:
+  <li><code>target</code>: String containing the path of the target file. Alternatively, may be an <!-- {{Interface("nsIFile")}} -->, a <a href="/en-US/docs/Mozilla/JavaScript_code_modules/Downloads.jsm/DownloadTarget" title="/en-US/docs/Mozilla/JavaScript_code_modules/Downloads.jsm/DownloadTarget"><code>DownloadTarget</code></a> object, or an object with the following properties:
    <ul>
     <li><code>path</code>: String containing the path of the target file.</li>
    </ul>
   </li>
-  <li><code>saver</code>: {{optional_inline()}} String representing the class of the download operation. If omitted, defaults to "copy". Alternatively, may be the serializable representation of a <code>DownloadSaver</code> object.</li>
+  <li><code>saver</code>: <!-- {{optional_inline()}} --> String representing the class of the download operation. If omitted, defaults to "copy". Alternatively, may be the serializable representation of a <code>DownloadSaver</code> object.</li>
  </ul>
  </dd>
 </dl>
@@ -128,13 +128,13 @@ try {
 
 <dl>
  <dt><code>aSource</code></dt>
- <dd>String containing the URI for the download source. Alternatively, may be an {{Interface("nsIURI")}} or a <a href="/en-US/docs/Mozilla/JavaScript_code_modules/Downloads.jsm/DownloadSource" title="/en-US/docs/Mozilla/JavaScript_code_modules/Downloads.jsm/DownloadSource"><code>DownloadSource</code></a> object.</dd>
+ <dd>String containing the URI for the download source. Alternatively, may be an <!-- {{Interface("nsIURI")}} --> or a <a href="/en-US/docs/Mozilla/JavaScript_code_modules/Downloads.jsm/DownloadSource" title="/en-US/docs/Mozilla/JavaScript_code_modules/Downloads.jsm/DownloadSource"><code>DownloadSource</code></a> object.</dd>
  <dt><code>aTarget</code></dt>
- <dd>String containing the path of the target file. Alternatively, may be an {{Interface("nsIFile")}} or a <a href="/en-US/docs/Mozilla/JavaScript_code_modules/Downloads.jsm/DownloadTarget" title="/en-US/docs/Mozilla/JavaScript_code_modules/Downloads.jsm/DownloadTarget"><code>DownloadTarget</code></a> object.</dd>
- <dt><code>aOptions</code> {{optional_inline()}}</dt>
+ <dd>String containing the path of the target file. Alternatively, may be an <!-- {{Interface("nsIFile")}} --> or a <a href="/en-US/docs/Mozilla/JavaScript_code_modules/Downloads.jsm/DownloadTarget" title="/en-US/docs/Mozilla/JavaScript_code_modules/Downloads.jsm/DownloadTarget"><code>DownloadTarget</code></a> object.</dd>
+ <dt><code>aOptions</code> <!-- {{optional_inline()}} --></dt>
  <dd>An optional object used to control the behavior of this function. You may pass an object with a subset of the following fields:
  <ul>
-  <li><code>isPrivate</code>: {{optional_inline()}} Indicates whether the download originated from a private window. If omitted, the download is public.</li>
+  <li><code>isPrivate</code>: <!-- {{optional_inline()}} --> Indicates whether the download originated from a private window. If omitted, the download is public.</li>
  </ul>
  </dd>
 </dl>
@@ -251,7 +251,7 @@ Task.spawn(function () {
 
 <h2 id="Conversion_from_nsIDownloadManager">Conversion from nsIDownloadManager</h2>
 
-<p>Starting in Firefox for Desktop version 26, the {{interface("nsIDownloadManager")}} and {{interface("nsIDownload")}} interfaces are not available anymore.</p>
+<p>Starting in Firefox for Desktop version 26, the <!-- {{interface("nsIDownloadManager")}} --> and <!-- {{interface("nsIDownload")}} --> interfaces are not available anymore.</p>
 
 <p>The new module works differently from the old component. In general, you should be aware of the following highlights:</p>
 
@@ -270,8 +270,8 @@ Task.spawn(function () {
 <p>In a XUL standalone application (running with XULRunner or <code>firefox --app</code>), you have to do additionnal things in order to use the new download manager. By default it is not enabled. It will be enabled when the <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=851471">bug 851471</a> will be closed. If you don't activate it, you could use Downloads.jsm, but your view will not be called by the external helper app service (when a user click on a file to download, in a web page). To enable the new download manager :</p>
 
 <ul>
- <li>First you have to set the pref {{pref("browser.download.useJSTransfer")}} to <code>true</code>.</li>
- <li>Then you should declare the new {{interface("nsITransfer")}} object during the startup of your app.</li>
+ <li>First you have to set the pref <!-- {{pref("browser.download.useJSTransfer")}} --> to <code>true</code>.</li>
+ <li>Then you should declare the new <!-- {{interface("nsITransfer")}} --> object during the startup of your app.</li>
 </ul>
 
 <pre> Components.manager.QueryInterface(Components.interfaces.nsIComponentRegistrar)

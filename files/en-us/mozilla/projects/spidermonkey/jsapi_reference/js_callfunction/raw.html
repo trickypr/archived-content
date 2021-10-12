@@ -1,4 +1,4 @@
-<div>{{SpiderMonkeySidebar("JSAPI")}}</div>
+<div><!-- {{SpiderMonkeySidebar("JSAPI")}} --></div>
 
 <p>Calls a specified JS function.</p>
 
@@ -42,17 +42,17 @@ JS_CallFunctionValue(JSContext *cx, JSObject *obj, jsval fval, unsigned argc,
   </tr>
   <tr>
    <td><code>cx</code></td>
-   <td>{{jsapixref("JSRuntime", "JSContext *")}}</td>
-   <td>Pointer to a JS context from which to derive runtime information. {{ Jsapi-requires-request() }}</td>
+   <td><!-- {{jsapixref("JSRuntime", "JSContext *")}} --></td>
+   <td>Pointer to a JS context from which to derive runtime information. <!-- {{ Jsapi-requires-request() }} --></td>
   </tr>
   <tr>
    <td><code>obj</code></td>
-   <td>{{jsapixref("JSObject", "JS::HandleObject")}}</td>
+   <td><!-- {{jsapixref("JSObject", "JS::HandleObject")}} --></td>
    <td>The "current" object on which the function operates; the object specified here is "this" when the function executes.</td>
   </tr>
   <tr>
    <td><code>fun</code></td>
-   <td>{{jsapixref("JSFunction", "JS::HandleFunction")}}</td>
+   <td><!-- {{jsapixref("JSFunction", "JS::HandleFunction")}} --></td>
    <td>Pointer to the function to call. <strong><code>fun</code> should be a native function or JSAPI-compiled function.</strong> See below.</td>
   </tr>
   <tr>
@@ -62,27 +62,27 @@ JS_CallFunctionValue(JSContext *cx, JSObject *obj, jsval fval, unsigned argc,
   </tr>
   <tr>
    <td><code>fval</code></td>
-   <td>{{jsapixref("JS::Value", "JS::HandleValue")}}</td>
+   <td><!-- {{jsapixref("JS::Value", "JS::HandleValue")}} --></td>
    <td>Pointer to the function value to call.</td>
   </tr>
   <tr>
    <td><code>args</code></td>
-   <td>{{jsapixref("JS::HandleValueArray", "const JS::HandleValueArray &amp;")}}</td>
-   <td>Reference to the array of argument values to pass to the function. {{ Jsapi_minversion_inline("31") }}</td>
+   <td><!-- {{jsapixref("JS::HandleValueArray", "const JS::HandleValueArray &amp;")}} --></td>
+   <td>Reference to the array of argument values to pass to the function. <!-- {{ Jsapi_minversion_inline("31") }} --></td>
   </tr>
   <tr>
    <td><code>argc</code></td>
    <td><code>unsigned</code></td>
-   <td>Number of arguments you are passing to the function. {{ obsolete_inline("jsapi30") }}</td>
+   <td>Number of arguments you are passing to the function. <!-- {{ obsolete_inline("jsapi30") }} --></td>
   </tr>
   <tr>
    <td><code>argv</code></td>
-   <td>{{jsapixref("Jsval", "jsval *")}}</td>
-   <td>Pointer to the array of argument values to pass to the function. {{ obsolete_inline("jsapi30") }}</td>
+   <td><!-- {{jsapixref("Jsval", "jsval *")}} --></td>
+   <td>Pointer to the array of argument values to pass to the function. <!-- {{ obsolete_inline("jsapi30") }} --></td>
   </tr>
   <tr>
    <td><code>rval</code></td>
-   <td>{{jsapixref("JS::Value", "JS::MutableHandleValue")}}</td>
+   <td><!-- {{jsapixref("JS::Value", "JS::MutableHandleValue")}} --></td>
    <td>Out parameter. On success, <code>*rval</code> receives the return value from the function call.</td>
   </tr>
  </tbody>
@@ -113,14 +113,14 @@ JS_CallFunctionValue(JSContext *cx, JSObject *obj, jsval fval, unsigned argc,
 <h2 id="See_also" name="See_also">See also</h2>
 
 <ul>
- <li>{{ LXRSearch("ident", "i", "JS_CallFunction") }}</li>
- <li>{{ LXRSearch("ident", "i", "JS_CallFunctionName") }}</li>
- <li>{{ LXRSearch("ident", "i", "JS_CallFunctionValue") }}</li>
- <li>{{jsapixref("JS_CompileFunction")}}</li>
- <li>{{jsapixref("JS_DefineFunction")}}</li>
- <li>{{jsapixref("JS_DefineFunctions")}}</li>
- <li>{{jsapixref("JS_GetFunctionObject")}}</li>
- <li>{{jsapixref("JS_NewFunction")}}</li>
- <li>{{jsapixref("JS_ValueToFunction")}}</li>
- <li>{{bug(965830)}}</li>
+ <li><!-- {{ LXRSearch("ident", "i", "JS_CallFunction") }} --></li>
+ <li><!-- {{ LXRSearch("ident", "i", "JS_CallFunctionName") }} --></li>
+ <li><!-- {{ LXRSearch("ident", "i", "JS_CallFunctionValue") }} --></li>
+ <li><!-- {{jsapixref("JS_CompileFunction")}} --></li>
+ <li><!-- {{jsapixref("JS_DefineFunction")}} --></li>
+ <li><!-- {{jsapixref("JS_DefineFunctions")}} --></li>
+ <li><!-- {{jsapixref("JS_GetFunctionObject")}} --></li>
+ <li><!-- {{jsapixref("JS_NewFunction")}} --></li>
+ <li><!-- {{jsapixref("JS_ValueToFunction")}} --></li>
+ <li><!-- {{bug(965830)}} --></li>
 </ul>

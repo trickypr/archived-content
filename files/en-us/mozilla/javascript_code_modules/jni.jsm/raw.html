@@ -1,4 +1,4 @@
-<p>{{ gecko_minversion_header("17") }}</p>
+<p><!-- {{ gecko_minversion_header("17") }} --></p>
 
 <p>The <code>JNI.jsm</code> JavaScript code module abstracts all of the js-ctypes required for writing JNI code. To use it, you first need to import the code module into your JavaScript scope:</p>
 
@@ -24,10 +24,10 @@
 			<td><code><a href="/en-US/docs/Mozilla/js-ctypes/js-ctypes_reference/CData">CData</a> LoadClass(<a href="/en-US/docs/Mozilla/js-ctypes/js-ctypes_reference/CData">CData</a> aJenv, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a> aClassFullyQualifiedName, [optional] <a href="/en-US/docs/JavaScript/Reference/Global_Objects/Object" title="/en-US/docs/JavaScript/Reference/Global_Objects/Object">Object</a> aDeclares);</code></td>
 		</tr>
 		<tr>
-			<td><code><a href="/en-US/docs/Mozilla/js-ctypes/js-ctypes_reference/CData">CData</a> NewString(<a href="/en-US/docs/Mozilla/js-ctypes/js-ctypes_reference/CData">CData</a> aJenv, </code>{{jsxref("String")}}<code> aStr);</code></td>
+			<td><code><a href="/en-US/docs/Mozilla/js-ctypes/js-ctypes_reference/CData">CData</a> NewString(<a href="/en-US/docs/Mozilla/js-ctypes/js-ctypes_reference/CData">CData</a> aJenv, </code><!-- {{jsxref("String")}} --><code> aStr);</code></td>
 		</tr>
 		<tr>
-			<td>{{jsxref("String")}}<code> ReadString(<a href="/en-US/docs/Mozilla/js-ctypes/js-ctypes_reference/CData">CData</a> aJenv, <a href="/en-US/docs/Mozilla/js-ctypes/js-ctypes_reference/CData">CData</a> aJavaString);</code></td>
+			<td><!-- {{jsxref("String")}} --><code> ReadString(<a href="/en-US/docs/Mozilla/js-ctypes/js-ctypes_reference/CData">CData</a> aJenv, <a href="/en-US/docs/Mozilla/js-ctypes/js-ctypes_reference/CData">CData</a> aJavaString);</code></td>
 		</tr>
 		<tr>
 			<td><code>void UnloadClasses();</code></td>
@@ -98,7 +98,7 @@
 	<dt><code>aJenv</code></dt>
 	<dd>The return value of <code>GetForThread()</code>.</dd>
 	<dt><code>aStr</code></dt>
-	<dd>A Javascript {{jsxref("String")}}, use any encoding desired.</dd>
+	<dd>A Javascript <!-- {{jsxref("String")}} -->, use any encoding desired.</dd>
 </dl>
 
 <h5 id="Return_value_3">Return value</h5>
@@ -126,7 +126,7 @@
 
 <h5 id="Return_Value">Return Value</h5>
 
-<p>A Javascript {{jsxref("String")}}.</p>
+<p>A Javascript <!-- {{jsxref("String")}} -->.</p>
 
 <h3 id="UnloadClasses()"><code>UnloadClasses</code>()</h3>
 
@@ -257,7 +257,7 @@
 		</tr>
 		<tr>
 			<td>length</td>
-			<td>{{jsxref("Number")}}</td>
+			<td><!-- {{jsxref("Number")}} --></td>
 			<td>The number of elements in the array</td>
 		</tr>
 	</tbody>

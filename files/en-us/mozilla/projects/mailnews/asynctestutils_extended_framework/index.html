@@ -79,7 +79,7 @@ slug: Mozilla/Projects/MailNews/AsyncTestUtils_Extended_Framework
  <dt>age: (strictly incrementing from arbitrary origin)</dt>
  <dd>The default starts at Jan 1, 2000 and adds an hour for every message. If you pass an object, it should be an object with one or more of the following attributes: <code>minutes</code>, <code>hours</code>, <code>days</code>, <code>weeks</code>. These attributes specify how old the message should be. For example, <code>{weeks: 2, days: 3}</code> would be a message sent exactly 17 days ago. If you pass age, you should also pass <code>age_incr</code>.</dd>
  <dt>age_incr: (no increment)</dt>
- <dd>Takes an object of the same style taken by age. This specifies the time interval we should add to the date for each message. Due to a bug, you should pass negative values. (We will probably auto-correct that in the future.) If your set definition was <code>{count: 3, age: {days: 7}, age_incr: {days: -1}}</code>, then you would generate messages from 7, 6, and 5 days ago.</dd>
+ <dd>Takes an object of the same style taken by age. This specifies the time interval we should add to the date for each message. Due to a bug, you should pass negative values. (We will probably auto-correct that in the future.) If your set definition was <code>{count: 3, age: {days: 7}, age_incr: {days: -1}} --></code>, then you would generate messages from 7, 6, and 5 days ago.</dd>
  <dt>subject: (automatically generated random subject)</dt>
  <dd>Force all the messages to have the same subject you pass in. For example, <code>{count: 1, subject: &quot;my suitcase&quot;}</code> would result in a single message with the subject &quot;my suitcase&quot; with a random sender and random recipient.</dd>
  <dt>to: (automatically generated single recipient)</dt>

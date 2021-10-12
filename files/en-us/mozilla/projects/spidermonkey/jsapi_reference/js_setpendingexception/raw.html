@@ -1,4 +1,4 @@
-<div>{{SpiderMonkeySidebar("JSAPI")}}</div>
+<div><!-- {{SpiderMonkeySidebar("JSAPI")}} --></div>
 <div class="summary">
 <p>Sets the current exception being thrown within a context.</p>
 </div>
@@ -15,12 +15,12 @@ JS_SetPendingException(JSContext *cx, JS::HandleValue v);
   </tr>
   <tr>
    <td><code>cx</code></td>
-   <td>{{jsapixref("JSRuntime", "JSContext *")}}</td>
-   <td>Pointer to a JS context from which to derive runtime information. {{ Jsapi-requires-request() }}</td>
+   <td><!-- {{jsapixref("JSRuntime", "JSContext *")}} --></td>
+   <td>Pointer to a JS context from which to derive runtime information. <!-- {{ Jsapi-requires-request() }} --></td>
   </tr>
   <tr>
    <td><code>v</code></td>
-   <td>{{jsapixref("JS::Value", "JS::HandleValue")}}</td>
+   <td><!-- {{jsapixref("JS::Value", "JS::HandleValue")}} --></td>
    <td>Value to throw as an exception.</td>
   </tr>
  </tbody>
@@ -33,9 +33,9 @@ JS_SetPendingException(JSContext *cx, JS::HandleValue v);
 <p>See <a href="/En/SpiderMonkey/JSAPI_Phrasebook#throw" title="en/JSAPI_Phrasebook#throw">examples in the JSAPI Phrasebook</a>.</p>
 <h2 id="See_Also" name="See_Also">See Also</h2>
 <ul>
-  <li>{{ LXRSearch("ident", "i", "JS_SetPendingException") }}</li>
-<li>{{jsapixref("JS_IsExceptionPending")}}</li>
-<li>{{jsapixref("JS_GetPendingException")}}</li>
-<li>{{jsapixref("JS_ClearPendingException")}}</li>
-<li>{{jsapixref("JS_ReportPendingException")}}</li>
+  <li><!-- {{ LXRSearch("ident", "i", "JS_SetPendingException") }} --></li>
+<li><!-- {{jsapixref("JS_IsExceptionPending")}} --></li>
+<li><!-- {{jsapixref("JS_GetPendingException")}} --></li>
+<li><!-- {{jsapixref("JS_ClearPendingException")}} --></li>
+<li><!-- {{jsapixref("JS_ReportPendingException")}} --></li>
 </ul>

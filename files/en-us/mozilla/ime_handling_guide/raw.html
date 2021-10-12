@@ -87,7 +87,7 @@
 <p>This is the only module that depends on the users platform. See also <a href="#Native_IME_handlers">Native IME handlers section</a> for the detail of each platform's implementation.</p>
 
 <div class="note">
-<p>Android widget still does not use <code>TextEventDispatcher</code> to dispatch <code>WidgetCompositionEvent</code>s, see {{Bug(1137567)}}.</p>
+<p>Android widget still does not use <code>TextEventDispatcher</code> to dispatch <code>WidgetCompositionEvent</code>s, see <!-- {{Bug(1137567)}} -->.</p>
 </div>
 
 <h3 id="mozillawidgetTextEventDispatcher"><a href="https://dxr.mozilla.org/mozilla-central/source/widget/TextEventDispatcher.cpp">mozilla::widget::TextEventDispatcher</a></h3>
@@ -639,7 +639,7 @@
 
 <p>Note that if new composition is started before <code>NOTIFY_IME_OF_COMPOSITION_EVENT_HANDLED</code> notification, <code>TSFTextStore</code> handles the new composition with cached contents which may be different from actual contents. So, e.g., reconvertion around caret may not work as unexpectd in such case, but we don't have a good solution for this issue.</p>
 
-<p>On the other hand, <code>TSFTextStore</code> cannot cache character rects since if there are a lot of characters, caching the rects require a lot of CPU cost (to compute each rect) and memory. Therefore, <code>TSFTextStore</code> will use insertion point relative query for them {{Bug(1286157)}}. Then, it can retrieve expected character's rect even if the cache of <code>TSFTextStore</code> is different from the actual contents because TIP typically needs caret position's character rect (for a popup to indicate current input mode or next word suggestion list) or first character rect of the target clause of current composition (for a candidate list window of conversion).</p>
+<p>On the other hand, <code>TSFTextStore</code> cannot cache character rects since if there are a lot of characters, caching the rects require a lot of CPU cost (to compute each rect) and memory. Therefore, <code>TSFTextStore</code> will use insertion point relative query for them <!-- {{Bug(1286157)}} -->. Then, it can retrieve expected character's rect even if the cache of <code>TSFTextStore</code> is different from the actual contents because TIP typically needs caret position's character rect (for a popup to indicate current input mode or next word suggestion list) or first character rect of the target clause of current composition (for a candidate list window of conversion).</p>
 
 <h3 id="Mac">Mac</h3>
 

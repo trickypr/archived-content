@@ -2,7 +2,7 @@
 <p>The most efficient tool to claim that html-table code is the victim and not the source of layout bugs is a <a href="en/Debugging_Frame_Reflow">frame reflow debug log</a>. Look there especially how the maxElementsize (MES) and desired size are propagated.
 </p>
 <h3 id="Block_Reflow" name="Block_Reflow"> Block Reflow </h3>
-<p>Another way to debug the reflow process is implemented inside {{ Source("layout/html/base/src/nsBlockFrame.cpp", "nsBlockFrame.cpp") }}. It can be invoked by
+<p>Another way to debug the reflow process is implemented inside <!-- {{ Source("layout/html/base/src/nsBlockFrame.cpp", "nsBlockFrame.cpp") }} -->. It can be invoked by
 </p><p><code>set GECKO_BLOCK_DEBUG_FLAGS=reflow</code>
 </p><p>The available options are:
 </p>
@@ -29,7 +29,7 @@
 <p>Editor's Note: the following examples are not shown correctly due to the wiki's technical constraint.
 </p>
 </div>
-<p>The table layout strategy can be visualized by defining in the {{ Source("layout/html/table/src/Makefile.in", "makefiles") }} the constant DEBUG_TABLE_STRATEGY.If one takes for instance the following table
+<p>The table layout strategy can be visualized by defining in the <!-- {{ Source("layout/html/table/src/Makefile.in", "makefiles") }} --> the constant DEBUG_TABLE_STRATEGY.If one takes for instance the following table
 </p><p>Code:
 </p>
 <pre>&lt;table border width="300"&gt;

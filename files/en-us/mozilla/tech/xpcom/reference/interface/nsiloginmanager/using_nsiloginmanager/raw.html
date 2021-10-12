@@ -1,4 +1,4 @@
-<div>{{ Gecko_minversion_header("1.9") }}</div>
+<div><!-- {{ Gecko_minversion_header("1.9") }} --></div>
 
 <h2 id="Working_with_the_Login_Manager" name="Working_with_the_Login_Manager">Working with the Login Manager</h2>
 
@@ -101,7 +101,7 @@ var loginInfo = new nsLoginInfo(
 <pre class="brush: js">myLoginManager.addLogin(loginInfo);
 </pre>
 
-<p>{{ Note("This will throw an exception if both the <code>httprealm</code> and <code>formSubmitURL</code> parameters are <code>NULL</code>. One must be specified when storing a password. The <code>hostname</code>, <code>username</code> and <code>password</code> parameters are also mandatory.") }}</p>
+<p><!-- {{ Note("This will throw an exception if both the <code>httprealm</code> and <code>formSubmitURL</code> parameters are <code>NULL</code>. One must be specified when storing a password. The <code>hostname</code>, <code>username</code> and <code>password</code> parameters are also mandatory.") }} --></p>
 
 <h2 id="Retrieving_a_password" name="Retrieving_a_password">Retrieving a password</h2>
 
@@ -178,7 +178,7 @@ catch(ex) {
 
 <h2 id="Debugging" name="Debugging">Login Manager notifications</h2>
 
-<p>{{ fx_minversion_note("3.5", "The Login Manager notifications were added in Firefox 3.5.") }}</p>
+<p><!-- {{ fx_minversion_note("3.5", "The Login Manager notifications were added in Firefox 3.5.") }} --></p>
 
 <p>Firefox 3.5 and later send assorted notifications when various Login Manager related events occur, including when form autofill does not occur for various reasons, as well as when changes are made to the Login Manager's database. See the <a class="internal" href="/en-US/docs/Observer_Notifications#Login_Manager" title="en-US/docs/Observer Notifications#Login Manager">Login Manager</a> section of the article on observer notifications for details.</p>
 
@@ -201,7 +201,7 @@ catch(ex) {
 <h2 id="See_also" name="See_also">See also</h2>
 
 <ul>
-	<li>{{ Interface("nsILoginManager") }}</li>
-	<li>{{ Interface("nsILoginInfo") }}</li>
+	<li><!-- {{ Interface("nsILoginManager") }} --></li>
+	<li><!-- {{ Interface("nsILoginInfo") }} --></li>
 	<li><a href="/en-US/docs/Creating_a_Login_Manager_storage_module" title="en-US/docs/Creating_a_Login_Manager_storage_module">Creating a Login Manager storage module</a></li>
 </ul>

@@ -9,9 +9,9 @@
 );
 </pre>
 <h3 id="Parameters"> Parameters </h3>
-<dl><dt><code>hSession</code></dt><dd> {{ mediawiki.external('in') }} session handle.
-</dd><dt><code>pSignature</code></dt><dd> {{ mediawiki.external('out') }} pointer to the buffer which will receive the digest or NULL.
-</dd><dt><code>pusSignatureLen</code></dt><dd> {{ mediawiki.external('in, out') }} pointer to location containing the maximum buffer size.
+<dl><dt><code>hSession</code></dt><dd> <!-- {{ mediawiki.external('in') }} --> session handle.
+</dd><dt><code>pSignature</code></dt><dd> <!-- {{ mediawiki.external('out') }} --> pointer to the buffer which will receive the digest or NULL.
+</dd><dt><code>pusSignatureLen</code></dt><dd> <!-- {{ mediawiki.external('in, out') }} --> pointer to location containing the maximum buffer size.
 </dd></dl>
 <h3 id="Description"> Description </h3>
 <p><code>FC_SignFinal</code> finishes a multi-part signing operation by returning the complete signature and clearing the operation context. If <code>pSignature</code> is NULL the length of the signature is returned and <code>FC_SignFinal</code> may be called again with <code>pSignature</code> set to retrieve the signature.

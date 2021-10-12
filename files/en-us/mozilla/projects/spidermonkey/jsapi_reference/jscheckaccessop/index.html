@@ -99,7 +99,7 @@ tags:
 <p></p><div class="obsolete obsoleteHeader notecard"><p><strong><span class="icon-only-inline" title="This is an obsolete API and is no longer guaranteed to work."><i class="icon-trash"> </i></span> Obsolete since JSAPI 29</strong><br>This feature is obsolete. Although it may still work in some browsers, its use is discouraged since it could be removed at any time. Try to avoid using it.</p></div><p></p>
 
 <div class="summary">
-<p><code>JSCheckAccessOp</code> is the type for <a href="/en-US/docs/Mozilla/Projects/SpiderMonkey/JSAPI_reference/JSClass" title="Use JSClass to define a custom class of JavaScript objects. A JSClass has a name, flags, and several callback functions for advanced customization of object behavior."><code>JSClass.checkAccess</code></a>. (It is also the type of the callback set by <a href="/en-US/docs/Mozilla/Projects/SpiderMonkey/JSAPI_reference/JS_SetCheckObjectAccessCallback" title="{{ deprecated_header() }}"><code>JS_SetCheckObjectAccessCallback</code></a>.)</p>
+<p><code>JSCheckAccessOp</code> is the type for <a href="/en-US/docs/Mozilla/Projects/SpiderMonkey/JSAPI_reference/JSClass" title="Use JSClass to define a custom class of JavaScript objects. A JSClass has a name, flags, and several callback functions for advanced customization of object behavior."><code>JSClass.checkAccess</code></a>. (It is also the type of the callback set by <a href="/en-US/docs/Mozilla/Projects/SpiderMonkey/JSAPI_reference/JS_SetCheckObjectAccessCallback" title="<!-- {{ deprecated_header() }} -->"><code>JS_SetCheckObjectAccessCallback</code></a>.)</p>
 </div>
 
 <h2 id="Syntax" name="Syntax">Syntax</h2>
@@ -150,7 +150,7 @@ tags:
 
 <p><code>JSCheckAccessOp</code> implementations generally work by using <a href="/en-US/docs/SpiderMonkey/JS_Debugger_API_Guide" title="JSDBGAPI">JSDBGAPI</a> functions such as <a href="/en-US/docs/Mozilla/Projects/SpiderMonkey/JSAPI_reference/JS_FrameIterator" title="The documentation about this has not yet been written; please consider contributing!"><code>JS_FrameIterator</code></a> and <a href="/en-US/docs/Mozilla/Projects/SpiderMonkey/JSAPI_reference/JS_StackFramePrincipals" title="The documentation about this has not yet been written; please consider contributing!"><code>JS_StackFramePrincipals</code></a> to obtain the principals of the code attempting the checked operation, then examining those principals and comparing them with the system&apos;s security policy. The nature of principals and the security policy are entirely up to the application.</p>
 
-<p>If a class leaves the <code>checkAccess</code> field <code>NULL</code>, a runtime-wide object access callback is called instead; see <a href="/en-US/docs/Mozilla/Projects/SpiderMonkey/JSAPI_reference/JS_SetCheckObjectAccessCallback" title="{{ deprecated_header() }}"><code>JS_SetCheckObjectAccessCallback</code></a>.</p>
+<p>If a class leaves the <code>checkAccess</code> field <code>NULL</code>, a runtime-wide object access callback is called instead; see <a href="/en-US/docs/Mozilla/Projects/SpiderMonkey/JSAPI_reference/JS_SetCheckObjectAccessCallback" title="<!-- {{ deprecated_header() }} -->"><code>JS_SetCheckObjectAccessCallback</code></a>.</p>
 
 <h3 id="JSClass_hooks"><code>JSClass</code> hooks</h3>
 

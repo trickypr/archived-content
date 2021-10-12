@@ -1,6 +1,6 @@
-<div>{{SpiderMonkeySidebar("JSAPI")}}</div>
+<div><!-- {{SpiderMonkeySidebar("JSAPI")}} --></div>
 
-<p>{{ Obsolete_header("jsapi30") }}</p>
+<p><!-- {{ Obsolete_header("jsapi30") }} --></p>
 
 <div class="summary">
 <p>Create a new object property with a tiny id.</p>
@@ -30,17 +30,17 @@ JS_DefineUCPropertyWithTinyId(
   </tr>
   <tr>
    <td><code>cx</code></td>
-   <td>{{jsapixref("JSRuntime", "JSContext *")}}</td>
-   <td>The context in which to define the property. {{ Jsapi-requires-request() }}</td>
+   <td><!-- {{jsapixref("JSRuntime", "JSContext *")}} --></td>
+   <td>The context in which to define the property. <!-- {{ Jsapi-requires-request() }} --></td>
   </tr>
   <tr>
    <td><code>obj</code></td>
-   <td>{{jsapixref("JSObject", "JSObject *")}}</td>
+   <td><!-- {{jsapixref("JSObject", "JSObject *")}} --></td>
    <td>Object for which to create the new property.</td>
   </tr>
   <tr>
    <td><code>name</code></td>
-   <td><code>const char *</code> <em>or</em> <code>const {{jsapixref("jschar", "jschar *")}}</code></td>
+   <td><code>const char *</code> <em>or</em> <code>const <!-- {{jsapixref("jschar", "jschar *")}} --></code></td>
    <td>Name for the property to create.</td>
   </tr>
   <tr>
@@ -50,27 +50,27 @@ JS_DefineUCPropertyWithTinyId(
   </tr>
   <tr>
    <td><code>tinyid</code></td>
-   <td>{{jsapixref("jsint", "int8")}}</td>
+   <td><!-- {{jsapixref("jsint", "int8")}} --></td>
    <td>8-bit ID to aid in sharing getter and setter callbacks among properties.</td>
   </tr>
   <tr>
    <td><code>value</code></td>
-   <td>{{jsapixref("Jsval", "jsval")}}</td>
-   <td>Initial {{jsapixref("Stored_value", "stored value", "", 1)}} for the new property.</td>
+   <td><!-- {{jsapixref("Jsval", "jsval")}} --></td>
+   <td>Initial <!-- {{jsapixref("Stored_value", "stored value", "", 1)}} --> for the new property.</td>
   </tr>
   <tr>
    <td><code>getter</code></td>
-   <td>{{jsapixref("JSPropertyOp")}}</td>
+   <td><!-- {{jsapixref("JSPropertyOp")}} --></td>
    <td><code>getProperty</code> method for retrieving the current property value.</td>
   </tr>
   <tr>
    <td><code>setter</code></td>
-   <td>{{jsapixref("JSPropertyOp")}}</td>
+   <td><!-- {{jsapixref("JSPropertyOp")}} --></td>
    <td><code>setProperty</code> method for specifying a new property value.</td>
   </tr>
   <tr>
    <td><code>attrs</code></td>
-   <td>{{jsapixref("jsint", "unsigned int")}}</td>
+   <td><!-- {{jsapixref("jsint", "unsigned int")}} --></td>
    <td>Property attributes.</td>
   </tr>
  </tbody>
@@ -78,18 +78,18 @@ JS_DefineUCPropertyWithTinyId(
 
 <h2 id="Description" name="Description">Description</h2>
 
-<p><code>JS_DefinePropertyWithTinyId</code> defines an object property with a tiny id. <code>JS_DefineUCPropertyWithTinyId</code> is the Unicode version of the function. Except for the <code>tinyid</code> parameter, these functions behave exactly as {{jsapixref("JS_DefineProperty")}} and {{jsapixref("JS_DefineProperty", "JS_DefineUCProperty")}}. See those functions for more details.</p>
+<p><code>JS_DefinePropertyWithTinyId</code> defines an object property with a tiny id. <code>JS_DefineUCPropertyWithTinyId</code> is the Unicode version of the function. Except for the <code>tinyid</code> parameter, these functions behave exactly as <!-- {{jsapixref("JS_DefineProperty")}} --> and <!-- {{jsapixref("JS_DefineProperty", "JS_DefineUCProperty")}} -->. See those functions for more details.</p>
 
-<p><code>tinyid</code> is a signed 8-bit integer that affects the <code>id</code> value passed to certain callbacks. Any time the JavaScript engine would pass the name of the property as a string to the <code>id</code> parameter of a tiny-id-aware callback, it passes {{jsapixref("INT_TO_JSVAL", "INT_TO_JSVAL(tinyid)")}} instead. The tiny-id-aware callbacks are: property getters and setters; and {{jsapixref("JSPropertyOp", "JSClass.addProperty")}}, {{jsapixref("JSPropertyOp", ".delProperty")}}, {{jsapixref("JSPropertyOp", ".getProperty")}}, and {{jsapixref("JSPropertyOp", ".setProperty")}}. Tiny ids only affect the <code>id</code>s passed to these hooks; the JavaScript engine does not use them as property names internally.</p>
+<p><code>tinyid</code> is a signed 8-bit integer that affects the <code>id</code> value passed to certain callbacks. Any time the JavaScript engine would pass the name of the property as a string to the <code>id</code> parameter of a tiny-id-aware callback, it passes <!-- {{jsapixref("INT_TO_JSVAL", "INT_TO_JSVAL(tinyid)")}} --> instead. The tiny-id-aware callbacks are: property getters and setters; and <!-- {{jsapixref("JSPropertyOp", "JSClass.addProperty")}} -->, <!-- {{jsapixref("JSPropertyOp", ".delProperty")}} -->, <!-- {{jsapixref("JSPropertyOp", ".getProperty")}} -->, and <!-- {{jsapixref("JSPropertyOp", ".setProperty")}} -->. Tiny ids only affect the <code>id</code>s passed to these hooks; the JavaScript engine does not use them as property names internally.</p>
 
 <p>Tiny ids are helpful for getters and setters that are shared by several different properties. Those getters and setters can use <code>switch (JSVAL_TO_INT(id))</code>, instead of checking the value of <code>id</code> as a string, to determine which property is being accessed.</p>
 
-<p>However, tiny ids can cause confusion when used with {{jsapixref("JSClass")}} callbacks. For example, if a property named <code>"color"</code> is defined with tiny id <code>10</code>, then the JavaScript expressions <code>obj{{ mediawiki.external(10) }}</code> and <code>obj.color</code> will both result in <code>INT_TO_JSVAL(10)</code> being passed to <code>JSClass.getProperty</code> as the <code>id</code> parameter. Per-property getters and setters do not suffer from this confusion: in the above example, <code>obj.color</code> would cause the JavaScript engine to call the getter for the <code>color</code> property, but <code>obj{{ mediawiki.external(10) }}</code> wouldn't. Traditionally, negative tiny ids are used to minimize the potential confusion, but it is best to specify a non-null <code>getter</code> and <code>setter</code> when defining a property with a tiny id.</p>
+<p>However, tiny ids can cause confusion when used with <!-- {{jsapixref("JSClass")}} --> callbacks. For example, if a property named <code>"color"</code> is defined with tiny id <code>10</code>, then the JavaScript expressions <code>obj<!-- {{ mediawiki.external(10) }} --></code> and <code>obj.color</code> will both result in <code>INT_TO_JSVAL(10)</code> being passed to <code>JSClass.getProperty</code> as the <code>id</code> parameter. Per-property getters and setters do not suffer from this confusion: in the above example, <code>obj.color</code> would cause the JavaScript engine to call the getter for the <code>color</code> property, but <code>obj<!-- {{ mediawiki.external(10) }} --></code> wouldn't. Traditionally, negative tiny ids are used to minimize the potential confusion, but it is best to specify a non-null <code>getter</code> and <code>setter</code> when defining a property with a tiny id.</p>
 
 <p>On success, <code>JS_DefinePropertyWithTinyId</code> and <code>JS_DefineUCPropertyWithTinyId</code> return <code>JS_TRUE</code>. If the property already exists or cannot be created, they return <code>JS_FALSE</code>.</p>
 
 <h2 id="See_Also" name="See_Also">See Also</h2>
 
 <ul>
- <li>{{bug(975069)}}</li>
+ <li><!-- {{bug(975069)}} --></li>
 </ul>

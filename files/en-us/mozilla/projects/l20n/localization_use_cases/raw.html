@@ -4,7 +4,7 @@
 
 <p>In Gaia's Browser app, there's an <a href="https://github.com/mozilla-b2g/gaia/blob/c0265432b75c1586bbe0d5fd7366c680951404d6/apps/browser/locales/browser.en-US.properties#L50"><code>about-browser</code> string</a> defined as follows in <code>apps/browser/locales/browser</code>:</p>
 
-<pre class="brush: js">about-browser=About \{{browserBrandShortName}}</pre>
+<pre class="brush: js">about-browser=About \<!-- {{browserBrandShortName}} --></pre>
 
 <h3 id="Problem_definition">Problem definition</h3>
 
@@ -16,7 +16,7 @@
 
 <p>However, since we want the name of the browser to be stored in the <code>browserBrandShortName</code> entity, we can't modify it. The work-around is to inflect an auxiliary noun complement, e.g. <em>browser</em>, to give <em>About the Firefox browser</em>. Needless to say, this ends up being long and often unnaturally-sounding to the native speakers.</p>
 
-<pre class="brush: js">about-browser=O brskalniku \{{browserBrandShortName}}</pre>
+<pre class="brush: js">about-browser=O brskalniku \<!-- {{browserBrandShortName}} --></pre>
 
 <h3 id="Solution">Solution</h3>
 
@@ -40,7 +40,7 @@
 
 <p>Now, coming back to <code>apps/browser/locales/browser</code>, we can take advantage of the grammatical cases. Slovenian uses the locative case with its <em>About</em> preposition:</p>
 
-<pre class="brush: html">&lt;aboutBrowser "O \{{ browserBrandShortName.locative }}"&gt;
+<pre class="brush: html">&lt;aboutBrowser "O \<!-- {{ browserBrandShortName.locative }} -->"&gt;
  </pre>
 
 <p>For the official branding, we get:</p>
@@ -57,7 +57,7 @@
 
 <p>In the System app's <code>apps/system/locales/system</code>, there's a string called <a href="https://github.com/mozilla-b2g/gaia/blob/c0265432b75c1586bbe0d5fd7366c680951404d6/apps/system/locales/system.en-US.properties#L190"><code>crash-banner-os2</code></a>.</p>
 
-<pre>crash-banner-os2=\{{brandShortName}} just crashed.
+<pre>crash-banner-os2=\<!-- {{brandShortName}} --> just crashed.
 </pre>
 
 <h3 id="Problem_definition_2">Problem definition</h3>
@@ -85,9 +85,9 @@
 <p>Now we can translate <code>crash-banner-os2</code> into Polish without sounding like a robot:</p>
 
 <pre class="brush: html">&lt;crashBannerOS2[brandShortName::_gender] {
-  masculine: "\{{ brandShortName }} uległ awarii",
-  feminine: "\{{ brandShortName }} uległa awarii",
-  neutral: "\{{ brandShortName }} uległo awarii"
+  masculine: "\<!-- {{ brandShortName }} --> uległ awarii",
+  feminine: "\<!-- {{ brandShortName }} --> uległa awarii",
+  neutral: "\<!-- {{ brandShortName }} --> uległo awarii"
 }&gt;
 </pre>
 
@@ -135,20 +135,20 @@ updateAppFreeSpace: function storage_updateAppFreeSpace() {
 <p>For all values of <code>freeSpace</code>, the following string is enough to construct a grammatically-correct sentence in English:</p>
 
 <div class="highlight">
-<pre class="brush: js">availableSize = \{{$size}} \{{$unit}} available
+<pre class="brush: js">availableSize = \<!-- {{$size}} --> \<!-- {{$unit}} --> available
 </pre>
 
 <p>However, other languages might need to pluralize this string with different forms of the <em>available</em> adjective. Consequently, using the existing localization frameworks, the developer needs to predict which strings might need pluralization in other languages, and <a href="https://github.com/mozilla-b2g/gaia/blob/edb1dea8b45238add44b199cf02c9b4ed808b767/apps/settings/locales/settings.en-US.properties#L491-L497">pluralize them even in English</a>:</p>
 
 <pre class="brush: js">availableSize = {[ plural(size) ]}
-availableSize[other] = \{{$size}} \{{$unit}} available
+availableSize[other] = \<!-- {{$size}} --> \<!-- {{$unit}} --> available
 </pre>
 
 <p>An Italian translation might look like this:</p>
 
 <pre class="brush: js">availableSize = {[ plural(size) ]}
-availableSize[one] = \{{$size}} \{{$unit}} disponibile
-availableSize[other] = \{{$size}} \{{$unit}} disponibili
+availableSize[one] = \<!-- {{$size}} --> \<!-- {{$unit}} --> disponibile
+availableSize[other] = \<!-- {{$size}} --> \<!-- {{$unit}} --> disponibili
 </pre>
 
 <p>It's easy to imagine how developers might forget to pluralize some strings that in other languages might require pluralization (or other grammatical features that the framework supports).</p>
@@ -159,7 +159,7 @@ availableSize[other] = \{{$size}} \{{$unit}} disponibili
 
 <p>In L20n, the English string could be as simple as:</p>
 
-<pre class="brush: html">&lt;availableSize "\{{ $size }} \{{ $unit }} available"&gt;
+<pre class="brush: html">&lt;availableSize "\<!-- {{ $size }} --> \<!-- {{ $unit }} --> available"&gt;
 </pre>
 
 <p>On the other hand, the Italian translation would make use of proper pluralization rules:</p>
@@ -169,8 +169,8 @@ availableSize[other] = \{{$size}} \{{$unit}} disponibili
             "other"
 }&gt;
 &lt;availableSize[plural($size)] {
-  one: "\{{ $size }} \{{ $unit }} disponibile",
-  other: "\{{ $size }} \{{ $unit }} disponibili"
+  one: "\<!-- {{ $size }} --> \<!-- {{ $unit }} --> disponibile",
+  other: "\<!-- {{ $size }} --> \<!-- {{ $unit }} --> disponibili"
 }&gt;
 </pre>
 
@@ -229,7 +229,7 @@ byteUnit-TB = To
 
 <p>And then use the <code>$unit</code> variable verbatim in the English message:</p>
 
-<pre class="brush: html">&lt;availableSize "\{{ $size }} \{{ $unit }} available"&gt;
+<pre class="brush: html">&lt;availableSize "\<!-- {{ $size }} --> \<!-- {{ $unit }} --> available"&gt;
 </pre>
 
 <p>In French, the localizer can then use the value of <code>$unit</code> to match it against a translated abbreviation, like so:</p>
@@ -241,7 +241,7 @@ byteUnit-TB = To
   GB: "Go",
   TB: "To"
 }&gt;
-&lt;availableSize "Il reste \{{ $size }} \{{ _uniteDeMesure[unit] }}"&gt;
+&lt;availableSize "Il reste \<!-- {{ $size }} --> \<!-- {{ _uniteDeMesure[unit] }} -->"&gt;
 </pre>
 
 <p>Similarly, other local variables could be used to provide better and more natural translations in French and other languages alike.</p>

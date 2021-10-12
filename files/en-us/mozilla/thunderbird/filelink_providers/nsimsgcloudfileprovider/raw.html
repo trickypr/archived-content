@@ -1,6 +1,6 @@
 <p>nsIMsgCloudFileProvider is the interface that must be implemented by new <a href="/en/Thunderbird/Filelink_Providers" title="Filelink Providers">Filelink</a> providers.</p>
 
-<p>Inherits from: {{ Interface("nsISupports") }}</p>
+<p>Inherits from: <!-- {{ Interface("nsISupports") }} --></p>
 
 <h2 id="Method_overview" name="Method_overview">Method overview</h2>
 
@@ -252,7 +252,7 @@
 
 <p>Creates a new user account for the storage provider represented by the nsIMsgCloudFileProvider.</p>
 
-<p><code>{{ Note("This function is not directly called by the Filelink UI. This might change in the future, but as it stands, this function can simply return NS_ERROR_NOT_IMPLEMENTED unless there are plans to call createNewAccount from the management or settings XHTML files.") }}</code></p>
+<p><code><!-- {{ Note("This function is not directly called by the Filelink UI. This might change in the future, but as it stands, this function can simply return NS_ERROR_NOT_IMPLEMENTED unless there are plans to call createNewAccount from the management or settings XHTML files.") }} --></code></p>
 
 <pre class="eval notranslate"><code>void createNewAccount(in ACString aEmailAddress, in ACString aPassword,
                       in ACString aFirstName, in ACString aLastName,

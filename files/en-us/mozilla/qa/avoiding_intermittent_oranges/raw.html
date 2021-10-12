@@ -14,7 +14,7 @@
 
 <h2 id="Accessing_DOM_elements_too_soon">Accessing DOM elements too soon</h2>
 
-<p><code>data:</code> URLs load asynchronously. You should wait for the load event of an {{ HTMLElement("iframe") }} that is loading a <code>data:</code> URL before trying to access the DOM of the subdocument.</p>
+<p><code>data:</code> URLs load asynchronously. You should wait for the load event of an <!-- {{ HTMLElement("iframe") }} --> that is loading a <code>data:</code> URL before trying to access the DOM of the subdocument.</p>
 
 <p>For example, the following code pattern is bad:</p>
 
@@ -50,7 +50,7 @@
 
 <h2 id="Using_script_functions_before_theyre_defined">Using script functions before they're defined</h2>
 
-<p>This may be relevant to event handlers, more than anything else.  Let's say that you have an {{ HTMLElement("iframe") }} and you want to do something after it's been loaded, so you might write code like this:</p>
+<p>This may be relevant to event handlers, more than anything else.  Let's say that you have an <!-- {{ HTMLElement("iframe") }} --> and you want to do something after it's been loaded, so you might write code like this:</p>
 
 <pre class="brush: html">&lt;iframe src="..." onload="onLoad()"&gt;&lt;/iframe&gt;
 &lt;script&gt;
@@ -60,7 +60,7 @@
 &lt;/script&gt;
 </pre>
 
-<p>This is bad, because the {{ HTMLElement("iframe") }}'s load may be completed before the script gets parsed, and therefore before the <code>onLoad</code> function comes into existence.  This will cause you to miss the {{ HTMLElement("iframe") }} load, which may cause your test to time out, for example.  The best way to fix this is to move the function definition before where it's used in the DOM, like this:</p>
+<p>This is bad, because the <!-- {{ HTMLElement("iframe") }} -->'s load may be completed before the script gets parsed, and therefore before the <code>onLoad</code> function comes into existence.  This will cause you to miss the <!-- {{ HTMLElement("iframe") }} --> load, which may cause your test to time out, for example.  The best way to fix this is to move the function definition before where it's used in the DOM, like this:</p>
 
 <pre class="brush: html">&lt;script&gt;
   function onLoad() {
@@ -72,7 +72,7 @@
 
 <h2 id="Relying_on_the_order_of_asynchronous_operations">Relying on the order of asynchronous operations</h2>
 
-<p>In general, when you have two asynchronous operations, you cannot assume any order between them.  For example, let's say you have two {{ HTMLElement("iframe") }}s like this:</p>
+<p>In general, when you have two asynchronous operations, you cannot assume any order between them.  For example, let's say you have two <!-- {{ HTMLElement("iframe") }} -->s like this:</p>
 
 <pre class="brush: html">&lt;script&gt;
   var f1Doc;
@@ -138,7 +138,7 @@ function runLater(func) {
   timer.initWithCallback(func, 0, Ci.nsITimer.TYPE_ONE_SHOT);
 }</pre>
 
-<p>A similar problem may happen with {{ interface("nsIWebProgressListener") }} objects passed to the {{ ifmethod("nsIWebProgress", "addProgressListener") }} method, because the web progress object stores a weak reference to the {{ interface("nsIWebProgressListener") }} object, which does not prevent it from being garbage collected.</p>
+<p>A similar problem may happen with <!-- {{ interface("nsIWebProgressListener") }} --> objects passed to the <!-- {{ ifmethod("nsIWebProgress", "addProgressListener") }} --> method, because the web progress object stores a weak reference to the <!-- {{ interface("nsIWebProgressListener") }} --> object, which does not prevent it from being garbage collected.</p>
 
 <h2 id="Tests_which_require_focus">Tests which require focus</h2>
 

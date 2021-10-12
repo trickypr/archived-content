@@ -1,6 +1,6 @@
-<div>{{SpiderMonkeySidebar("JSAPI")}}</div>
+<div><!-- {{SpiderMonkeySidebar("JSAPI")}} --></div>
 
-<p>{{ jsapi_minversion_header("31") }}</p>
+<p><!-- {{ jsapi_minversion_header("31") }} --></p>
 
 <div class="summary">
 <p>Convert any JavaScript value to a string.</p>
@@ -23,12 +23,12 @@ JS::ToString(JSContext *cx, JS::HandleValue v)
   </tr>
   <tr>
    <td><code>cx</code></td>
-   <td>{{jsapixref("JSRuntime", "JSContext *")}}</td>
-   <td>The context in which to perform the conversion. {{ Jsapi-requires-request() }}</td>
+   <td><!-- {{jsapixref("JSRuntime", "JSContext *")}} --></td>
+   <td>The context in which to perform the conversion. <!-- {{ Jsapi-requires-request() }} --></td>
   </tr>
   <tr>
    <td><code>v</code></td>
-   <td>{{jsapixref("JS::Value", "JS::HandleValue")}}</td>
+   <td><!-- {{jsapixref("JS::Value", "JS::HandleValue")}} --></td>
    <td>The value to convert.</td>
   </tr>
  </tbody>
@@ -40,11 +40,11 @@ JS::ToString(JSContext *cx, JS::HandleValue v)
 
 <p>If <code>v.isString()</code> is <code>true</code>, it calls <code>v.toString()</code>. Otherwise, it converts the value to string.</p>
 
-<p>On success, <code>JS::ToString</code> returns a {{jsapixref("JSString")}} instance. On error or exception, it returns <code>nullptr</code>.</p>
+<p>On success, <code>JS::ToString</code> returns a <!-- {{jsapixref("JSString")}} --> instance. On error or exception, it returns <code>nullptr</code>.</p>
 
 <h2 id="See_Also" name="See_Also">See Also</h2>
 
 <ul>
- <li>{{ LXRSearch("ident", "i", "JS::ToString") }}</li>
- <li>{{bug(933834)}}</li>
+ <li><!-- {{ LXRSearch("ident", "i", "JS::ToString") }} --></li>
+ <li><!-- {{bug(933834)}} --></li>
 </ul>

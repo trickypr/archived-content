@@ -15,7 +15,7 @@ Inherits from: <code><a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface
 </table>
 <h2 id="Methods" name="Methods">Methods</h2>
 <h3 id="QueryReferent()" name="QueryReferent()">QueryReferent()</h3>
-<p>This method queries an interface on the referent if it exists, and like <code><a href="https://developer.mozilla.org/en-US/docs/XPCOM_Interface_Reference/nsISupports#QueryInterface()">nsISupports.QueryInterface()</a></code>, produces an owning reference to the desired interface.")}} It is designed to look and act exactly like (a proxied) <code><a href="https://developer.mozilla.org/en-US/docs/XPCOM_Interface_Reference/nsISupports#QueryInterface()">nsISupports.QueryInterface()</a></code>. Do not hold on to the produced interface permanently; that would defeat the purpose of using a non-owning <code>nsIWeakReference</code> in the first place.</p>
+<p>This method queries an interface on the referent if it exists, and like <code><a href="https://developer.mozilla.org/en-US/docs/XPCOM_Interface_Reference/nsISupports#QueryInterface()">nsISupports.QueryInterface()</a></code>, produces an owning reference to the desired interface.")}} --> It is designed to look and act exactly like (a proxied) <code><a href="https://developer.mozilla.org/en-US/docs/XPCOM_Interface_Reference/nsISupports#QueryInterface()">nsISupports.QueryInterface()</a></code>. Do not hold on to the produced interface permanently; that would defeat the purpose of using a non-owning <code>nsIWeakReference</code> in the first place.</p>
 <pre class="eval">void QueryReferent(
   in nsIIDRef uuid,
   [iid_is(uuid), retval] out nsQIResult result

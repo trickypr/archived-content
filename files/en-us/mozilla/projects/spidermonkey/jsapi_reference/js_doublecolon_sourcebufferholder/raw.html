@@ -1,4 +1,4 @@
-<p>{{ Jsapi_minversion_header("31") }}</p>
+<p><!-- {{ Jsapi_minversion_header("31") }} --></p>
 
 <div class="summary">
 <p>Container class for passing in script source buffers to the JS engine.</p>
@@ -45,7 +45,7 @@ JS::SourceBufferHolder(const char16_t *data, size_t dataLength,
 <p><code>JS::SourceBufferHolder</code> is the container class for passing in script source buffers to the JS engine. This not only groups the buffer and length values, it also provides a way to optionally pass ownership of the buffer to the JS engine without copying. Rules for use:</p>
 
 <ol>
- <li>The data array must be allocated with {{jsapixref("js_malloc")}} or {{jsapixref("js_realloc")}} if <code>ownership</code> is being granted to the <code>SourceBufferHolder</code>.</li>
+ <li>The data array must be allocated with <!-- {{jsapixref("js_malloc")}} --> or <!-- {{jsapixref("js_realloc")}} --> if <code>ownership</code> is being granted to the <code>SourceBufferHolder</code>.</li>
  <li>If <code>ownership</code> is not given to the <code>SourceBufferHolder</code>, then the memory must be kept alive until the JS compilation is complete.</li>
  <li>Any code calling <code>SourceBufferHolder::take()</code> must guarantee to keep the memory alive until JS compilation completes. Normally only the JS engine should be calling <code>take()</code>.</li>
 </ol>
@@ -61,9 +61,9 @@ JS::Compile(cx, obj, options, srcBuf);
 <h2 id="See_Also">See Also</h2>
 
 <ul>
- <li>{{ LXRSearch("ident", "i", "JS::SourceBufferHolder") }}</li>
- <li>{{jsapixref("JS::Compile")}}</li>
- <li>{{jsapixref("JS::CompileFunction")}}</li>
- <li>{{jsapixref("JS::Evaluate")}}</li>
- <li>{{bug(987556)}}</li>
+ <li><!-- {{ LXRSearch("ident", "i", "JS::SourceBufferHolder") }} --></li>
+ <li><!-- {{jsapixref("JS::Compile")}} --></li>
+ <li><!-- {{jsapixref("JS::CompileFunction")}} --></li>
+ <li><!-- {{jsapixref("JS::Evaluate")}} --></li>
+ <li><!-- {{bug(987556)}} --></li>
 </ul>

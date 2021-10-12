@@ -2,7 +2,7 @@
 
 <h2 id="Implementing_tabs">Implementing tabs</h2>
 
-<p>To implement a tab bar using the style shown here, place the CSS and media files into your app and then import the CSS using the {{cssxref("@import")}} at-rule:</p>
+<p>To implement a tab bar using the style shown here, place the CSS and media files into your app and then import the CSS using the <!-- {{cssxref("@import")}} --> at-rule:</p>
 
 <pre class="brush: css">@import url(resources/tabs.css);</pre>
 
@@ -12,7 +12,7 @@
 
 <h3 id="HTML_to_create_the_tab_bar">HTML to create the tab bar</h3>
 
-<p>The HTML below creates a tab bar with the tabs at the bottom. To move the tab bar to the top of the screen, simply remove the class "bottom" from the {{HTMLELement("ul")}} element (ARIA role "tablist") that represents the tab bar. The <code>data-items</code> attribute should indicate how many tabs are in the tab bar.</p>
+<p>The HTML below creates a tab bar with the tabs at the bottom. To move the tab bar to the top of the screen, simply remove the class "bottom" from the <!-- {{HTMLELement("ul")}} --> element (ARIA role "tablist") that represents the tab bar. The <code>data-items</code> attribute should indicate how many tabs are in the tab bar.</p>
 
 <pre class="brush: html">&lt;section role="region"&gt;
   &lt;ul role="tablist" data-items="4" class="bottom"&gt;
@@ -36,7 +36,7 @@
 &lt;/section&gt;
 </pre>
 
-<p>Each tab is drawn using an {{HTMLElement("li")}} element with the ARIA role "tab" that contains a link.</p>
+<p>Each tab is drawn using an <!-- {{HTMLElement("li")}} --> element with the ARIA role "tab" that contains a link.</p>
 
 <h3 id="CSS">CSS</h3>
 

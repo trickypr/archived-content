@@ -1,5 +1,5 @@
-<div>{{SpiderMonkeySidebar("JSAPI")}}</div>
-<p>{{ obsolete_header("jsapi22") }}</p>
+<div><!-- {{SpiderMonkeySidebar("JSAPI")}} --></div>
+<p><!-- {{ obsolete_header("jsapi22") }} --></p>
 <div class="summary">
 <p>Protect a specified JS item from garbage collection.</p>
 </div>
@@ -25,12 +25,12 @@ JS_UnlockGCThingRT(JSRuntime *rt, void *thing);
   </tr>
   <tr>
    <td><code>cx</code></td>
-   <td>{{jsapixref("JSRuntime", "JSContext *")}}</td>
-   <td>A context. {{ Jsapi-requires-request() }}</td>
+   <td><!-- {{jsapixref("JSRuntime", "JSContext *")}} --></td>
+   <td>A context. <!-- {{ Jsapi-requires-request() }} --></td>
   </tr>
   <tr>
    <td><code>rt</code></td>
-   <td>{{jsapixref("JSRuntime", "JSRuntime *")}}</td>
+   <td><!-- {{jsapixref("JSRuntime", "JSRuntime *")}} --></td>
    <td>A runtime.</td>
   </tr>
   <tr>
@@ -41,11 +41,11 @@ JS_UnlockGCThingRT(JSRuntime *rt, void *thing);
  </tbody>
 </table>
 <h2 id="Description" name="Description">Description</h2>
-<p><code>JS_LockGCThing</code> is a deprecated function that protects a specified item, <code>thing</code>, associated with an executable script context, <code>cx</code>, from garbage collection. <code>thing</code> is a pointer to a {{jsapixref("jsdouble")}}, {{jsapixref("JSString")}}, or {{jsapixref("JSObject")}}.</p>
+<p><code>JS_LockGCThing</code> is a deprecated function that protects a specified item, <code>thing</code>, associated with an executable script context, <code>cx</code>, from garbage collection. <code>thing</code> is a pointer to a <!-- {{jsapixref("jsdouble")}} -->, <!-- {{jsapixref("JSString")}} -->, or <!-- {{jsapixref("JSObject")}} -->.</p>
 <p><code>JS_UnlockGCThing</code> removes a lock from a specified item, <code>thing</code>, allowing it to be garbage collected when the JavaScript engine determines it is unreachable.</p>
-<p><code>JS_LockGCThing</code> and <code>JS_UnlockGCThing</code> are available only for backward compatibility with existing applications. Use {{jsapixref("JS_AddRoot")}} and {{jsapixref("JS_RemoveRoot")}} instead.</p>
+<p><code>JS_LockGCThing</code> and <code>JS_UnlockGCThing</code> are available only for backward compatibility with existing applications. Use <!-- {{jsapixref("JS_AddRoot")}} --> and <!-- {{jsapixref("JS_RemoveRoot")}} --> instead.</p>
 <h2 id="See_Also" name="See_Also">See Also</h2>
 <ul>
-  <li>{{bug(734250)}} - removed <code>*RT</code> functions</li>
-<li>{{bug(706885)}}</li>
+  <li><!-- {{bug(734250)}} --> - removed <code>*RT</code> functions</li>
+<li><!-- {{bug(706885)}} --></li>
 </ul>

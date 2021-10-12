@@ -19,7 +19,7 @@
 <p>Here is a simple, straightforward example showing an English string being provided:</p>
 
 <pre class="brush: html">&lt;brandName "Firefox"&gt;
-&lt;about "About \{{ brandName }}"&gt;</pre>
+&lt;about "About \<!-- {{ brandName }} -->"&gt;</pre>
 
 <p>Here is the same string being provided in Slovenian:</p>
 
@@ -31,7 +31,7 @@
   locative: "Firefoxu",
   instrumental: "Firefoxom"
 }&gt;
-&lt;about "O \{{ brandName.locative }}"&gt;</pre>
+&lt;about "O \<!-- {{ brandName.locative }} -->"&gt;</pre>
 </div>
 </div>
 

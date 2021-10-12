@@ -1,6 +1,6 @@
-<div>{{SpiderMonkeySidebar("JSAPI")}}</div>
+<div><!-- {{SpiderMonkeySidebar("JSAPI")}} --></div>
 
-<p>{{ obsolete_header("js1.8.5") }}</p>
+<p><!-- {{ obsolete_header("js1.8.5") }} --></p>
 
 <div class="blockIndicator warning">
 <p><strong>Warning!</strong> <code>JSObjectOps</code> is not a supported API. Details of the API may change from one release to the next. This documentation should be considered SpiderMonkey internals documentation, not API documentation. See <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=408416">bug 408416</a> for details.</p>
@@ -54,9 +54,9 @@
 <h2 id="Description" name="Description">Description</h2>
 
 <div class="note">
-<p><strong>Note:</strong> The JSAPI does not expose the data structure that would be necessary to develop new <code>JSObjectMap</code> subclasses. An application that implements <code>JSObjectOps</code> must therefore either implement the <code>newObjectMap</code> by including the non-public header <code>jsobj.h</code>, or obtain the default <code>NewObjectMapOp</code> by calling the {{jsapixref("JSClass", "JSClass.getObjectOps")}} callback of a standard <code>JSClass</code>.</p>
+<p><strong>Note:</strong> The JSAPI does not expose the data structure that would be necessary to develop new <code>JSObjectMap</code> subclasses. An application that implements <code>JSObjectOps</code> must therefore either implement the <code>newObjectMap</code> by including the non-public header <code>jsobj.h</code>, or obtain the default <code>NewObjectMapOp</code> by calling the <!-- {{jsapixref("JSClass", "JSClass.getObjectOps")}} --> callback of a standard <code>JSClass</code>.</p>
 </div>
 
-<p>Create a new instance of (a concrete subclass of) <code>JSObjectMap</code> (see {{ Source("js/src/jsobj.h", "jsobj.h") }}), with the <code>nrefs</code> and <code>ops</code> members initialized from the same-named parameters, and with the <code>nslots</code> and <code>freeslot</code> members initialized according to <code>ops</code> and <code>clasp</code>. Return null on error, non-null on success.</p>
+<p>Create a new instance of (a concrete subclass of) <code>JSObjectMap</code> (see <!-- {{ Source("js/src/jsobj.h", "jsobj.h") }} -->), with the <code>nrefs</code> and <code>ops</code> members initialized from the same-named parameters, and with the <code>nslots</code> and <code>freeslot</code> members initialized according to <code>ops</code> and <code>clasp</code>. Return null on error, non-null on success.</p>
 
 <p><code>JSObjectMap</code>s are reference-counted by generic code in the engine. Usually, the <code>nrefs</code> parameter to <code>JSObjectOps.newObjectMap</code> will be <code>1</code>, to count the ref returned to the caller on success. After a successful construction, some number of <code>js_HoldObjectMap</code> and <code>js_DropObjectMap</code> calls ensue. When <code>nrefs</code> reaches <code>0</code> due to a <code>js_DropObjectMap</code> call, <code>JSObjectOps.destroyObjectMap</code> will be called to dispose of the map.</p>

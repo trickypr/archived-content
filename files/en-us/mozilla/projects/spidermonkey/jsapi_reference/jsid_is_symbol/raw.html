@@ -1,6 +1,6 @@
-<div>{{SpiderMonkeySidebar("JSAPI")}}</div>
+<div><!-- {{SpiderMonkeySidebar("JSAPI")}} --></div>
 
-<p>{{ jsapi_minversion_header("38") }}</p>
+<p><!-- {{ jsapi_minversion_header("38") }} --></p>
 
 <div class="summary">
 <p>Testing and conversion functions between a JS ID and a JS Symbol.</p>
@@ -27,12 +27,12 @@ SYMBOL_TO_JSID(JS::Symbol *sym);
   </tr>
   <tr>
    <td><code>id</code></td>
-   <td>{{jsapixref("jsid")}}</td>
+   <td><!-- {{jsapixref("jsid")}} --></td>
    <td>The property identifier to test or convert.</td>
   </tr>
   <tr>
    <td><code>sym</code></td>
-   <td>{{jsapixref("JS::Symbol")}}</td>
+   <td><!-- {{jsapixref("JS::Symbol")}} --></td>
    <td>A JS Symbol to test or convert.</td>
   </tr>
  </tbody>
@@ -44,13 +44,13 @@ SYMBOL_TO_JSID(JS::Symbol *sym);
 
 <p><code>JSID_TO_SYMBOL</code> converts a specified JS ID, <code>id</code> to a JS Symbol.</p>
 
-<p><code>SYMBOL_TO_JSID</code> converts a specified JS Symbol, <code>i</code> to a {{jsapixref("jsid")}}.</p>
+<p><code>SYMBOL_TO_JSID</code> converts a specified JS Symbol, <code>i</code> to a <!-- {{jsapixref("jsid")}} -->.</p>
 
 <h2 id="See_Also" name="See_Also">See Also</h2>
 
 <ul>
- <li>{{ LXRSearch("ident", "i", "JSID_IS_SYMBOL") }}</li>
- <li>{{ LXRSearch("ident", "i", "JSID_TO_SYMBOL") }}</li>
- <li>{{ LXRSearch("ident", "i", "SYMBOL_TO_JSID") }}</li>
- <li>{{bug(645416)}}</li>
+ <li><!-- {{ LXRSearch("ident", "i", "JSID_IS_SYMBOL") }} --></li>
+ <li><!-- {{ LXRSearch("ident", "i", "JSID_TO_SYMBOL") }} --></li>
+ <li><!-- {{ LXRSearch("ident", "i", "SYMBOL_TO_JSID") }} --></li>
+ <li><!-- {{bug(645416)}} --></li>
 </ul>

@@ -1,7 +1,7 @@
 
 <p>This class simplifies the access of the Download Manager window for Firefox.</p>
 <h2 id="Method_overview">Method overview</h2>
-<table class="standard-table" style=""> <tbody> <tr> <td><code><a href="#downloadManager.28.29">downloadManager</a>();</code></td> </tr> <tr> <td><code><a href="#cancelActiveDownloads.28.29">cancelActiveDownloads</a>();</code></td> </tr> <tr> <td><a href="/en/Mozmill_Tests/Shared_Modules/DownloadsAPI/downloadManager#cleanAll" title="en/Mozmill Tests/Shared Modules/DownloadsAPI/downloadManager#cleanAll">cleanAll</a>();</td> </tr> <tr> <td><code><a href="#cleanUp.28.29">cleanUp</a>();</code></td> </tr> <tr> <td><code><a href="#close.28.29">close</a>(in boolean force);</code></td> </tr> <tr> <td><code><a href="#deleteDownloadedFiles.28.29">deleteDownloadedFiles</a>(in array {{ interface("nsIDownload") }} downloads);</code></td> </tr> <tr> <td><code>array </code><code>{{ interface("nsIDownload") }}</code><code> <a href="#getAllDownloads.28.29" title="#getAllDownloads.28.29">getAllDownloads</a>();<br> </code></td> </tr> <tr> <td><a href="/en/Mozmill_Tests/Shared_Modules/DownloadsAPI#downloadState_constants" title="en/Mozmill Tests/Shared Modules/DownloadsAPI#downloadState constants"><span style="font-family: monospace;">downloadState</span></a><code> </code><code><a href="#getDownloadState.28.29">getDownloadState</a>(in <a href="/en/Mozmill/Mozmill_Elements_Library_Object" title="en/Mozmill/Mozmill Elements
+<table class="standard-table" style=""> <tbody> <tr> <td><code><a href="#downloadManager.28.29">downloadManager</a>();</code></td> </tr> <tr> <td><code><a href="#cancelActiveDownloads.28.29">cancelActiveDownloads</a>();</code></td> </tr> <tr> <td><a href="/en/Mozmill_Tests/Shared_Modules/DownloadsAPI/downloadManager#cleanAll" title="en/Mozmill Tests/Shared Modules/DownloadsAPI/downloadManager#cleanAll">cleanAll</a>();</td> </tr> <tr> <td><code><a href="#cleanUp.28.29">cleanUp</a>();</code></td> </tr> <tr> <td><code><a href="#close.28.29">close</a>(in boolean force);</code></td> </tr> <tr> <td><code><a href="#deleteDownloadedFiles.28.29">deleteDownloadedFiles</a>(in array <!-- {{ interface("nsIDownload") }} --> downloads);</code></td> </tr> <tr> <td><code>array </code><code><!-- {{ interface("nsIDownload") }} --></code><code> <a href="#getAllDownloads.28.29" title="#getAllDownloads.28.29">getAllDownloads</a>();<br> </code></td> </tr> <tr> <td><a href="/en/Mozmill_Tests/Shared_Modules/DownloadsAPI#downloadState_constants" title="en/Mozmill Tests/Shared Modules/DownloadsAPI#downloadState constants"><span style="font-family: monospace;">downloadState</span></a><code> </code><code><a href="#getDownloadState.28.29">getDownloadState</a>(in <a href="/en/Mozmill/Mozmill_Elements_Library_Object" title="en/Mozmill/Mozmill Elements
             Library Object">ElemBase</a> download);</code></td> </tr> <tr> <td><code><a href="/en/Mozmill/Mozmill_Elements_Library_Object" title="en/Mozmill/Mozmill Elements
             Library Object">ElemBase</a> <a href="#getElement.28.29" title="#getElement.28.29">getElement</a>(in object spec);</code></td> </tr> <tr> <td><code><a href="#open.28.29" title="#open.28.29">open</a>(in <code><a href="/en/Mozmill/Mozmill_Base_Object_Interfaces#mozmill.controller.MozMillController" title="en/Mozmill/Mozmill Base Object
             Interfaces#mozmill.controller.MozMillController">MozMillController</a> controller, in boolean shortcut);</code><br> </code></td> </tr> <tr> <td><code><a href="#waitForDownloadState.28.29">waitForDownloadState</a>(in <a href="/en/Mozmill/Mozmill_Elements_Library_Object" title="en/Mozmill/Mozmill Elements
@@ -39,13 +39,13 @@
 <p>Delete all the downloaded files from the local drive.</p>
 </a><pre><a name="cleanAll"><code>deleteDownloadedFiles(<br>  in array </code></a><a title="en/nsIDownload"><code>nsIDownload</code></a><code> downloads<br>);</code></pre>
 <h6 id="Parameters_2">Parameters</h6>
-<dl> <dt>downloads</dt> <dd>List of <code>{{ interface("nsIDownload") }} instances</code> which specify the to be removed downloads.</dd>
+<dl> <dt>downloads</dt> <dd>List of <code><!-- {{ interface("nsIDownload") }} --> instances</code> which specify the to be removed downloads.</dd>
 </dl>
 <h3 id="getAllDownloads.28.29" name="getAllDownloads.28.29">getAllDownloads()</h3>
 <p>Get the list of all downloaded files from the sqlite3 database.</p>
 <pre><code>array </code><code><a title="en/nsIDownload">nsIDownload</a> </code><code>getAllDownloads();</code></pre>
 <h6 id="Return_value">Return value</h6>
-<p>A list of <code>{{ interface("nsIDownload") }} instances </code>from the database.</p>
+<p>A list of <code><!-- {{ interface("nsIDownload") }} --> instances </code>from the database.</p>
 <h3 id="getDownloadState.28.29" name="getDownloadState.28.29">getDownloadState()</h3>
 <p>Retrieves the download state of the given download.</p>
 <pre><code><a title="en/Mozmill Tests/Shared

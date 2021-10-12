@@ -1,6 +1,6 @@
-<div>{{SpiderMonkeySidebar("JSAPI")}}</div>
+<div><!-- {{SpiderMonkeySidebar("JSAPI")}} --></div>
 
-<p>{{ obsolete_header("jsapi26") }}</p>
+<p><!-- {{ obsolete_header("jsapi26") }} --></p>
 
 <div class="summary">
 <p>Set the attributes for a specified property.</p>
@@ -27,17 +27,17 @@ JS_SetUCPropertyAttributes(JSContext *cx, JSObject *obj,
   </tr>
   <tr>
    <td><code>cx</code></td>
-   <td>{{jsapixref("JSRuntime", "JSContext *")}}</td>
-   <td>The context in which to set the property attributes. {{ Jsapi-requires-request() }}</td>
+   <td><!-- {{jsapixref("JSRuntime", "JSContext *")}} --></td>
+   <td>The context in which to set the property attributes. <!-- {{ Jsapi-requires-request() }} --></td>
   </tr>
   <tr>
    <td><code>obj</code></td>
-   <td>{{jsapixref("JSObject", "JSObject *")}}</td>
+   <td><!-- {{jsapixref("JSObject", "JSObject *")}} --></td>
    <td>Object for which to set property attributes.</td>
   </tr>
   <tr>
    <td><code>name</code></td>
-   <td><code>const char *</code> <em>or</em> <code>const {{jsapixref("jschar", "jschar *")}}</code></td>
+   <td><code>const char *</code> <em>or</em> <code>const <!-- {{jsapixref("jschar", "jschar *")}} --></code></td>
    <td>Name of the property for which to set attributes.</td>
   </tr>
   <tr>
@@ -47,12 +47,12 @@ JS_SetUCPropertyAttributes(JSContext *cx, JSObject *obj,
   </tr>
   <tr>
    <td><code>attrs</code></td>
-   <td>{{jsapixref("jsint", "unsigned int")}}</td>
+   <td><!-- {{jsapixref("jsint", "unsigned int")}} --></td>
    <td>Attribute values to set.</td>
   </tr>
   <tr>
    <td><code>foundp</code></td>
-   <td>{{jsapixref("JSBool", "JSBool *")}}</td>
+   <td><!-- {{jsapixref("JSBool", "JSBool *")}} --></td>
    <td>Out parameter. Flag indicating whether or not the specified property was located.</td>
   </tr>
  </tbody>
@@ -97,9 +97,9 @@ JS_SetUCPropertyAttributes(JSContext *cx, JSObject *obj,
 
 <p>If the specified property or the specified object does not exist, <code>foundp</code> is set to <code>JS_FALSE</code>. Then, if the property exists, but is associated with a different object, <code>JS_SetPropertyAttributes</code> returns <code>JS_TRUE</code>. Otherwise, it sets <code>foundp</code> to <code>JS_TRUE</code>, and attempts to set the attributes as specified. If the attributes can be set, <code>JS_SetPropertyAttributes</code> returns <code>JS_TRUE</code>. If not, it returns <code>JS_FALSE</code>.</p>
 
-<p>To get the attributes of a property, use {{jsapixref("JS_GetPropertyAttributes")}}.</p>
+<p>To get the attributes of a property, use <!-- {{jsapixref("JS_GetPropertyAttributes")}} -->.</p>
 
 <ul>
- <li>{{jsapixref("Property_attributes", "Property attributes", "", 1)}}</li>
- <li>{{bug(893186)}}</li>
+ <li><!-- {{jsapixref("Property_attributes", "Property attributes", "", 1)}} --></li>
+ <li><!-- {{bug(893186)}} --></li>
 </ul>

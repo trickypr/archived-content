@@ -1,4 +1,4 @@
-<div>{{SpiderMonkeySidebar("JSAPI")}}</div>
+<div><!-- {{SpiderMonkeySidebar("JSAPI")}} --></div>
 
 <div class="summary">
 <p>Retrieves an object's prototype.</p>
@@ -19,17 +19,17 @@ JS_GetPrototype(JSContext *cx, JS::HandleObject obj, JS::MutableHandleObject pro
   </tr>
   <tr>
    <td><code>cx</code></td>
-   <td>{{jsapixref("JSRuntime", "JSContext *")}}</td>
-   <td>Pointer to a JS context from which to derive runtime information. {{ Jsapi-requires-request() }}</td>
+   <td><!-- {{jsapixref("JSRuntime", "JSContext *")}} --></td>
+   <td>Pointer to a JS context from which to derive runtime information. <!-- {{ Jsapi-requires-request() }} --></td>
   </tr>
   <tr>
    <td><code>obj</code></td>
-   <td>{{jsapixref("JSObject", "JS::HandleObject")}}</td>
+   <td><!-- {{jsapixref("JSObject", "JS::HandleObject")}} --></td>
    <td>Object for which to retrieve the prototype.</td>
   </tr>
   <tr>
    <td><code>protop</code></td>
-   <td>{{jsapixref("JSObject", "JS::MutableHandleObject")}}</td>
+   <td><!-- {{jsapixref("JSObject", "JS::MutableHandleObject")}} --></td>
    <td>Out parameter. If successful, Receives prototype object of <code>obj</code>.</td>
   </tr>
  </tbody>
@@ -41,11 +41,11 @@ JS_GetPrototype(JSContext *cx, JS::HandleObject obj, JS::MutableHandleObject pro
 
 <p>If <code>JS_GetPrototype</code> returns <code>false</code>, that signals an exception, which should be handled as usual. Otherwise, it stores a pointer to the prototype or null to <code>*protop</code> and returns <code>true</code>.</p>
 
-<p>To set an object's prototype, use {{jsapixref("JS_SetPrototype")}}.</p>
+<p>To set an object's prototype, use <!-- {{jsapixref("JS_SetPrototype")}} -->.</p>
 
 <h2 id="See_Also" name="See_Also">See Also</h2>
 
 <ul>
- <li>{{ LXRSearch("ident", "i", "JS_GetPrototype") }}</li>
- <li>{{jsapixref("JS_SetPrototype")}}</li>
+ <li><!-- {{ LXRSearch("ident", "i", "JS_GetPrototype") }} --></li>
+ <li><!-- {{jsapixref("JS_SetPrototype")}} --></li>
 </ul>

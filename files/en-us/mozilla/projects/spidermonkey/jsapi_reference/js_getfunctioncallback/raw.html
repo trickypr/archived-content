@@ -1,8 +1,8 @@
-<div>{{SpiderMonkeySidebar("JSAPI")}}</div>
+<div><!-- {{SpiderMonkeySidebar("JSAPI")}} --></div>
 
-<p>{{ obsolete_header("jsapi37") }}</p>
+<p><!-- {{ obsolete_header("jsapi37") }} --></p>
 
-<p>Returns the callback currently configured to be called when JavaScript functions are invoked or exited, as established by a prior call to {{jsapixref("JS_SetFunctionCallback")}}.</p>
+<p>Returns the callback currently configured to be called when JavaScript functions are invoked or exited, as established by a prior call to <!-- {{jsapixref("JS_SetFunctionCallback")}} -->.</p>
 
 <div class="note"><strong>Note:</strong> This method is only available if <code>MOZ_TRACE_JSCALLS</code> was defined at compile time using <code>--enable-trace-jscalls</code>.</div>
 
@@ -21,8 +21,8 @@ JS_GetFunctionCallback(JSContext *cx);
   </tr>
   <tr>
    <td><code>cx</code></td>
-   <td>{{jsapixref("JSRuntime", "JSContext *")}}</td>
-   <td>Pointer to a JS context from which to derive runtime information. {{ Jsapi-requires-request() }}</td>
+   <td><!-- {{jsapixref("JSRuntime", "JSContext *")}} --></td>
+   <td>Pointer to a JS context from which to derive runtime information. <!-- {{ Jsapi-requires-request() }} --></td>
   </tr>
  </tbody>
 </table>
@@ -34,8 +34,8 @@ JS_GetFunctionCallback(JSContext *cx);
 <h2 id="See_Also" name="See_Also">See Also</h2>
 
 <ul>
- <li>{{ LXRSearch("ident", "i", "JS_GetFunctionCallback") }}</li>
- <li>{{jsapixref("JS_SetFunctionCallback")}}</li>
- <li>{{jsapixref("JS_SetFunctionCallback", "JSFunctionCallback")}}</li>
- <li>{{bug(1103269)}}</li>
+ <li><!-- {{ LXRSearch("ident", "i", "JS_GetFunctionCallback") }} --></li>
+ <li><!-- {{jsapixref("JS_SetFunctionCallback")}} --></li>
+ <li><!-- {{jsapixref("JS_SetFunctionCallback", "JSFunctionCallback")}} --></li>
+ <li><!-- {{bug(1103269)}} --></li>
 </ul>

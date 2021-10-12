@@ -1,9 +1,9 @@
-<div>{{SpiderMonkeySidebar("JSAPI")}}</div>
+<div><!-- {{SpiderMonkeySidebar("JSAPI")}} --></div>
 
-<p>{{ obsolete_header("jsapi13") }}</p>
+<p><!-- {{ obsolete_header("jsapi13") }} --></p>
 
 <div class="summary">
-<p><code>JSXDRObjectOp</code> is the type for {{jsapixref("JSClass", "JSClass.xdrObject")}}.</p>
+<p><code>JSXDRObjectOp</code> is the type for <!-- {{jsapixref("JSClass", "JSClass.xdrObject")}} -->.</p>
 </div>
 
 <h2 id="Syntax" name="Syntax">Syntax</h2>
@@ -26,7 +26,7 @@
   </tr>
   <tr>
    <td><code>objp</code></td>
-   <td>{{jsapixref("JSObject", "JSObject **")}}</td>
+   <td><!-- {{jsapixref("JSObject", "JSObject **")}} --></td>
    <td>The object to be serialized or deserialized.</td>
   </tr>
  </tbody>
@@ -34,7 +34,7 @@
 
 <h2 id="Description" name="Description">Description</h2>
 
-<p>Serialize or deserialize an object, given an XDR state record representing external data. See {{ Source("js/src/jsxdrapi.h", "jsxdrapi.h") }}.</p>
+<p>Serialize or deserialize an object, given an XDR state record representing external data. See <!-- {{ Source("js/src/jsxdrapi.h", "jsxdrapi.h") }} -->.</p>
 
 <h3 id="JSClass_hooks"><code>JSClass</code> hooks</h3>
 
@@ -42,13 +42,13 @@
 
 <ul>
  <li>
-  <p><code>JSXDR</code> calls the {{jsapixref("JSClass", "JSClass.xdrObject")}} callback to serialize and deserialize objects.</p>
+  <p><code>JSXDR</code> calls the <!-- {{jsapixref("JSClass", "JSClass.xdrObject")}} --> callback to serialize and deserialize objects.</p>
  </li>
 </ul>
 
 <h2 id="See_Also" name="See_Also">See Also</h2>
 
 <ul>
- <li>{{jsapixref("JSClass")}}</li>
- <li>{{bug(726944)}}</li>
+ <li><!-- {{jsapixref("JSClass")}} --></li>
+ <li><!-- {{bug(726944)}} --></li>
 </ul>

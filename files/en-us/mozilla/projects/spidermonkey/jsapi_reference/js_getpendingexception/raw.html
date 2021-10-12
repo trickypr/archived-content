@@ -1,4 +1,4 @@
-<div>{{SpiderMonkeySidebar("JSAPI")}}</div>
+<div><!-- {{SpiderMonkeySidebar("JSAPI")}} --></div>
 <div class="summary">
 <p>Get the current pending exception for a given <code>JSContext</code>.</p>
 </div>
@@ -15,12 +15,12 @@ JS_GetPendingException(JSContext *cx, JS::MutableHandleValue vp);
   </tr>
   <tr>
    <td><code>cx</code></td>
-   <td>{{jsapixref("JSRuntime", "JSContext *")}}</td>
-   <td>Pointer to the JS context in which the exception was thrown. {{ Jsapi-requires-request() }}</td>
+   <td><!-- {{jsapixref("JSRuntime", "JSContext *")}} --></td>
+   <td>Pointer to the JS context in which the exception was thrown. <!-- {{ Jsapi-requires-request() }} --></td>
   </tr>
   <tr>
    <td><code>vp</code></td>
-   <td>{{jsapixref("JS::Value", "JS::MutableHandleValue")}}</td>
+   <td><!-- {{jsapixref("JS::Value", "JS::MutableHandleValue")}} --></td>
    <td>Out parameter. On success, <code>*vp</code> receives the current pending exception.</td>
   </tr>
  </tbody>
@@ -31,9 +31,9 @@ JS_GetPendingException(JSContext *cx, JS::MutableHandleValue vp);
 <p>See examples in the <a href="/En/SpiderMonkey/JSAPI_Phrasebook#Exception_handling" title="en/JSAPI_Phrasebook#Exception_handling">JSAPI Phrasebook</a>.</p>
 <h2 id="See_Also" name="See_Also">See Also</h2>
 <ul>
-<li>{{ LXRSearch("ident", "i", "JS_GetPendingException") }}</li>
-<li>{{jsapixref("JS_IsExceptionPending")}}</li>
-<li>{{jsapixref("JS_ClearPendingException")}}</li>
-<li>{{jsapixref("JS_ReportPendingException")}}</li>
-<li>{{jsapixref("JS_SetPendingException")}}</li>
+<li><!-- {{ LXRSearch("ident", "i", "JS_GetPendingException") }} --></li>
+<li><!-- {{jsapixref("JS_IsExceptionPending")}} --></li>
+<li><!-- {{jsapixref("JS_ClearPendingException")}} --></li>
+<li><!-- {{jsapixref("JS_ReportPendingException")}} --></li>
+<li><!-- {{jsapixref("JS_SetPendingException")}} --></li>
 </ul>
