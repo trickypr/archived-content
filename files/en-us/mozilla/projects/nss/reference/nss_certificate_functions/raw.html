@@ -190,9 +190,9 @@
  <li> ? matches one character</li>
  <li>\ escapes a special character</li>
  <li>$ matches the end of the string</li>
- <li><!-- {{ mediawiki.external('abc') }} --> matches one occurrence of a, b, or c. The only character that needs to be escaped in this is ], all others are not special.</li>
- <li><!-- {{ mediawiki.external('a-z') }} --> matches any character between a and z</li>
- <li><!-- {{ mediawiki.external('^az') }} --> matches any character except a or z</li>
+ <li><!-- <!-- {{ mediawiki.external('abc') }} --> --> matches one occurrence of a, b, or c. The only character that needs to be escaped in this is ], all others are not special.</li>
+ <li><!-- <!-- {{ mediawiki.external('a-z') }} --> --> matches any character between a and z</li>
+ <li><!-- <!-- {{ mediawiki.external('^az') }} --> --> matches any character except a or z</li>
  <li>~ followed by another shell expression removes any pattern matching the shell expression from the match list</li>
  <li>(foo|bar) matches either the substring foo or the substring bar. These can be shell expressions as well.</li>
 </ul>

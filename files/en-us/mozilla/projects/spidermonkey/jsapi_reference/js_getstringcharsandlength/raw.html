@@ -1,7 +1,7 @@
-<div><!-- {{SpiderMonkeySidebar("JSAPI")}} --></div>
-<p><!-- {{ obsolete_header("jsapi33") }} --></p>
+<div><!-- <!-- {{SpiderMonkeySidebar("JSAPI")}} --> --></div>
+<p><!-- <!-- {{ obsolete_header("jsapi33") }} --> --></p>
 <div>
- <!-- {{ jsapi_minversion_header("1.8.5") }} --></div>
+ <!-- <!-- {{ jsapi_minversion_header("1.8.5") }} --> --></div>
 <div class="summary">
 <p>Get the characters and the length of a string.</p>
 </div>
@@ -18,12 +18,12 @@ JS_GetStringCharsAndLength(JSContext *cx, JSString *str, size_t *length);
   </tr>
   <tr>
    <td><code>cx</code></td>
-   <td><!-- {{jsapixref("JSRuntime", "JSContext *")}} --></td>
-   <td>The context. <!-- {{ Jsapi-requires-request() }} --></td>
+   <td><!-- <!-- {{jsapixref("JSRuntime", "JSContext *")}} --> --></td>
+   <td>The context. <!-- <!-- {{ Jsapi-requires-request() }} --> --></td>
   </tr>
   <tr>
    <td><code>str</code></td>
-   <td><!-- {{jsapixref("JSString", "JSString *")}} --></td>
+   <td><!-- <!-- {{jsapixref("JSString", "JSString *")}} --> --></td>
    <td>A string to get characters.</td>
   </tr>
   <tr>
@@ -38,5 +38,5 @@ JS_GetStringCharsAndLength(JSContext *cx, JSString *str, size_t *length);
 <p>If successful, <code>JS_GetStringCharsAndLength</code> returns a pointer to the string, and store the length to <code>*length</code>, otherwise returns <code>NULL</code></p>
 <h2 id="See_also" name="See_also">See also</h2>
 <ul>
- <li><!-- {{bug(1037869)}} --></li>
+ <li><!-- <!-- {{bug(1037869)}} --> --></li>
 </ul>

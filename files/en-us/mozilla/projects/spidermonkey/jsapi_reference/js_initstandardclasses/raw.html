@@ -1,4 +1,4 @@
-<div><!-- {{SpiderMonkeySidebar("JSAPI")}} --></div>
+<div><!-- <!-- {{SpiderMonkeySidebar("JSAPI")}} --> --></div>
 
 <div class="summary">
 <p>Initializes general JS function and object classes, and the built-in object classes used in most scripts.</p>
@@ -19,13 +19,13 @@ JS_InitStandardClasses(JSContext *cx, JS::Handle&lt;JSObject*&gt; obj);
   </tr>
   <tr>
    <td><code>cx</code></td>
-   <td><!-- {{jsapixref("JSRuntime", "JSContext *")}} --></td>
-   <td>Pointer to the executable script context for which to initialize JS function and object classes. <!-- {{ Jsapi-requires-request() }} --></td>
+   <td><!-- <!-- {{jsapixref("JSRuntime", "JSContext *")}} --> --></td>
+   <td>Pointer to the executable script context for which to initialize JS function and object classes. <!-- <!-- {{ Jsapi-requires-request() }} --> --></td>
   </tr>
   <tr>
    <td><code>obj</code></td>
-   <td><!-- {{jsapixref("JSObject", "JS::Handle&lt;JSObject*&gt;")}} --></td>
-   <td>The global object to initialize. This object must be of a <code>JSClass</code> that has the <!-- {{jsapixref("JSClass.flags", "JSCLASS_GLOBAL_FLAGS")}} --> bits set.</td>
+   <td><!-- <!-- {{jsapixref("JSObject", "JS::Handle&lt;JSObject*&gt;")}} --> --></td>
+   <td>The global object to initialize. This object must be of a <code>JSClass</code> that has the <!-- <!-- {{jsapixref("JSClass.flags", "JSCLASS_GLOBAL_FLAGS")}} --> --> bits set.</td>
   </tr>
  </tbody>
 </table>
@@ -44,16 +44,16 @@ JS_InitStandardClasses(JSContext *cx, JS::Handle&lt;JSObject*&gt; obj);
  <dd><code>escape</code>, <code>unescape</code>, <code>uneval</code>, <code>InternalError</code>, <code>Script</code>, <code>XML</code>, <code>Namespace</code>, <code>QName</code>, <code>File</code>, <code>Generator</code>, <code>Iterator</code>, and <code>StopIteration</code>, as of SpiderMonkey 1.7.</dd>
 </dl>
 
-<p>These global objects, functions, constructors, and constants are created as properties of <code>obj</code>. As a side effect, <code>JS_InitStandardClasses</code> establishes <code>obj</code> as the global object for <code>cx</code>, if one is not already established. This means that scripts executed in <code>cx</code> will see the properties of <code>obj</code> as global variables. See <!-- {{jsapixref("JS_SetGlobalObject")}} --> for details.</p>
+<p>These global objects, functions, constructors, and constants are created as properties of <code>obj</code>. As a side effect, <code>JS_InitStandardClasses</code> establishes <code>obj</code> as the global object for <code>cx</code>, if one is not already established. This means that scripts executed in <code>cx</code> will see the properties of <code>obj</code> as global variables. See <!-- <!-- {{jsapixref("JS_SetGlobalObject")}} --> --> for details.</p>
 
-<p><code>obj</code> must be of a <code>JSClass</code> that has the <!-- {{jsapixref("JSClass.flags", "JSCLASS_GLOBAL_FLAGS")}} --> flag.</p>
+<p><code>obj</code> must be of a <code>JSClass</code> that has the <!-- <!-- {{jsapixref("JSClass.flags", "JSCLASS_GLOBAL_FLAGS")}} --> --> flag.</p>
 
 <p><code>JS_InitStandardClasses</code> returns <code>JS_TRUE</code> on success, and <code>JS_FALSE</code> if an error occurs.</p>
 
-<p>To initialize custom classes, use <!-- {{jsapixref("JS_InitClass")}} -->.</p>
+<p>To initialize custom classes, use <!-- <!-- {{jsapixref("JS_InitClass")}} --> -->.</p>
 
 <h2 id="See_Also" name="See_Also">See Also</h2>
 
 <ul>
- <li><!-- {{ LXRSearch("ident", "i", "JS_InitStandardClasses") }} --></li>
+ <li><!-- <!-- {{ LXRSearch("ident", "i", "JS_InitStandardClasses") }} --> --></li>
 </ul>

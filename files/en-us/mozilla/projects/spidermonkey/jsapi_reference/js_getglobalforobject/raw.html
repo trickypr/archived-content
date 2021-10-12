@@ -1,4 +1,4 @@
-<div><!-- {{SpiderMonkeySidebar("JSAPI")}} --></div>
+<div><!-- <!-- {{SpiderMonkeySidebar("JSAPI")}} --> --></div>
 <div class="summary">
 <p>Returns the global object for the given object.</p>
 </div>
@@ -15,12 +15,12 @@ JS_GetGlobalForObject(JSContext *cx, JSObject *obj);
   </tr>
   <tr>
    <td><code>cx</code></td>
-   <td><!-- {{jsapixref("JSRuntime", "JSContext *")}} --></td>
-   <td>A context. <!-- {{ Jsapi-requires-request() }} --></td>
+   <td><!-- <!-- {{jsapixref("JSRuntime", "JSContext *")}} --> --></td>
+   <td>A context. <!-- <!-- {{ Jsapi-requires-request() }} --> --></td>
   </tr>
   <tr>
    <td><code>obj</code></td>
-   <td><!-- {{jsapixref("JSObject", "JSObject *")}} --></td>
+   <td><!-- <!-- {{jsapixref("JSObject", "JSObject *")}} --> --></td>
    <td>A non-NULL JSObject.</td>
   </tr>
  </tbody>
@@ -30,5 +30,5 @@ JS_GetGlobalForObject(JSContext *cx, JSObject *obj);
 <p>For function object inputs, the result is "the global object" as referred to in the ECMAScript specification. For example, if the function refers to a global variable <strong><code>foo</code></strong>, then <strong><code>foo </code></strong>is a property of the object returned by <strong><code>JS_GetGlobalForObject</code></strong>.</p>
 <h2 id="See_Also" name="See_Also">See Also</h2>
 <ul>
-<li><!-- {{ LXRSearch("ident", "i", "JS_GetGlobalForObject") }} --></li>
+<li><!-- <!-- {{ LXRSearch("ident", "i", "JS_GetGlobalForObject") }} --> --></li>
 </ul>

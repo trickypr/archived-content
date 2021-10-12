@@ -1,4 +1,4 @@
-<p><!-- {{ Outdated() }} --></p>
+<p><!-- <!-- {{ Outdated() }} --> --></p>
 <h3 id="Background" name="Background">Background</h3>
 <p>On 08/15/2001, Cert issued a <a class="external" href="http://www.kb.cert.org/vuls/id/476267">Vulnerability Note VU#476267</a> for a "Cross-Protocol" scripting attack, known as the <a class="external" href="http://www.remote.org/jochen/sec/hfpa/">HTML Form Protocol Attack</a> which allowed sending arbitrary data to most TCP ports. A simple exploit of this hole allows an attacker to send forged unsigned mail through a mail server behind your firewall: A really nasty hole.</p>
 <p>Mozilla <a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=83401">responded</a> by modifying how protocols can access ports.</p>
@@ -306,7 +306,7 @@
 <p>You must have a good reason for the change, a deep understanding of the security risk involved and be able to justify it.</p>
 <h3 id="Things_to_do" name="Things_to_do">Things to do</h3>
 <ul>
- <li>Allow user preference to override default port blocking. Currently you need to add preferences to either <code>user.js</code> or <code>all.js</code>. See <!-- {{ Bug(85601) }} -->.</li>
+ <li>Allow user preference to override default port blocking. Currently you need to add preferences to either <code>user.js</code> or <code>all.js</code>. See <!-- <!-- {{ Bug(85601) }} --> -->.</li>
  <li>Per protocol port blocking/enabling preferences.</li>
  <li>Better User Interface
   <ul>
@@ -317,8 +317,8 @@
 </ul>
 <h3 id="More_Information" name="More_Information">More Information</h3>
 <ul>
- <li><!-- {{ Source("netwerk/base/src/nsIOService.cpp#87", "nsIOService.cpp gbadPortList") }} --></li>
- <li><!-- {{ Bug(83401) }} --></li>
+ <li><!-- <!-- {{ Source("netwerk/base/src/nsIOService.cpp#87", "nsIOService.cpp gbadPortList") }} --> --></li>
+ <li><!-- <!-- {{ Bug(83401) }} --> --></li>
  <li><a class="external" href="http://www.kb.cert.org/vuls/id/476267">Vulnerability Note VU#476267</a></li>
  <li><a class="link-mailto" href="mailto:dougt@netscape.com">dougt@netscape.com</a></li>
 </ul>

@@ -1,6 +1,6 @@
-<div><!-- {{SpiderMonkeySidebar("JSAPI")}} --></div>
+<div><!-- <!-- {{SpiderMonkeySidebar("JSAPI")}} --> --></div>
 
-<p><!-- {{ Jsapi_minversion_header("1.8") }} --></p>
+<p><!-- <!-- {{ Jsapi_minversion_header("1.8") }} --> --></p>
 
 <div class="summary">
 <p>Create an object as though by using the <code>new</code> keyword and a JavaScript function.</p>
@@ -24,28 +24,28 @@ JS_New(JSContext *cx, JSObject *ctor, unsigned argc, jsval *argv); // Obsolete s
   </tr>
   <tr>
    <td><code>cx</code></td>
-   <td><!-- {{jsapixref("JSRuntime", "JSContext *")}} --></td>
-   <td>The context in which to create the new object. <!-- {{ Jsapi-requires-request() }} --></td>
+   <td><!-- <!-- {{jsapixref("JSRuntime", "JSContext *")}} --> --></td>
+   <td>The context in which to create the new object. <!-- <!-- {{ Jsapi-requires-request() }} --> --></td>
   </tr>
   <tr>
    <td><code>ctor</code></td>
-   <td><!-- {{jsapixref("JSObject", "JS::HandleObject")}} --></td>
+   <td><!-- <!-- {{jsapixref("JSObject", "JS::HandleObject")}} --> --></td>
    <td>The constructor function object.</td>
   </tr>
   <tr>
    <td><code>args</code></td>
-   <td><!-- {{jsapixref("JS::HandleValueArray", "JS::HandleValueArray &amp;")}} --></td>
-   <td>An array of argument values to pass to the constructor. <!-- {{ Jsapi_minversion_inline("38") }} --></td>
+   <td><!-- <!-- {{jsapixref("JS::HandleValueArray", "JS::HandleValueArray &amp;")}} --> --></td>
+   <td>An array of argument values to pass to the constructor. <!-- <!-- {{ Jsapi_minversion_inline("38") }} --> --></td>
   </tr>
   <tr>
    <td><code>argc</code></td>
    <td><code>unsigned</code></td>
-   <td>The number of arguments to pass to the constructor. <!-- {{ obsolete_inline("jsapi32") }} --></td>
+   <td>The number of arguments to pass to the constructor. <!-- <!-- {{ obsolete_inline("jsapi32") }} --> --></td>
   </tr>
   <tr>
    <td><code>argv</code></td>
-   <td><!-- {{jsapixref("Jsval", "jsval *")}} --></td>
-   <td>Pointer to the element 0 of an array of argument values to pass to the constructor. If argc is <code>0</code>, this may be <code>NULL</code>. <!-- {{ obsolete_inline("jsapi32") }} --></td>
+   <td><!-- <!-- {{jsapixref("Jsval", "jsval *")}} --> --></td>
+   <td>Pointer to the element 0 of an array of argument values to pass to the constructor. If argc is <code>0</code>, this may be <code>NULL</code>. <!-- <!-- {{ obsolete_inline("jsapi32") }} --> --></td>
   </tr>
  </tbody>
 </table>
@@ -61,7 +61,7 @@ JS_New(JSContext *cx, JSObject *ctor, unsigned argc, jsval *argv); // Obsolete s
 <h2 id="See_Also" name="See_Also">See Also</h2>
 
 <ul>
- <li><!-- {{ LXRSearch("ident", "i", "JS_New") }} --></li>
- <li><!-- {{bug(480850)}} --> - added</li>
- <li><!-- {{bug(959787)}} --> - added <code>args</code> parameter</li>
+ <li><!-- <!-- {{ LXRSearch("ident", "i", "JS_New") }} --> --></li>
+ <li><!-- <!-- {{bug(480850)}} --> --> - added</li>
+ <li><!-- <!-- {{bug(959787)}} --> --> - added <code>args</code> parameter</li>
 </ul>

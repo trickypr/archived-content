@@ -1,4 +1,4 @@
-<div><!-- {{SpiderMonkeySidebar("JSAPI")}} --></div>
+<div><!-- <!-- {{SpiderMonkeySidebar("JSAPI")}} --> --></div>
 <div class="summary">
 <p>Compare two JS strings.</p>
 </div>
@@ -16,17 +16,17 @@ JS_CompareStrings(JSContext *cx, JSString *str1, JSString *str2,
   </tr>
   <tr>
    <td><code>cx</code></td>
-   <td><!-- {{jsapixref("JSRuntime", "JSContext *")}} --></td>
+   <td><!-- <!-- {{jsapixref("JSRuntime", "JSContext *")}} --> --></td>
    <td>The context to which both strings must belong.</td>
   </tr>
   <tr>
    <td><code>str1</code></td>
-   <td><!-- {{jsapixref("JSString", "JSString *")}} --></td>
+   <td><!-- <!-- {{jsapixref("JSString", "JSString *")}} --> --></td>
    <td>First string to compare.</td>
   </tr>
   <tr>
    <td><code>str2</code></td>
-   <td><!-- {{jsapixref("JSString", "JSString *")}} --></td>
+   <td><!-- <!-- {{jsapixref("JSString", "JSString *")}} --> --></td>
    <td>Second string to compare.</td>
   </tr>
   <tr>
@@ -44,9 +44,9 @@ JS_CompareStrings(JSContext *cx, JSString *str1, JSString *str2,
  The comparison of strings uses a simple lexicographic ordering on sequences of code point value values. There is no attempt to use the more complex, semantically oriented definitions of character or string equality and collating order defined in the Unicode specification. Therefore strings that are canonically equal according to the Unicode standard could test as unequal.</blockquote>
 <h2 id="See_Also" name="See_Also">See Also</h2>
 <ul>
-<li><!-- {{ LXRSearch("ident", "i", "JS_CompareStrings") }} --></li>
-<li><!-- {{jsapixref("JS_ConvertValue")}} --></li>
-<li><!-- {{jsapixref("JS_GetStringChars")}} --></li>
-<li><!-- {{jsapixref("JS_GetStringLength")}} --></li>
-<li><!-- {{jsapixref("JS_ValueToString")}} --></li>
+<li><!-- <!-- {{ LXRSearch("ident", "i", "JS_CompareStrings") }} --> --></li>
+<li><!-- <!-- {{jsapixref("JS_ConvertValue")}} --> --></li>
+<li><!-- <!-- {{jsapixref("JS_GetStringChars")}} --> --></li>
+<li><!-- <!-- {{jsapixref("JS_GetStringLength")}} --> --></li>
+<li><!-- <!-- {{jsapixref("JS_ValueToString")}} --> --></li>
 </ul>

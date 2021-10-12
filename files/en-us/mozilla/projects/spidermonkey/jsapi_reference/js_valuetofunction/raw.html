@@ -1,6 +1,6 @@
-<div><!-- {{SpiderMonkeySidebar("JSAPI")}} --></div>
+<div><!-- <!-- {{SpiderMonkeySidebar("JSAPI")}} --> --></div>
 
-<p>Convert a <!-- {{jsapixref("JS::Value")}} --> to a <!-- {{jsapixref("JSFunction")}} -->.</p>
+<p>Convert a <!-- <!-- {{jsapixref("JS::Value")}} --> --> to a <!-- <!-- {{jsapixref("JSFunction")}} --> -->.</p>
 
 <h2 id="Syntax" name="Syntax">Syntax</h2>
 
@@ -20,12 +20,12 @@ JS_ValueToConstructor(JSContext *cx, JS::HandleValue v);
   </tr>
   <tr>
    <td><code>cx</code></td>
-   <td><!-- {{jsapixref("JSRuntime", "JSContext *")}} --></td>
-   <td>The context in which to perform the conversion. <!-- {{ Jsapi-requires-request() }} --></td>
+   <td><!-- <!-- {{jsapixref("JSRuntime", "JSContext *")}} --> --></td>
+   <td>The context in which to perform the conversion. <!-- <!-- {{ Jsapi-requires-request() }} --> --></td>
   </tr>
   <tr>
    <td><code>v</code></td>
-   <td><!-- {{jsapixref("JS::Value", "JS::HandleValue")}} --></td>
+   <td><!-- <!-- {{jsapixref("JS::Value", "JS::HandleValue")}} --> --></td>
    <td>The value to convert.</td>
   </tr>
  </tbody>
@@ -44,12 +44,12 @@ JS_ValueToConstructor(JSContext *cx, JS::HandleValue v);
 <ul>
  <li>If <code>v</code> is a <code>Function</code> object, this returns the associated <code>JSFunction</code>.</li>
  <li>If <code>v</code> is <code>null</code>, <code>undefined</code>, a boolean, a number, or a string, a <code>TypeError</code> is reported and <code>JS_ValueToFunction</code> returns <code>NULL</code>.</li>
- <li>Otherwise, <code>v</code> is an object. The JavaScript engine attempts to convert it to a function. (Implementation note: The actual conversion is performed by the object itself.  The object's <!-- {{jsapixref("JSObjectOps.defaultValue")}} --> method is called with <code>hint=JSTYPE_FUNCTION</code>.) <code>JS_ValueToFunction</code> returns a pointer to the converted function. If conversion fails with an error or exception, <code>JS_ValueToFunction</code> returns <code>NULL</code>.</li>
+ <li>Otherwise, <code>v</code> is an object. The JavaScript engine attempts to convert it to a function. (Implementation note: The actual conversion is performed by the object itself.  The object's <!-- <!-- {{jsapixref("JSObjectOps.defaultValue")}} --> --> method is called with <code>hint=JSTYPE_FUNCTION</code>.) <code>JS_ValueToFunction</code> returns a pointer to the converted function. If conversion fails with an error or exception, <code>JS_ValueToFunction</code> returns <code>NULL</code>.</li>
 </ul>
 
 <h2 id="See_Also" name="See_Also">See Also</h2>
 
 <ul>
- <li><!-- {{ LXRSearch("ident", "i", "JS_ValueToFunction") }} --></li>
- <li><!-- {{ LXRSearch("ident", "i", "JS_ValueToConstructor") }} --></li>
+ <li><!-- <!-- {{ LXRSearch("ident", "i", "JS_ValueToFunction") }} --> --></li>
+ <li><!-- <!-- {{ LXRSearch("ident", "i", "JS_ValueToConstructor") }} --> --></li>
 </ul>

@@ -1,6 +1,6 @@
-<div><!-- {{SpiderMonkeySidebar("JSAPI")}} --></div>
+<div><!-- <!-- {{SpiderMonkeySidebar("JSAPI")}} --> --></div>
 
-<p><!-- {{ jsapi_minversion_header("17") }} --></p>
+<p><!-- <!-- {{ jsapi_minversion_header("17") }} --> --></p>
 
 <div class="summary">
 <p>Convert any JavaScript value to a signed 64bit integer.</p>
@@ -21,12 +21,12 @@ JS::ToInt64(JSContext *cx, JS::HandleValue v, int64_t *out);
   </tr>
   <tr>
    <td><code>cx</code></td>
-   <td><!-- {{jsapixref("JSRuntime", "JSContext *")}} --></td>
-   <td>The context in which to perform the conversion. <!-- {{ Jsapi-requires-request() }} --></td>
+   <td><!-- <!-- {{jsapixref("JSRuntime", "JSContext *")}} --> --></td>
+   <td>The context in which to perform the conversion. <!-- <!-- {{ Jsapi-requires-request() }} --> --></td>
   </tr>
   <tr>
    <td><code>v</code></td>
-   <td><!-- {{jsapixref("JS::Value", "JS::HandleValue")}} --></td>
+   <td><!-- <!-- {{jsapixref("JS::Value", "JS::HandleValue")}} --> --></td>
    <td>The value to convert.</td>
   </tr>
   <tr>
@@ -46,6 +46,6 @@ JS::ToInt64(JSContext *cx, JS::HandleValue v, int64_t *out);
 <h2 id="See_Also" name="See_Also">See Also</h2>
 
 <ul>
- <li><!-- {{ LXRSearch("ident", "i", "JS::ToInt64") }} --></li>
- <li><!-- {{bug(742188)}} --></li>
+ <li><!-- <!-- {{ LXRSearch("ident", "i", "JS::ToInt64") }} --> --></li>
+ <li><!-- <!-- {{bug(742188)}} --> --></li>
 </ul>

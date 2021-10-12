@@ -1,4 +1,4 @@
-<div><!-- {{SpiderMonkeySidebar("JSAPI")}} --></div>
+<div><!-- <!-- {{SpiderMonkeySidebar("JSAPI")}} --> --></div>
 
 <div class="summary">
 <p>Compiles a script for execution.</p>
@@ -44,13 +44,13 @@ JS_CompileUCScript(JSContext *cx, JS::HandleObject obj,
   </tr>
   <tr>
    <td><code>cx</code></td>
-   <td><!-- {{jsapixref("JSRuntime", "JSContext *")}} --></td>
-   <td>Pointer to a JS context from which to derive runtime information. <!-- {{ Jsapi-requires-request() }} --></td>
+   <td><!-- <!-- {{jsapixref("JSRuntime", "JSContext *")}} --> --></td>
+   <td>Pointer to a JS context from which to derive runtime information. <!-- <!-- {{ Jsapi-requires-request() }} --> --></td>
   </tr>
   <tr>
    <td><code>obj</code></td>
-   <td><!-- {{jsapixref("JSObject", "JS::HandleObject")}} --></td>
-   <td>The global object, or <code>NULL</code>. If the <!-- {{jsapixref("JS_SetOptions", "JSOPTION_COMPILE_N_GO")}} --> option is set in <code>cx</code>, the resulting script must be executed in this scope, and at most once. <!-- {{ obsolete_inline("jsapi39") }} --></td>
+   <td><!-- <!-- {{jsapixref("JSObject", "JS::HandleObject")}} --> --></td>
+   <td>The global object, or <code>NULL</code>. If the <!-- <!-- {{jsapixref("JS_SetOptions", "JSOPTION_COMPILE_N_GO")}} --> --> option is set in <code>cx</code>, the resulting script must be executed in this scope, and at most once. <!-- <!-- {{ obsolete_inline("jsapi39") }} --> --></td>
   </tr>
   <tr>
    <td><code>ascii</code> <em>or</em> <code>chars</code></td>
@@ -64,12 +64,12 @@ JS_CompileUCScript(JSContext *cx, JS::HandleObject obj,
   </tr>
   <tr>
    <td><code>options</code></td>
-   <td><!-- {{jsapixref("JS::CompileOptions", "JS::CompileOptions &amp;")}} --></td>
+   <td><!-- <!-- {{jsapixref("JS::CompileOptions", "JS::CompileOptions &amp;")}} --> --></td>
    <td>Compile options.</td>
   </tr>
   <tr>
    <td><code>script</code></td>
-   <td><!-- {{jsapixref("JSScript", "JS::MutableHandleScript")}} --></td>
+   <td><!-- <!-- {{jsapixref("JSScript", "JS::MutableHandleScript")}} --> --></td>
    <td>Out parameter. On success, <code>script</code> receives the result script.</td>
   </tr>
  </tbody>
@@ -87,12 +87,12 @@ JS_CompileUCScript(JSContext *cx, JS::HandleObject obj,
 
 <ul>
  <li>The <a href="/en-US/docs/Mozilla/Projects/SpiderMonkey/JSAPI_User_Guide#Compiled_scripts">JSAPI User Guide</a> contains example code using compiled scripts.</li>
- <li><!-- {{ LXRSearch("ident", "i", "JS_CompileScript") }} --></li>
- <li><!-- {{ LXRSearch("ident", "i", "JS_CompileUCScript") }} --></li>
- <li><!-- {{jsapixref("JS::Evaluate")}} --></li>
- <li><!-- {{jsapixref("JS::CompileOffThread")}} --></li>
- <li><!-- {{jsapixref("JS::CompileFunction")}} --></li>
- <li><!-- {{jsapixref("JS_ExecuteScript")}} --></li>
- <li><!-- {{jsapixref("JS_DecompileScript")}} --></li>
- <li><!-- {{bug(1143793)}} --> -- removed <code>obj</code> parameter</li>
+ <li><!-- <!-- {{ LXRSearch("ident", "i", "JS_CompileScript") }} --> --></li>
+ <li><!-- <!-- {{ LXRSearch("ident", "i", "JS_CompileUCScript") }} --> --></li>
+ <li><!-- <!-- {{jsapixref("JS::Evaluate")}} --> --></li>
+ <li><!-- <!-- {{jsapixref("JS::CompileOffThread")}} --> --></li>
+ <li><!-- <!-- {{jsapixref("JS::CompileFunction")}} --> --></li>
+ <li><!-- <!-- {{jsapixref("JS_ExecuteScript")}} --> --></li>
+ <li><!-- <!-- {{jsapixref("JS_DecompileScript")}} --> --></li>
+ <li><!-- <!-- {{bug(1143793)}} --> --> -- removed <code>obj</code> parameter</li>
 </ul>

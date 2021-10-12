@@ -519,7 +519,7 @@ let observer = { observe: function onunload(subject, topic, reason) {
   // `reason` will be a string describing the reason (e.g. `'disable'`).
   if (subject.wrappedJSObject === unloadSubject)
     console.log("I am about to unload, reason is " + reason);
-}} -->;
+}} --> -->;
 
 observerService.addObserver(observer, 'sdk:loader:destroy', false);</pre>
 

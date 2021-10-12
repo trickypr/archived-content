@@ -74,9 +74,9 @@ turn-on = Turn On</pre>
 
 <p>Sometimes your app needs to insert a string that should not be localized into a string that should be localized. For example, if you want to greet the user, their name should not be localized but the greeting itself should, for example <em>"Hello, Bob!"</em>.</p>
 
-<p>Argument substitution is achieved by surrounding the argument with double curly braces: <code>\<!-- {{arg}} --></code>. A message can then be customized for a specific user using syntax similar to the following:</p>
+<p>Argument substitution is achieved by surrounding the argument with double curly braces: <code>\<!-- <!-- {{arg}} --> --></code>. A message can then be customized for a specific user using syntax similar to the following:</p>
 
-<pre class="brush: js">label1 = Hello \<!-- {{ username }} -->, glad you decided to visit</pre>
+<pre class="brush: js">label1 = Hello \<!-- <!-- {{ username }} --> -->, glad you decided to visit</pre>
 
 <p>Default values for arguments can be set using the <code>data-l10n-args</code> attribute. This attribute expects a JSON-formatted value. In the above example, a default value could be set for the user argument using the HTML below:</p>
 
@@ -87,7 +87,7 @@ turn-on = Turn On</pre>
 <p>You can also reference other entities in the same way:</p>
 
 <pre class="brush: js">brandShortName = Firefox OS
-helloWorld = Welcome to \<!-- {{ brandShortName }} -->
+helloWorld = Welcome to \<!-- <!-- {{ brandShortName }} --> -->
 </pre>
 
 <div class="note">
@@ -112,7 +112,7 @@ You have five tomatoes.</pre>
 mailMessage[zero]  = you have no messages
 mailMessage[one]   = you have one message
 mailMessage[two]   = you have two messages
-mailMessage[other] = you have \<!-- {{ n }} --> messages</pre>
+mailMessage[other] = you have \<!-- <!-- {{ n }} --> --> messages</pre>
 
 <pre class="brush: html">&lt;h3 data-l10n-id="mailMessage" data-l10n-args='{ "n": "6" }'&gt;&lt;/h3&gt;</pre>
 

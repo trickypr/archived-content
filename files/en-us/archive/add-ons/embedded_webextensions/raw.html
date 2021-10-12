@@ -1,4 +1,4 @@
-<div><!-- {{AddonSidebar}} --></div>
+<div><!-- <!-- {{AddonSidebar}} --> --></div>
 
 <div class="warning">
 <p>As of Firefox 57 (released in November 2017) support for legacy add-on types was removed, including legacy add-ons that embed WebExtensions.</p>
@@ -8,11 +8,11 @@
 
 <p>Starting in Firefox 51, you can embed a WebExtension in a classic <a href="/en-US/docs/Mozilla/Add-ons/Bootstrapped_extensions">bootstrapped extension</a> or an <a href="/en-US/docs/Mozilla/Add-ons/SDK">Add-on SDK</a> add-on.</p>
 
-<p>The embedded WebExtension's files are packaged inside the legacy add-on. The embedded WebExtension doesn't directly share its scope with the embedding legacy add-on, but they can exchange messages using the messaging functions defined in the <!-- {{WebExtAPIRef("runtime")}} --> API.</p>
+<p>The embedded WebExtension's files are packaged inside the legacy add-on. The embedded WebExtension doesn't directly share its scope with the embedding legacy add-on, but they can exchange messages using the messaging functions defined in the <!-- <!-- {{WebExtAPIRef("runtime")}} --> --> API.</p>
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/13895/embedded-we.png" style="display: block; height: 522px; margin-left: auto; margin-right: auto; width: 429px;"></p>
 
-<p>This means you can migrate a legacy add-on to WebExtensions one piece at a time, and have a fully functioning add-on at every step. In particular, it enables you to <a href="/en-US/Add-ons/WebExtensions/Embedded_WebExtensions#Migrating_data_from_legacy_add-ons">migrate stored data</a> from a legacy add-on to a WebExtension, by writing an intermediate hybrid add-on that reads the data using the legacy APIs (for example, <a href="/en-US/docs/Mozilla/Add-ons/SDK/High-Level_APIs/simple-prefs">simple-prefs</a> or the preferences <a href="/en-US/docs/Mozilla/JavaScript_code_modules/Services.jsm">service</a>) and writes it using the WebExtension APIs (for example, <!-- {{WebExtAPIRef("storage")}} -->).</p>
+<p>This means you can migrate a legacy add-on to WebExtensions one piece at a time, and have a fully functioning add-on at every step. In particular, it enables you to <a href="/en-US/Add-ons/WebExtensions/Embedded_WebExtensions#Migrating_data_from_legacy_add-ons">migrate stored data</a> from a legacy add-on to a WebExtension, by writing an intermediate hybrid add-on that reads the data using the legacy APIs (for example, <a href="/en-US/docs/Mozilla/Add-ons/SDK/High-Level_APIs/simple-prefs">simple-prefs</a> or the preferences <a href="/en-US/docs/Mozilla/JavaScript_code_modules/Services.jsm">service</a>) and writes it using the WebExtension APIs (for example, <!-- <!-- {{WebExtAPIRef("storage")}} --> -->).</p>
 
 <p>Together with this guide, we've written two examples showing how to use embedded WebExtensions to help migrate from a legacy add-on type. One shows <a href="https://github.com/mdn/webextensions-examples/tree/master/embedded-webextension-bootstrapped">how to port from a bootstrapped add-on</a>, and the other shows <a href="https://github.com/mdn/webextensions-examples/tree/master/embedded-webextension-sdk">how to port from an SDK add-on</a>.</p>
 
@@ -85,11 +85,11 @@
 
 const</span> <span class="pl-c1">webExtension</span> <span class="pl-k">=</span> <span class="pl-c1">require</span>(<span class="pl-s"><span class="pl-pds">"</span>sdk/webextension<span class="pl-pds">"</span></span>);</pre>
 
-<p>Either way, this object has a single function, <code>startup()</code>, that returns a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>. The promise resolves to an object with a single property <code>browser</code>: this contains the <!-- {{WebExtAPIRef("runtime")}} --> APIs that the embedding add-on can use to exchange messages with the embedded WebExtension:</p>
+<p>Either way, this object has a single function, <code>startup()</code>, that returns a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>. The promise resolves to an object with a single property <code>browser</code>: this contains the <!-- <!-- {{WebExtAPIRef("runtime")}} --> --> APIs that the embedding add-on can use to exchange messages with the embedded WebExtension:</p>
 
 <ul>
- <li><!-- {{WebExtAPIRef("runtime.onConnect")}} --></li>
- <li><!-- {{WebExtAPIRef("runtime.onMessage")}} --></li>
+ <li><!-- <!-- {{WebExtAPIRef("runtime.onConnect")}} --> --></li>
+ <li><!-- <!-- {{WebExtAPIRef("runtime.onMessage")}} --> --></li>
 </ul>
 
 <p>For example:</p>
@@ -119,16 +119,16 @@ webExtension.startup().then(api =&gt; {
 
 <h2 id="Exchanging_messages">Exchanging messages</h2>
 
-<p>Once the embedded WebExtension is running, it can exchange messages with the legacy add-on using a subset of the <!-- {{WebExtAPIRef("runtime")}} --> APIs:</p>
+<p>Once the embedded WebExtension is running, it can exchange messages with the legacy add-on using a subset of the <!-- <!-- {{WebExtAPIRef("runtime")}} --> --> APIs:</p>
 
 <ul>
- <li>It can send one-off messages using <!-- {{WebExtAPIRef("runtime.sendMessage()")}} -->.</li>
- <li>It can set up a connection using <!-- {{WebExtAPIRef("runtime.connect()")}} -->.</li>
+ <li>It can send one-off messages using <!-- <!-- {{WebExtAPIRef("runtime.sendMessage()")}} --> -->.</li>
+ <li>It can set up a connection using <!-- <!-- {{WebExtAPIRef("runtime.connect()")}} --> -->.</li>
 </ul>
 
 <h3 id="Connectionless_messaging">Connectionless messaging</h3>
 
-<p>To send a single message, the WebExtension can use <!-- {{WebExtAPIRef("runtime.sendMessage()")}} -->. You can omit the <code>extensionId</code> argument, because the browser considers the embedded WebExtension to be part of the embedding add-on:</p>
+<p>To send a single message, the WebExtension can use <!-- <!-- {{WebExtAPIRef("runtime.sendMessage()")}} --> -->. You can omit the <code>extensionId</code> argument, because the browser considers the embedded WebExtension to be part of the embedding add-on:</p>
 
 <pre class="brush: js">browser.runtime.sendMessage("message-from-webextension").then(reply =&gt; {
   if (reply) {
@@ -136,7 +136,7 @@ webExtension.startup().then(api =&gt; {
   }
 });</pre>
 
-<p>The embedding add-on can receive (and optionally respond to) this message using the <!-- {{WebExtAPIRef("runtime.onMessage")}} --> object:</p>
+<p>The embedding add-on can receive (and optionally respond to) this message using the <!-- <!-- {{WebExtAPIRef("runtime.onMessage")}} --> --> object:</p>
 
 <pre class="brush: js">// bootstrapped add-on
 
@@ -156,7 +156,7 @@ function startup({webExtension}) {
 
 <h3 id="Connection-oriented_messaging">Connection-oriented messaging</h3>
 
-<p>To set up a longer-lived connection between the WebExtension and the legacy add-on, the WebExtension can use <!-- {{WebExtAPIRef("runtime.connect()")}} -->.</p>
+<p>To set up a longer-lived connection between the WebExtension and the legacy add-on, the WebExtension can use <!-- <!-- {{WebExtAPIRef("runtime.connect()")}} --> -->.</p>
 
 <pre class="brush: js">var port = browser.runtime.connect({name: "connection-to-legacy"});
 
@@ -165,7 +165,7 @@ port.onMessage.addListener(function(message) {
 });
 </pre>
 
-<p>The legacy add-on can listen for connection attempts using <!-- {{WebExtAPIRef("runtime.onConnect")}} -->, and both sides can then use the resulting <!-- {{webExtAPIRef("runtime.Port")}} --> to exchange messages:</p>
+<p>The legacy add-on can listen for connection attempts using <!-- <!-- {{WebExtAPIRef("runtime.onConnect")}} --> -->, and both sides can then use the resulting <!-- <!-- {{webExtAPIRef("runtime.Port")}} --> --> to exchange messages:</p>
 
 <pre class="brush: js">function startup({webExtension}) {
   // Start the embedded webextension.
@@ -190,7 +190,7 @@ port.onMessage.addListener(function(message) {
 <ul>
  <li>In the initial version, an SDK-based add-on reads and writes add-on preferences using the <a href="/en-US/docs/Mozilla/Add-ons/SDK/High-Level_APIs/simple-prefs">simple-prefs</a> API.</li>
  <li>
-  <p>In the intermediate version, the SDK add-on starts the embedded WebExtension. The WebExtension then asks the SDK add-on to retrieve the stored data from simple-prefs. The WebExtension then stores the data using the <!-- {{WebExtAPIRef("storage")}} --> API.</p>
+  <p>In the intermediate version, the SDK add-on starts the embedded WebExtension. The WebExtension then asks the SDK add-on to retrieve the stored data from simple-prefs. The WebExtension then stores the data using the <!-- <!-- {{WebExtAPIRef("storage")}} --> --> API.</p>
  </li>
  <li>In the final version, the add-on is just a WebExtension, and uses only the storage API.</li>
 </ul>

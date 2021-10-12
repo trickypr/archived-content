@@ -1,6 +1,6 @@
-<div><!-- {{SpiderMonkeySidebar("JSAPI")}} --></div>
+<div><!-- <!-- {{SpiderMonkeySidebar("JSAPI")}} --> --></div>
 
-<p><!-- {{ jsapi_minversion_header("17") }} --></p>
+<p><!-- <!-- {{ jsapi_minversion_header("17") }} --> --></p>
 
 <div class="summary">
 <p>Set up <code>ctor.prototype = proto</code> and <code>proto.constructor = ctor</code> with the right property flags.</p>
@@ -22,17 +22,17 @@ JS_LinkConstructorAndPrototype(JSContext *cx, JS::Handle&lt;JSObject*&gt; ctor,
   </tr>
   <tr>
    <td><code>cx</code></td>
-   <td><!-- {{jsapixref("JSRuntime", "JSContext *")}} --></td>
-   <td>Pointer to a JS context from which to derive runtime information. <!-- {{ Jsapi-requires-request() }} --></td>
+   <td><!-- <!-- {{jsapixref("JSRuntime", "JSContext *")}} --> --></td>
+   <td>Pointer to a JS context from which to derive runtime information. <!-- <!-- {{ Jsapi-requires-request() }} --> --></td>
   </tr>
   <tr>
    <td><code>ctor</code></td>
-   <td><!-- {{jsapixref("JSObject", "JS::Handle&lt;JSObject*&gt;")}} --></td>
+   <td><!-- <!-- {{jsapixref("JSObject", "JS::Handle&lt;JSObject*&gt;")}} --> --></td>
    <td>Pointer to the constructor object.</td>
   </tr>
   <tr>
    <td><code>proto</code></td>
-   <td><!-- {{jsapixref("JSObject", "JS::Handle&lt;JSObject*&gt;")}} --></td>
+   <td><!-- <!-- {{jsapixref("JSObject", "JS::Handle&lt;JSObject*&gt;")}} --> --></td>
    <td>Pointer to the prototype object.</td>
   </tr>
  </tbody>
@@ -47,7 +47,7 @@ JS_LinkConstructorAndPrototype(JSContext *cx, JS::Handle&lt;JSObject*&gt; ctor,
 <h2 id="See_Also" name="See_Also">See Also</h2>
 
 <ul>
- <li><!-- {{ LXRSearch("ident", "i", "JS_LinkConstructorAndPrototype") }} --></li>
- <li><!-- {{jsapixref("JS_InitClass")}} --></li>
- <li><!-- {{bug(722729)}} --></li>
+ <li><!-- <!-- {{ LXRSearch("ident", "i", "JS_LinkConstructorAndPrototype") }} --> --></li>
+ <li><!-- <!-- {{jsapixref("JS_InitClass")}} --> --></li>
+ <li><!-- <!-- {{bug(722729)}} --> --></li>
 </ul>

@@ -1,6 +1,6 @@
-<p><!-- {{ obsolete_header("jsapi36") }} --></p>
+<p><!-- <!-- {{ obsolete_header("jsapi36") }} --> --></p>
 
-<div><!-- {{SpiderMonkeySidebar("JSAPI")}} --></div>
+<div><!-- <!-- {{SpiderMonkeySidebar("JSAPI")}} --> --></div>
 
 <div class="summary">
 <p>Compile and execute a script.</p>
@@ -28,22 +28,22 @@ JS_EvaluateUCScript(JSContext *cx, JSObject *obj,
   </tr>
   <tr>
    <td><code>cx</code></td>
-   <td><!-- {{jsapixref("JSRuntime", "JSContext *")}} --></td>
-   <td>The context in which to run the script. <!-- {{ Jsapi-requires-request() }} --></td>
+   <td><!-- <!-- {{jsapixref("JSRuntime", "JSContext *")}} --> --></td>
+   <td>The context in which to run the script. <!-- <!-- {{ Jsapi-requires-request() }} --> --></td>
   </tr>
   <tr>
    <td><code>obj</code></td>
-   <td><!-- {{jsapixref("JSObject", "JSObject *")}} --></td>
-   <td>The scope in which to execute the script. This parameter is documented in detail at <!-- {{jsapixref("JS_ExecuteScript")}} -->.</td>
+   <td><!-- <!-- {{jsapixref("JSObject", "JSObject *")}} --> --></td>
+   <td>The scope in which to execute the script. This parameter is documented in detail at <!-- <!-- {{jsapixref("JS_ExecuteScript")}} --> -->.</td>
   </tr>
   <tr>
    <td><code>src</code></td>
-   <td><code>const char *</code> <em>or</em> <!-- {{jsapixref("jschar", "const jschar *")}} --></td>
+   <td><code>const char *</code> <em>or</em> <!-- <!-- {{jsapixref("jschar", "const jschar *")}} --> --></td>
    <td>String containing the script to compile and execute.</td>
   </tr>
   <tr>
    <td><code>length</code></td>
-   <td><!-- {{jsapixref("jsint", "unsigned int")}} --></td>
+   <td><!-- <!-- {{jsapixref("jsint", "unsigned int")}} --> --></td>
    <td>The length of <code>src</code>, in characters.</td>
   </tr>
   <tr>
@@ -53,12 +53,12 @@ JS_EvaluateUCScript(JSContext *cx, JSObject *obj,
   </tr>
   <tr>
    <td><code>lineno</code></td>
-   <td><!-- {{jsapixref("jsint", "unsigned int")}} --></td>
+   <td><!-- <!-- {{jsapixref("jsint", "unsigned int")}} --> --></td>
    <td>Line number. Used to report the offending line in the file or URL if an error occurs.</td>
   </tr>
   <tr>
    <td><code>rval</code></td>
-   <td><!-- {{jsapixref("Jsval", "jsval *")}} --></td>
+   <td><!-- <!-- {{jsapixref("Jsval", "jsval *")}} --> --></td>
    <td>Out parameter. On success, if <code>rval</code> is not <code>NULL</code>, <code>*rval</code> receives the result value.</td>
   </tr>
  </tbody>
@@ -79,12 +79,12 @@ JS_EvaluateUCScript(JSContext *cx, JSObject *obj,
 <h2 id="See_Also" name="See_Also">See Also</h2>
 
 <ul>
- <li><!-- {{ LXRSearch("ident", "i", "JS_EvaluateScript") }} --></li>
- <li><!-- {{ LXRSearch("ident", "i", "JS_EvaluateUCScript") }} --></li>
- <li><!-- {{jsapixref("JS_CompileFile")}} --></li>
- <li><!-- {{jsapixref("JS_CompileScript")}} --></li>
- <li><!-- {{jsapixref("JS_DecompileScript")}} --></li>
- <li><!-- {{jsapixref("JS_DestroyScript")}} --></li>
- <li><!-- {{jsapixref("JS_EvaluateScriptForPrincipals")}} --></li>
- <li><!-- {{bug(1100579)}} --></li>
+ <li><!-- <!-- {{ LXRSearch("ident", "i", "JS_EvaluateScript") }} --> --></li>
+ <li><!-- <!-- {{ LXRSearch("ident", "i", "JS_EvaluateUCScript") }} --> --></li>
+ <li><!-- <!-- {{jsapixref("JS_CompileFile")}} --> --></li>
+ <li><!-- <!-- {{jsapixref("JS_CompileScript")}} --> --></li>
+ <li><!-- <!-- {{jsapixref("JS_DecompileScript")}} --> --></li>
+ <li><!-- <!-- {{jsapixref("JS_DestroyScript")}} --> --></li>
+ <li><!-- <!-- {{jsapixref("JS_EvaluateScriptForPrincipals")}} --> --></li>
+ <li><!-- <!-- {{bug(1100579)}} --> --></li>
 </ul>

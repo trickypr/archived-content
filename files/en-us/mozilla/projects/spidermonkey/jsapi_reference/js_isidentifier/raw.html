@@ -1,6 +1,6 @@
-<div><!-- {{SpiderMonkeySidebar("JSAPI")}} --></div>
+<div><!-- <!-- {{SpiderMonkeySidebar("JSAPI")}} --> --></div>
 
-<p><!-- {{ jsapi_minversion_header("17") }} --></p>
+<p><!-- <!-- {{ jsapi_minversion_header("17") }} --> --></p>
 
 <div class="summary">
 <p>Test whether the given string is a valid ECMAScript identifier.</p>
@@ -24,12 +24,12 @@ JS_IsIdentifier(const char16_t *chars, size_t length); // Added in SpiderMonkey 
   </tr>
   <tr>
    <td><code>cx</code></td>
-   <td><!-- {{jsapixref("JSRuntime", "JSContext *")}} --></td>
-   <td>Pointer to a JS context from which to derive runtime information. <!-- {{ Jsapi-requires-request() }} --></td>
+   <td><!-- <!-- {{jsapixref("JSRuntime", "JSContext *")}} --> --></td>
+   <td>Pointer to a JS context from which to derive runtime information. <!-- <!-- {{ Jsapi-requires-request() }} --> --></td>
   </tr>
   <tr>
    <td><code>str</code></td>
-   <td><!-- {{jsapixref("JSString", "JS::HandleString")}} --></td>
+   <td><!-- <!-- {{jsapixref("JSString", "JS::HandleString")}} --> --></td>
    <td>The string to test.</td>
   </tr>
   <tr>
@@ -59,8 +59,8 @@ JS_IsIdentifier(const char16_t *chars, size_t length); // Added in SpiderMonkey 
 <h2 id="See_Also" name="See_Also">See Also</h2>
 
 <ul>
- <li><!-- {{ LXRSearch("ident", "i", "JS_IsIdentifier") }} --></li>
- <li><!-- {{jsapixref("JS_ValueToId")}} --></li>
- <li><!-- {{bug(692627)}} --></li>
- <li><!-- {{bug(990484)}} --></li>
+ <li><!-- <!-- {{ LXRSearch("ident", "i", "JS_IsIdentifier") }} --> --></li>
+ <li><!-- <!-- {{jsapixref("JS_ValueToId")}} --> --></li>
+ <li><!-- <!-- {{bug(692627)}} --> --></li>
+ <li><!-- <!-- {{bug(990484)}} --> --></li>
 </ul>

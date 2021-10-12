@@ -1,9 +1,9 @@
-<p><!-- {{ obsolete_header("jsapi18") }} --></p>
-<p><!-- {{ jsapi_minversion_header("1.8.1") }} --></p>
+<p><!-- <!-- {{ obsolete_header("jsapi18") }} --> --></p>
+<p><!-- <!-- {{ jsapi_minversion_header("1.8.1") }} --> --></p>
 <div>
- <!-- {{SpiderMonkeySidebar("JSAPI")}} --></div>
+ <!-- <!-- {{SpiderMonkeySidebar("JSAPI")}} --> --></div>
 <div class="note">
- <p><code>JS_LeaveCrossCompartmentCall</code> has been removed in <!-- {{bug(786068)}} -->. Use <!-- {{jsapixref("JS_LeaveCompartment")}} --> instead.</p>
+ <p><code>JS_LeaveCrossCompartmentCall</code> has been removed in <!-- <!-- {{bug(786068)}} --> -->. Use <!-- <!-- {{jsapixref("JS_LeaveCompartment")}} --> --> instead.</p>
 </div>
 <div class="summary">
  <p>Leave a the compartment, returning to the compartment active before the corresponding JS_EnterCrossCompartmentCall.</p>
@@ -28,12 +28,12 @@ JS_LeaveCrossCompartmentCall(JSCrossCompartmentCall *call);
 </table>
 <h2 id="Description" name="Description">Description</h2>
 <div>
- Every <!-- {{jsapixref("JSRuntime", "JSContext")}} --> has a current compartment. Any access to an object in a different compartment must be bracketed by call <!-- {{jsapixref("JS_EnterCrossCompartmentCall")}} --> and <code>JS_LeaveCrossCompartmentCall</code>.</div>
+ Every <!-- <!-- {{jsapixref("JSRuntime", "JSContext")}} --> --> has a current compartment. Any access to an object in a different compartment must be bracketed by call <!-- <!-- {{jsapixref("JS_EnterCrossCompartmentCall")}} --> --> and <code>JS_LeaveCrossCompartmentCall</code>.</div>
 <h2 id="See_Also" name="See_Also">See Also</h2>
 <ul>
- <li><!-- {{jsapixref("JS_EnterCrossCompartmentCall")}} --></li>
- <li><!-- {{jsapixref("JS_EnterCompartment")}} --></li>
- <li><!-- {{jsapixref("JS_LeaveCompartment")}} --></li>
- <li><!-- {{bug(786068)}} --></li>
- <li><!-- {{bug(563099)}} --></li>
+ <li><!-- <!-- {{jsapixref("JS_EnterCrossCompartmentCall")}} --> --></li>
+ <li><!-- <!-- {{jsapixref("JS_EnterCompartment")}} --> --></li>
+ <li><!-- <!-- {{jsapixref("JS_LeaveCompartment")}} --> --></li>
+ <li><!-- <!-- {{bug(786068)}} --> --></li>
+ <li><!-- <!-- {{bug(563099)}} --> --></li>
 </ul>

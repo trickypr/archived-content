@@ -1,5 +1,5 @@
-<div><!-- {{SpiderMonkeySidebar("JSAPI")}} --></div>
-<p><!-- {{ Obsolete_header("js1.8.5") }} --></p>
+<div><!-- <!-- {{SpiderMonkeySidebar("JSAPI")}} --> --></div>
+<p><!-- <!-- {{ Obsolete_header("js1.8.5") }} --> --></p>
 <div class="summary">
 <p>Leave a local root scope.</p>
 </div>
@@ -16,16 +16,16 @@ JS_LeaveLocalRootScope(JSContext *cx);
   </tr>
   <tr>
    <td><code>cx</code></td>
-   <td><!-- {{jsapixref("JSRuntime", "JSContext *")}} --></td>
-   <td>Pointer to the context. This must be the same context passed to <code><!-- {{jsapixref("JS_EnterLocalRootScope")}} -->()</code>. <!-- {{ Jsapi-requires-request() }} --></td>
+   <td><!-- <!-- {{jsapixref("JSRuntime", "JSContext *")}} --> --></td>
+   <td>Pointer to the context. This must be the same context passed to <code><!-- <!-- {{jsapixref("JS_EnterLocalRootScope")}} --> -->()</code>. <!-- <!-- {{ Jsapi-requires-request() }} --> --></td>
   </tr>
  </tbody>
 </table>
 <h3 id="Description" name="Description">Description</h3>
-<p>See <!-- {{jsapixref("JS_EnterLocalRootScope")}} --> for an explanation of local root scopes.</p>
-<p>Leaving a nested local root scope causes all objects created since the matching <code>JS_EnterLocalRootScope</code> call to become subject to garbage collection. That is, they are <em>not</em> transferred to the enclosing local root scope. However, <!-- {{jsapixref("JS_LeaveLocalRootScopeWithResult")}} --> provides a way to transfer one value to the enclosing local root scope.</p>
+<p>See <!-- <!-- {{jsapixref("JS_EnterLocalRootScope")}} --> --> for an explanation of local root scopes.</p>
+<p>Leaving a nested local root scope causes all objects created since the matching <code>JS_EnterLocalRootScope</code> call to become subject to garbage collection. That is, they are <em>not</em> transferred to the enclosing local root scope. However, <!-- <!-- {{jsapixref("JS_LeaveLocalRootScopeWithResult")}} --> --> provides a way to transfer one value to the enclosing local root scope.</p>
 <h2 id="See_Also" name="See_Also">See Also</h2>
 <ul>
-<li><!-- {{bug(519949)}} --></li>
-<li><!-- {{bug(803907)}} --></li>
+<li><!-- <!-- {{bug(519949)}} --> --></li>
+<li><!-- <!-- {{bug(803907)}} --> --></li>
 </ul>

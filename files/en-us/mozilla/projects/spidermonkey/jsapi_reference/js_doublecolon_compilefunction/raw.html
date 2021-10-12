@@ -1,6 +1,6 @@
-<div><!-- {{SpiderMonkeySidebar("JSAPI")}} --></div>
+<div><!-- <!-- {{SpiderMonkeySidebar("JSAPI")}} --> --></div>
 
-<p><!-- {{ Jsapi_minversion_header("17") }} --></p>
+<p><!-- <!-- {{ Jsapi_minversion_header("17") }} --> --></p>
 
 <div class="summary">
 <p>Create a JavaScript function from a text string.</p>
@@ -36,17 +36,17 @@ JS::CompileFunction(JSContext *cx, JS::AutoObjectVector &amp;scopeChain,
   </tr>
   <tr>
    <td><code>cx</code></td>
-   <td><!-- {{jsapixref("JSRuntime", "JSContext *")}} --></td>
-   <td>The context in which to compile the function. <!-- {{ Jsapi-requires-request() }} --></td>
+   <td><!-- <!-- {{jsapixref("JSRuntime", "JSContext *")}} --> --></td>
+   <td>The context in which to compile the function. <!-- <!-- {{ Jsapi-requires-request() }} --> --></td>
   </tr>
   <tr>
    <td><code>scopeChain</code></td>
-   <td><!-- {{jsapixref("JS::AutoObjectVector", "JS::AutoObjectVector &amp;")}} --></td>
+   <td><!-- <!-- {{jsapixref("JS::AutoObjectVector", "JS::AutoObjectVector &amp;")}} --> --></td>
    <td>The scope in which to compile the function.</td>
   </tr>
   <tr>
    <td><code>options</code></td>
-   <td><!-- {{jsapixref("JS::CompileOptions", "JS::ReadOnlyCompileOptions &amp;")}} --></td>
+   <td><!-- <!-- {{jsapixref("JS::CompileOptions", "JS::ReadOnlyCompileOptions &amp;")}} --> --></td>
    <td>Compile options.</td>
   </tr>
   <tr>
@@ -81,12 +81,12 @@ JS::CompileFunction(JSContext *cx, JS::AutoObjectVector &amp;scopeChain,
   </tr>
   <tr>
    <td><code>srcBuf</code></td>
-   <td><!-- {{jsapixref("JS::SourceBufferHolder", "JS::SourceBufferHolder &amp;")}} --></td>
+   <td><!-- <!-- {{jsapixref("JS::SourceBufferHolder", "JS::SourceBufferHolder &amp;")}} --> --></td>
    <td>Source buffer containing the script function compile.</td>
   </tr>
   <tr>
    <td><code>fun</code></td>
-   <td><!-- {{jsapixref("JSFunction", "JS::MutableHandleFunction")}} --></td>
+   <td><!-- <!-- {{jsapixref("JSFunction", "JS::MutableHandleFunction")}} --> --></td>
    <td>Out parameter. On success, <code>fun</code> receives the result function.</td>
   </tr>
  </tbody>
@@ -106,11 +106,11 @@ JS::CompileFunction(JSContext *cx, JS::AutoObjectVector &amp;scopeChain,
 
 <ul>
  <li>The <a href="/en-US/docs/Mozilla/Projects/SpiderMonkey/JSAPI_User_Guide#Compiled_scripts">JSAPI User Guide</a> contains example code using compiled scripts.</li>
- <li><!-- {{ LXRSearch("ident", "i", "JS::CompileFunction") }} --></li>
- <li><!-- {{jsapixref("JS::Evaluate")}} --></li>
- <li><!-- {{jsapixref("JS::Compile")}} --></li>
- <li><!-- {{jsapixref("JS::CompileOffThread")}} --></li>
- <li><!-- {{jsapixref("JS_ExecuteScript")}} --></li>
- <li><!-- {{jsapixref("JS_DecompileScript")}} --></li>
- <li><!-- {{bug(771705)}} --></li>
+ <li><!-- <!-- {{ LXRSearch("ident", "i", "JS::CompileFunction") }} --> --></li>
+ <li><!-- <!-- {{jsapixref("JS::Evaluate")}} --> --></li>
+ <li><!-- <!-- {{jsapixref("JS::Compile")}} --> --></li>
+ <li><!-- <!-- {{jsapixref("JS::CompileOffThread")}} --> --></li>
+ <li><!-- <!-- {{jsapixref("JS_ExecuteScript")}} --> --></li>
+ <li><!-- <!-- {{jsapixref("JS_DecompileScript")}} --> --></li>
+ <li><!-- <!-- {{bug(771705)}} --> --></li>
 </ul>

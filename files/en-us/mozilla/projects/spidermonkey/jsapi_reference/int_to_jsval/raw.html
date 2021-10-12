@@ -1,13 +1,13 @@
-<div><!-- {{SpiderMonkeySidebar("JSAPI")}} --></div>
+<div><!-- <!-- {{SpiderMonkeySidebar("JSAPI")}} --> --></div>
 
-<p><!-- {{ obsolete_header("jsapi42") }} --></p>
+<p><!-- <!-- {{ obsolete_header("jsapi42") }} --> --></p>
 
 <div class="summary">
 <p>Converts a specified integer value to a JS integer value.</p>
 </div>
 
 <div class="note">
-<p>Please use <!-- {{jsapixref("JS::Int32Value")}} --> instead in SpiderMonkey 45 or later.</p>
+<p>Please use <!-- <!-- {{jsapixref("JS::Int32Value")}} --> --> instead in SpiderMonkey 45 or later.</p>
 </div>
 
 <h2 id="Syntax" name="Syntax">Syntax</h2>
@@ -33,21 +33,21 @@ INT_TO_JSVAL(int32_t i);
 
 <h2 id="Description" name="Description">Description</h2>
 
-<p><code>INT_TO_JSVAL</code> converts a C integer, <code>i</code>, to a <!-- {{jsapixref("jsval")}} -->.</p>
+<p><code>INT_TO_JSVAL</code> converts a C integer, <code>i</code>, to a <!-- <!-- {{jsapixref("jsval")}} --> -->.</p>
 
 <div class="note">
-<p>Before SpiderMonkey 1.8.5, not all integers can be stored in a <code>jsval</code>; use <!-- {{jsapixref("INT_FITS_IN_JSVAL")}} --> to test. Starting in SpiderMonkey 1.8.5, jsval can store a full 32-bit integer, so this check isn't needed any longer for 32-bit integers.") }} --></p>
+<p>Before SpiderMonkey 1.8.5, not all integers can be stored in a <code>jsval</code>; use <!-- <!-- {{jsapixref("INT_FITS_IN_JSVAL")}} --> --> to test. Starting in SpiderMonkey 1.8.5, jsval can store a full 32-bit integer, so this check isn't needed any longer for 32-bit integers.") }} --> --></p>
 
-<p>If <code>i</code> does not fit into a <code>jsval</code> (see <!-- {{jsapixref("INT_FITS_IN_JSVAL")}} -->), the behavior is undefined. To convert any number to a <code>jsval</code>, regardless of whether it fits in an int <code>jsval</code>, use <!-- {{jsapixref("JS_NewNumberValue")}} --> instead.</p>
+<p>If <code>i</code> does not fit into a <code>jsval</code> (see <!-- <!-- {{jsapixref("INT_FITS_IN_JSVAL")}} --> -->), the behavior is undefined. To convert any number to a <code>jsval</code>, regardless of whether it fits in an int <code>jsval</code>, use <!-- <!-- {{jsapixref("JS_NewNumberValue")}} --> --> instead.</p>
 </div>
 
-<p>To convert an integer <code>jsval</code> to a C integer, use <!-- {{jsapixref("JS::ToInt32")}} -->.</p>
+<p>To convert an integer <code>jsval</code> to a C integer, use <!-- <!-- {{jsapixref("JS::ToInt32")}} --> -->.</p>
 
 <h2 id="See_Also" name="See_Also">See Also</h2>
 
 <ul>
- <li><!-- {{ LXRSearch("ident", "i", "INT_TO_JSVAL") }} --></li>
- <li><!-- {{jsapixref("JS::ToInt32")}} --></li>
- <li><!-- {{jsapixref("JS::Int32Value")}} --></li>
- <li><!-- {{bug(1177892)}} --> -- removed</li>
+ <li><!-- <!-- {{ LXRSearch("ident", "i", "INT_TO_JSVAL") }} --> --></li>
+ <li><!-- <!-- {{jsapixref("JS::ToInt32")}} --> --></li>
+ <li><!-- <!-- {{jsapixref("JS::Int32Value")}} --> --></li>
+ <li><!-- <!-- {{bug(1177892)}} --> --> -- removed</li>
 </ul>

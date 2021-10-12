@@ -1,5 +1,5 @@
 <div>
- <!-- {{SpiderMonkeySidebar("JSAPI")}} --></div>
+ <!-- <!-- {{SpiderMonkeySidebar("JSAPI")}} --> --></div>
 <div class="summary">
  <p>Report an error with an application-defined error code.</p>
 </div>
@@ -37,8 +37,8 @@ JS_ReportErrorNumberUCArray(JSContext *cx, JSErrorCallback errorCallback,
   </tr>
   <tr>
    <td><code>cx</code></td>
-   <td><!-- {{jsapixref("JSRuntime", "JSContext *")}} --></td>
-   <td>The context in which to report the error. <!-- {{ Jsapi-requires-request() }} --></td>
+   <td><!-- <!-- {{jsapixref("JSRuntime", "JSContext *")}} --> --></td>
+   <td>The context in which to report the error. <!-- <!-- {{ Jsapi-requires-request() }} --> --></td>
   </tr>
   <tr>
    <td><code>flags</code></td>
@@ -94,17 +94,17 @@ JS_ReportErrorNumberUCArray(JSContext *cx, JSErrorCallback errorCallback,
  </tbody>
 </table>
 <h2 id="Description" name="Description">Description</h2>
-<p>These functions create a <!-- {{jsapixref("JSErrorReport")}} -->, populate it with an error message obtained from the given <code>JSErrorCallback</code>, and either report it to the current <!-- {{jsapixref("JS_SetErrorReporter", "error reporter callback", "", 1)}} --> or create an <code>Error</code> object and set it as the <!-- {{jsapixref("JS_SetPendingException", "pending exception", "", 1)}} -->.</p>
+<p>These functions create a <!-- <!-- {{jsapixref("JSErrorReport")}} --> -->, populate it with an error message obtained from the given <code>JSErrorCallback</code>, and either report it to the current <!-- <!-- {{jsapixref("JS_SetErrorReporter", "error reporter callback", "", 1)}} --> --> or create an <code>Error</code> object and set it as the <!-- <!-- {{jsapixref("JS_SetPendingException", "pending exception", "", 1)}} --> -->.</p>
 <p>First <code>errorCallback(userRef, errorNumber)</code> is called. If <code>errorCallback</code> returns <code>NULL</code>, <em>(??? what happens?)</em>.</p>
 <p>Otherwise, if the <code>JSErrorFormatString</code> returned by the <code>JSErrorCallback</code> has <code>.exnType == JSEXN_NONE</code>, then the error reporter, if any, is called, and no <code>Error</code> object is created. <em>(??? The source code seems to say we ignore the <code>.exnType</code>, actually, but surely I'm just missing something.)</em></p>
 <p>Otherwise, if any JavaScript code is running in <code>cx</code> (for example, if the caller is a <code>JSNative</code> that was called from a script), then an <code>Error</code> object is created and becomes the pending exception. The error reporter is not called yet, because the script still has an opportunity to catch and handle the exception.</p>
 <p>Otherwise, no JavaScript code is running in <code>cx</code>. If the <a href="/en/SpiderMonkey/JSAPI_Reference/JSOPTION_DONT_REPORT_UNCAUGHT" title="en/SpiderMonkey/JSAPI_Referenceo/JSOPTION_DONT_REPORT_UNCAUGHT"><code>JSOPTION_DONT_REPORT_UNCAUGHT</code></a> option is set, <em>(??? what happens?)</em>. Otherwise, <em>(??? what happens?)</em>.</p>
 <h2 id="See_Also">See Also</h2>
 <ul>
- <li><!-- {{ LXRSearch("ident", "i", "JS_ReportErrorNumber") }} --></li>
- <li><!-- {{ LXRSearch("ident", "i", "JS_ReportErrorNumberUC") }} --></li>
- <li><!-- {{ LXRSearch("ident", "i", "JS_ReportErrorFlagsAndNumber") }} --></li>
- <li><!-- {{ LXRSearch("ident", "i", "JS_ReportErrorFlagsAndNumberUC") }} --></li>
- <li><!-- {{ LXRSearch("ident", "i", "JS_ReportErrorNumberUCArray") }} --></li>
- <li><!-- {{bug(801487)}} --></li>
+ <li><!-- <!-- {{ LXRSearch("ident", "i", "JS_ReportErrorNumber") }} --> --></li>
+ <li><!-- <!-- {{ LXRSearch("ident", "i", "JS_ReportErrorNumberUC") }} --> --></li>
+ <li><!-- <!-- {{ LXRSearch("ident", "i", "JS_ReportErrorFlagsAndNumber") }} --> --></li>
+ <li><!-- <!-- {{ LXRSearch("ident", "i", "JS_ReportErrorFlagsAndNumberUC") }} --> --></li>
+ <li><!-- <!-- {{ LXRSearch("ident", "i", "JS_ReportErrorNumberUCArray") }} --> --></li>
+ <li><!-- <!-- {{bug(801487)}} --> --></li>
 </ul>

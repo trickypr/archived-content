@@ -1,7 +1,7 @@
-<div><!-- {{SpiderMonkeySidebar("JSAPI")}} --></div>
+<div><!-- <!-- {{SpiderMonkeySidebar("JSAPI")}} --> --></div>
 
 <div class="summary">
-<p>Create a new <!-- {{jsapixref("JSString")}} --> whose characters are stored in external memory.</p>
+<p>Create a new <!-- <!-- {{jsapixref("JSString")}} --> --> whose characters are stored in external memory.</p>
 </div>
 
 <h2 id="Syntax" name="Syntax">Syntax</h2>
@@ -24,8 +24,8 @@ JS_NewExternalStringWithClosure(JSContext *cx, jschar *chars, size_t length,
   </tr>
   <tr>
    <td><code>cx</code></td>
-   <td><!-- {{jsapixref("JSRuntime", "JSContext *")}} --></td>
-   <td>The context in which to create the new string. <!-- {{ Jsapi-requires-request() }} --></td>
+   <td><!-- <!-- {{jsapixref("JSRuntime", "JSContext *")}} --> --></td>
+   <td>The context in which to create the new string. <!-- <!-- {{ Jsapi-requires-request() }} --> --></td>
   </tr>
   <tr>
    <td><code>chars</code></td>
@@ -39,35 +39,35 @@ JS_NewExternalStringWithClosure(JSContext *cx, jschar *chars, size_t length,
   </tr>
   <tr>
    <td><code>fin</code></td>
-   <td><!-- {{jsapixref("JSStringFinalizer")}} --></td>
-   <td>A string finalizer the JavaScript engine should use (later) to free the string buffer <code>chars</code>. <!-- {{ Jsapi_minversion_inline("17") }} --></td>
+   <td><!-- <!-- {{jsapixref("JSStringFinalizer")}} --> --></td>
+   <td>A string finalizer the JavaScript engine should use (later) to free the string buffer <code>chars</code>. <!-- <!-- {{ Jsapi_minversion_inline("17") }} --> --></td>
   </tr>
   <tr>
    <td><code>type</code></td>
-   <td><!-- {{jsapixref("jsint", "int")}} --></td>
-   <td><em>(<code>JS_NewExternalStringWithClosure</code> only)</em> Indicates which string finalizer callback the JavaScript engine should use (later) to free the string buffer <code>chars</code>. This must be an id number previously returned by a successful call to <!-- {{jsapixref("JS_AddExternalStringFinalizer")}} -->. <!-- {{ obsolete_inline("jsapi13") }} --></td>
+   <td><!-- <!-- {{jsapixref("jsint", "int")}} --> --></td>
+   <td><em>(<code>JS_NewExternalStringWithClosure</code> only)</em> Indicates which string finalizer callback the JavaScript engine should use (later) to free the string buffer <code>chars</code>. This must be an id number previously returned by a successful call to <!-- <!-- {{jsapixref("JS_AddExternalStringFinalizer")}} --> -->. <!-- <!-- {{ obsolete_inline("jsapi13") }} --> --></td>
   </tr>
   <tr>
    <td><code>closure</code></td>
    <td><code>void *</code></td>
-   <td><em>(<code>JS_NewExternalStringWithClosure</code> only)</em> Arbitrary, application-defined data to include in the string object after it's created. If you use this as a pointer, you should clean it up in the external string finalizer that was previously set up using <!-- {{jsapixref("JS_AddExternalStringFinalizer")}} -->. <!-- {{ obsolete_inline("jsapi13") }} --></td>
+   <td><em>(<code>JS_NewExternalStringWithClosure</code> only)</em> Arbitrary, application-defined data to include in the string object after it's created. If you use this as a pointer, you should clean it up in the external string finalizer that was previously set up using <!-- <!-- {{jsapixref("JS_AddExternalStringFinalizer")}} --> -->. <!-- <!-- {{ obsolete_inline("jsapi13") }} --> --></td>
   </tr>
  </tbody>
 </table>
 
 <h2 id="Description" name="Description">Description</h2>
 
-<p><code>JS_NewExternalString</code> and <code>JS_NewExternalStringWithClosure</code> create a new <!-- {{jsapixref("JSString")}} --> whose characters are stored in external memory, i.e., memory allocated by the application, not the JavaScript engine. Since the program allocated the memory, it will need to free it; this happens in an <em>external string finalizer</em> indicated by the <code>type</code> parameter.</p>
+<p><code>JS_NewExternalString</code> and <code>JS_NewExternalStringWithClosure</code> create a new <!-- <!-- {{jsapixref("JSString")}} --> --> whose characters are stored in external memory, i.e., memory allocated by the application, not the JavaScript engine. Since the program allocated the memory, it will need to free it; this happens in an <em>external string finalizer</em> indicated by the <code>type</code> parameter.</p>
 
-<p><code>JS_NewExternalStringWithClosure</code> works similarly, except it accepts an additional parameter, <code>closure</code>, which is saved in the string's internal data structure. It can be retrieved later by calling <!-- {{jsapixref("JS_GetExternalStringClosure")}} -->. This is application-defined data you can associate with the string.</p>
+<p><code>JS_NewExternalStringWithClosure</code> works similarly, except it accepts an additional parameter, <code>closure</code>, which is saved in the string's internal data structure. It can be retrieved later by calling <!-- <!-- {{jsapixref("JS_GetExternalStringClosure")}} --> -->. This is application-defined data you can associate with the string.</p>
 
-<p>To determine if a string was created as an external string, you can call <!-- {{jsapixref("JS_IsExternalString")}} -->.</p>
+<p>To determine if a string was created as an external string, you can call <!-- <!-- {{jsapixref("JS_IsExternalString")}} --> -->.</p>
 
 <h2 id="See_Also" name="See_Also">See Also</h2>
 
 <ul>
- <li><!-- {{ LXRSearch("ident", "i", "JS_NewExternalString") }} --></li>
- <li><!-- {{jsapixref("JS_GetExternalStringClosure")}} --></li>
- <li><!-- {{jsapixref("JS_IsExternalString")}} --></li>
- <li><!-- {{bug(724810)}} --> - replaced <code>type</code> with <code>fin</code> parameter, and remove <code>JS_NewExternalStringWithClosure</code></li>
+ <li><!-- <!-- {{ LXRSearch("ident", "i", "JS_NewExternalString") }} --> --></li>
+ <li><!-- <!-- {{jsapixref("JS_GetExternalStringClosure")}} --> --></li>
+ <li><!-- <!-- {{jsapixref("JS_IsExternalString")}} --> --></li>
+ <li><!-- <!-- {{bug(724810)}} --> --> - replaced <code>type</code> with <code>fin</code> parameter, and remove <code>JS_NewExternalStringWithClosure</code></li>
 </ul>

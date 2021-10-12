@@ -1,4 +1,4 @@
-<div><!-- {{SpiderMonkeySidebar("JSAPI")}} --></div>
+<div><!-- <!-- {{SpiderMonkeySidebar("JSAPI")}} --> --></div>
 
 <div class="summary">
 <p>Attempts to forbid the addition of any new properties to an object.</p>
@@ -26,38 +26,38 @@ JS_PreventExtensions(JSContext *cx, JS::HandleObject obj, bool *succeeded);
   </tr>
   <tr>
    <td><code>cx</code></td>
-   <td><!-- {{jsapixref("JSRuntime", "JSContext *")}} --></td>
-   <td>The context. <!-- {{ Jsapi-requires-request() }} --></td>
+   <td><!-- <!-- {{jsapixref("JSRuntime", "JSContext *")}} --> --></td>
+   <td>The context. <!-- <!-- {{ Jsapi-requires-request() }} --> --></td>
   </tr>
   <tr>
    <td><code>obj</code></td>
-   <td><!-- {{jsapixref("JSObject", "JS::HandleObject")}} --></td>
+   <td><!-- <!-- {{jsapixref("JSObject", "JS::HandleObject")}} --> --></td>
    <td>Object to be made non-extensible.</td>
   </tr>
   <tr>
    <td><code>result</code></td>
-   <td><!-- {{jsapixref("JS::ObjectOpResult", "JS::ObjectOpResult &amp;")}} --></td>
-   <td>(out parameter) Receives the result of the operation. <!-- {{ Jsapi_minversion_inline("45") }} --></td>
+   <td><!-- <!-- {{jsapixref("JS::ObjectOpResult", "JS::ObjectOpResult &amp;")}} --> --></td>
+   <td>(out parameter) Receives the result of the operation. <!-- <!-- {{ Jsapi_minversion_inline("45") }} --> --></td>
   </tr>
   <tr>
    <td><code>succeeded</code></td>
    <td><code>bool *</code></td>
-   <td>Outparam indicating, on JSAPI success, whether the object is now non-extensible. <!-- {{ obsolete_inline("jsapi39") }} --></td>
+   <td>Outparam indicating, on JSAPI success, whether the object is now non-extensible. <!-- <!-- {{ obsolete_inline("jsapi39") }} --> --></td>
   </tr>
  </tbody>
 </table>
 
 <h2 id="Description" name="Description">Description</h2>
 
-<p>All JavaScript objects recognize the concept of <em>extensibility</em>: whether new properties may be added to the object.  In some situations, it may be convenient to prohibit new properties.  In JavaScript this may be accomplished using the <!-- {{jsxref("Object.preventExtensions")}} --> method.  The similar JSAPI method is <code>JS_PreventExtensions</code>.</p>
+<p>All JavaScript objects recognize the concept of <em>extensibility</em>: whether new properties may be added to the object.  In some situations, it may be convenient to prohibit new properties.  In JavaScript this may be accomplished using the <!-- <!-- {{jsxref("Object.preventExtensions")}} --> --> method.  The similar JSAPI method is <code>JS_PreventExtensions</code>.</p>
 
 <div class="note">
 <p>The failure-mode information below is new as of SpiderMonkey 36.  Before then, <code>JS_PreventExtensions</code> did not accept a <code>succeeded</code> argument; in those cases where <code>*succeeded</code> would be set to false, <code>JS_PreventExtensions</code> would throw a <code>TypeError</code> and return false.</p>
 </div>
 
-<p>Unlike <!-- {{jsxref("Object.preventExtensions")}} -->, <code>JS_PreventExtensions</code> doesn't necessarily throw a <!-- {{jsxref("Global_Objects/TypeError", "TypeError")}} --> if the object couldn't be made non-extensible.  There are instead two modes of failure: through internal error, and because the object denied the attempt.</p>
+<p>Unlike <!-- <!-- {{jsxref("Object.preventExtensions")}} --> -->, <code>JS_PreventExtensions</code> doesn't necessarily throw a <!-- <!-- {{jsxref("Global_Objects/TypeError", "TypeError")}} --> --> if the object couldn't be made non-extensible.  There are instead two modes of failure: through internal error, and because the object denied the attempt.</p>
 
-<p>The first case occurs when something went wrong internally, not necessarily because the object chose not to become non-extensible.  For example, if making the object requires an allocation, and that allocation fails, out-of-memory might be reported, and <code>JS_PreventExtensions</code> would return false.  This might also occur if the object is a proxy, and some internal state of the proxy means that no coherent behavior is possible.  For example, if the object is a <!-- {{jsxref("Global_Objects/Proxy/revocable", "revocable proxy", "", 1)}} --> that has been revoked, it makes no sense to say that an attempt to prevent extensions either succeeded or failed: it's a category error.  Thus in this case <code>JS_PreventExtensions</code> will throw an error.</p>
+<p>The first case occurs when something went wrong internally, not necessarily because the object chose not to become non-extensible.  For example, if making the object requires an allocation, and that allocation fails, out-of-memory might be reported, and <code>JS_PreventExtensions</code> would return false.  This might also occur if the object is a proxy, and some internal state of the proxy means that no coherent behavior is possible.  For example, if the object is a <!-- <!-- {{jsxref("Global_Objects/Proxy/revocable", "revocable proxy", "", 1)}} --> --> that has been revoked, it makes no sense to say that an attempt to prevent extensions either succeeded or failed: it's a category error.  Thus in this case <code>JS_PreventExtensions</code> will throw an error.</p>
 
 <pre class="brush: js">var target = {};
 var handler = {};
@@ -87,6 +87,6 @@ var obj = new Proxy(target, handler);
 <h2 id="See_Also" name="See_Also">See Also</h2>
 
 <ul>
- <li><!-- {{ LXRSearch("ident", "i", "JS_PreventExtensions") }} --></li>
- <li><!-- {{bug(1113369)}} --> -- added <code>result</code> parameter</li>
+ <li><!-- <!-- {{ LXRSearch("ident", "i", "JS_PreventExtensions") }} --> --></li>
+ <li><!-- <!-- {{bug(1113369)}} --> --> -- added <code>result</code> parameter</li>
 </ul>

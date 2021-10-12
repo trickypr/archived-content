@@ -1,6 +1,6 @@
 <div>
- <!-- {{SpiderMonkeySidebar("JSAPI")}} --></div>
-<p><!-- {{ obsolete_header("jsapi33") }} --></p>
+ <!-- <!-- {{SpiderMonkeySidebar("JSAPI")}} --> --></div>
+<p><!-- <!-- {{ obsolete_header("jsapi33") }} --> --></p>
 <div class="summary">
  <p>Retrieve a pointer to the 16-bit values that make up a given string.</p>
 </div>
@@ -20,20 +20,20 @@ JS_GetStringCharsZ(JSContext *cx, JSString *str); // Added in SpiderMonkey 1.8.2
   </tr>
   <tr>
    <td><code>cx</code></td>
-   <td><!-- {{jsapixref("JSRuntime", "JSContext *")}} --></td>
+   <td><!-- <!-- {{jsapixref("JSRuntime", "JSContext *")}} --> --></td>
    <td>(in<em> <code>JS_GetStringCharsZ</code> </em>only) A context.</td>
   </tr>
   <tr>
    <td><code>str</code></td>
-   <td><!-- {{jsapixref("JSString", "JSString *")}} --></td>
+   <td><!-- <!-- {{jsapixref("JSString", "JSString *")}} --> --></td>
    <td>The string to obtain characters from.</td>
   </tr>
  </tbody>
 </table>
 <h2 id="Description" name="Description">Description</h2>
-<p><strong><code>JS_GetStringChars</code></strong> <!-- {{ obsolete_inline("js1.8.5") }} --> returns a pointer to the first element of an array of <!-- {{jsapixref("jschar")}} -->s. Warnings:</p>
+<p><strong><code>JS_GetStringChars</code></strong> <!-- <!-- {{ obsolete_inline("js1.8.5") }} --> --> returns a pointer to the first element of an array of <!-- <!-- {{jsapixref("jschar")}} --> -->s. Warnings:</p>
 <ul>
- <li>The array is not necessarily null-terminated. To get the length of the string, use <!-- {{jsapixref("JS_GetStringLength")}} -->.</li>
+ <li>The array is not necessarily null-terminated. To get the length of the string, use <!-- <!-- {{jsapixref("JS_GetStringLength")}} --> -->.</li>
  <li>The program must not modify the array. If it does, the behavior is undefined.</li>
  <li>The content of a JS string is not guaranteed to be valid UTF-16. It may contain surrogate code units that aren't properly paired. It may also contain zeroes.</li>
 </ul>
@@ -41,6 +41,6 @@ JS_GetStringCharsZ(JSContext *cx, JSString *str); // Added in SpiderMonkey 1.8.2
 <p><strong><code>JS_GetStringCharsZ</code></strong> is the same except that it always returns either a null-terminated string or <code>NULL</code>, indicating out-of-memory.</p>
 <h2 id="See_Also" name="See_Also">See Also</h2>
 <ul>
- <li><!-- {{bug(609440)}} --> - removed <code>JS_GetStringChars</code></li>
- <li><!-- {{bug(1037869)}} --> - removed <code>JS_GetStringCharsZ</code></li>
+ <li><!-- <!-- {{bug(609440)}} --> --> - removed <code>JS_GetStringChars</code></li>
+ <li><!-- <!-- {{bug(1037869)}} --> --> - removed <code>JS_GetStringCharsZ</code></li>
 </ul>

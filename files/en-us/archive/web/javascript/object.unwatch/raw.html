@@ -1,10 +1,10 @@
-<div><!-- {{JSRef}} --></div>
+<div><!-- <!-- {{JSRef}} --> --></div>
 
 <div class="warning">
-<p><strong>Deprecation warning:</strong> Do not use <code>unwatch()</code> and <!-- {{jsxref("Object.prototype.watch", "watch()")}} -->! These two methods were implemented only in Firefox prior to version 58, they're <strong>deprecated and removed in Firefox 58+</strong>. In addition, using watchpoints has a serious negative impact on performance, which is especially true when used on global objects, such as <code>window</code>. You can usually use <a href="/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#Defining_getters_and_setters">setters and getters</a> or <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy">proxies</a> instead.</p>
+<p><strong>Deprecation warning:</strong> Do not use <code>unwatch()</code> and <!-- <!-- {{jsxref("Object.prototype.watch", "watch()")}} --> -->! These two methods were implemented only in Firefox prior to version 58, they're <strong>deprecated and removed in Firefox 58+</strong>. In addition, using watchpoints has a serious negative impact on performance, which is especially true when used on global objects, such as <code>window</code>. You can usually use <a href="/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#Defining_getters_and_setters">setters and getters</a> or <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy">proxies</a> instead.</p>
 </div>
 
-<p>The <code><strong>unwatch()</strong></code> method removes a watchpoint set with the <!-- {{jsxref("Object.prototype.watch", "watch()")}} --> method.</p>
+<p>The <code><strong>unwatch()</strong></code> method removes a watchpoint set with the <!-- <!-- {{jsxref("Object.prototype.watch", "watch()")}} --> --> method.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -19,21 +19,21 @@
 
 <h3 id="Return_value">Return value</h3>
 
-<p><!-- {{jsxref("undefined")}} -->.</p>
+<p><!-- <!-- {{jsxref("undefined")}} --> -->.</p>
 
 <h2 id="Description">Description</h2>
 
 <p>The JavaScript debugger has functionality similar to that provided by this method, as well as other debugging options. For information on the debugger, see <a href="/en-US/docs/Venkman">Venkman</a>.</p>
 
-<p>By default, this method is inherited by every object descended from <!-- {{jsxref("Object")}} -->.</p>
+<p>By default, this method is inherited by every object descended from <!-- <!-- {{jsxref("Object")}} --> -->.</p>
 
 <div class="note">
-<p><strong>Note:</strong> The reason for <code>unwatch()</code> to take the property name <em>prop</em> as its only parameter is due to the "single handler allowing" behavior of the <!-- {{jsxref("Object.watch", "watch()")}} --> method.</p>
+<p><strong>Note:</strong> The reason for <code>unwatch()</code> to take the property name <em>prop</em> as its only parameter is due to the "single handler allowing" behavior of the <!-- <!-- {{jsxref("Object.watch", "watch()")}} --> --> method.</p>
 </div>
 
 <h2 id="Examples">Examples</h2>
 
-<p>See <!-- {{jsxref("Object.watch", "watch()")}} -->.</p>
+<p>See <!-- <!-- {{jsxref("Object.watch", "watch()")}} --> -->.</p>
 
 <h2 id="Specifications">Specifications</h2>
 
@@ -46,11 +46,11 @@
 <h2 id="Compatibility_notes">Compatibility notes</h2>
 
 <ul>
- <li>Calling <code>unwatch()</code> on the <a href="/en-US/docs/Web/API/Document" title="The Document interface represents any web page loaded in the browser and serves as an entry point into the web page's content, which is the DOM tree."><code>Document</code></a> object throws a <!-- {{jsxref("TypeError")}} --> since Firefox 23 (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=903332">bug 903332</a>). This regression has been fixed with Firefox 27.</li>
+ <li>Calling <code>unwatch()</code> on the <a href="/en-US/docs/Web/API/Document" title="The Document interface represents any web page loaded in the browser and serves as an entry point into the web page's content, which is the DOM tree."><code>Document</code></a> object throws a <!-- <!-- {{jsxref("TypeError")}} --> --> since Firefox 23 (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=903332">bug 903332</a>). This regression has been fixed with Firefox 27.</li>
 </ul>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><!-- {{jsxref("Object.watch()")}} --></li>
+ <li><!-- <!-- {{jsxref("Object.watch()")}} --> --></li>
 </ul>

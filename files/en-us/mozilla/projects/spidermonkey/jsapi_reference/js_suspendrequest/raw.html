@@ -1,4 +1,4 @@
-<p><!-- {{ obsolete_header("jsapi18") }} --></p>
+<p><!-- <!-- {{ obsolete_header("jsapi18") }} --> --></p>
 
 <div class="warning">
 <p>Removed from SpiderMonkey at or prior to version 45.  Since then, a <code>JSRuntime</code> is tied to the thread that created it; it may not be accessed by any other thread.</p>
@@ -43,5 +43,5 @@ void <strong>JS_ResumeRequest</strong>(<a href="/en/SpiderMonkey/JSAPI_Reference
 
 <p><span class="inlineIndicator standardNote">JSAPI 1.7 and earlier</span> <code>JS_SuspendRequest</code> and <code>JS_ResumeRequest</code> are available only in <code><a href="/en/SpiderMonkey/JSAPI_Reference/JS_THREADSAFE" title="en/JS_THREADSAFE">JS_THREADSAFE</a></code> builds. In SpiderMonkey 1.8 and later, these functions will be present, but will do nothing, in non-<code>JS_THREADSAFE</code> builds.</p>
 
-<p><!-- {{ LXRSearch("ident", "i", "JS_SuspendRequest") }} --><br>
- <!-- {{ LXRSearch("ident", "i", "JS_ResumeRequest") }} --></p>
+<p><!-- <!-- {{ LXRSearch("ident", "i", "JS_SuspendRequest") }} --> --><br>
+ <!-- <!-- {{ LXRSearch("ident", "i", "JS_ResumeRequest") }} --> --></p>

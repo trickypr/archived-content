@@ -1,6 +1,6 @@
-<div><!-- {{SpiderMonkeySidebar("JSAPI")}} --></div>
+<div><!-- <!-- {{SpiderMonkeySidebar("JSAPI")}} --> --></div>
 
-<div><!-- {{ obsolete_header("jsapi52") }} --></div>
+<div><!-- <!-- {{ obsolete_header("jsapi52") }} --> --></div>
 
 <div class="summary">
 <p>Cycles through the JS contexts associated with a particular JSRuntime.</p>
@@ -21,12 +21,12 @@ JS_ContextIterator(JSRuntime *rt, JSContext **iterp);
   </tr>
   <tr>
    <td><code>rt</code></td>
-   <td><!-- {{jsapixref("JSRuntime", "JSRuntime *")}} --></td>
+   <td><!-- <!-- {{jsapixref("JSRuntime", "JSRuntime *")}} --> --></td>
    <td>The runtime to walk.</td>
   </tr>
   <tr>
    <td><code>iterp</code></td>
-   <td><!-- {{jsapixref("JSRuntime", "JSContext *")}} --></td>
+   <td><!-- <!-- {{jsapixref("JSRuntime", "JSContext *")}} --> --></td>
    <td>In-out parameter. On input, <code>*iterp</code> must be <code>NULL</code> or point to a context in <code>rt</code>. On success, the value of <code>*iterp</code> is modified so that repeated calls cycle through all the contexts in <code>rt</code>.</td>
   </tr>
  </tbody>
@@ -56,5 +56,5 @@ while ((acx = JS_ContextIterator(rt, &amp;iterp)) != NULL) {
 <h2 id="See_Also" name="See_Also">See Also</h2>
 
 <ul>
- <li><!-- {{ LXRSearch("ident", "i", "JS_ContextIterator") }} --></li>
+ <li><!-- <!-- {{ LXRSearch("ident", "i", "JS_ContextIterator") }} --> --></li>
 </ul>

@@ -1,6 +1,6 @@
-<p><!-- {{AddonSidebar}} --></p>
+<p><!-- <!-- {{AddonSidebar}} --> --></p>
 
-<p><!-- {{ warning("This content is for older versions of Thunderbird. Much of it may no longer be relevant. See developer.thunderbird.net for newer information.") }} --></p>
+<p><!-- <!-- {{ warning("This content is for older versions of Thunderbird. Much of it may no longer be relevant. See developer.thunderbird.net for newer information.") }} --> --></p>
 
 <h4 id="Overview">Overview</h4>
 
@@ -47,11 +47,11 @@ for each (let account in fixIterator(MailServices.accounts.accounts, Ci.nsIMsgAc
 }
 </pre>
 
-<p>First, we use <code>fixIterator()</code> here to get all accounts in your profile. Each account is a <!-- {{ Interface("nsIMsgAccount") }} -->.</p>
+<p>First, we use <code>fixIterator()</code> here to get all accounts in your profile. Each account is a <!-- <!-- {{ Interface("nsIMsgAccount") }} --> -->.</p>
 
-<p>To get the the server name, we access the incomingServer property of our account, which is a <!-- {{ Interface("nsIMsgIncomingServer") }} --> object. From this, we get its name and type.</p>
+<p>To get the the server name, we access the incomingServer property of our account, which is a <!-- <!-- {{ Interface("nsIMsgIncomingServer") }} --> --> object. From this, we get its name and type.</p>
 
-<p>Because an account can have multiple identities of type <!-- {{ Interface("nsIMsgIdentity") }} --> and therefore multiple associated email addresses, with use <code>fixIterator()</code> again to go over all identities and get every email address.</p>
+<p>Because an account can have multiple identities of type <!-- <!-- {{ Interface("nsIMsgIdentity") }} --> --> and therefore multiple associated email addresses, with use <code>fixIterator()</code> again to go over all identities and get every email address.</p>
 
 <h3 id="Demo_2_-_Find_the_Inbox">Demo 2 - Find the Inbox</h3>
 
@@ -94,7 +94,7 @@ print("  ", folder);
 }
 </pre>
 
-<p class="deki-transform">To get a collection of messages in the inbox, we use <code>inbox.msgDatabase.EnumerateMessages()</code>. Each message is a <!-- {{ Interface("nsIMsgDBHdr") }} -->. We iterate over the first ten of them and extract author, subject and date for each one.</p>
+<p class="deki-transform">To get a collection of messages in the inbox, we use <code>inbox.msgDatabase.EnumerateMessages()</code>. Each message is a <!-- <!-- {{ Interface("nsIMsgDBHdr") }} --> -->. We iterate over the first ten of them and extract author, subject and date for each one.</p>
 
 <h3 id="Demo_3-_Search_messages_by_subject">Demo 3- Search messages by subject</h3>
 

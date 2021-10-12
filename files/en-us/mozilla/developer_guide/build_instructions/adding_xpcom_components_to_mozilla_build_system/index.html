@@ -181,7 +181,7 @@ tags:
 <pre class="eval">   /* 2d96b3d0-c051-11d1-a827-0040959a28c9 */
    #define NS_WINDOW_CID \
    { 0x2d96b3d0, 0xc051, 0x11d1, \
-       {0xa8, 0x27, 0x00, 0x40, 0x95, 0x9a, 0x28, 0xc9}} -->
+       {0xa8, 0x27, 0x00, 0x40, 0x95, 0x9a, 0x28, 0xc9}} --> -->
 </pre>
 
 <p><strong>The contract ID:</strong> (the <code>@example.com/...</code> part, not to be confused with the "CID" = component ID) is the string that people can pass to <code>GetService</code> or <code>CreateInstance</code> to get an instance of your class. Sometimes these are defined alongside the CID in the header file in the build directory, or there is a special public header file that defines it. Both of these methods are fine. Other times they are just hard-coded into the structure or are defined in the IDL file, but these are not recommended.</p>

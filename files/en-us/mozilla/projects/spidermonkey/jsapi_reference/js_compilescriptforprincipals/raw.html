@@ -1,6 +1,6 @@
-<div><!-- {{SpiderMonkeySidebar("JSAPI")}} --></div>
+<div><!-- <!-- {{SpiderMonkeySidebar("JSAPI")}} --> --></div>
 
-<p><!-- {{ obsolete_header("jsapi28") }} --></p>
+<p><!-- <!-- {{ obsolete_header("jsapi28") }} --> --></p>
 
 <div class="summary">
 <p>Compile a security-enabled script for execution.</p>
@@ -38,22 +38,22 @@ JS_CompileUCScriptForPrincipalsVersion(JSContext *cx,
   </tr>
   <tr>
    <td><code>cx</code></td>
-   <td><!-- {{jsapixref("JSRuntime", "JSContext *")}} --></td>
-   <td>The context in which to compile the script. <!-- {{ Jsapi-requires-request() }} --></td>
+   <td><!-- <!-- {{jsapixref("JSRuntime", "JSContext *")}} --> --></td>
+   <td>The context in which to compile the script. <!-- <!-- {{ Jsapi-requires-request() }} --> --></td>
   </tr>
   <tr>
    <td><code>obj</code></td>
-   <td><!-- {{jsapixref("JSObject", "JSObject *")}} --></td>
+   <td><!-- <!-- {{jsapixref("JSObject", "JSObject *")}} --> --></td>
    <td>Object with which the script is associated.</td>
   </tr>
   <tr>
    <td><code>principals</code></td>
-   <td><!-- {{jsapixref("JSPrincipals", "JSPrincipals *")}} --></td>
+   <td><!-- <!-- {{jsapixref("JSPrincipals", "JSPrincipals *")}} --> --></td>
    <td>Pointer to the structure holding the security information for this script.</td>
   </tr>
   <tr>
    <td><code>src</code></td>
-   <td><code>const char *</code> <em>or</em> <code><!-- {{jsapixref("jschar", "const jschar *")}} --></code></td>
+   <td><code>const char *</code> <em>or</em> <code><!-- <!-- {{jsapixref("jschar", "const jschar *")}} --> --></code></td>
    <td>String containing the script to compile.</td>
   </tr>
   <tr>
@@ -73,7 +73,7 @@ JS_CompileUCScriptForPrincipalsVersion(JSContext *cx,
   </tr>
   <tr>
    <td><code>version</code></td>
-   <td><!-- {{jsapixref("JSVersion")}} --></td>
+   <td><!-- <!-- {{jsapixref("JSVersion")}} --> --></td>
    <td>JavaScript Version for the script.</td>
   </tr>
  </tbody>
@@ -100,12 +100,12 @@ JS_CompileUCScriptForPrincipalsVersion(JSContext *cx,
 <h2 id="See_Also" name="See_Also">See Also</h2>
 
 <ul>
- <li><!-- {{ LXRSearch("ident", "i", "JS_CompileScriptForPrincipals") }} --></li>
- <li><!-- {{ LXRSearch("ident", "i", "JS_CompileUCScriptForPrincipals") }} --></li>
- <li><!-- {{jsapixref("JS::Compile")}} --></li>
- <li><!-- {{jsapixref("JS_DecompileScript")}} --></li>
- <li><!-- {{jsapixref("JS::Evaluate")}} --></li>
- <li><!-- {{jsapixref("JS_ExecuteScript")}} --></li>
- <li><!-- {{bug(938907)}} --></li>
- <li><!-- {{bug(805080)}} --></li>
+ <li><!-- <!-- {{ LXRSearch("ident", "i", "JS_CompileScriptForPrincipals") }} --> --></li>
+ <li><!-- <!-- {{ LXRSearch("ident", "i", "JS_CompileUCScriptForPrincipals") }} --> --></li>
+ <li><!-- <!-- {{jsapixref("JS::Compile")}} --> --></li>
+ <li><!-- <!-- {{jsapixref("JS_DecompileScript")}} --> --></li>
+ <li><!-- <!-- {{jsapixref("JS::Evaluate")}} --> --></li>
+ <li><!-- <!-- {{jsapixref("JS_ExecuteScript")}} --> --></li>
+ <li><!-- <!-- {{bug(938907)}} --> --></li>
+ <li><!-- <!-- {{bug(805080)}} --> --></li>
 </ul>

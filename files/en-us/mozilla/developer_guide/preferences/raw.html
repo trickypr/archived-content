@@ -34,20 +34,20 @@ foo.bar.baz_range.max
 
 <h2 id="How_to_add_new_preference">How to add new preference</h2>
 
-<p>If a preference is used by core platform/Gecko code, a default value should normally be added to <!-- {{Source("modules/libpref/init/all.js")}} -->. This default is shared all Mozilla products such as Firefox, Thunderbird, Firefox for Android and Firefox OS. If you need to set different initial value for specific product, you can use <!-- {{Source("browser/app/profile/firefox.js")}} -->, <a href="http://mxr.mozilla.org/comm-central/source/mailnews/mailnews.js">mailnews/mailnews.js</a>, <!-- {{Source("mobile/android/app/mobile.js")}} --> and/or <!-- {{Source("b2g/app/b2g.js")}} -->.</p>
+<p>If a preference is used by core platform/Gecko code, a default value should normally be added to <!-- <!-- {{Source("modules/libpref/init/all.js")}} --> -->. This default is shared all Mozilla products such as Firefox, Thunderbird, Firefox for Android and Firefox OS. If you need to set different initial value for specific product, you can use <!-- <!-- {{Source("browser/app/profile/firefox.js")}} --> -->, <a href="http://mxr.mozilla.org/comm-central/source/mailnews/mailnews.js">mailnews/mailnews.js</a>, <!-- <!-- {{Source("mobile/android/app/mobile.js")}} --> --> and/or <!-- <!-- {{Source("b2g/app/b2g.js")}} --> -->.</p>
 
 <p>If a preference is used only by application-specific code, the default should live in the relevant app-specific default file.</p>
 
 <h3 id="Guidelines_of_getting_preference_in_C_code">Guidelines of getting preference in C++ code</h3>
 
-<p>When you're hacking internal code of libxul, you can use API defined in <!-- {{Source("modules/libpref/public/Preferences.h")}} -->.</p>
+<p>When you're hacking internal code of libxul, you can use API defined in <!-- <!-- {{Source("modules/libpref/public/Preferences.h")}} --> -->.</p>
 
 <p>If you need to get a preference value at very hot path, you shouldn't use <code>Preferences::Get*()</code>. Instead of that there are two kinds of API sets.</p>
 
 <p>One is <code>Preferences::Add*VarCache()</code>. This API modifies registered static variable to the latest preference value automatically. Therefore, this is very useful if you don't need to reinitialize something when the pref is changed.</p>
 
-<p>The other is <code>Preferences::RegisterCallback()</code>. You can register a call back method for preferences which you want to observe the changes. If you use this, you need to call <code>Preferences::UnregisterCallback()</code> when you don't need it anymore. If you need a whole time while our process is running, you should call it at shutting down XPCOM. Most modules have an observer of XPCOM shutdown and calls <code>Shutdown()</code> method of a lot of classes. See <code>nsLayoutStatics::Shutdown()</code> (<!-- {{Source("layout/build/nsLayoutStatics.cpp")}} -->) for the example.</p>
+<p>The other is <code>Preferences::RegisterCallback()</code>. You can register a call back method for preferences which you want to observe the changes. If you use this, you need to call <code>Preferences::UnregisterCallback()</code> when you don't need it anymore. If you need a whole time while our process is running, you should call it at shutting down XPCOM. Most modules have an observer of XPCOM shutdown and calls <code>Shutdown()</code> method of a lot of classes. See <code>nsLayoutStatics::Shutdown()</code> (<!-- <!-- {{Source("layout/build/nsLayoutStatics.cpp")}} --> -->) for the example.</p>
 
 <h2 id="Float_values">Float values</h2>
 
-<p>The preferences system doesn't support float types natively. One workaround is to use integer preference whose value is multiplied by 10, 100 or 1000. You should explain the value meaning in <!-- {{Source("modules/libpref/src/init/all.js")}} --> if you define its initial value. The other is to use string preference and convert to float using <code>parseFloat</code> (JavaScript) or <code>atof</code> (C++).</p>
+<p>The preferences system doesn't support float types natively. One workaround is to use integer preference whose value is multiplied by 10, 100 or 1000. You should explain the value meaning in <!-- <!-- {{Source("modules/libpref/src/init/all.js")}} --> --> if you define its initial value. The other is to use string preference and convert to float using <code>parseFloat</code> (JavaScript) or <code>atof</code> (C++).</p>

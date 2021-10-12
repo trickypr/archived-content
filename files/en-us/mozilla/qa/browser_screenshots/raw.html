@@ -1,5 +1,5 @@
 <p><strong>Web UI:</strong> <a href="https://screenshots.mattn.ca/compare/">screenshots.mattn.ca/compare/</a><br>
- <strong>Capture source: </strong><!-- {{ source("browser/tools/mozscreenshots/") }} --> (requires full `./mach build` if you change files under extension/)<br>
+ <strong>Capture source: </strong><!-- <!-- {{ source("browser/tools/mozscreenshots/") }} --> --> (requires full `./mach build` if you change files under extension/)<br>
  <strong>Chat channel:</strong> <a href="https://matrix.to/#/!TbPWpVdPIiwHphiwux:mozilla.org?via=mozilla.org">#mozscreenshots</a><br>
  <strong>Alert mailing list:</strong> <a href="https://www.mozilla.org/en-US/about/forums/#dev-ui-alerts">mozilla.dev.ui-alerts</a><br>
  <strong>Code and issues for web, fetch and compare:</strong> <a href="https://github.com/mnoorenberghe/mozscreenshots">github.com/mnoorenberghe/mozscreenshots</a><br>
@@ -51,7 +51,7 @@
  Note that the job is currently Tier 3 on TreeHerder so you will need to toggle it on to see the jobs there with the symbol: <strong>M(ss)</strong>. The capture job won't run for try syntax of "-u all" or "-u mochitests" in order to save resources by not capturing images unless specifically requested. When using legacy try syntax, you must also specify the test platforms in square brackets after the job name.</p>
 
 <div class="note">
-<p><!-- {{ bug(1416538) }} --> causes the branding for artifact builds to differ from non-artifact builds and cause false-positives in comparisons. Forcing a non-artifact try push with <code>--no-artifact</code> will avoid the issue.</p>
+<p><!-- <!-- {{ bug(1416538) }} --> --> causes the branding for artifact builds to differ from non-artifact builds and cause false-positives in comparisons. Forcing a non-artifact try push with <code>--no-artifact</code> will avoid the issue.</p>
 </div>
 
 <h3 id="Other_trees">Other trees</h3>
@@ -123,4 +123,4 @@ compare_screenshots mozilla-central/08138045c38c/ try/5f6ca9194dd9/
 
 <h3 id="How_do_I_capture_screenshots_of_something_not_supported_by_mozscreenshots">How do I capture screenshots of something not supported by mozscreenshots?</h3>
 
-<p>Simply add a JSM at <!-- {{ source("browser/tools/mozscreenshots/mozscreenshots/extension/configurations/") }} --> and then select it with the base name of the JSM.</p>
+<p>Simply add a JSM at <!-- <!-- {{ source("browser/tools/mozscreenshots/mozscreenshots/extension/configurations/") }} --> --> and then select it with the base name of the JSM.</p>

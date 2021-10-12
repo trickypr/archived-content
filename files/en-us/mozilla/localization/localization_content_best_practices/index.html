@@ -62,15 +62,15 @@ neweventbtn.tooltip = Add a new event
 
 <h4 id="DTD_files">DTD files</h4>
 
-<pre class="eval language-html notranslate">&lt;!-- LOCALIZATION NOTE (entity name): <!-- {{privacy}} --> will be replaced at run-time by an
+<pre class="eval language-html notranslate">&lt;!-- LOCALIZATION NOTE (entity name): <!-- <!-- {{privacy}} --> --> will be replaced at run-time by an
      active link. the string &apos;privacy-link&apos; will be used as text for this link. --&gt;
 </pre>
 
 <h4 id="Properties_files">Properties files</h4>
 
-<pre class="eval language-html notranslate"># LOCALIZATION NOTE(privacy-text): <!-- {{privacy}} --> will be replaced at run-time by an
+<pre class="eval language-html notranslate"># LOCALIZATION NOTE(privacy-text): <!-- <!-- {{privacy}} --> --> will be replaced at run-time by an
 # active link. the string &apos;privacy-link&apos; will be used as text for this link.
-privacy-text = By proceeding you accept the <!-- {{privacy}} -->.
+privacy-text = By proceeding you accept the <!-- <!-- {{privacy}} --> -->.
 privacy-link = Privacy Terms
 </pre>
 
@@ -203,13 +203,13 @@ tos-link = Terms of Services
  <br>
  A much more flexible solution would be:</p>
 
-<pre class="notranslate"># LOCALIZATION NOTE(tos-text): <!-- {{link}} --> will be replaced at run-time
+<pre class="notranslate"># LOCALIZATION NOTE(tos-text): <!-- <!-- {{link}} --> --> will be replaced at run-time
 # by an active link. String with ID &apos;tos-link&apos; will be used as text
 # for this link.
-tos-text = By proceeding you accept the <!-- {{link}} -->
+tos-text = By proceeding you accept the <!-- <!-- {{link}} --> -->
 tos-link = Terms of Services</pre>
 
-<p>And then replace <code><!-- {{link}} --></code> at run-time with the second string. Note also the localization comments and make sure it is clear to the localizer which placeholder string will appear in lieu of the placeholder as this may affect translation and/or inflection. For example, <code>By proceeding you accept the <!-- {{Terms of Service}} --></code> will result in the Gaelic translation <code>Ma leanas tu air adhart, bidh tu a&apos; gabhail ri <!-- {{teirmichean na seirbheise}} --></code>. But in another grammatical context, <code><!-- {{Terms of Service}} --></code> may require a different inflection, for example <code><!-- {{<span style="background-color: #add8e6;">th</span>eirmichean na seirbheise}} --></code>. So if the localizer is left unsure as to which string goes into which placeholder, this may lead to bad translations.</p>
+<p>And then replace <code><!-- <!-- {{link}} --> --></code> at run-time with the second string. Note also the localization comments and make sure it is clear to the localizer which placeholder string will appear in lieu of the placeholder as this may affect translation and/or inflection. For example, <code>By proceeding you accept the <!-- <!-- {{Terms of Service}} --> --></code> will result in the Gaelic translation <code>Ma leanas tu air adhart, bidh tu a&apos; gabhail ri <!-- <!-- {{teirmichean na seirbheise}} --> --></code>. But in another grammatical context, <code><!-- <!-- {{Terms of Service}} --> --></code> may require a different inflection, for example <code><!-- <!-- {{<span style="background-color: #add8e6;">th</span>eirmichean na seirbheise}} --> --></code>. So if the localizer is left unsure as to which string goes into which placeholder, this may lead to bad translations.</p>
 
 <h3 id="Dont_reuse_strings_in_different_contexts">Don&apos;t reuse strings in different contexts</h3>
 
@@ -225,13 +225,13 @@ tos-link = Terms of Services</pre>
 
 <p>In this case, you shouldn&apos;t put the URL inside the localization string, unless you need it to be localizable. If you change the URL, you&apos;re going to need a new string ID; the same goes for the anchor&apos;s attributes, or the paragraph markup. Instead, you should use the following strings</p>
 
-<pre class="notranslate"># LOCALIZATION NOTE(privacy-text): <!-- {{link}} --> will be replaced at run-time
+<pre class="notranslate"># LOCALIZATION NOTE(privacy-text): <!-- <!-- {{link}} --> --> will be replaced at run-time
 # by an active link. String with ID &apos;privacy-link&apos; will be used as text
 # for this link.
-privacy-text = By proceeding you accept the <!-- {{link}} -->.
+privacy-text = By proceeding you accept the <!-- <!-- {{link}} --> -->.
 privacy-link = Privacy Terms</pre>
 
-<p>And then replace <code><code>{</code>{link}} --></code> at run-time with the link.</p>
+<p>And then replace <code><code>{</code>{link}} --> --></code> at run-time with the link.</p>
 
 <h3 id="Dont_hardcode_characters">Don&apos;t hardcode characters</h3>
 

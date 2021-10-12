@@ -1,4 +1,4 @@
-<div><!-- {{SpiderMonkeySidebar("General")}} --></div>
+<div><!-- <!-- {{SpiderMonkeySidebar("General")}} --> --></div>
 
 <div class="summary">
 <p>The <strong>JavaScript shell</strong> (<code>js</code>) is a command-line program included in the <a href="/en-US/docs/Mozilla/Projects/SpiderMonkey" title="en/SpiderMonkey">SpiderMonkey</a> source distribution. It is the JavaScript equivalent of Python's interactive prompt, the Lisp read-eval-print loop, or Ruby's <code>irb</code>. This article explains how to use the shell to experiment with JavaScript code and run JavaScript programs.</p>
@@ -9,7 +9,7 @@
 <p>For a list of other JavaScript shells, see <a class="internal" href="/en-US/docs/Web/JavaScript/Shells" title="En/JavaScript shells">JavaScript shells</a>.</p>
 
 <div class="note">
-<p>Note: Starting with SpiderMonkey 44 <!-- {{geckoRelease(44)}} -->, the standard, Web-compatible JavaScript version is used by default (and not JS1.7+ anymore). The <code>version()</code> shell builtin is still there for testing legacy features.</p>
+<p>Note: Starting with SpiderMonkey 44 <!-- <!-- {{geckoRelease(44)}} --> -->, the standard, Web-compatible JavaScript version is used by default (and not JS1.7+ anymore). The <code>version()</code> shell builtin is still there for testing legacy features.</p>
 </div>
 
 <h2 id="Using_the_JavaScript_shell" name="Using_the_JavaScript_shell">Running the JavaScript shell</h2>
@@ -81,7 +81,7 @@
 <p>To make the JavaScript shell more useful, there are a number of built-in functions provided that you can use either from JavaScript programs or in interactive mode.</p>
 
 <div class="warning">
-<p><strong>Note</strong>: This list is incomplete and overlaps with <a href="/en-US/docs/SpiderMonkey/Shell_global_objects">Shell global objects</a>. See <!-- {{Source("js/src/shell/js.cpp")}} --> (around <code>shell_functions</code>) for more.</p>
+<p><strong>Note</strong>: This list is incomplete and overlaps with <a href="/en-US/docs/SpiderMonkey/Shell_global_objects">Shell global objects</a>. See <!-- <!-- {{Source("js/src/shell/js.cpp")}} --> --> (around <code>shell_functions</code>) for more.</p>
 </div>
 
 <h4 id="build.28.29" name="build.28.29"><code>build()</code></h4>
@@ -96,11 +96,11 @@
 
 <h4 id="countHeap" name="countHeap"><code>countHeap(<em>[start[, kind]]</em>)</code></h4>
 
-<p><!-- {{ jsapi_minversion_inline("1.8") }} --> Count the number of live GC things in the heap, or things reachable from <var>start</var> when it is given and is not null. <var>kind</var> is either <code>'all'</code> (default) to count all things or one of <code>'object'</code>, <code>'double'</code>, <code>'string'</code>, <code>'function'</code>, <code>'qname'</code>, <code>'namespace'</code>, <code>'xml'</code> to count only things of that kind.</p>
+<p><!-- <!-- {{ jsapi_minversion_inline("1.8") }} --> --> Count the number of live GC things in the heap, or things reachable from <var>start</var> when it is given and is not null. <var>kind</var> is either <code>'all'</code> (default) to count all things or one of <code>'object'</code>, <code>'double'</code>, <code>'string'</code>, <code>'function'</code>, <code>'qname'</code>, <code>'namespace'</code>, <code>'xml'</code> to count only things of that kind.</p>
 
 <h4 id="evalcx.28string.5B.2C_object.5D.29" name="evalcx.28string.5B.2C_object.5D.29"><code>dumpHeap(<em>[fileName[, start[, toFind[, maxDepth[, toIgnore]]]]]</em>)</code></h4>
 
-<p><!-- {{ jsapi_minversion_inline("1.8") }} --> Dump the graph of all existing objects (or a specific interesting subgraph) to a file. For more information, see the C/C++ version of this function, <code>JS_DumpHeap</code>.</p>
+<p><!-- <!-- {{ jsapi_minversion_inline("1.8") }} --> --> Dump the graph of all existing objects (or a specific interesting subgraph) to a file. For more information, see the C/C++ version of this function, <code>JS_DumpHeap</code>.</p>
 
 <h4 id="evalcx.28string.5B.2C_object.5D.29" name="evalcx.28string.5B.2C_object.5D.29"><code>evalcx(<em>string[, object]</em>)</code></h4>
 
@@ -118,7 +118,7 @@
 
 <h4 id="gcparam.28.29" name="gcparam.28.29"><code>gcparam(<em>name[, value]</em>)</code></h4>
 
-<p><!-- {{ jsapi_minversion_inline("1.8") }} --> Read or configure garbage collector parameters.</p>
+<p><!-- <!-- {{ jsapi_minversion_inline("1.8") }} --> --> Read or configure garbage collector parameters.</p>
 
 <p>The <em>name</em> must be one of the parameter keys (such as <code>'maxBytes'</code>, <code>'maxMallocBytes'</code> or '<code>gcNumber</code>') defined by <code>FOR_EACH_GC_PARAM</code> in <a href="https://searchfox.org/mozilla-central/source/js/src/builtin/TestingFunctions.cpp#464">https://searchfox.org/mozilla-central/source/js/src/builtin/TestingFunctions.cpp#464</a>.</p>
 
@@ -130,7 +130,7 @@
 
 <h4 id="gczeal.28.29" name="gczeal.28.29"><code>gczeal(level)</code></h4>
 
-<p><!-- {{ jsapi_minversion_inline("1.8") }} --> <code>DEBUG</code> only. Set the level of GC zeal, a debugging feature. This can be 0 for normal periodic garbage collection, 1 for very frequent GC, or 2 for <em>extremely</em> frequent GC. Anything other than 0 will make JavaScript run extremely slow but may help reveal or reproduce GC-related bugs. For more information, see the C/C++ version of this function, <a class="internal" href="/en-US/docs/Mozilla/Projects/SpiderMonkey/JSAPI_reference/JS_SetGCZeal" title="en/SpiderMonkey/JSAPI Reference/JS SetGCZeal"><code>JS_SetGCZeal</code></a>.</p>
+<p><!-- <!-- {{ jsapi_minversion_inline("1.8") }} --> --> <code>DEBUG</code> only. Set the level of GC zeal, a debugging feature. This can be 0 for normal periodic garbage collection, 1 for very frequent GC, or 2 for <em>extremely</em> frequent GC. Anything other than 0 will make JavaScript run extremely slow but may help reveal or reproduce GC-related bugs. For more information, see the C/C++ version of this function, <a class="internal" href="/en-US/docs/Mozilla/Projects/SpiderMonkey/JSAPI_reference/JS_SetGCZeal" title="en/SpiderMonkey/JSAPI Reference/JS SetGCZeal"><code>JS_SetGCZeal</code></a>.</p>
 
 <h4 id="getpda.28object.29" name="getpda.28object.29"><code>getpda(<em>object</em>)</code></h4>
 
@@ -223,9 +223,9 @@
 
 <h4 id="sleep.28dt.29" name="sleep.28dt.29"><code>sleep(dt)</code></h4>
 
-<p><!-- {{ jsapi_minversion_inline("1.8") }} --> Only in <code><a href="/en-US/docs/Mozilla/Projects/SpiderMonkey/JSAPI_reference/JS_THREADSAFE" title="en/SpiderMonkey/JSAPI_Reference/JS_THREADSAFE">JS_THREADSAFE</a></code> builds. Sleep for <em>dt</em> seconds. Fractions of a second are supported. Returns <code>true</code> on success, <code>false</code> if the sleep was interrupted.</p>
+<p><!-- <!-- {{ jsapi_minversion_inline("1.8") }} --> --> Only in <code><a href="/en-US/docs/Mozilla/Projects/SpiderMonkey/JSAPI_reference/JS_THREADSAFE" title="en/SpiderMonkey/JSAPI_Reference/JS_THREADSAFE">JS_THREADSAFE</a></code> builds. Sleep for <em>dt</em> seconds. Fractions of a second are supported. Returns <code>true</code> on success, <code>false</code> if the sleep was interrupted.</p>
 
-<h4 id="stackQuota" name="stackQuota"><code>stackQuota(<em>[number]</em>)</code> <!-- {{obsolete_inline}} --></h4>
+<h4 id="stackQuota" name="stackQuota"><code>stackQuota(<em>[number]</em>)</code> <!-- <!-- {{obsolete_inline}} --> --></h4>
 
 <p>Get or set the script stack quota.</p>
 

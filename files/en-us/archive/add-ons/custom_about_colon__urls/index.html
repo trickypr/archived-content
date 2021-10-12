@@ -34,7 +34,7 @@ const ABOUTPAGE_URI = &apos;data:text/html,hi this is the page that is shown whe
 
 
 class AboutPage {
-  static get classID() { return Components.ID(`{${ABOUTPAGE_ID}} -->`); }
+  static get classID() { return Components.ID(`{${ABOUTPAGE_ID}} --> -->`); }
   static get classDescription() { return ABOUTPAGE_DESCRIPTION; }
   static get contractID() { return `@mozilla.org/network/protocol/about;1?what=${ABOUTPAGE_WORD}`; }
   static get QueryInterface() { return XPCOMUtils.generateQI([Ci.nsIAboutModule]); }

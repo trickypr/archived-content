@@ -5,7 +5,7 @@
 <p>Mozilla locates and reads the root <code>chrome.manifest</code> file for extensions and themes.</p>
 
 <div class="note">
-<p><strong>Note:</strong> With <!-- {{Gecko("1.9.2")}} --> and older, Mozilla reads <code>chrome/*.manifest</code> files from applications. Starting with <!-- {{Gecko("2.0")}} -->, the root <code>chrome.manifest</code> is the only manifest used; you can add <a href="/en/Chrome_Registration#manifest" title="en/Chrome Registration#manifest"><code>manifest</code></a> commands to that file to load secondary manifests.</p>
+<p><strong>Note:</strong> With <!-- <!-- {{Gecko("1.9.2")}} --> --> and older, Mozilla reads <code>chrome/*.manifest</code> files from applications. Starting with <!-- <!-- {{Gecko("2.0")}} --> -->, the root <code>chrome.manifest</code> is the only manifest used; you can add <a href="/en/Chrome_Registration#manifest" title="en/Chrome Registration#manifest"><code>manifest</code></a> commands to that file to load secondary manifests.</p>
 </div>
 
 <h2 id="Chrome_Providers" name="Chrome_Providers">Chrome providers</h2>
@@ -16,11 +16,11 @@
 
 <dl>
  <dt>Content</dt>
- <dd>The main source file for a window description comes from the content provider, and it can be any file type viewable from within Mozilla. It will typically be a XUL file, since XUL is designed for describing the contents of windows and dialogs. The JavaScript files that define the user interface are also contained within the content packages, as well as most <!-- {{Glossary("XBL")}} --> binding files.</dd>
+ <dd>The main source file for a window description comes from the content provider, and it can be any file type viewable from within Mozilla. It will typically be a XUL file, since XUL is designed for describing the contents of windows and dialogs. The JavaScript files that define the user interface are also contained within the content packages, as well as most <!-- <!-- {{Glossary("XBL")}} --> --> binding files.</dd>
  <dt>Locale</dt>
- <dd>Localizable applications keep all their localized information in locale providers. This allows translators to plug in a different chrome package to translate an application without altering the rest of the source code. The two main types of localizable files are <!-- {{Glossary("DTD")}} --> files and Java-style properties files.</dd>
+ <dd>Localizable applications keep all their localized information in locale providers. This allows translators to plug in a different chrome package to translate an application without altering the rest of the source code. The two main types of localizable files are <!-- <!-- {{Glossary("DTD")}} --> --> files and Java-style properties files.</dd>
  <dt>Skin</dt>
- <dd>A skin provider is responsible for providing a complete set of files that describe the visual appearance of the chrome. Typically a skin provider will provide <!-- {{Glossary("CSS")}} --> files and images.</dd>
+ <dd>A skin provider is responsible for providing a complete set of files that describe the visual appearance of the chrome. Typically a skin provider will provide <!-- <!-- {{Glossary("CSS")}} --> --> files and images.</dd>
 </dl>
 
 <div class="note">
@@ -45,7 +45,7 @@ skin packagename skinname path/to/files
 <p><strong>Note:</strong> The characters @ # ; : ? / are not allowed in the packagename.</p>
 </div>
 
-<p></p><div class="warning">Firefox 2, Thunderbird 2, and SeaMonkey 1.1 will not find the chrome when <code>packagename</code> is mixed case. If the above example had a <code>packagename</code> of <strong>C</strong>amel<strong>C</strong>ase<strong>P</strong>ackage, you would get an error message similar to "No chrome registered for chrome://<strong>c</strong>amel<strong>c</strong>ase<strong>p</strong>ackage/path/to/files". Firefox 3, Thunderbird 3, and SeaMonkey 2 support mixed case. Bug resolved in Mozilla 1.9; see <!-- {{bug(132183)}} -->.</div><p></p>
+<p></p><div class="warning">Firefox 2, Thunderbird 2, and SeaMonkey 1.1 will not find the chrome when <code>packagename</code> is mixed case. If the above example had a <code>packagename</code> of <strong>C</strong>amel<strong>C</strong>ase<strong>P</strong>ackage, you would get an error message similar to "No chrome registered for chrome://<strong>c</strong>amel<strong>c</strong>ase<strong>p</strong>ackage/path/to/files". Firefox 3, Thunderbird 3, and SeaMonkey 2 support mixed case. Bug resolved in Mozilla 1.9; see <!-- <!-- {{bug(132183)}} --> -->.</div><p></p>
 
 <h2 id="Manifest_Instructions" name="Manifest_Instructions">Manifest instructions</h2>
 
@@ -58,7 +58,7 @@ skin packagename skinname path/to/files
 
 <h3 id="manifest" name="manifest">manifest</h3>
 
-<p><!-- {{ gecko_minversion_inline("2.0b4") }} --></p>
+<p><!-- <!-- {{ gecko_minversion_inline("2.0b4") }} --> --></p>
 
 <pre>manifest <em>subdirectory/foo.manifest [flags]</em>
 </pre>
@@ -67,7 +67,7 @@ skin packagename skinname path/to/files
 
 <h3 id="binary-component">binary-component</h3>
 
-<p><!-- {{ gecko_minversion_inline("2.0b2") }} --></p>
+<p><!-- <!-- {{ gecko_minversion_inline("2.0b2") }} --> --></p>
 
 <pre>binary-component <em>components/mycomponent.dll [flags]</em>
 </pre>
@@ -76,7 +76,7 @@ skin packagename skinname path/to/files
 
 <h3 id="interfaces">interfaces</h3>
 
-<p><!-- {{ gecko_minversion_inline("2.0b2") }} --></p>
+<p><!-- <!-- {{ gecko_minversion_inline("2.0b2") }} --> --></p>
 
 <pre>interfaces <em>component/mycomponent.xpt [flags]</em>
 </pre>
@@ -85,7 +85,7 @@ skin packagename skinname path/to/files
 
 <h3 id="component">component</h3>
 
-<p><!-- {{ gecko_minversion_inline("2.0b2") }} --></p>
+<p><!-- <!-- {{ gecko_minversion_inline("2.0b2") }} --> --></p>
 
 <pre>component <em>{00000000-0000-0000-0000-000000000000} components/mycomponent.js [flags]</em>
 </pre>
@@ -94,7 +94,7 @@ skin packagename skinname path/to/files
 
 <h3 id="contract">contract</h3>
 
-<p><!-- {{ gecko_minversion_inline("2.0b2") }} --></p>
+<p><!-- <!-- {{ gecko_minversion_inline("2.0b2") }} --> --></p>
 
 <pre>contract <em>@foobar/mycontract;1 <em>{00000000-0000-0000-0000-000000000000} [flags]</em></em>
 </pre>
@@ -103,7 +103,7 @@ skin packagename skinname path/to/files
 
 <h3 id="category">category</h3>
 
-<p><!-- {{ gecko_minversion_inline("2.0b2") }} --></p>
+<p><!-- <!-- {{ gecko_minversion_inline("2.0b2") }} --> --></p>
 
 <pre>category <em>category entry-name value [flags]</em>
 </pre>
@@ -156,12 +156,12 @@ skin packagename skinname path/to/files
 <p>Note: overrides are not recursive (so overriding <a class="external" rel="freelink">chrome://foo/content/bar/</a> with <a class="external" rel="freelink">file:///home/john/blah/</a> will not usually do what you want or expect it to do). Also, the path inside overridden files is relative to the overridden path, not the original one (this can be annoying and/or useful in CSS files, for example).</p>
 
 <div class="note">
-<p><strong>Note:</strong> There was a bug in <!-- {{Gecko("1.8.1.5")}} --> (Firefox 2.0.0.5) and earlier where you could not use a relative URL for the <em>new-resolved-URI</em> parameter. You needed to provide an absolute URL. See <!-- {{ Bug(323455) }} -->.</p>
+<p><strong>Note:</strong> There was a bug in <!-- <!-- {{Gecko("1.8.1.5")}} --> --> (Firefox 2.0.0.5) and earlier where you could not use a relative URL for the <em>new-resolved-URI</em> parameter. You needed to provide an absolute URL. See <!-- <!-- {{ Bug(323455) }} --> -->.</p>
 </div>
 
 <h3 id="resource" name="resource">resource</h3>
 
-<p><!-- {{ Fx_minversion_inline("3") }} --></p>
+<p><!-- <!-- {{ Fx_minversion_inline("3") }} --> --></p>
 
 <p>Aliases can be created using the <code>resource</code> instruction:</p>
 
@@ -208,12 +208,12 @@ appversion&gt;=<em>version</em>
 <p>indicates that the instruction should only be applied if the extension is installed into the application version identified. Multiple <code>appversion</code> flags may be included on a single line, in which case the line is applied if any of the flags match. The version string must conform to the <a href="/en/Toolkit_version_format" title="en/Toolkit_version_format">Toolkit version format</a>.</p>
 
 <div class="note">
-<p><strong>Note:</strong> Versions of Gecko before <!-- {{Gecko("1.8.0.13")}} --> and <!-- {{Gecko("1.8.1.5")}} --> contained a bug where if you use the comparisons &lt;, &gt; or =, the version string had be two or more characters long. If not, you would get a message in the error console that the <code>appversion</code> flag was not recognized. See <!-- {{ Bug(380398) }} -->.</p>
+<p><strong>Note:</strong> Versions of Gecko before <!-- <!-- {{Gecko("1.8.0.13")}} --> --> and <!-- <!-- {{Gecko("1.8.1.5")}} --> --> contained a bug where if you use the comparisons &lt;, &gt; or =, the version string had be two or more characters long. If not, you would get a message in the error console that the <code>appversion</code> flag was not recognized. See <!-- <!-- {{ Bug(380398) }} --> -->.</p>
 </div>
 
 <h3 id="platformversion" name="platformversion">platformversion</h3>
 
-<p><!-- {{ gecko_minversion_inline("8.0") }} --> When supporting more then one application, it is often more convenient for an extension to specify which Gecko version it is compatible with. This is particularly true for binary components. If there are chrome registration lines which only apply to a particular Gecko version, the flag</p>
+<p><!-- <!-- {{ gecko_minversion_inline("8.0") }} --> --> When supporting more then one application, it is often more convenient for an extension to specify which Gecko version it is compatible with. This is particularly true for binary components. If there are chrome registration lines which only apply to a particular Gecko version, the flag</p>
 
 <pre class="eval" style="white-space: pre-wrap;">platformversion=<em>version</em>
 platformversion&lt;<em>version</em>
@@ -226,7 +226,7 @@ platformversion&gt;=<em>version</em>
 
 <h3 id="contentaccessible" name="contentaccessible">contentaccessible</h3>
 
-<p><!-- {{ Fx_minversion_inline("3") }} --> Chrome resources can no longer be referenced from within &lt;img&gt;, &lt;script&gt;, or other elements contained in, or added to, content that was loaded from an untrusted source. This restriction applies to both elements defined by the untrusted source and to elements added by trusted extensions. If such references need to be explicitly allowed, set the <code>contentaccessible</code> flag to <code>yes</code> to obtain the behavior found in older versions of Firefox. <span class="comment">See <!-- {{ bug("436989") }} -->.</span></p>
+<p><!-- <!-- {{ Fx_minversion_inline("3") }} --> --> Chrome resources can no longer be referenced from within &lt;img&gt;, &lt;script&gt;, or other elements contained in, or added to, content that was loaded from an untrusted source. This restriction applies to both elements defined by the untrusted source and to elements added by trusted extensions. If such references need to be explicitly allowed, set the <code>contentaccessible</code> flag to <code>yes</code> to obtain the behavior found in older versions of Firefox. <span class="comment">See <!-- <!-- {{ bug("436989") }} --> -->.</span></p>
 
 <p>The <code>contentaccessible</code> flag applies only to content packages: it is not recognized for locale or skin registration. However, the matching locale and skin packages will also be exposed to content.</p>
 
@@ -238,7 +238,7 @@ content packagename chrome/path/ contentaccessible=yes
 
 <h3 id="os" name="os">os</h3>
 
-<p><!-- {{ Fx_minversion_inline("3") }} --> Extensions (or themes) may offer different features depending on the operating system on which Firefox is running. The value is compared to the value of <a href="/en/OS_TARGET" title="en/OS_TARGET">OS_TARGET</a> for the platform.</p>
+<p><!-- <!-- {{ Fx_minversion_inline("3") }} --> --> Extensions (or themes) may offer different features depending on the operating system on which Firefox is running. The value is compared to the value of <a href="/en/OS_TARGET" title="en/OS_TARGET">OS_TARGET</a> for the platform.</p>
 
 <pre class="eval" style="white-space: pre-wrap;">os=WINNT
 os=Darwin
@@ -248,14 +248,14 @@ os=Darwin
 
 <h3 id="osversion" name="osversion">osversion</h3>
 
-<p><!-- {{ Fx_minversion_inline("3") }} --> An extension or theme may need to operate differently depending on which version of an operating system is running. For example, a theme may wish to adopt a different look on Mac OS X 10.5 than 10.4:</p>
+<p><!-- <!-- {{ Fx_minversion_inline("3") }} --> --> An extension or theme may need to operate differently depending on which version of an operating system is running. For example, a theme may wish to adopt a different look on Mac OS X 10.5 than 10.4:</p>
 
 <pre class="eval" style="white-space: pre-wrap;">osversion&gt;=10.5
 </pre>
 
 <h3 id="platform_.28Platform-specific_packages.29" name="platform_.28Platform-specific_packages.29">abi</h3>
 
-<p><!-- {{ Fx_minversion_inline("4") }} --> If a component is only compatible with a particular ABI, it can specify which ABI/OS by using this directive. The value is taken from the <a href="/en/XPCOM_Interface_Reference/nsIXULRuntime" title="https://developer.mozilla.org/en/nsIXULRuntime">nsIXULRuntime</a> OS and XPCOMABI values (concatenated with an underscore). For example:</p>
+<p><!-- <!-- {{ Fx_minversion_inline("4") }} --> --> If a component is only compatible with a particular ABI, it can specify which ABI/OS by using this directive. The value is taken from the <a href="/en/XPCOM_Interface_Reference/nsIXULRuntime" title="https://developer.mozilla.org/en/nsIXULRuntime">nsIXULRuntime</a> OS and XPCOMABI values (concatenated with an underscore). For example:</p>
 
 <pre>binary-component component/myLib.dll abi=WINNT_<code>x86-MSVC
 </code>binary-component component/myLib.so abi=Linux_<code>x86-gcc3 </code>
@@ -281,7 +281,7 @@ os=Darwin
 <p>In electrolysis registrations can be set to only apply in either the main process or any content processes. The "process" flag selects between these two. This can allow you to register different components for the same contract ID or ensure a component can only be loaded in the main process.</p>
 
 <div class="note">
-<p><strong>Note:</strong> Extensions can't currently (<!-- {{ Bug(1131065) }} -->) register components to load in the content process using the manifest file so this flag is largely useless to extension developers.</p>
+<p><strong>Note:</strong> Extensions can't currently (<!-- <!-- {{ Bug(1131065) }} --> -->) register components to load in the content process using the manifest file so this flag is largely useless to extension developers.</p>
 </div>
 
 <pre>component {09543782-22b1-4a0b-ba07-9134365776ee} maincomponent.js process=main
@@ -295,7 +295,7 @@ component {98309951-ac89-4642-afea-7b2b6216bcef} contentcomponent.js process=con
 <p>This flag is enabled by default since Firefox 1.5. Disabling it manually was possible by specifying <code>xpcnativewrappers=no</code> until Firefox 4.</p>
 
 <div class="note">
-<p><strong>Note:</strong> Support for this flag has been removed in <!-- {{Gecko("2.0")}} -->. You can no longer disable <code>XPCNativeWrapper</code>s. To update your add-on to work without this flag:</p>
+<p><strong>Note:</strong> Support for this flag has been removed in <!-- <!-- {{Gecko("2.0")}} --> -->. You can no longer disable <code>XPCNativeWrapper</code>s. To update your add-on to work without this flag:</p>
 
 <ul>
  <li>If your add-on depends upon XBL bindings attached to content objects (that is, it needs to be able to call functions or get and set properties created by the XBL binding), you'll need to use the object's <a href="/en/wrappedJSObject" title="en/wrappedJSObject"><code>wrappedJSObject</code></a> property to obtain a wrapped object.</li>
@@ -357,8 +357,8 @@ content       inspector               jar:inspector.jar!/content/inspector/
 
 <p>Before the plaintext manifests were introduced (which happened in Firefox 1.5, Toolkit 1.8), RDF manifests named "contents.rdf" were used to register chrome. This format is deprecated; however, SeaMonkey versions before version 2 do not support the plaintext manifest format yet, so <code>contents.rdf</code> manifests are required for extensions that wish to maintain backwards compatibility with Firefox 1.0 or the suite.</p>
 
-<p><!-- {{ gecko_minversion_note("1.9.2", "The <code>contents.rdf</code> manifest format is no longer supported at all starting with Gecko 1.9.2; add-ons already installed using this format will continue to work but can no longer be installed. Be sure to remove your add-on and reinstall it to ensure that it installs correctly after updating it to use a plaintext manifest.") }} --></p>
+<p><!-- <!-- {{ gecko_minversion_note("1.9.2", "The <code>contents.rdf</code> manifest format is no longer supported at all starting with Gecko 1.9.2; add-ons already installed using this format will continue to work but can no longer be installed. Be sure to remove your add-on and reinstall it to ensure that it installs correctly after updating it to use a plaintext manifest.") }} --> --></p>
 
 <h2 id="Official_References_for_Toolkit_API" name="Official_References_for_Toolkit_API">Official references for <a href="/en/Toolkit_API" title="en/Toolkit_API">Toolkit API</a></h2>
 
-<p><!-- {{ page("en-US/docs/Toolkit_API/Official_References") }} --></p>
+<p><!-- <!-- {{ page("en-US/docs/Toolkit_API/Official_References") }} --> --></p>

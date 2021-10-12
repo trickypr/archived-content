@@ -1,6 +1,6 @@
-<div><!-- {{SpiderMonkeySidebar("JSAPI")}} --></div>
+<div><!-- <!-- {{SpiderMonkeySidebar("JSAPI")}} --> --></div>
 
-<p><!-- {{ jsapi_minversion_header("17") }} --></p>
+<p><!-- <!-- {{ jsapi_minversion_header("17") }} --> --></p>
 
 <div class="summary">
 <p>Helper class encapsulating access to the callee, <code>this</code> value, arguments, and argument count for a function call.</p>
@@ -26,7 +26,7 @@ JS::CallArgsFromVp(unsigned argc, JS::Value *vp);
   </tr>
   <tr>
    <td><code>vp</code></td>
-   <td><!-- {{jsapixref("JS::Value", "JS::Value *")}} --></td>
+   <td><!-- <!-- {{jsapixref("JS::Value", "JS::Value *")}} --> --></td>
    <td>A pointer to the argument value array. (3nd argument of JSNative)</td>
   </tr>
  </tbody>
@@ -98,7 +98,7 @@ JS::CallArgsFromVp(unsigned argc, JS::Value *vp);
   </tr>
   <tr>
    <td><code>JS::Value computeThis(JSContext *cx) const</code></td>
-   <td>Returns the <code>this</code> value if <code>this</code> is an object, otherwise calls <!-- {{jsapixref("JS_ComputeThis")}} --> and returns it.</td>
+   <td>Returns the <code>this</code> value if <code>this</code> is an object, otherwise calls <!-- <!-- {{jsapixref("JS_ComputeThis")}} --> --> and returns it.</td>
   </tr>
   <tr>
    <td><code>bool isConstructing() const</code></td>
@@ -152,8 +152,8 @@ FunctionReturningArgcTimesArg0(JSContext *cx, unsigned argc, JS::Value *vp)
 <h2 id="See_Also" name="See_Also">See Also</h2>
 
 <ul>
- <li><!-- {{ LXRSearch("ident", "i", "JS::CallArgs") }} --></li>
- <li><!-- {{ LXRSearch("ident", "i", "JS::CallArgsFromVp") }} --></li>
- <li><!-- {{jsapixref("JS::Call")}} --></li>
- <li><!-- {{bug(770586)}} --></li>
+ <li><!-- <!-- {{ LXRSearch("ident", "i", "JS::CallArgs") }} --> --></li>
+ <li><!-- <!-- {{ LXRSearch("ident", "i", "JS::CallArgsFromVp") }} --> --></li>
+ <li><!-- <!-- {{jsapixref("JS::Call")}} --> --></li>
+ <li><!-- <!-- {{bug(770586)}} --> --></li>
 </ul>

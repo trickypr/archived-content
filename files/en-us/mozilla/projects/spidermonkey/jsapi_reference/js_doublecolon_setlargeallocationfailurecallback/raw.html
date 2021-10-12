@@ -1,6 +1,6 @@
-<div><!-- {{SpiderMonkeySidebar("JSAPI")}} --></div>
+<div><!-- <!-- {{SpiderMonkeySidebar("JSAPI")}} --> --></div>
 
-<p><!-- {{ jsapi_minversion_header("31") }} --></p>
+<p><!-- <!-- {{ jsapi_minversion_header("31") }} --> --></p>
 
 <div class="summary">
 <p>Specify a new callback function for large memory allocation failure.</p>
@@ -23,7 +23,7 @@ JS::SetLargeAllocationFailureCallback(JSRuntime *rt,
   </tr>
   <tr>
    <td><code>rt</code></td>
-   <td><!-- {{jsapixref("JSRuntime", "JSRuntime *")}} --></td>
+   <td><!-- <!-- {{jsapixref("JSRuntime", "JSRuntime *")}} --> --></td>
    <td>The <code>JSRuntime</code> for which to set the GC callback.</td>
   </tr>
   <tr>
@@ -34,7 +34,7 @@ JS::SetLargeAllocationFailureCallback(JSRuntime *rt,
   <tr>
    <td><code>data</code></td>
    <td><code>void *</code></td>
-   <td><code>data</code> parameter which will be passed to <code>JS::LargeAllocationFailureCallback</code>. <!-- {{ Jsapi_minversion_inline("38") }} --></td>
+   <td><code>data</code> parameter which will be passed to <code>JS::LargeAllocationFailureCallback</code>. <!-- <!-- {{ Jsapi_minversion_inline("38") }} --> --></td>
   </tr>
  </tbody>
 </table>
@@ -55,7 +55,7 @@ JS::SetLargeAllocationFailureCallback(JSRuntime *rt,
   <tr>
    <td><code>data</code></td>
    <td><code>void *</code></td>
-   <td><code>data</code> parameter passed to <code>JS::SetLargeAllocationFailureCallback</code>. <!-- {{ Jsapi_minversion_inline("38") }} --></td>
+   <td><code>data</code> parameter passed to <code>JS::SetLargeAllocationFailureCallback</code>. <!-- <!-- {{ Jsapi_minversion_inline("38") }} --> --></td>
   </tr>
  </tbody>
 </table>
@@ -69,8 +69,8 @@ JS::SetLargeAllocationFailureCallback(JSRuntime *rt,
 <h2 id="See_Also" name="See_Also">See Also</h2>
 
 <ul>
- <li><!-- {{ LXRSearch("ident", "i", "JS::SetLargeAllocationFailureCallback") }} --></li>
- <li><!-- {{ LXRSearch("ident", "i", "JS::LargeAllocationFailureCallback") }} --></li>
- <li><!-- {{bug(936236)}} --></li>
- <li><!-- {{bug(987995)}} --> - added <code>data</code> parameter</li>
+ <li><!-- <!-- {{ LXRSearch("ident", "i", "JS::SetLargeAllocationFailureCallback") }} --> --></li>
+ <li><!-- <!-- {{ LXRSearch("ident", "i", "JS::LargeAllocationFailureCallback") }} --> --></li>
+ <li><!-- <!-- {{bug(936236)}} --> --></li>
+ <li><!-- <!-- {{bug(987995)}} --> --> - added <code>data</code> parameter</li>
 </ul>

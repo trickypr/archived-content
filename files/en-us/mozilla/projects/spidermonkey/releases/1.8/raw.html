@@ -1,4 +1,4 @@
-<div><!-- {{SpiderMonkeySidebar("Releases")}} --></div>
+<div><!-- <!-- {{SpiderMonkeySidebar("Releases")}} --> --></div>
 
 <div class="note" style="color: black;">
 <p>The Mozilla JavaScript team is pleased to announce the release of <strong>SpiderMonkey 1.8 Release Candidate 1</strong>. You can download full source code here: <a class="http://ftp.mozilla.org/pub/mozilla.org/js/js-1.8.0-rc1.tar.gz" href="external">http://ftp.mozilla.org/pub/mozilla.org/js/js-1.8.0-rc1.tar.gz</a> (MD5 checksum: <code>eaad8815dcc66a717ddb87e9724d964e</code>).</p>
@@ -15,13 +15,13 @@
 <p>SpiderMonkey 1.8 has one known significant regression from 1.7.</p>
 
 <ul>
- <li>In <code>JS_THREADSAFE</code> builds, <strong>some objects are not safe to be shared among threads</strong>. This includes iterators and generators (<!-- {{ bug(349263) }} -->) and arrays (<!-- {{ bug(417501) }} -->). In short, applications that share objects among threads in such a way that two threads could access an array, iterator, or generator object at the same time should not use SpiderMonkey 1.8.</li>
+ <li>In <code>JS_THREADSAFE</code> builds, <strong>some objects are not safe to be shared among threads</strong>. This includes iterators and generators (<!-- <!-- {{ bug(349263) }} --> -->) and arrays (<!-- <!-- {{ bug(417501) }} --> -->). In short, applications that share objects among threads in such a way that two threads could access an array, iterator, or generator object at the same time should not use SpiderMonkey 1.8.</li>
 </ul>
 
 <p>There is a minor known bug in the new JavaScript 1.8 functionality.  </p>
 
 <ul>
- <li>When JavaScript 1.8 support is enabled, the parser accepts some incorrect programs by inserting a semicolon where it should instead throw a <code>SyntaxError</code> (<!-- {{ bug(384758) }} -->). This bug will be fixed in 1.8.1.</li>
+ <li>When JavaScript 1.8 support is enabled, the parser accepts some incorrect programs by inserting a semicolon where it should instead throw a <code>SyntaxError</code> (<!-- <!-- {{ bug(384758) }} --> -->). This bug will be fixed in 1.8.1.</li>
 </ul>
 
 <h2 id="Migrating_to_SpiderMonkey_1.8">Migrating to SpiderMonkey 1.8</h2>
@@ -29,10 +29,10 @@
 <p>SpiderMonkey 1.8 is not binary-compatible with previous releases. It is source-compatible with SpiderMonkey 1.7 though, which means you can probably just recompile and relink your application. A handful of changes are not backwards-compatible:</p>
 
 <ul>
- <li>The result of assigning to a property with a setter has changed (<!-- {{ bug(312354) }} -->). In JavaScript 1.7 and earlier, <code>x = [].length = "7";</code> would store the number <code>7</code> in <code>x</code>. Now this statement stores the string <code>"7"</code> in <code>x</code>. The new behavior conforms to the ECMAScript standard, <span class="pl-s1"><span class="pl-s">ECMA 262-3 §</span></span>11.13.1.</li>
+ <li>The result of assigning to a property with a setter has changed (<!-- <!-- {{ bug(312354) }} --> -->). In JavaScript 1.7 and earlier, <code>x = [].length = "7";</code> would store the number <code>7</code> in <code>x</code>. Now this statement stores the string <code>"7"</code> in <code>x</code>. The new behavior conforms to the ECMAScript standard, <span class="pl-s1"><span class="pl-s">ECMA 262-3 §</span></span>11.13.1.</li>
  <li>In certain cases, the JavaScript engine no longer calls <a class="internal" href="/en/SpiderMonkey/JSAPI_Reference/JSClass.resolve" title="En/SpiderMonkey/JSAPI Reference/JSClass.resolve"><code>JSClass.resolve</code></a> callbacks repeatedly, as it did in previous versions. Specifically, if a property lookup first calls a resolve hook which <em>does not</em> define the property, then finds the property on a prototype, that result can be cached. Future lookups for the same property on the same sort of object may bypass the resolve hook.</li>
  <li><a class="internal" href="/en/SpiderMonkey/JSAPI_Reference/JS_NewDouble" title="En/SpiderMonkey/JSAPI Reference/JS NewDouble"><code>JS_NewDouble</code></a> is now deprecated. Use <a class="internal" href="/en/SpiderMonkey/JSAPI_Reference/JS_NewDoubleValue" title="En/SpiderMonkey/JSAPI Reference/JS NewDoubleValue"><code>JS_NewDoubleValue</code></a>.</li>
- <li>The security APIs <a class="internal" href="/en/SpiderMonkey/JSAPI_Reference/JS_SetCheckObjectAccessCallback" title="en/SpiderMonkey/JSAPI Reference/JS SetCheckObjectAccessCallback"><code>JS_SetCheckObjectAccessCallback</code></a>, <code><a class="internal" href="/en/SpiderMonkey/JSAPI_Reference/JS_SetPrincipalsTranscoder" title="en/SpiderMonkey/JSAPI Reference/JS SetPrincipalsTranscoder">JS_SetPrincipalsTranscoder</a></code>, and <code><a class="internal" href="/en/SpiderMonkey/JSAPI_Reference/JS_SetObjectPrincipalsFinder" title="En/SpiderMonkey/JSAPI Reference/JS SetObjectPrincipalsFinder">JS_SetObjectPrincipalsFinder</a></code> are still present but are deprecated in this release. In SpiderMonkey 1.8.1 they will be removed and replaced with a new set of APIs (<a class="internal" href="/En/SpiderMonkey/JSAPI_Reference/JS_GetSecurityCallbacks" title="en/SpiderMonkey/JSAPI Reference/JS GetSecurityCallbacks"><code>JS_GetSecurityCallbacks</code></a> and friends, <!-- {{ bug(451729) }} -->).</li>
+ <li>The security APIs <a class="internal" href="/en/SpiderMonkey/JSAPI_Reference/JS_SetCheckObjectAccessCallback" title="en/SpiderMonkey/JSAPI Reference/JS SetCheckObjectAccessCallback"><code>JS_SetCheckObjectAccessCallback</code></a>, <code><a class="internal" href="/en/SpiderMonkey/JSAPI_Reference/JS_SetPrincipalsTranscoder" title="en/SpiderMonkey/JSAPI Reference/JS SetPrincipalsTranscoder">JS_SetPrincipalsTranscoder</a></code>, and <code><a class="internal" href="/en/SpiderMonkey/JSAPI_Reference/JS_SetObjectPrincipalsFinder" title="En/SpiderMonkey/JSAPI Reference/JS SetObjectPrincipalsFinder">JS_SetObjectPrincipalsFinder</a></code> are still present but are deprecated in this release. In SpiderMonkey 1.8.1 they will be removed and replaced with a new set of APIs (<a class="internal" href="/En/SpiderMonkey/JSAPI_Reference/JS_GetSecurityCallbacks" title="en/SpiderMonkey/JSAPI Reference/JS GetSecurityCallbacks"><code>JS_GetSecurityCallbacks</code></a> and friends, <!-- <!-- {{ bug(451729) }} --> -->).</li>
  <li><code>js.mak</code>, an old Windows-specific <code>nmake</code> file, has been deleted. It hasn't worked for a long time. It is fairly easy to create a Microsoft Visual Studio project file for SpiderMonkey 1.8 from scratch. (If you would like to contribute and maintain a project file, please feel free to contact the SpiderMonkey team via email, bugzilla, or IRC.) Alternatively, you can install <a class="internal" href="/en/Windows_Build_Prerequisites" title="en/Windows Build Prerequisites">MozillaBuild</a> and run the command <code>make -f Makefile.ref</code> in the <code>js/src</code> directory.</li>
 </ul>
 

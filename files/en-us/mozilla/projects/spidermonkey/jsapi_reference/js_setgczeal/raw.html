@@ -1,7 +1,7 @@
 <div>
- <!-- {{SpiderMonkeySidebar("JSAPI")}} --></div>
+ <!-- <!-- {{SpiderMonkeySidebar("JSAPI")}} --> --></div>
 <div>
- <!-- {{jsapi_minversion_header("1.8")}} --></div>
+ <!-- <!-- {{jsapi_minversion_header("1.8")}} --> --></div>
 <div class="summary">
  <p>Enable GC zeal, a testing and debugging feature that helps find GC-related bugs in JSAPI applications.</p>
 </div>
@@ -18,8 +18,8 @@ JS_SetGCZeal(JSContext *cx, uint8_t zeal, uint32_t frequency);
   </tr>
   <tr>
    <td><code>cx</code></td>
-   <td><!-- {{jsapixref("JSRuntime", "JSContext *")}} --></td>
-   <td>A context. The GC zeal level of the associated <!-- {{jsapixref("JSRuntime")}} --> is set.</td>
+   <td><!-- <!-- {{jsapixref("JSRuntime", "JSContext *")}} --> --></td>
+   <td>A context. The GC zeal level of the associated <!-- <!-- {{jsapixref("JSRuntime")}} --> --> is set.</td>
   </tr>
   <tr>
    <td><code>zeal</code></td>
@@ -112,9 +112,9 @@ JS_SetGCZeal(JSContext *cx, uint8_t zeal, uint32_t frequency);
 <p>(In a debug build of Gecko, you can also set the current GC zeal level using the <code>javascript.options.gczeal</code> preference.)</p>
 <h2 id="See_Also" name="See_Also">See Also</h2>
 <ul>
- <li><!-- {{LXRSearch("ident", "i", "JS_SetGCZeal")}} --></li>
- <li><!-- {{LXRSearch("ident", "i", "JS_GC_ZEAL")}} --></li>
-   <li><!-- {{jsapixref("JS_ScheduleGC")}} --></li>
- <li><!-- {{bug(308429)}} --></li>
- <li><!-- {{bug(650978)}} --></li>
+ <li><!-- <!-- {{LXRSearch("ident", "i", "JS_SetGCZeal")}} --> --></li>
+ <li><!-- <!-- {{LXRSearch("ident", "i", "JS_GC_ZEAL")}} --> --></li>
+   <li><!-- <!-- {{jsapixref("JS_ScheduleGC")}} --> --></li>
+ <li><!-- <!-- {{bug(308429)}} --> --></li>
+ <li><!-- <!-- {{bug(650978)}} --> --></li>
 </ul>

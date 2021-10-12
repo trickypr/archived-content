@@ -1,4 +1,4 @@
-<p>This page describes the JavaScript implementation of an <a href="/en/HTTP" title="en/HTTP">HTTP</a> server located in <!-- {{ Source("netwerk/test/httpserver/") }} -->.</p>
+<p>This page describes the JavaScript implementation of an <a href="/en/HTTP" title="en/HTTP">HTTP</a> server located in <!-- <!-- {{ Source("netwerk/test/httpserver/") }} --> -->.</p>
 
 <h3 id="Functionality" name="Functionality">Functionality</h3>
 
@@ -16,7 +16,7 @@
 
 <h3 id="Where_you_can_use_it" name="Where_you_can_use_it">Where you can use it</h3>
 
-<p>The server is written primarily for use from <a href="/en/Writing_xpcshell-based_unit_tests" title="en/Writing_xpcshell-based_unit_tests">xpcshell-based tests</a>, and it can be used as an inline script or as an XPCOM component (assuming you've compiled the server's IDL file and deployed the XPT correctly). The <a href="/en/Mochitest" title="en/Mochitest">Mochitest</a> framework also uses it to serve its tests, and <!-- {{ Source("layout/tools/reftest/README.txt", "reftests") }} --> can optionally use it when their behavior is dependent upon specific HTTP header values.</p>
+<p>The server is written primarily for use from <a href="/en/Writing_xpcshell-based_unit_tests" title="en/Writing_xpcshell-based_unit_tests">xpcshell-based tests</a>, and it can be used as an inline script or as an XPCOM component (assuming you've compiled the server's IDL file and deployed the XPT correctly). The <a href="/en/Mochitest" title="en/Mochitest">Mochitest</a> framework also uses it to serve its tests, and <!-- <!-- {{ Source("layout/tools/reftest/README.txt", "reftests") }} --> --> can optionally use it when their behavior is dependent upon specific HTTP header values.</p>
 
 <h3 id="Ways_you_might_use_it" name="Ways_you_might_use_it">Ways you might use it</h3>
 
@@ -34,7 +34,7 @@
 
 <h3 id="Using_the_server" name="Using_the_server">Using the server</h3>
 
-<p>The best and first place you should look for documentation is <!-- {{ Source("netwerk/test/httpserver/nsIHttpServer.idl") }} -->. It's extremely comprehensive and detailed, and it should be enough to figure out how to make the server do what you want. I also suggest taking a look at the less-comprehensive server <!-- {{ Source("netwerk/test/httpserver/README", "README") }} -->, although the IDL should usually be sufficient.</p>
+<p>The best and first place you should look for documentation is <!-- <!-- {{ Source("netwerk/test/httpserver/nsIHttpServer.idl") }} --> -->. It's extremely comprehensive and detailed, and it should be enough to figure out how to make the server do what you want. I also suggest taking a look at the less-comprehensive server <!-- <!-- {{ Source("netwerk/test/httpserver/README", "README") }} --> -->, although the IDL should usually be sufficient.</p>
 
 <h4 id="Running_the_server" name="Running_the_server">Running the server</h4>
 
@@ -42,7 +42,7 @@
 
 <pre class="eval"><span class="brush: js">Cu.import("resource://testing-common/httpd.js");</span></pre>
 
-<p>If you're writing tests for the <!-- {{ gecko("1.9.0") }} --> branch, you should include the following line instead:</p>
+<p>If you're writing tests for the <!-- <!-- {{ gecko("1.9.0") }} --> --> branch, you should include the following line instead:</p>
 
 <pre class="brush: js">do_import_script("netwerk/test/httpserver/httpd.js");</pre>
 
@@ -71,7 +71,7 @@ else
 
 <h4 id="Debugging_errors" name="Debugging_errors">Debugging errors</h4>
 
-<p>The server's default error pages don't give much information, partly because the error-dispatch mechanism doesn't currently accommodate doing so and partly because exposing errors in a real server could make it easier to exploit them. If you don't know why the server is acting a particular way, edit <!-- {{ Source("netwerk/test/httpserver/httpd.js", "httpd.js") }} --> and change the value of <code>DEBUG</code> to <code>true</code>. This will cause the server to print information about the processing of requests (and errors encountered doing so) to the console, and it's usually not difficult to determine why problems exist from that output. <code>DEBUG</code> is <code>false</code> by default because the information printed with it set to <code>true</code> unnecessarily obscures tinderbox output.</p>
+<p>The server's default error pages don't give much information, partly because the error-dispatch mechanism doesn't currently accommodate doing so and partly because exposing errors in a real server could make it easier to exploit them. If you don't know why the server is acting a particular way, edit <!-- <!-- {{ Source("netwerk/test/httpserver/httpd.js", "httpd.js") }} --> --> and change the value of <code>DEBUG</code> to <code>true</code>. This will cause the server to print information about the processing of requests (and errors encountered doing so) to the console, and it's usually not difficult to determine why problems exist from that output. <code>DEBUG</code> is <code>false</code> by default because the information printed with it set to <code>true</code> unnecessarily obscures tinderbox output.</p>
 
 <h4 id="Header_modification_for_files" name="Header_modification_for_files">Header modification for files</h4>
 
@@ -91,7 +91,7 @@ Content-Type: text/plain
 
 <h4 id="SJS:_server-side_scripts" name="SJS:_server-side_scripts">SJS: server-side scripts</h4>
 
-<p>Support for server-side scripts is provided through the SJS mechanism. Essentially an SJS is a file with a particular extension, chosen by the creator of the server, which contains a function with the name <code>handleRequest</code> which is called to determine the response the server will generate. That function acts exactly like the <code>handle</code> function on the <!-- {{ interface("nsIHttpRequestHandler") }} --> interface. First, tell the server what extension you're using:</p>
+<p>Support for server-side scripts is provided through the SJS mechanism. Essentially an SJS is a file with a particular extension, chosen by the creator of the server, which contains a function with the name <code>handleRequest</code> which is called to determine the response the server will generate. That function acts exactly like the <code>handle</code> function on the <!-- <!-- {{ interface("nsIHttpRequestHandler") }} --> --> interface. First, tell the server what extension you're using:</p>
 
 <pre class="brush: js">const SJS_EXTENSION = "cgi";
 server.registerContentType(SJS_EXTENSION, "sjs");
@@ -109,7 +109,7 @@ server.registerContentType(SJS_EXTENSION, "sjs");
 
 <p>Further examples may be found <a class="external" href="http://mxr.mozilla.org/mozilla/find?text=&amp;kind=text&amp;string=sjs%24">in the Mozilla source tree</a> in existing tests. The request object is an instance of <a href="http://doxygen.db48x.net/mozilla/html/interfacensIHttpRequest.html" title="http://doxygen.db48x.net/mozilla/html/interfacensIHttpRequest.html">nsIHttpRequestHandler</a> and the response is a <a href="http://doxygen.db48x.net/mozilla/html/interfacensIHttpResponse.html" title="http://doxygen.db48x.net/mozilla/html/interfacensIHttpResponse.html">nsIHttpResponseHandler</a>.</p>
 
-<h4 id="Storing_information_across_requests_(not_available_in_gecko(1.9.0)_)">Storing information across requests (not available in <!-- {{ gecko("1.9.0") }} -->)</h4>
+<h4 id="Storing_information_across_requests_(not_available_in_gecko(1.9.0)_)">Storing information across requests (not available in <!-- <!-- {{ gecko("1.9.0") }} --> -->)</h4>
 
 <p>HTTP is basically a stateless protocol, and the httpd.js server API is for the most part similarly stateless. If you're using the server through the XPCOM interface you can simply store whatever state you want in enclosing environments or global variables. However, if you're using it through an SJS your request is processed in a near-empty environment every time processing occurs. To support stateful SJS behavior, the following functions have been added to the global scope in which a SJS handler executes, providing a simple key-value state storage mechanism:</p>
 
@@ -125,9 +125,9 @@ function setSharedState(key : string, value : string)
 function getObjectState(key : string, callback : function(value : object) : void) // SJS API, XPCOM differs, see below
 function setObjectState(key : string, value : object)</pre>
 
-<p>A key is a string with arbitrary contents. The corresponding value is also a string, for the non-object-saving functions. For the object-saving functions, it is (wait for it) an object, or also <code>null</code>. Initially all keys are associated with the empty string or with <code>null</code>, depending on whether the function accesses string- or object-valued storage. A stored value persists across requests and across server shutdowns and restarts. The state methods are available both in SJS and, for convenience when working with the server both via XPCOM and via SJS, XPCOM through the <!-- {{ interface("nsIHttpServer") }} --> interface. The variants are designed to support different needs.</p>
+<p>A key is a string with arbitrary contents. The corresponding value is also a string, for the non-object-saving functions. For the object-saving functions, it is (wait for it) an object, or also <code>null</code>. Initially all keys are associated with the empty string or with <code>null</code>, depending on whether the function accesses string- or object-valued storage. A stored value persists across requests and across server shutdowns and restarts. The state methods are available both in SJS and, for convenience when working with the server both via XPCOM and via SJS, XPCOM through the <!-- <!-- {{ interface("nsIHttpServer") }} --> --> interface. The variants are designed to support different needs.</p>
 
-<p><!-- {{ warning("Be careful using state: you, the user, are responsible for synchronizing all uses of state through any of the available methods. (This includes the methods that act only on per-path state: you might still run into trouble there if your request handler generates responses asynchronously. Further, any code with access to the server XPCOM component could modify it between requests even if you only ever used or modified that state while generating synchronous responses.) JavaScript's run-to-completion behavior will save you in simple cases, but with anything moderately complex you are playing with fire, and if you do it wrong you will get burned.") }} --></p>
+<p><!-- <!-- {{ warning("Be careful using state: you, the user, are responsible for synchronizing all uses of state through any of the available methods. (This includes the methods that act only on per-path state: you might still run into trouble there if your request handler generates responses asynchronously. Further, any code with access to the server XPCOM component could modify it between requests even if you only ever used or modified that state while generating synchronous responses.) JavaScript's run-to-completion behavior will save you in simple cases, but with anything moderately complex you are playing with fire, and if you do it wrong you will get burned.") }} --> --></p>
 
 <h5 id="getState_and_setState"><code>getState</code> and <code>setState</code></h5>
 
@@ -149,10 +149,10 @@ function handleRequest(request, response)
 
 <p>The useful feature of these two methods is that this state doesn't bleed outside the single path at which it resides. For example, if the above SJS were at <code>/counter</code>, the value returned by <code>getState("counter")</code> at some other path would be completely distinct from the counter implemented above. This makes it much simpler to write stateful handlers without state accidentally bleeding between unrelated handlers.</p>
 
-<p><!-- {{ note("State saved by this method is specific to the HTTP path, excluding query string and hash reference. <code>/counter</code>, <code>/counter?foo</code>, and <code>/counter?bar#baz</code> all share the same state for the purposes of these methods. (Indeed, non-shared state would be significantly less useful if it changed when the query string changed!)") }} --></p>
+<p><!-- <!-- {{ note("State saved by this method is specific to the HTTP path, excluding query string and hash reference. <code>/counter</code>, <code>/counter?foo</code>, and <code>/counter?bar#baz</code> all share the same state for the purposes of these methods. (Indeed, non-shared state would be significantly less useful if it changed when the query string changed!)") }} --> --></p>
 
 <div class="note">
-<p><strong>Note:</strong> As of <!-- {{Gecko("2.0")}} -->, the predefined <code>__LOCATION__</code> state contains the native path of the SJS file itself. You can pass the result directly to the <!-- {{ ifmethod("nsILocalFile","initWithPath") }} -->. Example: <code>thisSJSfile.initWithPath(getState('__LOCATION__'));</code></p>
+<p><strong>Note:</strong> As of <!-- <!-- {{Gecko("2.0")}} --> -->, the predefined <code>__LOCATION__</code> state contains the native path of the SJS file itself. You can pass the result directly to the <!-- <!-- {{ ifmethod("nsILocalFile","initWithPath") }} --> -->. Example: <code>thisSJSfile.initWithPath(getState('__LOCATION__'));</code></p>
 </div>
 
 <h5 id="getSharedState_and_setSharedState"><code>getSharedState</code> and <code>setSharedState</code></h5>
@@ -187,7 +187,7 @@ function handleRequest(request, response)
 
 <p>This idiosyncratic API is a restriction imposed by how sandboxes currently work: external functions added to the sandbox can't return object values when called within the sandbox. However, such functions can accept and call callback functions, so we simply use a callback function here to return the object value associated with the key.</p>
 
-<h4 id="Advanced_dynamic_response_creation_(not_available_in_gecko(1.9.0)_)">Advanced dynamic response creation (not available in <!-- {{ gecko("1.9.0") }} -->)</h4>
+<h4 id="Advanced_dynamic_response_creation_(not_available_in_gecko(1.9.0)_)">Advanced dynamic response creation (not available in <!-- <!-- {{ gecko("1.9.0") }} --> -->)</h4>
 
 <p>The default behavior of request handlers is to fully construct the response, return, and only then send the generated data. For certain use cases, however, this is infeasible. For example, a handler which wanted to return an extremely large amount of data (say, over 4GB on a 32-bit system) might run out of memory doing so. Alternatively, precise control over the timing of data transmission might be required so that, for example, one request is received, "paused" while another request is received and completes, and then finished. httpd.js solves this problem by defining a <code>processAsync()</code> method which indicates to the server that the response will be written and finished by the handler. Here's an example of an SJSfile which writes some data, waits five seconds, and then writes some more data and finishes the response:</p>
 
@@ -210,9 +210,9 @@ function handleRequest(request, response)
 
 <p>The basic flow is simple: call <code>processAsync</code> to mark the response as being sent asynchronously, write data to the response body as desired, and when complete call <code>finish()</code>. At the moment if you drop such a response on the floor, nothing will ever terminate the connection, and the server cannot be stopped (the stop API is asynchronous and callback-based); in the future a default connection timeout will likely apply, but for now, "don't do that".</p>
 
-<p>Full documentation for <code>processAsync()</code> and its interactions with other methods may, as always, be found in <!-- {{ Source("netwerk/test/httpserver/nsIHttpServer.idl") }} -->.</p>
+<p>Full documentation for <code>processAsync()</code> and its interactions with other methods may, as always, be found in <!-- <!-- {{ Source("netwerk/test/httpserver/nsIHttpServer.idl") }} --> -->.</p>
 
-<h4 id="Manual_arbitrary_response_creation_(available_in_gecko(1.9.1)_and_later)">Manual, arbitrary response creation (available in <!-- {{ gecko("1.9.1") }} --> and later)</h4>
+<h4 id="Manual_arbitrary_response_creation_(available_in_gecko(1.9.1)_and_later)">Manual, arbitrary response creation (available in <!-- <!-- {{ gecko("1.9.1") }} --> --> and later)</h4>
 
 <p>The standard mode of response creation is fully synchronous and is guaranteed to produce syntactically correct responses (excluding headers, which for the most part may be set to arbitrary values). Asynchronous processing enables the introduction of response handling coordinated with external events, but again, for the most part only syntactically correct responses may be generated. The third method of processing removes the correct-syntax property by allowing a response to contain completely arbitrary data through the <code>seizePower()</code> method. After this method is called, any data subsequently written to the response is written directly to the network as the response, skipping headers and making no attempt whatsoever to ensure any formatting of the transmitted data. As with asynchronous processing, the response is generated asynchronously and must be finished manually for the connection to be closed. (Again, nothing will terminate the connection for a response dropped on the floor, so again, "don't do that".) This mode of processing is useful for testing particular data formats that are either not HTTP or which do not match the precise, canonical representation that httpd.js generates. Here's an example of an SJSfile which writes an apparent HTTP response whose status text contains a null byte (not allowed by HTTP/1.1, and attempting to set such status text through httpd.js would throw an exception) and which has a header that spans multiple lines (httpd.js responses otherwise generate only single-line headers):</p>
 
@@ -232,29 +232,29 @@ function handleRequest(request, response)
 
 <p>While the asynchronous mode is capable of producing certain forms of invalid responses (through setting a bogus Content-Length header prior to the start of body transmission, among others), it must not be used in this manner. No effort will be made to preserve such implementation quirks (indeed, some are even likely to be removed over time): if you want to send malformed data, use <code>seizePower()</code> instead.</p>
 
-<p>Full documentation for <code>seizePower()</code> and its interactions with other methods may, as always, be found in <!-- {{ Source("netwerk/test/httpserver/nsIHttpServer.idl") }} -->.</p>
+<p>Full documentation for <code>seizePower()</code> and its interactions with other methods may, as always, be found in <!-- <!-- {{ Source("netwerk/test/httpserver/nsIHttpServer.idl") }} --> -->.</p>
 
 <h3 id="Examples" name="Examples">Examples</h3>
 
 <p>Shorter examples (for tests which only do one test):</p>
 
 <ul>
- <li><!-- {{ Source("netwerk/test/unit/test_bug331825.js") }} --></li>
- <li><!-- {{ Source("netwerk/test/unit/test_httpcancel.js") }} --></li>
- <li><!-- {{ Source("netwerk/test/unit/test_cookie_header.js") }} --></li>
+ <li><!-- <!-- {{ Source("netwerk/test/unit/test_bug331825.js") }} --> --></li>
+ <li><!-- <!-- {{ Source("netwerk/test/unit/test_httpcancel.js") }} --> --></li>
+ <li><!-- <!-- {{ Source("netwerk/test/unit/test_cookie_header.js") }} --> --></li>
 </ul>
 
 <p>Longer tests (where you'd need to do multiple async server requests):</p>
 
 <ul>
- <li><!-- {{ Source("netwerk/test/httpserver/test/test_setstatusline.js") }} --></li>
- <li><!-- {{ Source("netwerk/test/unit/test_content_sniffer.js") }} --></li>
- <li><!-- {{ Source("netwerk/test/unit/test_authentication.js") }} --></li>
- <li><!-- {{ Source("netwerk/test/unit/test_event_sink.js") }} --></li>
- <li><!-- {{ Source("netwerk/test/httpserver/test/") }} --></li>
+ <li><!-- <!-- {{ Source("netwerk/test/httpserver/test/test_setstatusline.js") }} --> --></li>
+ <li><!-- <!-- {{ Source("netwerk/test/unit/test_content_sniffer.js") }} --> --></li>
+ <li><!-- <!-- {{ Source("netwerk/test/unit/test_authentication.js") }} --> --></li>
+ <li><!-- <!-- {{ Source("netwerk/test/unit/test_event_sink.js") }} --> --></li>
+ <li><!-- <!-- {{ Source("netwerk/test/httpserver/test/") }} --> --></li>
 </ul>
 
-<p>Examples of modifying HTTP headers in files may be found at <!-- {{ Source("netwerk/test/httpserver/test/data/cern_meta/") }} -->.</p>
+<p>Examples of modifying HTTP headers in files may be found at <!-- <!-- {{ Source("netwerk/test/httpserver/test/data/cern_meta/") }} --> -->.</p>
 
 <h3 id="Future_directions" name="Future_directions">Future directions</h3>
 

@@ -134,7 +134,7 @@ JS_IdToValue(JSContext *cx, jsid id, JS::MutableHandle&lt;JS::Value&gt; vp);
 
 <p><code>JS_IdToValue</code> converts a specified JS ID, <code>id</code>, to a JS value. On success, <code>JS_IdToValue</code> stores the converted value in <code>*vp</code> and returns <code>true</code>. Otherwise it returns <code>false</code>.</p>
 
-<p>The inverse of <code>JS_IdToValue</code> is <a href="/en-US/docs/Mozilla/Projects/SpiderMonkey/JSAPI_reference/JS_ValueToId" title="JS_ValueToId converts a specified <!-- {{jsapixref(&quot;JS::Value&quot;)}} -->, v, to a <!-- {{jsapixref(&quot;jsid&quot;)}} -->. If v is an integer, *idp receives an integer jsid. Otherwise, if E4X support is enabled and v is an object, *idp receives an object jsid. Otherwise, *idp receives an interned string jsid based on the value of v. If v is not a string, it is converted to a string as if by calling <!-- {{jsapixref(&quot;JS_ValueToString&quot;)}} -->."><code>JS_ValueToId</code></a>.</p>
+<p>The inverse of <code>JS_IdToValue</code> is <a href="/en-US/docs/Mozilla/Projects/SpiderMonkey/JSAPI_reference/JS_ValueToId" title="JS_ValueToId converts a specified <!-- <!-- {{jsapixref(&quot;JS::Value&quot;)}} --> -->, v, to a <!-- <!-- {{jsapixref(&quot;jsid&quot;)}} --> -->. If v is an integer, *idp receives an integer jsid. Otherwise, if E4X support is enabled and v is an object, *idp receives an object jsid. Otherwise, *idp receives an interned string jsid based on the value of v. If v is not a string, it is converted to a string as if by calling <!-- <!-- {{jsapixref(&quot;JS_ValueToString&quot;)}} --> -->."><code>JS_ValueToId</code></a>.</p>
 
 <h2 id="See_Also" name="See_Also">See Also</h2>
 

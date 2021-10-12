@@ -1,6 +1,6 @@
 <div>
- <!-- {{SpiderMonkeySidebar("JSAPI")}} --></div>
-<p><!-- {{ jsapi_minversion_header("1.8.1") }} --></p>
+ <!-- <!-- {{SpiderMonkeySidebar("JSAPI")}} --> --></div>
+<p><!-- <!-- {{ jsapi_minversion_header("1.8.1") }} --> --></p>
 <div class="summary">
 <p>Configure SpiderMonkey security hooks.</p>
 </div>
@@ -33,7 +33,7 @@ JS_SetRuntimeSecurityCallbacks(JSRuntime *rt, JSSecurityCallbacks *callbacks);
   </tr>
   <tr>
    <td><code>rt</code></td>
-   <td><!-- {{jsapixref("JSRuntime", "JSRuntime *")}} --></td>
+   <td><!-- <!-- {{jsapixref("JSRuntime", "JSRuntime *")}} --> --></td>
    <td>A runtime to get/set the security callbacks.</td>
   </tr>
   <tr>
@@ -65,12 +65,12 @@ JS_SetRuntimeSecurityCallbacks(JSRuntime *rt, JSSecurityCallbacks *callbacks);
   </tr>
   <tr>
    <td><code>contentSecurityPolicyAllows</code></td>
-   <td><!-- {{jsapixref("JSCSPEvalChecker")}} --></td>
+   <td><!-- <!-- {{jsapixref("JSCSPEvalChecker")}} --> --></td>
    <td>A pointer to the function which checks if a CSP instance wants to disable eval() and friends. Use <code>NULL</code> is not needed.</td>
   </tr>
   <tr>
    <td><code>subsumes</code></td>
-   <td><!-- {{jsapixref("JSSubsumesOp")}} --></td>
+   <td><!-- <!-- {{jsapixref("JSSubsumesOp")}} --> --></td>
    <td>A pointe to the function which returns whether the first principal subsumes the second. Use <code>NULL</code> is not needed.</td>
   </tr>
  </tbody>
@@ -83,12 +83,12 @@ JS_SetRuntimeSecurityCallbacks(JSRuntime *rt, JSSecurityCallbacks *callbacks);
 <h2 id="See_Also" name="See_Also">See Also</h2>
 <ul>
 
-<li><!-- {{ LXRSearch("ident", "i", "JS_GetSecurityCallbacks") }} --></li>
-<li><!-- {{ LXRSearch("ident", "i", "JS_SetSecurityCallbacks") }} --></li>
-<li><!-- {{jsapixref("JSPrincipals")}} --></li>
-<li><!-- {{jsapixref("JSCSPEvalChecker")}} --></li>
-<li><!-- {{jsapixref("JSSubsumesOp")}} --></li>
-<li><!-- {{bug(957688)}} --> - removed <code>checkObjectAccess</code></li>
-<li><!-- {{bug(924905)}} --> - added <code>subsumes</code></li>
-<li><!-- {{bug(728250)}} --> - added -<code>JS_GetSecurityCallbacks</code> and <code>JS_SetSecurityCallbacks</code>, removed <code>JS_SetContextSecurityCallbacks</code>, <code>JS_GetRuntimeSecurityCallbacks</code>, and <code>JS_SetRuntimeSecurityCallbacks</code></li>
+<li><!-- <!-- {{ LXRSearch("ident", "i", "JS_GetSecurityCallbacks") }} --> --></li>
+<li><!-- <!-- {{ LXRSearch("ident", "i", "JS_SetSecurityCallbacks") }} --> --></li>
+<li><!-- <!-- {{jsapixref("JSPrincipals")}} --> --></li>
+<li><!-- <!-- {{jsapixref("JSCSPEvalChecker")}} --> --></li>
+<li><!-- <!-- {{jsapixref("JSSubsumesOp")}} --> --></li>
+<li><!-- <!-- {{bug(957688)}} --> --> - removed <code>checkObjectAccess</code></li>
+<li><!-- <!-- {{bug(924905)}} --> --> - added <code>subsumes</code></li>
+<li><!-- <!-- {{bug(728250)}} --> --> - added -<code>JS_GetSecurityCallbacks</code> and <code>JS_SetSecurityCallbacks</code>, removed <code>JS_SetContextSecurityCallbacks</code>, <code>JS_GetRuntimeSecurityCallbacks</code>, and <code>JS_SetRuntimeSecurityCallbacks</code></li>
 </ul>

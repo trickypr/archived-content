@@ -2,7 +2,7 @@
 
 <h3 id="Invoking_the_Shell" name="Invoking_the_Shell">Invoking the Shell</h3>
 
-<p><code>java org.mozilla.javascript.tools.shell.Main <!-- {{ mediawiki.external('<var>options</var>') }} --> <var>script-filename-or-url</var> <!-- {{ mediawiki.external('<var>script-arguments</var>') }} --> </code></p>
+<p><code>java org.mozilla.javascript.tools.shell.Main <!-- <!-- {{ mediawiki.external('<var>options</var>') }} --> --> <var>script-filename-or-url</var> <!-- <!-- {{ mediawiki.external('<var>script-arguments</var>') }} --> --> </code></p>
 
 <p>where <code><var>options</var></code> are:</p>
 
@@ -216,7 +216,7 @@ Try `/bin/sort --help' for more information.
 js&gt; runCommand("bad_command", "--bad-arg", opt)
 js: "&lt;stdin&gt;", line 18: uncaught JavaScript exception: java.io.IOException: bad_command: not found
 js&gt; // Passing explicit environment to the system shell
-js&gt; runCommand("sh", "-c", "echo $env1 $env2", { env: {env1: 100, env2: 200}} -->)
+js&gt; runCommand("sh", "-c", "echo $env1 $env2", { env: {env1: 100, env2: 200}} --> -->)
 100 200
 0
 js&gt; // Use args option to provide additional command arguments

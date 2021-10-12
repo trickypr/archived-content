@@ -122,9 +122,9 @@
 <h6 id="Parameters_4">Parameters</h6>
 
 <dl>
- <dt><code>onFulfill</code> <!-- {{optional_inline()}} --></dt>
+ <dt><code>onFulfill</code> <!-- <!-- {{optional_inline()}} --> --></dt>
  <dd>If the promise is fulfilled, this function is invoked with the fulfillment value of the promise as its only argument, and the outcome of the function determines the state of the new promise returned by the <code>then</code> method. In case this parameter is not a function (usually <code>null</code>), the new promise returned by the <code>then</code> method is fulfilled with the same value as the original promise.</dd>
- <dt><code>onReject</code> <!-- {{optional_inline()}} --></dt>
+ <dt><code>onReject</code> <!-- <!-- {{optional_inline()}} --> --></dt>
  <dd>
  <p>If the promise is rejected, this function is invoked with the rejection reason of the promise as its only argument, and the outcome of the function determines the state of the new promise returned by the <code>then</code> method. In case this parameter is not a function (usually left <code>undefined</code>), the new promise returned by the <code>then</code> method is rejected with the same reason as the original promise.</p>
  </dd>
@@ -164,9 +164,9 @@ p.catch(logError);
 <p>These code-inaccessible, inspectable properties are:</p>
 
 <ul>
- <li><code><strong><span>{</span>{private:status}} --></strong></code>: <strong>0</strong> for pending, <strong>1</strong> for fulfilled, or <strong>2</strong> for rejected.</li>
- <li><code><strong><span>{</span>{private:value}} --></strong></code>: Fulfillment value or rejection reason, for fulfilled or rejected promises only.</li>
- <li><code><strong><span>{</span>{private:handlers}} --></strong></code>: Array of objects holding references to functions registered by the <code><a href="#then()" title="#then()">then()</a></code> method, for pending promises only.</li>
+ <li><code><strong><span>{</span>{private:status}} --> --></strong></code>: <strong>0</strong> for pending, <strong>1</strong> for fulfilled, or <strong>2</strong> for rejected.</li>
+ <li><code><strong><span>{</span>{private:value}} --> --></strong></code>: Fulfillment value or rejection reason, for fulfilled or rejected promises only.</li>
+ <li><code><strong><span>{</span>{private:handlers}} --> --></strong></code>: Array of objects holding references to functions registered by the <code><a href="#then()" title="#then()">then()</a></code> method, for pending promises only.</li>
 </ul>
 
 <p style="text-align: center;"><img alt="Promise properties are visible in the debugger." src="https://mdn.mozillademos.org/files/6471/Promise-Debug-1.png" style="border-style: solid; border-width: 2px; height: 482px; margin-bottom: 15px; margin-top: 15px; width: 403px;"><img alt="Promise handlers can be watched from the Console." src="https://mdn.mozillademos.org/files/6473/Promise-Debug-2.png" style="border-style: solid; border-width: 2px; height: 161px; width: 977px;"></p>

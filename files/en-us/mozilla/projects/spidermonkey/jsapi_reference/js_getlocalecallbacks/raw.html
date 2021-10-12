@@ -1,5 +1,5 @@
 <div>
- <!-- {{SpiderMonkeySidebar("JSAPI")}} --></div>
+ <!-- <!-- {{SpiderMonkeySidebar("JSAPI")}} --> --></div>
 <div class="summary">
  <p>Get and set locale specific string conversion and error message callbacks.</p>
 </div>
@@ -19,8 +19,8 @@ JS_SetLocaleCallbacks(JSRuntime *rt, JSLocaleCallbacks *callbacks);
   </tr>
   <tr>
    <td><code>cx</code></td>
-   <td><code><!-- {{jsapixref("JSRuntime", "JSContext")}} --> *</code></td>
-   <td>Pointer to a JS context from which to derive runtime information. <!-- {{ Jsapi-requires-request }} --></td>
+   <td><code><!-- <!-- {{jsapixref("JSRuntime", "JSContext")}} --> --> *</code></td>
+   <td>Pointer to a JS context from which to derive runtime information. <!-- <!-- {{ Jsapi-requires-request }} --> --></td>
   </tr>
   <tr>
    <td><code>callbacks</code></td>
@@ -58,15 +58,15 @@ typedef bool
   </tr>
   <tr>
    <td><code>JSLocaleToUpperCase</code></td>
-   <td>Implementation of <!-- {{jsxref("String.prototype.toLocaleUpperCase()")}} --> function.</td>
+   <td>Implementation of <!-- <!-- {{jsxref("String.prototype.toLocaleUpperCase()")}} --> --> function.</td>
   </tr>
   <tr>
    <td><code>JSLocaleToLowerCase</code></td>
-   <td>Implementation of <!-- {{jsxref("String.prototype.toLocaleLowerCase()")}} --> function.</td>
+   <td>Implementation of <!-- <!-- {{jsxref("String.prototype.toLocaleLowerCase()")}} --> --> function.</td>
   </tr>
   <tr>
    <td><code>JSLocaleCompare</code></td>
-   <td>Implementation of <!-- {{jsxref("String.prototype.localeCompare()")}} --> function. If <code>EXPOSE_INTL_API</code> is defined, <!-- {{jsxref("Global_Objects/Intl", "Intl API", "", 1)}} --> is used instead.</td>
+   <td>Implementation of <!-- <!-- {{jsxref("String.prototype.localeCompare()")}} --> --> function. If <code>EXPOSE_INTL_API</code> is defined, <!-- <!-- {{jsxref("Global_Objects/Intl", "Intl API", "", 1)}} --> --> is used instead.</td>
   </tr>
   <tr>
    <td><code>JSLocaleToUnicode</code></td>
@@ -79,11 +79,11 @@ typedef bool
 <p><code>JS_GetLocaleCallbacks</code> returns the address of the current locale callbacks struct, which may be <code>nullptr</code>.</p>
 <h2 id="See_Also" name="See_Also">See Also</h2>
 <ul>
- <li><!-- {{ LXRSearch("ident", "i", "JS_GetLocaleCallbacks") }} --></li>
- <li><!-- {{ LXRSearch("ident", "i", "JS_SetLocaleCallbacks") }} --></li>
- <li><!-- {{ LXRSearch("ident", "i", "JSLocaleCallbacks") }} --></li>
- <li><!-- {{ LXRSearch("ident", "i", "JSLocaleToUpperCase") }} --></li>
- <li><!-- {{ LXRSearch("ident", "i", "JSLocaleToLowerCase") }} --></li>
- <li><!-- {{ LXRSearch("ident", "i", "JSLocaleCompare") }} --></li>
- <li><!-- {{ LXRSearch("ident", "i", "JSLocaleToUnicode") }} --></li>
+ <li><!-- <!-- {{ LXRSearch("ident", "i", "JS_GetLocaleCallbacks") }} --> --></li>
+ <li><!-- <!-- {{ LXRSearch("ident", "i", "JS_SetLocaleCallbacks") }} --> --></li>
+ <li><!-- <!-- {{ LXRSearch("ident", "i", "JSLocaleCallbacks") }} --> --></li>
+ <li><!-- <!-- {{ LXRSearch("ident", "i", "JSLocaleToUpperCase") }} --> --></li>
+ <li><!-- <!-- {{ LXRSearch("ident", "i", "JSLocaleToLowerCase") }} --> --></li>
+ <li><!-- <!-- {{ LXRSearch("ident", "i", "JSLocaleCompare") }} --> --></li>
+ <li><!-- <!-- {{ LXRSearch("ident", "i", "JSLocaleToUnicode") }} --> --></li>
 </ul>

@@ -10,11 +10,11 @@
 </pre>
 <h3 id="Parameters"> Parameters </h3>
 <dl><dt><code>tokenPresent</code>
-</dt><dd><!-- {{ mediawiki.external('in') }} --> If true only slots with a token present are included in the list, otherwise all slots are included.
+</dt><dd><!-- <!-- {{ mediawiki.external('in') }} --> --> If true only slots with a token present are included in the list, otherwise all slots are included.
 </dd><dt><code>pSlotList</code>
-</dt><dd><!-- {{ mediawiki.external('out') }} --> Either null or a pointer to an existing array of <code>CK_SLOT_ID</code> objects.
+</dt><dd><!-- <!-- {{ mediawiki.external('out') }} --> --> Either null or a pointer to an existing array of <code>CK_SLOT_ID</code> objects.
 </dd><dt><code>pulCount</code>
-</dt><dd><!-- {{ mediawiki.external('out') }} --> Pointer to a <code>CK_ULONG</code> variable which receives the slot count.;
+</dt><dd><!-- <!-- {{ mediawiki.external('out') }} --> --> Pointer to a <code>CK_ULONG</code> variable which receives the slot count.;
 </dd></dl>
 <h3 id="Description"> Description </h3>
 <p><code>FC_GetSlotList</code> obtains a list of slots in the system. </p><p>A user may call <code>FC_GetSlotList</code> without logging into the token (to assume the NSS User role).

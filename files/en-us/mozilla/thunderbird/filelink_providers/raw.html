@@ -4,7 +4,7 @@
 
 <h3 id="nsIMsgCloudFileProvider">nsIMsgCloudFileProvider</h3>
 
-<p><!-- {{ Note("Cloudfiles and BigFiles were the two temporary feature names that were used while Filelink was under construction. Both refer to the Filelink feature.") }} --></p>
+<p><!-- <!-- {{ Note("Cloudfiles and BigFiles were the two temporary feature names that were used while Filelink was under construction. Both refer to the Filelink feature.") }} --> --></p>
 
 <p>Filelink storage providers must implement the <a href="/en/Thunderbird/Filelink_Providers/nsIMsgCloudFileProvider" title="nsIMsgCloudFileProvider"><span class="external">nsIMsgCloudFileProvider </span></a>interface. The <a class="external" href="https://dxr.mozilla.org/comm-central/source/comm/mail/components/cloudfile/nsHightail.js" title="https://dxr.mozilla.org/comm-central/source/mail/components/cloudfile/nsHightail.js">Hightail implementation</a> is a great place to look for examples and inspiration.</p>
 
@@ -22,7 +22,7 @@
 
 <p>A provider implementation can choose what information it gets from the user from the setup dialog by pointing the <code>settingsURL</code> attribute of their nsIMsgCloudFileProvider implementation to a chrome URL for an XHTML page that contains a form with the extra information. That URL is then loaded into an IFrame directly beneath the provider menulist.</p>
 
-<p><!-- {{ Note("The setup dialog window should resize itself automatically in order to fit the content of the IFRAME without scrollbars.") }} --></p>
+<p><!-- <!-- {{ Note("The setup dialog window should resize itself automatically in order to fit the content of the IFRAME without scrollbars.") }} --> --></p>
 
 <h4 id="Custom_settings_fields">Custom settings fields</h4>
 

@@ -1,10 +1,10 @@
 <p>This table below provides a list of MathML constructions and how they are read in Mozilla applications for various platforms:</p>
 
 <ul>
- <li>Windows: MathML support is provided by NVDA, which actually delegates math reading to the proprietary MathPlayer plugin. We started exposing generic accessible objects for MathML in <!-- {{ Bug("920547") }} --> and so these can be retrieved by NVDA starting with Gecko 27.0 <!-- {{GeckoRelease("27.0")}} -->. Mozilla and NVDA developers essentially do not have control on how mathematical formulas are read, please contact <a href="https://www.dessci.com">Design Science</a> for any inquiries.</li>
- <li>Mac: MathML support is provided by VoiceOver. In <!-- {{ Bug("1175269") }} --> and <!-- {{ Bug("1001641") }} -->, we relied on the <a href="http://trac.webkit.org/browser/trunk/Source/WebCore/accessibility/mac/WebAccessibilityObjectWrapperMac.mm">WebKit's NSAccessibility MathML tree </a> to expose the main constructions. Hence basic support is available in Gecko 41.0 <!-- {{GeckoRelease("41.0")}} --> and we are still trying to keep in sync with WebKit/VoiceOver. Note that VoiceOver is proprietary so we do not have control on <a href="https://bugs.webkit.org/show_bug.cgi?id=146578">Improvements to MathML accessibility in VoiceOver</a>.</li>
+ <li>Windows: MathML support is provided by NVDA, which actually delegates math reading to the proprietary MathPlayer plugin. We started exposing generic accessible objects for MathML in <!-- <!-- {{ Bug("920547") }} --> --> and so these can be retrieved by NVDA starting with Gecko 27.0 <!-- <!-- {{GeckoRelease("27.0")}} --> -->. Mozilla and NVDA developers essentially do not have control on how mathematical formulas are read, please contact <a href="https://www.dessci.com">Design Science</a> for any inquiries.</li>
+ <li>Mac: MathML support is provided by VoiceOver. In <!-- <!-- {{ Bug("1175269") }} --> --> and <!-- <!-- {{ Bug("1001641") }} --> -->, we relied on the <a href="http://trac.webkit.org/browser/trunk/Source/WebCore/accessibility/mac/WebAccessibilityObjectWrapperMac.mm">WebKit's NSAccessibility MathML tree </a> to expose the main constructions. Hence basic support is available in Gecko 41.0 <!-- <!-- {{GeckoRelease("41.0")}} --> --> and we are still trying to keep in sync with WebKit/VoiceOver. Note that VoiceOver is proprietary so we do not have control on <a href="https://bugs.webkit.org/show_bug.cgi?id=146578">Improvements to MathML accessibility in VoiceOver</a>.</li>
  <li>Linux: MathML support is provided by the <a href="https://git.gnome.org/browse/orca/log/">development version</a> of Orca. We try to keep in sync with WebKit/ATK/Orca developments. At the moment, it is recommended to use a <a href="https://nightly.mozilla.org/">Nightly build</a> to ensure that the accessible tree expected by Orca is correctly exposed.</li>
- <li>AccessFu: MathML support in Android and Firefox OS is currently being implemented in our AccessFu module and a patch is available on <!-- {{ Bug("1163374") }} -->. The table gives the output in mode "utterance" and description spoken last. Note that this is still very experimental.</li>
+ <li>AccessFu: MathML support in Android and Firefox OS is currently being implemented in our AccessFu module and a patch is available on <!-- <!-- {{ Bug("1163374") }} --> -->. The table gives the output in mode "utterance" and description spoken last. Note that this is still very experimental.</li>
 </ul>
 
 <table>
@@ -371,7 +371,7 @@
     end multi-scripts <br>
      <br>
     __________</td>
-   <td style="background-color: #fa8072;">Not supported yet. See <!-- {{ Bug("1176983") }} --> and <a href="https://bugs.webkit.org/show_bug.cgi?id=146454">WebKit's bug 146454</a></td>
+   <td style="background-color: #fa8072;">Not supported yet. See <!-- <!-- {{ Bug("1176983") }} --> --> and <a href="https://bugs.webkit.org/show_bug.cgi?id=146454">WebKit's bug 146454</a></td>
    <td>a. pre-subscript d pre-superscript e subscript b.superscript c</td>
    <td>
     <p>a base b subscript c superscript d presubscript e presuperscript scripted</p>
@@ -395,7 +395,7 @@
     end multi-scripts <br>
      <br>
     __________</td>
-   <td style="background-color: #fa8072;">Not supported yet. See <!-- {{ Bug("1176983") }} --> and <a href="https://bugs.webkit.org/show_bug.cgi?id=146454">WebKit's bug 146454</a></td>
+   <td style="background-color: #fa8072;">Not supported yet. See <!-- <!-- {{ Bug("1176983") }} --> --> and <a href="https://bugs.webkit.org/show_bug.cgi?id=146454">WebKit's bug 146454</a></td>
    <td>a. subscript b superscript c subscript d superscript e</td>
    <td>a base b subscript c superscript d subscript e superscript scripted</td>
   </tr>
@@ -418,7 +418,7 @@
     post-scripts <br>
      <br>
     __________</td>
-   <td style="background-color: #fa8072;">Not supported yet. See <!-- {{ Bug("1176983") }} --> and <a href="https://bugs.webkit.org/show_bug.cgi?id=146454">WebKit's bug 146454</a></td>
+   <td style="background-color: #fa8072;">Not supported yet. See <!-- <!-- {{ Bug("1176983") }} --> --> and <a href="https://bugs.webkit.org/show_bug.cgi?id=146454">WebKit's bug 146454</a></td>
    <td>a. pre-subscript b pre-superscript c pre-subscript d pre-superscript e</td>
    <td>a base b presubscript c presuperscript d presubscript e presuperscript scripted</td>
   </tr>
@@ -446,7 +446,7 @@
     end multi-scripts <br>
      <br>
     __________</td>
-   <td style="background-color: #fa8072;">Not supported yet. See <!-- {{ Bug("1176983") }} --> and <a href="https://bugs.webkit.org/show_bug.cgi?id=146454">WebKit's bug 146454</a></td>
+   <td style="background-color: #fa8072;">Not supported yet. See <!-- <!-- {{ Bug("1176983") }} --> --> and <a href="https://bugs.webkit.org/show_bug.cgi?id=146454">WebKit's bug 146454</a></td>
    <td>a. pre-subscript e pre-superscript f pre-superscript g subscript b subscript c superscript d</td>
    <td>a base b subscript c subscript d superscript e presubscript f presuperscript g presuperscript scripted</td>
   </tr>
@@ -736,7 +736,7 @@
     close <br>
      <br>
     __________</td>
-   <td style="background-color: #fa8072;">Not supported. See <!-- {{ Bug("1176970") }} --> ; Safari+VoiceOver reads "(, abcde, )".</td>
+   <td style="background-color: #fa8072;">Not supported. See <!-- <!-- {{ Bug("1176970") }} --> --> ; Safari+VoiceOver reads "(, abcde, )".</td>
    <td>left paren. a comma. b comma. comma. d comma. e. right paren</td>
    <td style="background-color: #fa8072;">Not supported.</td>
   </tr>
@@ -756,7 +756,7 @@
     end set <br>
      <br>
     __________</td>
-   <td style="background-color: #fa8072;">Not supported. See <!-- {{ Bug("1176970") }} --> ; Safari+VoiceOver reads "{, abcde, }".</td>
+   <td style="background-color: #fa8072;">Not supported. See <!-- <!-- {{ Bug("1176970") }} --> --> ; Safari+VoiceOver reads "{, abcde, }".</td>
    <td>left brace. a semicolon. b semicolon. c semicolon. d semicolon. e. right brace</td>
    <td style="background-color: #fa8072;">Not supported.</td>
   </tr>
@@ -776,7 +776,7 @@
     end set <br>
      <br>
     __________</td>
-   <td style="background-color: #fa8072;">Not supported. See <!-- {{ Bug("1176970") }} --> ; Safari+VoiceOver reads "{, abcde, }".</td>
+   <td style="background-color: #fa8072;">Not supported. See <!-- <!-- {{ Bug("1176970") }} --> --> ; Safari+VoiceOver reads "{, abcde, }".</td>
    <td>left brace. a semicolon. b semicolon. c comma. d comma. e. right brace</td>
    <td style="background-color: #fa8072;">Not supported.</td>
   </tr>
@@ -784,21 +784,21 @@
    <td><math mathvariant="script"><mi>A</mi><mi>B</mi><mi>C</mi><mi>D</mi><mi>E</mi><mi>F</mi><mi>G</mi><mi>H</mi><mi>I</mi><mi>J</mi><mi>K</mi><mi>L</mi><mi>M</mi><mi>N</mi><mi>O</mi><mi>P</mi><mi>Q</mi><mi>R</mi><mi>S</mi><mi>T</mi><mi>U</mi><mi>V</mi><mi>W</mi><mi>X</mi><mi>Y</mi><mi>Z</mi><mi>a</mi><mi>b</mi><mi>c</mi><mi>d</mi><mi>e</mi><mi>f</mi><mi>g</mi><mi>h</mi><mi>i</mi><mi>j</mi><mi>k</mi><mi>l</mi><mi>m</mi><mi>n</mi><mi>o</mi><mi>p</mi><mi>q</mi><mi>r</mi><mi>s</mi><mi>t</mi><mi>u</mi><mi>v</mi><mi>w</mi><mi>x</mi><mi>y</mi><mi>z</mi></math></td>
    <td> </td>
    <td> </td>
-   <td style="background-color: #fa8072;">Not exposed to Orca. See <!-- {{Bug("1182469")}} -->. </td>
+   <td style="background-color: #fa8072;">Not exposed to Orca. See <!-- <!-- {{Bug("1182469")}} --> -->. </td>
    <td> </td>
   </tr>
   <tr>
    <td><math mathvariant="fraktur"><mi>A</mi><mi>B</mi><mi>C</mi><mi>D</mi><mi>E</mi><mi>F</mi><mi>G</mi><mi>H</mi><mi>I</mi><mi>J</mi><mi>K</mi><mi>L</mi><mi>M</mi><mi>N</mi><mi>O</mi><mi>P</mi><mi>Q</mi><mi>R</mi><mi>S</mi><mi>T</mi><mi>U</mi><mi>V</mi><mi>W</mi><mi>X</mi><mi>Y</mi><mi>Z</mi><mi>a</mi><mi>b</mi><mi>c</mi><mi>d</mi><mi>e</mi><mi>f</mi><mi>g</mi><mi>h</mi><mi>i</mi><mi>j</mi><mi>k</mi><mi>l</mi><mi>m</mi><mi>n</mi><mi>o</mi><mi>p</mi><mi>q</mi><mi>r</mi><mi>s</mi><mi>t</mi><mi>u</mi><mi>v</mi><mi>w</mi><mi>x</mi><mi>y</mi><mi>z</mi></math></td>
    <td> </td>
    <td> </td>
-   <td style="background-color: #fa8072;">Not exposed to Orca. See <!-- {{Bug("1182469")}} -->. </td>
+   <td style="background-color: #fa8072;">Not exposed to Orca. See <!-- <!-- {{Bug("1182469")}} --> -->. </td>
    <td> </td>
   </tr>
   <tr>
    <td><math mathvariant="double-struck"><mi>A</mi><mi>B</mi><mi>C</mi><mi>D</mi><mi>E</mi><mi>F</mi><mi>G</mi><mi>H</mi><mi>I</mi><mi>J</mi><mi>K</mi><mi>L</mi><mi>M</mi><mi>N</mi><mi>O</mi><mi>P</mi><mi>Q</mi><mi>R</mi><mi>S</mi><mi>T</mi><mi>U</mi><mi>V</mi><mi>W</mi><mi>X</mi><mi>Y</mi><mi>Z</mi><mi>a</mi><mi>b</mi><mi>c</mi><mi>d</mi><mi>e</mi><mi>f</mi><mi>g</mi><mi>h</mi><mi>i</mi><mi>j</mi><mi>k</mi><mi>l</mi><mi>m</mi><mi>n</mi><mi>o</mi><mi>p</mi><mi>q</mi><mi>r</mi><mi>s</mi><mi>t</mi><mi>u</mi><mi>v</mi><mi>w</mi><mi>x</mi><mi>y</mi><mi>z</mi></math></td>
    <td> </td>
    <td> </td>
-   <td style="background-color: #fa8072;">Not exposed to Orca. See <!-- {{Bug("1182469")}} -->. </td>
+   <td style="background-color: #fa8072;">Not exposed to Orca. See <!-- <!-- {{Bug("1182469")}} --> -->. </td>
    <td> </td>
   </tr>
   <tr id="combining_operator">
@@ -835,7 +835,7 @@
     3 <br>
     end multi-scripts <br>
     __________</td>
-   <td style="background-color: #fa8072;">Not supported yet. See <!-- {{ Bug("1176983") }} --> and <a href="https://bugs.webkit.org/show_bug.cgi?id=146454">WebKit's bug 146454</a></td>
+   <td style="background-color: #fa8072;">Not supported yet. See <!-- <!-- {{ Bug("1176983") }} --> --> and <a href="https://bugs.webkit.org/show_bug.cgi?id=146454">WebKit's bug 146454</a></td>
    <td>F. pre-subscript 2 subscript 3</td>
    <td>F base 3 subscript 2 presubscript scripted</td>
   </tr>
@@ -1631,7 +1631,7 @@
    <td>y base 3 subscript ‴ superscript scripted</td>
   </tr>
   <tr>
-   <td><math> <semantics> <mrow class="MJX-TeXAtom-ORD"> <mstyle displaystyle="true" scriptlevel="0"> <mrow class="MJX-TeXAtom-ORD"> <mfrac> <mi>d</mi> <mi>t</mi> </mfrac> </mrow> <mo>=</mo> <mi>φ</mi> <mo>=</mo> <mrow class="MJX-TeXAtom-ORD"> <mfrac> <mrow> <mn>1</mn> <mo>+</mo> <mrow class="MJX-TeXAtom-ORD"> <msqrt> <mn>5</mn> </msqrt> </mrow> </mrow> <mn>2</mn> </mfrac> </mrow> <mtext> </mtext> <mo>,</mo> </mstyle> </mrow> <annotation encoding="application/x-tex">{\displaystyle {\frac {d}{t}} -->=\varphi ={\frac {1+{\sqrt {5}} -->}{2}} -->\ ,}</annotation> </semantics> </math></td>
+   <td><math> <semantics> <mrow class="MJX-TeXAtom-ORD"> <mstyle displaystyle="true" scriptlevel="0"> <mrow class="MJX-TeXAtom-ORD"> <mfrac> <mi>d</mi> <mi>t</mi> </mfrac> </mrow> <mo>=</mo> <mi>φ</mi> <mo>=</mo> <mrow class="MJX-TeXAtom-ORD"> <mfrac> <mrow> <mn>1</mn> <mo>+</mo> <mrow class="MJX-TeXAtom-ORD"> <msqrt> <mn>5</mn> </msqrt> </mrow> </mrow> <mn>2</mn> </mfrac> </mrow> <mtext> </mtext> <mo>,</mo> </mstyle> </mrow> <annotation encoding="application/x-tex">{\displaystyle {\frac {d}{t}} --> -->=\varphi ={\frac {1+{\sqrt {5}} --> -->}{2}} --> -->\ ,}</annotation> </semantics> </math></td>
    <td> </td>
    <td> </td>
    <td> </td>

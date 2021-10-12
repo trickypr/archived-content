@@ -27,13 +27,13 @@
 <p style="text-align: center;">This API is available on <a href="/en-US/docs/Archive/B2G_OS">Firefox OS</a> for <a href="/en-US/docs/Archive/B2G_OS/Security/Application_security#App_Types">internal applications</a> only.</p>
 </div>
 
-<p>A Firefox OS application may want to keep the Geolocation service running even when invisible. This can be done by request a <a href="/en-US/docs/Web/API/MozWakeLock" title="The documentation about this has not yet been written; please consider contributing!"><code>MozWakeLock</code></a> and using with <!-- {{DOMxRef("Geolocation.watchPosition()")}} --> when you want to keep your invisible application continuing to use GPS.</p>
+<p>A Firefox OS application may want to keep the Geolocation service running even when invisible. This can be done by request a <a href="/en-US/docs/Web/API/MozWakeLock" title="The documentation about this has not yet been written; please consider contributing!"><code>MozWakeLock</code></a> and using with <!-- <!-- {{DOMxRef("Geolocation.watchPosition()")}} --> --> when you want to keep your invisible application continuing to use GPS.</p>
 
 <div class="blockIndicator note">
 <p>Any app, which wants to keep the geolocation service on when the screen is off or the app is background, needs to obtain a wake lock before it is invisible.</p>
 </div>
 
-<p>To request a wake lock, the method <!-- {{DOMxRef("Navigator.requestWakeLock()")}} --> is called with the <code>'gps'</code> argument.</p>
+<p>To request a wake lock, the method <!-- <!-- {{DOMxRef("Navigator.requestWakeLock()")}} --> --> is called with the <code>'gps'</code> argument.</p>
 
 <pre class="brush: js;">var lock = window.navigator.requestWakeLock('gps');</pre>
 

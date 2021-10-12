@@ -11,11 +11,11 @@
 );
 </pre>
 <h3 id="Parameters"> Parameters </h3>
-<dl><dt><code>hSession</code></dt><dd> <!-- {{ mediawiki.external('in') }} --> session handle.
-</dd><dt><code>pPart</code></dt><dd> <!-- {{ mediawiki.external('in') }} --> pointer to the data part.
-</dd><dt><code>ulPartLen</code></dt><dd> <!-- {{ mediawiki.external('in') }} --> length of data in bytes.
-</dd><dt><code>pEncryptedPart</code></dt><dd> <!-- {{ mediawiki.external('in') }} --> pointer to the location which receives the signed and encrypted data part or NULL.
-</dd><dt><code>pulEncryptedPartLen</code></dt><dd> <!-- {{ mediawiki.external('in') }} --> pointer to the length of the encrypted part buffer.
+<dl><dt><code>hSession</code></dt><dd> <!-- <!-- {{ mediawiki.external('in') }} --> --> session handle.
+</dd><dt><code>pPart</code></dt><dd> <!-- <!-- {{ mediawiki.external('in') }} --> --> pointer to the data part.
+</dd><dt><code>ulPartLen</code></dt><dd> <!-- <!-- {{ mediawiki.external('in') }} --> --> length of data in bytes.
+</dd><dt><code>pEncryptedPart</code></dt><dd> <!-- <!-- {{ mediawiki.external('in') }} --> --> pointer to the location which receives the signed and encrypted data part or NULL.
+</dd><dt><code>pulEncryptedPartLen</code></dt><dd> <!-- <!-- {{ mediawiki.external('in') }} --> --> pointer to the length of the encrypted part buffer.
 </dd></dl>
 <h3 id="Description"> Description </h3>
 <p><code>FC_SignEncryptUpdate</code> continues a multi-part signature and encryption operation. After calling both <code>FC_SignInit</code> and <code>FC_EncryptInit</code> to set up the operations this function may be called multiple times. The operation is finished by calls to <code>FC_SignFinal</code> and <code>FC_EncryptFinal</code>.

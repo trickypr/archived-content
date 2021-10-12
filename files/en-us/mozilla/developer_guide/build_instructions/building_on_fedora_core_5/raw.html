@@ -19,16 +19,16 @@
 </p>
 <h3 id="Debugging_tools_involving_stack_traces"> Debugging tools involving stack traces </h3>
 <h4 id="Compilation_errors_relating_to_JB_BP"> Compilation errors relating to JB_BP </h4>
-<p>Depending on the version of your source and configuration options, you may see compilation errors related to the removal of JB_BP, which was a constant used in code that took stack traces for debugging purposes by getting the frame address by calling setjmp. Patches to fix these problems are in <!-- {{ Bug(323853) }} -->.
+<p>Depending on the version of your source and configuration options, you may see compilation errors related to the removal of JB_BP, which was a constant used in code that took stack traces for debugging purposes by getting the frame address by calling setjmp. Patches to fix these problems are in <!-- <!-- {{ Bug(323853) }} --> -->.
 </p><p>The patch that affects the default build options has been checked in to the trunk, the MOZILLA_1_8_BRANCH, and the MOZILLA_1_8_0_BRANCH. However, if you are using other debugging tools, particularly on older branches, or building from older branches or release tags, you may need to apply some of these patches yourself.
 </p>
 <h4 id="No_stack_traces_due_to___builtin_frame_address.280.29_malfunction"> No stack traces due to __builtin_frame_address(0) malfunction </h4>
-<p>Because of changes in the meaning of __builtin_frame_address(0), patches from <!-- {{ Bug(331436) }} --> are needed; they should be checked in to the trunk reasonably soon.
+<p>Because of changes in the meaning of __builtin_frame_address(0), patches from <!-- <!-- {{ Bug(331436) }} --> --> are needed; they should be checked in to the trunk reasonably soon.
 </p>
 <h4 id="Need_-fno-omit-frame-pointer"> Need -fno-omit-frame-pointer </h4>
 <p>With gcc 4.1, some optimization levels (e.g., -O, -Os, -O2) have started to imply -fomit-frame-pointer. (Verify this? Which levels?) If you want to use jprof or any of the other stack walking tools, you probably need to use
 </p>
 <pre class="eval"> ac_add_options --enable-optimize="-O2 -fno-omit-frame-pointer"
 </pre>
-<p>when enabling optimization. (Perhaps retest this once patches from <!-- {{ Bug(331436) }} --> are landed.)
+<p>when enabling optimization. (Perhaps retest this once patches from <!-- <!-- {{ Bug(331436) }} --> --> are landed.)
 </p>

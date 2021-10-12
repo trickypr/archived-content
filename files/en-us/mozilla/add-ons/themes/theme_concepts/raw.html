@@ -1,4 +1,4 @@
-<div><!-- {{AddonSidebar()}} --></div>
+<div><!-- <!-- {{AddonSidebar()}} --> --></div>
 
 <p>Themes developed using the <a href="/en-US/Add-ons/WebExtensions">WebExtensions API</a> in Firefox enable you to change the look of the browser by adding images to the header area of the Firefox browser; this is the area behind the menu bar, toolbars, address bar, search bar, and tab strip.</p>
 
@@ -144,7 +144,7 @@
 
 <h2 id="Dynamic_themes">Dynamic themes</h2>
 
-<p>As an alternative to defining a static theme, you can use the <!-- {{WebExtAPIRef("theme")}} --> API to control the theme used in Firefox from within a browser extension. There are a couple of use cases for this option:</p>
+<p>As an alternative to defining a static theme, you can use the <!-- <!-- {{WebExtAPIRef("theme")}} --> --> API to control the theme used in Firefox from within a browser extension. There are a couple of use cases for this option:</p>
 
 <ul>
  <li>To bundle a theme with a browser extension, as an added extra.</li>
@@ -153,7 +153,7 @@
 
 <p>And, obviously, you can combine the two and bundle a programmatically controlled theme with your extension.</p>
 
-<p>Using the <!-- {{WebExtAPIRef("theme")}} --> API is straightforward. First, request "theme"<a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions"> permission</a> in the extension's<a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json"> manifest.json</a> file. Next, you build a JSON object containing the same information you would use in a static theme’s manifest.json, Finally, pass the JSON object in a <!-- {{WebExtAPIRef("theme.update()")}} --> call.</p>
+<p>Using the <!-- <!-- {{WebExtAPIRef("theme")}} --> --> API is straightforward. First, request "theme"<a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions"> permission</a> in the extension's<a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json"> manifest.json</a> file. Next, you build a JSON object containing the same information you would use in a static theme’s manifest.json, Finally, pass the JSON object in a <!-- <!-- {{WebExtAPIRef("theme.update()")}} --> --> call.</p>
 
 <p>For example, the following code, from the <a href="https://github.com/mdn/webextensions-examples/tree/master/dynamic-theme">dynamic theme example</a> defines the content for the day and night elements of the dynamic theme:</p>
 
@@ -178,7 +178,7 @@
   }
 };</pre>
 
-<p>The theme.Theme object is then passed to <!-- {{WebExtAPIRef("theme.update()")}} --> to change the header theme, as in this code snippet from the same example:</p>
+<p>The theme.Theme object is then passed to <!-- <!-- {{WebExtAPIRef("theme.update()")}} --> --> to change the header theme, as in this code snippet from the same example:</p>
 
 <pre class="brush: js" dir="ltr">function setTheme(theme) {
   if (currentTheme === theme) {
@@ -191,7 +191,7 @@
 
 <p dir="ltr">Learn more about dynamic themes and see an additional example in the following video:</p>
 
-<p dir="ltr"><!-- {{EmbedYouTube("ycckyrUN0AY")}} --></p>
+<p dir="ltr"><!-- <!-- {{EmbedYouTube("ycckyrUN0AY")}} --> --></p>
 
 <p dir="ltr"></p>
 

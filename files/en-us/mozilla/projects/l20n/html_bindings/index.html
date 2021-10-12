@@ -38,8 +38,8 @@ tags:
   &quot;locales&quot;: [ &quot;en-US&quot;, &quot;pl&quot;],
   &quot;default_locale&quot;: &quot;en-US&quot;,
   &quot;resources&quot;: [
-    &quot;../locales/<!-- {{locale}} -->/strings.l20n&quot;,
-    &quot;/shared/<!-- {{locale}} -->/date.l20n&quot;¨
+    &quot;../locales/<!-- <!-- {{locale}} --> -->/strings.l20n&quot;,
+    &quot;/shared/<!-- <!-- {{locale}} --> -->/date.l20n&quot;¨
   ]
 }
 </pre>
@@ -110,9 +110,9 @@ tags:
 <p>This data will be available context-wide to all localized strings. For instance, a string could use the information about the user&apos;s gender to provide two variants of the translation, like in the example below. See <a href="http://l20n.org/learn/">L20n by Example</a> to learn more about L20n&apos;s syntax.</p>
 
 <pre class="brush: html">&lt;invited[$user.gender] {
-  feminine: &quot;<!-- {{ $user.name }} --> has invited you to her circles.&quot;,
-  masculine: &quot;<!-- {{ $user.name }} --> has invited you to his circles.&quot;,
- *unknown: &quot;<!-- {{ $user.name }} --> has invited you to their circles.&quot;
+  feminine: &quot;<!-- <!-- {{ $user.name }} --> --> has invited you to her circles.&quot;,
+  masculine: &quot;<!-- <!-- {{ $user.name }} --> --> has invited you to his circles.&quot;,
+ *unknown: &quot;<!-- <!-- {{ $user.name }} --> --> has invited you to their circles.&quot;
 }&gt;
 </pre>
 
@@ -130,7 +130,7 @@ tags:
 
 <pre class="brush: html">&lt;script type=&quot;application/l20n&quot;&gt;
   &lt;brandName &quot;Firefox&quot;&gt;
-  &lt;about &quot;About <!-- {{ brandName }} -->&quot;&gt;
+  &lt;about &quot;About <!-- <!-- {{ brandName }} --> -->&quot;&gt;
 &lt;/script&gt;
 </pre>
 

@@ -1,6 +1,6 @@
-<div><!-- {{SpiderMonkeySidebar("JSAPI")}} --></div>
+<div><!-- <!-- {{SpiderMonkeySidebar("JSAPI")}} --> --></div>
 
-<p><!-- {{ obsolete_header("jsapi19") }} --></p>
+<p><!-- <!-- {{ obsolete_header("jsapi19") }} --> --></p>
 
 <div class="summary">
 <p>Retrieve the function flags of a given JavaScript function.</p>
@@ -21,7 +21,7 @@ JS_GetFunctionFlags(JSFunction *fun);
   </tr>
   <tr>
    <td><code>fun</code></td>
-   <td><!-- {{jsapixref("JSFunction", "JSFunction *")}} --></td>
+   <td><!-- <!-- {{jsapixref("JSFunction", "JSFunction *")}} --> --></td>
    <td>The function to examine.</td>
   </tr>
  </tbody>
@@ -31,7 +31,7 @@ JS_GetFunctionFlags(JSFunction *fun);
 
 <p><strong><code>JS_GetFunctionFlags</code></strong> retrieves the function flags of a given JavaScript function, <code>fun</code>. These flags are for the JavaScript engine’s internal use. Most applications can’t do anything useful with them.</p>
 
-<p>Function flags are a value of type <!-- {{jsapixref("jsint", "unsigned int")}} -->, the bitwise OR of zero or more of the <code>JSFUN</code> flags described below. Once a function is created, its flags cannot be modified.</p>
+<p>Function flags are a value of type <!-- <!-- {{jsapixref("jsint", "unsigned int")}} --> -->, the bitwise OR of zero or more of the <code>JSFUN</code> flags described below. Once a function is created, its flags cannot be modified.</p>
 
 <dl>
  <dt><code><strong>JSFUN_GENERIC_NATIVE</strong></code></dt>
@@ -55,5 +55,5 @@ JS_GetFunctionFlags(JSFunction *fun);
 <h2 id="See_Also" name="See_Also">See Also</h2>
 
 <ul>
- <li><!-- {{bug(807228)}} --></li>
+ <li><!-- <!-- {{bug(807228)}} --> --></li>
 </ul>

@@ -37,14 +37,18 @@ async function walkDirectory(dirName) {
   /** @type {string[]} */
   const files = await walkDirectory(path.join(process.cwd(), "files"));
 
-  console.log(path.join(process.cwd(), "files"));
-  console.log(files);
-
   files
     .map((file) => ({ path: file, content: readFileSync(file, "utf8") }))
     .map((file) => ({
       ...file,
       content: file.content.replace(/{{/g, "<!-- {{").replace(/}}/g, "}} -->"),
+    }))
+    .map((file) => ({
+      ...file,
+      content: file.content
+        .split("\n")
+        .map((line) => (line.includes("{{ Svg") ? "" : line))
+        .join("\n"),
     }))
     .forEach(({ path, content }) => writeFileSync(path, content));
 })();

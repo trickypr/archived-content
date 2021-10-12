@@ -12,7 +12,7 @@
    <th>Notes</th>
   </tr>
   <tr>
-   <td><code>browser.xul.error_pages.expert_bad_cert</code> <!-- {{ gecko_minversion_inline("1.9") }} --></td>
+   <td><code>browser.xul.error_pages.expert_bad_cert</code> <!-- <!-- {{ gecko_minversion_inline("1.9") }} --> --></td>
    <td><strong><code>false</code> (default)</strong><br>
     <code>true</code></td>
    <td>By default, the "Add exception" button is not available on the error page that appears when an SSL certificate is invalid. If you set this preference to <code>true</code>, that button is restored. If you also set the <code>browser.ssl_override_behavior</code> preference to 2, the certificate information is prefetched into the error dialog, saving you another click to override the error.</td>
@@ -30,17 +30,17 @@
    <th>Notes</th>
   </tr>
   <tr>
-   <td><code>dom.min_timeout_value</code> <!-- {{ gecko_minversion_inline("5.0") }} --></td>
+   <td><code>dom.min_timeout_value</code> <!-- <!-- {{ gecko_minversion_inline("5.0") }} --> --></td>
    <td>Positive integers</td>
-   <td>The minimum length of time, in milliseconds, that the <!-- {{ domxref("window.setTimeout()") }} --> function can set a timeout delay for. This defaults to 4 ms (before 10 ms). Calls to <code>setTimeout()</code> with a delay smaller than this will be clamped to this minimum value.</td>
+   <td>The minimum length of time, in milliseconds, that the <!-- <!-- {{ domxref("window.setTimeout()") }} --> --> function can set a timeout delay for. This defaults to 4 ms (before 10 ms). Calls to <code>setTimeout()</code> with a delay smaller than this will be clamped to this minimum value.</td>
   </tr>
   <tr>
-   <td><code>dom.max_chrome_script_run_time</code> <!-- {{ gecko_minversion_inline("1.8.0.7") }} --></td>
+   <td><code>dom.max_chrome_script_run_time</code> <!-- <!-- {{ gecko_minversion_inline("1.8.0.7") }} --> --></td>
    <td>Positive integers</td>
    <td>The maximum number of seconds that scripts running in chrome are allowed to run before being timed out.</td>
   </tr>
   <tr>
-   <td><code>dom.send_after_paint_to_content</code> <!-- {{ gecko_minversion_inline("2.0") }} --></td>
+   <td><code>dom.send_after_paint_to_content</code> <!-- <!-- {{ gecko_minversion_inline("2.0") }} --> --></td>
    <td><strong><code>false</code> (default)</strong><br>
     <code>true</code></td>
    <td>For security reasons, sending the <a href="/en/Gecko-Specific_DOM_Events#MozAfterPaint" title="en/Gecko-Specific DOM Events#MozAfterPaint"><code>MozAfterPaint</code></a> event to web content is disabled by default for the time being; it is still sent to chrome, however. Setting this preference to <code>true</code> enables the event.</td>
@@ -58,7 +58,7 @@
    <th>Notes</th>
   </tr>
   <tr>
-   <td><code>prompts.tab_modal.enabled</code> <!-- {{ gecko_minversion_inline("2.0") }} --></td>
+   <td><code>prompts.tab_modal.enabled</code> <!-- <!-- {{ gecko_minversion_inline("2.0") }} --> --></td>
    <td>
     <p><strong><code>true</code> (default)</strong></p>
 

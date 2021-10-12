@@ -11,11 +11,11 @@
 );
 </pre>
 <h3 id="Parameters"> Parameters </h3>
-<dl><dt><code>hSession</code></dt><dd> <!-- {{ mediawiki.external('in') }} --> session handle.
-</dd><dt><code>pSignature</code></dt><dd> <!-- {{ mediawiki.external('in') }} --> mechanism to be used for the signing operation.
-</dd><dt><code>usSignatureLen</code></dt><dd> <!-- {{ mediawiki.external('in') }} --> handle of the key to be usedn.
-</dd><dt><code>pData</code></dt><dd> <!-- {{ mediawiki.external('out') }} --> pointer to the buffer or NULL.
-</dd><dt><code>pusDataLen</code></dt><dd> <!-- {{ mediawiki.external('in, out') }} --> pointer to the size of the output buffer, replaced by the length of the signature if the operation is successful.
+<dl><dt><code>hSession</code></dt><dd> <!-- <!-- {{ mediawiki.external('in') }} --> --> session handle.
+</dd><dt><code>pSignature</code></dt><dd> <!-- <!-- {{ mediawiki.external('in') }} --> --> mechanism to be used for the signing operation.
+</dd><dt><code>usSignatureLen</code></dt><dd> <!-- <!-- {{ mediawiki.external('in') }} --> --> handle of the key to be usedn.
+</dd><dt><code>pData</code></dt><dd> <!-- <!-- {{ mediawiki.external('out') }} --> --> pointer to the buffer or NULL.
+</dd><dt><code>pusDataLen</code></dt><dd> <!-- <!-- {{ mediawiki.external('in, out') }} --> --> pointer to the size of the output buffer, replaced by the length of the signature if the operation is successful.
 </dd></dl>
 <h3 id="Description"> Description </h3>
 <p><code>FC_VerifyRecover</code> verifies data in a single operation where the (digest) data can be recovered from the signature. If <code>pSignature</code> is NULL only the length of the signature is returned in <code>*pusSignatureLen</code>.

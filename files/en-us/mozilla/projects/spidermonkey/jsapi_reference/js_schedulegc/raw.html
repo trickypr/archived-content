@@ -1,6 +1,6 @@
-<div><!-- {{SpiderMonkeySidebar("JSAPI")}} --></div>
+<div><!-- <!-- {{SpiderMonkeySidebar("JSAPI")}} --> --></div>
 
-<div><!-- {{jsapi_minversion_header("17")}} --></div>
+<div><!-- <!-- {{jsapi_minversion_header("17")}} --> --></div>
 
 <div class="summary">
 <p>Set <code>nextScheduled</code> parameter of GC.</p>
@@ -21,8 +21,8 @@ JS_ScheduleGC(JSContext *cx, uint32_t count);
   </tr>
   <tr>
    <td><code>cx</code></td>
-   <td><!-- {{jsapixref("JSRuntime", "JSContext *")}} --></td>
-   <td>A context. The GC zeal level of the associated <!-- {{jsapixref("JSRuntime")}} --> is set.</td>
+   <td><!-- <!-- {{jsapixref("JSRuntime", "JSContext *")}} --> --></td>
+   <td>A context. The GC zeal level of the associated <!-- <!-- {{jsapixref("JSRuntime")}} --> --> is set.</td>
   </tr>
   <tr>
    <td><code>frequency</code></td>
@@ -38,12 +38,12 @@ JS_ScheduleGC(JSContext *cx, uint32_t count);
 
 <p>At every allocation <code>nextScheduled</code> is decremented. When it reaches zero, we do either a full or a compartmental GC.</p>
 
-<p>At this point, if <!-- {{jsapixref("JS_SetGCZeal", "zeal")}} --> is one of the types that trigger periodic collection, <code>then nextScheduled</code> is reset to the value of <!-- {{jsapixref("JS_SetGCZeal", "frequency")}} -->. Otherwise, no additional GCs take place.</p>
+<p>At this point, if <!-- <!-- {{jsapixref("JS_SetGCZeal", "zeal")}} --> --> is one of the types that trigger periodic collection, <code>then nextScheduled</code> is reset to the value of <!-- <!-- {{jsapixref("JS_SetGCZeal", "frequency")}} --> -->. Otherwise, no additional GCs take place.</p>
 
 <h2 id="See_Also" name="See_Also">See Also</h2>
 
 <ul>
- <li><!-- {{LXRSearch("ident", "i", "JS_ScheduleGC")}} --></li>
- <li><!-- {{jsapixref("JS_SetGCZeal")}} --></li>
- <li><!-- {{bug(650978)}} --></li>
+ <li><!-- <!-- {{LXRSearch("ident", "i", "JS_ScheduleGC")}} --> --></li>
+ <li><!-- <!-- {{jsapixref("JS_SetGCZeal")}} --> --></li>
+ <li><!-- <!-- {{bug(650978)}} --> --></li>
 </ul>

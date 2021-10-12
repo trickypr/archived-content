@@ -1,4 +1,4 @@
-<div><!-- {{SpiderMonkeySidebar("JSAPI")}} --></div>
+<div><!-- <!-- {{SpiderMonkeySidebar("JSAPI")}} --> --></div>
 <div class="summary">
 <p>Create a new JS string.</p>
 </div>
@@ -18,8 +18,8 @@ JS_NewUCStringCopyN(JSContext *cx, const char16_t *s, size_t n);
   </tr>
   <tr>
    <td><code>cx</code></td>
-   <td><!-- {{jsapixref("JSRuntime", "JSContext *")}} --></td>
-   <td>Pointer to a JS context from which to derive runtime information. <!-- {{ Jsapi-requires-request() }} --></td>
+   <td><!-- <!-- {{jsapixref("JSRuntime", "JSContext *")}} --> --></td>
+   <td>Pointer to a JS context from which to derive runtime information. <!-- <!-- {{ Jsapi-requires-request() }} --> --></td>
   </tr>
   <tr>
    <td><code>s</code></td>
@@ -40,10 +40,10 @@ JS_NewUCStringCopyN(JSContext *cx, const char16_t *s, size_t n);
 <p>On success, <code>JS_NewStringCopyN</code> and <code>JS_NewUCStringCopyN</code> return a pointer to the new JS string. Otherwise they return <code>NULL</code>.</p>
 <h2 id="See_Also" name="See_Also">See Also</h2>
 <ul>
-  <li><!-- {{ LXRSearch("ident", "i", "JS_NewStringCopyN") }} --></li>
-  <li><!-- {{ LXRSearch("ident", "i", "JS_NewUCStringCopyN") }} --></li>
-  <li><!-- {{jsapixref("JS_GetEmptyStringValue")}} --></li>
-  <li><!-- {{jsapixref("JS_NewStringCopyZ")}} --></li>
-  <li><!-- {{jsapixref("JS_NewStringCopyZ", "JS_NewUCStringCopyZ")}} --></li>
-  <li><!-- {{jsapixref("JS_ValueToString")}} --></li>
+  <li><!-- <!-- {{ LXRSearch("ident", "i", "JS_NewStringCopyN") }} --> --></li>
+  <li><!-- <!-- {{ LXRSearch("ident", "i", "JS_NewUCStringCopyN") }} --> --></li>
+  <li><!-- <!-- {{jsapixref("JS_GetEmptyStringValue")}} --> --></li>
+  <li><!-- <!-- {{jsapixref("JS_NewStringCopyZ")}} --> --></li>
+  <li><!-- <!-- {{jsapixref("JS_NewStringCopyZ", "JS_NewUCStringCopyZ")}} --> --></li>
+  <li><!-- <!-- {{jsapixref("JS_ValueToString")}} --> --></li>
 </ul>

@@ -1,4 +1,4 @@
-<div><!-- {{SpiderMonkeySidebar("JSAPI")}} --></div>
+<div><!-- <!-- {{SpiderMonkeySidebar("JSAPI")}} --> --></div>
 
 <div class="summary">
 <p>Adjust performance parameters related to garbage collection.</p>
@@ -28,13 +28,13 @@ JS_SetGCParameterForThread(JSContext *cx, JSGCParamKey key, uint32_t value); // 
   </tr>
   <tr>
    <td><code>rt</code></td>
-   <td><!-- {{jsapixref("JSRuntime", "JSRuntime *")}} --></td>
+   <td><!-- <!-- {{jsapixref("JSRuntime", "JSRuntime *")}} --> --></td>
    <td>The runtime to configure.</td>
   </tr>
   <tr>
    <td><code>cx</code></td>
-   <td><!-- {{jsapixref("JSRuntime", "JSContext *")}} --></td>
-   <td>The context to configure. <!-- {{ Jsapi-requires-request() }} --></td>
+   <td><!-- <!-- {{jsapixref("JSRuntime", "JSContext *")}} --> --></td>
+   <td>The context to configure. <!-- <!-- {{ Jsapi-requires-request() }} --> --></td>
   </tr>
   <tr>
    <td><code>key</code></td>
@@ -242,15 +242,15 @@ JS_SetGCParameterForThread(JSContext *cx, JSGCParamKey key, uint32_t value); // 
 <h2 id="See_Also" name="See_Also">See Also</h2>
 
 <ul>
- <li><!-- {{ LXRSearch("ident", "i", "JS_GetGCParameter") }} --></li>
- <li><!-- {{ LXRSearch("ident", "i", "JS_SetGCParameter") }} --></li>
- <li><!-- {{bug(474801)}} -->
+ <li><!-- <!-- {{ LXRSearch("ident", "i", "JS_GetGCParameter") }} --> --></li>
+ <li><!-- <!-- {{ LXRSearch("ident", "i", "JS_SetGCParameter") }} --> --></li>
+ <li><!-- <!-- {{bug(474801)}} --> -->
   <ul>
    <li><code>JSGC_BYTES</code></li>
    <li><code>JSGC_NUMBER</code></li>
   </ul>
  </li>
- <li><!-- {{bug(474497)}} -->
+ <li><!-- <!-- {{bug(474497)}} --> -->
   <ul>
    <li><code>JSGC_MAX_CODE_CACHE_BYTES</code></li>
    <li>This option no-longer exists</li>
@@ -258,32 +258,32 @@ JS_SetGCParameterForThread(JSContext *cx, JSGCParamKey key, uint32_t value); // 
    <li><code>JS_SetGCParameterForThread</code></li>
   </ul>
  </li>
- <li><!-- {{bug(624229)}} -->
+ <li><!-- <!-- {{bug(624229)}} --> -->
   <ul>
    <li><code>JSGC_MODE</code></li>
   </ul>
  </li>
- <li><!-- {{bug(631733)}} -->
+ <li><!-- <!-- {{bug(631733)}} --> -->
   <ul>
    <li><code>JSGC_UNUSED_CHUNKS</code></li>
   </ul>
  </li>
- <li><!-- {{bug(674480)}} -->
+ <li><!-- <!-- {{bug(674480)}} --> -->
   <ul>
    <li><code>JSGC_TOTAL_CHUNKS</code></li>
   </ul>
  </li>
- <li><!-- {{bug(641025)}} -->
+ <li><!-- <!-- {{bug(641025)}} --> -->
   <ul>
    <li><code>JSGC_SLICE_TIME_BUDGET</code></li>
   </ul>
  </li>
- <li><!-- {{bug(673551)}} -->
+ <li><!-- <!-- {{bug(673551)}} --> -->
   <ul>
    <li><code>JSGC_MARK_STACK_LIMIT</code></li>
   </ul>
  </li>
- <li><!-- {{bug(765435)}} -->
+ <li><!-- <!-- {{bug(765435)}} --> -->
   <ul>
    <li><code>JSGC_HIGH_FREQUENCY_TIME_LIMIT</code></li>
    <li><code>JSGC_HIGH_FREQUENCY_LOW_LIMIT</code></li>
@@ -295,18 +295,18 @@ JS_SetGCParameterForThread(JSContext *cx, JSGCParamKey key, uint32_t value); // 
    <li><code>JSGC_DYNAMIC_MARK_SLICE</code></li>
   </ul>
  </li>
- <li><!-- {{bug(800063)}} -->
+ <li><!-- <!-- {{bug(800063)}} --> -->
   <ul>
    <li><code>JSGC_ALLOCATION_THRESHOLD</code></li>
   </ul>
  </li>
- <li><!-- {{bug(871005)}} -->
+ <li><!-- <!-- {{bug(871005)}} --> -->
   <ul>
    <li><code>JSGC_DECOMMIT_THRESHOLD</code></li>
    <li>This option is no-longer exists</li>
   </ul>
  </li>
- <li><!-- {{bug(1017141)}} -->
+ <li><!-- <!-- {{bug(1017141)}} --> -->
   <ul>
    <li><code>JSGC_MIN_EMPTY_CHUNK_COUNT</code></li>
    <li><code>JSGC_MAX_EMPTY_CHUNK_COUNT</code></li>

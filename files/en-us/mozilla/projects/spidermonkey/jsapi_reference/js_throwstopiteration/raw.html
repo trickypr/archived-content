@@ -1,6 +1,6 @@
-<div><!-- {{SpiderMonkeySidebar("JSAPI")}} --></div>
+<div><!-- <!-- {{SpiderMonkeySidebar("JSAPI")}} --> --></div>
 
-<p><!-- {{ jsapi_minversion_header("js1.8") }} --></p>
+<p><!-- <!-- {{ jsapi_minversion_header("js1.8") }} --> --></p>
 
 <div class="summary">
 <p>Throw a <code>StopIteration</code> exception.</p>
@@ -21,7 +21,7 @@ JS_ThrowStopIteration(JSContext *cx);
   </tr>
   <tr>
    <td><code>cx</code></td>
-   <td><!-- {{jsapixref("JSRuntime", "JSContext *")}} --></td>
+   <td><!-- <!-- {{jsapixref("JSRuntime", "JSContext *")}} --> --></td>
    <td>The context in which to throw the <code>StopIteration</code> object.</td>
   </tr>
  </tbody>
@@ -33,12 +33,12 @@ JS_ThrowStopIteration(JSContext *cx);
 
 <p>In <code>for…in</code> and <code>for each…in</code> loops, the JavaScript engine can create an iterator object and call its <code>.next</code> method repeatedly, as described in <a href="/en-US/docs/Web/JavaScript/New_in_JavaScript/1.7#Iterators" title="New in JavaScript 1.7: Iterators">New in JavaScript 1.7: Iterators</a>. The <code>.next</code> method may throw <code>StopIteration</code> when there are no more values left to iterate. The engine automatically catches the exception and exits the loop.</p>
 
-<p><!-- {{jsapixref("JSClass.enumerate")}} --> offers a simpler way to customize object iteration.</p>
+<p><!-- <!-- {{jsapixref("JSClass.enumerate")}} --> --> offers a simpler way to customize object iteration.</p>
 
 <h2 id="See_Also" name="See_Also">See Also</h2>
 
 <ul>
- <li><!-- {{ LXRSearch("ident", "i", "JS_ThrowStopIteration") }} --></li>
- <li><!-- {{jsapixref("JS_IsStopIteration")}} --></li>
- <li><!-- {{bug(390947)}} --></li>
+ <li><!-- <!-- {{ LXRSearch("ident", "i", "JS_ThrowStopIteration") }} --> --></li>
+ <li><!-- <!-- {{jsapixref("JS_IsStopIteration")}} --> --></li>
+ <li><!-- <!-- {{bug(390947)}} --> --></li>
 </ul>

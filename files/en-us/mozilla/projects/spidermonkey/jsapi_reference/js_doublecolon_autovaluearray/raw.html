@@ -1,9 +1,9 @@
-<div><!-- {{SpiderMonkeySidebar("JSAPI")}} --></div>
+<div><!-- <!-- {{SpiderMonkeySidebar("JSAPI")}} --> --></div>
 
-<p><!-- {{ jsapi_minversion_header("31") }} --></p>
+<p><!-- <!-- {{ jsapi_minversion_header("31") }} --> --></p>
 
 <div class="summary">
-<p>Root an internal fixed-size array of <!-- {{jsapixref("JS::Value")}} -->s.</p>
+<p>Root an internal fixed-size array of <!-- <!-- {{jsapixref("JS::Value")}} --> -->s.</p>
 </div>
 
 <h2 id="Syntax" name="Syntax">Syntax</h2>
@@ -20,24 +20,24 @@
   </tr>
   <tr>
    <td><code>cx</code></td>
-   <td><!-- {{jsapixref("JSRuntime", "JSContext *")}} --></td>
-   <td>The context in which to add the root. <!-- {{ Jsapi-requires-request() }} --></td>
+   <td><!-- <!-- {{jsapixref("JSRuntime", "JSContext *")}} --> --></td>
+   <td>The context in which to add the root. <!-- <!-- {{ Jsapi-requires-request() }} --> --></td>
   </tr>
   <tr>
    <td><code>N</code></td>
    <td><code>size_t</code></td>
-   <td>Size of a <!-- {{jsapixref("JS::Value")}} --> array.</td>
+   <td>Size of a <!-- <!-- {{jsapixref("JS::Value")}} --> --> array.</td>
   </tr>
  </tbody>
 </table>
 
 <h2 id="Description" name="Description">Description</h2>
 
-<p><code>JS::AutoValueArray&lt;N&gt;</code> holds a rooted array of <!-- {{jsapixref("JS::Value")}} -->. This is typically used for local variables being passed to function which requires <!-- {{jsapixref("JS::HandleValueArray")}} --> or a pointer to <!-- {{jsapixref("JS::Value")}} --> array.</p>
+<p><code>JS::AutoValueArray&lt;N&gt;</code> holds a rooted array of <!-- <!-- {{jsapixref("JS::Value")}} --> -->. This is typically used for local variables being passed to function which requires <!-- <!-- {{jsapixref("JS::HandleValueArray")}} --> --> or a pointer to <!-- <!-- {{jsapixref("JS::Value")}} --> --> array.</p>
 
 <h2 id="Examples">Examples</h2>
 
-<p>Pass to function as a pointer to <!-- {{jsapixref("JS::Value")}} -->.</p>
+<p>Pass to function as a pointer to <!-- <!-- {{jsapixref("JS::Value")}} --> -->.</p>
 
 <pre class="brush: cpp">bool
 someFunction1(JSContext *cx, unsigned argc, const JS::Value *argv) {
@@ -49,7 +49,7 @@ JS::AutoValueArray&lt;2&gt; args(cx);
 someFunction1(cx, 2, args.begin());
 </pre>
 
-<p>Pass to function as <!-- {{jsapixref("JS::HandleValueArray")}} -->.</p>
+<p>Pass to function as <!-- <!-- {{jsapixref("JS::HandleValueArray")}} --> -->.</p>
 
 <pre class="brush: cpp">bool
 someFunction2(JSContext *cx, const JS::HandleValueArray &amp;args) {
@@ -64,8 +64,8 @@ someFunction2(cx, args);
 <h2 id="See_Also" name="See_Also">See Also</h2>
 
 <ul>
- <li><!-- {{ LXRSearch("ident", "i", "JS::AutoValueArray") }} --></li>
- <li><!-- {{jsapixref("JS::Value")}} --></li>
- <li><!-- {{jsapixref("JS::HandleValueArray")}} --></li>
- <li><!-- {{bug(965830)}} --></li>
+ <li><!-- <!-- {{ LXRSearch("ident", "i", "JS::AutoValueArray") }} --> --></li>
+ <li><!-- <!-- {{jsapixref("JS::Value")}} --> --></li>
+ <li><!-- <!-- {{jsapixref("JS::HandleValueArray")}} --> --></li>
+ <li><!-- <!-- {{bug(965830)}} --> --></li>
 </ul>

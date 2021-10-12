@@ -1,6 +1,6 @@
-<p><!-- {{ jsapi_minversion_header("31") }} --></p>
+<p><!-- <!-- {{ jsapi_minversion_header("31") }} --> --></p>
 
-<div><!-- {{SpiderMonkeySidebar("JSAPI")}} --></div>
+<div><!-- <!-- {{SpiderMonkeySidebar("JSAPI")}} --> --></div>
 
 <div class="summary">
 <p>Configure a <code>JSCompartment</code> to use a specific version of the JavaScript language.</p>
@@ -21,12 +21,12 @@ JS_SetVersionForCompartment(JSCompartment *compartment, JSVersion version);
   </tr>
   <tr>
    <td><code>compartment</code></td>
-   <td><!-- {{jsapixref("JSCompartment", "JSCompartment *")}} --></td>
+   <td><!-- <!-- {{jsapixref("JSCompartment", "JSCompartment *")}} --> --></td>
    <td>Pointer to a JS compartment.</td>
   </tr>
   <tr>
    <td><code>version</code></td>
-   <td><!-- {{jsapixref("JSVersion")}} --></td>
+   <td><!-- <!-- {{jsapixref("JSVersion")}} --> --></td>
    <td>Version of JavaScript to set compartment to.</td>
   </tr>
  </tbody>
@@ -34,15 +34,15 @@ JS_SetVersionForCompartment(JSCompartment *compartment, JSVersion version);
 
 <h2 id="Description" name="Description">Description</h2>
 
-<p><code>JS_SetVersionForCompartment</code> attempts to set the version of JavaScript to version for a specified compartment, <code>compartment</code>. The version comes from the <!-- {{jsapixref("JSVersion")}} --> enumerated type.</p>
+<p><code>JS_SetVersionForCompartment</code> attempts to set the version of JavaScript to version for a specified compartment, <code>compartment</code>. The version comes from the <!-- <!-- {{jsapixref("JSVersion")}} --> --> enumerated type.</p>
 
 <h2 id="See_Also" name="See_Also">See Also</h2>
 
 <ul>
- <li><!-- {{ LXRSearch("ident", "i", "JS_SetVersionForCompartment") }} --></li>
- <li><!-- {{jsapixref("JSVersion")}} --></li>
- <li><!-- {{jsapixref("JS_GetVersion")}} --></li>
- <li><!-- {{jsapixref("JS_VersionToString")}} --></li>
- <li><!-- {{jsapixref("JS_StringToVersion")}} --></li>
- <li><!-- {{bug(880917)}} --></li>
+ <li><!-- <!-- {{ LXRSearch("ident", "i", "JS_SetVersionForCompartment") }} --> --></li>
+ <li><!-- <!-- {{jsapixref("JSVersion")}} --> --></li>
+ <li><!-- <!-- {{jsapixref("JS_GetVersion")}} --> --></li>
+ <li><!-- <!-- {{jsapixref("JS_VersionToString")}} --> --></li>
+ <li><!-- <!-- {{jsapixref("JS_StringToVersion")}} --> --></li>
+ <li><!-- <!-- {{bug(880917)}} --> --></li>
 </ul>

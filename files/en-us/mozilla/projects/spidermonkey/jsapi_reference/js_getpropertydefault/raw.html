@@ -1,7 +1,7 @@
 <div>
- <!-- {{SpiderMonkeySidebar("JSAPI")}} --></div>
-<p><!-- {{ obsolete_header("jsapi26") }} --></p>
-<p><!-- {{ jsapi_minversion_header("1.8.5") }} --></p>
+ <!-- <!-- {{SpiderMonkeySidebar("JSAPI")}} --> --></div>
+<p><!-- <!-- {{ obsolete_header("jsapi26") }} --> --></p>
+<p><!-- <!-- {{ jsapi_minversion_header("1.8.5") }} --> --></p>
 <div class="summary">
  <p>Finds a specified property and retrieves its value or provided default value.</p>
 </div>
@@ -23,27 +23,27 @@ JS_GetPropertyByIdDefault(JSContext *cx, JSObject *obj, jsid id, jsval def,
   </tr>
   <tr>
    <td><code>cx</code></td>
-   <td><!-- {{jsapixref("JSRuntime", "JSContext *")}} --></td>
-   <td>A context. <!-- {{ Jsapi-requires-request() }} --></td>
+   <td><!-- <!-- {{jsapixref("JSRuntime", "JSContext *")}} --> --></td>
+   <td>A context. <!-- <!-- {{ Jsapi-requires-request() }} --> --></td>
   </tr>
   <tr>
    <td><code>obj</code></td>
-   <td><!-- {{jsapixref("JSObject", "JS::HandleObject")}} --></td>
+   <td><!-- <!-- {{jsapixref("JSObject", "JS::HandleObject")}} --> --></td>
    <td>Object to search on for the property.</td>
   </tr>
   <tr>
    <td><code>name</code> <em>or</em> <code>id</code></td>
-   <td><code>const char *</code> <em>or</em> <!-- {{jsapixref("jsid", "JS::HandleId")}} --></td>
+   <td><code>const char *</code> <em>or</em> <!-- <!-- {{jsapixref("jsid", "JS::HandleId")}} --> --></td>
    <td>Name of the property to look up.</td>
   </tr>
   <tr>
    <td><code>def</code></td>
-   <td><!-- {{jsapixref("JS::Value", "JS::HandleValue")}} --></td>
+   <td><!-- <!-- {{jsapixref("JS::Value", "JS::HandleValue")}} --> --></td>
    <td>Default value if the property is not found.</td>
   </tr>
   <tr>
    <td><code>vp</code></td>
-   <td><!-- {{jsapixref("JS::Value", "JS::MutableHandleValue")}} --></td>
+   <td><!-- <!-- {{jsapixref("JS::Value", "JS::MutableHandleValue")}} --> --></td>
    <td>Out parameter. On success, <code>*vp</code> receives the current value of the property, or <code>undefined</code> if no such property is found.</td>
   </tr>
  </tbody>
@@ -53,5 +53,5 @@ JS_GetPropertyByIdDefault(JSContext *cx, JSObject *obj, jsid id, jsval def,
 <p>On success, these functions set <code>*vp</code> to the current value of the property, or <code>def</code> if <code>obj</code> has no such property, and return <code>true</code>. On an error or exception, these functions return <code>false</code>, and the value left in <code>*vp</code> is undefined.</p>
 <h2 id="See_Also" name="See_Also">See Also</h2>
 <ul>
- <li><!-- {{bug(905774)}} --></li>
+ <li><!-- <!-- {{bug(905774)}} --> --></li>
 </ul>

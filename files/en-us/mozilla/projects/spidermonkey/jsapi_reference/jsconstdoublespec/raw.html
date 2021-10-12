@@ -1,5 +1,5 @@
-<div><!-- {{SpiderMonkeySidebar("JSAPI")}} --></div>
-<p><!-- {{ jsapi_minversion_header("17") }} --></p>
+<div><!-- <!-- {{SpiderMonkeySidebar("JSAPI")}} --> --></div>
+<p><!-- <!-- {{ jsapi_minversion_header("17") }} --> --></p>
 <div class="summary">
 <p>Describes a double and integer value and assigns it a name.</p>
 </div>
@@ -37,34 +37,34 @@ typedef JSConstScalarSpec&lt;int32_t&gt; JSConstIntegerSpec; // Added in SpiderM
   <tr>
    <td><code>flags</code></td>
    <td><code>uint8_t</code></td>
-   <td><!-- {{jsapixref("JS_GetPropertyAttributes", "Property attributes", "#Property_attributes", 1)}} --> for the double. <!-- {{ obsolete_inline("jsapi35") }} --><br>
+   <td><!-- <!-- {{jsapixref("JS_GetPropertyAttributes", "Property attributes", "#Property_attributes", 1)}} --> --> for the double. <!-- <!-- {{ obsolete_inline("jsapi35") }} --> --><br>
 Currently these can be 0 or more of the following values <code>OR</code>'d:
     <ul>
-     <li><!-- {{jsapixref("JS_GetPropertyAttributes", "JSPROP_ENUMERATE")}} -->: property is visible in <code>for</code> loops.</li>
-     <li><!-- {{jsapixref("JS_GetPropertyAttributes", "JSPROP_READONLY")}} -->: property is read-only.</li>
-     <li><!-- {{jsapixref("JS_GetPropertyAttributes", "JSPROP_PERMANENT")}} -->: property cannot be deleted.</li>
-     <li><!-- {{jsapixref("JS_GetPropertyAttributes", "JSPROP_EXPORTED")}} -->: property can be exported outside its object.</li>
-     <li><!-- {{jsapixref("JS_GetPropertyAttributes", "JSPROP_INDEX")}} -->: property is actually an array element.</li>
+     <li><!-- <!-- {{jsapixref("JS_GetPropertyAttributes", "JSPROP_ENUMERATE")}} --> -->: property is visible in <code>for</code> loops.</li>
+     <li><!-- <!-- {{jsapixref("JS_GetPropertyAttributes", "JSPROP_READONLY")}} --> -->: property is read-only.</li>
+     <li><!-- <!-- {{jsapixref("JS_GetPropertyAttributes", "JSPROP_PERMANENT")}} --> -->: property cannot be deleted.</li>
+     <li><!-- <!-- {{jsapixref("JS_GetPropertyAttributes", "JSPROP_EXPORTED")}} --> -->: property can be exported outside its object.</li>
+     <li><!-- <!-- {{jsapixref("JS_GetPropertyAttributes", "JSPROP_INDEX")}} --> -->: property is actually an array element.</li>
     </ul>
-    <p>If this field is <code>0</code>, <!-- {{jsapixref("JS_DefineConstDoubles")}} --> uses the default attributes <code>JSPROP_READONLY | JSPROP_PERMANENT</code> instead.</p>
+    <p>If this field is <code>0</code>, <!-- <!-- {{jsapixref("JS_DefineConstDoubles")}} --> --> uses the default attributes <code>JSPROP_READONLY | JSPROP_PERMANENT</code> instead.</p>
    </td>
   </tr>
   <tr>
    <td><code>spare</code></td>
    <td><code>uint8_t [3]</code></td>
-   <td>Reserved for future use. <!-- {{ obsolete_inline("jsapi35") }} --></td>
+   <td>Reserved for future use. <!-- <!-- {{ obsolete_inline("jsapi35") }} --> --></td>
   </tr>
  </tbody>
 </table>
 <h3 id="Description" name="Description">Description</h3>
-<p><code>JSConstDoubleSpecs</code> is used to define a set of double values that are assigned as properties to an object using <!-- {{jsapixref("JS_DefineConstDoubles")}} -->.</p>
-<p><code>JSConstIntegerSpecs</code> is used to define a set of double values that are assigned as properties to an object using <!-- {{jsapixref("JS_DefineConstIntegers")}} -->.</p>
+<p><code>JSConstDoubleSpecs</code> is used to define a set of double values that are assigned as properties to an object using <!-- <!-- {{jsapixref("JS_DefineConstDoubles")}} --> -->.</p>
+<p><code>JSConstIntegerSpecs</code> is used to define a set of double values that are assigned as properties to an object using <!-- <!-- {{jsapixref("JS_DefineConstIntegers")}} --> -->.</p>
 
 <h2 id="See_Also" name="See_Also">See Also</h2>
 <ul>
-<li><!-- {{ LXRSearch("ident", "i", "JSConstDoubleSpec") }} --></li>
-<li><!-- {{ LXRSearch("ident", "i", "JSConstIntegerSpec") }} --></li>
-<li><!-- {{jsapixref("JS_DefineConstDoubles")}} -->.</li>
-<li><!-- {{jsapixref("JS_DefineConstIntegers")}} --></li>
-  <li><!-- {{bug(1066020)}} --> - changed to <code>template</code>, and removed <code>flags</code> and <code>spare</code></li>
+<li><!-- <!-- {{ LXRSearch("ident", "i", "JSConstDoubleSpec") }} --> --></li>
+<li><!-- <!-- {{ LXRSearch("ident", "i", "JSConstIntegerSpec") }} --> --></li>
+<li><!-- <!-- {{jsapixref("JS_DefineConstDoubles")}} --> -->.</li>
+<li><!-- <!-- {{jsapixref("JS_DefineConstIntegers")}} --> --></li>
+  <li><!-- <!-- {{bug(1066020)}} --> --> - changed to <code>template</code>, and removed <code>flags</code> and <code>spare</code></li>
 </ul>

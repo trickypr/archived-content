@@ -1,5 +1,5 @@
 <div>
- <!-- {{SpiderMonkeySidebar("JSAPI")}} --></div>
+ <!-- <!-- {{SpiderMonkeySidebar("JSAPI")}} --> --></div>
 <div class="summary">
 <p>Creates a numeric property on a specified object.</p>
 </div>
@@ -56,12 +56,12 @@ JS_DefineElement(JSContext *cx, JSObject *obj, uint32_t index, jsval value,
   </tr>
   <tr>
    <td><code>cx</code></td>
-   <td><!-- {{jsapixref("JSRuntime", "JSContext *")}} --></td>
-   <td>The context in which to create the new property. <!-- {{ Jsapi-requires-request() }} --></td>
+   <td><!-- <!-- {{jsapixref("JSRuntime", "JSContext *")}} --> --></td>
+   <td>The context in which to create the new property. <!-- <!-- {{ Jsapi-requires-request() }} --> --></td>
   </tr>
   <tr>
    <td><code>obj</code></td>
-   <td><!-- {{jsapixref("JSObject", "JS::HandleObject")}} --> <em>or</em> <!-- {{jsapixref("JSObject", "JSObject *")}} --></td>
+   <td><!-- <!-- {{jsapixref("JSObject", "JS::HandleObject")}} --> --> <em>or</em> <!-- <!-- {{jsapixref("JSObject", "JSObject *")}} --> --></td>
    <td>The object on which to create the new property.</td>
   </tr>
   <tr>
@@ -71,11 +71,11 @@ JS_DefineElement(JSContext *cx, JSObject *obj, uint32_t index, jsval value,
   </tr>
   <tr>
    <td><code>value</code></td>
-   <td><!-- {{jsapixref("JS::Value", "JS::HandleValue")}} -->
+   <td><!-- <!-- {{jsapixref("JS::Value", "JS::HandleValue")}} --> -->
 <em>or</em>
-<!-- {{jsapixref("JSObject", "JS::HandleObject")}} -->
+<!-- <!-- {{jsapixref("JSObject", "JS::HandleObject")}} --> -->
 <em>or</em>
-<!-- {{jsapixref("JSString", "JS::HandleString")}} -->
+<!-- <!-- {{jsapixref("JSString", "JS::HandleString")}} --> -->
 <em>or</em>
 <code>int32_t</code>
 <em>or</em>
@@ -83,25 +83,25 @@ JS_DefineElement(JSContext *cx, JSObject *obj, uint32_t index, jsval value,
 <em>or</em>
 <code>double</code>
 <em>or</em>
-<!-- {{jsapixref("jsval")}} -->
+<!-- <!-- {{jsapixref("jsval")}} --> -->
 </td>
    <td>Initial value to assign to the property.</td>
   </tr>
   <tr>
    <td><code>getter</code></td>
-   <td><!-- {{jsapixref("JSNative")}} --> <em>or</em> <!-- {{jsapixref("JSPropertyOp")}} --></td>
+   <td><!-- <!-- {{jsapixref("JSNative")}} --> --> <em>or</em> <!-- <!-- {{jsapixref("JSPropertyOp")}} --> --></td>
    <td><code>getProperty</code> method for retrieving the current property value.</td>
   </tr>
   <tr>
    <td><code>setter</code></td>
-   <td><!-- {{jsapixref("JSNative")}} --> <em>or</em> <!-- {{jsapixref("JSStrictPropertyOp")}} --></td>
+   <td><!-- <!-- {{jsapixref("JSNative")}} --> --> <em>or</em> <!-- <!-- {{jsapixref("JSStrictPropertyOp")}} --> --></td>
    <td><code>setProperty</code> method for specifying a new property value.</td>
   </tr>
 
   <tr>
    <td><code>flags</code></td>
    <td><code>unsigned</code></td>
-   <td>Property attributes. <!-- {{ obsolete_inline("jsapi32") }} --></td>
+   <td>Property attributes. <!-- <!-- {{ obsolete_inline("jsapi32") }} --> --></td>
   </tr>
  </tbody>
 </table>
@@ -110,16 +110,16 @@ JS_DefineElement(JSContext *cx, JSObject *obj, uint32_t index, jsval value,
 <p><code>JS_DefineElement</code> defines a numeric property for a specified object, <code>obj</code>.</p>
 
 <p><code>index</code> is the index of the element being defined. <code>value</code> is one of
-<!-- {{jsapixref("JS::Value")}} -->,
-<!-- {{jsapixref("JSObject")}} -->,
-<!-- {{jsapixref("JSString")}} -->,
+<!-- <!-- {{jsapixref("JS::Value")}} --> -->,
+<!-- <!-- {{jsapixref("JSObject")}} --> -->,
+<!-- <!-- {{jsapixref("JSString")}} --> -->,
 <code>int32_t</code>,
 <code>uint32_t</code>, or
 <code>double</code>
  that defines the property's initial value.
 <code>getter</code> and <code>setter</code> identify the <code>getProperty</code> and <code>setProperty</code> methods for the property, respectively. If you pass <code>NULL</code> values for these entries, <code>JS_DefineElement</code> assigns the default <code>getProperty</code> and <code>setProperty</code> methods to this element.</p>
 
-<p><!-- {{ obsolete_inline("jsapi32") }} --> <code>flags</code> contains the property attributes to set for the new property.</p>
+<p><!-- <!-- {{ obsolete_inline("jsapi32") }} --> --> <code>flags</code> contains the property attributes to set for the new property.</p>
 
 <p>On success, <code>JS_DefineElement</code> returns <code>true</code>. Otherwise it returns <code>false</code>.</p>
 
@@ -130,20 +130,20 @@ JS_DefineElement(JSContext *cx, JSObject *obj, uint32_t index, jsval value,
 
 <h2 id="See_Also" name="See_Also">See Also</h2>
 <ul>
-<li><!-- {{ LXRSearch("ident", "i", "JS_DefineElement") }} --></li>
-<li><!-- {{jsapixref("JS_DefineConstDoubles")}} --></li>
-<li><!-- {{jsapixref("JS_DefineFunction")}} --></li>
-<li><!-- {{jsapixref("JS_DefineFunctions")}} --></li>
-<li><!-- {{jsapixref("JS_DefineObject")}} --></li>
-<li><!-- {{jsapixref("JS_DefineProperties")}} --></li>
-<li><!-- {{jsapixref("JS_DefineProperty")}} --></li>
-<li><!-- {{jsapixref("JS_DefinePropertyWithTinyId")}} --></li>
-<li><!-- {{jsapixref("JS_DeleteElement")}} --></li>
-<li><!-- {{jsapixref("JS_GetArrayLength")}} --></li>
-<li><!-- {{jsapixref("JS_GetElement")}} --></li>
-<li><!-- {{jsapixref("JS_IsArrayObject")}} --></li>
-<li><!-- {{jsapixref("JS_LookupElement")}} --></li>
-<li><!-- {{jsapixref("JS_NewArrayObject")}} --></li>
-<li><!-- {{jsapixref("JS_SetElement")}} --></li>
-<li><!-- {{bug(959787)}} --> - changed parameter types</li>
+<li><!-- <!-- {{ LXRSearch("ident", "i", "JS_DefineElement") }} --> --></li>
+<li><!-- <!-- {{jsapixref("JS_DefineConstDoubles")}} --> --></li>
+<li><!-- <!-- {{jsapixref("JS_DefineFunction")}} --> --></li>
+<li><!-- <!-- {{jsapixref("JS_DefineFunctions")}} --> --></li>
+<li><!-- <!-- {{jsapixref("JS_DefineObject")}} --> --></li>
+<li><!-- <!-- {{jsapixref("JS_DefineProperties")}} --> --></li>
+<li><!-- <!-- {{jsapixref("JS_DefineProperty")}} --> --></li>
+<li><!-- <!-- {{jsapixref("JS_DefinePropertyWithTinyId")}} --> --></li>
+<li><!-- <!-- {{jsapixref("JS_DeleteElement")}} --> --></li>
+<li><!-- <!-- {{jsapixref("JS_GetArrayLength")}} --> --></li>
+<li><!-- <!-- {{jsapixref("JS_GetElement")}} --> --></li>
+<li><!-- <!-- {{jsapixref("JS_IsArrayObject")}} --> --></li>
+<li><!-- <!-- {{jsapixref("JS_LookupElement")}} --> --></li>
+<li><!-- <!-- {{jsapixref("JS_NewArrayObject")}} --> --></li>
+<li><!-- <!-- {{jsapixref("JS_SetElement")}} --> --></li>
+<li><!-- <!-- {{bug(959787)}} --> --> - changed parameter types</li>
 </ul></div>

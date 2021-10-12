@@ -1,9 +1,9 @@
-<p><!-- {{ Jsapi_minversion_header("24") }} --></p>
+<p><!-- <!-- {{ Jsapi_minversion_header("24") }} --> --></p>
 
-<div><!-- {{SpiderMonkeySidebar("JSAPI")}} --></div>
+<div><!-- <!-- {{SpiderMonkeySidebar("JSAPI")}} --> --></div>
 
 <div class="note">
-<p>Note: the preferred way of changing a context's current compartment is using <!-- {{jsapixref("JSAutoCompartment")}} -->.</p>
+<p>Note: the preferred way of changing a context's current compartment is using <!-- <!-- {{jsapixref("JSAutoCompartment")}} --> -->.</p>
 </div>
 
 <div class="summary">
@@ -25,26 +25,26 @@ JS_LeaveCompartment(JSContext *cx, JSCompartment *oldCompartment);
   </tr>
   <tr>
    <td><code>cx</code></td>
-   <td><!-- {{jsapixref("JSRuntime", "JSContext *")}} --></td>
+   <td><!-- <!-- {{jsapixref("JSRuntime", "JSContext *")}} --> --></td>
    <td>The context in which to leave the compartment.</td>
   </tr>
   <tr>
    <td><code>oldCompartment</code></td>
-   <td><!-- {{jsapixref("JSCompartment", "JSCompartment *")}} --></td>
-   <td>Value returned by previous call to <!-- {{jsapixref("JS_EnterCompartment")}} -->.</td>
+   <td><!-- <!-- {{jsapixref("JSCompartment", "JSCompartment *")}} --> --></td>
+   <td>Value returned by previous call to <!-- <!-- {{jsapixref("JS_EnterCompartment")}} --> -->.</td>
   </tr>
  </tbody>
 </table>
 
 <h2 id="Description" name="Description">Description</h2>
 
-<div>Every <!-- {{jsapixref("JSRuntime", "JSContext")}} --> has a current compartment. Any access to an object in a different compartment must be bracketed by calls to <!-- {{jsapixref("JS_EnterCompartment")}} --> and <code>JS_LeaveCompartment</code>.</div>
+<div>Every <!-- <!-- {{jsapixref("JSRuntime", "JSContext")}} --> --> has a current compartment. Any access to an object in a different compartment must be bracketed by calls to <!-- <!-- {{jsapixref("JS_EnterCompartment")}} --> --> and <code>JS_LeaveCompartment</code>.</div>
 
 <h2 id="See_Also" name="See_Also">See Also</h2>
 
 <ul>
- <li><!-- {{ LXRSearch("ident", "i", "JS_LeaveCompartment") }} --></li>
- <li><!-- {{jsapixref("JS_EnterCompartment")}} --></li>
- <li><!-- {{jsapixref("JSAutoCompartment")}} --></li>
- <li><!-- {{bug(786068)}} --></li>
+ <li><!-- <!-- {{ LXRSearch("ident", "i", "JS_LeaveCompartment") }} --> --></li>
+ <li><!-- <!-- {{jsapixref("JS_EnterCompartment")}} --> --></li>
+ <li><!-- <!-- {{jsapixref("JSAutoCompartment")}} --> --></li>
+ <li><!-- <!-- {{bug(786068)}} --> --></li>
 </ul>

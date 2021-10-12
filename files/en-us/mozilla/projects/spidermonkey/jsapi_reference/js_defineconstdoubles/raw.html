@@ -1,5 +1,5 @@
 <div>
- <!-- {{SpiderMonkeySidebar("JSAPI")}} --></div>
+ <!-- <!-- {{SpiderMonkeySidebar("JSAPI")}} --> --></div>
 <div class="summary">
 <p>Create multiple constant double or integer valued properties on an object.</p>
 </div>
@@ -21,22 +21,22 @@ JS_DefineConstIntegers(JSContext *cx, JS::HandleObject obj,
   </tr>
   <tr>
    <td><code>cx</code></td>
-   <td><!-- {{jsapixref("JSRuntime", "JSContext *")}} --></td>
-   <td>The context in which to define the new properties. <!-- {{ Jsapi-requires-request() }} --></td>
+   <td><!-- <!-- {{jsapixref("JSRuntime", "JSContext *")}} --> --></td>
+   <td>The context in which to define the new properties. <!-- <!-- {{ Jsapi-requires-request() }} --> --></td>
   </tr>
   <tr>
    <td><code>obj</code></td>
-   <td><!-- {{jsapixref("JSObject", "JSObject *")}} --></td>
+   <td><!-- <!-- {{jsapixref("JSObject", "JSObject *")}} --> --></td>
    <td>Object for which to create new properties.</td>
   </tr>
   <tr>
    <td><code>cds</code></td>
-   <td><!-- {{jsapixref("JSConstDoubleSpec", "JSConstDoubleSpec *")}} --></td>
+   <td><!-- <!-- {{jsapixref("JSConstDoubleSpec", "JSConstDoubleSpec *")}} --> --></td>
    <td>Pointer to an array of <code>JSConstDoubleSpec</code> records containing property names and values to create. The last array element must contain zero-valued members.</td>
   </tr>
   <tr>
    <td><code>cis</code></td>
-   <td><!-- {{jsapixref("JSConstDoubleSpec", "JSConstIntegerSpec *")}} --></td>
+   <td><!-- <!-- {{jsapixref("JSConstDoubleSpec", "JSConstIntegerSpec *")}} --> --></td>
    <td>Pointer to an array of <code>JSConstIntegerSpec</code> records containing property names and values to create. The last array element must contain zero-valued members.</td>
   </tr>
  </tbody>
@@ -54,13 +54,13 @@ JS_DefineConstIntegers(JSContext *cx, JS::HandleObject obj,
 <p>On success, <code>JS_DefineConstDoubles</code>/<code>JS_DefineConstIntegers</code> returns <code>true</code>, indicating it has created all properties listed in the array. Otherwise it returns <code>false</code>.</p>
 <h2 id="See_Also" name="See_Also">See Also</h2>
 <ul>
- <li><!-- {{ LXRSearch("ident", "i", "JS_DefineConstDoubles") }} --></li>
- <li><!-- {{ LXRSearch("ident", "i", "JS_DefineConstIntegers") }} --></li>
- <li><!-- {{jsapixref("JSConstDoubleSpec")}} --></li>
- <li><!-- {{jsapixref("JSConstIntegerSpec")}} --></li>
- <li><!-- {{jsapixref("JS_DefineElement")}} --></li>
- <li><!-- {{jsapixref("JS_DefineProperties")}} --></li>
- <li><!-- {{jsapixref("JS_DefineProperty")}} --></li>
- <li><!-- {{jsapixref("JS_DefinePropertyWithTinyId")}} --></li>
- <li><!-- {{bug(1066020)}} --> - added <code>JS_DefineConstIntegers</code></li>
+ <li><!-- <!-- {{ LXRSearch("ident", "i", "JS_DefineConstDoubles") }} --> --></li>
+ <li><!-- <!-- {{ LXRSearch("ident", "i", "JS_DefineConstIntegers") }} --> --></li>
+ <li><!-- <!-- {{jsapixref("JSConstDoubleSpec")}} --> --></li>
+ <li><!-- <!-- {{jsapixref("JSConstIntegerSpec")}} --> --></li>
+ <li><!-- <!-- {{jsapixref("JS_DefineElement")}} --> --></li>
+ <li><!-- <!-- {{jsapixref("JS_DefineProperties")}} --> --></li>
+ <li><!-- <!-- {{jsapixref("JS_DefineProperty")}} --> --></li>
+ <li><!-- <!-- {{jsapixref("JS_DefinePropertyWithTinyId")}} --> --></li>
+ <li><!-- <!-- {{bug(1066020)}} --> --> - added <code>JS_DefineConstIntegers</code></li>
 </ul>

@@ -1,4 +1,4 @@
-<p><!-- {{ gecko_minversion_header("2.0") }} --></p>
+<p><!-- <!-- {{ gecko_minversion_header("2.0") }} --> --></p>
 
 <p>The <code>PopupNotifications.jsm</code> JavaScript code module provides a popup notification box service. This service is used, for example, to display Geolocation related notifications.</p>
 
@@ -80,7 +80,7 @@
  <dt><code>id</code></dt>
  <dd>The <code>Notification</code> ID to search for.</dd>
  <dt><code>browser</code></dt>
- <dd>The XUL <!-- {{ XULElem("browser") }} --> element whose notifications should be searched. If <code>null</code>, the currently selected <!-- {{ XULElem("browser") }} -->'s notifications will be searched.</dd>
+ <dd>The XUL <!-- <!-- {{ XULElem("browser") }} --> --> element whose notifications should be searched. If <code>null</code>, the currently selected <!-- <!-- {{ XULElem("browser") }} --> -->'s notifications will be searched.</dd>
 </dl>
 
 <h6 id="Return_value">Return value</h6>
@@ -122,7 +122,7 @@
 
 <dl>
  <dt><code>browser</code></dt>
- <dd>The XUL <!-- {{ XULElem("browser") }} --> element with which the notification is associated. This must not be <code>null</code>; you can, however, simply specify <code>gBrowser.selectedBrowser</code> to associate it with the current tab.</dd>
+ <dd>The XUL <!-- <!-- {{ XULElem("browser") }} --> --> element with which the notification is associated. This must not be <code>null</code>; you can, however, simply specify <code>gBrowser.selectedBrowser</code> to associate it with the current tab.</dd>
  <dt><code>id</code></dt>
  <dd>A unique ID string for the type of notification being displayed. For example, Geolocation related notifications have the ID "geolocation". Only one notification for each ID can be visible at a time; if one with the specified ID already exists, it will be replaced with the newer notification.</dd>
  <dt><code>message</code></dt>
@@ -175,8 +175,8 @@
  <dd>Notifications with this parameter set to true will be removed when they would have otherwise been dismissed (i.e. any time the popup is closed due to user interaction).</dd>
  <dt><code>removeOnDismissal</code></dt>
  <dd>Notifications with this parameter set to <code>true</code> will be removed when they would have otherwise been dismissed (that is, any time the popup is closed due to user interaction).</dd>
- <dt><code>popupIconURL</code> <!-- {{ fx_minversion_inline("11") }} --></dt>
- <dd>A string specifying the URL of the image to be displayed in the popup. This is normally specified in CSS using <!-- {{ cssxref("list-style-image") }} --> and the <code>.popup-notification-icon[popupid=...]</code> selector.</dd>
+ <dt><code>popupIconURL</code> <!-- <!-- {{ fx_minversion_inline("11") }} --> --></dt>
+ <dd>A string specifying the URL of the image to be displayed in the popup. This is normally specified in CSS using <!-- <!-- {{ cssxref("list-style-image") }} --> --> and the <code>.popup-notification-icon[popupid=...]</code> selector.</dd>
  <dt>learnMoreURL</dt>
  <dd>A string URL. Setting this property will make the prompt display a "Learn More" link that, when clicked, opens the URL in a new tab.</dd>
 </dl>

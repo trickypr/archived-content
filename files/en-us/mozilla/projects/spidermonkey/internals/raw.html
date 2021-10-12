@@ -1,4 +1,4 @@
-<p><!-- {{SpiderMonkeySidebar("Internals")}} --></p>
+<p><!-- <!-- {{SpiderMonkeySidebar("Internals")}} --> --></p>
 
 <div class="blockIndicator warning">
 <p>This document is talking about partially obsolete things.</p>
@@ -57,7 +57,7 @@
 
 <h3 id="Public_APIs">Public APIs</h3>
 
-<p>The public C/C++ interface, called the JSAPI, is in most places a thin (but source-compatible across versions) layer over the implementation. See the <a href="/en-US/docs/SpiderMonkey/JSAPI_User_Guide" title="JSAPI_User_Guide">JSAPI User Guide</a>. There is an additional public API for JavaScript debuggers, <a href="/en-US/docs/JSDBGAPI_Reference" title="JSDBGAPI_Reference">JSDBGAPI</a>, but <!-- {{Source("js/jsd/jsdebug.h")}} --> might be a better API for debuggers. Another API, <a href="/en-US/docs/JSXDRAPI" title="JSXDRAPI">JSXDRAPI</a>, provides serialization for JavaScript scripts. (XUL Fastload uses this.)</p>
+<p>The public C/C++ interface, called the JSAPI, is in most places a thin (but source-compatible across versions) layer over the implementation. See the <a href="/en-US/docs/SpiderMonkey/JSAPI_User_Guide" title="JSAPI_User_Guide">JSAPI User Guide</a>. There is an additional public API for JavaScript debuggers, <a href="/en-US/docs/JSDBGAPI_Reference" title="JSDBGAPI_Reference">JSDBGAPI</a>, but <!-- <!-- {{Source("js/jsd/jsdebug.h")}} --> --> might be a better API for debuggers. Another API, <a href="/en-US/docs/JSXDRAPI" title="JSXDRAPI">JSXDRAPI</a>, provides serialization for JavaScript scripts. (XUL Fastload uses this.)</p>
 
 <h3 id="Just-In-Time_compiler">Just-In-Time compiler</h3>
 

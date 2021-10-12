@@ -36,7 +36,7 @@
 
 <h2 id="Unknown_Decoder" name="Unknown_Decoder">Unknown Decoder</h2>
 
-<p>Located at <!-- {{ Source("netwerk/streamconv/converters/nsUnknownDecoder.cpp") }} -->, the interesting part starts at <!-- {{ Source("netwerk/streamconv/converters/nsUnknownDecoder.cpp#287", "line 287") }} -->, the sSnifferEntries array together with the DetermineContentType function. It does the following:</p>
+<p>Located at <!-- <!-- {{ Source("netwerk/streamconv/converters/nsUnknownDecoder.cpp") }} --> -->, the interesting part starts at <!-- <!-- {{ Source("netwerk/streamconv/converters/nsUnknownDecoder.cpp#287", "line 287") }} --> -->, the sSnifferEntries array together with the DetermineContentType function. It does the following:</p>
 
 <ul>
  <li>Checks the start of the file for "magic numbers"; this can currently detect PDF and Postscript.</li>
@@ -49,16 +49,16 @@
 
 <h2 id="ExternalHelperAppService" name="ExternalHelperAppService">ExternalHelperAppService</h2>
 
-<p>(located at <!-- {{ Source("uriloader/exthandler/nsExternalHelperAppService.cpp") }} -->)</p>
+<p>(located at <!-- <!-- {{ Source("uriloader/exthandler/nsExternalHelperAppService.cpp") }} --> -->)</p>
 
 <p>The file-&gt;MIME type mapping works like this:</p>
 
 <ul>
- <li>On BeOS, the operating system is asked for the type of the file (not quite yet, <!-- {{ Bug(217723) }} -->)</li>
+ <li>On BeOS, the operating system is asked for the type of the file (not quite yet, <!-- <!-- {{ Bug(217723) }} --> -->)</li>
  <li>On MacOS, the type and creator code will be used to lookup the type of the file from the OS</li>
- <li>a hardcoded list of extensions is checked (containing currently 13 entries, <!-- {{ Source("uriloader/exthandler/nsExternalHelperAppService.cpp#463", "nsExternalHelperAppService.cpp line 463") }} --> (This is done for speed – it is faster to find data in the hardcoded list than asking the OS or looking in preferences)</li>
+ <li>a hardcoded list of extensions is checked (containing currently 13 entries, <!-- <!-- {{ Source("uriloader/exthandler/nsExternalHelperAppService.cpp#463", "nsExternalHelperAppService.cpp line 463") }} --> --> (This is done for speed – it is faster to find data in the hardcoded list than asking the OS or looking in preferences)</li>
  <li>If the extension is not listed there, it becomes interesting. Firstly, the Operating System is asked for a MIME type. (On Unix, this means checking <code>mime.types</code>.)</li>
- <li>If that fails, a user-supplied helper app is searched for by extension, and the specified MIME type will be used. (i.e. the list in Edit/Preferences/Helper Applications) If that failed, a list of "extra" MIME types is searched for an extension match. See <!-- {{ Source("uriloader/exthandler/nsExternalHelperAppService.cpp#507", "line 507") }} --> for the complete list.</li>
+ <li>If that fails, a user-supplied helper app is searched for by extension, and the specified MIME type will be used. (i.e. the list in Edit/Preferences/Helper Applications) If that failed, a list of "extra" MIME types is searched for an extension match. See <!-- <!-- {{ Source("uriloader/exthandler/nsExternalHelperAppService.cpp#507", "line 507") }} --> --> for the complete list.</li>
  <li>If that also failed, the list of loaded plugins is checked for a plugin that can handle this extension, and is asked for the MIME type</li>
  <li>If no plugin is registered, the ext-to-type-mapping XPCOM category is searched for the extension. This allows extensions to register additional mappings. The key of the category entry is the extension without leading dot, the value is the MIME type. The extension must be lowercase.</li>
  <li>If no ext-to-type-mapping category is found, the ExternalHelperAppService returns <code>application/x-extension-EXT</code>, where EXT is the extension of the file.</li>

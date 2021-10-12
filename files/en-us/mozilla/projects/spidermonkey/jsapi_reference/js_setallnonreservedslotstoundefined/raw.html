@@ -1,6 +1,6 @@
 <div>
- <!-- {{SpiderMonkeySidebar("JSAPI")}} --></div>
-<p><!-- {{ jsapi_minversion_header("24") }} --></p>
+ <!-- <!-- {{SpiderMonkeySidebar("JSAPI")}} --> --></div>
+<p><!-- <!-- {{ jsapi_minversion_header("24") }} --> --></p>
 <div class="summary">
  <p>Assign <code>undefined</code> to all of the object's non-reserved slots.</p>
 </div>
@@ -20,12 +20,12 @@ JS_SetAllNonReservedSlotsToUndefined(JSContext *cx, JSObject *objArg);
   </tr>
   <tr>
    <td><code>cx</code></td>
-   <td><!-- {{jsapixref("JSRuntime", "JSContext *")}} --></td>
-   <td>The context in which to clear the object. <!-- {{ Jsapi-requires-request() }} --></td>
+   <td><!-- <!-- {{jsapixref("JSRuntime", "JSContext *")}} --> --></td>
+   <td>The context in which to clear the object. <!-- <!-- {{ Jsapi-requires-request() }} --> --></td>
   </tr>
   <tr>
    <td><code>obj</code></td>
-   <td><!-- {{jsapixref("JSObject", "JSObject *")}} --></td>
+   <td><!-- <!-- {{jsapixref("JSObject", "JSObject *")}} --> --></td>
    <td>Object from which to delete all properties.</td>
   </tr>
  </tbody>
@@ -34,6 +34,6 @@ JS_SetAllNonReservedSlotsToUndefined(JSContext *cx, JSObject *objArg);
 <p><code>JS_SetAllNonReservedSlotsToUndefined</code> assignes <code>undefined</code> to all of <code>obj</code>'s own properties, except the special <code>__proto__</code> and <code>__parent__</code> properties, in a single operation. Properties belonging to objects on <code>obj</code>'s prototype chain are not affected.</p>
 <h2 id="See_Also" name="See_Also"><code>See Also</code></h2>
 <ul>
- <li><!-- {{ LXRSearch("ident", "i", "JS_SetAllNonReservedSlotsToUndefined") }} --></li>
- <li><!-- {{bug(749371)}} --></li>
+ <li><!-- <!-- {{ LXRSearch("ident", "i", "JS_SetAllNonReservedSlotsToUndefined") }} --> --></li>
+ <li><!-- <!-- {{bug(749371)}} --> --></li>
 </ul>

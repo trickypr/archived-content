@@ -12,12 +12,12 @@
 );
 </pre>
 <h3 id="Parameters"> Parameters </h3>
-<dl><dt><code>hSession</code></dt><dd> <!-- {{ mediawiki.external('in') }} --> session handle.
-</dd><dt><code>pMechanism</code></dt><dd> <!-- {{ mediawiki.external('in') }} --> pointer to the mechanism to use.
-</dd><dt><code>hWrappingKey</code></dt><dd> <!-- {{ mediawiki.external('in') }} --> pointer to the public key template.
-</dd><dt><code>hKey</code></dt><dd> <!-- {{ mediawiki.external('in') }} --> number of attributes in the public key template.
-</dd><dt><code>pWrappedKey</code></dt><dd> <!-- {{ mediawiki.external('out') }} --> pointer to the location to receive the wrapped key or NULL.
-</dd><dt><code>pusWrappedKeyLen</code></dt><dd> <!-- {{ mediawiki.external('in, out') }} --> pointer to length of wrapped key buffer.
+<dl><dt><code>hSession</code></dt><dd> <!-- <!-- {{ mediawiki.external('in') }} --> --> session handle.
+</dd><dt><code>pMechanism</code></dt><dd> <!-- <!-- {{ mediawiki.external('in') }} --> --> pointer to the mechanism to use.
+</dd><dt><code>hWrappingKey</code></dt><dd> <!-- <!-- {{ mediawiki.external('in') }} --> --> pointer to the public key template.
+</dd><dt><code>hKey</code></dt><dd> <!-- <!-- {{ mediawiki.external('in') }} --> --> number of attributes in the public key template.
+</dd><dt><code>pWrappedKey</code></dt><dd> <!-- <!-- {{ mediawiki.external('out') }} --> --> pointer to the location to receive the wrapped key or NULL.
+</dd><dt><code>pusWrappedKeyLen</code></dt><dd> <!-- <!-- {{ mediawiki.external('in, out') }} --> --> pointer to length of wrapped key buffer.
 </dd></dl>
 <h3 id="Description"> Description </h3>
 <p><code>FC_WrapKey</code> wraps (encrypts) a key. If <code>pWrappedKey</code> is NULL the length of the wrapped key is returned in <code>pusWrappedKeyLen</code> and FC_WrapKey may be called again with <code>pWrappedKey</code> set to retrieve the wrapped key.

@@ -50,7 +50,7 @@ button#b4 {
   nav-down:#b1; nav-up:#b3;
 }</pre>
 
-<p>The draft defines four CSS properties: <!-- {{cssxref("nav-left")}} -->, <!-- {{cssxref("nav-right")}} -->, <!-- {{cssxref("nav-up")}} -->, and <!-- {{cssxref("nav-down")}} -->. With these properties, you can specify the next element that should be focused when you are focused on a certain element, and move in a certain direction with spatial navigation. Or you can specify <code>auto</code>, which hints to the browser to calculate the correct elements to move to. The specification also defines how to handle moving the focus to elements inside embedded frames.</p>
+<p>The draft defines four CSS properties: <!-- <!-- {{cssxref("nav-left")}} --> -->, <!-- <!-- {{cssxref("nav-right")}} --> -->, <!-- <!-- {{cssxref("nav-up")}} --> -->, and <!-- <!-- {{cssxref("nav-down")}} --> -->. With these properties, you can specify the next element that should be focused when you are focused on a certain element, and move in a certain direction with spatial navigation. Or you can specify <code>auto</code>, which hints to the browser to calculate the correct elements to move to. The specification also defines how to handle moving the focus to elements inside embedded frames.</p>
 
 <p>There is one problem here — the specification is still a draft, and is not yet implemented by most modern browsers (including Gecko).</p>
 
@@ -58,7 +58,7 @@ button#b4 {
 
 <h2 id="A_JavaScript_solution_spatial_navigator.js">A JavaScript solution: spatial_navigator.js</h2>
 
-<p>The above constraints led us to using JavaScript to implement this functionality, and dynamically change the values of <code>nav-up</code>/<code>down</code>/<code>left</code>/<code>right</code> in different contexts. Prior to specifying elements' directional focus with JavaScript, we might need another API to retrieve focus elements based on the same algorithm as the <code>auto</code> value discussed above. Only with this API can we maintain consistancy when combining JavaScript interactions with CSS rules. Unfortunately, the API doesn’t exist yet (<!-- {{bug(449165)}} -->).</p>
+<p>The above constraints led us to using JavaScript to implement this functionality, and dynamically change the values of <code>nav-up</code>/<code>down</code>/<code>left</code>/<code>right</code> in different contexts. Prior to specifying elements' directional focus with JavaScript, we might need another API to retrieve focus elements based on the same algorithm as the <code>auto</code> value discussed above. Only with this API can we maintain consistancy when combining JavaScript interactions with CSS rules. Unfortunately, the API doesn’t exist yet (<!-- <!-- {{bug(449165)}} --> -->).</p>
 
 <p>Since we have to write some JavaScript code, why not imitate the aspects of <code>nav-*</code> and implement a library with pure JavaScript? In this way, web pages can support spatial navigation right away before the API is ready.</p>
 

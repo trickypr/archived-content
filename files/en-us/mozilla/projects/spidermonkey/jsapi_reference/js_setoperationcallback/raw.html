@@ -1,11 +1,11 @@
-<div><!-- {{SpiderMonkeySidebar("JSAPI")}} --></div>
+<div><!-- <!-- {{SpiderMonkeySidebar("JSAPI")}} --> --></div>
 
-<p><!-- {{ obsolete_header("jsapi30") }} --></p>
+<p><!-- <!-- {{ obsolete_header("jsapi30") }} --> --></p>
 
-<p><!-- {{ jsapi_minversion_header("1.8.5") }} --></p>
+<p><!-- <!-- {{ jsapi_minversion_header("1.8.5") }} --> --></p>
 
 <div class="summary">
-<p>Set a callback function that is automatically called periodically while JavaScript code runs. These methods/types are renamed to <!-- {{jsapixref("JS_SetInterruptCallback", "JS_SetInterruptCallback, JS_GetInterruptCallback, JS_RequestInterruptCallback and JSInterruptCallback")}} --> in SpiderMonkey 30.</p>
+<p>Set a callback function that is automatically called periodically while JavaScript code runs. These methods/types are renamed to <!-- <!-- {{jsapixref("JS_SetInterruptCallback", "JS_SetInterruptCallback, JS_GetInterruptCallback, JS_RequestInterruptCallback and JSInterruptCallback")}} --> --> in SpiderMonkey 30.</p>
 </div>
 
 <h2 id="Syntax" name="Syntax">Syntax</h2>
@@ -29,17 +29,17 @@ JS_TriggerOperationCallback(JSRuntime *rt);
   </tr>
   <tr>
    <td><code>cx</code></td>
-   <td><!-- {{jsapixref("JSRuntime", "JSContext *")}} --></td>
+   <td><!-- <!-- {{jsapixref("JSRuntime", "JSContext *")}} --> --></td>
    <td>A context.</td>
   </tr>
   <tr>
    <td><code>rt</code></td>
-   <td><!-- {{jsapixref("JSRuntime", "JSRuntime *")}} --></td>
+   <td><!-- <!-- {{jsapixref("JSRuntime", "JSRuntime *")}} --> --></td>
    <td>The runtime.</td>
   </tr>
   <tr>
    <td><code>callback</code></td>
-   <td><!-- {{jsapixref("JSOperationCallback")}} --></td>
+   <td><!-- <!-- {{jsapixref("JSOperationCallback")}} --> --></td>
    <td><em>(only in <code>JS_SetOperationCallback</code></em><em>)</em> The callback function to install.</td>
   </tr>
  </tbody>
@@ -60,7 +60,7 @@ JS_TriggerOperationCallback(JSRuntime *rt);
   </tr>
   <tr>
    <td><code>cx</code></td>
-   <td><!-- {{jsapixref("JSRuntime", "JSContext *")}} --></td>
+   <td><!-- <!-- {{jsapixref("JSRuntime", "JSContext *")}} --> --></td>
    <td>
     <p>Pointer to a <code>JSContext</code> in which this callback was installed.  The callback may use this context to call JSAPI functions, but it should first use <code>JS_SetOperationCallback</code> to set the context's operation callback to NULL. Otherwise the engine may call the operation callback again, reentering it.</p>
 
@@ -71,7 +71,7 @@ JS_TriggerOperationCallback(JSRuntime *rt);
 </table>
 
 <div class="note">
-<p>Applications must not use both the operation callback API and the older <!-- {{jsapixref("JS_SetBranchCallback", "branch callback", "", 1)}} --> API.</p>
+<p>Applications must not use both the operation callback API and the older <!-- <!-- {{jsapixref("JS_SetBranchCallback", "branch callback", "", 1)}} --> --> API.</p>
 </div>
 
 <h2 id="Description" name="Description">Description</h2>
@@ -86,7 +86,7 @@ JS_TriggerOperationCallback(JSRuntime *rt);
 <p><strong><code>JS_SetOperationCallback</code></strong> sets a callback that can be called asynchronously. Some common uses for an operation callback are:</p>
 
 <ul>
- <li>To run garbage collection periodically, by calling <!-- {{jsapixref("JS_MaybeGC")}} -->;</li>
+ <li>To run garbage collection periodically, by calling <!-- <!-- {{jsapixref("JS_MaybeGC")}} --> -->;</li>
  <li>To periodically take a break from script execution to update the UI (though note that Mozilla does not do this, by design);</li>
  <li>To enforce application limits on the amount of time a script may run. (In this case, the callback may terminate the script by returning <code>JS_FALSE</code>.)</li>
 </ul>
@@ -95,24 +95,24 @@ JS_TriggerOperationCallback(JSRuntime *rt);
 
 <p><strong>JS_TriggerOperationCallback </strong>triggers a callback set using <code>JS_SetOperationCallback</code><strong><code>.</code></strong></p>
 
-<p><strong><code>JS_ClearOperationCallback</code></strong> clears the current operation callback. <!-- {{ obsolete_inline("js1.9.1") }} --></p>
+<p><strong><code>JS_ClearOperationCallback</code></strong> clears the current operation callback. <!-- <!-- {{ obsolete_inline("js1.9.1") }} --> --></p>
 
-<p><code><strong>JS_SetOperationCallbackFunction</strong></code> sets the operation callback without changing the operation limit. <!-- {{ obsolete_inline("js1.9.1") }} --></p>
+<p><code><strong>JS_SetOperationCallbackFunction</strong></code> sets the operation callback without changing the operation limit. <!-- <!-- {{ obsolete_inline("js1.9.1") }} --> --></p>
 
-<p><strong><code>JS_GetOperationLimit</code></strong> returns the current operation limit, or <code>JS_MAX_OPERATION_LIMIT</code> if no operation callback is currently installed. <!-- {{ obsolete_inline("js1.9.1") }} --></p>
+<p><strong><code>JS_GetOperationLimit</code></strong> returns the current operation limit, or <code>JS_MAX_OPERATION_LIMIT</code> if no operation callback is currently installed. <!-- <!-- {{ obsolete_inline("js1.9.1") }} --> --></p>
 
-<p><strong><code>JS_SetOperationLimit</code></strong> sets the operation limit without changing the operation callback. It must be called only when an operation callback is installed. <!-- {{ obsolete_inline("js1.9.1") }} --></p>
+<p><strong><code>JS_SetOperationLimit</code></strong> sets the operation limit without changing the operation callback. It must be called only when an operation callback is installed. <!-- <!-- {{ obsolete_inline("js1.9.1") }} --> --></p>
 
 <h2 id="See_Also">See Also</h2>
 
 <ul>
- <li><!-- {{ LXRSearch("ident", "i", "JS_SetOperationCallback") }} --></li>
- <li><!-- {{ LXRSearch("ident", "i", "JS_GetOperationCallback") }} --></li>
- <li><!-- {{ LXRSearch("ident", "i", "JS_TriggerOperationCallback") }} --></li>
- <li><!-- {{jsapixref("JS_SetInterruptCallback")}} --></li>
- <li><!-- {{jsapixref("JS_SetInterruptCallback", "JS_GetInterruptCallback")}} --></li>
- <li><!-- {{jsapixref("JS_SetInterruptCallback", "JS_RequestInterruptCallback")}} --></li>
- <li><!-- {{jsapixref("JS_SetInterruptCallback", "JSInterruptCallback")}} --></li>
- <li><!-- {{bug(477187)}} --></li>
- <li><!-- {{bug(977287)}} --></li>
+ <li><!-- <!-- {{ LXRSearch("ident", "i", "JS_SetOperationCallback") }} --> --></li>
+ <li><!-- <!-- {{ LXRSearch("ident", "i", "JS_GetOperationCallback") }} --> --></li>
+ <li><!-- <!-- {{ LXRSearch("ident", "i", "JS_TriggerOperationCallback") }} --> --></li>
+ <li><!-- <!-- {{jsapixref("JS_SetInterruptCallback")}} --> --></li>
+ <li><!-- <!-- {{jsapixref("JS_SetInterruptCallback", "JS_GetInterruptCallback")}} --> --></li>
+ <li><!-- <!-- {{jsapixref("JS_SetInterruptCallback", "JS_RequestInterruptCallback")}} --> --></li>
+ <li><!-- <!-- {{jsapixref("JS_SetInterruptCallback", "JSInterruptCallback")}} --> --></li>
+ <li><!-- <!-- {{bug(477187)}} --> --></li>
+ <li><!-- <!-- {{bug(977287)}} --> --></li>
 </ul>

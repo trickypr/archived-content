@@ -1,8 +1,8 @@
 <div>
- <!-- {{SpiderMonkeySidebar("JSAPI")}} --></div>
-<p><!-- {{ obsolete_header("jsapi19") }} --></p>
+ <!-- <!-- {{SpiderMonkeySidebar("JSAPI")}} --> --></div>
+<p><!-- <!-- {{ obsolete_header("jsapi19") }} --> --></p>
 <div class="summary">
- <p>Enumerate all the <!-- {{jsapixref("JS_AddRoot", "named roots")}} --> in a runtime.</p>
+ <p>Enumerate all the <!-- <!-- {{jsapixref("JS_AddRoot", "named roots")}} --> --> in a runtime.</p>
 </div>
 <h2 id="Syntax" name="Syntax">Syntax</h2>
 <pre class="brush: cpp">void
@@ -19,7 +19,7 @@ JS_DumpNamedRoots(JSRuntime *rt,
   </tr>
   <tr>
    <td><code>rt</code></td>
-   <td><!-- {{jsapixref("JSRuntime", "JSRuntime *")}} --></td>
+   <td><!-- <!-- {{jsapixref("JSRuntime", "JSRuntime *")}} --> --></td>
    <td>Pointer to a <code>JSRuntime</code> from which to dump named roots.</td>
   </tr>
   <tr>
@@ -35,7 +35,7 @@ JS_DumpNamedRoots(JSRuntime *rt,
  </tbody>
 </table>
 <h2 id="Description" name="Description">Description</h2>
-<p>Each call to <!-- {{jsapixref("JS_AddRoot", "JS_AddNamedRoot")}} --> creates a record in a table of named roots maintained by the garbage collector. <strong><code>JS_DumpNamedRoots</code></strong> provides a way for the application to access the contents of that table. It calls the <code>dump</code> function once for each named root in the given runtime <code>rt</code>. In pseudocode:</p>
+<p>Each call to <!-- <!-- {{jsapixref("JS_AddRoot", "JS_AddNamedRoot")}} --> --> creates a record in a table of named roots maintained by the garbage collector. <strong><code>JS_DumpNamedRoots</code></strong> provides a way for the application to access the contents of that table. It calls the <code>dump</code> function once for each named root in the given runtime <code>rt</code>. In pseudocode:</p>
 <pre class="brush: cpp">/* pseudocode explanation of what JS_DumpNamedRoots does */
 void JS_DumpNamedRoots(JSRuntime *rt, DumpFn dump, void *data)
 {
@@ -60,7 +60,7 @@ void JS_DumpNamedRoots(JSRuntime *rt, DumpFn dump, void *data)
   <tr>
    <td><code>rp</code></td>
    <td><code>void *</code></td>
-   <td>A pointer to the rooted variable, array element, or field. This is the pointer that the application passed to <!-- {{jsapixref("JS_AddRoot", "JS_AddNamedRoot")}} -->. It points to a variable, array element, or field of type <code>jsval</code>, <code>JSObject *</code>, <code>JSString *</code>, or <code>jsdouble *</code>.</td>
+   <td>A pointer to the rooted variable, array element, or field. This is the pointer that the application passed to <!-- <!-- {{jsapixref("JS_AddRoot", "JS_AddNamedRoot")}} --> -->. It points to a variable, array element, or field of type <code>jsval</code>, <code>JSObject *</code>, <code>JSString *</code>, or <code>jsdouble *</code>.</td>
   </tr>
   <tr>
    <td><code>data</code></td>
@@ -88,5 +88,5 @@ int main()
 </pre>
 <h2 id="See_Also" name="See_Also">See Also</h2>
 <ul>
- <li><!-- {{bug(803907)}} --></li>
+ <li><!-- <!-- {{bug(803907)}} --> --></li>
 </ul>

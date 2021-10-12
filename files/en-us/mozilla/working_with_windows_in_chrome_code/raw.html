@@ -35,7 +35,7 @@ var win = ww.openWindow(null, "chrome://myextension/content/about.xul",
 
 <p>Note the <code>win</code> variable in the above section, which is assigned the return value of <code>window.open</code>. It can be used to access the opened window. The return value of <code>window.open</code> (and similar methods) is a <code>Window</code> object (usually <code>ChromeWindow</code>) – the same type as the <code>window</code> variable.</p>
 
-<p>Technically speaking, it implements a number of interfaces, including <!-- {{ interface("nsIDOMJSWindow") }} --> and <!-- {{ interface("nsIDOMWindow") }} -->, but it also contains the user-defined properties for global variables and functions of the window. So, for example, to access the DOM document corresponding to the window, you can use <code><a href="/en-US/docs/DOM/window.document" title="DOM/window.document">win.document</a></code>.</p>
+<p>Technically speaking, it implements a number of interfaces, including <!-- <!-- {{ interface("nsIDOMJSWindow") }} --> --> and <!-- <!-- {{ interface("nsIDOMWindow") }} --> -->, but it also contains the user-defined properties for global variables and functions of the window. So, for example, to access the DOM document corresponding to the window, you can use <code><a href="/en-US/docs/DOM/window.document" title="DOM/window.document">win.document</a></code>.</p>
 
 <p>Note however, that the <code>open()</code> call returns <em>before</em> the window is fully loaded, so some calls, like <code><a href="/en-US/docs/DOM/document.getElementById" title="DOM/document.getElementById">win.document.getElementById()</a></code> will fail. To overcome this difficulty, you can move the initialization code to a <code>load</code> handler of the window being opened or pass a callback function, as described <a href="#callback">below</a>.</p>
 
@@ -71,7 +71,7 @@ alert(content.document.title);</pre>
 
 <h3 id="Accessing_a_document_in_the_sidebar" name="Accessing_a_document_in_the_sidebar">Accessing a document in the sidebar</h3>
 
-<p>Firefox has a sidebar, which is implemented as a <code>&lt;browser&gt;</code> element with id="sidebar". To access the elements and variables inside the sidebar, you need to use <code>document.getElementById("sidebar").contentDocument</code> or <code>.contentWindow</code>, like when <!-- {{ Anch("Accessing content documents") }} -->.</p>
+<p>Firefox has a sidebar, which is implemented as a <code>&lt;browser&gt;</code> element with id="sidebar". To access the elements and variables inside the sidebar, you need to use <code>document.getElementById("sidebar").contentDocument</code> or <code>.contentWindow</code>, like when <!-- <!-- {{ Anch("Accessing content documents") }} --> -->.</p>
 
 <p>For more sidebar tips, see <a href="/en-US/docs/Code_snippets/Sidebar" title="Code_snippets/Sidebar">Code snippets:Sidebar</a>.</p>
 
@@ -175,7 +175,7 @@ function setStatus(text) {
 <p>Let's add code to the previous example to notify the opener when the user presses Cancel on the progress dialog.</p>
 
 <ul>
- <li><strong>Using <code>window.opener</code>.</strong> The <code>opener</code> property returns its window's opener; that is, the <!-- {{ Anch("Window object") }} --> that opened it.</li>
+ <li><strong>Using <code>window.opener</code>.</strong> The <code>opener</code> property returns its window's opener; that is, the <!-- <!-- {{ Anch("Window object") }} --> --> that opened it.</li>
 </ul>
 
 <p>If we're sure the window that opened the progress dialog declares the <code>cancelOperation</code> function, we can use <code>window.opener.cancelOperation()</code> to notify it, like this:</p>
@@ -274,7 +274,7 @@ var args = window.arguments[0].wrappedJSObject;
 
 <h3 id="Using_JavaScript_code_modules" name="Using_JavaScript_code_modules">Using JavaScript code modules</h3>
 
-<p><a href="/en-US/docs/JavaScript_code_modules/Using" title="Using_JavaScript_code_modules">JavaScript code modules</a> <!-- {{ Fx_minversion_inline(3) }} --> is a simple method for creating shared global singleton objects that can be imported into any other JavaScript scope. The importing scope will have access to the objects and data in the code module. Since the code module is cached, all scopes get the same instance of the code module and can share the data in the module. See <a href="/en-US/docs/Components.utils.import" title="Components.utils.import">Components.utils.import</a> for more information.</p>
+<p><a href="/en-US/docs/JavaScript_code_modules/Using" title="Using_JavaScript_code_modules">JavaScript code modules</a> <!-- <!-- {{ Fx_minversion_inline(3) }} --> --> is a simple method for creating shared global singleton objects that can be imported into any other JavaScript scope. The importing scope will have access to the objects and data in the code module. Since the code module is cached, all scopes get the same instance of the code module and can share the data in the module. See <a href="/en-US/docs/Components.utils.import" title="Components.utils.import">Components.utils.import</a> for more information.</p>
 
 <ul>
  <li>Pros:
@@ -325,7 +325,7 @@ var args = window.arguments[0].wrappedJSObject;
 <p>The FUEL library has been deprecated as of Firefox 41</p>
 </div>
 
-<p>The <a href="/en-US/docs/Toolkit_API/FUEL">FUEL</a> JavaScript library <!-- {{ Fx_minversion_inline(3) }} --> has a simple method for sharing data between windows. The <code>Application</code> object supports a <a href="/en-US/docs/Toolkit_API/extISessionStorage"><code>storage</code></a> property which can be used to store data globally. This method is a simplified form of the XPCOM singleton method.</p>
+<p>The <a href="/en-US/docs/Toolkit_API/FUEL">FUEL</a> JavaScript library <!-- <!-- {{ Fx_minversion_inline(3) }} --> --> has a simple method for sharing data between windows. The <code>Application</code> object supports a <a href="/en-US/docs/Toolkit_API/extISessionStorage"><code>storage</code></a> property which can be used to store data globally. This method is a simplified form of the XPCOM singleton method.</p>
 
 <pre class="brush:js">Application.storage.set(keyname, data);
 

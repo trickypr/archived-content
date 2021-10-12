@@ -1,4 +1,4 @@
-<p><!-- {{ deprecated_header() }} --></p>
+<p><!-- <!-- {{ deprecated_header() }} --> --></p>
 
 <p>This format is no longer supported in Thunderbird 3 in favor of <a href="/en/Thunderbird/Autoconfiguration" title="en/Thunderbird/Autoconfiguration">Autoconfiguration</a>.</p>
 
@@ -45,9 +45,9 @@
 <p>A mail account has several objects associated with it: a mail server, SMTP server, and a user identity. Each object has its own settings which can be specified in the configuration file.</p>
 
 <ul>
- <li>Generic server tags in the ISP file can match the attributes in <!-- {{ Source("mailnews/base/public/nsIMsgIncomingServer.idl", "nsIMsgIncomingServer.idl") }} --> (they automatically map to any object that's listed as "attribute" in this IDL file)</li>
- <li>Identity tags match the same way for: <!-- {{ Source("mailnews/base/public/nsIMsgIdentity.idl", "nsIMsgIdentity.idl") }} --></li>
- <li>SMTP Server tags match the same way for: <!-- {{ Source("mailnews/compose/public/nsISmtpServer.idl", "nsISmtpServer.idl") }} --></li>
+ <li>Generic server tags in the ISP file can match the attributes in <!-- <!-- {{ Source("mailnews/base/public/nsIMsgIncomingServer.idl", "nsIMsgIncomingServer.idl") }} --> --> (they automatically map to any object that's listed as "attribute" in this IDL file)</li>
+ <li>Identity tags match the same way for: <!-- <!-- {{ Source("mailnews/base/public/nsIMsgIdentity.idl", "nsIMsgIdentity.idl") }} --> --></li>
+ <li>SMTP Server tags match the same way for: <!-- <!-- {{ Source("mailnews/compose/public/nsISmtpServer.idl", "nsISmtpServer.idl") }} --> --></li>
 </ul>
 
 <p>Note: the incoming server type is a string, either "<code>imap</code>", "<code>pop3</code>", or "<code>nntp</code>". Here's an example for defining a POP server.</p>
@@ -69,7 +69,7 @@
 
 <p>Changing <code>NC:type</code> to <code>imap</code> instead of <code>pop3</code> would cause the account to be created with an IMAP server.</p>
 
-<p>Looking at <!-- {{ Source("mailnews/base/public/nsIMsgIncomingServer.idl", "nsIMsgIncomingServer.idl") }} --> there is a generic attribute called "<code>port</code>". An ISP can specify a non-default port for this server by introducing the port attribute to the nsIMsgIncomingServer:</p>
+<p>Looking at <!-- <!-- {{ Source("mailnews/base/public/nsIMsgIncomingServer.idl", "nsIMsgIncomingServer.idl") }} --> --> there is a generic attribute called "<code>port</code>". An ISP can specify a non-default port for this server by introducing the port attribute to the nsIMsgIncomingServer:</p>
 
 <pre>&lt;NC:incomingServer&gt;
   &lt;NC:nsIMsgIncomingServer&gt;
@@ -98,10 +98,10 @@
 <p>These tags match attributes in:</p>
 
 <ul>
- <li><!-- {{ Source("mailnews/imap/public/nsIImapIncomingServer.idl", "nsIImapIncomingServer.idl") }} --> for an IMAP server</li>
- <li><!-- {{ Source("mailnews/local/public/nsIPop3IncomingServer.idl", "nsIPop3IncomingServer.idl") }} --> for a POP3 server</li>
- <li><!-- {{ Source("mailnews/local/public/nsIMovemailIncomingServer.idl", "nsIMovemailIncomingServer.idl") }} --> for a movemail server</li>
- <li><!-- {{ Source("mailnews/news/public/nsINntpIncomingServer.idl", "nsINntpIncomingServer.idl") }} --> for a news server</li>
+ <li><!-- <!-- {{ Source("mailnews/imap/public/nsIImapIncomingServer.idl", "nsIImapIncomingServer.idl") }} --> --> for an IMAP server</li>
+ <li><!-- <!-- {{ Source("mailnews/local/public/nsIPop3IncomingServer.idl", "nsIPop3IncomingServer.idl") }} --> --> for a POP3 server</li>
+ <li><!-- <!-- {{ Source("mailnews/local/public/nsIMovemailIncomingServer.idl", "nsIMovemailIncomingServer.idl") }} --> --> for a movemail server</li>
+ <li><!-- <!-- {{ Source("mailnews/news/public/nsINntpIncomingServer.idl", "nsINntpIncomingServer.idl") }} --> --> for a news server</li>
 </ul>
 
 <h5 id="Username_requires_a_domain" name="Username_requires_a_domain">Username requires a domain</h5>

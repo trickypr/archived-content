@@ -99,7 +99,7 @@ OS.File.writeAtomic("file.txt", array, {tmpPath: "file.txt.tmp",   // Write the 
    <td><code>File <a href="#OS.File.open" title="#OS.File.open">open</a>(in string path, [optional] in object mode, [optional] in object options);</code></td>
   </tr>
   <tr>
-   <td><code>object <a href="#OS.File.openUnique" title="#OS.File.openUnique">openUnique</a>(in string path, [optional] in object options);</code> <!-- {{gecko_minversion_inline(27.0)}} --></td>
+   <td><code>object <a href="#OS.File.openUnique" title="#OS.File.openUnique">openUnique</a>(in string path, [optional] in object options);</code> <!-- <!-- {{gecko_minversion_inline(27.0)}} --> --></td>
   </tr>
   <tr>
    <td><code>void <a href="#OS.File.copy" title="#OS.File.copy">copy</a>(in string sourcePath, in string destPath, [optional] in object options);</code></td>
@@ -126,7 +126,7 @@ OS.File.writeAtomic("file.txt", array, {tmpPath: "file.txt.tmp",   // Write the 
    <td><code>void <a href="#OS.File.removeEmptyDir" title="#OS.File.removeEmptyDir">removeEmptyDir</a>(in string path);</code></td>
   </tr>
   <tr>
-   <td><code>void <a href="#OS.File.removeDir" title="#OS.File.removeEmptyDir">removeDir</a>(in string path, [optional] in object options);</code> <!-- {{gecko_minversion_inline(27.0)}} --></td>
+   <td><code>void <a href="#OS.File.removeDir" title="#OS.File.removeEmptyDir">removeDir</a>(in string path, [optional] in object options);</code> <!-- <!-- {{gecko_minversion_inline(27.0)}} --> --></td>
   </tr>
   <tr>
    <td><code>void <a href="#OS.File.setCurrentDirectory" title="#OS.File.setCurrentDirectory">setCurrentDirectory</a>(in string path);</code></td>
@@ -161,7 +161,7 @@ OS.File.writeAtomic("file.txt", array, {tmpPath: "file.txt.tmp",   // Write the 
 <dl>
  <dt><code>path</code></dt>
  <dd>The full native name of the file to open.</dd>
- <dt><code>mode</code> <!-- {{optional_inline()}} --></dt>
+ <dt><code>mode</code> <!-- <!-- {{optional_inline()}} --> --></dt>
  <dd>The opening mode for the file, as an object that may contain a subset of the following fields:
  <dl>
   <dt><code>read</code></dt>
@@ -176,11 +176,11 @@ OS.File.writeAtomic("file.txt", array, {tmpPath: "file.txt.tmp",   // Write the 
   <dd>If <code>true</code>, file will be opened for writing. The file must not exist. If the file already exists, an error is thrown. Cannot be used with <code>truncate</code> or <code>existing</code>.</dd>
   <dt><code>existing</code></dt>
   <dd>If <code>true</code>, the file must already exist. If the file does not exist, an error is thrown. Cannot be used with <code>create</code>.</dd>
-  <dt><code>append</code> <!-- {{gecko_minversion_inline(27)}} --></dt>
+  <dt><code>append</code> <!-- <!-- {{gecko_minversion_inline(27)}} --> --></dt>
   <dd>If<code> true</code>, the file will be opened for appending, meaning the equivalent of <code>.setPosition(0, POS_END)</code> is executed before each write. The default is <code>true</code>, i.e. opening a file for appending. Specify <code>append: false</code> to open the file in regular mode.</dd>
  </dl>
  </dd>
- <dt><code>options</code> <!-- {{optional_inline()}} --></dt>
+ <dt><code>options</code> <!-- <!-- {{optional_inline()}} --> --></dt>
  <dd>Platform-specific options for opening the file. <strong>For advanced users only. Most users will never have need for these options.</strong> To specify options, pass an object that may contain some of the following flags:
  <dl>
   <dt><code>unixFlags</code></dt>
@@ -255,7 +255,7 @@ try {
 
 <h4 id="OS.File.openUnique_2">OS.File.openUnique()<a name="OS.File.openUnique"></a></h4>
 
-<p><!-- {{gecko_minversion_inline("27.0")}} --></p>
+<p><!-- <!-- {{gecko_minversion_inline("27.0")}} --> --></p>
 
 <p>Creates and opens a file with a unique name. By default, generate a random HEX number and use it to create a unique new file name.</p>
 
@@ -269,7 +269,7 @@ try {
 <dl>
  <dt><code>path</code></dt>
  <dd>The full native name of the file to open.</dd>
- <dt><code>options</code> <!-- {{optional_inline()}} --></dt>
+ <dt><code>options</code> <!-- <!-- {{optional_inline()}} --> --></dt>
  <dd>Additional options for file opening. This implementation interprets the following fields:
  <dl>
   <dt><code>humanReadable</code></dt>
@@ -309,7 +309,7 @@ throws <a href="/en-US/docs/JavaScript_OS.File/OS.File.Error" title="/en-US/docs
  <dd>The full path of the file to copy. At the time of this writing, this function does <strong>not</strong> copy directories.</dd>
  <dt><code>destPath</code></dt>
  <dd>The full path of the destination. Note that this is not a directory but a file.</dd>
- <dt><code>options</code> <!-- {{optional_inline()}} --></dt>
+ <dt><code>options</code> <!-- <!-- {{optional_inline()}} --> --></dt>
  <dd>An optional object used to control the behavior of this function. You may pass an object with a subset of the following fields:</dd>
  <dt style="margin-left: 40px;"><code>noOverwrite</code></dt>
  <dd style="margin-left: 40px;">If <code>destPath</code> already exists, do not overwrite it, but rather throw an exception.</dd>
@@ -376,7 +376,7 @@ throws <a href="/en-US/docs/JavaScript_OS.File/OS.File.Error" title="/en-US/docs
 <dl>
  <dt><code>path</code></dt>
  <dd>The full name of the directory to create.</dd>
- <dt><code>options</code> <!-- {{optional_inline()}} --></dt>
+ <dt><code>options</code> <!-- <!-- {{optional_inline()}} --> --></dt>
  <dd>Platform-specific options for creating the directory. <strong>For advanced users only. Most users will never have need for these options.</strong> To specify options, pass an object that may contain some of the following flags:</dd>
  <dt style="margin-left: 40px;"><code>unixMode</code></dt>
  <dd style="margin-left: 40px;">(ignored under non-Unix platforms) If specified, file creation mode, as per libc function mkdir. If unspecified, directories are created with a default mode of 0600 (file is private to the user, the user can read and write). You can build this mode from values <a href="/en/JavaScript_OS.Constants#libc_opening_files" title="en/JavaScript_OS.Constants#libc_opening_files"><code>OS.Constants.libc.S_I*</code></a>.</dd>
@@ -402,7 +402,7 @@ throws <a href="/en-US/docs/JavaScript_OS.File/OS.File.Error" title="/en-US/docs
  <dd>The full path of the file to move. At the time of this writing, the behavior of this function is unspecified if <code>sourcePath</code> is a directory.</dd>
  <dt><code>destPath</code></dt>
  <dd>The full path of the destination. At the time of this writing, the behavior of this function is unspecified if <code>destPath</code> is a directory.</dd>
- <dt><code>options</code> <!-- {{optional_inline()}} --></dt>
+ <dt><code>options</code> <!-- <!-- {{optional_inline()}} --> --></dt>
  <dd>An optional object used to control the behavior of this function. You may pass an object with a subset of the following fields:
  <dl>
   <dt><code>noOverwrite</code></dt>
@@ -435,7 +435,7 @@ throws <a href="/en-US/docs/JavaScript_OS.File/OS.File.Error" title="/en-US/docs
 <dl>
  <dt><code>path</code></dt>
  <dd>The full path to the file to read.</dd>
- <dt><code>bytes</code> <!-- {{optional_inline()}} --></dt>
+ <dt><code>bytes</code> <!-- <!-- {{optional_inline()}} --> --></dt>
  <dd>The number of bytes to read. If unspecified, read the file to the end.</dd>
 </dl>
 
@@ -501,7 +501,7 @@ throws <a href="/en-US/docs/JavaScript_OS.File/OS.File.Error" title="/en-US/docs
 
 <h4 id="OS.File.removeDir_2">OS.File.removeDir()<a name="OS.File.removeDir"></a></h4>
 
-<p><!-- {{gecko_minversion_inline(27)}} --></p>
+<p><!-- <!-- {{gecko_minversion_inline(27)}} --> --></p>
 
 <p>Remove an existing directory and its contents.</p>
 
@@ -746,7 +746,7 @@ throws <a href="/en-US/docs/JavaScript_OS.File/OS.File.Error" title="/en-US/docs
 <h5 id="Arguments_15">Arguments</h5>
 
 <dl>
- <dt><code>bytes</code> <!-- {{optional_inline()}} --></dt>
+ <dt><code>bytes</code> <!-- <!-- {{optional_inline()}} --> --></dt>
  <dd>If specified, read <code>bytes</code> bytes, or less if the file does not contain that many bytes. If unspecified, read all the remaining bytes from this file.</dd>
 </dl>
 
@@ -777,7 +777,7 @@ throws <a href="/en-US/docs/JavaScript_OS.File/OS.File.Error" title="/en-US/docs
 <dl>
  <dt><code>dest</code></dt>
  <dd>The buffer in which to store the bytes.</dd>
- <dt><code>options</code> <!-- {{optional_inline()}} --></dt>
+ <dt><code>options</code> <!-- <!-- {{optional_inline()}} --> --></dt>
  <dd>An object that may contain some of the following fields:</dd>
  <dt style="margin-left: 40px;"><code>bytes</code></dt>
  <dd style="margin-left: 40px;">An upper bound to the number of bytes to read from the file. If unspecified, read up to <code>dest.byteLength</code> bytes. If specified, this must be less than <code>dest.byteLength</code>.</dd>
@@ -888,7 +888,7 @@ throws <a href="/en-US/docs/JavaScript_OS.File/OS.File.Error" title="/en-US/docs
 <dl>
  <dt><code>source</code></dt>
  <dd>The array in which the the bytes are stored.</dd>
- <dt><code>options <!-- {{optional_inline()}} --></code></dt>
+ <dt><code>options <!-- <!-- {{optional_inline()}} --> --></code></dt>
  <dd>An object that may contain some of the following fields:</dd>
  <dt style="margin-left: 40px;"><code>bytes</code></dt>
  <dd style="margin-left: 40px;">An upper bound to the number of bytes to write to the file. If unspecified, write up to <code>source.byteLength</code> bytes. If specified, this must be less than <code>source.byteLength</code>.</dd>

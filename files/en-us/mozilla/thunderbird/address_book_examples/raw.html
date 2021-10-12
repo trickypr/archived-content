@@ -1,4 +1,4 @@
-<p><!-- {{ Note("Thunderbird and SeaMonkey user interfaces now reference 'Contacts' not 'Cards' however, as the backend still uses the 'Cards' terminology, that is what is used here") }} --></p>
+<p><!-- <!-- {{ Note("Thunderbird and SeaMonkey user interfaces now reference 'Contacts' not 'Cards' however, as the backend still uses the 'Cards' terminology, that is what is used here") }} --> --></p>
 
 <p>This article provides examples on accessing and manipulating Thunderbird address books. <a class="internal" href="/En/Address_Book_Interfaces" title="En/Address Book Interfaces">Address book interfaces</a> provides an overview of the related interfaces. See <a class="internal" href="/en/Extensions/Thunderbird/An_overview_of_the_Thunderbird_interface" title="En/Extensions/Thunderbird/An overview of the Thunderbird interface">An overview of Thunderbird components </a>for a general description of the Thunderbird user interface and related programmatic interfaces.</p>
 
@@ -46,7 +46,7 @@ let card = collection.getCardFromProperty("JobTitle", "software engineer", false
 
 let card = collection.cardForEmailAddress("foo@bar.invalid.com");</pre>
 
-<p><!-- {{ Note("Both of these functions may raise an <code>NS_ERROR_NOT_IMPLEMENTED</code> exception if the collection has not implemented that function. This is currently true in the case of LDAP, but may be true in other cases as well.") }} --></p>
+<p><!-- <!-- {{ Note("Both of these functions may raise an <code>NS_ERROR_NOT_IMPLEMENTED</code> exception if the collection has not implemented that function. This is currently true in the case of LDAP, but may be true in other cases as well.") }} --> --></p>
 
 <h3 id="How_do_I_search_for_multiple_contacts">How do I search for multiple contacts?</h3>
 
@@ -76,11 +76,11 @@ while (allAddressBooks.hasMoreElements()) {
 }
 </pre>
 
-<p><!-- {{ Note("This method doesn't work with remote address books (e.g. LDAP). Hence the additional <code>!ab.isRemote</code> check"); }} --></p>
+<p><!-- <!-- {{ Note("This method doesn't work with remote address books (e.g. LDAP). Hence the additional <code>!ab.isRemote</code> check"); }} --> --></p>
 
 <h3 id="How_do_I_addeditdelete_contacts">How do I add/edit/delete contacts?</h3>
 
-<p><!-- {{ Note("Not all address books can be written to. Use the <code>nsIAbCollection.readOnly</code> attribute to determine the read-only status of an address book") }} --></p>
+<p><!-- <!-- {{ Note("Not all address books can be written to. Use the <code>nsIAbCollection.readOnly</code> attribute to determine the read-only status of an address book") }} --> --></p>
 
 <h4 id="Adding_Contacts">Adding Contacts</h4>
 
@@ -133,7 +133,7 @@ card.setProperty("Random2", "foo");
 my value = card.getProperty("Random1");
 </pre>
 
-<p><!-- {{ Note("Local (mork) address books are currently the only built-in type of address book that supports saving of non-built-in properties. However, outlook directories are the only other built-in write capable directories.") }} --></p>
+<p><!-- <!-- {{ Note("Local (mork) address books are currently the only built-in type of address book that supports saving of non-built-in properties. However, outlook directories are the only other built-in write capable directories.") }} --> --></p>
 
 <h3 id="How_do_I_addeditdelete_mailing_lists">How do I add/edit/delete mailing lists?</h3>
 
@@ -263,7 +263,7 @@ abManager.deleteAddressBook(mailList.URI);
                   null);
 </pre>
 
-<p><!-- {{ Note("There is no new address book dialog for the OS X address book. As this is a system address book, there is only one address book represented, and therefore a new address book dialog does not make sense. In Thunderbird a menu option is provided instead.") }} --></p>
+<p><!-- <!-- {{ Note("There is no new address book dialog for the OS X address book. As this is a system address book, there is only one address book represented, and therefore a new address book dialog does not make sense. In Thunderbird a menu option is provided instead.") }} --> --></p>
 
 <h4 id="Edit_Address_Book_Dialog">Edit Address Book Dialog</h4>
 
@@ -276,7 +276,7 @@ abManager.deleteAddressBook(mailList.URI);
 
 <h3 id="How_do_I_set_up_my_own_address_book">How do I set up my own address book?</h3>
 
-<p><!-- {{ draft() }} --></p>
+<p><!-- <!-- {{ draft() }} --> --></p>
 
 <p>As of Thunderbird 7.0, implementing your own address book type can be done with either JavaScript or with a binary component. In either case, you'll need:</p>
 
@@ -401,7 +401,7 @@ function foo(aCard, aDocument) </code><code>{
 
 <h4 id="LDAP_Autocomplete">LDAP Autocomplete</h4>
 
-<p>LDAP autocomplete still uses the XPFE interfaces, it is planned (<!-- {{ bug("452232") }} -->) to move this over to the toolkit interfaces at some stage.</p>
+<p>LDAP autocomplete still uses the XPFE interfaces, it is planned (<!-- <!-- {{ bug("452232") }} --> -->) to move this over to the toolkit interfaces at some stage.</p>
 
 <p>The best example of how to use this is via the existing code that can be <a class="external" href="http://hg.mozilla.org/comm-central/file/117e438feb4a/mail/components/compose/content/MsgComposeCommands.js#l784" title="http://hg.mozilla.org/comm-central/file/117e438feb4a/mail/components/compose/content/MsgComposeCommands.js#l784">found here</a>.</p>
 

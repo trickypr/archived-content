@@ -72,7 +72,7 @@ document.images[0].__proto__.foo = bar;
 
 <p>This demonstrates that the <code>Image</code> constructor, a host object supported in nearly all browsers for Mac and Windows, has a <code>prototype</code> property, and that an attempt to modify the <code>prototype</code>'s <code>src</code> - property results in an error.</p>
 
-<p>Another example would be modifying the <code>pageX</code> property of a <code>MouseEvent</code> instance. The <code>pageX</code> property actually needs a patch because it doesn't get set correctly in <code>initMouseEvent</code> <!-- {{ Bug(411031) }} -->.</p>
+<p>Another example would be modifying the <code>pageX</code> property of a <code>MouseEvent</code> instance. The <code>pageX</code> property actually needs a patch because it doesn't get set correctly in <code>initMouseEvent</code> <!-- <!-- {{ Bug(411031) }} --> -->.</p>
 
 <p>Here is a diagram that shows the prototype layout of a <code>HTMLDivElement</code> in Mozilla:</p>
 

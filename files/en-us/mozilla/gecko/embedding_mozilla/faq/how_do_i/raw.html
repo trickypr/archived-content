@@ -124,17 +124,17 @@ if (window) {
 
 <h3 id="How_do_I_implement_context_menus.3F" name="How_do_I_implement_context_menus.3F">How do I implement context menus?</h3>
 
-<p>Make your chrome object implement the <!-- {{ Interface("nsIContextMenuListener") }} --> or <!-- {{ Interface("nsIContextMenuListener2") }} -->. The nsIContextMenuListener::OnShowContextMenu() method will be called with the DOM node that the context applies, the DOM event plus some flag combinations that assist in determining what menu to display (document, link, image, selected text etc.)</p>
+<p>Make your chrome object implement the <!-- <!-- {{ Interface("nsIContextMenuListener") }} --> --> or <!-- <!-- {{ Interface("nsIContextMenuListener2") }} --> -->. The nsIContextMenuListener::OnShowContextMenu() method will be called with the DOM node that the context applies, the DOM event plus some flag combinations that assist in determining what menu to display (document, link, image, selected text etc.)</p>
 
 <h3 id="How_do_I_implement_tool_tips.3F" name="How_do_I_implement_tool_tips.3F">How do I implement tool tips?</h3>
 
-<p>Make your chrome object implement the <!-- {{ Interface("nsITooltipListener") }} --> interface. Methods to hide or show the tool tips will automatically be called upon it when the user hovers over an item with TITLE text. The contract ID is defined <!-- {{ Source("embedding/browser/webBrowser/nsCTooltipTextProvider.h", "here") }} -->.</p>
+<p>Make your chrome object implement the <!-- <!-- {{ Interface("nsITooltipListener") }} --> --> interface. Methods to hide or show the tool tips will automatically be called upon it when the user hovers over an item with TITLE text. The contract ID is defined <!-- <!-- {{ Source("embedding/browser/webBrowser/nsCTooltipTextProvider.h", "here") }} --> -->.</p>
 
-<p>For an example, see <!-- {{ Source("embedding/tests/mfcembed/BrowserImpl.cpp", "BrowserImpl.cpp") }} --> in mfcembed and its simple <!-- {{ Source("embedding/tests/mfcembed/BrowserToolTip.cpp", "CBrowserToolTip") }} --> class implemented in MFC.</p>
+<p>For an example, see <!-- <!-- {{ Source("embedding/tests/mfcembed/BrowserImpl.cpp", "BrowserImpl.cpp") }} --> --> in mfcembed and its simple <!-- <!-- {{ Source("embedding/tests/mfcembed/BrowserToolTip.cpp", "CBrowserToolTip") }} --> --> class implemented in MFC.</p>
 
 <h3 id="How_do_I_disable_drag.2Fdrop_support.3F" name="How_do_I_disable_drag.2Fdrop_support.3F">How do I disable drag/drop support?</h3>
 
-<p>When setting up your browser add a hook to the command manager which points to your <!-- {{ Interface("nsIWebBrowserChrome") }} --> implementation. This implementation should also implement <!-- {{ Interface("nsIClipboardDragDropHooks") }} -->. Deny the drop by setting the return value of the AllowDrop() function.</p>
+<p>When setting up your browser add a hook to the command manager which points to your <!-- <!-- {{ Interface("nsIWebBrowserChrome") }} --> --> implementation. This implementation should also implement <!-- <!-- {{ Interface("nsIClipboardDragDropHooks") }} --> -->. Deny the drop by setting the return value of the AllowDrop() function.</p>
 
 <pre>nsCOMPtr&lt;nsICommandManager&gt; CommandManager = do_GetInterface(iWebBrowser);
 if (CommandManager)

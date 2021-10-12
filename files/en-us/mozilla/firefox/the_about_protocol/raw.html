@@ -1,4 +1,4 @@
-<div><!-- {{FirefoxSidebar}} --></div>
+<div><!-- <!-- {{FirefoxSidebar}} --> --></div>
 
 <p class="summary"><span class="seoSummary">There is a lot of useful information about Firefox hidden away behind the <code>about:</code> URL protocol. The most useful is the URL <code>about:config</code>, which displays preferences and settings that can be inspected and changed.</span></p>
 
@@ -175,7 +175,7 @@
  </tbody>
 </table>
 
-<p>These URLs are defined in <!-- {{source("docshell/base/nsAboutRedirector.cpp")}} --> within the <code>kRedirMap</code> array.  The array maps most of the URLs, like <code>config</code> to URLs in the <code>chrome:</code> pseudo protocol, such as <code>chrome://global/content/config.xul</code>.  The about location information is duplicated in <!-- {{source("docshell/build/nsDocShellModule.cpp")}} -->.</p>
+<p>These URLs are defined in <!-- <!-- {{source("docshell/base/nsAboutRedirector.cpp")}} --> --> within the <code>kRedirMap</code> array.  The array maps most of the URLs, like <code>config</code> to URLs in the <code>chrome:</code> pseudo protocol, such as <code>chrome://global/content/config.xul</code>.  The about location information is duplicated in <!-- <!-- {{source("docshell/build/nsDocShellModule.cpp")}} --> -->.</p>
 
 <div class="note">
 <p><strong>Note</strong>: You must access <code>about:</code> protocol pages by typing them into the address bar. Attempts to navigate through <code>window.location</code> will throw —  <code>Error: Access to 'about:addons' from script denied</code>.</p>

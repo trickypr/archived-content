@@ -1,5 +1,5 @@
 <div class="warning">
-<p>Introduced in Firefox 5, this is now obsolete and has been removed in Firefox 40: use ES2015 <!-- {{jsxref("Map")}} -->.</p>
+<p>Introduced in Firefox 5, this is now obsolete and has been removed in Firefox 40: use ES2015 <!-- <!-- {{jsxref("Map")}} --> -->.</p>
 </div>
 
 <p>The <code>Dict.jsm</code> JavaScript code module offers routines for managing dictionaries of key/value pairs. To use it, you first need to import the code module into your JavaScript scope:</p>
@@ -26,7 +26,7 @@ var newDict = new Dict({key1: "foo", key2: someObj});
 
 <p>In Firefox 19 and above, you may also pass a <a href="/en/JSON" title="en/JSON">JSON String</a> to initialize the dictionary:</p>
 
-<pre>var someJSON = '{key1: "foo", key2: {}} -->';
+<pre>var someJSON = '{key1: "foo", key2: {}} --> -->';
 var newDict = new Dict(someJSON);
 </pre>
 
@@ -61,7 +61,7 @@ var newDict = new Dict(someJSON);
    <td><code>void <a href="/en/JavaScript_code_modules/Dict.jsm#set()" title="en/JavaScript code modules/Dict.jsm#set()">set</a>(String </code><code>aKey</code><code>, </code><code><a href="/en/JavaScript/Reference/Global_Objects/Object" title="en/JavaScript/Reference/Global Objects/Object">Object</a></code><code> aValue);</code></td>
   </tr>
   <tr>
-   <td><!-- {{ fx_minversion_inline("19") }} --> <code><a href="/en/JavaScript/Reference/Global_Objects/String" title="en/JavaScript/Reference/Global Objects/String">String</a></code><code> <a href="/en/JavaScript_code_modules/Dict.jsm#toJSON()" title="en/JavaScript code modules/Dict.jsm#toJSON()">toJSON</a>();</code></td>
+   <td><!-- <!-- {{ fx_minversion_inline("19") }} --> --> <code><a href="/en/JavaScript/Reference/Global_Objects/String" title="en/JavaScript/Reference/Global Objects/String">String</a></code><code> <a href="/en/JavaScript_code_modules/Dict.jsm#toJSON()" title="en/JavaScript code modules/Dict.jsm#toJSON()">toJSON</a>();</code></td>
   </tr>
   <tr>
    <td><code><a href="/en/JavaScript/Reference/Global_Objects/String" title="en/JavaScript/Reference/Global Objects/String">String</a></code><code> <a href="/en/JavaScript_code_modules/Dict.jsm#toString()" title="en/JavaScript code modules/Dict.jsm#toString()">toString</a>();</code></td>
@@ -129,7 +129,7 @@ Dict Dict(
 <h6 id="Parameters">Parameters</h6>
 
 <dl>
- <dt><code>initialKeysAndValues</code> <!-- {{ optional_inline() }} --></dt>
+ <dt><code>initialKeysAndValues</code> <!-- <!-- {{ optional_inline() }} --> --></dt>
  <dd>A object containing key/value pairs with which to initialize the dictionary.</dd>
 </dl>
 
@@ -189,7 +189,7 @@ Dict Dict(
 <dl>
  <dt><code>aKey</code></dt>
  <dd>The key whose value should be returned.</dd>
- <dt><code>aDefault</code> <!-- {{ optional_inline() }} --></dt>
+ <dt><code>aDefault</code> <!-- <!-- {{ optional_inline() }} --> --></dt>
  <dd>The value to return if the specified key isn't found. If you don't specify a default value, <code>undefined</code> is returned for keys that aren't found.</dd>
 </dl>
 

@@ -14,14 +14,14 @@
 );
 </pre>
 <h3 id="Parameters"> Parameters </h3>
-<dl><dt><code>hSession</code></dt><dd> <!-- {{ mediawiki.external('in') }} --> session handle.
-</dd><dt><code>pMechanism</code></dt><dd> <!-- {{ mediawiki.external('in') }} --> pointer to the mechanism to use.
-</dd><dt><code>hUnwrappingKey</code></dt><dd> <!-- {{ mediawiki.external('in') }} --> handle of the ket to use for unwrapping.
-</dd><dt><code>pWrappedKey</code></dt><dd> <!-- {{ mediawiki.external('in') }} --> pointer to the wrapped key.
-</dd><dt><code>usWrappedKeyLen</code></dt><dd> <!-- {{ mediawiki.external('in') }} --> length of the wrapped key.
-</dd><dt><code>pTemplate</code></dt><dd> <!-- {{ mediawiki.external('in') }} --> pointer to the list of attributes for the unwrapped key.
-</dd><dt><code>usAttributeCount</code></dt><dd> <!-- {{ mediawiki.external('in') }} --> number of attributes in the template.
-</dd><dt><code>phKey</code></dt><dd> <!-- {{ mediawiki.external('out') }} --> pointer to the location to receive the handle of the unwrapped key.
+<dl><dt><code>hSession</code></dt><dd> <!-- <!-- {{ mediawiki.external('in') }} --> --> session handle.
+</dd><dt><code>pMechanism</code></dt><dd> <!-- <!-- {{ mediawiki.external('in') }} --> --> pointer to the mechanism to use.
+</dd><dt><code>hUnwrappingKey</code></dt><dd> <!-- <!-- {{ mediawiki.external('in') }} --> --> handle of the ket to use for unwrapping.
+</dd><dt><code>pWrappedKey</code></dt><dd> <!-- <!-- {{ mediawiki.external('in') }} --> --> pointer to the wrapped key.
+</dd><dt><code>usWrappedKeyLen</code></dt><dd> <!-- <!-- {{ mediawiki.external('in') }} --> --> length of the wrapped key.
+</dd><dt><code>pTemplate</code></dt><dd> <!-- <!-- {{ mediawiki.external('in') }} --> --> pointer to the list of attributes for the unwrapped key.
+</dd><dt><code>usAttributeCount</code></dt><dd> <!-- <!-- {{ mediawiki.external('in') }} --> --> number of attributes in the template.
+</dd><dt><code>phKey</code></dt><dd> <!-- <!-- {{ mediawiki.external('out') }} --> --> pointer to the location to receive the handle of the unwrapped key.
 </dd></dl>
 <h3 id="Description"> Description </h3>
 <p><code>FC_UnwrapKey</code> unwraps (decrypts) a key and creates a new key opbject. If <code>pWrappedKey</code> is NULL the length of the wrapped key is returned in <code>pusWrappedKeyLen</code> and FC_UnwrapKey may be called again with <code>pWrappedKey</code> set to retrieve the wrapped key.

@@ -1,4 +1,4 @@
-<div><!-- {{SpiderMonkeySidebar("JSAPI")}} --></div>
+<div><!-- <!-- {{SpiderMonkeySidebar("JSAPI")}} --> --></div>
 
 <div class="summary">
 <p><strong><code>JS::Value</code></strong> is the type of JavaScript values in the JSAPI.</p>
@@ -22,49 +22,49 @@
   <tr>
    <td><code>null</code></td>
    <td><code>val.isNull()</code></td>
-   <td><!-- {{jsapixref("JS::NullValue", "JS::NullValue()")}} --></td>
+   <td><!-- <!-- {{jsapixref("JS::NullValue", "JS::NullValue()")}} --> --></td>
    <td>N/A</td>
    <td><code>val.setNull()</code></td>
   </tr>
   <tr>
    <td><code>undefined</code></td>
    <td><code>val.isUndefined()</code></td>
-   <td><!-- {{jsapixref("JS::UndefinedValue", "JS::UndefinedValue()")}} --></td>
+   <td><!-- <!-- {{jsapixref("JS::UndefinedValue", "JS::UndefinedValue()")}} --> --></td>
    <td>N/A</td>
    <td><code>val.setUndefined()</code></td>
   </tr>
   <tr>
    <td>boolean</td>
    <td><code>val.isBoolean()</code>, <code>val.isTrue(), val.isFalse()</code></td>
-   <td><!-- {{jsapixref("JS::BooleanValue", "JS::BooleanValue(bool)")}} -->, <!-- {{jsapixref("JS::TrueValue", "JS::TrueValue()")}} -->, <!-- {{jsapixref("JS::FalseValue", "JS::FalseValue()")}} --></td>
+   <td><!-- <!-- {{jsapixref("JS::BooleanValue", "JS::BooleanValue(bool)")}} --> -->, <!-- <!-- {{jsapixref("JS::TrueValue", "JS::TrueValue()")}} --> -->, <!-- <!-- {{jsapixref("JS::FalseValue", "JS::FalseValue()")}} --> --></td>
    <td><code>val.toBoolean()</code></td>
    <td><code>val.setBoolean(bool)</code></td>
   </tr>
   <tr>
    <td>number</td>
    <td><code>val.isInt32()</code>, <code>val.isDouble(), val.isNumber()</code></td>
-   <td><!-- {{jsapixref("JS::NumberValue", "JS::NumberValue(any number type)")}} -->, <!-- {{jsapixref("JS::Int32Value", "JS::Int32Value(int32_t)")}} -->, <!-- {{jsapixref("JS::DoubleValue", "JS::DoubleValue(double)")}} -->, <!-- {{jsapixref("JS::Float32Value", "JS::Float32Value(float)")}} --></td>
+   <td><!-- <!-- {{jsapixref("JS::NumberValue", "JS::NumberValue(any number type)")}} --> -->, <!-- <!-- {{jsapixref("JS::Int32Value", "JS::Int32Value(int32_t)")}} --> -->, <!-- <!-- {{jsapixref("JS::DoubleValue", "JS::DoubleValue(double)")}} --> -->, <!-- <!-- {{jsapixref("JS::Float32Value", "JS::Float32Value(float)")}} --> --></td>
    <td><code>val.toInt32()</code>, <code>val.toDouble()</code>, <code>val.toNumber()</code></td>
    <td><code>val.setInt32(int32_t)</code>, <code>val.setNumber(uint32_t)</code>, <code>val.setNumber(double)</code></td>
   </tr>
   <tr>
    <td>string</td>
    <td><code>val.isString()</code></td>
-   <td><!-- {{jsapixref("JS::StringValue", "JS::StringValue(JSString*)")}} --></td>
+   <td><!-- <!-- {{jsapixref("JS::StringValue", "JS::StringValue(JSString*)")}} --> --></td>
    <td><code>val.toString()</code></td>
    <td><code>val.setString(JSString *)</code></td>
   </tr>
   <tr>
    <td>object</td>
    <td><code>val.isObject()</code></td>
-   <td><!-- {{jsapixref("JS::ObjectValue", "JS::ObjectValue(JSObject&amp;)")}} -->, <!-- {{jsapixref("JS::ObjectOrNullValue", "JS::ObjectOrNullValue(JSObject*)")}} --></td>
+   <td><!-- <!-- {{jsapixref("JS::ObjectValue", "JS::ObjectValue(JSObject&amp;)")}} --> -->, <!-- <!-- {{jsapixref("JS::ObjectOrNullValue", "JS::ObjectOrNullValue(JSObject*)")}} --> --></td>
    <td><code>val.toObject()</code></td>
    <td><code>val.setObject(JSObject &amp;)</code></td>
   </tr>
   <tr>
    <td>symbol</td>
    <td><code>val.isSymbol()</code></td>
-   <td><!-- {{jsapixref("JS::SymbolValue", "JS::SymbolValue(JS::Symbol*)")}} --></td>
+   <td><!-- <!-- {{jsapixref("JS::SymbolValue", "JS::SymbolValue(JS::Symbol*)")}} --> --></td>
    <td><code>val.toSymbol()</code></td>
    <td><code>val.setSymbol(JS::Symbol &amp;)</code></td>
   </tr>
@@ -76,7 +76,7 @@
 <p><code>JS::Value</code> further provides these methods combining various aspects of the above methods:</p>
 
 <ul>
- <li><!-- {{jsapixref("JS::ObjectOrNullValue", "JS::ObjectOrNullValue(JSObject*)")}} --> returns an object value corresponding to the given non-null pointer, or a <code>null</code> value if the pointer is null.</li>
+ <li><!-- <!-- {{jsapixref("JS::ObjectOrNullValue", "JS::ObjectOrNullValue(JSObject*)")}} --> --> returns an object value corresponding to the given non-null pointer, or a <code>null</code> value if the pointer is null.</li>
  <li><code>val.setObjectOrNull(JSObject *)</code> sets the given value to the specified object, or to <code>null</code> if the pointer was null.</li>
  <li><code>val.isObjectOrNull()</code> returns <code>true</code> if the value is either an object or <code>undefined</code>.</li>
  <li>Correspondingly, <code>val.toObjectOrNull()</code> returns a non-null <code>JSObject *</code> if the value is an object, and <code>NULL</code> if the value is <code>null</code>.</li>

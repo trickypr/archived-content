@@ -1,4 +1,4 @@
-<div><!-- {{SpiderMonkeySidebar("JSAPI")}} --></div>
+<div><!-- <!-- {{SpiderMonkeySidebar("JSAPI")}} --> --></div>
 
 <div class="summary">
 <p>Assign a value to a property of an object.</p>
@@ -29,17 +29,17 @@ JS_SetPropertyById(JSContext *cx, JS::HandleObject obj, JS::HandleId id,
   </tr>
   <tr>
    <td><code>cx</code></td>
-   <td><!-- {{jsapixref("JSRuntime", "JSContext *")}} --></td>
-   <td>Pointer to a JS context from which to derive runtime information. <!-- {{ Jsapi-requires-request() }} --></td>
+   <td><!-- <!-- {{jsapixref("JSRuntime", "JSContext *")}} --> --></td>
+   <td>Pointer to a JS context from which to derive runtime information. <!-- <!-- {{ Jsapi-requires-request() }} --> --></td>
   </tr>
   <tr>
    <td><code>obj</code></td>
-   <td><!-- {{jsapixref("JSObject", "JS::HandleValue")}} --></td>
+   <td><!-- <!-- {{jsapixref("JSObject", "JS::HandleValue")}} --> --></td>
    <td>Object to which the property to set belongs.</td>
   </tr>
   <tr>
    <td><code>name</code> <em>or<em> <code>id</code></em></em></td>
-   <td><code>const char *</code> <em>or</em> <code>const char16_t *<em>or</em> <!-- {{jsapixref("jsid", "JS::HandleId")}} --></code></td>
+   <td><code>const char *</code> <em>or</em> <code>const char16_t *<em>or</em> <!-- <!-- {{jsapixref("jsid", "JS::HandleId")}} --> --></code></td>
    <td>Name of the property to set.</td>
   </tr>
   <tr>
@@ -49,17 +49,17 @@ JS_SetPropertyById(JSContext *cx, JS::HandleObject obj, JS::HandleId id,
   </tr>
   <tr>
    <td><code>v</code></td>
-   <td><!-- {{jsapixref("JS::Value", "JS::HandleValue")}} --></td>
-   <td>In/out parameter. *<code>vp</code> is the value to assign to the property. Ordinarily this function leaves <code>v</code> unchanged, but it is possible for a <!-- {{jsapixref("JSPropertyOp", "JSClass.addProperty")}} --> hook or a non-default <!-- {{jsapixref("JSPropertyOp", "setter")}} --> to assign to <code>v</code>.</td>
+   <td><!-- <!-- {{jsapixref("JS::Value", "JS::HandleValue")}} --> --></td>
+   <td>In/out parameter. *<code>vp</code> is the value to assign to the property. Ordinarily this function leaves <code>v</code> unchanged, but it is possible for a <!-- <!-- {{jsapixref("JSPropertyOp", "JSClass.addProperty")}} --> --> hook or a non-default <!-- <!-- {{jsapixref("JSPropertyOp", "setter")}} --> --> to assign to <code>v</code>.</td>
   </tr>
  </tbody>
 </table>
 
 <h2 id="Description" name="Description">Description</h2>
 
-<p><strong><code>JS_SetProperty</code></strong> assigns the value <code>v</code> to the property <code>name</code> of the object <code>obj</code>. It behaves like the JavaScript expression <code>obj[name] = v</code>. <strong><code>JS_SetUCProperty</code></strong> is the Unicode version of the function. <strong><code>JS_SetPropertyById</code></strong> is the same but takes a <!-- {{jsapixref("jsid", "JS::HandleId")}} --> for the property name.</p>
+<p><strong><code>JS_SetProperty</code></strong> assigns the value <code>v</code> to the property <code>name</code> of the object <code>obj</code>. It behaves like the JavaScript expression <code>obj[name] = v</code>. <strong><code>JS_SetUCProperty</code></strong> is the Unicode version of the function. <strong><code>JS_SetPropertyById</code></strong> is the same but takes a <!-- <!-- {{jsapixref("jsid", "JS::HandleId")}} --> --> for the property name.</p>
 
-<p>If <code>obj</code> is a <!-- {{jsxref("Proxy")}} -->, the <code>JS_SetProperty</code> [[Set]] internal method defined in ES2015 (rev 29 9.5.9) is performed.</p>
+<p>If <code>obj</code> is a <!-- <!-- {{jsxref("Proxy")}} --> -->, the <code>JS_SetProperty</code> [[Set]] internal method defined in ES2015 (rev 29 9.5.9) is performed.</p>
 
 <p>If <code>obj</code> is a native object with custom <code>setGeneric</code> op, the op is called with <code>(cx, obj, id, &amp;v, false))</code>.</p>
 
@@ -73,7 +73,7 @@ JS_SetPropertyById(JSContext *cx, JS::HandleObject obj, JS::HandleId id,
 
 <h3 id="Creation_of_new_properties">Creation of new properties</h3>
 
-<p>One of the cases above involves creating a new own property on obj. The name of the new property is given by <code>name</code> or <code>id</code>. The initial stored value of the new property is <code>undefined</code>. Its getter and setter are the <!-- {{jsapixref("JSPropertyOp", "JSClass.getProperty")}} --> and <!-- {{jsapixref("JSPropertyOp", "setProperty")}} --> hooks of <code>obj</code>'s class, and its property attributes are exactly <code>JSPROP_ENUMERATE</code>. After the new property is added, the <!-- {{jsapixref("JSPropertyOp", "JSClass.addProperty")}} --> hook is called with the arguments <code>(cx, obj, id, &amp;v)</code>. This hook may assign to <code>v</code>. If the hook succeeds and the property has a stored value, then the value left in <code>v</code> by the <code>addProperty</code> hook becomes the stored value of the property.</p>
+<p>One of the cases above involves creating a new own property on obj. The name of the new property is given by <code>name</code> or <code>id</code>. The initial stored value of the new property is <code>undefined</code>. Its getter and setter are the <!-- <!-- {{jsapixref("JSPropertyOp", "JSClass.getProperty")}} --> --> and <!-- <!-- {{jsapixref("JSPropertyOp", "setProperty")}} --> --> hooks of <code>obj</code>'s class, and its property attributes are exactly <code>JSPROP_ENUMERATE</code>. After the new property is added, the <!-- <!-- {{jsapixref("JSPropertyOp", "JSClass.addProperty")}} --> --> hook is called with the arguments <code>(cx, obj, id, &amp;v)</code>. This hook may assign to <code>v</code>. If the hook succeeds and the property has a stored value, then the value left in <code>v</code> by the <code>addProperty</code> hook becomes the stored value of the property.</p>
 
 <h3 id="Setting_the_value.">Setting the value.</h3>
 
@@ -81,13 +81,13 @@ JS_SetPropertyById(JSContext *cx, JS::HandleObject obj, JS::HandleId id,
 
 <p>On success, <code>JS_SetProperty</code> returns <code>true</code>, and the value in <code>v</code> is left unchanged unless a hook or setter modified it. On error or exception, it returns <code>false</code>, and the value left in <code>v</code> is unspecified.</p>
 
-<p>Internally, property assignment, including all the behavior described above, is implemented by <code>obj</code>'s <!-- {{jsapixref("JSObjectOps.getProperty", "JSObjectOps.setProperty")}} --> callback.</p>
+<p>Internally, property assignment, including all the behavior described above, is implemented by <code>obj</code>'s <!-- <!-- {{jsapixref("JSObjectOps.getProperty", "JSObjectOps.setProperty")}} --> --> callback.</p>
 
 <h2 id="See_Also" name="See_Also">See Also</h2>
 
 <ul>
- <li><!-- {{ LXRSearch("ident", "i", "JS_SetProperty") }} --></li>
- <li><!-- {{ LXRSearch("ident", "i", "JS_SetUCProperty") }} --></li>
- <li><!-- {{ LXRSearch("ident", "i", "JS_SetPropertyById") }} --></li>
- <li><!-- {{bug(461163)}} --></li>
+ <li><!-- <!-- {{ LXRSearch("ident", "i", "JS_SetProperty") }} --> --></li>
+ <li><!-- <!-- {{ LXRSearch("ident", "i", "JS_SetUCProperty") }} --> --></li>
+ <li><!-- <!-- {{ LXRSearch("ident", "i", "JS_SetPropertyById") }} --> --></li>
+ <li><!-- <!-- {{bug(461163)}} --> --></li>
 </ul>

@@ -11,7 +11,7 @@ tags:
   It is up to the tool authors to decide how the URL of the manifest is published.<br>
   <br>
   The tool configures itself by serving an HTML document (we’ll call this the Configuration Document) to the browser. This can cause the browser to inspect the manifest and register the tool by firing a CustomEvent with the type ConfigureSecTool and a properties object which specifies the URL of the tool manifest. For example:</p>
-<pre>var manifest = {"detail":{"url":"http://localhost:8080/manifest"}} -->;
+<pre>var manifest = {"detail":{"url":"http://localhost:8080/manifest"}} --> -->;
 var evt = new CustomEvent('ConfigureSecTool', manifest);</pre>
 <p>It is suggested that browsers wishing to support PnH restrict handling of CustomEvents such that they’re ignored where the event happens outside of user initiated actions.<br>
   <br>

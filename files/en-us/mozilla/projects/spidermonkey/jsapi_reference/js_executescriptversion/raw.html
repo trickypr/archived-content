@@ -1,8 +1,8 @@
-<p><!-- {{ obsolete_header("jsapi36") }} --></p>
+<p><!-- <!-- {{ obsolete_header("jsapi36") }} --> --></p>
 
-<p><!-- {{ jsapi_minversion_header("1.8.5") }} --></p>
+<p><!-- <!-- {{ jsapi_minversion_header("1.8.5") }} --> --></p>
 
-<div><!-- {{SpiderMonkeySidebar("JSAPI")}} --></div>
+<div><!-- <!-- {{SpiderMonkeySidebar("JSAPI")}} --> --></div>
 
 <div class="summary">
 <p>Execute a compiled script with specified version.</p>
@@ -24,12 +24,12 @@ JS_ExecuteScriptVersion(JSContext *cx, JSObject *obj, JSObject *scriptObj,
   </tr>
   <tr>
    <td><code>cx</code></td>
-   <td><!-- {{jsapixref("JSRuntime", "JSContext *")}} --></td>
-   <td>The context in which to execute the script. <!-- {{ Jsapi-requires-request() }} --></td>
+   <td><!-- <!-- {{jsapixref("JSRuntime", "JSContext *")}} --> --></td>
+   <td>The context in which to execute the script. <!-- <!-- {{ Jsapi-requires-request() }} --> --></td>
   </tr>
   <tr>
    <td><code>obj</code></td>
-   <td><!-- {{jsapixref("JSObject", "JSObject *")}} --></td>
+   <td><!-- <!-- {{jsapixref("JSObject", "JSObject *")}} --> --></td>
    <td>
     <p>The scope in which to execute the script. In the simplest cases, this should just be the embedding's global object.</p>
 
@@ -38,25 +38,25 @@ JS_ExecuteScriptVersion(JSContext *cx, JSObject *obj, JSObject *scriptObj,
     <p>In ECMAScript terms, the script is executed in a new execution context, but that context is not initialized quite as described in any of the three cases in <span class="pl-s1"><span class="pl-s">ECMA 262-3 §</span></span>10.2. Instead:</p>
 
     <ul>
-     <li>The scope chain is initialized to contain <code>obj</code>, followed by its <!-- {{jsapixref("JS_GetParent", "parent")}} -->, then its parent's parent, etc. until <code>NULL</code> is reached.</li>
-     <li>Variable initialization is performed. If the <!-- {{jsapixref("JS_SetOptions", "JSOPTION_VAROBJFIX")}} --> option is in effect (recommended), then the last object in the scope chain is used as the variable object. Otherwise <code>obj</code> is used.</li>
+     <li>The scope chain is initialized to contain <code>obj</code>, followed by its <!-- <!-- {{jsapixref("JS_GetParent", "parent")}} --> -->, then its parent's parent, etc. until <code>NULL</code> is reached.</li>
+     <li>Variable initialization is performed. If the <!-- <!-- {{jsapixref("JS_SetOptions", "JSOPTION_VAROBJFIX")}} --> --> option is in effect (recommended), then the last object in the scope chain is used as the variable object. Otherwise <code>obj</code> is used.</li>
      <li>The <code>this</code> value is <code>obj</code>.</li>
     </ul>
    </td>
   </tr>
   <tr>
    <td><code>script</code></td>
-   <td><!-- {{jsapixref("JSObject", "JSObject *")}} --></td>
+   <td><!-- <!-- {{jsapixref("JSObject", "JSObject *")}} --> --></td>
    <td>The compiled script to execute.</td>
   </tr>
   <tr>
    <td><code>rval</code></td>
-   <td><!-- {{jsapixref("Jsval", "jsval *")}} --></td>
+   <td><!-- <!-- {{jsapixref("Jsval", "jsval *")}} --> --></td>
    <td>Out parameter. On success, <code>*rval</code> receives the value from the last executed expression statement processed in the script.</td>
   </tr>
   <tr>
    <td><code>version</code></td>
-   <td><!-- {{jsapixref("JSVersion")}} --></td>
+   <td><!-- <!-- {{jsapixref("JSVersion")}} --> --></td>
    <td>Version for the script.</td>
   </tr>
  </tbody>
@@ -68,13 +68,13 @@ JS_ExecuteScriptVersion(JSContext *cx, JSObject *obj, JSObject *scriptObj,
 
 <p>If the script executes successfully, <code>*rval</code> receives the value from the last executed expression statement processed in the script, and <code>JS_ExecuteScript</code> returns <code>true</code>. Otherwise it returns <code>false</code>, and the value left in <code>*rval</code> is unspecified.</p>
 
-<p>To execute a script that has not been compiled, use <!-- {{jsapixref("JS::Evaluate")}} --> instead.</p>
+<p>To execute a script that has not been compiled, use <!-- <!-- {{jsapixref("JS::Evaluate")}} --> --> instead.</p>
 
 <h2 id="See_Also">See Also</h2>
 
 <ul>
- <li><!-- {{jsapixref("JS::Compile")}} --></li>
- <li><!-- {{jsapixref("JS_ExecuteScript")}} --></li>
- <li><!-- {{jsapixref("JS::Evaluate")}} --></li>
- <li><!-- {{bug(1095660)}} --></li>
+ <li><!-- <!-- {{jsapixref("JS::Compile")}} --> --></li>
+ <li><!-- <!-- {{jsapixref("JS_ExecuteScript")}} --> --></li>
+ <li><!-- <!-- {{jsapixref("JS::Evaluate")}} --> --></li>
+ <li><!-- <!-- {{bug(1095660)}} --> --></li>
 </ul>

@@ -2,15 +2,15 @@
 
 <h2 id="Implementing_toolbars">Implementing toolbars</h2>
 
-<p>To implement a toolbar using the style shown here, place the CSS and media files into your app and then import the CSS using the <!-- {{cssxref("@import")}} --> at-rule:</p>
+<p>To implement a toolbar using the style shown here, place the CSS and media files into your app and then import the CSS using the <!-- <!-- {{cssxref("@import")}} --> --> at-rule:</p>
 
 <pre class="brush: css">@import url(resources/toolbars.css);</pre>
 
 <p>Make sure the media files are in the location expected by the CSS (either by placing them in a corresponding location or by revising the CSS).</p>
 
-<p>The toolbar is built using a <!-- {{HTMLElement("div")}} --> block with the ARIA role "toolbar". You then create at least one, but no more than two, unordered lists using the <!-- {{HTMLElement("ul")}} --> element. If you provide only one list, it is anchored to the right end of the toolbar. If you provide two lists, the first is anchored to the left end of the toolbar, and the second list is anchored to the right end of the toolbar.</p>
+<p>The toolbar is built using a <!-- <!-- {{HTMLElement("div")}} --> --> block with the ARIA role "toolbar". You then create at least one, but no more than two, unordered lists using the <!-- <!-- {{HTMLElement("ul")}} --> --> element. If you provide only one list, it is anchored to the right end of the toolbar. If you provide two lists, the first is anchored to the left end of the toolbar, and the second list is anchored to the right end of the toolbar.</p>
 
-<p>Each toolbar button is then a <!-- {{HTMLElement("button")}} --> contained within a <!-- {{HTMLElement("li")}} --> in those lists.</p>
+<p>Each toolbar button is then a <!-- <!-- {{HTMLElement("button")}} --> --> contained within a <!-- <!-- {{HTMLElement("li")}} --> --> in those lists.</p>
 
 <h2 id="Example">Example</h2>
 

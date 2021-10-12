@@ -14,7 +14,7 @@
 
 <ol>
  <li><a class="external" href="https://dxr.mozilla.org/mozilla/source/netwerk/test/Makefile.in">For now, enclose your test-related code (in the makefile) with <code>ifdef ENABLE_TESTS</code> </a></li>
- <li><a class="external" href="https://dxr.mozilla.org/mozilla/source/netwerk/test/Makefile.in">Run the test program from the "check" target in the makefile. (<!-- {{ Source("netwerk/test/Makefile.in", "example") }} --> to run the TestCookie program) </a></li>
+ <li><a class="external" href="https://dxr.mozilla.org/mozilla/source/netwerk/test/Makefile.in">Run the test program from the "check" target in the makefile. (<!-- <!-- {{ Source("netwerk/test/Makefile.in", "example") }} --> --> to run the TestCookie program) </a></li>
  <li><a class="external" href="https://dxr.mozilla.org/mozilla/source/netwerk/test/Makefile.in">In the test program: </a>
   <ul>
    <li><a class="external" href="https://dxr.mozilla.org/mozilla/source/netwerk/test/Makefile.in">If the test fails, exit with a non-zero status and/or print the string "FAIL" to stdout </a></li>
@@ -23,12 +23,12 @@
   <a class="external" href="https://dxr.mozilla.org/mozilla/source/netwerk/test/Makefile.in"> </a></li>
 </ol>
 
-<p><a class="external" href="https://dxr.mozilla.org/mozilla/source/netwerk/test/Makefile.in">Write the test so that you expect it to pass on all platforms, since if the test fails, the tree will go orange (once we've set this up - see <!-- {{ Bug(352240) }} --> for status). </a></p>
+<p><a class="external" href="https://dxr.mozilla.org/mozilla/source/netwerk/test/Makefile.in">Write the test so that you expect it to pass on all platforms, since if the test fails, the tree will go orange (once we've set this up - see <!-- <!-- {{ Bug(352240) }} --> --> for status). </a></p>
 
 <p><a class="external" href="https://dxr.mozilla.org/mozilla/source/netwerk/test/Makefile.in">For example, to add an xpcshell test to a module, do the following: </a></p>
 
 <ol>
- <li><a class="external" href="https://dxr.mozilla.org/mozilla/source/netwerk/test/Makefile.in">Copy <!-- {{ Source("tools/test-harness/xpcshell-simple/example") }} --> to <code><em>yourmoduledir</em>/<em>tests_type</em></code>, where<em>tests_type</em> is something that describes your tests. You can of course use <code>unit</code> or <code>test</code> if you're not feeling creative.</a></li>
+ <li><a class="external" href="https://dxr.mozilla.org/mozilla/source/netwerk/test/Makefile.in">Copy <!-- <!-- {{ Source("tools/test-harness/xpcshell-simple/example") }} --> --> to <code><em>yourmoduledir</em>/<em>tests_type</em></code>, where<em>tests_type</em> is something that describes your tests. You can of course use <code>unit</code> or <code>test</code> if you're not feeling creative.</a></li>
  <li><a class="external" href="https://dxr.mozilla.org/mozilla/source/netwerk/test/Makefile.in">In &lt;tt&gt;<em>yourmoduledir</em>/<em>tests_type</em>/Makefile.in&lt;/tt&gt; change </a><code><a href="en/DEPTH">DEPTH</a></code>, <code><a href="en/MODULE">MODULE</a></code>, and <code><a href="en/XPCSHELL_TESTS">XPCSHELL_TESTS</a></code> appropriately:
   <ul>
    <li><code>DEPTH</code> should be a relative path pointing to &lt;tt&gt;mozilla/&lt;/tt&gt;, e.g. if you're in &lt;tt&gt;netwerk/test&lt;/tt&gt;, set <code>DEPTH = ../..</code></li>

@@ -9,7 +9,7 @@
  <li>How to trigger the function registered on the currently-focused element when users press the corresponding key (e.g. the &lt;kbd&gt;ENTER&lt;/kbd&gt; key to trigger <code>onclick</code>.)</li>
 </ol>
 
-<p>We’ll talk about the first point later on — the <!-- {{anch("Existing libraries")}} --> section discusses available out-of-the-box libraries inside Gaia, and the <!-- {{anch("Algorithm design")}} --> section talk about the implementations of the algorithms used in those libraries.</p>
+<p>We’ll talk about the first point later on — the <!-- <!-- {{anch("Existing libraries")}} --> --> section discusses available out-of-the-box libraries inside Gaia, and the <!-- <!-- {{anch("Algorithm design")}} --> --> section talk about the implementations of the algorithms used in those libraries.</p>
 
 <p>Turning our attention to the second point, we can place the &lt;kbd&gt;ENTER&lt;/kbd&gt; key <code>EventListener</code> to identify the current focus, and then call the handler to be executed. This operating way is similar to delegation. Here is the event listener used in Home app:</p>
 
@@ -33,9 +33,9 @@
 </div>
 
 <div>
-<p>For the focused objects in Gaia, we’ll directly call <!-- {{domxref("HTMLElement.focus()")}} --> in each case and assign the real focus in DOM Tree to it (that is, the object returned by <!-- {{domxref("document.activeElement()")}} -->.) Then we change the object’s style with a CSS <!-- {{cssxref(":focus")}} --> pseudo class. <!-- {{domxref("HTMLElement.focus()")}} --> itself will not report a success or failure.</p>
+<p>For the focused objects in Gaia, we’ll directly call <!-- <!-- {{domxref("HTMLElement.focus()")}} --> --> in each case and assign the real focus in DOM Tree to it (that is, the object returned by <!-- <!-- {{domxref("document.activeElement()")}} --> -->.) Then we change the object’s style with a CSS <!-- <!-- {{cssxref(":focus")}} --> --> pseudo class. <!-- <!-- {{domxref("HTMLElement.focus()")}} --> --> itself will not report a success or failure.</p>
 
-<p>In some special situations, such as calling focus() on an <!-- {{htmlelement("iframe")}} -->, focus() cannot be called directly — in such cases we have to execute <!-- {{domxref("HTMLElement.blur","document.activeElement.blur()")}} --> first. See <a href="https://wiki.mozilla.org/User:Johnhu/System_Merge#TV_specific_window_manager_is_created_and_can_be_loaded_on_demand_.28meta:_bug_1179642.29">TV specific window manager is created and can be loaded on demand</a> for other common focus() failure situations and potential solutions.</p>
+<p>In some special situations, such as calling focus() on an <!-- <!-- {{htmlelement("iframe")}} --> -->, focus() cannot be called directly — in such cases we have to execute <!-- <!-- {{domxref("HTMLElement.blur","document.activeElement.blur()")}} --> --> first. See <a href="https://wiki.mozilla.org/User:Johnhu/System_Merge#TV_specific_window_manager_is_created_and_can_be_loaded_on_demand_.28meta:_bug_1179642.29">TV specific window manager is created and can be loaded on demand</a> for other common focus() failure situations and potential solutions.</p>
 </div>
 
 <h2 id="Existing_libraries">Existing libraries</h2>
@@ -58,7 +58,7 @@
 
 <h2 id="Algorithm_design">Algorithm design</h2>
 
-<p>Compared with general web pages, it’s much more important for an app to have a highly customizable spatial navigation function because of its complex behaviors. For instance, some authors may prefer moving the focus among elements based on some specified order or intend to adjust the order dynamically. The existing one in Fennec doesn’t do enough for our use cases on TV, so we’ve already filed a meta bug (<!-- {{bug(1114536)}} -->.) Before this work is completed, we still need an alternative function to help us develop apps on TV. That’s why we implemented <a href="https://github.com/mozilla-b2g/gaia/blob/master/shared/js/smart-screen/spatial_navigator.js">SpatialNavigator.js</a> in Gaia. Let’s look into how it works.</p>
+<p>Compared with general web pages, it’s much more important for an app to have a highly customizable spatial navigation function because of its complex behaviors. For instance, some authors may prefer moving the focus among elements based on some specified order or intend to adjust the order dynamically. The existing one in Fennec doesn’t do enough for our use cases on TV, so we’ve already filed a meta bug (<!-- <!-- {{bug(1114536)}} --> -->.) Before this work is completed, we still need an alternative function to help us develop apps on TV. That’s why we implemented <a href="https://github.com/mozilla-b2g/gaia/blob/master/shared/js/smart-screen/spatial_navigator.js">SpatialNavigator.js</a> in Gaia. Let’s look into how it works.</p>
 
 <p><code>SpatialNavigator</code> maintains a list of focusable elements. You can pass them in at the initialization stage and modify them later as needed. In addition, the module also keeps track of the currently-focused element.</p>
 

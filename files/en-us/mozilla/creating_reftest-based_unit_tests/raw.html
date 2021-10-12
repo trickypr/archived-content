@@ -41,7 +41,7 @@
 
 <dl>
  <dt>Step 1</dt>
- <dd>For now you must check out and build the browser in order to run the tests. See the <a href="/En/Developer_Guide/Build_Instructions" title="En/Developer_Guide/Build_Instructions">Build Documentation</a> for details on doing that. Sorry about this, but the released builds and the nightly builds are built with the <code>"--disable-tests"</code> option and reftest will not work - see <!-- {{ Bug(369809) }} -->.</dd>
+ <dd>For now you must check out and build the browser in order to run the tests. See the <a href="/En/Developer_Guide/Build_Instructions" title="En/Developer_Guide/Build_Instructions">Build Documentation</a> for details on doing that. Sorry about this, but the released builds and the nightly builds are built with the <code>"--disable-tests"</code> option and reftest will not work - see <!-- <!-- {{ Bug(369809) }} --> -->.</dd>
  <dt>Step 2</dt>
  <dd>Open a terminal window. Create a directory (inside Firefox's source code tree) and make that your current directory (i.e. move to that directory).</dd>
  <dt>Step 3</dt>
@@ -165,7 +165,7 @@ $
 
 <p>Here is a list of <a href="/en/reftest_opportunities_files" title="en/reftest_opportunities_files">reftest opportunities files</a> in the source. These are files that have been checked in to be tested. Presumably, one was supposed to open the pages with a browser and look at them and see if they look right. It is hard to tell how many of these will be usable as reftests. If the file is associated with a bug, the bug should be examined. I have seen a case where the html file in the bug had a problem, but the checked-in version was "cleaned up" and not valid for testing.</p>
 
-<p>Mozilla has used HTML generation tools in the past. The <s> <!-- {{ Source("parser/htmlparser/tests/htmlgen/htmlgen.html", "htmlgen") }} --> </s> tool is an example of this. Tools like this may be more useful now that we have reftest to exercise the files. It would also be useful to generate files that combine HTML and CSS in interesting or unusual ways. </p>
+<p>Mozilla has used HTML generation tools in the past. The <s> <!-- <!-- {{ Source("parser/htmlparser/tests/htmlgen/htmlgen.html", "htmlgen") }} --> --> </s> tool is an example of this. Tools like this may be more useful now that we have reftest to exercise the files. It would also be useful to generate files that combine HTML and CSS in interesting or unusual ways. </p>
 
 <h3 id="Reftests_and_elevated_privileges" name="Reftests_and_elevated_privileges">Reftests and preferences</h3>
 
@@ -196,5 +196,5 @@ $
 
 <ul>
  <li><a class="external" href="http://old.nabble.com/Please-add-%22in-testsuite-%22-to-layout-bugs-when-resolving-them!-td7787412.html" rel="freelink">http://old.nabble.com/Please-add-%22in-testsuite-%22-to-layout-bugs-when-resolving-them!-td7787412.html</a></li>
- <li>Further documentation: <!-- {{ Source("layout/tools/reftest/README.txt") }} --></li>
+ <li>Further documentation: <!-- <!-- {{ Source("layout/tools/reftest/README.txt") }} --> --></li>
 </ul>

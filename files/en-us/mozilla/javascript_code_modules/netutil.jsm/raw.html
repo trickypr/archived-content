@@ -12,16 +12,16 @@
 <table class="standard-table">
  <tbody>
   <tr>
-   <td><code><!-- {{ interface("nsIAsyncStreamCopier") }} --> <a href="/en/JavaScript_code_modules/NetUtil.jsm#asyncCopy()" title="en/JavaScript code modules/NetUtil.jsm#asyncCopy()">asyncCopy</a>(<!-- {{ interface("nsIInputStream") }} --> aSource, <!-- {{ interface("nsIOutputStream") }} --> aSink, [optional] aCallback)</code></td>
+   <td><code><!-- <!-- {{ interface("nsIAsyncStreamCopier") }} --> --> <a href="/en/JavaScript_code_modules/NetUtil.jsm#asyncCopy()" title="en/JavaScript code modules/NetUtil.jsm#asyncCopy()">asyncCopy</a>(<!-- <!-- {{ interface("nsIInputStream") }} --> --> aSource, <!-- <!-- {{ interface("nsIOutputStream") }} --> --> aSink, [optional] aCallback)</code></td>
   </tr>
   <tr>
    <td><code>void <a href="/en/JavaScript_code_modules/NetUtil.jsm#asyncFetch()" title="en/JavaScript code modules/NetUtil.jsm#asyncFetch()">asyncFetch</a>(aSource, aCallback)</code></td>
   </tr>
   <tr>
-   <td><code><!-- {{ interface("nsIChannel") }} --> <a href="/en/JavaScript_code_modules/NetUtil.jsm#newChannel()" title="en/JavaScript code modules/NetUtil.jsm#newChannel()">newChannel</a>(aWhatToLoad, [optional] aOriginCharset, [optional] <!-- {{ interface("nsIURI") }} --> aBaseURI)</code></td>
+   <td><code><!-- <!-- {{ interface("nsIChannel") }} --> --> <a href="/en/JavaScript_code_modules/NetUtil.jsm#newChannel()" title="en/JavaScript code modules/NetUtil.jsm#newChannel()">newChannel</a>(aWhatToLoad, [optional] aOriginCharset, [optional] <!-- <!-- {{ interface("nsIURI") }} --> --> aBaseURI)</code></td>
   </tr>
   <tr>
-   <td><code><!-- {{ interface("nsIURI") }} --> <a href="/en/JavaScript_code_modules/NetUtil.jsm#newURI()" title="en/JavaScript code modules/NetUtil.jsm#newURI()">newURI</a>(aTarget, [optional] aOriginCharset, [optional] <!-- {{ interface("nsIURI") }} --> aBaseURI)</code></td>
+   <td><code><!-- <!-- {{ interface("nsIURI") }} --> --> <a href="/en/JavaScript_code_modules/NetUtil.jsm#newURI()" title="en/JavaScript code modules/NetUtil.jsm#newURI()">newURI</a>(aTarget, [optional] aOriginCharset, [optional] <!-- <!-- {{ interface("nsIURI") }} --> --> aBaseURI)</code></td>
   </tr>
   <tr>
    <td><code>String <a href="/en/JavaScript_code_modules/NetUtil.jsm#readInputStreamToString()" title="en/JavaScript code modules/NetUtil.jsm#readInputStreamToString()">readInputStreamToString</a>(aInputStream, aCount, aOptions)</code></td>
@@ -40,8 +40,8 @@
   </tr>
   <tr>
    <td><code>ioService</code></td>
-   <td><!-- {{ interface("nsIIOService") }} --></td>
-   <td>Returns a reference to <!-- {{ interface("nsIIOService") }} -->.</td>
+   <td><!-- <!-- {{ interface("nsIIOService") }} --> --></td>
+   <td>Returns a reference to <!-- <!-- {{ interface("nsIIOService") }} --> -->.</td>
   </tr>
  </tbody>
 </table>
@@ -63,16 +63,16 @@
 
 <dl>
  <dt><code>aSource</code></dt>
- <dd>The input stream from which to read the source data. This must be an <!-- {{ interface("nsIInputStream") }} --> based object.</dd>
+ <dd>The input stream from which to read the source data. This must be an <!-- <!-- {{ interface("nsIInputStream") }} --> --> based object.</dd>
  <dt><code>aSink</code></dt>
- <dd>The output stream to which to copy the data. This must be an <!-- {{ interface("nsIOutputStream") }} --> based object.</dd>
+ <dd>The output stream to which to copy the data. This must be an <!-- <!-- {{ interface("nsIOutputStream") }} --> --> based object.</dd>
  <dt><code>aCallback</code></dt>
  <dd>An optional function that will be called when the copy operation is completed. The callback receives a single parameter: the <code>nsresult</code> status code for the copy operation.</dd>
 </dl>
 
 <h6 id="Return_value">Return value</h6>
 
-<p>Returns the <!-- {{ interface("nsIAsyncStreamCopier") }} --> object that is handling the copy.</p>
+<p>Returns the <!-- <!-- {{ interface("nsIAsyncStreamCopier") }} --> --> object that is handling the copy.</p>
 
 <h6 id="Exceptions_thrown">Exceptions thrown</h6>
 
@@ -108,14 +108,14 @@ NetUtil.asyncCopy(istream, ostream, function(aResult) {
 
 <h3 id="asyncFetch()">asyncFetch()</h3>
 
-<p>The <code>asyncFetch()</code> method opens an input source, asynchronously, and gives an <!-- {{ interface("nsIInputStream") }} --> containing the data obtained to the callback provided. The callback may then consume data from the input stream passed to the callback.</p>
+<p>The <code>asyncFetch()</code> method opens an input source, asynchronously, and gives an <!-- <!-- {{ interface("nsIInputStream") }} --> --> containing the data obtained to the callback provided. The callback may then consume data from the input stream passed to the callback.</p>
 
 <div class="note">
-<p><strong>Note:</strong> Prior to Gecko 2, the input source was required to be specified as an <!-- {{ interface("nsIChannel") }} -->.</p>
+<p><strong>Note:</strong> Prior to Gecko 2, the input source was required to be specified as an <!-- <!-- {{ interface("nsIChannel") }} --> -->.</p>
 </div>
 
 <div class="note">
-<p><strong>Note:</strong> Support for specifying an <!-- {{ interface("nsIInputStream") }} --> as the input source was added in Gecko 5.</p>
+<p><strong>Note:</strong> Support for specifying an <!-- <!-- {{ interface("nsIInputStream") }} --> --> as the input source was added in Gecko 5.</p>
 </div>
 
 <pre>asyncFetch(
@@ -128,9 +128,9 @@ NetUtil.asyncCopy(istream, ostream, function(aResult) {
 
 <dl>
  <dt><code>aSource</code></dt>
- <dd>The source to open asynchronously. This may be specified as an <!-- {{ interface("nsIURI") }} -->, <!-- {{ interface("nsIFile") }} -->, <!-- {{ interface("nsIChannel") }} -->, <!-- {{ interface("nsIInputStream") }} --> or as a string specifying the URL to open.</dd>
+ <dd>The source to open asynchronously. This may be specified as an <!-- <!-- {{ interface("nsIURI") }} --> -->, <!-- <!-- {{ interface("nsIFile") }} --> -->, <!-- <!-- {{ interface("nsIChannel") }} --> -->, <!-- <!-- {{ interface("nsIInputStream") }} --> --> or as a string specifying the URL to open.</dd>
  <dt><code>aCallback</code></dt>
- <dd>A function that will be called when the open operation is completed. The callback receives three parameters: the input stream containing the data, if any (implementing <!-- {{ interface("nsIInputStream") }} -->), an <code>nsresult</code> status code for the open operation, and a reference to the <!-- {{ interface("nsIRequest") }} --> object.</dd>
+ <dd>A function that will be called when the open operation is completed. The callback receives three parameters: the input stream containing the data, if any (implementing <!-- <!-- {{ interface("nsIInputStream") }} --> -->), an <code>nsresult</code> status code for the open operation, and a reference to the <!-- <!-- {{ interface("nsIRequest") }} --> --> object.</dd>
 </dl>
 
 <h6 id="Exceptions_thrown_2">Exceptions thrown</h6>
@@ -153,11 +153,11 @@ NetUtil.asyncCopy(istream, ostream, function(aResult) {
 
 <h6 id="Remarks">Remarks</h6>
 
-<div class="note"><strong>Note:</strong> If you specify an <!-- {{ interface("nsIChannel") }} --> as the input source, and its notification callbacks have already been set, callers are responsible for implementing <!-- {{ interface("nsIBadCertListener") }} --> and <!-- {{ interface("nsISSLErrorListener") }} -->.</div>
+<div class="note"><strong>Note:</strong> If you specify an <!-- <!-- {{ interface("nsIChannel") }} --> --> as the input source, and its notification callbacks have already been set, callers are responsible for implementing <!-- <!-- {{ interface("nsIBadCertListener") }} --> --> and <!-- <!-- {{ interface("nsISSLErrorListener") }} --> -->.</div>
 
 <h3 id="newChannel()">newChannel()</h3>
 
-<p>Creates a new channel for the specified URI string, <!-- {{ interface("nsIURI") }} -->, or <!-- {{ interface("nsIFile") }} -->.</p>
+<p>Creates a new channel for the specified URI string, <!-- <!-- {{ interface("nsIURI") }} --> -->, or <!-- <!-- {{ interface("nsIFile") }} --> -->.</p>
 
 <pre>nsIChannel newChannel(
   aWhatToLoad,
@@ -170,23 +170,23 @@ NetUtil.asyncCopy(istream, ostream, function(aResult) {
 
 <h6 id="Return_value_2">Return value</h6>
 
-<p>An <!-- {{ interface("nsIChannel") }} --> allowing access to the specified data source.</p>
+<p>An <!-- <!-- {{ interface("nsIChannel") }} --> --> allowing access to the specified data source.</p>
 
 <dl>
  <dt><code>aWhatToLoad</code></dt>
- <dd>A string specifying a URI, or an <!-- {{ interface("nsIURI") }} --> or <!-- {{ interface("nsIFile") }} --> object. The returned method will allow access to the specified data.</dd>
+ <dd>A string specifying a URI, or an <!-- <!-- {{ interface("nsIURI") }} --> --> or <!-- <!-- {{ interface("nsIFile") }} --> --> object. The returned method will allow access to the specified data.</dd>
  <dt><code>aOriginCharset</code></dt>
  <dd>The optional character set to use when interpreting <code>aWhatToLoad</code> as a string; this is ignored if <code>aWhatToLoad</code> is not a string. Defaults to UTF-8 if not provided.</dd>
  <dt><code>aBaseURI</code></dt>
- <dd>The base URI for the spec, specified as an <!-- {{ interface("nsIURI") }} -->. Only used if <code>aWhatToLoad</code> is a string.</dd>
+ <dd>The base URI for the spec, specified as an <!-- <!-- {{ interface("nsIURI") }} --> -->. Only used if <code>aWhatToLoad</code> is a string.</dd>
 </dl>
 
 <h3 id="newURI()">newURI()</h3>
 
-<p>The <code>newURI()</code> method creates a new <!-- {{ interface("nsIURI") }} -->. This method wraps the <!-- {{ ifmethod("nsIIOService", "newURI") }} -->.</p>
+<p>The <code>newURI()</code> method creates a new <!-- <!-- {{ interface("nsIURI") }} --> -->. This method wraps the <!-- <!-- {{ ifmethod("nsIIOService", "newURI") }} --> -->.</p>
 
 <div class="note">
-<p><strong>Note:</strong> Starting in Gecko 2, this method supports specifying an <!-- {{ interface("nsIFile") }} --> as the target of the URI. In previous versions of Gecko, you must use a string to specify the URI.</p>
+<p><strong>Note:</strong> Starting in Gecko 2, this method supports specifying an <!-- <!-- {{ interface("nsIFile") }} --> --> as the target of the URI. In previous versions of Gecko, you must use a string to specify the URI.</p>
 </div>
 
 <pre>nsIURI newURI(
@@ -200,16 +200,16 @@ NetUtil.asyncCopy(istream, ostream, function(aResult) {
 
 <dl>
  <dt><code>aTarget</code></dt>
- <dd>Specifies the target of the URI as either a URI string or (starting in Gecko 2) as an <!-- {{ interface("nsIFile") }} -->.</dd>
+ <dd>Specifies the target of the URI as either a URI string or (starting in Gecko 2) as an <!-- <!-- {{ interface("nsIFile") }} --> -->.</dd>
  <dt><code>aOriginCharset</code></dt>
  <dd>The optional character set for the URI. Defaults to UTF-8 if not provided.</dd>
  <dt><code>aBaseURI</code></dt>
- <dd>The base URI for the spec, specified as an <!-- {{ interface("nsIURI") }} -->.</dd>
+ <dd>The base URI for the spec, specified as an <!-- <!-- {{ interface("nsIURI") }} --> -->.</dd>
 </dl>
 
 <h6 id="Return_value_3">Return value</h6>
 
-<p>Returns the <!-- {{ interface("nsIURI") }} --> object representing the specified target.</p>
+<p>Returns the <!-- <!-- {{ interface("nsIURI") }} --> --> object representing the specified target.</p>
 
 <h6 id="Exceptions_thrown_3">Exceptions thrown</h6>
 
@@ -232,9 +232,9 @@ NetUtil.asyncCopy(istream, ostream, function(aResult) {
  <dt><code>aInputStream</code></dt>
  <dd>The input stream from which to read the data.</dd>
  <dt><code>aCount</code></dt>
- <dd>The number of bytes to read from the stream. You can call <!-- {{ ifmethod("nsIInputStream","available") }} --> to get the number of bytes currently available.</dd>
+ <dd>The number of bytes to read from the stream. You can call <!-- <!-- {{ ifmethod("nsIInputStream","available") }} --> --> to get the number of bytes currently available.</dd>
  <dt><code>aOptions</code></dt>
- <dd>Specifies additional options to control the reading process. This is a JavaScript object with fields as specified in <!-- {{ anch("Options") }} -->.</dd>
+ <dd>Specifies additional options to control the reading process. This is a JavaScript object with fields as specified in <!-- <!-- {{ anch("Options") }} --> -->.</dd>
 </dl>
 
 <h6 id="Options">Options</h6>
@@ -266,7 +266,7 @@ NetUtil.asyncCopy(istream, ostream, function(aResult) {
 
 <dl>
  <dt><code>NS_ERROR_INVALID_ARG</code></dt>
- <dd>The specified stream is not an <!-- {{ interface("nsIInputStream") }} -->.</dd>
+ <dd>The specified stream is not an <!-- <!-- {{ interface("nsIInputStream") }} --> -->.</dd>
  <dt><code>NS_BASE_STREAM_WOULD_BLOCK</code></dt>
  <dd>Reading from the specified stream would block the calling thread, and the stream is in non-blocking mode.</dd>
  <dt><code>NS_ERROR_FAILURE</code></dt>

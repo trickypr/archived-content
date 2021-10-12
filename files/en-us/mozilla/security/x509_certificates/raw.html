@@ -1,6 +1,6 @@
 <p><span class="seoSummary">X.509 (in this document referred as x509) is an ITU standard to describe certificates. This article provides an overview of what these are and how they work.</span></p>
 
-<p>Three versions of the x509 standard have been defined for web-pki. In this document we will be referring to the current standard in use for web pki: x509 v3, which is described in detail in <!-- {{rfc(5280)}} -->. In general, x509 certificates bind a signature to a validity period, a public key, a subject, an issuer, and a set of extensions. The extensions define extra properties of the certificate such as extra attributes of the certificate or constraints on the use of the certificate. In order for a certificate to be valid these three requirements must be met:</p>
+<p>Three versions of the x509 standard have been defined for web-pki. In this document we will be referring to the current standard in use for web pki: x509 v3, which is described in detail in <!-- <!-- {{rfc(5280)}} --> -->. In general, x509 certificates bind a signature to a validity period, a public key, a subject, an issuer, and a set of extensions. The extensions define extra properties of the certificate such as extra attributes of the certificate or constraints on the use of the certificate. In order for a certificate to be valid these three requirements must be met:</p>
 
 <ol>
  <li>There is a verification path from the site certificate to a trusted certificate of the user agent (ie if you follow the issuer path you will end on a self-signed certificate that is considered trusted by the browser).</li>
@@ -12,7 +12,7 @@
 
 <h2 id="Extensions_2"><span class="mw-headline" id="Extensions">Extensions</span></h2>
 
-<p>While <!-- {{rfc(5280)}} --> defines 16 extensions for webpki in this document we will be describing the six extensions we considered critical for understanding. Certificates can have other extensions not described on <!-- {{rfc(5280)}} -->, but that is out of the scope of this document. Extensions can be marked as critical or non-critical, conforming certificate verification libraries should stop processing verification when encountering a critical extension that they do not understand ( and should continue processing if the extension is marked as non-critical) mozila::pkix has this behavior.</p>
+<p>While <!-- <!-- {{rfc(5280)}} --> --> defines 16 extensions for webpki in this document we will be describing the six extensions we considered critical for understanding. Certificates can have other extensions not described on <!-- <!-- {{rfc(5280)}} --> -->, but that is out of the scope of this document. Extensions can be marked as critical or non-critical, conforming certificate verification libraries should stop processing verification when encountering a critical extension that they do not understand ( and should continue processing if the extension is marked as non-critical) mozila::pkix has this behavior.</p>
 
 <h3 id="Subject_alternate_name"><span class="mw-headline" id="Subject_Alternate_Name">Subject alternate name</span></h3>
 

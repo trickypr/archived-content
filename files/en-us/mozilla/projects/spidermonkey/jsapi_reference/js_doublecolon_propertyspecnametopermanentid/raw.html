@@ -1,9 +1,9 @@
-<div><!-- {{SpiderMonkeySidebar("JSAPI")}} --></div>
+<div><!-- <!-- {{SpiderMonkeySidebar("JSAPI")}} --> --></div>
 
-<p><!-- {{ jsapi_minversion_header("38") }} --></p>
+<p><!-- <!-- {{ jsapi_minversion_header("38") }} --> --></p>
 
 <div class="summary">
-<p>Create a <!-- {{jsapixref("jsid")}} --> that does not need to be marked for GC.</p>
+<p>Create a <!-- <!-- {{jsapixref("jsid")}} --> --> that does not need to be marked for GC.</p>
 </div>
 
 <h2 id="Syntax" name="Syntax">Syntax</h2>
@@ -21,17 +21,17 @@ JS::PropertySpecNameToPermanentId(JSContext *cx, const char *name, jsid *idp);
   </tr>
   <tr>
    <td><code>cx</code></td>
-   <td><!-- {{jsapixref("JSRuntime", "JSContext *")}} --></td>
-   <td>Pointer to a JS context from which to derive runtime information. <!-- {{ Jsapi-requires-request() }} --></td>
+   <td><!-- <!-- {{jsapixref("JSRuntime", "JSContext *")}} --> --></td>
+   <td>Pointer to a JS context from which to derive runtime information. <!-- <!-- {{ Jsapi-requires-request() }} --> --></td>
   </tr>
   <tr>
    <td><code>name</code></td>
    <td><code>const char *</code></td>
-   <td><!-- {{jsapixref("JSPropertySpec", "JSPropertySpec::name")}} --> or <!-- {{jsapixref("JSFunctionSpec", "JSFunctionSpec::name")}} -->.</td>
+   <td><!-- <!-- {{jsapixref("JSPropertySpec", "JSPropertySpec::name")}} --> --> or <!-- <!-- {{jsapixref("JSFunctionSpec", "JSFunctionSpec::name")}} --> -->.</td>
   </tr>
   <tr>
    <td><code>idp</code></td>
-   <td><!-- {{jsapixref("jsid", "jsid *")}} --></td>
+   <td><!-- <!-- {{jsapixref("jsid", "jsid *")}} --> --></td>
    <td>Out parameter. Receives the created id.</td>
   </tr>
  </tbody>
@@ -39,15 +39,15 @@ JS::PropertySpecNameToPermanentId(JSContext *cx, const char *name, jsid *idp);
 
 <h2 id="Description" name="Description">Description</h2>
 
-<p><strong><code>JS::PropertySpecNameToPermanentId</code></strong> creates a <!-- {{jsapixref("jsid")}} --> that does not need to be marked for GC from <!-- {{jsapixref("JSPropertySpec", "JSPropertySpec::name")}} --> or <!-- {{jsapixref("JSFunctionSpec", "JSFunctionSpec::name")}} -->. The resulting <!-- {{jsapixref("jsid")}} -->, on success, is either an interned string or a well-known symbol; either way it is immune to GC so there is no need to visit <code>*idp</code> during GC marking..</p>
+<p><strong><code>JS::PropertySpecNameToPermanentId</code></strong> creates a <!-- <!-- {{jsapixref("jsid")}} --> --> that does not need to be marked for GC from <!-- <!-- {{jsapixref("JSPropertySpec", "JSPropertySpec::name")}} --> --> or <!-- <!-- {{jsapixref("JSFunctionSpec", "JSFunctionSpec::name")}} --> -->. The resulting <!-- <!-- {{jsapixref("jsid")}} --> -->, on success, is either an interned string or a well-known symbol; either way it is immune to GC so there is no need to visit <code>*idp</code> during GC marking..</p>
 
 <h2 id="See_Also" name="See_Also">See Also</h2>
 
 <ul>
- <li><!-- {{ LXRSearch("ident", "i", "JS::PropertySpecNameToPermanentId") }} --></li>
- <li><!-- {{jsapixref("JS::PropertySpecNameIsSymbol")}} --></li>
- <li><!-- {{jsapixref("JS::PropertySpecNameEqualsId")}} --></li>
- <li><!-- {{jsapixref("JSPropertySpec")}} --></li>
- <li><!-- {{jsapixref("JSFunctionSpec")}} --></li>
- <li><!-- {{bug(1082672)}} --></li>
+ <li><!-- <!-- {{ LXRSearch("ident", "i", "JS::PropertySpecNameToPermanentId") }} --> --></li>
+ <li><!-- <!-- {{jsapixref("JS::PropertySpecNameIsSymbol")}} --> --></li>
+ <li><!-- <!-- {{jsapixref("JS::PropertySpecNameEqualsId")}} --> --></li>
+ <li><!-- <!-- {{jsapixref("JSPropertySpec")}} --> --></li>
+ <li><!-- <!-- {{jsapixref("JSFunctionSpec")}} --> --></li>
+ <li><!-- <!-- {{bug(1082672)}} --> --></li>
 </ul>

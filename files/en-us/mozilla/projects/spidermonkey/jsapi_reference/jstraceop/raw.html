@@ -1,7 +1,7 @@
-<div><!-- {{SpiderMonkeySidebar("JSAPI")}} --></div>
+<div><!-- <!-- {{SpiderMonkeySidebar("JSAPI")}} --> --></div>
 
 <div class="summary">
-<p><strong><code>JSTraceOp</code></strong> is the type of the <!-- {{jsapixref("JSClass.trace")}} -->.</p>
+<p><strong><code>JSTraceOp</code></strong> is the type of the <!-- <!-- {{jsapixref("JSClass.trace")}} --> -->.</p>
 </div>
 
 <h2 id="Syntax" name="Syntax">Syntax</h2>
@@ -19,12 +19,12 @@
   </tr>
   <tr>
    <td><code>trc</code></td>
-   <td><!-- {{jsapixref("JSTracer", "JSTracer *")}} --></td>
+   <td><!-- <!-- {{jsapixref("JSTracer", "JSTracer *")}} --> --></td>
    <td>The tracer visiting <code>obj</code>.</td>
   </tr>
   <tr>
    <td><code>obj</code></td>
-   <td><!-- {{jsapixref("JSObject", "JSObject *")}} --></td>
+   <td><!-- <!-- {{jsapixref("JSObject", "JSObject *")}} --> --></td>
    <td>The object being visited.</td>
   </tr>
  </tbody>
@@ -34,7 +34,7 @@
 
 <p><strong><code>JSTraceOp</code></strong> is the function type for trace operation of the class called to enumerate all traceable things reachable from <code>obj</code>'s private data structure. For each such thing, a trace implementation must call one of the <code>JS_Call*Tracer</code> variants on the thing.</p>
 
-<p><code>JSTraceOp</code> implementation can assume that no other threads mutates object state. It must not change state of the object or corresponding native structures. The only exception for this rule is the case when the embedding needs a tight integration with GC. In that case the embedding can check if the traversal is a part of the marking phase through calling <!-- {{jsapixref("JS_IsGCMarkingTracer")}} --> and apply a special code like emptying caches or marking its native structures.</p>
+<p><code>JSTraceOp</code> implementation can assume that no other threads mutates object state. It must not change state of the object or corresponding native structures. The only exception for this rule is the case when the embedding needs a tight integration with GC. In that case the embedding can check if the traversal is a part of the marking phase through calling <!-- <!-- {{jsapixref("JS_IsGCMarkingTracer")}} --> --> and apply a special code like emptying caches or marking its native structures.</p>
 
 <h3 id="JSClass_hooks"><code>JSClass</code> hooks</h3>
 
@@ -42,13 +42,13 @@
 
 <ul>
  <li>
-  <p>The <strong><!-- {{jsapixref("JSClass", "JSClass.trace")}} --></strong> callback is called to enumerate all traceable things reachable.</p>
+  <p>The <strong><!-- <!-- {{jsapixref("JSClass", "JSClass.trace")}} --> --></strong> callback is called to enumerate all traceable things reachable.</p>
  </li>
 </ul>
 
 <h2 id="See_Also" name="See_Also">See Also</h2>
 
 <ul>
- <li><!-- {{ LXRSearch("ident", "i", "JSTraceOp") }} --></li>
- <li><!-- {{jsapixref("JSClass")}} --></li>
+ <li><!-- <!-- {{ LXRSearch("ident", "i", "JSTraceOp") }} --> --></li>
+ <li><!-- <!-- {{jsapixref("JSClass")}} --> --></li>
 </ul>

@@ -78,14 +78,14 @@ $ ./mach test path/to/tests/test_example.js
 <dl>
  <dt><code>add_task([<em>condition</em>, ]testFunc)</code></dt>
  <dd>Add an asynchronous function or to the list of tests that are to be run asynchronously. Whenever the function <code>await</code>s a <a href="/en-US/docs/Mozilla/JavaScript_code_modules/Promise.jsm">Promise</a>, the test runner waits until the promise is resolved or rejected before proceeding. Rejected promises are converted into exceptions, and resolved promises are converted into values.</dd>
- <dd>You can optionally specify a condition which causes the test function to be skipped; see <!-- {{anch("Adding conditions through the add_task or add_test function")}} --> for details.</dd>
- <dd>For tests that use <code>add_task()</code>, the <code>run_test()</code> function is optional, but if present, it should also call <code>run_next_test()</code> to start execution of all asynchronous test functions. The test cases must not call <code>run_next_test()</code>, it is called automatically when the task finishes. See <!-- {{anch("Async tests")}} -->, below, for more information.</dd>
+ <dd>You can optionally specify a condition which causes the test function to be skipped; see <!-- <!-- {{anch("Adding conditions through the add_task or add_test function")}} --> --> for details.</dd>
+ <dd>For tests that use <code>add_task()</code>, the <code>run_test()</code> function is optional, but if present, it should also call <code>run_next_test()</code> to start execution of all asynchronous test functions. The test cases must not call <code>run_next_test()</code>, it is called automatically when the task finishes. See <!-- <!-- {{anch("Async tests")}} --> -->, below, for more information.</dd>
  <dt><code>add_test([<em>condition</em>, ]<var>testFunction</var>)</code></dt>
  <dd>Add a test function to the list of tests that are to be run asynchronously.</dd>
- <dd>You can optionally specify a condition which causes the test function to be skipped; see <!-- {{anch("Adding conditions through the add_task or add_test function")}} --> for details.</dd>
- <dd>Each test function must call <code>run_next_test()</code> when it's done. For tests that use <code>add_test()</code>, <code>the run_test()</code> function is optional, but if present, it should also call <code>run_next_test()</code> to start execution of all asynchronous test functions. In most cases, you should rather use the more readable variant <code>add_task()</code>. See <!-- {{anch("Async tests")}} -->, below, for more information.</dd>
+ <dd>You can optionally specify a condition which causes the test function to be skipped; see <!-- <!-- {{anch("Adding conditions through the add_task or add_test function")}} --> --> for details.</dd>
+ <dd>Each test function must call <code>run_next_test()</code> when it's done. For tests that use <code>add_test()</code>, <code>the run_test()</code> function is optional, but if present, it should also call <code>run_next_test()</code> to start execution of all asynchronous test functions. In most cases, you should rather use the more readable variant <code>add_task()</code>. See <!-- <!-- {{anch("Async tests")}} --> -->, below, for more information.</dd>
  <dt><code>run_next_test()</code></dt>
- <dd>Run the next test function from the list of asynchronous tests. Each test function must call <code>run_next_test()</code> when it's done. <code>run_test()</code> should also call <code>run_next_test()</code> to start execution of all asynchronous test functions. See <!-- {{anch("Async tests")}} -->, below, for more information.</dd>
+ <dd>Run the next test function from the list of asynchronous tests. Each test function must call <code>run_next_test()</code> when it's done. <code>run_test()</code> should also call <code>run_next_test()</code> to start execution of all asynchronous test functions. See <!-- <!-- {{anch("Async tests")}} --> -->, below, for more information.</dd>
  <dt><strong><code>registerCleanupFunction</code></strong><code>(<var>callback</var>)</code></dt>
  <dd>Executes the function <code>callback</code> after the current JS test file has finished running, regardless of whether the tests inside it pass or fail. You can use this to clean up anything that might otherwise cause problems between test runs.</dd>
  <dd>If <code>callback</code> returns a <code>Promise</code>, the test will not finish until the promise is fulfilled or rejected (making the termination function asynchronous).</dd>
@@ -100,17 +100,17 @@ $ ./mach test path/to/tests/test_example.js
 
 <dl>
  <dt><code>do_get_file(<var>testdirRelativePath</var>, <var>allowNonexistent</var>)</code></dt>
- <dd>Returns an <!-- {{ interface("nsILocalFile") }} --> object representing the given file (or directory) in the test directory. For example, if your test is unit/test_something.js, and you need to access unit/data/somefile, you would call <code>do_get_file('data/somefile')</code>. The given path must be delimited with forward slashes. You can use this to access test-specific auxiliary files if your test requires access to external files. Note that you can also use this function to get directories.
- <div class="note"><strong>Note:</strong> If your test needs access to one or more files that aren't in the test directory, you should install those files to the test directory in the Makefile where you specify <code>XPCSHELL_TESTS</code>. For an example, see <!-- {{ Source("netwerk/test/Makefile.in#117") }} -->.</div>
+ <dd>Returns an <!-- <!-- {{ interface("nsILocalFile") }} --> --> object representing the given file (or directory) in the test directory. For example, if your test is unit/test_something.js, and you need to access unit/data/somefile, you would call <code>do_get_file('data/somefile')</code>. The given path must be delimited with forward slashes. You can use this to access test-specific auxiliary files if your test requires access to external files. Note that you can also use this function to get directories.
+ <div class="note"><strong>Note:</strong> If your test needs access to one or more files that aren't in the test directory, you should install those files to the test directory in the Makefile where you specify <code>XPCSHELL_TESTS</code>. For an example, see <!-- <!-- {{ Source("netwerk/test/Makefile.in#117") }} --> -->.</div>
  </dd>
  <dt><code>do_get_profile()</code></dt>
- <dd>Registers a directory with the profile service and returns an <!-- {{ interface("nsILocalFile") }} --> object representing that directory. It also makes sure that the <strong>profile-change-net-teardown</strong>, <strong>profile-change-teardown</strong>, and <strong>profile-before-change</strong> <a href="/en/Observer_Notifications#Application_shutdown" title="en/Observer_Notifications#Application_shutdown">observer notifications</a> are sent before the test finishes. This is useful if the components loaded in the test observe them to do cleanup on shutdown (e.g., places).
+ <dd>Registers a directory with the profile service and returns an <!-- <!-- {{ interface("nsILocalFile") }} --> --> object representing that directory. It also makes sure that the <strong>profile-change-net-teardown</strong>, <strong>profile-change-teardown</strong>, and <strong>profile-before-change</strong> <a href="/en/Observer_Notifications#Application_shutdown" title="en/Observer_Notifications#Application_shutdown">observer notifications</a> are sent before the test finishes. This is useful if the components loaded in the test observe them to do cleanup on shutdown (e.g., places).
  <div class="note"><strong>Note:</strong> <code>do_register_cleanup</code> will perform any cleanup operation <em>before</em> the profile and the network is shut down by the observer notifications.</div>
  </dd>
  <dt><code>do_get_idle(</code><code>)</code></dt>
  <dd>By default xpcshell tests will disable the idle service, so that idle time will always be reported as 0. Calling this function will re-enable the service and return a handle to it; the idle time will then be correctly requested to the underlying OS. The idle-daily notification could be fired when requesting idle service. It is suggested to always get the service through this method if the test has to use idle.</dd>
  <dt><code>do_get_cwd()</code></dt>
- <dd>Returns an <!-- {{ interface("nsILocalFile") }} --> object representing the test directory. This is the directory containing the test file when it is currently being run. Your test can write to this directory as well as read any files located alongside your test. Your test should be careful to ensure that it will not fail if a file it intends to write already exists, however.</dd>
+ <dd>Returns an <!-- <!-- {{ interface("nsILocalFile") }} --> --> object representing the test directory. This is the directory containing the test file when it is currently being run. Your test can write to this directory as well as read any files located alongside your test. Your test should be careful to ensure that it will not fail if a file it intends to write already exists, however.</dd>
  <dt><code>load(<var>testdirRelativePath</var>)</code></dt>
  <dd>Imports the JavaScript file referenced by <code><var>testdirRelativePath</var></code> into the global script context, executing the code inside it. The file specified is a file within the test directory. For example, if your test is unit/test_something.js and you have another file unit/extra_helpers.js, you can load the second file from the first by calling <code>load('extra_helpers.js')</code>.</dd>
 </dl>
@@ -145,15 +145,15 @@ $ ./mach test path/to/tests/test_example.js
  <dt><code>tags</code></dt>
  <dd>Tests can be filtered by tags when running multiple tests. The command for mach is <code>./mach xpcshell-test --tag TAGNAME</code></dd>
  <dt><code>head</code></dt>
- <dd>The relative path to the head JavaScript file, which is run once before a test suite is run. The variables declared in the root scope are available as globals in the test files. See <!-- {{anch("Test head and support files")}} --> for more information and usage.</dd>
+ <dd>The relative path to the head JavaScript file, which is run once before a test suite is run. The variables declared in the root scope are available as globals in the test files. See <!-- <!-- {{anch("Test head and support files")}} --> --> for more information and usage.</dd>
  <dt><code>firefox-appdir</code></dt>
  <dd>Set this to "browser" if your tests need access to things in the browser/ directory (e.g. additional XPCOM services that live there)</dd>
  <dt><code>skip-if</code></dt>
  <dt><code>run-if</code></dt>
  <dt><code>fail-if</code></dt>
- <dd>For this entire test suite, run the tests only if they meet certain conditions. See <!-- {{anch("Adding conditions in the xpcshell.ini manifest")}} --> for how to use these properties.</dd>
+ <dd>For this entire test suite, run the tests only if they meet certain conditions. See <!-- <!-- {{anch("Adding conditions in the xpcshell.ini manifest")}} --> --> for how to use these properties.</dd>
  <dt><code>support-files</code></dt>
- <dd>Make files available via the <code>resource://test/[filename]</code> path to the tests. The path can be relative to other directories, but it will be served only with the filename. See <!-- {{anch("Test head and support files")}} --> for more information and usage.</dd>
+ <dd>Make files available via the <code>resource://test/[filename]</code> path to the tests. The path can be relative to other directories, but it will be served only with the filename. See <!-- <!-- {{anch("Test head and support files")}} --> --> for more information and usage.</dd>
  <dt><code>[test_*]</code></dt>
  <dd>Test file names must start with <code>test_</code> and are listed in square brackets</dd>
 </dl>
@@ -337,7 +337,7 @@ skip-if = os == 'win'
 <p>This example would skip running <code>test_example.js</code> on Windows.</p>
 
 <div class="note">
-<p><strong>Note:</strong> Starting with Gecko <!-- {{geckoRelease(40)}} -->, you can use conditionals on individual test functions instead of on entire files. See <!-- {{anch("Adding conditions through the add_task or add_test function")}} --> above for details.</p>
+<p><strong>Note:</strong> Starting with Gecko <!-- <!-- {{geckoRelease(40)}} --> -->, you can use conditionals on individual test functions instead of on entire files. See <!-- <!-- {{anch("Adding conditions through the add_task or add_test function")}} --> --> above for details.</p>
 </div>
 
 <p>There are currently four conditionals you can specify:</p>
@@ -438,7 +438,7 @@ It is possible for this to alter test behevior by triggering additional browser 
 
 <h4 id="Via_check-interactive" name="Via_check-interactive">Via <code>--debugger and -debugger-interactive</code></h4>
 
-<p>You can specify flags when issuing the <code>xpcshell-test</code> command that will launch xpcshell in the specified debugger (implemented in <!-- {{ Bug(382682) }} -->). Provide the full path to the debugger, or ensure that the named debugger is in your system PATH.</p>
+<p>You can specify flags when issuing the <code>xpcshell-test</code> command that will launch xpcshell in the specified debugger (implemented in <!-- <!-- {{ Bug(382682) }} --> -->). Provide the full path to the debugger, or ensure that the named debugger is in your system PATH.</p>
 
 <p>Example:</p>
 

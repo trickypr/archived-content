@@ -1,4 +1,4 @@
-<p><!-- {{ gecko_minversion_header("2.0") }} --></p>
+<p><!-- <!-- {{ gecko_minversion_header("2.0") }} --> --></p>
 
 <p>The <code>DownloadLastDir.jsm</code> JavaScript code module lets you retrieve the path of the last directory into which a download occurred.</p>
 
@@ -23,7 +23,7 @@ var file = DownloadLastDir.file;
 DownloadLastDir.file = file;
 </pre>
 
-<p><!-- {{ Fx_minversion_inline(7) }} --> You can also set and retrieve this information on a site-by-site basis.</p>
+<p><!-- <!-- {{ Fx_minversion_inline(7) }} --> --> You can also set and retrieve this information on a site-by-site basis.</p>
 
 <p>To set the path, use <code>setFile</code>:</p>
 
@@ -37,7 +37,7 @@ DownloadLastDir.setFile(uri, file);</pre>
   console.log(file);
 });</pre>
 
-<p><!-- {{deprecated_inline("26.0")}} --> To retrieve the path in Firefox 25 or earlier, use <code>getFile</code>:</p>
+<p><!-- <!-- {{deprecated_inline("26.0")}} --> --> To retrieve the path in Firefox 25 or earlier, use <code>getFile</code>:</p>
 
 <pre>// file is an nsIFile
 var file = gDownloadLastDir.getFile(uri);

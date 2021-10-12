@@ -1,6 +1,6 @@
-<div><!-- {{JSRef}} --> <!-- {{non-standard_header}} --></div>
+<div><!-- <!-- {{JSRef}} --> --> <!-- <!-- {{non-standard_header}} --> --></div>
 
-<p>The non-standard <strong><code>toLocaleFormat()</code></strong> method converts a date to a string using the specified formatting. <!-- {{jsxref("Global_Objects/DateTimeFormat", "Intl.DateTimeFormat")}} --> is an alternative to format dates in a standards-compliant way. See also the newer version of <!-- {{jsxref("Date.prototype.toLocaleDateString()")}} -->.</p>
+<p>The non-standard <strong><code>toLocaleFormat()</code></strong> method converts a date to a string using the specified formatting. <!-- <!-- {{jsxref("Global_Objects/DateTimeFormat", "Intl.DateTimeFormat")}} --> --> is an alternative to format dates in a standards-compliant way. See also the newer version of <!-- <!-- {{jsxref("Date.prototype.toLocaleDateString()")}} --> -->.</p>
 
 <p><strong>This feature has been removed and will no longer work in Firefox 58+.</strong> See <a href="/en-US/docs/Web/JavaScript/Reference/Errors/Deprecated_toLocaleFormat">Warning: Date.prototype.toLocaleFormat is deprecated</a> for more information and migration help.</p>
 
@@ -25,7 +25,7 @@
 
 <p>Extension and XULRunner developers should know that just loading the format string from a <code>.dtd</code> or <code>.properties</code> file using a <code>chrome://<em>somedomain</em>/locale/<em>somefile.ext</em></code> URI should be <strong>avoided</strong>, as the <code>.dtd</code>/<code>.properties</code> file and the <code>toLocaleFormat()</code> method does not not necessarily use the same locale, which could result in odd looking or even ambiguous or unreadable dates.</p>
 
-<p>Also note that the behavior of the used locale depends on the platform, and the user might customize the locale used, so using the system locale the choose the format string might in some cases not even be adequate. You might consider using some of the more general <code>toLocale*</code> methods of the <!-- {{jsxref("Global_Objects/Date", "Date")}} --> object or doing your own custom localization of the date to be displayed using some of the <code>get*</code> methods of the <!-- {{jsxref("Global_Objects/Date", "Date")}} --> object instead of using this method.</p>
+<p>Also note that the behavior of the used locale depends on the platform, and the user might customize the locale used, so using the system locale the choose the format string might in some cases not even be adequate. You might consider using some of the more general <code>toLocale*</code> methods of the <!-- <!-- {{jsxref("Global_Objects/Date", "Date")}} --> --> object or doing your own custom localization of the date to be displayed using some of the <code>get*</code> methods of the <!-- <!-- {{jsxref("Global_Objects/Date", "Date")}} --> --> object instead of using this method.</p>
 
 <h2 id="Examples">Examples</h2>
 
@@ -39,7 +39,7 @@ var date = today.toLocaleFormat('%A, %B %e, %Y');
 
 <h2 id="Polyfill">Polyfill</h2>
 
-<p>When using the <a href="https://github.com/abritinthebay/datejs/wiki/Format-Specifiers">DateJS</a> library you can polyfill <!-- {{jsxref("Date.prototype.toLocaleDateString()")}} --> like this:</p>
+<p>When using the <a href="https://github.com/abritinthebay/datejs/wiki/Format-Specifiers">DateJS</a> library you can polyfill <!-- <!-- {{jsxref("Date.prototype.toLocaleDateString()")}} --> --> like this:</p>
 
 <pre class="brush: js">if (!Date.prototype.toLocaleFormat) {
     (function() {
@@ -60,8 +60,8 @@ var date = today.toLocaleFormat('%A, %B %e, %Y');
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><!-- {{jsxref("Global_Objects/DateTimeFormat", "Intl.DateTimeFormat")}} --></li>
- <li><!-- {{jsxref("Date.prototype.toLocaleString()")}} --></li>
- <li><!-- {{jsxref("Date.prototype.toLocaleDateString()")}} --></li>
- <li><!-- {{jsxref("Date.prototype.toLocaleTimeString()")}} --></li>
+ <li><!-- <!-- {{jsxref("Global_Objects/DateTimeFormat", "Intl.DateTimeFormat")}} --> --></li>
+ <li><!-- <!-- {{jsxref("Date.prototype.toLocaleString()")}} --> --></li>
+ <li><!-- <!-- {{jsxref("Date.prototype.toLocaleDateString()")}} --> --></li>
+ <li><!-- <!-- {{jsxref("Date.prototype.toLocaleTimeString()")}} --> --></li>
 </ul>

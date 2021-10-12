@@ -1,10 +1,10 @@
-<p><!-- {{ gecko_minversion_header("2.0") }} --></p>
+<p><!-- <!-- {{ gecko_minversion_header("2.0") }} --> --></p>
 
 <div class="blockIndicator warning">
 <p>Support for extensions using XUL/XPCOM or the Add-on SDK was removed in Firefox 57, released November 2017. As there is no supported version of Firefox enabling these technologies, this page will be removed by December 2020.</p>
 </div>
 
-<p><span style="color: #000000; display: inline !important; float: none; font-family: Cantarell; font-size: 14.666666984558105px; font-style: normal; font-weight: normal; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal;"><!-- {{LegacyAddonsNotice}} --></span></p>
+<p><span style="color: #000000; display: inline !important; float: none; font-family: Cantarell; font-size: 14.666666984558105px; font-style: normal; font-weight: normal; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal;"><!-- <!-- {{LegacyAddonsNotice}} --> --></span></p>
 
 <p>An <code>AddonInstall</code> instance tracks download and installation process of an add-on. Instances can be created using the <code><a href="/en-US/Add-ons/Add-on_Manager/AddonManager#getInstallForFile()" title="AddonManager.getInstallForFile()">getInstallForFile()</a></code> or <code><a href="/en-US/Add-ons/Add-on_Manager/AddonManager#getInstallForURL()" title="AddonManager.getInstallForURL()">getInstallForURL()</a></code> methods on the <code><a href="/en-US/docs/Mozilla/Add-ons/Add-on_Manager/AddonManager" title="AddonManager">AddonManager</a></code>. Once you have an instance the <code><a href="#install()" title="AddonInstall.install()">install()</a> method is used to start automatic download and installation. This can be canceled at any time with the <code><a href="#cancel()" title="AddonInstall.cancel()">cancel()</a></code> method.</code></p>
 
@@ -53,7 +53,7 @@
   </tr>
   <tr>
    <td><code><code>releaseNotesURI</code></code></td>
-   <td><code><code><!-- {{ Interface("nsIURI") }} --></code></code></td>
+   <td><code><code><!-- <!-- {{ Interface("nsIURI") }} --> --></code></code></td>
    <td><code>The URI of release notes for this install.</code></td>
   </tr>
   <tr>
@@ -73,12 +73,12 @@
   </tr>
   <tr>
    <td><code><code>sourceURI</code></code></td>
-   <td><code><code><!-- {{ Interface("nsIURI") }} --></code></code></td>
+   <td><code><code><!-- <!-- {{ Interface("nsIURI") }} --> --></code></code></td>
    <td><code>The URI that the add-on is being installed from.</code></td>
   </tr>
   <tr>
    <td><code><code>file</code></code></td>
-   <td><code><code><!-- {{ Interface("nsIFile") }} --></code></code></td>
+   <td><code><code><!-- <!-- {{ Interface("nsIFile") }} --> --></code></code></td>
    <td><code>The file that the add-on is being installed from. This may be null if the add-on is coming from the Internet and has yet to be downloaded.</code></td>
   </tr>
   <tr>
@@ -93,7 +93,7 @@
   </tr>
   <tr>
    <td><code><code>certificate</code></code></td>
-   <td><code><code><!-- {{ Interface("nsIX509Cert") }} --></code></code></td>
+   <td><code><code><!-- <!-- {{ Interface("nsIX509Cert") }} --> --></code></code></td>
    <td><code>If the add-on to be installed is signed this is the certificate of the signer. Only available after downloading is complete.</code></td>
   </tr>
   <tr>

@@ -1,4 +1,4 @@
-<div><!-- {{SpiderMonkeySidebar("JSAPI")}} --></div>
+<div><!-- <!-- {{SpiderMonkeySidebar("JSAPI")}} --> --></div>
 
 <div class="summary">
 <p>Access an object's reserved slots.</p>
@@ -30,7 +30,7 @@ JS_SetReservedSlot(JSObject *obj, uint32_t index, jsval v);
   </tr>
   <tr>
    <td><code>obj</code></td>
-   <td><!-- {{jsapixref("JSObject", "JSObject *")}} --></td>
+   <td><!-- <!-- {{jsapixref("JSObject", "JSObject *")}} --> --></td>
    <td>An object that has reserved slots.</td>
   </tr>
   <tr>
@@ -40,7 +40,7 @@ JS_SetReservedSlot(JSObject *obj, uint32_t index, jsval v);
   </tr>
   <tr>
    <td><code>v</code></td>
-   <td><!-- {{jsapixref("JS::Value")}} --></td>
+   <td><!-- <!-- {{jsapixref("JS::Value")}} --> --></td>
    <td><em>(in <code>JS_SetReservedSlot</code>)</em> The value to store.</td>
   </tr>
  </tbody>
@@ -48,7 +48,7 @@ JS_SetReservedSlot(JSObject *obj, uint32_t index, jsval v);
 
 <h2 id="Description" name="Description">Description</h2>
 
-<p>If a <!-- {{jsapixref("JSClass")}} --> has <!-- {{jsapixref("JSClass.flags", "JSCLASS_HAS_RESERVED_SLOTS(n)")}} --> in its <code>flags</code>, with <var>n</var> &gt; 0, or has a non-null <!-- {{jsapixref("JSClass.reserveSlots")}} --> callback, then objects of that class have <code>n</code> <dfn>reserved slots</dfn> in which the application may store data. These fields are not directly exposed to scripts.</p>
+<p>If a <!-- <!-- {{jsapixref("JSClass")}} --> --> has <!-- <!-- {{jsapixref("JSClass.flags", "JSCLASS_HAS_RESERVED_SLOTS(n)")}} --> --> in its <code>flags</code>, with <var>n</var> &gt; 0, or has a non-null <!-- <!-- {{jsapixref("JSClass.reserveSlots")}} --> --> callback, then objects of that class have <code>n</code> <dfn>reserved slots</dfn> in which the application may store data. These fields are not directly exposed to scripts.</p>
 
 <p>Reserved slots may contain any <code>JS::Value</code>, and the garbage collector will hold the value alive as long as the object itself is alive.</p>
 
@@ -59,7 +59,7 @@ JS_SetReservedSlot(JSObject *obj, uint32_t index, jsval v);
 <h2 id="See_Also" name="See_Also">See Also</h2>
 
 <ul>
- <li><!-- {{ LXRSearch("ident", "i", "JS_GetReservedSlot") }} --></li>
- <li><!-- {{ LXRSearch("ident", "i", "JS_SetReservedSlot") }} --></li>
- <li><!-- {{bug(1184564)}} --> -- Changed jsval to JS::Value</li>
+ <li><!-- <!-- {{ LXRSearch("ident", "i", "JS_GetReservedSlot") }} --> --></li>
+ <li><!-- <!-- {{ LXRSearch("ident", "i", "JS_SetReservedSlot") }} --> --></li>
+ <li><!-- <!-- {{bug(1184564)}} --> --> -- Changed jsval to JS::Value</li>
 </ul>

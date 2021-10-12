@@ -1,9 +1,9 @@
-<div><!-- {{SpiderMonkeySidebar("JSAPI")}} --></div>
+<div><!-- <!-- {{SpiderMonkeySidebar("JSAPI")}} --> --></div>
 
-<p><!-- {{ jsapi_minversion_header("38") }} --></p>
+<p><!-- <!-- {{ jsapi_minversion_header("38") }} --> --></p>
 
 <div class="summary">
-<p>Retrieves a <!-- {{jsapixref("JSScript")}} --> for a specified function.</p>
+<p>Retrieves a <!-- <!-- {{jsapixref("JSScript")}} --> --> for a specified function.</p>
 </div>
 
 <h2 id="Syntax" name="Syntax">Syntax</h2>
@@ -21,12 +21,12 @@ JS_GetFunctionScript(JSContext *cx, JS::HandleFunction fun);
   </tr>
   <tr>
    <td><code>cx</code></td>
-   <td><!-- {{jsapixref("JSRuntime", "JSContext *")}} --></td>
-   <td>Pointer to a JS context from which to derive runtime information. <!-- {{ Jsapi-requires-request() }} --></td>
+   <td><!-- <!-- {{jsapixref("JSRuntime", "JSContext *")}} --> --></td>
+   <td>Pointer to a JS context from which to derive runtime information. <!-- <!-- {{ Jsapi-requires-request() }} --> --></td>
   </tr>
   <tr>
    <td><code>fun</code></td>
-   <td><!-- {{jsapixref("JSFunction", "JS::HandleFunction")}} --></td>
+   <td><!-- <!-- {{jsapixref("JSFunction", "JS::HandleFunction")}} --> --></td>
    <td>Pointer to a JS function.</td>
   </tr>
  </tbody>
@@ -34,11 +34,11 @@ JS_GetFunctionScript(JSContext *cx, JS::HandleFunction fun);
 
 <h2 id="Description" name="Description">Description</h2>
 
-<p><strong><code>JS_GetFunctionScript</code></strong> returns a pointer to <!-- {{jsapixref("JSScript")}} --> for the specified function, <code>fun</code>. If <code>fun</code> is a native function, it returns <code>NULL</code>.</p>
+<p><strong><code>JS_GetFunctionScript</code></strong> returns a pointer to <!-- <!-- {{jsapixref("JSScript")}} --> --> for the specified function, <code>fun</code>. If <code>fun</code> is a native function, it returns <code>NULL</code>.</p>
 
 <h2 id="See_Also" name="See_Also">See Also</h2>
 
 <ul>
- <li><!-- {{ LXRSearch("ident", "i", "JS_GetFunctionScript") }} --></li>
- <li><!-- {{bug(1069694)}} --></li>
+ <li><!-- <!-- {{ LXRSearch("ident", "i", "JS_GetFunctionScript") }} --> --></li>
+ <li><!-- <!-- {{bug(1069694)}} --> --></li>
 </ul>

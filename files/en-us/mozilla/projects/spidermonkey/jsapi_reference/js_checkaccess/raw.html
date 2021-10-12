@@ -1,4 +1,4 @@
-<p><!-- {{SpiderMonkeySidebar("JSAPI")}} --><!-- {{ obsolete_header("jsapi29") }} --></p>
+<p><!-- <!-- {{SpiderMonkeySidebar("JSAPI")}} --> --><!-- <!-- {{ obsolete_header("jsapi29") }} --> --></p>
 
 <p>Check whether a running script may access a given object property.</p>
 
@@ -18,7 +18,7 @@
   <tr>
    <td><code>cx</code></td>
    <td><code><a href="/en/SpiderMonkey/JSAPI_Reference/JSRuntime" title="en/JSRuntime">JSContext</a> *</code></td>
-   <td>The context in which to perform the access check. <!-- {{ Jsapi-requires-request() }} --></td>
+   <td>The context in which to perform the access check. <!-- <!-- {{ Jsapi-requires-request() }} --> --></td>
   </tr>
   <tr>
    <td><code>obj</code></td>
@@ -91,4 +91,4 @@
 
 <p>On success, <code>JS_CheckAccess</code> returns <code>JS_TRUE</code>, <code>*vp</code> is set to the current value of the specified property, and <code>*attrsp</code> is set to the property's attributes. On error or exception, including if access is denied, <code>JS_CheckAccess</code> returns <code>JS_FALSE</code>, and the values left in <code>*vp</code> and <code>*attrsp</code> are undefined.</p>
 
-<p><!-- {{ LXRSearch("ident", "i", "JS_CheckAccess") }} --></p>
+<p><!-- <!-- {{ LXRSearch("ident", "i", "JS_CheckAccess") }} --> --></p>

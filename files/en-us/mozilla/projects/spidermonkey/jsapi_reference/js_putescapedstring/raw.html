@@ -1,6 +1,6 @@
-<div><!-- {{SpiderMonkeySidebar("JSAPI")}} --></div>
+<div><!-- <!-- {{SpiderMonkeySidebar("JSAPI")}} --> --></div>
 
-<p><!-- {{ jsapi_minversion_header("1.8.5") }} --></p>
+<p><!-- <!-- {{ jsapi_minversion_header("1.8.5") }} --> --></p>
 
 <div class="summary">
 <p>Write a string into buffer with escaping.</p>
@@ -26,8 +26,8 @@ JS_PutEscapedFlatString(char *buffer, size_t size, JSFlatString *str,
   </tr>
   <tr>
    <td><code>cx</code></td>
-   <td><!-- {{jsapixref("JSRuntime", "JSContext *")}} --></td>
-   <td>A context. <!-- {{ Jsapi-requires-request() }} --></td>
+   <td><!-- <!-- {{jsapixref("JSRuntime", "JSContext *")}} --> --></td>
+   <td>A context. <!-- <!-- {{ Jsapi-requires-request() }} --> --></td>
   </tr>
   <tr>
    <td><code>buffer</code></td>
@@ -41,7 +41,7 @@ JS_PutEscapedFlatString(char *buffer, size_t size, JSFlatString *str,
   </tr>
   <tr>
    <td><code>str</code></td>
-   <td><!-- {{jsapixref("JSString", "JSString *")}} --> <em>or</em> <!-- {{jsapixref("JSString", "JSFlatString *")}} --></td>
+   <td><!-- <!-- {{jsapixref("JSString", "JSString *")}} --> --> <em>or</em> <!-- <!-- {{jsapixref("JSString", "JSFlatString *")}} --> --></td>
    <td>A string to write into the file.</td>
   </tr>
   <tr>
@@ -59,7 +59,7 @@ JS_PutEscapedFlatString(char *buffer, size_t size, JSFlatString *str,
 <h2 id="See_Also" name="See_Also">See Also</h2>
 
 <ul>
- <li><!-- {{ LXRSearch("ident", "i", "JS_PutEscapedString") }} --></li>
- <li><!-- {{ LXRSearch("ident", "i", "JS_PutEscapedFlatString") }} --></li>
- <li><!-- {{bug(609440)}} --></li>
+ <li><!-- <!-- {{ LXRSearch("ident", "i", "JS_PutEscapedString") }} --> --></li>
+ <li><!-- <!-- {{ LXRSearch("ident", "i", "JS_PutEscapedFlatString") }} --> --></li>
+ <li><!-- <!-- {{bug(609440)}} --> --></li>
 </ul>

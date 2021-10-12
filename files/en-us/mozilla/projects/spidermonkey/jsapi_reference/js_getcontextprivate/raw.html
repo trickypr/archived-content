@@ -1,4 +1,4 @@
-<div><!-- {{SpiderMonkeySidebar("JSAPI")}} --></div>
+<div><!-- <!-- {{SpiderMonkeySidebar("JSAPI")}} --> --></div>
 <div class="summary">
 <p>Access a <code>JSContext</code> field for application-specific data.</p>
 </div>
@@ -24,7 +24,7 @@ JS_SetSecondContextPrivate(JSContext *cx, void *data); // Added in SpiderMonkey 
   </tr>
   <tr>
    <td><code>cx</code></td>
-   <td><!-- {{jsapixref("JSRuntime", "JSContext *")}} --></td>
+   <td><!-- <!-- {{jsapixref("JSRuntime", "JSContext *")}} --> --></td>
    <td>Any context.</td>
   </tr>
   <tr>
@@ -39,16 +39,16 @@ JS_SetSecondContextPrivate(JSContext *cx, void *data); // Added in SpiderMonkey 
 <p>Memory management for this private data is the application's responsibility. The JavaScript engine itself never uses it.</p>
 <h2 id="See_Also" name="See_Also">See Also</h2>
 <ul>
- <li><!-- {{ LXRSearch("ident", "i", "JS_GetContextPrivate") }} --></li>
- <li><!-- {{ LXRSearch("ident", "i", "JS_SetContextPrivate") }} --></li>
- <li><!-- {{ LXRSearch("ident", "i", "JS_GetSecondContextPrivate") }} --></li>
- <li><!-- {{ LXRSearch("ident", "i", "JS_SetSecondContextPrivate") }} --></li>
- <li><!-- {{jsapixref("JS_GetRuntimePrivate")}} --></li>
- <li><!-- {{jsapixref("JS_GetRuntimePrivate", "JS_SetRuntimePrivate")}} --></li>
- <li><!-- {{jsapixref("JS_GetCompartmentPrivate")}} --></li>
- <li><!-- {{jsapixref("JS_GetCompartmentPrivate", "JS_SetCompartmentPrivate")}} --></li>
- <li><!-- {{jsapixref("JS_GetPrivate")}} --></li>
- <li><!-- {{jsapixref("JS_SetPrivate")}} --></li>
- <li><!-- {{jsapixref("JS_GetInstancePrivate")}} --></li>
- <li><!-- {{bug(714458)}} --></li>
+ <li><!-- <!-- {{ LXRSearch("ident", "i", "JS_GetContextPrivate") }} --> --></li>
+ <li><!-- <!-- {{ LXRSearch("ident", "i", "JS_SetContextPrivate") }} --> --></li>
+ <li><!-- <!-- {{ LXRSearch("ident", "i", "JS_GetSecondContextPrivate") }} --> --></li>
+ <li><!-- <!-- {{ LXRSearch("ident", "i", "JS_SetSecondContextPrivate") }} --> --></li>
+ <li><!-- <!-- {{jsapixref("JS_GetRuntimePrivate")}} --> --></li>
+ <li><!-- <!-- {{jsapixref("JS_GetRuntimePrivate", "JS_SetRuntimePrivate")}} --> --></li>
+ <li><!-- <!-- {{jsapixref("JS_GetCompartmentPrivate")}} --> --></li>
+ <li><!-- <!-- {{jsapixref("JS_GetCompartmentPrivate", "JS_SetCompartmentPrivate")}} --> --></li>
+ <li><!-- <!-- {{jsapixref("JS_GetPrivate")}} --> --></li>
+ <li><!-- <!-- {{jsapixref("JS_SetPrivate")}} --> --></li>
+ <li><!-- <!-- {{jsapixref("JS_GetInstancePrivate")}} --> --></li>
+ <li><!-- <!-- {{bug(714458)}} --> --></li>
 </ul>

@@ -1,5 +1,5 @@
-<div><!-- {{SpiderMonkeySidebar("JSAPI")}} --></div>
-<p><!-- {{ jsapi_minversion_header("24") }} --></p>
+<div><!-- <!-- {{SpiderMonkeySidebar("JSAPI")}} --> --></div>
+<p><!-- <!-- {{ jsapi_minversion_header("24") }} --> --></p>
 <div class="summary">
 <p>Retrieves the original, canonical <code>Array.prototype</code> for an object's global object.</p>
 </div>
@@ -16,12 +16,12 @@ JS_GetArrayPrototype(JSContext *cx, JS::HandleObject forObj);
   </tr>
   <tr>
    <td><code>cx</code></td>
-   <td><!-- {{jsapixref("JSRuntime", "JSContext *")}} --></td>
-   <td>Pointer to a JavaScript context from which to derive runtime information. <!-- {{ Jsapi-requires-request() }} --></td>
+   <td><!-- <!-- {{jsapixref("JSRuntime", "JSContext *")}} --> --></td>
+   <td>Pointer to a JavaScript context from which to derive runtime information. <!-- <!-- {{ Jsapi-requires-request() }} --> --></td>
   </tr>
   <tr>
    <td><code>forObj</code></td>
-   <td><!-- {{jsapixref("JSObject", "JS::HandleObject")}} --></td>
+   <td><!-- <!-- {{jsapixref("JSObject", "JS::HandleObject")}} --> --></td>
    <td>An object from the global whose <code>Array.prototype</code> is being retrieved.</td>
   </tr>
  </tbody>
@@ -32,6 +32,6 @@ JS_GetArrayPrototype(JSContext *cx, JS::HandleObject forObj);
  <strong>Note:</strong> This expression might have different values over time if the global <code>Array</code> property is modified, but this method returns only the original value.</div>
 <h2 id="See_Also" name="See_Also">See Also</h2>
 <ul>
-<li><!-- {{ LXRSearch("ident", "i", "JS_GetArrayPrototype") }} --></li>
-<li><!-- {{bug(872043)}} --></li>
+<li><!-- <!-- {{ LXRSearch("ident", "i", "JS_GetArrayPrototype") }} --> --></li>
+<li><!-- <!-- {{bug(872043)}} --> --></li>
 </ul>

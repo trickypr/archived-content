@@ -1,4 +1,4 @@
-<div><!-- {{SpiderMonkeySidebar("JSAPI")}} --></div>
+<div><!-- <!-- {{SpiderMonkeySidebar("JSAPI")}} --> --></div>
 
 <div class="summary">
 <p>Reports a memory allocation error.</p>
@@ -22,7 +22,7 @@ JS_ReportAllocationOverflow(JSContext *cx); // Added in SpiderMonkey 1.8
   </tr>
   <tr>
    <td><code>cx</code></td>
-   <td><!-- {{jsapixref("JSRuntime", "JSContext *")}} --></td>
+   <td><!-- <!-- {{jsapixref("JSRuntime", "JSContext *")}} --> --></td>
    <td>The context in which to report the error.</td>
   </tr>
  </tbody>
@@ -34,12 +34,12 @@ JS_ReportAllocationOverflow(JSContext *cx); // Added in SpiderMonkey 1.8
 
 <p>Call <strong><code>JS_ReportAllocationOverflow</code></strong> if an operation fails because it tries to use more memory (or more of some other resource) than the application is designed to handle. When a script tries to grow an array beyond 2<sup>30</sup>-1 elements, for example, or concatenate strings such that the result is more than 2<sup>29</sup>-1 characters long, the JavaScript engine reports an error as though by calling this function.</p>
 
-<p>See <!-- {{jsapixref("JS_ReportError")}} --> and <!-- {{jsapixref("JS_SetErrorReporter")}} --> for more information about error handling in the JSAPI.</p>
+<p>See <!-- <!-- {{jsapixref("JS_ReportError")}} --> --> and <!-- <!-- {{jsapixref("JS_SetErrorReporter")}} --> --> for more information about error handling in the JSAPI.</p>
 
 <h2 id="See_Also" name="See_Also">See Also</h2>
 
 <ul>
- <li><!-- {{ LXRSearch("ident", "i", "JS_ReportOutOfMemory") }} --></li>
- <li><!-- {{ LXRSearch("ident", "i", "JS_ReportAllocationOverflow") }} --></li>
- <li><!-- {{bug(422348)}} --></li>
+ <li><!-- <!-- {{ LXRSearch("ident", "i", "JS_ReportOutOfMemory") }} --> --></li>
+ <li><!-- <!-- {{ LXRSearch("ident", "i", "JS_ReportAllocationOverflow") }} --> --></li>
+ <li><!-- <!-- {{bug(422348)}} --> --></li>
 </ul>

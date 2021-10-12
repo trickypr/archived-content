@@ -1,6 +1,6 @@
-<p>Views are one component of the Places <a class="external" href="http://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller" title="http://en.wikipedia.org/wiki/Model–view–controller">model-view-controller</a> design. Use them to display <!-- {{ Interface("nsINavHistoryResult") }} --> objects to the user. See <a class="internal" href="/en/Querying_Places" title="En/Querying Places">Querying Places</a> for information about obtaining and using <code>nsINavHistoryResult</code> objects, which this page assumes you are familiar with.</p>
+<p>Views are one component of the Places <a class="external" href="http://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller" title="http://en.wikipedia.org/wiki/Model–view–controller">model-view-controller</a> design. Use them to display <!-- <!-- {{ Interface("nsINavHistoryResult") }} --> --> objects to the user. See <a class="internal" href="/en/Querying_Places" title="En/Querying Places">Querying Places</a> for information about obtaining and using <code>nsINavHistoryResult</code> objects, which this page assumes you are familiar with.</p>
 
-<p>An <code>nsINavHistoryResult</code> instance provides the data for a view. The view is responsible for expanding the root <!-- {{ Interface("nsINavHistoryContainerResultNode") }} --> of this instance and displaying the <!-- {{ Interface("nsINavHistoryResultNode") }} --> objects contained therein.</p>
+<p>An <code>nsINavHistoryResult</code> instance provides the data for a view. The view is responsible for expanding the root <!-- <!-- {{ Interface("nsINavHistoryContainerResultNode") }} --> --> of this instance and displaying the <!-- <!-- {{ Interface("nsINavHistoryResultNode") }} --> --> objects contained therein.</p>
 
 <h2 id="The_built-in_views" name="The_built-in_views">The built-in views</h2>
 
@@ -18,7 +18,7 @@
 
 <p>The three built-in views are simply standard XUL elements with a special <code>type</code> attribute whose value is "places".</p>
 
-<p>Every XUL document containing a built-in view must import the stylesheet <!-- {{ Source("browser/components/places/content/places.css") }} --> and overlay the file <!-- {{ Source("browser/components/places/content/placesOverlay.xul") }} -->:</p>
+<p>Every XUL document containing a built-in view must import the stylesheet <!-- <!-- {{ Source("browser/components/places/content/places.css") }} --> --> and overlay the file <!-- <!-- {{ Source("browser/components/places/content/placesOverlay.xul") }} --> -->:</p>
 
 <pre class="brush: xml">&lt;?xml-stylesheet href="chrome://browser/content/places/places.css" ?&gt;
 &lt;?xul-overlay href="chrome://browser/content/places/placesOverlay.xul" ?&gt;</pre>
@@ -30,7 +30,7 @@
 <p>To hook up a built-in view to its data, use the view's special <code>place</code> attribute.</p>
 
 <div class="note">
-<p><strong>Note:</strong> Starting in <!-- {{Gecko ("2.0") }} -->, you can't use the <code>place</code> attribute with menus. See <a href="/en/Displaying_Places_information_using_views#Menu_view" title="en/Displaying Places information using views#Menu view">Menu view</a> for details.</p>
+<p><strong>Note:</strong> Starting in <!-- <!-- {{Gecko ("2.0") }} --> -->, you can't use the <code>place</code> attribute with menus. See <a href="/en/Displaying_Places_information_using_views#Menu_view" title="en/Displaying Places information using views#Menu view">Menu view</a> for details.</p>
 </div>
 
 <p>You may specify the attribute directly in the XUL or set its corresponding property via JavaScript. Its value is the URI of a query, and the data shown in the view are the results of this query. For simple queries whose URIs do not change over the life of the view, you might specify the <code>place</code> attribute directly in the XUL. For more complicated queries or queries whose URIs you plan on changing, you will want to set the view's <code>place</code> property dynamically using JavaScript. Note that in the latter case it is not sufficient to call <code>setAttribute</code> on the element; use the element's <code>place</code> property instead. See <a class="internal" href="/en/Querying_Places#Serializing_queries" title="En/Querying Places">Querying Places</a> and <a class="internal" href="/en/Places_query_URIs" title="En/Places query URIs">Places query URIs</a> for information on query URIs.</p>
@@ -64,10 +64,10 @@ tree.place = uri;</pre>
 
 <p>These two examples use the built-in tree view, but the point is to demonstrate the use of the <code>place</code> attribute and property. In this regard the built-in menu and toolbar views are no different.</p>
 
-<p>When a view's underlying data changes, the view will automatically update itself so that it displays the new data. This update is handled by logic between the view and its results. All Places views implement or own an instance of interface <!-- {{ Interface("nsINavHistoryResultViewer") }} -->, which is the point of interaction between a view and its results. Results themselves observe Places changes, and if on a Places change a result determines that its data specifically has changed, it notifies its view by calling an appropriate method of <code>nsINavHistoryResultViewer</code>. Once notified, the view is responsible for updating itself.</p>
+<p>When a view's underlying data changes, the view will automatically update itself so that it displays the new data. This update is handled by logic between the view and its results. All Places views implement or own an instance of interface <!-- <!-- {{ Interface("nsINavHistoryResultViewer") }} --> -->, which is the point of interaction between a view and its results. Results themselves observe Places changes, and if on a Places change a result determines that its data specifically has changed, it notifies its view by calling an appropriate method of <code>nsINavHistoryResultViewer</code>. Once notified, the view is responsible for updating itself.</p>
 
 <div class="note">
-<p><strong>Note:</strong> Starting in <!-- {{ Gecko("2.0") }} -->, <code>nsINavHistoryResultViewer </code>has been replaced by the more powerful <!-- {{ interface("nsINavHistoryResultObserver") }} --><code>.</code></p>
+<p><strong>Note:</strong> Starting in <!-- <!-- {{ Gecko("2.0") }} --> -->, <code>nsINavHistoryResultViewer </code>has been replaced by the more powerful <!-- <!-- {{ interface("nsINavHistoryResultObserver") }} --> --><code>.</code></p>
 </div>
 
 <h3 id="Tree_view">Tree view</h3>
@@ -83,7 +83,7 @@ tree.place = uri;</pre>
 &lt;/tree&gt;
 </pre>
 
-<p>The tree view is implemented in <!-- {{ Source("browser/components/places/content/tree.xml") }} -->. See the <a class="internal" href="/en/XUL/tree" title="En/XUL/Tree">tree</a> reference and <a class="internal" href="/en/XUL_Tutorial/Trees" title="En/XUL Tutorial/Trees">Trees</a> tutorial for general information about trees.</p>
+<p>The tree view is implemented in <!-- <!-- {{ Source("browser/components/places/content/tree.xml") }} --> -->. See the <a class="internal" href="/en/XUL/tree" title="En/XUL/Tree">tree</a> reference and <a class="internal" href="/en/XUL_Tutorial/Trees" title="En/XUL Tutorial/Trees">Trees</a> tutorial for general information about trees.</p>
 
 <p><span class="lang lang-en">If you would like your tree view to be styled in the same manner that Firefox styles its uses of the view, you should include the following stylesheet. Note that this stylesheet is different from the one given <a href="#Instantiating">above</a>, which <em>must</em> be included if you use a built-in Places view. The following stylesheet is optional and only applies styles and icons to the built-in tree view:</span></p>
 
@@ -94,7 +94,7 @@ tree.place = uri;</pre>
 
 <h4 id="Column_binding">Column binding</h4>
 
-<p><code><span style="font-family: Verdana,Tahoma,sans-serif;">The built-in tree view</span></code> makes it easy to hook up specific columns of your tree to specific properties of the result. It does so by recognizing certain magic values of the <code>id</code> attribute on your <code>treecol</code> elements. A property in the result is bound to a column via that column's <code>id</code> attribute. For example, by setting a column's <code>id</code> to "title", you tell the view to display the title of the <!-- {{ Interface("nsINavHistoryResultNode") }} --> of each row in that column.</p>
+<p><code><span style="font-family: Verdana,Tahoma,sans-serif;">The built-in tree view</span></code> makes it easy to hook up specific columns of your tree to specific properties of the result. It does so by recognizing certain magic values of the <code>id</code> attribute on your <code>treecol</code> elements. A property in the result is bound to a column via that column's <code>id</code> attribute. For example, by setting a column's <code>id</code> to "title", you tell the view to display the title of the <!-- <!-- {{ Interface("nsINavHistoryResultNode") }} --> --> of each row in that column.</p>
 
 <p>The following table shows the mappings between these magic column <code>id</code> values and their corresponding <code>nsINavHistoryResultNode</code> properties:</p>
 
@@ -159,9 +159,9 @@ tree.place = uri;</pre>
 
 <p>So you've got a built-in tree view. How do you ask it about the data it displays?</p>
 
-<p>First, see <!-- {{ Interface("nsIPlacesView") }} -->. Like all Places views, the built-in tree view implements this interface, which provides broad methods such as getting the view's <!-- {{ Interface("nsINavHistoryResult") }} --> instance and examining the view's selection.</p>
+<p>First, see <!-- <!-- {{ Interface("nsIPlacesView") }} --> -->. Like all Places views, the built-in tree view implements this interface, which provides broad methods such as getting the view's <!-- <!-- {{ Interface("nsINavHistoryResult") }} --> --> instance and examining the view's selection.</p>
 
-<p>Second, know this: when it comes to trees, "view" is an overloaded word. This document describes Places views. Places views are just XUL elements; the built-in Places tree view is just a tree element whose <code>type</code> attribute is equal to "places", as described <a href="#Tree_view">above</a>. But recall that all trees—Places view or not—display their data using another kind of view, <span class="lang lang-en"><code><a href="../../../../en/nsITreeView" rel="internal">nsITreeView</a></code></span>. The built-in Places tree view therefore has a view of its own, the built-in Places tree view's view. This view is an object that implements three interfaces: from most specific to most general, <!-- {{ Interface("nsINavHistoryResultTreeViewer") }} -->, <!-- {{ Interface("nsINavHistoryResultObserver") }} --> <!-- {{ gecko_minversion_inline("2.0") }} -->, and <!-- {{ Interface("nsITreeView") }} -->. <code>nsINavHistoryResultTreeViewer</code> maps between row indices and the <!-- {{ Interface("nsINavHistoryResultNode") }} --> objects contained in the rows. <code>nsINavHistoryResultObserver </code>notifies observing clients about updates when the underlying data changes. It's not so useful for our purposes here. <code>nsITreeView</code> provides a high-level interface for trees in general.</p>
+<p>Second, know this: when it comes to trees, "view" is an overloaded word. This document describes Places views. Places views are just XUL elements; the built-in Places tree view is just a tree element whose <code>type</code> attribute is equal to "places", as described <a href="#Tree_view">above</a>. But recall that all trees—Places view or not—display their data using another kind of view, <span class="lang lang-en"><code><a href="../../../../en/nsITreeView" rel="internal">nsITreeView</a></code></span>. The built-in Places tree view therefore has a view of its own, the built-in Places tree view's view. This view is an object that implements three interfaces: from most specific to most general, <!-- <!-- {{ Interface("nsINavHistoryResultTreeViewer") }} --> -->, <!-- <!-- {{ Interface("nsINavHistoryResultObserver") }} --> --> <!-- <!-- {{ gecko_minversion_inline("2.0") }} --> -->, and <!-- <!-- {{ Interface("nsITreeView") }} --> -->. <code>nsINavHistoryResultTreeViewer</code> maps between row indices and the <!-- <!-- {{ Interface("nsINavHistoryResultNode") }} --> --> objects contained in the rows. <code>nsINavHistoryResultObserver </code>notifies observing clients about updates when the underlying data changes. It's not so useful for our purposes here. <code>nsITreeView</code> provides a high-level interface for trees in general.</p>
 
 <p>Finally, the built-in tree view implements several convenience <a href="#Convenience_methods">methods</a> and <a href="#Convenience_properties">properties</a> of its own.</p>
 
@@ -169,9 +169,9 @@ tree.place = uri;</pre>
 
 <ol>
  <li>The convenience <a href="#Convenience_methods">methods</a> and <a href="#Convenience_properties">properties</a> implemented directly on the view itself,</li>
- <li>the <!-- {{ Interface("nsIPlacesView") }} --> interface of the view itself,</li>
- <li>the <!-- {{ Interface("nsINavHistoryResultTreeViewer") }} --> interface of the view's view, and</li>
- <li>the <!-- {{ Interface("nsITreeView") }} --> interface of the view's view.</li>
+ <li>the <!-- <!-- {{ Interface("nsIPlacesView") }} --> --> interface of the view itself,</li>
+ <li>the <!-- <!-- {{ Interface("nsINavHistoryResultTreeViewer") }} --> --> interface of the view's view, and</li>
+ <li>the <!-- <!-- {{ Interface("nsITreeView") }} --> --> interface of the view's view.</li>
 </ol>
 
 <p>The methods and properties implemented directly on the view are very specific, while the interface provided by <code>nsITreeView</code> is very general. Tasks sometimes require you to use more than one of these points of interaction, going from one layer of generality to another.</p>
@@ -192,7 +192,7 @@ tree.place = uri;</pre>
 
 <p>Because the built-in tree view is both widely used and complex, several convenience methods are implemented directly on it to make common tasks easier.</p>
 
-<div class="warning"><strong>Warning:</strong> Until <!-- {{ Bug(476952) }} --> is fixed, you may experience problems using some of these methods in conjunction with the <code>place</code> attribute and property.</div>
+<div class="warning"><strong>Warning:</strong> Until <!-- <!-- {{ Bug(476952) }} --> --> is fixed, you may experience problems using some of these methods in conjunction with the <code>place</code> attribute and property.</div>
 
 <h5 id="applyFilter()">applyFilter()</h5>
 
@@ -227,9 +227,9 @@ tree.place = uri;</pre>
 
 <dl>
  <dt><code>queries</code></dt>
- <dd>An array of <!-- {{ Interface("nsINavHistoryQuery") }} --> objects.</dd>
+ <dd>An array of <!-- <!-- {{ Interface("nsINavHistoryQuery") }} --> --> objects.</dd>
  <dt><code>options</code></dt>
- <dd>An <!-- {{ Interface("nsINavHistoryQueryOptions") }} --> object.</dd>
+ <dd>An <!-- <!-- {{ Interface("nsINavHistoryQueryOptions") }} --> --> object.</dd>
 </dl>
 
 <h5 id="selectItems()">selectItems()</h5>
@@ -264,7 +264,7 @@ tree.place = uri;</pre>
 
 <dl>
  <dt><code>node</code></dt>
- <dd>The <!-- {{ Interface("nsINavHistoryResultNode") }} --> to select.</dd>
+ <dd>The <!-- <!-- {{ Interface("nsINavHistoryResultNode") }} --> --> to select.</dd>
 </dl>
 
 <h5 id="selectPlaceURI()">selectPlaceURI()</h5>
@@ -280,7 +280,7 @@ tree.place = uri;</pre>
 
 <dl>
  <dt><code>placeURI</code></dt>
- <dd>The URI (as a string) of the <!-- {{ Interface("nsINavHistoryResultNode") }} --> to select.</dd>
+ <dd>The URI (as a string) of the <!-- <!-- {{ Interface("nsINavHistoryResultNode") }} --> --> to select.</dd>
 </dl>
 
 <p> </p>
@@ -289,7 +289,7 @@ tree.place = uri;</pre>
 
 <p>In addition to the methods above, some properties of convenience are implemented directly on the built-in tree view.</p>
 
-<div class="warning"><strong>Warning:</strong> Until <!-- {{ Bug(476952) }} --> is fixed, you may experience problems using some of these properties in conjunction with the <code>place</code> attribute and property.</div>
+<div class="warning"><strong>Warning:</strong> Until <!-- <!-- {{ Bug(476952) }} --> --> is fixed, you may experience problems using some of these properties in conjunction with the <code>place</code> attribute and property.</div>
 
 <table class="standard-table">
  <tbody>
@@ -306,19 +306,19 @@ tree.place = uri;</pre>
   <tr>
    <td><code>onOpenFlatContainer</code></td>
    <td><code>string</code></td>
-   <td>The body of function that will be called when a container is toggled. Only applies if property <code>flatList</code> is true. The function will be passed one <!-- {{ Interface("nsINavHistoryResultNode") }} --> argument named <code>aContainer</code>. You can QueryInterface <code>aContainer</code> to an <!-- {{ Interface("nsINavHistoryContainerResultNode") }} -->.</td>
+   <td>The body of function that will be called when a container is toggled. Only applies if property <code>flatList</code> is true. The function will be passed one <!-- <!-- {{ Interface("nsINavHistoryResultNode") }} --> --> argument named <code>aContainer</code>. You can QueryInterface <code>aContainer</code> to an <!-- <!-- {{ Interface("nsINavHistoryContainerResultNode") }} --> -->.</td>
   </tr>
   <tr>
    <td><code>showRoot</code></td>
    <td><code>boolean</code></td>
-   <td>If true the root <!-- {{ Interface("nsINavHistoryContainerResultNode") }} --> is shown as the first row in the tree. At least one of <code>showRoot</code> and <code>flatList</code> must be false.</td>
+   <td>If true the root <!-- <!-- {{ Interface("nsINavHistoryContainerResultNode") }} --> --> is shown as the first row in the tree. At least one of <code>showRoot</code> and <code>flatList</code> must be false.</td>
   </tr>
  </tbody>
 </table>
 
 <h4 id="Example_uses">Example uses</h4>
 
-<p>To get the <!-- {{ Interface("nsINavHistoryResultNode") }} --> at a specific row:</p>
+<p>To get the <!-- <!-- {{ Interface("nsINavHistoryResultNode") }} --> --> at a specific row:</p>
 
 <pre class="brush: js">var treeView = document.getElementById("myPlacesTreeView");
 var rowIndex = 0;
@@ -345,7 +345,7 @@ var rowIndex = treeView.view.treeIndexForNode(historyResultNode);
 
 <div class="note"><strong>Note:</strong> This section describes the implementation of the Places tree view.</div>
 
-<p>The built-in tree view is backed by an instance of <code>PlacesTreeView</code>, a prototype defined in <!-- {{ Source("browser/components/places/content/treeView.js") }} -->. <code>PlacesTreeView</code> performs double duty for the built-in tree view: it implements both <!-- {{ Interface("nsITreeView") }} --> and much of the functionality required of a Places view. The latter functionality is specified specifically by interface <!-- {{ Interface("nsINavHistoryResultTreeViewer") }} -->, which inherits from the more general <!-- {{ Interface("nsINavHistoryResultObserver") }} --> <!-- {{ gecko_minversion_inline("2.0") }} -->.</p>
+<p>The built-in tree view is backed by an instance of <code>PlacesTreeView</code>, a prototype defined in <!-- <!-- {{ Source("browser/components/places/content/treeView.js") }} --> -->. <code>PlacesTreeView</code> performs double duty for the built-in tree view: it implements both <!-- <!-- {{ Interface("nsITreeView") }} --> --> and much of the functionality required of a Places view. The latter functionality is specified specifically by interface <!-- <!-- {{ Interface("nsINavHistoryResultTreeViewer") }} --> -->, which inherits from the more general <!-- <!-- {{ Interface("nsINavHistoryResultObserver") }} --> --> <!-- <!-- {{ gecko_minversion_inline("2.0") }} --> -->.</p>
 
 <p>Because of <code>PlacesTreeView</code>'s double duty, you can use it to bridge a query result and a tree element:</p>
 
@@ -368,7 +368,7 @@ tree.view = view.QueryInterface(Components.interfaces.nsITreeView);
 
 <p>You can display Places information in a popup menu.</p>
 
-<p><!-- {{ h3_gecko_minversion("In Firefox 3.6 and earlier", "1.9.2") }} --></p>
+<p><!-- <!-- {{ h3_gecko_minversion("In Firefox 3.6 and earlier", "1.9.2") }} --> --></p>
 
 <p>Create a built-in menu view by setting the <code>type</code> attribute to "places" on an empty <code>menupopup</code> element (which would be a child of some parent <code>menu</code> element):</p>
 
@@ -379,7 +379,7 @@ tree.view = view.QueryInterface(Components.interfaces.nsITreeView);
 
 <p>The <code>place</code> attribute or property should be set on the <code>menupopup</code> as well.</p>
 
-<p><!-- {{ h3_gecko_minversion("In Firefox 4 and later", "2.0") }} --></p>
+<p><!-- <!-- {{ h3_gecko_minversion("In Firefox 4 and later", "2.0") }} --> --></p>
 
 <p>You can add Places information to a popup like this:</p>
 
@@ -391,7 +391,7 @@ tree.view = view.QueryInterface(Components.interfaces.nsITreeView);
 &lt;/menu&gt;
 </pre>
 
-<p>The menu view is implemented in <!-- {{ Source("browser/components/places/content/menu.xml") }} -->. See the <a class="internal" href="/en/XUL/menupopup" title="En/XUL/Menupopup">menupopup</a> and <a class="internal" href="/en/XUL/menu" title="En/XUL/Menu">menu</a> references and <a class="internal" href="/en/XUL_Tutorial/Popup_Menus" title="En/XUL Tutorial/Popup Menus">Popup Menus</a> tutorial for general information about menus.</p>
+<p>The menu view is implemented in <!-- <!-- {{ Source("browser/components/places/content/menu.xml") }} --> -->. See the <a class="internal" href="/en/XUL/menupopup" title="En/XUL/Menupopup">menupopup</a> and <a class="internal" href="/en/XUL/menu" title="En/XUL/Menu">menu</a> references and <a class="internal" href="/en/XUL_Tutorial/Popup_Menus" title="En/XUL Tutorial/Popup Menus">Popup Menus</a> tutorial for general information about menus.</p>
 
 <h3 id="Toolbar_view">Toolbar view</h3>
 
@@ -406,7 +406,7 @@ tree.view = view.QueryInterface(Components.interfaces.nsITreeView);
 
 <p>The <code>place</code> attribute or property should be set on the <code>hbox</code> as well.</p>
 
-<p>The toolbar view is implemented in <!-- {{ Source("browser/components/places/content/toolbar.xml") }} -->. See the <a class="internal" href="/en/XUL/toolbaritem" title="En/XUL/Toolbaritem">toolbaritem</a> and <a class="internal" href="/en/XUL/toolbar" title="En/XUL/Toolbar">toolbar</a> references and <a href="/en/XUL_Tutorial/Toolbars" title="en/XUL_Tutorial/Toolbars">Toolbars</a> tutorial for general information about toolbars.</p>
+<p>The toolbar view is implemented in <!-- <!-- {{ Source("browser/components/places/content/toolbar.xml") }} --> -->. See the <a class="internal" href="/en/XUL/toolbaritem" title="En/XUL/Toolbaritem">toolbaritem</a> and <a class="internal" href="/en/XUL/toolbar" title="En/XUL/Toolbar">toolbar</a> references and <a href="/en/XUL_Tutorial/Toolbars" title="en/XUL_Tutorial/Toolbars">Toolbars</a> tutorial for general information about toolbars.</p>
 
 <h2 id="Using_a_view">Using a view</h2>
 
@@ -414,7 +414,7 @@ tree.view = view.QueryInterface(Components.interfaces.nsITreeView);
 
 <p>Because it is fairly complex, the <a href="#Using_the_tree_view">built-in tree view</a> provides uniquely tailored interfaces to make it easier to use. If you <a href="#Creating_custom_views">write your own</a> complex view, you might do something similar.</p>
 
-<p>But all Places views should provide a minimal interface so that you and controllers have a consistent, general way to interact with them. For this reason views implement interface <!-- {{ Interface("nsIPlacesView") }} -->. It allows you to do things like getting the <!-- {{ Interface("nsINavHistoryResult") }} --> instance that a view displays and examining its selected nodes. In fact the special <a href="#Connecting_a_view_to_its_data"><code>place</code> property</a> described above is a property of this interface.</p>
+<p>But all Places views should provide a minimal interface so that you and controllers have a consistent, general way to interact with them. For this reason views implement interface <!-- <!-- {{ Interface("nsIPlacesView") }} --> -->. It allows you to do things like getting the <!-- <!-- {{ Interface("nsINavHistoryResult") }} --> --> instance that a view displays and examining its selected nodes. In fact the special <a href="#Connecting_a_view_to_its_data"><code>place</code> property</a> described above is a property of this interface.</p>
 
 <h2 id="Creating_custom_views" name="Creating_custom_views">Creating custom views</h2>
 
@@ -435,9 +435,9 @@ tree.view = view.QueryInterface(Components.interfaces.nsITreeView);
  <li>Managing how the view responds to clicks, commands, and other user interaction. Don't break the separation of concerns here. Views are for displaying data, controllers for logic. You can hook up a built-in view to the standard Places commands and context menu, or you can create a custom controller to handle custom commands. See <a class="internal" href="/En/Places/View_Controller" title="en/Places/View Controller">View Controller</a> for more information.</li>
 </ul>
 
-<p>Regardless of the kind of view you are writing, it should implement interface <!-- {{ Interface("nsIPlacesView") }} -->. (<code>nsIPlacesView</code> is currently not a true interface; the built-in views simply implement its methods and attributes directly.) As described above in <a href="#Using_a_view">Using a view</a>, this interface provides controllers and other callers a consistent, general way to interact with views.</p>
+<p>Regardless of the kind of view you are writing, it should implement interface <!-- <!-- {{ Interface("nsIPlacesView") }} --> -->. (<code>nsIPlacesView</code> is currently not a true interface; the built-in views simply implement its methods and attributes directly.) As described above in <a href="#Using_a_view">Using a view</a>, this interface provides controllers and other callers a consistent, general way to interact with views.</p>
 
-<p>Your view should also either implement or own an instance of <!-- {{ Interface("nsINavHistoryResultObserver") }} -->. To hook up your view to a <!-- {{ Interface("nsINavHistoryResult") }} --> object, you call <code>addObserver()</code> on the result, passing the <code>viewer</code> object which is an instance of <code>nsINavHistoryResultObserver</code>. If your view implements <code>nsINavHistoryResultObserver</code>, then you can pass your <code>viewer</code> object. If your view contains an internal instance of <code>nsINavHistoryResultObserver</code>, you would pass it instead. (The three built-in views take this approach.) The results object then communicates to your view via this instance, notifying it about changes in the underlying data so it can update its display.</p>
+<p>Your view should also either implement or own an instance of <!-- <!-- {{ Interface("nsINavHistoryResultObserver") }} --> -->. To hook up your view to a <!-- <!-- {{ Interface("nsINavHistoryResult") }} --> --> object, you call <code>addObserver()</code> on the result, passing the <code>viewer</code> object which is an instance of <code>nsINavHistoryResultObserver</code>. If your view implements <code>nsINavHistoryResultObserver</code>, then you can pass your <code>viewer</code> object. If your view contains an internal instance of <code>nsINavHistoryResultObserver</code>, you would pass it instead. (The three built-in views take this approach.) The results object then communicates to your view via this instance, notifying it about changes in the underlying data so it can update its display.</p>
 
 <pre class="brush: js">var bmServ =
     Components.classes["@mozilla.org/browser/nav-bookmarks-service;1"].
@@ -459,7 +459,7 @@ result.addObserver(myView.viewer);
 
 <p>When you let your view observe the result, the result will in turn set the <code>result</code> property on the given <code>nsINavHistoryResultObserver</code>. <em>You should not set the <code>result</code> property explicitly.</em> To disconnect a viewer from its result, call <code>removeObserver(view)</code> on your result.</p>
 
-<p>Be careful about reference cycles. The viewer and the result both hold owning references to each other. For these objects to be freed during JavaScript garbage collection, you must clear this cycle by calling <code>result.removeObserver(view)</code>. (For example, the built-in tree view does this automatically. When the tree is destroyed or a different <!-- {{ Interface("nsITreeView") }} --> is associated with the tree, the tree will set the <code>tree</code> property of the old <code>nsITreeView</code> to null. Because the object implementing <code>nsITreeView</code> also implements <code>nsINavHistoryResultObserver</code>, the viewer then disconnects itself from the result by calling <code>removeObserver()</code>.)</p>
+<p>Be careful about reference cycles. The viewer and the result both hold owning references to each other. For these objects to be freed during JavaScript garbage collection, you must clear this cycle by calling <code>result.removeObserver(view)</code>. (For example, the built-in tree view does this automatically. When the tree is destroyed or a different <!-- <!-- {{ Interface("nsITreeView") }} --> --> is associated with the tree, the tree will set the <code>tree</code> property of the old <code>nsITreeView</code> to null. Because the object implementing <code>nsITreeView</code> also implements <code>nsINavHistoryResultObserver</code>, the viewer then disconnects itself from the result by calling <code>removeObserver()</code>.)</p>
 
 <div class="note">Is this still right when using <code>nsINavHistoryResultObserver?</code></div>
 
@@ -467,7 +467,7 @@ result.addObserver(myView.viewer);
 
 <p>Custom Places tree views can be a lot of work. Take a look at <a href="#Using_the_tree_view">Using the tree view</a> above to get an idea of what's required. Custom <code>nsITreeView</code>s in general are a lot of work, and if you are not familiar with creating custom <code>nsITreeView</code>s, see the <a class="internal" href="/en/XUL_Tutorial/Custom_Tree_Views" title="En/XUL Tutorial/Custom Tree Views">Custom Tree Views</a> and <a class="internal" href="/en/XUL_Tutorial/Tree_View_Details" title="En/XUL Tutorial/Tree View Details">Tree View Details</a> pages in the XUL tutorial. All of that information is relevant here.</p>
 
-<p>Fortunately you can commandeer parts of the built-in tree view to suit your purposes. The JavaScript prototype backing the built-in view, <a href="#PlacesTreeView"><code>PlacesTreeView</code></a>, is especially useful since it implements all three of <!-- {{ Interface("nsINavHistoryResultTreeViewer") }} -->, <!-- {{ Interface("nsINavHistoryResultObserver") }} -->, and <!-- {{ Interface("nsITreeView") }} -->. You can therefore implement your own custom functionality on top of <code>PlacesTreeView</code> while relying on it for non-custom functionality and much of the tedious work. One strategy is to create your custom object(s) implementing each of these interfaces, support your custom behavior with them, but pass off everything else to a <code>PlacesTreeView</code> instance that you would own. Perhaps an easier strategy is to modify an existing <code>PlacesTreeView</code> instance, which is what the following example does.</p>
+<p>Fortunately you can commandeer parts of the built-in tree view to suit your purposes. The JavaScript prototype backing the built-in view, <a href="#PlacesTreeView"><code>PlacesTreeView</code></a>, is especially useful since it implements all three of <!-- <!-- {{ Interface("nsINavHistoryResultTreeViewer") }} --> -->, <!-- <!-- {{ Interface("nsINavHistoryResultObserver") }} --> -->, and <!-- <!-- {{ Interface("nsITreeView") }} --> -->. You can therefore implement your own custom functionality on top of <code>PlacesTreeView</code> while relying on it for non-custom functionality and much of the tedious work. One strategy is to create your custom object(s) implementing each of these interfaces, support your custom behavior with them, but pass off everything else to a <code>PlacesTreeView</code> instance that you would own. Perhaps an easier strategy is to modify an existing <code>PlacesTreeView</code> instance, which is what the following example does.</p>
 
 <p>The following JavaScript creates a new <code>PlacesTreeView</code> instance but overrides two of its <code>nsITreeView</code> methods to display columns not present in the built-in tree view:</p>
 
@@ -554,7 +554,7 @@ treeView.view = view;
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><!-- {{ Interface("nsIPlacesView") }} --></li>
+ <li><!-- <!-- {{ Interface("nsIPlacesView") }} --> --></li>
  <li><a class="internal" href="/en/Querying_Places" title="En/Querying Places">Querying Places</a></li>
  <li><a class="internal" href="/En/Places/View_Controller" title="En/Places/View Controller">View Controller</a></li>
 </ul>

@@ -1,8 +1,8 @@
-<p><!-- {{ gecko_minversion_header("33") }} --></p>
+<p><!-- <!-- {{ gecko_minversion_header("33") }} --> --></p>
 
 <h2 id="Summary">Summary</h2>
 
-<p>A <code>PromiseWorker</code> is a <!-- {{domxref("ChromeWorker")}} --> except instead of calling <code>postMessage()</code> to send a message, you call <code>post()</code>, which returns a <!-- {{jsxref("Promise")}} -->. JavaScript files imported into the worker scope and main thread scope which allows posting to the worker and receiving in the form of a <!-- {{jsxref("Promise", "promise", "", 1)}} -->. Like <code>ChromeWorker</code> objects, <code>PromiseWorker</code> is mostly used for <a href="/en-US/docs/Mozilla/js-ctypes">js-ctypes</a> but it is not limited to that. There is no <a href="/en-US/docs/Mozilla/Tech/XPCOM/Guide/Creating_components/An_Overview_of_XPCOM">XPCOM</a> access, similar to <code>ChromeWorker</code>. This answers the question "When should I use a <code>PromiseWorker</code>?", and the answer is, whenever you would normally use a <code>ChromeWorker</code>, but want <code>postMessage</code> to return promises.</p>
+<p>A <code>PromiseWorker</code> is a <!-- <!-- {{domxref("ChromeWorker")}} --> --> except instead of calling <code>postMessage()</code> to send a message, you call <code>post()</code>, which returns a <!-- <!-- {{jsxref("Promise")}} --> -->. JavaScript files imported into the worker scope and main thread scope which allows posting to the worker and receiving in the form of a <!-- <!-- {{jsxref("Promise", "promise", "", 1)}} --> -->. Like <code>ChromeWorker</code> objects, <code>PromiseWorker</code> is mostly used for <a href="/en-US/docs/Mozilla/js-ctypes">js-ctypes</a> but it is not limited to that. There is no <a href="/en-US/docs/Mozilla/Tech/XPCOM/Guide/Creating_components/An_Overview_of_XPCOM">XPCOM</a> access, similar to <code>ChromeWorker</code>. This answers the question "When should I use a <code>PromiseWorker</code>?", and the answer is, whenever you would normally use a <code>ChromeWorker</code>, but want <code>postMessage</code> to return promises.</p>
 
 <p>The PromiseWorker object is used to deliver all of the <code><a href="/en-US/docs/Mozilla/JavaScript_code_modules/OSFile.jsm">OS.File</a></code> functionality to the main thread. Here is the test case from Firefox codebase: <a href="https://dxr.mozilla.org/mozilla-central/source/toolkit/components/promiseworker/tests/xpcshell/test_Promise.js">Mozilla DXR :: test_Promise.js</a>.</p>
 
@@ -30,7 +30,7 @@
 
 <h3 id="Worker_file">Worker file</h3>
 
-<p>There is some standard templating that must be dropped into the worker file by the developer. The <code>require.js </code>file must be imported with <!-- {{domxref("WorkerGlobalScope/importScripts()")}} -->. Next, the <code>PromiseWorker.js</code> file should be brought in with the <code>require()</code> method. Finally, the template code should be added in. The code below is what should be copied and pasted:</p>
+<p>There is some standard templating that must be dropped into the worker file by the developer. The <code>require.js </code>file must be imported with <!-- <!-- {{domxref("WorkerGlobalScope/importScripts()")}} --> -->. Next, the <code>PromiseWorker.js</code> file should be brought in with the <code>require()</code> method. Finally, the template code should be added in. The code below is what should be copied and pasted:</p>
 
 <pre class="brush: js"><code id="line-8">importScripts(<span class="str">'resource://gre/modules/workers/require.js'</span>);</code>
 <code id="line-9"><span class="k">let</span> PromiseWorker = require(<span class="str">'resource://gre/modules/workers/PromiseWorker.js'</span>);</code>
@@ -93,7 +93,7 @@ let myWorker = new BasePromiseWorker('path_to_worker_file.js');
  <dd>The name of the function to be called as it appears in the worker file.</dd>
  <dt><code>aArgs</code></dt>
  <dd>
- <p>An array of arguments to pass to the function named <code>aFunctionName</code> in the worker file. If the worker function does not have any arguments and the empty array should be passed here. If any of the arguments is a <!-- {{jsxref("Promise")}} -->, it is resolved before posting the message. If any of the arguments needs to be transferred instead of copied, this may be specified by making the argument an instance of <code>BasePromiseWorker.Meta</code> or by using the <code>aTransferList</code> argument.</p>
+ <p>An array of arguments to pass to the function named <code>aFunctionName</code> in the worker file. If the worker function does not have any arguments and the empty array should be passed here. If any of the arguments is a <!-- <!-- {{jsxref("Promise")}} --> -->, it is resolved before posting the message. If any of the arguments needs to be transferred instead of copied, this may be specified by making the argument an instance of <code>BasePromiseWorker.Meta</code> or by using the <code>aTransferList</code> argument.</p>
 
  <p>By convention, the last argument may be an object options with some of the following fields:</p>
 
@@ -102,20 +102,20 @@ let myWorker = new BasePromiseWorker('path_to_worker_file.js');
   <dd>{number|null} A parameter to be filled with the duration of the off main thread execution for this call.</dd>
  </dl>
  </dd>
- <dt><code>aClosure</code> <!-- {{optional_inline}} --></dt>
+ <dt><code>aClosure</code> <!-- <!-- {{optional_inline}} --> --></dt>
  <dd>An object holding strong references to value that should not be garbage-collected before the reply has been received.</dd>
- <dt><code>aTransferList</code> <!-- {{optional_inline}} --></dt>
- <dd>An optional <!-- {{jsxref("Array", "array", "", 1)}} --> of <!-- {{domxref("Transferable")}} --> objects to transfer ownership of. If the ownership of an object is transferred, it becomes unusable (neutered) in the context it was sent from, and it becomes available only to the worker it was sent to.</dd>
- <dd>Only <!-- {{domxref("MessagePort")}} --> and <!-- {{domxref("ArrayBuffer")}} --> objects can be transferred. To learn more on how to achieve this see the section in this article titled <a href="#transferDataFromMainThreadToWorker">Transferring special data from main thread to worker</a>.</dd>
+ <dt><code>aTransferList</code> <!-- <!-- {{optional_inline}} --> --></dt>
+ <dd>An optional <!-- <!-- {{jsxref("Array", "array", "", 1)}} --> --> of <!-- <!-- {{domxref("Transferable")}} --> --> objects to transfer ownership of. If the ownership of an object is transferred, it becomes unusable (neutered) in the context it was sent from, and it becomes available only to the worker it was sent to.</dd>
+ <dd>Only <!-- <!-- {{domxref("MessagePort")}} --> --> and <!-- <!-- {{domxref("ArrayBuffer")}} --> --> objects can be transferred. To learn more on how to achieve this see the section in this article titled <a href="#transferDataFromMainThreadToWorker">Transferring special data from main thread to worker</a>.</dd>
 </dl>
 
 <h5 id="Returns">Returns</h5>
 
-<p>A <!-- {{jsxref("Promise")}} --> object.</p>
+<p>A <!-- <!-- {{jsxref("Promise")}} --> --> object.</p>
 
 <h4 id="Transferring_special_data_from_main_thread_to_worker">Transferring special data from main thread to worker<a id="transferDataFromMainThreadToWorker" name="transferDataFromMainThreadToWorker"></a></h4>
 
-<p>The regular rules of workers apply; special data of <!-- {{domxref("MessagePort")}} --> and <!-- {{domxref("ArrayBuffer")}} --> objects can be transferred as of Firefox 40. There are two ways to transfer data. The first is with <code>aTransferList</code> argument and other with <code>BasePromiseWorker.Meta</code>. Both are done by the <code>post</code> function described above.</p>
+<p>The regular rules of workers apply; special data of <!-- <!-- {{domxref("MessagePort")}} --> --> and <!-- <!-- {{domxref("ArrayBuffer")}} --> --> objects can be transferred as of Firefox 40. There are two ways to transfer data. The first is with <code>aTransferList</code> argument and other with <code>BasePromiseWorker.Meta</code>. Both are done by the <code>post</code> function described above.</p>
 
 <h5 id="aTransferList">aTransferList</h5>
 
@@ -178,16 +178,16 @@ let myWorker = new BasePromiseWorker('path_to_worker_file.js');
 <p>Supported built-in JavaScript Error are following:</p>
 
 <ul>
- <li><!-- {{jsxref("EvalError")}} --></li>
- <li><!-- {{jsxref("InternalError")}} --></li>
- <li><!-- {{jsxref("RangeError")}} --></li>
- <li><!-- {{jsxref("ReferenceError")}} --></li>
- <li><!-- {{jsxref("SyntaxError")}} --></li>
- <li><!-- {{jsxref("TypeError")}} --></li>
- <li><!-- {{jsxref("URIError")}} --></li>
+ <li><!-- <!-- {{jsxref("EvalError")}} --> --></li>
+ <li><!-- <!-- {{jsxref("InternalError")}} --> --></li>
+ <li><!-- <!-- {{jsxref("RangeError")}} --> --></li>
+ <li><!-- <!-- {{jsxref("ReferenceError")}} --> --></li>
+ <li><!-- <!-- {{jsxref("SyntaxError")}} --> --></li>
+ <li><!-- <!-- {{jsxref("TypeError")}} --> --></li>
+ <li><!-- <!-- {{jsxref("URIError")}} --> --></li>
 </ul>
 
-<p>In addition to them, <!-- {{jsxref("StopIteration")}} --> is also supported (note that <code>StopIteration</code> is deprecated).</p>
+<p>In addition to them, <!-- <!-- {{jsxref("StopIteration")}} --> --> is also supported (note that <code>StopIteration</code> is deprecated).</p>
 
 <p>You can also construct and throw your own custom error objects as needed.  When custom error is caught by <code>AbstractWorker</code>, <code>toMsg</code> method will be called to convert it into message. The <code>toMsg</code> function should return an object which has <code>exn</code> property, that is the property key for the <code>fromMsg</code> function in main thread side.</p>
 

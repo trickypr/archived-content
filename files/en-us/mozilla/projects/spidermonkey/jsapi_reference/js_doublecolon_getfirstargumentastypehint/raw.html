@@ -1,4 +1,4 @@
-<div><!-- {{SpiderMonkeySidebar("JSAPI")}} --></div>
+<div><!-- <!-- {{SpiderMonkeySidebar("JSAPI")}} --> --></div>
 
 <div class="summary">
 <p>Convert first argument of <code>@@toPrimitive</code> method to <code>JSType</code>.</p>
@@ -19,17 +19,17 @@ JS::GetFirstArgumentAsTypeHint(JSContext* cx, CallArgs args, JSType *result);
   </tr>
   <tr>
    <td><code>cx</code></td>
-   <td><!-- {{jsapixref("JSRuntime", "JSContext *")}} --></td>
-   <td>The context in which to define functions. <!-- {{ Jsapi-requires-request() }} --></td>
+   <td><!-- <!-- {{jsapixref("JSRuntime", "JSContext *")}} --> --></td>
+   <td>The context in which to define functions. <!-- <!-- {{ Jsapi-requires-request() }} --> --></td>
   </tr>
   <tr>
    <td><code>fs</code></td>
-   <td><!-- {{jsapixref("CallArgs")}} --></td>
+   <td><!-- <!-- {{jsapixref("CallArgs")}} --> --></td>
    <td>The arguments of the function call.</td>
   </tr>
   <tr>
    <td><code>behavior</code></td>
-   <td><!-- {{jsapixref("JSType", "JSType *")}} --></td>
+   <td><!-- <!-- {{jsapixref("JSType", "JSType *")}} --> --></td>
    <td>Receives the result of conversion.  See below.</td>
   </tr>
  </tbody>
@@ -44,6 +44,6 @@ JS::GetFirstArgumentAsTypeHint(JSContext* cx, CallArgs args, JSType *result);
 <h2 id="See_Also" name="See_Also">See Also</h2>
 
 <ul>
- <li><!-- {{ LXRSearch("ident", "i", "JS::GetFirstArgumentAsTypeHint") }} --></li>
- <li><!-- {{bug(1054756)}} --> - added</li>
+ <li><!-- <!-- {{ LXRSearch("ident", "i", "JS::GetFirstArgumentAsTypeHint") }} --> --></li>
+ <li><!-- <!-- {{bug(1054756)}} --> --> - added</li>
 </ul>

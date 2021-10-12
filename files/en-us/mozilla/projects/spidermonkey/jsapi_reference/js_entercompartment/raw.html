@@ -1,9 +1,9 @@
-<p><!-- {{ Jsapi_minversion_header("24") }} --></p>
+<p><!-- <!-- {{ Jsapi_minversion_header("24") }} --> --></p>
 
-<div><!-- {{SpiderMonkeySidebar("JSAPI")}} --></div>
+<div><!-- <!-- {{SpiderMonkeySidebar("JSAPI")}} --> --></div>
 
 <div class="note">
-<p>Note: the preferred way of changing a context's current compartment is using <!-- {{jsapixref("JSAutoCompartment")}} -->.</p>
+<p>Note: the preferred way of changing a context's current compartment is using <!-- <!-- {{jsapixref("JSAutoCompartment")}} --> -->.</p>
 </div>
 
 <div class="summary">
@@ -25,12 +25,12 @@ JS_EnterCompartment(JSContext *cx, JSObject *target);
   </tr>
   <tr>
    <td><code>cx</code></td>
-   <td><!-- {{jsapixref("JSRuntime", "JSContext *")}} --></td>
+   <td><!-- <!-- {{jsapixref("JSRuntime", "JSContext *")}} --> --></td>
    <td>The context on which a cross-compartment call is needed.</td>
   </tr>
   <tr>
    <td><code>target</code></td>
-   <td><!-- {{jsapixref("JSObject", "JSObject *")}} --></td>
+   <td><!-- <!-- {{jsapixref("JSObject", "JSObject *")}} --> --></td>
    <td>
     <p>The object in a different compartment to be accessed. This implicitly identifies the compartment to be entered.</p>
    </td>
@@ -40,15 +40,15 @@ JS_EnterCompartment(JSContext *cx, JSObject *target);
 
 <h2 id="Description" name="Description">Description</h2>
 
-<div>Every <!-- {{jsapixref("JSRuntime", "JSContext")}} --> has a current compartment. Any access to an object in a different compartment must be bracketed by calling <code>JS_EnterCompartment</code> and <!-- {{jsapixref("JS_LeaveCompartment")}} -->.<br>
+<div>Every <!-- <!-- {{jsapixref("JSRuntime", "JSContext")}} --> --> has a current compartment. Any access to an object in a different compartment must be bracketed by calling <code>JS_EnterCompartment</code> and <!-- <!-- {{jsapixref("JS_LeaveCompartment")}} --> -->.<br>
 <br>
 On success, <code>JS_EnterCompartment </code>returns a pointer to the previously entered compartment. To return to that compartment, pass it to <code>JS_LeaveCompartment</code>.<code> JS_EnterCompartment</code> is infallible, so a <code>NULL</code> return value doesn't indicate failure.</div>
 
 <h2 id="See_Also" name="See_Also">See Also</h2>
 
 <ul>
- <li><!-- {{ LXRSearch("ident", "i", "JS_EnterCompartment") }} --></li>
- <li><!-- {{jsapixref("JS_LeaveCompartment")}} --></li>
- <li><!-- {{jsapixref("JSAutoCompartment")}} --></li>
- <li><!-- {{bug(786068)}} --></li>
+ <li><!-- <!-- {{ LXRSearch("ident", "i", "JS_EnterCompartment") }} --> --></li>
+ <li><!-- <!-- {{jsapixref("JS_LeaveCompartment")}} --> --></li>
+ <li><!-- <!-- {{jsapixref("JSAutoCompartment")}} --> --></li>
+ <li><!-- <!-- {{bug(786068)}} --> --></li>
 </ul>

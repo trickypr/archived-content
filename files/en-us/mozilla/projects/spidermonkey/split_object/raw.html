@@ -21,7 +21,7 @@
  </li>
 </ul>
 <p>Split objects were the solution. The inner <code>window</code> object is different for each page a browser window visits. It serves as the "globals" object and provides the <code>JSPrincipals</code> for scripts on that page. Access to inner <code>window</code> properties is fast. The outer <code>window</code> object is the object returned by <code>window.open</code>. It represents the window or tab itself and survives as the user navigates in that window or tab. The <code>window</code> object's <code><a href="/en/SpiderMonkey/JSAPI_Reference/JSClass" title="en/SpiderMonkey/JSAPI_Reference/JSClass">JSClass</a>.resolve</code> hook ensures that properties of the inner object are visible via the outer object, if the running code has the right principals to access them. This privilege check may be slow.</p>
-<p>See <!-- {{ interwiki('wikimo', 'Gecko:SplitWindow', 'wikimo:Gecko:SplitWindow') }} --> and <!-- {{ Bug(296639) }} --> for more discussion.</p>
+<p>See <!-- <!-- {{ interwiki('wikimo', 'Gecko:SplitWindow', 'wikimo:Gecko:SplitWindow') }} --> --> and <!-- <!-- {{ Bug(296639) }} --> --> for more discussion.</p>
 <p>See also <a class="external" href="http://groups.google.com/group/mozilla.dev.tech.js-engine/msg/df81825b338fb84f" rel="freelink">http://groups.google.com/group/mozil...81825b338fb84f</a></p>
 <h2 id="Details" name="Details">Details</h2>
 <p>This section describes split objects as a feature of the JSAPI. It catalogues (and tries to explain) the subtle ways in which split objects affect SpiderMonkey's behavior.</p>

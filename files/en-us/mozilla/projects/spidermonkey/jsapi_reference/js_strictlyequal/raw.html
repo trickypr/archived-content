@@ -1,9 +1,9 @@
-<div><!-- {{SpiderMonkeySidebar("JSAPI")}} --></div>
+<div><!-- <!-- {{SpiderMonkeySidebar("JSAPI")}} --> --></div>
 
-<p><!-- {{ jsapi_minversion_header("1.8.1") }} --></p>
+<p><!-- <!-- {{ jsapi_minversion_header("1.8.1") }} --> --></p>
 
 <div class="summary">
-<p>Determine whether two JavaScript values are equal in the sense of the <!-- {{jsxref("Operators/Comparison_Operators", "=== operator")}} -->.</p>
+<p>Determine whether two JavaScript values are equal in the sense of the <!-- <!-- {{jsxref("Operators/Comparison_Operators", "=== operator")}} --> -->.</p>
 </div>
 
 <h2 id="Syntax" name="Syntax">Syntax</h2>
@@ -30,12 +30,12 @@ JS_StrictlyEqual(JSContext *cx, jsval v1, jsval v2, bool *equal);
   </tr>
   <tr>
    <td><code>cx</code></td>
-   <td><!-- {{jsapixref("JSRuntime", "JSContext *")}} --></td>
-   <td>The context in which to perform the conversion. <!-- {{ Jsapi-requires-request() }} --></td>
+   <td><!-- <!-- {{jsapixref("JSRuntime", "JSContext *")}} --> --></td>
+   <td>The context in which to perform the conversion. <!-- <!-- {{ Jsapi-requires-request() }} --> --></td>
   </tr>
   <tr>
    <td><code>v1</code>, <code>v2</code></td>
-   <td><!-- {{jsapixref("JS::Value", "JS::Handle&lt;JS::Value&gt;")}} --> / <!-- {{jsapixref("jsval")}} --></td>
+   <td><!-- <!-- {{jsapixref("JS::Value", "JS::Handle&lt;JS::Value&gt;")}} --> --> / <!-- <!-- {{jsapixref("jsval")}} --> --></td>
    <td>The value to compare.</td>
   </tr>
   <tr>
@@ -55,8 +55,8 @@ JS_StrictlyEqual(JSContext *cx, jsval v1, jsval v2, bool *equal);
 <h2 id="See_Also" name="See_Also">See Also</h2>
 
 <ul>
- <li><!-- {{ LXRSearch("ident", "i", "JS_StrictlyEqual") }} --></li>
- <li><!-- {{jsapixref("JS_LooselyEqual")}} --></li>
- <li><!-- {{jsapixref("JS_SameValue")}} --></li>
- <li><!-- {{bug(1132045)}} --> -- use handle</li>
+ <li><!-- <!-- {{ LXRSearch("ident", "i", "JS_StrictlyEqual") }} --> --></li>
+ <li><!-- <!-- {{jsapixref("JS_LooselyEqual")}} --> --></li>
+ <li><!-- <!-- {{jsapixref("JS_SameValue")}} --> --></li>
+ <li><!-- <!-- {{bug(1132045)}} --> --> -- use handle</li>
 </ul>

@@ -1,4 +1,4 @@
-<div><!-- {{SpiderMonkeySidebar}} --></div>
+<div><!-- <!-- {{SpiderMonkeySidebar}} --> --></div>
 
 <div class="summary">
 <p>Recent builds of the <a href="/En/SpiderMonkey/Build_Documentation" title="https://developer.mozilla.org/en/SpiderMonkey/Build_Documentation">standalone SpiderMonkey shell</a> include a reflection of the SpiderMonkey parser, made available as a JavaScript API. This makes it easier to write tools in JavaScript that manipulate JavaScript source programs, such as syntax highlighters, static analyses, translators, compilers, obfuscators, etc.</p>
@@ -14,7 +14,7 @@
 &gt; expr.left.property
 ({loc:null, type:"Identifier", name:"foo"})
 &gt; expr.right
-({loc:{source:null, start:{line:1, column:10}, end:{line:1, column:12}} -->, type:"Literal", value:42})
+({loc:{source:null, start:{line:1, column:10}, end:{line:1, column:12}} --> -->, type:"Literal", value:42})
 </pre>
 
 <p>It is also available since Firefox 7; it can be imported into the global object via:</p>
@@ -732,7 +732,7 @@
 
 <p>This section describes node types that are provided for E4X support. E4X has since been removed as of Gecko 21.</p>
 
-<p><!-- {{ Obsolete_header() }} --></p>
+<p><!-- <!-- {{ Obsolete_header() }} --> --></p>
 
 <div class="note"><strong>Note:</strong> E4X is not part of the ECMAScript standard (<a class="external" href="http://www.ecma-international.org/publications/standards/Ecma-262.htm" title="http://www.ecma-international.org/publications/standards/Ecma-262.htm">ECMA-262</a>), but is a separate standard of its own (<a class="external" href="http://www.ecma-international.org/publications/standards/Ecma-357.htm" title="http://www.ecma-international.org/publications/standards/Ecma-357.htm">ECMA-357</a>).</div>
 
